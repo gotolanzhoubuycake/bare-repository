@@ -1,0 +1,15 @@
+state={
+	id=258
+	name="STATE_258"
+	provinces={
+		3439 3750 4417 5168 5606 6263 6517 7123 7939 8810 9034 10804 
+	}
+	history = {
+		owner = CAO
+		add_core_of=CAO
+    }
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

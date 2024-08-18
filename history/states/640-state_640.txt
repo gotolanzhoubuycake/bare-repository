@@ -1,0 +1,16 @@
+state={
+	id=640
+	name="STATE_640"
+	provinces={
+		151 861 1301 1363 1881 2120 2327 2896 4216 4229 4719 4771 5022 5604 6028 6067 6457 6635 7004 7367 7385 7993 8030 8089 8364 8540 9039 9465 11836 11852 11872 11883 11969 
+	}
+	history = {
+		owner = D13
+		add_core_of=D13
+		victory_points = {4719 5}
+    }
+	manpower=0
+	state_category=wasteland
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

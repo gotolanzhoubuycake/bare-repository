@@ -1,0 +1,15 @@
+state={
+	id=39
+	name="STATE_39"
+	provinces={
+		700 1173 1414 1669 1825 3248 4074 4503 4611 5594 6199 6467 7526 7678 8158 8361 8549 8737 9264 12094 12120 12130 12138 12183 
+	}
+	history={
+		owner=D01
+		victory_points = {8158 15}
+	}
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

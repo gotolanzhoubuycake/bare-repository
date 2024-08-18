@@ -1,0 +1,15 @@
+state={
+	id=261
+	name="STATE_261"
+	provinces={
+		2278 2846 3259 3649 4714 5774 6322 7279 7600 10172 10197 10219 
+	}
+	history={
+		owner = RWT
+		add_core_of=RWT
+	}
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,14 @@
+state={
+	id=486
+	name="STATE_486"
+	provinces={
+		224 271 698 1359 1822 2841 3310 3664 3765 4913 6192 6294 6699 7002 7593 7768 8251 8272 8656 9550 12260 12263 12265 12268 12271 12274 12275 
+	}
+	history={
+		owner=D01
+		victory_points = {271 15}
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

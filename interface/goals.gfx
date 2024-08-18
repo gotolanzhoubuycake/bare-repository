@@ -1,0 +1,54 @@
+spriteTypes = {	
+
+	#### Generic continuous goal icons
+
+	SpriteType = {
+		name = "GFX_goal_TRI_pax_trinity"
+		texturefile = "gfx/interface/goals/圣三一治下的团结.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_welfare_cutting"
+		texturefile = "gfx/interface/goals/遏制无节制福利开支.png"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_weapons_nomalization"
+		texturefile = "gfx/interface/goals/规范化热武器出厂流程.png"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_production_specialization"
+		texturefile = "gfx/interface/goals/生产管理专业化.png"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_carryon_package_facilitation"
+		texturefile = "gfx/interface/goals/便携式随身弹药包.png"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_sufficient_sweets_supply"
+		texturefile = "gfx/interface/goals/充分的甜品配给.png"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_vast_land"
+		texturefile = "gfx/interface/goals/广土袤赠.png"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_expand_reproduction"
+		texturefile = "gfx/interface/goals/精选细酌.png"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_amazing"
+		texturefile = "gfx/interface/goals/令人称羡.png"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_gorgeous"
+		texturefile = "gfx/interface/goals/优雅绝伦.png"
+	}
+}

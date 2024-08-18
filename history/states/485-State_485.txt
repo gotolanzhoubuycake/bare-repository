@@ -1,0 +1,14 @@
+state={
+	id=485
+	name="STATE_485"
+	provinces={
+		559 795 994 1655 1731 2394 3836 4193 4867 4886 5094 5144 5684 6564 6610 6616 6689 6696 7019 7038 7660 8246 8403 8832 9136 9556 11835 11920 11939 12060 12157 12188 
+	}
+	history = {
+		owner = MIL
+		add_core_of=MIL
+    }
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

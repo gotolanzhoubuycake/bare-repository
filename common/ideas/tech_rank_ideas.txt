@@ -1,0 +1,42 @@
+ideas = {
+    hidden_ideas = {
+        tech_rank_II_idea = {
+            allowed_civil_war = { always = yes }
+            cancel = { NOT = { has_tech = tech_rank_II_token } }
+			removal_cost = -1
+            research_bonus = {
+                rank_I_tech = 1
+            }
+        }
+        tech_rank_III_idea = {
+            allowed_civil_war = { always = yes }
+            cancel = { NOT = { has_tech = tech_rank_III_token } }
+			removal_cost = -1
+            research_bonus = {
+                rank_I_tech = 1
+                rank_II_tech = 1
+            }
+        }
+        tech_rank_IV_idea = {
+            allowed_civil_war = { always = yes }
+            cancel = { NOT = { has_tech = tech_rank_IV_token } }
+			removal_cost = -1
+            research_bonus = {
+                rank_I_tech = 1
+                rank_II_tech = 1
+                rank_III_tech = 1
+            }
+        }
+        tech_rank_V_idea = {
+            allowed_civil_war = { always = yes }
+            cancel = { NOT = { has_tech = tech_rank_V_token } }
+			removal_cost = -1
+            research_bonus = {
+                rank_I_tech = 1
+                rank_II_tech = 1
+                rank_III_tech = 1
+                rank_IV_tech = 1
+            }
+        }
+    }
+}

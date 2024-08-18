@@ -1,0 +1,15 @@
+state={
+	id=202
+	name="STATE_202"
+	provinces={
+		1422 1758 6303 6815 8349 10968 
+	}
+	history = {
+		owner = D12
+		add_core_of=D12
+    }
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

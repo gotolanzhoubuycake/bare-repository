@@ -1,0 +1,15 @@
+state={
+	id=549
+	name="STATE_549"
+	provinces={
+		57 208 269 611 681 949 1862 2515 3001 3014 3385 3406 4071 4167 4355 4388 4956 5804 5873 6288 6507 6656 6871 7564 7934 8473 8542 9208 9251 9444 9701 9706 9713 9723 9726 9751 9758 9768 9771 9780 
+	}
+	history={
+		owner = RWT
+		add_core_of=RWT
+	}
+	manpower=0
+	state_category=wasteland
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

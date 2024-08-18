@@ -1,0 +1,32 @@
+resources_stat_modifiers = {
+	icon = Timetest_night_modifiers_icon
+	enable = { always = yes }
+
+	country_resource_Resources_fe = ROOT.country_resource_fe_get
+	country_resource_cost_Resources_fe = ROOT.country_resource_fe_expend
+
+	country_resource_Resources_ec = ROOT.country_resource_ec_get
+	country_resource_cost_Resources_ec = ROOT.country_resource_ec_expend
+
+	country_resource_Resources_pm = ROOT.country_resource_pm_get
+	country_resource_cost_Resources_pm = ROOT.country_resource_pm_expend
+
+	country_resource_Resources_rm = ROOT.country_resource_rm_get
+	country_resource_cost_Resources_rm = ROOT.country_resource_rm_expend
+
+	country_resource_Resources_cm = ROOT.country_resource_cm_get
+	country_resource_cost_Resources_cm = ROOT.country_resource_cm_expend
+
+	country_resource_Resources_mm = ROOT.country_resource_mm_get
+	country_resource_cost_Resources_mm = ROOT.country_resource_mm_expend
+
+	country_resource_Resources_hic = ROOT.country_resource_hic_get
+	country_resource_cost_Resources_hic = ROOT.country_resource_hic_expend
+
+	fuel_cost = ROOT.country_resource_energy_expend
+}
+restart_state_build = {
+	remove_trigger = { NOT = { is_controlled_by = ROOT } }
+
+	local_resources_factor = 1
+}

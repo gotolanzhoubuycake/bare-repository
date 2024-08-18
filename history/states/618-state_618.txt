@@ -1,0 +1,16 @@
+state={
+	id=618
+	name="STATE_618"
+	provinces={
+		779 1150 1454 2311 2499 2840 3114 3182 3396 3849 4100 4173 5983 6128 6149 6461 6985 7026 7447 7804 8557 8802 8853 8899 8985 11771 11781 11825 11837 11844 11873 11877 
+	}
+	history = {
+		owner = D15
+		add_core_of=D15
+		victory_points = {4100 10}
+    }
+	manpower=0
+	state_category=wasteland
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

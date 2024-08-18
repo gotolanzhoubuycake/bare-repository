@@ -1,0 +1,15 @@
+state={
+	id=342
+	name="STATE_342"
+	provinces={
+		267 328 526 1009 1819 2440 3509 4142 4220 4758 6042 6075 7616 7662 8061 8297 8346 8495 8878 9043 11829 11890 
+	}
+	history = {
+		owner = MIL
+		add_core_of=MIL
+    }
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

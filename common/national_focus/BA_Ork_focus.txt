@@ -1,0 +1,272 @@
+focus_tree = {
+	id = Kaiserfactory_base
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = D08
+		}
+	}
+    default = no
+    focus = {  #混混团体
+        id = D08_ork_team
+        icon = GFX_goal_unknown
+		cost = 5
+        x = 1
+        y = 0
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        available_if_capitulated = no
+        
+        completion_reward = {
+            
+		}
+    }
+    focus = {  #老大之位
+		id = D08_ork_waghboss
+		icon = GFX_goal_unknown
+		prerequisite = { focus = D08_ork_team }
+		x = -5
+		y = 1
+		relative_position_id = D08_ork_team
+		cost = 5
+		search_filters = {  FOCUS_FILTER_POLITICAL }
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+    focus = {  #最狡猾的
+		id = D08_ork_mork
+		icon = GFX_goal_unknown
+		prerequisite = { focus = D08_ork_waghboss }
+        mutually_exclusive = { focus = D08_ork_gork }
+		x = -1
+		y = 1
+		relative_position_id = D08_ork_waghboss
+		cost = 5
+		search_filters = {  FOCUS_FILTER_POLITICAL }
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+    focus = {  #最能打的
+		id = D08_ork_gork
+		icon = GFX_goal_unknown
+		prerequisite = { focus = D08_ork_waghboss }
+        mutually_exclusive = { focus = D08_ork_mork }
+		x = 1
+		y = 1
+		relative_position_id = D08_ork_waghboss
+		cost = 5
+		search_filters = {  FOCUS_FILTER_POLITICAL }
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+    focus = {  #老大万岁
+		id = D08_ork_waghboss_yes
+		icon = GFX_goal_unknown
+		prerequisite = { focus = D08_ork_mork focus = D08_ork_gork }
+		x = 0
+		y = 2
+		relative_position_id = D08_ork_waghboss
+		cost = 5
+		search_filters = {  FOCUS_FILTER_POLITICAL }
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+    focus = {  #钢盔团出击！
+		id = D08_ork_waaaaaagh
+		icon = GFX_goal_unknown
+		prerequisite = { focus = D08_ork_waghboss_yes }
+		x = 0
+		y = 1
+		relative_position_id = D08_ork_waghboss_yes
+		cost = 5
+		search_filters = {  FOCUS_FILTER_POLITICAL }
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+    focus = {  #劫掠物资
+		id = D08_ork_loot
+		icon = GFX_goal_unknown
+		prerequisite = { focus = D08_ork_team }
+        mutually_exclusive = { focus = D08_ork_factory }
+		x = -1
+		y = 1
+		relative_position_id = D08_ork_team
+		cost = 5
+		search_filters = {  FOCUS_FILTER_INDUSTRY }
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+    focus = {  #收集弹药
+		id = D08_ork_ammo
+		icon = GFX_goal_unknown
+		prerequisite = { focus = D08_ork_loot }
+		x = 0
+		y = 1
+		relative_position_id = D08_ork_loot
+		cost = 5
+		search_filters = {  FOCUS_FILTER_INDUSTRY }
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+    focus = {  #简易维修
+		id = D08_ork_repair
+		icon = GFX_goal_unknown
+		prerequisite = { focus = D08_ork_ammo }
+		x = 0
+		y = 1
+		relative_position_id = D08_ork_ammo
+		cost = 5
+		search_filters = {  FOCUS_FILTER_INDUSTRY }
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+    focus = {  #接管工厂
+		id = D08_ork_factory
+		icon = GFX_goal_unknown
+		prerequisite = { focus = D08_ork_team }
+        mutually_exclusive = { focus = D08_ork_loot }
+		x = 1
+		y = 1
+		relative_position_id = D08_ork_team
+		cost = 5
+		search_filters = {  FOCUS_FILTER_INDUSTRY }
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+    focus = {  #寻找设备
+		id = D08_ork_equipment
+		icon = GFX_goal_unknown
+		prerequisite = { focus = D08_ork_factory }
+		x = 0
+		y = 1
+		relative_position_id = D08_ork_factory
+		cost = 5
+		search_filters = {  FOCUS_FILTER_INDUSTRY }
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+    focus = {  #重启产线
+		id = D08_ork_line
+		icon = GFX_goal_unknown
+		prerequisite = { focus = D08_ork_equipment }
+		x = 0
+		y = 1
+		relative_position_id = D08_ork_equipment
+		cost = 5
+		search_filters = {  FOCUS_FILTER_INDUSTRY }
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+    focus = {  #打出名头
+		id = D08_ork_renown
+		icon = GFX_goal_unknown
+		prerequisite = { focus = D08_ork_team }
+		x = 5
+		y = 1
+		relative_position_id = D08_ork_team
+		cost = 5
+		search_filters = {  FOCUS_FILTER_POLITICAL }
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+    focus = {  #更多小弟
+		id = D08_ork_more_zaku
+		icon = GFX_goal_unknown
+		prerequisite = { focus = D08_ork_renown }
+        mutually_exclusive = { focus = D08_ork_motor }
+		x = -1
+		y = 1
+		relative_position_id = D08_ork_renown
+		cost = 5
+		search_filters = {  FOCUS_FILTER_POLITICAL }
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+    focus = {  #扎堆干架
+		id = D08_ork_beat
+		icon = GFX_goal_unknown
+		prerequisite = { focus = D08_ork_more_zaku }
+        mutually_exclusive = { focus = D08_ork_motor }
+		x = 0
+		y = 1
+		relative_position_id = D08_ork_more_zaku
+		cost = 5
+		search_filters = {  FOCUS_FILTER_POLITICAL }
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+    focus = {  #摩托暴走族
+		id = D08_ork_motor
+		icon = GFX_goal_unknown
+		prerequisite = { focus = D08_ork_renown }
+        mutually_exclusive = { focus = D08_ork_mork }
+		x = 1
+		y = 1
+		relative_position_id = D08_ork_renown
+		cost = 5
+		search_filters = {  FOCUS_FILTER_POLITICAL }
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+    focus = {  #夜露死苦
+		id = D08_ork_yoroshiku
+		icon = GFX_goal_unknown
+		prerequisite = { focus = D08_ork_motor }
+        mutually_exclusive = { focus = D08_ork_mork }
+		x = 0
+		y = 1
+		relative_position_id = D08_ork_motor
+		cost = 5
+		search_filters = {  FOCUS_FILTER_POLITICAL }
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+		}
+	}
+}

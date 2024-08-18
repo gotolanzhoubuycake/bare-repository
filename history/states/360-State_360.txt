@@ -1,0 +1,14 @@
+state={
+	id=360
+	name="STATE_360"
+	provinces={
+		650 1058 1082 1129 1771 1828 2541 3633 3721 4260 5229 5466 5861 6195 6434 6722 7291 7696 8734 12203 12209 12215 12222 12235 12245 12247 12250 
+	}
+	history = {
+		owner = TRI
+		add_core_of=TRI
+    }
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

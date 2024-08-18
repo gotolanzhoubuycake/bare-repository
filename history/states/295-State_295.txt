@@ -1,0 +1,16 @@
+state={
+	id=295
+	name="STATE_295"
+	provinces={
+		1113 6810 6845 7161 8434 10573 
+	}
+	history = {
+		owner = HYA
+		add_core_of=HYA
+		victory_points = {1113 10}
+    }
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

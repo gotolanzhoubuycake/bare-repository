@@ -1,0 +1,15 @@
+state={
+	id=158
+	name="STATE_158"
+	provinces={
+		695 1453 3784 3833 4244 9541 11132 11134 
+	}
+	history = {
+		owner = SHA
+		add_core_of=SHA
+    }
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,211 @@
+technologies = {
+	wheeled_vehicle_T2 = {
+		enable_equipments = { infantry_equipment_0 }
+		research_cost = 1.5
+		folder = {
+			name = armour_folder
+			position = { x = 0 y = -1 }
+		}
+		path = { leads_to_tech = wheeled_vehicle_T3 }
+		path = { leads_to_tech = mechanized_vehicle_T2 }
+		dependencies = { tech_MIL_rank_II_token = 1 }
+		categories = { infantry_weapons }
+		ai_will_do = { factor = 1 }
+	}
+	wheeled_vehicle_T3 = {
+		research_cost = 1.5
+		folder = {
+			name = armour_folder
+			position = { x = 0 y = 3 }
+		}
+		path = { leads_to_tech = wheeled_vehicle_T4 }
+		dependencies = { tech_MIL_rank_II_token = 1 }
+		categories = { infantry_weapons }
+		ai_will_do = { factor = 1 }
+	}
+	wheeled_vehicle_T4 = {
+		enable_equipments = { infantry_equipment_0 }
+		research_cost = 1.5
+		folder = {
+			name = armour_folder
+			position = { x = 0 y = 7 }
+		}
+		path = { leads_to_tech = wheeled_vehicle_T5 }
+		dependencies = { tech_MIL_rank_IV_token = 1 }
+		categories = { infantry_weapons }
+		ai_will_do = { factor = 1 }
+	}
+	wheeled_vehicle_T5 = {
+		research_cost = 1.5
+		folder = {
+			name = armour_folder
+			position = { x = 0 y = 11 }
+		}
+		dependencies = { tech_MIL_rank_II_token = 1 }
+		categories = { infantry_weapons }
+		ai_will_do = { factor = 1 }
+	}
+	
+	mechanized_vehicle_T2 = {
+		research_cost = 1.5
+		folder = {
+			name = armour_folder
+			position = { x = 2 y = -1 }
+		}
+		path = { leads_to_tech = mechanized_vehicle_T3 }
+		path = { leads_to_tech = armor_vehicle_T2 }
+		dependencies = { tech_MIL_rank_II_token = 1 }
+		categories = { infantry_weapons }
+		ai_will_do = { factor = 1 }
+	}
+	mechanized_vehicle_T3 = {
+		enable_equipments = { infantry_equipment_0 }
+		research_cost = 1.5
+		folder = {
+			name = armour_folder
+			position = { x = 2 y = 3 }
+		}
+		path = { leads_to_tech = mechanized_vehicle_T4 }
+		dependencies = { tech_MIL_rank_II_token = 1 }
+		categories = { infantry_weapons }
+		ai_will_do = { factor = 1 }
+	}
+	mechanized_vehicle_T4 = {
+		research_cost = 1.5
+		folder = {
+			name = armour_folder
+			position = { x = 2 y = 7 }
+		}
+		path = { leads_to_tech = mechanized_vehicle_T5 }
+		dependencies = { tech_MIL_rank_II_token = 1 }
+		categories = { infantry_weapons }
+		ai_will_do = { factor = 1 }
+	}
+	mechanized_vehicle_T5 = {
+		enable_equipments = { infantry_equipment_0 }
+		research_cost = 1.5
+		folder = {
+			name = armour_folder
+			position = { x = 2 y = 11 }
+		}
+		dependencies = { tech_MIL_rank_IV_token = 1 }
+		categories = { infantry_weapons }
+		ai_will_do = { factor = 1 }
+	}
+
+	armor_vehicle_T2 = {
+		enable_equipments = { infantry_equipment_0 }
+		research_cost = 1.5
+		folder = {
+			name = armour_folder
+			position = { x = 4 y = -1 }
+		}
+		path = { leads_to_tech = armor_vehicle_T3 }
+		dependencies = { tech_MIL_rank_II_token = 1 }
+		categories = { infantry_weapons }
+		ai_will_do = { factor = 1 }
+	}
+	armor_vehicle_T3 = {
+		research_cost = 1.5
+		folder = {
+			name = armour_folder
+			position = { x = 4 y = 3 }
+		}
+		path = { leads_to_tech = armor_vehicle_T4 }
+		dependencies = { tech_MIL_rank_II_token = 1 }
+		categories = { infantry_weapons }
+		ai_will_do = { factor = 1 }
+	}
+	armor_vehicle_T4 = {
+		enable_equipments = { infantry_equipment_0 }
+		research_cost = 1.5
+		folder = {
+			name = armour_folder
+			position = { x = 4 y = 7 }
+		}
+		path = { leads_to_tech = armor_vehicle_T5 }
+		dependencies = { tech_MIL_rank_IV_token = 1 }
+		categories = { infantry_weapons }
+		ai_will_do = { factor = 1 }
+	}
+	armor_vehicle_T5 = {
+		research_cost = 1.5
+		folder = {
+			name = armour_folder
+			position = { x = 4 y = 11 }
+		}
+		dependencies = { tech_MIL_rank_IV_token = 1 }
+		categories = { infantry_weapons }
+		ai_will_do = { factor = 1 }
+	}
+
+	combat_drone_T2 = {
+		research_cost = 1.5
+		folder = {
+			name = armour_folder
+			position = { x = 6 y = -1 }
+		}
+		path = { leads_to_tech = combat_drone_T3 }
+		dependencies = { tech_MIL_rank_II_token = 1 }
+		categories = { infantry_weapons }
+		ai_will_do = { factor = 1 }
+	}
+	combat_drone_T3 = {
+		enable_equipments = { infantry_equipment_0 }
+		research_cost = 1.5
+		folder = {
+			name = armour_folder
+			position = { x = 6 y = 3 }
+		}
+		path = { leads_to_tech = combat_drone_T4 }
+		dependencies = { tech_MIL_rank_II_token = 1 }
+		categories = { infantry_weapons }
+		ai_will_do = { factor = 1 }
+	}
+	combat_drone_T4 = {
+		research_cost = 1.5
+		folder = {
+			name = armour_folder
+			position = { x = 6 y = 7 }
+		}
+		path = { leads_to_tech = combat_drone_T5 }
+		dependencies = { tech_MIL_rank_II_token = 1 }
+		categories = { infantry_weapons }
+		ai_will_do = { factor = 1 }
+	}
+	combat_drone_T5 = {
+		enable_equipments = { infantry_equipment_0 }
+		research_cost = 1.5
+		folder = {
+			name = armour_folder
+			position = { x = 6 y = 11 }
+		}
+		dependencies = { tech_MIL_rank_II_token = 1 }
+		categories = { infantry_weapons }
+		ai_will_do = { factor = 1 }
+	}
+
+	railway_gun_T2 = {
+		enable_equipments = { infantry_equipment_0 }
+		research_cost = 1.5
+		folder = {
+			name = armour_folder
+			position = { x = 8 y = -1 }
+		}
+		path = { leads_to_tech = railway_gun_T4 }
+		dependencies = { tech_MIL_rank_II_token = 1 }
+		categories = { infantry_weapons }
+		ai_will_do = { factor = 1 }
+	}
+	railway_gun_T4 = {
+		enable_equipments = { infantry_equipment_0 }
+		research_cost = 1.5
+		folder = {
+			name = armour_folder
+			position = { x = 8 y = 7 }
+		}
+		dependencies = { tech_MIL_rank_II_token = 1 }
+		categories = { infantry_weapons }
+		ai_will_do = { factor = 1 }
+	}
+}

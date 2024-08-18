@@ -1,0 +1,15 @@
+state={
+	id=216
+	name="STATE_216"
+	provinces={
+		652 3268 3476 4536 4702 4941 5300 7099 7757 8318 10674 10716 10763 10805 10815 
+	}
+	history = {
+		owner = CAH
+		add_core_of=CAH
+    }
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,15 @@
+state={
+	id=396
+	name="STATE_396"
+	provinces={
+		613 756 1281 1656 1807 1935 2641 2728 3195 3275 3577 3709 5596 5638 5832 5883 6025 7066 7813 8052 8191 8289 9086 9130 10553 10589 10634 
+	}
+	history = {
+		owner = GEH
+		add_core_of=GEH
+    }
+	impassble = yes
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,131 @@
+﻿l_simp_chinese:
+#飞机机体
+air_ship_airframe:"飞艇"
+air_ship_airframe_1:"标准型飞艇"
+air_ship_airframe_2:"改进型飞艇"
+air_ship_gunship_airframe:"炮艇"
+air_ship_gunship_airframe_1:"标准型炮艇"
+air_ship_gunship_airframe_2:"改进型炮艇"
+
+air_ship_air_forte_airframe:"空中堡垒"
+air_ship_air_forte_airframe_1:"标准型空中堡垒"
+air_ship_air_forte_airframe_2:"改进型空中堡垒"
+
+
+uav_airframe:"无人战斗机"
+uav_airframe_1:"标准型无人战斗机"
+uav_airframe_2:"改进型无人战斗机"
+
+uav_cas_airframe:"无人攻击机"
+uav_cas_airframe_1:"标准型无人攻击机"
+uav_cas_airframe_2:"改进型无人攻击机"
+
+
+uav_recon_airframe:"无人侦察机"
+uav_recon_airframe_1:"标准型无人侦察机"
+uav_recon_airframe_2:"改进型无人侦察机"
+
+helicopter_airframe:"通用直升机"
+helicopter_airframe_1:"标准型通用直升机"
+helicopter_airframe_2:"改进型通用直升机"
+
+helicopter_cas_airframe:"攻击直升机"
+helicopter_cas_airframe_1:"标准型攻击直升机"
+helicopter_cas_airframe_2:"改进型攻击直升机"
+
+#飞机配件
+
+EQ_MOD_CAT_air_ship_strat_weapon_TITLE:"炸弹吊舱"
+EQ_MOD_CAT_air_ship_gunship_weapon_TITLE:"对地火炮"
+EQ_MOD_CAT_air_ship_air_weapon_TITLE:"重型对空武器"
+EQ_MOD_CAT_air_ship_engine_type_TITLE:"飞艇引擎"
+EQ_MOD_CAT_air_ship_module_defense_turret_TITLE:"飞艇近防炮"
+
+
+EQ_MOD_CAT_uav_cas_weapon_TITLE:"无人机对地武器"
+EQ_MOD_CAT_uav_air_weapon_TITLE:"无人机对空武器"
+EQ_MOD_CAT_uav_engine_type_TITLE:"无人机引擎"
+EQ_MOD_CAT_uav_recon_camera_TITLE:"无人机侦察设备"
+EQ_MOD_CAT_uav_recon_camera_TITLE:"无人机侦察设备"
+
+EQ_MOD_CAT_uav_cas_weapon_TITLE:"无人机对地武器"
+EQ_MOD_CAT_uav_air_weapon_TITLE:"无人机对空武器"
+EQ_MOD_CAT_uav_engine_type_TITLE:"无人机引擎"
+EQ_MOD_CAT_uav_recon_camera_TITLE:"无人机侦察设备"
+EQ_MOD_CAT_uav_recon_camera_TITLE:"无人机侦察设备"
+
+EQ_MOD_CAT_helicopter_weapon_type_TITLE:"直升机武备挂载"
+EQ_MOD_CAT_helicopter_crew_carrying_TITLE:"直升机载员舱"
+EQ_MOD_CAT_helicopter_sec_weapon_type_TITLE:"直升机额外挂载"
+EQ_MOD_CAT_helicopter_engine_type_TITLE:"直升机引擎"
+EQ_MOD_CAT_helicopter_hdmg_type_TITLE:"舱门机枪"
+EQ_MOD_CAT_helicopter_equipment_type_TITLE:"额外设备"
+
+
+air_ship_engine_1:"标准型飞艇引擎"
+air_ship_bomb_bay_1:"重磅炸弹吊舱 500KG高爆炸弹"
+air_ship_heavy_aam_1:"R40R 半主动远程空空导弹"
+air_ship_gunship_gun_1:"40mm 对地攻击机炮"
+air_hmg_defense_turret:"12.7mm 自动炮台"
+
+
+air_ship_engine_1:"标准型飞艇引擎"
+air_ship_bomb_bay_1:"重磅炸弹吊舱 500KG高爆炸弹"
+air_ship_heavy_aam_1:"R40R 半自动远程空空导弹"
+air_ship_gunship_gun_1:"40mm 对地攻击机炮"
+air_hmg_defense_turret:"12.7mm 自动炮台"
+
+uav_engine_1:"标准型无人机引擎"
+uav_gun_1:"标准型无人机机炮"
+uav_light_aam_1:"轻型对空导弹 MK1"
+uav_agm_1:"无人机对地导弹 MK1"
+uav_recon_camera:"无人机侦察摄像头 MK1"
+
+helicopter_engine_1:"标准型直升机引擎"
+helicopter_fast_engine_1:"标准型高速直升机引擎"
+
+helicopter_crew_carrying_1:"标准型载员舱"
+helicopter_crew_carrying_1_desc:"用于装载人员和物资的空间。\n§G在主要武器槽位装配的话该设计将被认为是通用直升机（定位显示为战斗机）§!"
+helicopter_crew_carrying_aromr_1:"标准型载员舱（空降战车加强）"
+helicopter_crew_carrying_aromr_1_desc:"允许直升机吊运伞兵战车，为机降部队提供额外的装甲支援。"
+helicopter_long_range_atgm_1_2x:"长程反坦克导弹 MK1 X2"
+helicopter_long_range_atgm_1_2x_desc:"超长程反坦克导弹，能在20km以外发射并由其他单位引导，虽然重量较重，但能有效保证直升机的安全。\n§G在主要武器槽位装配的话该设计将被认为是武装直升机（定位显示为近距支援机）§!"
+helicopter_atgm_1_4x:"反坦克导弹 MK1 X4"
+helicopter_atgm_1_4x_desc:"4联装反坦克导弹，能有效对付装甲单位或者固定火力点。\n§G在主要武器槽位装配的话该设计将被认为是武装直升机（定位显示为近距支援机）§!"
+helicopter_atgm_1_2x:"反坦克导弹 MK1 X2"
+helicopter_atgm_1_2x_desc:"2联装反坦克导弹，能有效对付装甲单位或者固定火力点。\n§G在主要武器槽位装配的话该设计将被认为是武装直升机（定位显示为近距支援机）§!"
+helicopter_aam_1_4x:"空对空导弹 MK1 X4"
+helicopter_aam_1_4x_desc:"直升机专用空对空导弹，可以与其他直升机激烈的交换意见。\n§G在主要武器槽位装配的话该设计将被认为是武装直升机（定位显示为近距支援机）§!"
+helicopter_heavy_gun_1:"重型机炮吊舱 MK1"
+helicopter_heavy_gun_1_desc:"使用破甲榴弹的机炮，能有效对付轻装甲单位。\n§G在主要武器槽位装配的话该设计将被认为是武装直升机（定位显示为近距支援机）§!"
+helicopter_light_gun_1:"轻型机枪吊舱 MK1"
+helicopter_light_gun_1_desc:"射速极高的机枪，可惜几乎无法对抗任何装甲单位。\n§G在主要武器槽位装配的话该设计将被认为是武装直升机（定位显示为近距支援机）§!"
+helicopter_rl_1:"火箭发射巢 MK1"
+helicopter_rl_1_desc:"破甲火箭发射巢，虽然能对付任何单位，但其低精度使得它更适合对抗轻型单位。\n§G在主要武器槽位装配的话该设计将被认为是武装直升机（定位显示为近距支援机）§!"
+helicopter_fueltank:"455升油箱"
+helicopter_fueltank_desc:"副油箱，能有效提升直升机的航程"
+helicopter_recon_SOTAS:"防区外目标获取系统"
+helicopter_recon_SOTAS_desc:"包含专门监视整个战场的雷达和光电设备，能为几十公里的战线提供必要的侦察支援。"
+helicopter_hdgun_hmg_1:"舱门重机枪 MK1"
+helicopter_hdgun_hmg_1_desc:"舱门重机枪，能提供有效的火力支援和自卫火力。"
+helicopter_hdgun_lmg_1:"舱门轻机枪 MK1"
+helicopter_hdgun_lmg_1_desc:"射速极快的舱门机枪，能瞬间提供强大的压制火力。"
+helicopter_equipment_armor:"额外装甲"
+helicopter_equipment_armor_desc:"如果你想走出直升机而不是爬出来，那么加点装甲绝对没错。"
+helicopter_equipment_lb:"长弓火控雷达"
+helicopter_equipment_lb_desc:"对地火控雷达，能在远距离安全的捕捉到地面目标，并导引武器发动攻击。"
+
+#飞机兵种
+air_ship:"飞艇"
+air_ship_gunship:"炮艇"
+air_ship_air_forte:"空中堡垒"
+
+
+uav:"无人战斗机"
+uav_cas:"无人攻击机"
+uav_recon:"无人侦察机"
+
+attack_helicopter:"攻击直升机"
+utility_helicopter:"通用直升机"
+
+

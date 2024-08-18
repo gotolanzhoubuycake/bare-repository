@@ -1,0 +1,101 @@
+ideas = {
+    country = {
+    
+        TRI_authorize_eagle = {
+            name = authorize_eagle_modifier
+            picture = unknown
+
+            allowed = {
+                original_tag = TRI
+            }
+
+            modifier = {
+                training_time_factor = -0.15
+            }
+        }
+
+        TRI_2st_eden_pact_modifier = {
+            name = TRI_2st_eden_pact_modifier
+            picture = unknown
+
+            allowed = {
+                original_tag = TRI
+            }
+
+            modifier = {
+                political_power_gain = 0.40
+                command_power_gain_mult = 0.30
+                industrial_capacity_factory = 0.10
+            }
+        }
+
+        TRI_dissonance_modifier_alt = {
+            name = TRI_dissonance_modifier_alt
+            picture = unknown
+
+            allowed = {
+                original_tag = TRI
+            }
+
+            modifier = {
+                stability_factor = -0.05
+            }
+        }
+
+        TRI_authorize_dove = {
+            name = authorize_dove_modifier
+            picture = unknown
+
+            allowed = {
+                original_tag = TRI
+            }
+
+            modifier = {
+                consumer_goods_factor = -0.10
+            }
+        }
+
+        TRI_SCH_teacher_modifier = {
+            name = TRI_SCH_teacher_modifier
+            picture = nuknown
+
+            allowed = {
+                original_tag = TRI
+            }
+
+            modifier = {
+                stability_factor = 0.05
+                political_power_gain = 0.20
+                attrition = -0.1
+            }
+        }
+
+
+        hideden_ideas = {
+            TRI_hidden_carryon_package_ns = { #圣三一工业步兵装备增益buff
+                name = trinity_industry_modifier
+                removal_cost = -1
+                picture = SOV_third_five_year_plan_military
+                
+                allowed = {
+                    original_tag = TRI
+                }
+
+                allowed_civil_war = {
+                    always = yes
+                }
+                
+                equipment_bonus = { #注：改动以下数字必须要被Dynamic Modifier custom tooltip应用才生效
+                    infantry_equipment = {
+                        instant = yes
+                        reliability = 0.1
+                    }
+                }
+            }
+        }
+
+
+
+        
+    }
+} 

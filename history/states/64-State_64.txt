@@ -1,0 +1,16 @@
+state={
+	id=64
+	name="STATE_64"
+	provinces={
+		2040 2463 7131 7546 7711 8376 11636 
+	}
+	history = {
+		owner = D05
+		add_core_of=D05
+		victory_points = {7711 15}
+    }
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

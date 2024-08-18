@@ -1,0 +1,15 @@
+state={
+	id=611
+	name="STATE_611"
+	provinces={
+		164 419 977 1105 1354 1585 1625 2375 2724 3475 4361 4469 5100 5411 6162 6338 6636 6644 7731 7936 11388 11430 11448 11472 11476 11488 11503 11518 11543 11544 
+	}
+	history={
+		owner = CAP
+		add_core_of=CAP
+	}
+	manpower=0
+	state_category=wasteland
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

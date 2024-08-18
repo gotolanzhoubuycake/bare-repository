@@ -1,0 +1,14 @@
+state={
+	id=447
+	name="STATE_447"
+	provinces={
+		55 73 270 1121 1716 2031 3565 4270 5170 5866 6186 6233 7374 7416 7437 8697 8769 8811 10236 
+	}
+	history = {
+		owner = HYA
+		add_core_of=HYA
+    }
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

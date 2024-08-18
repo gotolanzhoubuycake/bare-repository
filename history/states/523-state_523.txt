@@ -1,0 +1,18 @@
+
+state={
+	id=523
+	name="STATE_523"
+
+	history={
+		owner = CAB
+		add_core_of=CAB
+
+	}
+
+	provinces={
+		1036 1962 4600 4805 4937 5141 6711 7785 8449 9155 9380 10673 10745 
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

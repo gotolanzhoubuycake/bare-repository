@@ -1,0 +1,16 @@
+state={
+	id=72
+	name="STATE_72"
+	provinces={
+		3707 5492 8609 
+	}
+	history = {
+		owner = D05
+		add_core_of=D05
+		victory_points = {8609 15}
+    }
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

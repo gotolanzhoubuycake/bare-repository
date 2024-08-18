@@ -1,0 +1,34 @@
+sub_units = {
+	air_ship = {
+		sprite = heavy_plane
+		priority = 5
+		active = yes
+		type = strategic_bomber
+		need = { air_ship_airframe = 1 }
+		categories = { category_strat_bomber }
+		land_air_wing_size = 4
+	}
+
+	air_ship_gunship = {
+		sprite = heavy_plane
+		priority =2
+		active = yes
+		type = cas
+		need = { air_ship_gunship_airframe = 1 }
+		categories = {category_cas }
+		land_air_wing_size = 4
+	}
+
+	air_ship_air_forte = {
+		sprite = heavy_plane
+		priority = 1
+		active = yes
+		type = fighter
+		need = { air_ship_air_forte_airframe = 1 }
+		categories = { category_fighter }
+		land_air_wing_size = 4
+	}
+}
+
+
+

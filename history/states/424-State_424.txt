@@ -1,0 +1,20 @@
+
+state={
+	id=424
+	name="STATE_424"
+
+	history={
+		owner = HYA
+		add_core_of=HYA
+		victory_points = {1127 10}
+		victory_points = {10358 10}
+		victory_points = {2787 10}
+	}
+
+	provinces={
+		376 656 905 1127 1335 1484 1635 1763 2260 2557 2787 3189 5014 5312 5670 7417 7418 7861 8930 9057 9105 9163 9184 10135 10227 10250 10284 10298 10301 10339 10358 10530 10635 10653 
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

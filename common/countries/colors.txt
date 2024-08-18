@@ -1,0 +1,84 @@
+ABY = {
+	color = rgb { 0 206 209 }
+	color_ui = rgb { 0 206 209 }
+}
+ARI = {
+	color = rgb { 138 43 226 }
+	color_ui = rgb { 138 43 226 }
+}
+CAE = {
+	color = rgb { 160 32 240 }
+	color_ui = rgb { 160 32 240 }
+}
+CAP = {
+	color = rgb { 161 32 240 }
+	color_ui = rgb { 161 32 240 }
+}
+CAH = {
+	color = rgb { 162 32 240 }
+	color_ui = rgb { 162 32 240 }
+}
+CAB = {
+	color = rgb { 163 32 240 }
+	color_ui = rgb { 163 32 240 }
+}
+CAO = {
+	color = rgb { 164 32 240 }
+	color_ui = rgb { 164 32 240 }
+}
+CEN = {
+	color = rgb { 106 90 205 }
+	color_ui = rgb { 106 90 205 }
+}
+GEH = {
+	color = rgb { 178 34 34 }
+	color_ui = rgb { 178 34 34 }
+}
+HYA = {
+	color = rgb { 255 105 180 }
+	color_ui = rgb { 255 105 180 }
+}
+KRO = {
+	color = rgb { 139 69 19 }
+	color_ui = rgb { 139 69 19 }
+}
+MIL = {
+	color = rgb { 65 105 225 }
+	color_ui = rgb { 65 105 225 }
+}
+ODY = {
+	color = rgb { 0 255 255 }
+	color_ui = rgb { 0 255 255 }
+}
+RWT = {
+	color = rgb { 255 0 0 }
+	color_ui = rgb { 255 0 0 }
+}
+SHA = {
+	color = rgb { 60 179 113 }
+	color_ui = rgb { 60 179 113 }
+}
+SRT = {
+	color = rgb { 119 136 153 }
+	color_ui = rgb { 119 136 153 }
+}
+TRI = {
+	color = rgb { 255 250 205 }
+	color_ui = rgb { 255 250 205 }
+}
+VAL = {
+	color = rgb { 153 50 204 }
+	color_ui = rgb { 153 50 204 }
+}
+SCH = {
+    color = rgb { 187 255 255 }
+        color_ui = rgb { 187 255 255 }
+}
+WLH = {
+    color = rgb { 139 71 137 }
+        color_ui = rgb { 139 71 137 }
+}
+HIL = {
+    color = rgb { 139 101 8 }
+        color_ui = rgb { 139 101 8 }
+}

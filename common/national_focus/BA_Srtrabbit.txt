@@ -1,0 +1,296 @@
+focus_tree = {
+	id = SRT_Rabbit_base
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SRT
+		}
+	}
+	default = no
+	##以下为序章剧情线
+	focus = {
+		id = SRT_head_to_rabbit_town #向小兔子镇出发
+		#icon = GFX_goal_unknown
+		cost = 5
+		x = 10
+		y = 0
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+				army_experience  = 25
+			}			
+		}
+		focus = {
+			id = SRT_rabbit_park #小兔子公园
+			#icon = GFX_goal_unknown
+			relative_position_id = SRT_head_to_rabbit_town
+			prerequisite = {
+                focus = SRT_head_to_rabbit_town
+			}			
+			cost = 5
+			x = 0
+			y = 1
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+
+				}			
+	}
+	focus = {
+		id = SRT_ensure_water #确保水源
+		#icon = GFX_goal_unknown
+		relative_position_id = SRT_rabbit_park
+		prerequisite = {
+			focus = SRT_rabbit_park
+		}			
+		cost = 5
+		x = -1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = SRT_search_food #寻找食物
+		#icon = GFX_goal_unknown
+		relative_position_id = SRT_rabbit_park
+		prerequisite = {
+			focus = SRT_rabbit_park
+		}			
+		cost = 5
+		x = 1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = SRT_armed_demonstration #武装示威
+		#icon = GFX_goal_unknown
+		relative_position_id = SRT_ensure_water
+		relative_position_id = SRT_search_food
+		prerequisite = {
+			focus = SRT_search_food
+		}
+		prerequisite = {
+			focus = SRT_ensure_water
+		}			
+		cost = 5
+		x = -1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = SRT_back_to_rabbit_park #回到小兔子公园
+		#icon = GFX_goal_unknown
+		relative_position_id = SRT_armed_demonstration
+		prerequisite = {
+			focus = SRT_armed_demonstration
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = SRT_hobo_attack #所确幸袭击
+		#icon = GFX_goal_unknown
+		relative_position_id = SRT_back_to_rabbit_park
+		prerequisite = {
+			focus = SRT_back_to_rabbit_park
+		}			
+
+		cost = 5
+		x = -2
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}
+	focus = {
+		id = SRT_operation_carrot #胡萝卜作战
+		#icon = GFX_goal_unknown
+		relative_position_id = SRT_back_to_rabbit_park
+		prerequisite = {
+			focus = SRT_back_to_rabbit_park
+		}			
+
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}
+		focus = {
+		id = SRT_measure_schale #衡量夏莱的援助
+		#icon = GFX_goal_unknown
+		relative_position_id = SRT_back_to_rabbit_park
+		prerequisite = {
+			focus = SRT_back_to_rabbit_park
+		}			
+		cost = 5
+		x = 2
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}
+		focus = {
+		id = SRT_flood_of_rain #大雨倾盆
+		#icon = GFX_goal_unknown
+		relative_position_id = SRT_operation_carrot
+		prerequisite = {
+			focus = SRT_hobo_attack
+		}			
+		prerequisite = {
+			focus = SRT_operation_carrot
+		}	
+		prerequisite = {
+			focus = SRT_measure_schale
+		}	
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}
+			focus = {
+		id = SRT_sale_soggy_weapons #出售浸水设备
+		#icon = GFX_goal_unknown
+		relative_position_id = SRT_flood_of_rain
+		prerequisite = {
+			focus = SRT_flood_of_rain
+		}			
+		cost = 5
+		x = -2
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}
+		focus = {
+		id = SRT_search_for_buyer #寻找可靠买家
+		#icon = GFX_goal_unknown
+		relative_position_id = SRT_sale_soggy_weapons
+		prerequisite = {
+			focus = SRT_sale_soggy_weapons
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}
+		focus = {
+		id = SRT_prevent_hobo_attacks #应对所确幸袭击
+		#icon = GFX_goal_unknown
+		relative_position_id = SRT_flood_of_rain
+		prerequisite = {
+			focus = SRT_flood_of_rain
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}
+		focus = {
+		id = SRT_beat_back_hobo #反击
+		#icon = GFX_goal_unknown
+		relative_position_id = SRT_prevent_hobo_attacks
+		prerequisite = {
+			focus = SRT_prevent_hobo_attacks
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}
+		focus = {
+		id = SRT_investigating_valkyrie #调查瓦尔基里
+		#icon = GFX_goal_unknown
+		relative_position_id = SRT_flood_of_rain
+		prerequisite = {
+			focus = SRT_flood_of_rain
+		}			
+		cost = 5
+		x = 2
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}
+		focus = {
+		id = SRT_develop_strike_plan #制定突袭方案
+		#icon = GFX_goal_unknown
+		relative_position_id = SRT_investigating_valkyrie
+		prerequisite = {
+			focus = SRT_investigating_valkyrie
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}
+		focus = {
+		id = SRT_inari_sushi #稻荷寿司
+		#icon = GFX_goal_unknown
+		relative_position_id = SRT_beat_back_hobo
+		prerequisite = {
+			focus = SRT_search_for_buyer
+		}
+		prerequisite = {
+			focus = SRT_beat_back_hobo
+		}
+		prerequisite = {
+			focus = SRT_develop_strike_plan
+		}	
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}
+		focus = {
+		id = SRT_operation_clover #三叶草作战
+		#icon = GFX_goal_unknown
+		relative_position_id = SRT_inari_sushi
+		prerequisite = {
+			focus = SRT_inari_sushi
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}
+}

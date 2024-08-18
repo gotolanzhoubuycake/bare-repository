@@ -1,0 +1,463 @@
+focus_tree = {
+	id = Kaiserfactory_base
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = CAB
+		}
+	}
+	default = no
+	##以下为序章剧情线
+	focus = {
+		id = CAB_year_plan #凯撒百货年度规划
+		#icon = GFX_goal_unknown
+		cost = 5
+		x = 4
+		y = 0
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+				
+			}			
+		}
+	##以下为经济线
+		focus = {
+			id = CAB_super_high_building #新世界百货大厦开业
+			#icon = GFX_goal_unknown
+			relative_position_id = CAB_year_plan
+			prerequisite = {
+                focus = CAB_year_plan
+			}			
+			cost = 5
+			x = -4
+			y = 1.5
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+
+				}			
+	}
+			focus = {
+			id = CAB_expand_to_du #向DU白鸟区扩张
+			#icon = GFX_goal_unknown
+			relative_position_id = CAB_super_high_building
+			prerequisite = {
+                focus = CAB_super_high_building
+			}			
+			cost = 5
+			x = -2
+			y = 1
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+
+				}			
+	}
+	focus = {
+		id = CAB_chain_dinning #凯撒连锁餐饮企业入驻
+		#icon = GFX_goal_unknown
+		relative_position_id = CAB_expand_to_du
+		prerequisite = {
+			focus = CAB_expand_to_du
+		}			
+		cost = 5
+		x = -1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAB_chain_market #扩张连锁便利店
+		#icon = GFX_goal_unknown
+		relative_position_id = CAB_expand_to_du
+		prerequisite = {
+			focus = CAB_expand_to_du
+		}			
+		cost = 5
+		x = 1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}
+	focus = {
+		id = CAB_dinning_battle #雀亭料理对决
+		#icon = GFX_goal_unknown
+		relative_position_id = CAB_chain_dinning
+		prerequisite = {
+			focus = CAB_chain_dinning
+		}	
+		prerequisite = {
+			focus = CAB_chain_market
+		}			
+		cost = 5
+		x = 1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAB_agricultural_association #凯撒农业协同组合
+		#icon = GFX_goal_unknown
+		relative_position_id = CAB_super_high_building
+		prerequisite = {
+			focus = CAB_super_high_building
+		}			
+		cost = 5
+		x = 2
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAB_agricultural_bank #农协银行体系
+		#icon = GFX_goal_unknown
+		relative_position_id = CAB_agricultural_association
+		prerequisite = {
+			focus = CAB_agricultural_association
+		}			
+		cost = 5
+		x = -1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAB_agricultural_price #确保农产品定价权
+		#icon = GFX_goal_unknown
+		relative_position_id = CAB_agricultural_association
+		prerequisite = {
+			focus = CAB_agricultural_association
+		}			
+		cost = 5
+		x = 1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAB_spinning_weaving#凯撒纺织
+		#icon = GFX_goal_unknown
+		relative_position_id = CAB_super_high_building
+		prerequisite = {
+			focus = CAB_super_high_building
+		}			
+		cost = 5
+		x = 5
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+		focus = {
+			id = CAB_new_pantyhose #推销新款连裤丝袜
+			#icon = GFX_goal_unknown
+			relative_position_id = CAB_spinning_weaving
+			prerequisite = {
+                focus = CAB_spinning_weaving
+			}		
+			prerequisite = {
+                focus = CAB_chemicals_daily
+			}			
+			cost = 5
+			x = 0
+			y = 1
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+
+				}			
+	}
+	focus = {
+		id = CAB_chemicals_daily #凯撒日化
+		#icon = GFX_goal_unknown
+		relative_position_id = CAB_super_high_building
+		prerequisite = {
+			focus = CAB_super_high_building
+		}
+		cost = 5
+		x = 7
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAB_ancient_shampoo #凯撒古法洗发水
+		#icon = GFX_goal_unknown
+		relative_position_id = CAB_chemicals_daily
+			prerequisite = {
+                focus = CAB_spinning_weaving
+			}		
+			prerequisite = {
+                focus = CAB_chemicals_daily
+			}				
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	##以下为科技线
+	focus = {
+		id = CAB_research_plan #研发计划
+		#icon = GFX_goal_unknown
+		relative_position_id = CAB_year_plan
+		prerequisite = {
+			focus = CAB_year_plan
+		}			
+		cost = 5
+		x = 6
+		y = 1.5
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAB_social_talent #自治区社招人才
+		#icon = GFX_goal_unknown
+		relative_position_id = CAB_research_plan
+		prerequisite = {
+			focus = CAB_research_plan
+		}
+		mutually_exclusive = {
+			focus = CAB_school_talent
+		}		
+		cost = 5
+		x = -1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAB_kilkis_soda #KILKIS苏打汽水研发
+		#icon = GFX_goal_unknown
+		relative_position_id = CAB_social_talent
+		prerequisite = {
+			focus = CAB_social_talent
+			focus = CAB_school_talent
+		}
+		mutually_exclusive = {
+			focus = CAB_kamyang_buldak
+		}		
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAB_new_dress #春夏季新款连衣裙设计
+		#icon = GFX_goal_unknown
+		relative_position_id = CAB_kilkis_soda
+		prerequisite = {
+			focus = CAB_kilkis_soda
+			focus = CAB_kamyang_buldak
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAB_school_talent#学院校招人才
+		#icon = GFX_goal_unknown
+		relative_position_id = CAB_research_plan
+
+		prerequisite = {
+			focus = CAB_research_plan
+		}			
+		mutually_exclusive = {
+			focus = CAB_social_talent
+		}		
+		cost = 5
+		x = 1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAB_kamyang_buldak #超辣火鸡面研发
+		#icon = GFX_goal_unknown
+		relative_position_id = CAB_school_talent
+		prerequisite = {
+			focus = CAB_social_talent
+			focus = CAB_school_talent
+		}
+		mutually_exclusive = {
+			focus = CAB_kilkis_soda
+		}		
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAB_liquid_foundation #新式水光粉底液研究
+		#icon = GFX_goal_unknown
+		relative_position_id = CAB_kamyang_buldak
+		prerequisite = {
+			focus = CAB_kilkis_soda
+			focus = CAB_kamyang_buldak
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	##以下为军事线
+	focus = {
+		id = CAB_enhance_security_forces #强化企业安保力量
+		#icon = GFX_goal_unknown
+		relative_position_id = CAB_year_plan
+		prerequisite = {
+			focus = CAB_year_plan
+		}			
+		cost = 5
+		x = 11
+		y = 1.5
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAB_security_weapon #为企业安保配置武器
+		#icon = GFX_goal_unknown
+		relative_position_id = CAB_enhance_security_forces
+		prerequisite = {
+			focus = CAB_enhance_security_forces
+		}	
+		cost = 5
+		x = -2
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAB_pmc_training #PMC训练法
+		#icon = GFX_goal_unknown
+		relative_position_id = CAB_security_weapon
+		prerequisite = {
+			focus = CAB_security_weapon
+		}
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAB_hire_pmc #雇佣PMC
+		#icon = GFX_goal_unknown
+		relative_position_id = CAB_enhance_security_forces
+		prerequisite = {
+			focus = CAB_enhance_security_forces
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAB_enhance_pmc#强化PMC武器
+		#icon = GFX_goal_unknown
+		relative_position_id = CAB_hire_pmc
+		prerequisite = {
+			focus = CAB_hire_pmc
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAB_security_robot #设置安保机器人
+		#icon = GFX_goal_unknown
+		relative_position_id = CAB_enhance_security_forces
+		prerequisite = {
+			focus = CAB_enhance_security_forces
+		}
+		cost = 5
+		x = 2
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAB_joint_action_team#联合行动编组
+		#icon = GFX_goal_unknown
+		relative_position_id = CAB_security_robot
+		prerequisite = {
+			focus = CAB_security_robot
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAB_temporary_command_authority#向总部申请临时指挥权
+		#icon = GFX_goal_unknown
+		relative_position_id = CAB_enhance_pmc
+		prerequisite = {
+			focus = CAB_pmc_training
+		}		
+		prerequisite = {
+			focus = CAB_enhance_pmc
+		}
+		prerequisite = {
+			focus = CAB_joint_action_team
+		}		
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+}

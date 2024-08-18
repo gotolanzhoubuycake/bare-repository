@@ -1,0 +1,187 @@
+# options for map_icon_category:
+# For land units: infantry,armored,other
+# For sea units: ship,transport,uboat
+
+sub_units = {
+
+	infantry_anti_air = {#学生
+		abbreviation = "ANA"
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 301
+		ai_priority = 10
+		active = yes
+
+		type = {
+			infantry
+			anti_air
+		}
+		
+		group = combat_support
+		
+		categories = {
+			category_army
+			category_line_artillery
+			category_anti_air
+		}		
+		
+		combat_width = 1
+		
+		#Size Definitions
+		max_organisation = 0
+		default_morale = 0.1
+		max_strength = 0.6
+		manpower = 500
+		training_time = 120
+		weight = 0.5
+		
+		hardness = 50
+
+		supply_consumption = 0.1
+
+		need = {
+			infantry_anti_air_equipment = 30
+		}
+
+		forest = {
+			attack = -0.1
+			movement = -0.1
+		}
+
+		jungle = {
+			attack = -0.2
+			movement = -0.2
+		}
+
+		marsh = {
+			attack = -0.2
+			movement = -0.2
+		}
+
+		river = {
+			attack = -0.2
+			movement = -0.2
+		}
+
+		amphibious = {
+			attack = -0.4
+		}
+	}
+
+
+	infantry_anti_air_ng = {#市民
+		abbreviation = "ANA"
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 301
+		ai_priority = 10
+		active = yes
+
+		type = {
+			infantry
+			anti_air
+		}
+		
+		group = combat_support
+		
+		categories = {
+			category_army
+			category_line_artillery
+			category_anti_air
+		}		
+		
+		combat_width = 1
+		
+		#Size Definitions
+		max_organisation = 0
+		default_morale = 0.1
+		max_strength = 0.6
+		manpower = 500
+		training_time = 120
+		weight = 0.5
+		
+		hardness = 50
+
+		supply_consumption = 0.1
+
+		need = {
+			infantry_anti_air_equipment = 30
+		}
+
+		forest = {
+			attack = -0.1
+			movement = -0.1
+		}
+
+		jungle = {
+			attack = -0.2
+			movement = -0.2
+		}
+
+		marsh = {
+			attack = -0.2
+			movement = -0.2
+		}
+
+		river = {
+			attack = -0.2
+			movement = -0.2
+		}
+
+		amphibious = {
+			attack = -0.4
+		}
+	}
+	#支援连
+	infantry_anti_air_support = {
+		abbreviation = "AA"
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = yes
+		affects_speed = no
+
+		type = {
+			infantry
+			support
+		}
+
+		group = support
+
+		categories = {
+			category_support_battalions
+			category_army
+			category_anti_air
+		}
+
+		
+		combat_width = 0
+		training_time = 120
+
+		hardness = 50
+
+		need = {
+			infantry_anti_air_equipment = 20
+		}
+
+		can_be_parachuted = yes
+		
+		#Size Definitions
+		max_strength = 0.2
+		max_organisation = 0
+		default_morale = 0.1
+		manpower = 300
+		weight = 0.1
+		
+        supply_consumption = 0.1
+
+		# Support nerfs to combat abilities
+		defense = -0.4
+		breakthrough = -0.4
+		soft_attack = -0.4
+		hard_attack = -0.4
+		air_attack = -0.2
+
+	}
+}

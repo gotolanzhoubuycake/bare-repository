@@ -1,0 +1,14 @@
+state={
+	id=518
+	name="STATE_518"
+	provinces={
+		15 131 454 578 661 2253 2691 2695 3219 4063 4234 4236 4701 4964 6643 6991 7759 8314 8698 8731 10550 10567 10577 10608 10626 10633 
+	}
+	history = {
+		owner = CAH
+		add_core_of=CAH
+    }
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

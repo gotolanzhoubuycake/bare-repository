@@ -1,0 +1,14 @@
+state={
+	id=407
+	name="STATE_407"
+	provinces={
+		461 517 728 871 1160 2009 2087 3840 3997 4202 5098 5112 5386 5908 6247 6308 6888 7509 7761 8149 8735 9202 9528 10742 10759 10760 10770 10774 10777 10782 
+	}
+	history = {
+		owner = SHA
+		add_core_of=SHA
+    }
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

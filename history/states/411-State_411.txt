@@ -1,0 +1,14 @@
+state={
+	id=411
+	name="STATE_411"
+	provinces={
+		26 285 746 1754 1994 2545 3477 3579 3618 4663 5846 5973 6683 6995 7165 7287 8315 8631 9316 10926 10953 
+	}
+	history = {
+		owner = SHA
+		add_core_of=SHA
+    }
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

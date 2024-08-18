@@ -1,0 +1,15 @@
+state={
+	id=470
+	name="STATE_470"
+	provinces={
+		2170 2298 2459 2992 3335 4711 5571 6932 8984 11022 11078 11079 11093 
+	}
+	history = {
+		owner = ABY
+		add_core_of=ABY
+		victory_points = {4711 5}
+    }
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

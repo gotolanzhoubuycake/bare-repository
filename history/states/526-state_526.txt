@@ -1,0 +1,14 @@
+state={
+	id=526
+	name="STATE_526"
+	provinces={
+		306 689 862 984 1131 1255 2030 2574 2785 3402 4674 5453 5454 5554 6472 6664 7062 7112 7964 8229 8587 10824 10830 10845 10847 
+	}
+	history = {
+		owner = D12
+		add_core_of=D12
+    }
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,15 @@
+state={
+	id=501
+	name="STATE_501"
+	provinces={
+		105 161 318 1501 2065 2364 2474 4428 5313 5402 5888 6050 6173 6223 7126 11007 11065 
+	}
+	history = {
+		owner = D07
+		add_core_of=D07
+		victory_points = {6137 15}
+    }
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

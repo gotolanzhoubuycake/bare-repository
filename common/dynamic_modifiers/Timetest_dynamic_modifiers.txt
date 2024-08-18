@@ -1,0 +1,23 @@
+Timetest_night_modifiers = {
+	icon = Timetest_night_modifiers_icon
+	
+	#industrial_capacity_factory = country_night_industrial_capacity_factory_base # -0.8 工厂产出
+	production_speed_buildings_factor = country_night_production_speed_buildings_factor_base # -0.9 建造速度
+	industry_free_repair_factor = country_night_industry_free_repair_factor_base # -0.75 免费修复
+	
+	army_attack_factor = var:country_night_army_attack_factor # -0.5 陆军攻击
+	army_speed_factor = var:country_night_army_speed_factor # -0.8 陆军速度
+	army_morale_factor = var:country_night_army_morale_factor_base # 0.5 组织度恢复
+
+	air_mission_efficiency = var:country_night_air_mission_efficiency # -0.5 任务效率
+	air_attack_factor = var:country_night_air_attack_factor # -0.50 对空攻击
+	air_cas_present_factor = var:country_night_air_cas_present_factor # -0.9 对地攻击
+	air_bombing_targetting = var:country_night_air_bombing_targetting # -0.5 对地瞄准
+	air_superiority_detect_factor = var:country_night_air_superiority_detect_factor # -0.2 空优探测
+	air_interception_detect_factor = var:country_night_air_interception_detect_factor # -0.2 拦截探测
+
+	#carrier_traffic = var:country_night_carrier_traffic # -1.0
+	#naval_hit_chance = var:country_night_naval_hit_chance # -0.25
+	#naval_retreat_speed = var:country_night_naval_retreat_speed # 0.1
+}
+

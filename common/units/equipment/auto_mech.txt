@@ -1,0 +1,55 @@
+
+equipments = {
+
+	auto_mech = { #自动机 #目前不提供属性，由步兵武器提供属性
+		year = 2019
+	
+		is_archetype = yes
+		picture = archetype_infantry_equipment		
+		is_buildable = no
+		type = infantry
+		group_by = archetype
+		
+		interface_category = interface_category_land
+		
+		active = no
+		
+		#Misc Abilities
+		reliability = 0.8
+	
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+		
+		build_cost_ic = 0.2
+		resources = {
+			resources_cm = 1
+		}
+		
+	}
+
+	auto_mech_1 = {
+		year = 2019
+	
+		archetype = auto_mech
+		active = no
+		priority = 05
+		visual_level = 0
+	}
+	auto_mech_2 = {
+		year = 2019
+	
+		archetype = auto_mech
+		parent = auto_mech_1
+
+		defense = 3
+		breakthrough = 2
+
+		build_cost_ic = 0.25
+		active = no
+		priority = 05
+		visual_level = 1
+	}
+
+}
+

@@ -1,0 +1,270 @@
+focus_tree = {
+	id = KaiserPMC_base
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = CAP
+		}
+	}
+	default = no
+	##以下为序章剧情线
+	focus = {
+		id = CAP_businessPlan #PMC经营计划
+		#icon = GFX_goal_unknown
+		cost = 5
+		x = 7
+		y = 0
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+				
+			}			
+		}
+	##以下为主线
+		focus = {
+			id = CAP_pmc_order #制造计划
+			#icon = GFX_goal_unknown
+			relative_position_id = CAP_businessPlan
+			prerequisite = {
+                focus = CAP_businessPlan
+			}			
+			cost = 5
+			x = -4
+			y = 1.5
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+
+				}			
+	}
+	focus = {
+		id = CAP_cooperate_with_yakuza #与有活力的社会团体合作
+		#icon = GFX_goal_unknown
+		relative_position_id = CAP_pmc_order
+		prerequisite = {
+			focus = CAP_pmc_order
+		}			
+		cost = 5
+		x = -2
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAP_beat_zaku #教训钢盔团
+		#icon = GFX_goal_unknown
+		relative_position_id = CAP_pmc_order
+		prerequisite = {
+			focus = CAP_pmc_order
+		}			
+		cost = 5
+		x = 2
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}
+	focus = {
+		id = CAP_touch_redwinter #试探红冬边境线
+		#icon = GFX_goal_unknown
+		relative_position_id = CAP_cooperate_with_yakuza
+		prerequisite = {
+			focus = CAP_cooperate_with_yakuza
+		}		
+		prerequisite = {
+			focus = CAP_beat_zaku
+		}		
+		cost = 5
+		x = 2
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAP_kick_abbydos #向阿拜多斯地区增兵
+		#icon = GFX_goal_unknown
+		relative_position_id = CAP_touch_redwinter
+		prerequisite = {
+			focus = CAP_touch_redwinter
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	##以下为经济线
+	focus = {
+		id = CAP_capital_constrution #PMC总部建设
+		#icon = GFX_goal_unknown
+		relative_position_id = CAP_businessPlan
+		prerequisite = {
+			focus = CAP_businessPlan
+		}			
+		cost = 5
+		x = 1
+		y = 1.5
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAP_make_provisioning #扩大外出作战物资供应
+		#icon = GFX_goal_unknown
+		relative_position_id = CAP_capital_constrution
+		prerequisite = {
+			focus = CAP_capital_constrution
+		}	
+		cost = 5
+		x = -1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAP_borderdefenseline #建设红冬边境防线
+		#icon = GFX_goal_unknown
+		relative_position_id = CAP_capital_constrution
+		prerequisite = {
+			focus = CAP_capital_constrution
+		}	
+		cost = 5
+		x = 1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAP_legacyresources #搜集阿拜多斯遗留资源
+		#icon = GFX_goal_unknown
+		relative_position_id = CAP_make_provisioning
+		prerequisite = {
+			focus = CAP_make_provisioning
+			focus = CAP_borderdefenseline
+		}			
+		cost = 5
+		x = 1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	##以下为军事线
+	focus = {
+		id = CAP_pmc_recuit #扩大PMC招募规模
+		#icon = GFX_goal_unknown
+		relative_position_id = CAP_businessPlan
+		prerequisite = {
+			focus = CAP_businessPlan
+		}			
+		cost = 5
+		x = 6
+		y = 1.5
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAP_pmc_ordinary_recuit #常规人员招募
+		#icon = GFX_goal_unknown
+		relative_position_id = CAP_pmc_recuit
+		prerequisite = {
+			focus = CAP_pmc_recuit
+		}	
+		cost = 5
+		x = -2
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAP_cqb_train #PMC训练法
+		#icon = GFX_goal_unknown
+		relative_position_id = CAP_pmc_ordinary_recuit
+		prerequisite = {
+			focus = CAP_pmc_ordinary_recuit
+		}
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAP_sof_recuit #SOF精英招募
+		#icon = GFX_goal_unknown
+		relative_position_id = CAP_pmc_recuit
+		prerequisite = {
+			focus = CAP_pmc_recuit
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAP_recuit_from_kartel#从无法地带招募
+		#icon = GFX_goal_unknown
+		relative_position_id = CAP_sof_recuit
+		prerequisite = {
+			focus = CAP_sof_recuit
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAP_uav_equip #配属无人机
+		#icon = GFX_goal_unknown
+		relative_position_id = CAP_pmc_recuit
+		prerequisite = {
+			focus = CAP_pmc_recuit
+		}
+		cost = 5
+		x = 2
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAP_heavy_weapon_equip#PMC重武器使用许可
+		#icon = GFX_goal_unknown
+		relative_position_id = CAP_uav_equip
+		prerequisite = {
+			focus = CAP_uav_equip
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+}

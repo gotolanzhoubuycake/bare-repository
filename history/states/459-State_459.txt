@@ -1,0 +1,14 @@
+state={
+	id=459
+	name="STATE_459"
+	provinces={
+		438 1000 1070 1707 2882 3274 3714 4292 6157 8814 8874 9354 11110 11114 11119 
+	}
+	history = {
+		owner = ABY
+		add_core_of=ABY
+    }
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

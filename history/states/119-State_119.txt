@@ -1,0 +1,16 @@
+state={
+	id=119
+	name="STATE_119"
+	provinces={
+		 5239 153 742 1309 1829 2156 2183 2689 3492 3582 4909 6864 7033 8643 8710 12208 12218 
+	}
+	history = {
+		owner = TRI
+		add_core_of=TRI
+		victory_points = {2183 5}
+    }
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,16 @@
+state={
+	id=225
+	name="STATE_225"
+	provinces={
+		210 9462 10873 
+	}
+	history = {
+		owner = D10
+		add_core_of=D10
+		victory_points = {9462 15}
+    }
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

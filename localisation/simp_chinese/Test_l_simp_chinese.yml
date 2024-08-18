@@ -1,0 +1,16 @@
+﻿l_simp_chinese: 
+ Test_time_decisions_categories:0 "日历"
+ Test_time_decisions_categories_desc:1 "当前时间：[?global.Time_years].[?global.Time_months].[?global.Time_days]    [?global.Time_hours]:[?global.Time_minutes]0   真实时间：[GetDate]"
+ Test_time:1 "[?global.Time_years].[?global.Time_months].[?global.Time_days] [?global.Time_hours]:[?global.Time_minutes]0 [Time_day_night_text]"
+
+ Time_day_night_text_day:0 "日间"
+ Time_day_night_text_night:0 "夜间"
+
+ Test_student_decisions_categories: "人力"
+ Test_student_decisions_categories_desc: "总学生人力：[?Student_manpower|0]\n可用学生人力乘数：[?Student_manpower_factor|%1]\n可用学生人力：[?Student_manpower_usable|0]\n需求学生人力：[?Student_manpower_need]\n\n总其他人力：[?Citizen_manpower|0]\n可用其他人力乘数：[?Citizen_manpower_factor|%1]\n可用其他人力：[?Citizen_manpower_usable|0]\n需求其他人力：[?Citizen_manpower_need]\n\n控制地区的发展度：[?all_state_manpower]\n核心地区的发展度：[?all_core_state_manpower]\n非核心地区的发展度：[?all_noncore_state_manpower]\n当前战备值/上限：[?max_available_manpower|0]/[?max_manpower_limit|0]\n每剧情日战备值恢复：[?war_power_gain|0]"
+
+ # all_student_army_modifier_tt:0 "根据目前所控制核心省份的学生人口比率，切换为该法案后效果为：\n§Y可用的人力修正：[?core_student_rate|%1]§!"
+ # all_citizen_army_modifier_tt:0 "根据目前所控制核心省份的市民人口比率，切换为该法案后效果为：\n§Y可用的人力修正：[?core_citizen_rate|%1]§!"
+ # mix_army_modifier_tt:0 "§Y无额外人力修正§!"
+
+ resources_stat_modifiers_desc: "化石能源实际消耗：[?country_resource_FE_cost_tt]\n电子元件实际消耗：[?country_resource_EC_cost_tt]\n石化材料实际消耗：[?country_resource_PM_cost_tt]\n稀有金属实际消耗：[?country_resource_RM_cost_tt]\n常规金属实际消耗：[?country_resource_CM_cost_tt]\n神秘材料实际耗：[?country_resource_MM_cost_tt]\n重工实际消耗：[?country_resource_HIC_cost_tt]\n能源实际消耗：[?country_resource_energy_cost_tt]"

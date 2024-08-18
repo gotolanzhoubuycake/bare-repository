@@ -1,0 +1,15 @@
+state={
+	id=212
+	name="STATE_212"
+	provinces={
+		1276 1507 1689 1940 2107 2853 3152 5133 5863 7188 8541 9016 9231 9480 10717 10775 
+	}
+	history={
+		owner = CAB
+		add_core_of=CAB
+	}
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

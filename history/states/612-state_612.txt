@@ -1,0 +1,16 @@
+state={
+	id=612
+	name="STATE_612"
+	provinces={
+		435 1567 2023 2532 2559 2565 2687 2837 3376 4368 5069 5095 5972 5989 6201 6628 7446 7597 8400 8673 9062 9118 9160 9431 11566 11572 11598 11621 11630 11654 11657 11707 11730 
+	}
+	history={
+		owner = CAP
+		add_core_of=CAP
+		victory_points = {11630 10}
+	}
+	manpower=0
+	state_category=wasteland
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

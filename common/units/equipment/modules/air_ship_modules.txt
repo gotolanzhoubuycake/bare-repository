@@ -1,0 +1,121 @@
+equipment_modules = {
+	air_ship_engine_1 = {
+		abbreviation = "ase1"
+		category = air_ship_engine_type
+		sfx = sfx_ui_sd_module_engine
+
+		add_stats = {
+			thrust = 64
+			build_cost_ic = 40
+			fuel_consumption = 0.64
+		}
+
+		multiply_stats = {
+			maximum_speed = 0.30
+		}
+	}
+
+
+
+	air_ship_bomb_bay_1 = { #战略轰炸 重磅炸弹吊舱
+		abbreviation = "lbb"
+		category = air_ship_strat_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = strategic_bomber
+
+		add_stats = {
+			build_cost_ic = 9
+			air_agility = -15
+			weight = 2
+		}
+		xp_cost = 2
+		allow_mission_type = {
+			strategic_bomber
+		}
+		mission_type_stats = {
+			limit = {
+				strategic_bomber
+			}
+			add_stats = {
+				air_bombing = 15
+				weight = 8
+			}
+		}
+		dismantle_cost_ic = 12
+	}
+	
+
+	air_ship_heavy_aam_1 = { #战斗机 重型AAM
+		abbreviation = "lbb"
+		category = air_ship_air_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = fighter
+
+		add_stats = {
+			build_cost_ic = 9
+			air_agility = -2
+			weight = 2
+		}
+		xp_cost = 2
+		allow_mission_type = {
+			air_superiority
+			interception
+		}
+		mission_type_stats = {
+			limit = {
+				air_superiority
+				interception
+			}
+			add_stats = {
+				air_attack = 18
+				weight = 8
+			}
+		}
+		dismantle_cost_ic = 12
+	}
+
+
+	air_ship_gunship_gun_1 = { #CAS 对地火炮
+		abbreviation = "lbb"
+		category = air_ship_gunship_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = cas
+
+		add_stats = {
+			build_cost_ic = 12
+			air_ground_attack = 30
+			weight = 10
+		}
+		xp_cost = 2
+		allow_mission_type = {
+			cas
+			attack_logistics
+		}
+		dismantle_cost_ic = 12
+	}
+
+
+
+	air_hmg_defense_turret = {
+		abbreviation = "hmgt"
+		category = air_ship_module_defense_turret
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			build_cost_ic = 4
+			weight = 1
+			air_attack = 2
+			air_defence = 1
+			air_agility = 1
+		}
+
+
+		multiply_stats ={
+			maximum_speed = -0.03
+		}
+
+		dismantle_cost_ic = 1
+
+		xp_cost = 1
+	}
+}

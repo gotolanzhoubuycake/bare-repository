@@ -1,0 +1,16 @@
+state={
+	id=329
+	name="STATE_329"
+	provinces={
+		6016 427 9315 
+	}
+	history = {
+		owner = CEN
+		add_core_of=CEN
+		victory_points = {6016 30}
+    }
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

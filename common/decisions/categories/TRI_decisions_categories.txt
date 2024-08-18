@@ -1,0 +1,11 @@
+TRI_BOP_decisions_categories = {
+	icon = tri_BOP
+	visible = {
+		original_tag = TRI
+	}
+
+	scripted_gui = TRI_BOP_decision_ui
+
+	priority = 100
+	visible_when_empty = yes
+}

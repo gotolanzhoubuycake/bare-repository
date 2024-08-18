@@ -1,0 +1,15 @@
+state={
+	id=191
+	name="STATE_191"
+	provinces={
+		1437 1966 3003 4309 7065 
+	}
+	history = {
+		owner = GEH
+		add_core_of=GEH
+    }
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

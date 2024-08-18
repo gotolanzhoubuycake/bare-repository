@@ -1,0 +1,14 @@
+state={
+	id=488
+	name="STATE_488"
+	provinces={
+		367 570 1521 3700 4797 4821 5009 6531 7024 7361 7995 12165 12200 12205 12223 12228 
+	}
+	history={
+		owner=D01
+		victory_points = {6531 15}
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

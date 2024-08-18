@@ -1,0 +1,14 @@
+state={
+	id=469
+	name="STATE_469"
+	provinces={
+		669 893 1608 1873 1964 2044 2078 2332 2552 3346 3487 3834 4474 4974 4986 5666 5995 6826 6912 7267 7574 7644 7749 7842 8429 8508 8752 8908 9802 9809 9812 9847 9873 9891 9940 
+	}
+	history = {
+		owner = RWT
+		add_core_of=RWT
+    }
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,131 @@
+spriteTypes = {
+	##########################################
+	#飞机模块类别
+
+	spriteType = {
+		name = "GFX_EMI_helicopter_engine_type"
+		textureFile = "gfx/interface/equipmentdesigner/plane/modules/balp_helicopter_engine_type.dds"
+		legacy_lazy_load = no
+	}
+
+
+
+	
+	spriteType = {
+		name = "GFX_EMI_helicopter_weapon_type"
+		textureFile = "gfx/interface/equipmentdesigner/plane/modules/balp_atgm_hellfire_4x.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_helicopter_sec_weapon_type"
+		textureFile = "gfx/interface/equipmentdesigner/plane/modules/balp_fueltank_455.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_helicopter_crew_carrying"
+		textureFile = "gfx/interface/equipmentdesigner/plane/modules/balp_helicopter_crew_carrying.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_helicopter_hdmg_type"
+		textureFile = "gfx/interface/equipmentdesigner/plane/modules/balp_hdgun_M3.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_EMI_helicopter_equipment_type"
+		textureFile = "gfx/interface/equipmentdesigner/plane/modules/EMI_balp_helicopter_equipment_type.dds"
+		legacy_lazy_load = no
+	}
+	##############################################
+
+	spriteType = {
+		name = "GFX_EMI_helicopter_aam_1_4x"
+		textureFile = "gfx/interface/equipmentdesigner/plane/modules/balp_aam_ty90e_4x.dds"
+		legacy_lazy_load = no
+	}
+
+
+	spriteType = {
+		name = "GFX_EMI_helicopter_long_range_atgm_1_2x"
+		textureFile = "gfx/interface/equipmentdesigner/plane/modules/balp_atgm_spikeNLOS_2x.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_helicopter_engine_1"
+		textureFile = "gfx/interface/equipmentdesigner/plane/modules/balp_mh60_helicopter_engine.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_helicopter_fast_engine_1"
+		textureFile = "gfx/interface/equipmentdesigner/plane/modules/balp_mh60_helicopter_fast_engine.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_EMI_helicopter_fueltank"
+		textureFile = "gfx/interface/equipmentdesigner/plane/modules/balp_fueltank_455.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_helicopter_crew_carrying_1"
+		textureFile = "gfx/interface/equipmentdesigner/plane/modules/balp_helicopter_crew_carrying.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_helicopter_crew_carrying_aromr_1"
+		textureFile = "gfx/interface/equipmentdesigner/plane/modules/balp_helicopter_crew_carrying.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_helicopter_hdgun_hmg_1"
+		textureFile = "gfx/interface/equipmentdesigner/plane/modules/balp_hdgun_M3.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_helicopter_hdgun_lmg_1"
+		textureFile = "gfx/interface/equipmentdesigner/plane/modules/balp_hdgun_M134.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_helicopter_atgm_1_4x"
+		textureFile = "gfx/interface/equipmentdesigner/plane/modules/balp_atgm_hellfire_4x.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_helicopter_atgm_1_2x"
+		textureFile = "gfx/interface/equipmentdesigner/plane/modules/balp_atgm_hellfire_2x.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_helicopter_heavy_gun_1"
+		textureFile = "gfx/interface/equipmentdesigner/plane/modules/balp_gun_M230.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_helicopter_light_gun_1"
+		textureFile = "gfx/interface/equipmentdesigner/plane/modules/balp_gun_M134.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_helicopter_rl_1"
+		textureFile = "gfx/interface/equipmentdesigner/plane/modules/balp_rl_Hydra70.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_helicopter_recon_SOTAS"
+		textureFile = "gfx/interface/equipmentdesigner/plane/modules/balp_recon_SOTAS.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_helicopter_equipment_armor"
+		textureFile = "gfx/interface/equipmentdesigner/plane/modules/balp_equipment_armor.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_helicopter_equipment_lb"
+		textureFile = "gfx/interface/equipmentdesigner/plane/modules/balp_radar_longbow.dds"
+		legacy_lazy_load = no
+	}
+
+}

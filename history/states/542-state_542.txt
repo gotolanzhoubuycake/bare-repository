@@ -1,0 +1,14 @@
+state={
+	id=542
+	name="STATE_542"
+	provinces={
+		724 1322 2297 2447 3077 3314 3638 4826 7282 7314 7888 9075 10255 10286 10319 10330 10388 
+	}
+	history={
+		owner = RWT
+		add_core_of=RWT
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

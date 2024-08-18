@@ -1,0 +1,149 @@
+#	Example:
+# 
+#	example_dynamic_modifier = {
+#		icon = "GFX_idea_unknown" # optional, will show up in guis if icon is specified
+#		enable = { always = yes } #optional, the modifier won't apply if not enabled
+#		remove_trigger = { always = no } #optional, will remove the modifier if true
+#       attacker_modifier = no  # if yes this modifier will also be read in combat for 
+#                               # people engaging in the combat even if not in the state
+#
+#		# list of modifiers
+#		fuel_cost = 321
+#		max_fuel = var_max_fuel # will be taken from a variable
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		add_dynamic_modifier = {
+#			modifier = example_dynamic_modifier
+#			scope = GER # optional, if you specify this your dynamic modifier scoped to this scope (root is the effect scope)
+#			days = 14 # optional, will be removed after this many days passes
+#		}
+#	}
+#
+#	can be added to countries, states or unit leaders
+#	will only updated daily, unless forced by force_update_dynamic_modifier effect
+
+#伊甸条约
+eden_treaty_step_0_modifier = { #【争辩无休的《伊甸条约》方针】
+	
+	icon = "GFX_idea_unknown"
+	enable = { always = yes }
+	
+	#政治方面
+	political_power_gain = eden_daily_power_gain
+	stability_factor = eden_stability
+	war_support_factor = eden_war_support
+
+	#经济方面
+	consumer_goods_factor = eden_goods_factor
+
+	#科技方面
+	research_speed_factor = eden_research_speed
+
+	#军队方面
+	#不知道是什么的战备提升
+}
+
+TRI_special_services_investigations = {
+	icon = "GFX_idea_unknown"
+	enable = { always = yes }
+
+	#间谍槽位
+	operative_slot = ssi_operative_slot
+	agency_upgrade_time = ssi_agency_upgrade_time
+
+	#政治相关
+	political_power_gain = ssi_political_power_gain
+	stability_factor = ssi_stability
+
+}
+
+
+
+
+eden_treaty_step_1_modifier = { #【大略初定的《伊甸条约》方针】
+	
+	icon = "GFX_idea_unknown"
+	enable = { always = yes }
+	
+	#政治方面
+	political_power_gain = eden_daily_power_gain
+	stability_factor = eden_stability
+	war_support_factor = eden_war_support
+
+	#经济方面
+	consumer_goods_factor = eden_goods_factor
+
+	#科技方面
+	research_speed_factor = eden_research_speed
+
+	#军队方面
+	#不知道是什么的战备提升
+}
+
+#物资调配
+material_allocation_modifier = {
+	
+	icon = "GFX_idea_unknown"
+	enable = { always = yes }
+
+	stability_factor = ma_stability
+	consumer_goods_factor = ma_goods_factor
+	production_speed_buildings_factor = ma_building_speed
+	political_power_gain = ma_daily_power_gain
+	economy_cost_factor = ma_economy_cost
+}
+
+#圣三一工业
+trinity_industry_modifier = {
+	
+	#icon = "GFX_idea_unknown"
+	icon = GFX_idea_SOV_third_five_year_plan_military
+	enable = { always = yes }
+
+	#建造速度
+	production_speed_buildings_factor = tim_building_speed
+	production_speed_arms_factory_factor = tim_arms_factory_building_speed
+	production_speed_industrial_complex_factor = tim_industrial_building_speed
+
+	#工厂生产相关
+	industrial_capacity_factory = tim_factory_output
+	production_factory_max_efficiency_factor = tim_production_efficiency_cap
+	production_factory_efficiency_gain_factor = tim_production_efficiency_gain
+	line_change_production_efficiency_factor = tim_line_change_efficiency
+
+	#工厂转换速度
+	conversion_cost_civ_to_mil_factor = tim_civ_to_mil_cost
+	conversion_cost_mil_to_civ_factor = tim_mil_to_civ_cost
+
+}
+
+#圣三一工业修改后
+trinity_industry_modifier_alt = {#添加装备增益后的动态民族精神
+	
+	#icon = "GFX_idea_unknown"
+	icon = GFX_idea_SOV_third_five_year_plan_military
+	enable = { always = yes }
+	
+	custom_modifier_tooltip = TRI_carryon_package_equipment_modifier
+
+	#建造速度
+	production_speed_buildings_factor = tim_building_speed
+	production_speed_arms_factory_factor = tim_arms_factory_building_speed
+	production_speed_industrial_complex_factor = tim_industrial_building_speed
+	
+
+	#工厂生产相关
+	industrial_capacity_factory = tim_factory_output
+	production_factory_max_efficiency_factor = tim_production_efficiency_cap
+	production_factory_efficiency_gain_factor = tim_production_efficiency_gain
+	line_change_production_efficiency_factor = tim_line_change_efficiency
+
+	#工厂转换速度
+	conversion_cost_civ_to_mil_factor = tim_civ_to_mil_cost
+	conversion_cost_mil_to_civ_factor = tim_mil_to_civ_cost
+
+}

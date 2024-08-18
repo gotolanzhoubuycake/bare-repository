@@ -1,0 +1,16 @@
+state={
+	id=74
+	name="STATE_74"
+	provinces={
+		338 537 2041 2142 4384 5042 5938 8014 8303 8491 9265 11437 
+	}
+	history = {
+		owner = VAL
+		add_core_of=VAL
+		victory_points = {8491 15}
+    }
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

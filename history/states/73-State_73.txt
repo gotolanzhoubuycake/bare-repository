@@ -1,0 +1,16 @@
+state={
+	id=73
+	name="STATE_73"
+	provinces={
+		1069 5496 11473 11498 11520 
+	}
+	history = {
+		owner = VAL
+		add_core_of=VAL
+		victory_points = {1069 15}
+    }
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

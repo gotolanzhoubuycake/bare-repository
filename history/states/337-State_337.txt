@@ -1,0 +1,16 @@
+state={
+	id=337
+	name="STATE_337"
+	provinces={
+		375 1280 1431 1738 2243 2637 2950 3004 3067 3553 3635 4094 4113 4571 4671 4790 5352 5562 5937 6395 6653 6769 6914 7007 7082 7295 7569 7583 7771 8098 8123 8556 8948 11828 11880 11905 11938 11949 11985 11998 12012 
+	}
+	history = {
+		owner = MIL
+		add_core_of=MIL
+		victory_points = {11949 25}
+    }
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

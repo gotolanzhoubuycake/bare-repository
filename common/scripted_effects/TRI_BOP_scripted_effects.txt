@@ -1,0 +1,35 @@
+# Allocate a random number of seats to Parties 1, 2, 3 and 4
+#这个脚本主要进行圣三一的议会席位运算
+
+TRI_BOP_house_party_seats = {
+	#set_variable = { Patel_house_seatNumber = 10 }
+	#set_variable = { Filius_house_seatNumber = 10 }
+	#set_variable = { Cootes_house_seatNumber = 10 }
+
+	#set_temp_variable = { total = Patel_house_seatNumber }
+	#add_to_temp_variable = { total = Filius_house_seatNumber }
+	#add_to_temp_variable = { total = Cootes_house_seatNumber }
+	#divide_variable = { SAMPLE_party1_seats = total }
+	#divide_variable = { SAMPLE_party2_seats = total }
+	#divide_variable = { SAMPLE_party3_seats = total }
+
+}
+
+TRI_BOP_senators_party_seats = {
+	set_variable = { Justice_senators_seatNumber = 20 }
+	set_variable = { Teresa_senators_seatNumber = 20 }
+	set_variable = { Knight_senators_seatNumber = 20 }
+	set_variable = { Others_senators_seatNumber = 40 }
+
+	#set_temp_variable = { total = Justice_senators_seatNumber }
+	#add_to_temp_variable = { total = Teresa_senators_seatNumber }
+	#add_to_temp_variable = { total = Knight_senators_seatNumber }
+	#add_to_temp_variable = { total = Others_senators_seatNumber }
+	#divide_variable = { Justice_senators_seatNumber = total }
+	#divide_variable = { Teresa_senators_seatNumber = total }
+	#divide_variable = { Knight_senators_seatNumber = total }
+	#divide_variable = { Others_senators_seatNumber = total }
+
+}
+
+

@@ -1,0 +1,14 @@
+state={
+	id=481
+	name="STATE_481"
+	provinces={
+		1003 1347 1369 2036 2483 3478 4343 4785 4932 4963 5364 5536 6399 6456 7274 8129 8775 9190 11526 11542 11578 11586 11587 11590 11617 11618 11626 11642 
+	}
+	history = {
+		owner = MIL
+		add_core_of=MIL
+    }
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,14 @@
+state={
+	id=408
+	name="STATE_408"
+	provinces={
+		699 1201 1342 1595 1910 2484 2594 2770 3065 4194 4850 5027 6738 6811 7844 7851 8795 10773 10779 10780 10783 10788 10803 10813 10820 10831 
+	}
+	history = {
+		owner = SHA
+		add_core_of=SHA
+    }
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

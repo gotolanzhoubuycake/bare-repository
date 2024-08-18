@@ -1,0 +1,75 @@
+spriteTypes = {
+
+	### ABY
+	spriteType = {
+		name = "GFX_portrait_ABY_hoshino"
+		texturefile = "gfx/leaders/ABY/hoshino.dds"
+	}
+	
+	### ARI
+	spriteType = {
+		name = "GFX_portrait_ARI_atsuko"
+		texturefile = "gfx/leaders/ARI/atsuko.dds"
+	}
+	
+	### GEH
+	spriteType = {
+		name = "GFX_portrait_GEH_hina"
+		texturefile = "gfx/leaders/GEH/hina.dds"
+	}
+	
+	### MIL
+	spriteType = {
+		name = "GFX_portrait_MIL_yuuka"
+		texturefile = "gfx/leaders/MIL/yuuka.dds"
+	}
+	
+	### TRI
+	spriteType = {
+		name = "GFX_portrait_TRI_nagisa"
+		texturefile = "gfx/leaders/TRI/nagisa.dds"
+	}
+	
+	### VAL
+	spriteType = {
+		name = "GFX_portrait_VAL_kanna"
+		texturefile = "gfx/leaders/VAL/kanna.dds"
+	}
+	
+	### SRT
+	spriteType = {
+		name = "GFX_portrait_SRT_miyako"
+		texturefile = "gfx/leaders/SRT/miyako.dds"
+	}
+	
+	### SCH
+	spriteType = {
+		name = "GFX_portrait_SCH_arona"
+		texturefile = "gfx/leaders/SCH/arona.dds"
+	}
+	
+	### RWT
+	spriteType = {
+		name = "GFX_portrait_RWT_cherino"
+		texturefile = "gfx/leaders/RWT/cherino.dds"
+	}
+	
+	### HYA
+	spriteType = {
+		name = "GFX_portrait_HYA_niya"
+		texturefile = "gfx/leaders/HYA/niya.dds"
+	}
+	
+	### SHA
+	spriteType = {
+		name = "GFX_portrait_SHA_kisaki"
+		texturefile = "gfx/leaders/SHA/kisaki.dds"
+	}
+	
+	### CEN
+	spriteType = {
+		name = "GFX_portrait_CEN_rin"
+		texturefile = "gfx/leaders/CEN/rin.dds"
+	}
+	
+}

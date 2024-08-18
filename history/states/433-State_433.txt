@@ -1,0 +1,14 @@
+state={
+	id=433
+	name="STATE_433"
+	provinces={
+		60 352 404 415 1338 1917 1936 2411 2496 2719 3215 3932 5104 5138 5308 6020 6584 6667 7377 7504 7511 7941 8051 8442 8675 8843 9288 9603 9614 9672 9673 9692 9700 
+	}
+	history = {
+		owner = HYA
+		add_core_of=HYA
+    }
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

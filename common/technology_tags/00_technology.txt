@@ -1,0 +1,75 @@
+# Do not change tags in here without changing every other reference to them.
+# If adding new technology, make sure they are uniquely named.
+
+technology_categories = {
+	infantry_weapons
+
+	rank_I_tech
+	rank_II_tech
+	rank_III_tech
+	rank_IV_tech
+	rank_V_tech
+}
+
+technology_folders = {
+	infantry_folder = {
+		ledger = army
+	}
+	armour_folder = {
+		ledger = army
+	}
+	air_techs_folder = {
+		ledger = air
+	}
+	industry_folder = {
+		ledger = civilian
+	}
+	electronics_folder = {
+		ledger = civilian
+	}
+	mil_special_folder = {
+		ledger = all
+		#available = { tag = MIL }
+	}
+	tri_special_folder = {
+		ledger = all
+		#available = { tag = MIL }
+	}
+	geh_special_folder = {
+		ledger = all
+		#available = { tag = MIL }
+	}
+	aby_special_folder = {
+		ledger = all
+		#available = { tag = MIL }
+	}
+	ari_special_folder = {
+		ledger = all
+		#available = { tag = MIL }
+	}
+	red_special_folder = {
+		ledger = all
+		#available = { tag = MIL }
+	}
+	srt_special_folder = {
+		ledger = all
+		#available = { tag = MIL }
+	}
+	sha_special_folder = {
+		ledger = all
+		#available = { tag = MIL }
+	}
+	hya_special_folder = {
+		ledger = all
+		#available = { tag = MIL }
+	}
+	val_special_folder = {
+		ledger = all
+		#available = { tag = MIL }
+	}
+	school_special_folder = {
+		ledger = all
+	}
+}
+
+ 

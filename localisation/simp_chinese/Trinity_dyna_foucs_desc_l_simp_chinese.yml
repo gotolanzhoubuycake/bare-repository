@@ -1,0 +1,17 @@
+﻿l_simp_chinese:
+###国策追加效果描述
+
+#【争辩无休的《伊甸条约》方针】修改为【大略初定的《伊甸条约》方针】
+ eden_step_0_to_1: "§Y$eden_treaty_step_0_modifier$§!将变成§Y$eden_treaty_step_1_modifier$§!"
+ eden_step_0_to_1_desc: "$eden_step_0_to_1$\n追加效果：\n每日政治点数获取：§G+0.15§!\n稳定度：§G+5.00%§!\n生活消费品系数：§Y-10.0%§!\n\n"
+ eden_step_0_authorize_dove: "§Y$eden_treaty_step_0_modifier$§!追加效果：\n战争支持度：§R-10.00%§!\n科研速度：§G+5.00%§!\n\n"
+ eden_step_0_authorize_eagle: "§Y$eden_treaty_step_0_modifier$§!追加效果：\n稳定度：§R-5.00%§!\n战备上限提升：§G+10.00%§!(尚未明确)\n\n"
+
+#物资调配and圣三一工业
+ TRI_production_specialization_ns_tt: "§Y$material_allocation_modifier$§!追加效果：\n稳定度：§G+2.50%§!\n建造速度：§G+5.00%§!\n§Y$trinity_industry_modifier$§!追加效果：\n§Y军用工厂§!建造速度：§G+5.00%§!\n民转军花费：§G-25.00%§!\n军转民花费：§G-25.00%§!\n\n"
+ TRI_sufficient_sweets_supply_ns_tt: "§Y$material_allocation_modifier$§!追加效果：\n每日政治点数获取：§G+0.25§!\n稳定度：§G+2.50%§!\n生活消费品系数：§Y+5.00%§!\n经济法案花费：§Y-20.00%§!\n\n"
+#圣三一工业
+ TRI_carryon_package_facilitation_ns_intro: "§Y$trinity_industry_modifier$§!追加效果："
+ TRI_carryon_package_effect_tt: "$TRI_carryon_package_facilitation_ns_intro$\n生产效率增长：§G+5.00%§!\n$TRI_carryon_package_equipment_modifier$\n\n"
+ TRI_amazing_ns_tt_default: "§Y$trinity_industry_modifier$§!追加效果：\n§Y民用工厂§!建造速度：§R-5.00%§!\n§Y军用工厂§!建造速度：§G+10.00%§!\n生产效率上限：§G+15.00%§!\n生产效率增长：§R-5.00%§!\n\n"
+ TRI_amazing_ns_tt_alt: "§Y$trinity_industry_modifier$§!追加效果：\n建造速度：§G+5.00%§!\n生产效率增长：§G+10.00%§!\n生产效率保持：§G+30.00%§!\n\n"

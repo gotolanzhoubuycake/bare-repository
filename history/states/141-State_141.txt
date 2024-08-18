@@ -1,0 +1,16 @@
+state={
+	id=141
+	name="STATE_141"
+	provinces={
+		443 453 1133 1815 2018 2521 2660 3570 3870 4137 5367 5833 6187 6713 7251 7379 8159 8988 9170 11031 11064 
+	}
+	history = {
+		owner = D06
+		add_core_of=D06
+		victory_points = {1815 5}
+    }
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

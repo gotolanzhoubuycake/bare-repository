@@ -1,0 +1,15 @@
+state={
+	id=587
+	name="STATE_587"
+	provinces={
+		1598 1681 1918 3094 5601 8625 9778 
+	}
+	history={
+		owner = RWT
+		add_core_of=RWT
+	}
+	manpower=0
+	state_category=wasteland
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,14 @@
+state={
+	id=444
+	name="STATE_444"
+	provinces={
+		515 684 1156 3033 3465 3491 3812 4007 4727 5534 5701 5843 6440 6441 6450 6875 6891 8689 8767 9145 9404 9978 10000 10004 10025 10082 10109 
+	}
+	history = {
+		owner = HYA
+		add_core_of=HYA
+    }
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

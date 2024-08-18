@@ -1,0 +1,14 @@
+state={
+	id=458
+	name="STATE_458"
+	provinces={
+		853 1809 1953 2427 2640 2808 3745 5175 5991 6385 6954 7303 7541 8498 11042 11059 11070 11071 11080 11095 
+	}
+	history = {
+		owner = ABY
+		add_core_of=ABY
+    }
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

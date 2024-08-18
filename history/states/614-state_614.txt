@@ -1,0 +1,15 @@
+state={
+	id=614
+	name="STATE_614"
+	provinces={
+		100 308 500 548 790 1038 1991 2730 3157 3622 4157 4435 4834 5767 5844 6159 6174 6198 6463 6544 6777 7444 7864 8096 9143 11674 11688 11711 11731 11733 11743 11756 11760 
+	}
+	history = {
+		owner = D15
+		add_core_of=D15
+    }
+	manpower=0
+	state_category=wasteland
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

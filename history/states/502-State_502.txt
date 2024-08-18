@@ -1,0 +1,14 @@
+state={
+	id=502
+	name="STATE_502"
+	provinces={
+		370 973 1080 1312 2086 3115 3128 3654 5823 6983 7838 7954 9241 9562 9576 11320 11321 11376 
+	}
+	history = {
+		owner = D06
+		add_core_of=D06
+    }
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

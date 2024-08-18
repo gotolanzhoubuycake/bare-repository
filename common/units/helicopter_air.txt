@@ -1,0 +1,21 @@
+sub_units  = {
+	attack_helicopter = {
+		sprite = light_plane
+		priority = 2
+		active = yes
+		type = cas
+		need = { helicopter_cas_airframe  = 1 }
+		categories = { category_cas }
+		land_air_wing_size = 16
+	}
+	utility_helicopter = {
+		sprite = light_plane
+		priority = 2
+		active = yes
+		type = fighter
+		need = { helicopter_airframe = 1 }
+		categories = { category_cas }
+		land_air_wing_size = 16
+	}
+	
+}

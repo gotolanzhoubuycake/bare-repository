@@ -1,0 +1,15 @@
+state={
+	id=31
+	name="STATE_31"
+	provinces={
+		925 1872 6150 6218 9011 12187 
+	}
+	history = {
+		owner = MIL
+		add_core_of=MIL
+    }
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,333 @@
+resources_stat_initialize = {
+    #设置工厂基础
+    #工业中心#
+    set_variable = { industrial_complex_energy_cost_base = 1 } #能源消耗
+
+    set_variable = { industrial_complex_energy_cost_factor = 1 }
+    #军工厂#
+    set_variable = { arms_factory_hic_output_base = 1 } #军用重工产能产出
+    set_variable = { arms_factory_energy_cost_base = 2 } #能源消耗
+
+    set_variable = { arms_factory_hic_output_factor = 1 }
+    set_variable = { arms_factory_energy_cost_factor = 1 }
+    #精炼厂#
+    set_variable = { refining_complex_cm_output_base = 4 } #常规金属产出
+    set_variable = { refining_complex_rm_output_base = 2 } #稀有金属产出
+    set_variable = { refining_complex_energy_cost_base = 1 } #能源消耗
+
+    set_variable = { refining_complex_cm_output_factor = 1 } 
+    set_variable = { refining_complex_rm_output_factor = 1 } 
+    set_variable = { refining_complex_energy_cost_factor = 1 } 
+    #加工厂#
+    set_variable = { processing_complex_ec_output_base = 4 } #电子元件产出
+    set_variable = { processing_complex_cm_cost_base = 2 } #常规金属消耗
+    set_variable = { processing_complex_rm_cost_base = 1 } #稀有金属消耗
+    set_variable = { processing_complex_energy_cost_base = 1 } #能源消耗
+    
+    set_variable = { processing_complex_ec_output_factor = 1 } 
+    set_variable = { processing_complex_cm_cost_factor = 1 } 
+    set_variable = { processing_complex_rm_cost_factor = 1 } 
+    set_variable = { processing_complex_energy_cost_factor = 1 } 
+    #合成厂#
+    set_variable = { petrochemical_complex_pm_output_base = 4 } #石化材料产出
+    set_variable = { petrochemical_complex_fe_cost_base = 2 } #化石能源消耗
+    set_variable = { petrochemical_complex_energy_cost_base = 1 } #能源消耗
+
+    set_variable = { petrochemical_complex_pm_output_factor = 1 } 
+    set_variable = { petrochemical_complex_fe_cost_factor = 1 } 
+    set_variable = { petrochemical_complex_energy_cost_factor = 1 } 
+    #嬗变厂#
+    set_variable = { transmutation_complex_mm_output_base = 3 } #神秘材料产出
+    set_variable = { transmutation_complex_cm_cost_base = 6 } #常规金属消耗
+    set_variable = { transmutation_complex_rm_cost_base = 3 } #稀有金属消耗
+    set_variable = { transmutation_complex_fe_cost_base = 3 } #化石能源消耗
+    set_variable = { transmutation_complex_energy_cost_base = 5 } #能源消耗
+
+    set_variable = { transmutation_complex_mm_output_factor = 1 } 
+    set_variable = { transmutation_complex_cm_cost_factor = 1 } 
+    set_variable = { transmutation_complex_rm_cost_factor = 1 } 
+    set_variable = { transmutation_complex_fe_cost_factor = 1 } 
+    set_variable = { transmutation_complex_energy_cost_factor = 1 } 
+
+    #设置修正基础
+    set_variable = { country_resource_gain_factor = 1 } 
+    set_variable = { country_resource_expend_factor = 1 } 
+    set_variable = { country_resource_energy_expend_factor = 1 } 
+}
+
+resources_stat = {
+    #初始化#
+    set_variable = { country_resource_fe_get = 0 }
+    set_variable = { country_resource_fe_gain = 0 }
+    set_variable = { country_resource_fe_cost = 0 }
+    set_variable = { country_resource_fe_expend = 0 }
+    set_variable = { country_resource_ec_get = 0 }
+    set_variable = { country_resource_ec_gain = 0 }
+    set_variable = { country_resource_ec_cost = 0 }
+    set_variable = { country_resource_ec_expend = 0 }
+    set_variable = { country_resource_pm_get = 0 }
+    set_variable = { country_resource_pm_gain = 0 }
+    set_variable = { country_resource_pm_cost = 0 }
+    set_variable = { country_resource_pm_expend = 0 }
+    set_variable = { country_resource_rm_get = 0 }
+    set_variable = { country_resource_rm_gain = 0 }
+    set_variable = { country_resource_rm_cost = 0 }
+    set_variable = { country_resource_rm_expend = 0 }
+    set_variable = { country_resource_cm_get = 0 }
+    set_variable = { country_resource_cm_gain = 0 }
+    set_variable = { country_resource_cm_cost = 0 }
+    set_variable = { country_resource_cm_expend = 0 }
+    set_variable = { country_resource_mm_get = 0 }
+    set_variable = { country_resource_mm_gain = 0 }
+    set_variable = { country_resource_mm_cost = 0 }
+    set_variable = { country_resource_mm_expend = 0 }
+    set_variable = { country_resource_hic_get = 0 }
+    set_variable = { country_resource_hic_gain = 0 }
+    set_variable = { country_resource_hic_cost = 0 }
+    set_variable = { country_resource_hic_expend = 0 }
+    set_variable = { country_resource_energy_cost = 0 }
+    set_variable = { country_resource_energy_expend = 0 }
+
+    set_variable = { industrial_complex_num = 0 }
+    set_variable = { arms_factory_num = 0 }
+    set_variable = { refining_complex_num = 0 }
+    set_variable = { processing_complex_num = 0 }
+    set_variable = { petrochemical_complex_num = 0 }
+    set_variable = { transmutation_complex_num = 0 }
+    #统计工厂数量#
+    every_controlled_state = {
+        if = {
+            limit = { 
+                OR = {
+                    is_owned_by = ROOT
+                    has_dynamic_modifier = {
+                        modifier = restart_state_build
+                    }
+                }
+                NOT = { has_state_flag = state_build_turnoff }
+            }
+            add_to_variable = { PREV.industrial_complex_num = building_level@industrial_complex }
+            add_to_variable = { PREV.arms_factory_num = building_level@arms_factory }
+            add_to_variable = { PREV.refining_complex_num = building_level@refining_complex }
+            add_to_variable = { PREV.processing_complex_num = building_level@processing_complex }
+            add_to_variable = { PREV.petrochemical_complex_num = building_level@petrochemical_complex }
+            add_to_variable = { PREV.transmutation_complex_num = building_level@transmutation_complex }
+        }
+        set_temp_variable = { state_resource_cm = resource@resources_cm }
+        set_temp_variable = { state_resource_rm = resource@resources_rm }
+        set_temp_variable = { state_resource_fe = resource@resources_fe }
+        set_temp_variable = { state_local_resources_factor = modifier@local_resources }
+        add_to_temp_variable = { state_local_resources_factor = 1 }
+        multiply_temp_variable = { state_resource_cm = state_local_resources_factor }
+        multiply_temp_variable = { state_resource_rm = state_local_resources_factor }
+        multiply_temp_variable = { state_resource_fe = state_local_resources_factor }
+        add_to_temp_variable = { PREV.state_resource_cm_num = state_resource_cm }
+        add_to_temp_variable = { PREV.state_resource_rm_num = state_resource_rm }
+        add_to_temp_variable = { PREV.state_resource_fe_num = state_resource_fe }
+    }
+    #统计——工业中心#
+    #能源#
+    set_temp_variable = { industrial_complex_energy_cost = industrial_complex_energy_cost_base }
+    multiply_temp_variable = { industrial_complex_energy_cost = industrial_complex_num }
+    multiply_temp_variable = { industrial_complex_energy_cost = industrial_complex_energy_cost_factor }
+    add_to_variable = { country_resource_energy_cost = industrial_complex_energy_cost }
+
+    #统计——军工厂#
+    #能源#
+    set_temp_variable = { arms_factory_energy_cost = arms_factory_energy_cost_base }
+    multiply_temp_variable = { arms_factory_energy_cost = arms_factory_num }
+    multiply_temp_variable = { arms_factory_energy_cost = arms_factory_energy_cost_factor }
+    add_to_variable = { country_resource_energy_cost = arms_factory_energy_cost }
+    #HIC#
+    set_temp_variable = { arms_factory_hic_output = arms_factory_hic_output_base }
+    multiply_temp_variable = { arms_factory_hic_output = arms_factory_num }
+    multiply_temp_variable = { arms_factory_hic_output = arms_factory_hic_output_factor }
+    add_to_variable = { country_resource_hic_gain = arms_factory_hic_output }
+
+    #统计——精炼厂#
+    #能源#
+    set_temp_variable = { refining_complex_energy_cost = refining_complex_energy_cost_base }
+    multiply_temp_variable = { refining_complex_energy_cost = refining_complex_num }
+    multiply_temp_variable = { refining_complex_energy_cost = refining_complex_energy_cost_factor }
+    add_to_variable = { country_resource_energy_cost = refining_complex_energy_cost }
+    #常规金属#
+    set_temp_variable = { refining_complex_cm_output = refining_complex_cm_output_base }
+    multiply_temp_variable = { refining_complex_cm_output = refining_complex_num }
+    multiply_temp_variable = { refining_complex_cm_output = refining_complex_cm_output_factor }
+    add_to_variable = { country_resource_cm_gain = refining_complex_cm_output }
+    #稀有金属#
+    set_temp_variable = { refining_complex_rm_output = refining_complex_rm_output_base }
+    multiply_temp_variable = { refining_complex_rm_output = refining_complex_num }
+    multiply_temp_variable = { refining_complex_rm_output = refining_complex_rm_output_factor }
+    add_to_variable = { country_resource_rm_gain = refining_complex_rm_output }
+
+    #统计——加工厂#
+    #能源#
+    set_temp_variable = { processing_complex_energy_cost = processing_complex_energy_cost_base }
+    multiply_temp_variable = { processing_complex_energy_cost = processing_complex_num }
+    multiply_temp_variable = { processing_complex_energy_cost = processing_complex_energy_cost_factor }
+    add_to_variable = { country_resource_energy_cost = processing_complex_energy_cost }
+    #常规金属#
+    set_temp_variable = { processing_complex_cm_cost = processing_complex_cm_cost_base }
+    multiply_temp_variable = { processing_complex_cm_cost = processing_complex_num }
+    multiply_temp_variable = { processing_complex_cm_cost = processing_complex_cm_cost_factor }
+    add_to_variable = { country_resource_cm_cost = processing_complex_cm_cost }
+    #稀有金属#
+    set_temp_variable = { processing_complex_rm_cost = processing_complex_rm_cost_base }
+    multiply_temp_variable = { processing_complex_rm_cost = processing_complex_num }
+    multiply_temp_variable = { processing_complex_rm_cost = processing_complex_rm_cost_factor }
+    add_to_variable = { country_resource_rm_cost = processing_complex_rm_cost }
+    #电子元件#
+    set_temp_variable = { processing_complex_ec_output = processing_complex_ec_output_base }
+    multiply_temp_variable = { processing_complex_ec_output = processing_complex_num }
+    multiply_temp_variable = { processing_complex_ec_output = processing_complex_ec_output_factor }
+    add_to_variable = { country_resource_ec_gain = processing_complex_ec_output }
+
+    #统计——合成厂#
+    #能源#
+    set_temp_variable = { petrochemical_complex_energy_cost = petrochemical_complex_energy_cost_base }
+    multiply_temp_variable = { petrochemical_complex_energy_cost = petrochemical_complex_num }
+    multiply_temp_variable = { petrochemical_complex_energy_cost = petrochemical_complex_energy_cost_factor }
+    add_to_variable = { country_resource_energy_cost = petrochemical_complex_energy_cost }
+    #化石能源#
+    set_temp_variable = { petrochemical_complex_fe_cost = petrochemical_complex_fe_cost_base }
+    multiply_temp_variable = { petrochemical_complex_fe_cost = petrochemical_complex_num }
+    multiply_temp_variable = { petrochemical_complex_fe_cost = petrochemical_complex_fe_cost_factor }
+    add_to_variable = { country_resource_fe_cost = petrochemical_complex_fe_cost }
+    #石化材料#
+    set_temp_variable = { petrochemical_complex_pm_output = petrochemical_complex_pm_output_base }
+    multiply_temp_variable = { petrochemical_complex_pm_output = petrochemical_complex_num }
+    multiply_temp_variable = { petrochemical_complex_pm_output = petrochemical_complex_pm_output_factor }
+    add_to_variable = { country_resource_pm_gain = petrochemical_complex_pm_output }
+
+    #统计——嬗变厂#
+    #能源#
+    set_temp_variable = { transmutation_complex_energy_cost = transmutation_complex_energy_cost_base }
+    multiply_temp_variable = { transmutation_complex_energy_cost = transmutation_complex_num }
+    multiply_temp_variable = { transmutation_complex_energy_cost = transmutation_complex_energy_cost_factor }
+    add_to_variable = { country_resource_energy_cost = transmutation_complex_energy_cost }
+    #常规金属#
+    set_temp_variable = { transmutation_complex_cm_cost = transmutation_complex_cm_cost_base }
+    multiply_temp_variable = { transmutation_complex_cm_cost = transmutation_complex_num }
+    multiply_temp_variable = { transmutation_complex_cm_cost = transmutation_complex_cm_cost_factor }
+    add_to_variable = { country_resource_cm_cost = transmutation_complex_cm_cost }
+    #稀有金属#
+    set_temp_variable = { transmutation_complex_rm_cost = transmutation_complex_rm_cost_base }
+    multiply_temp_variable = { transmutation_complex_rm_cost = transmutation_complex_num }
+    multiply_temp_variable = { transmutation_complex_rm_cost = transmutation_complex_rm_cost_factor }
+    add_to_variable = { country_resource_rm_cost = transmutation_complex_rm_cost }
+    #化石能源#
+    set_temp_variable = { transmutation_complex_fe_cost = transmutation_complex_fe_cost_base }
+    multiply_temp_variable = { transmutation_complex_fe_cost = transmutation_complex_num }
+    multiply_temp_variable = { transmutation_complex_fe_cost = transmutation_complex_fe_cost_factor }
+    add_to_variable = { country_resource_fe_cost = transmutation_complex_fe_cost }
+    #石化材料#
+    set_temp_variable = { transmutation_complex_mm_output = transmutation_complex_mm_output_base }
+    multiply_temp_variable = { transmutation_complex_mm_output = transmutation_complex_num }
+    multiply_temp_variable = { transmutation_complex_mm_output = transmutation_complex_mm_output_factor }
+    add_to_variable = { country_resource_mm_gain = transmutation_complex_mm_output }
+
+    #产出总修正#
+    multiply_variable = { country_resource_fe_gain = country_resource_gain_factor }
+    multiply_variable = { country_resource_fe_cost = country_resource_expend_factor }
+    multiply_variable = { country_resource_ec_gain = country_resource_gain_factor }
+    multiply_variable = { country_resource_ec_cost = country_resource_expend_factor }
+    multiply_variable = { country_resource_pm_gain = country_resource_gain_factor }
+    multiply_variable = { country_resource_pm_cost = country_resource_expend_factor }
+    multiply_variable = { country_resource_rm_gain = country_resource_gain_factor }
+    multiply_variable = { country_resource_rm_cost = country_resource_expend_factor }
+    multiply_variable = { country_resource_cm_gain = country_resource_gain_factor }
+    multiply_variable = { country_resource_cm_cost = country_resource_expend_factor }
+    multiply_variable = { country_resource_mm_gain = country_resource_gain_factor }
+    multiply_variable = { country_resource_mm_cost = country_resource_expend_factor }
+    multiply_variable = { country_resource_hic_gain = country_resource_gain_factor }
+    multiply_variable = { country_resource_hic_cost = country_resource_expend_factor }
+    multiply_variable = { country_resource_energy_cost = country_resource_energy_expend_factor }
+
+    force_update_dynamic_modifier = yes
+
+    set_variable = { country_resource_fe_cost_tt = country_resource_fe_cost }
+    set_variable = { country_resource_ec_cost_tt = country_resource_ec_cost }
+    set_variable = { country_resource_pm_cost_tt = country_resource_pm_cost }
+    set_variable = { country_resource_rm_cost_tt = country_resource_rm_cost }
+    set_variable = { country_resource_cm_cost_tt = country_resource_cm_cost }
+    set_variable = { country_resource_mm_cost_tt = country_resource_mm_cost }
+    set_variable = { country_resource_hic_cost_tt = country_resource_hic_cost }
+    set_variable = { country_resource_energy_cost_tt = country_resource_energy_cost }
+
+    # 缺乏资源修正#
+    if = {
+        limit = { 
+            check_variable = { fuel_ratio < 0.01 }
+        }
+        multiply_variable = { country_resource_cm_gain = 0.25 }
+        multiply_variable = { country_resource_cm_cost = 0.25 }
+        multiply_variable = { country_resource_rm_gain = 0.25 }
+        multiply_variable = { country_resource_rm_cost = 0.25 }
+        multiply_variable = { country_resource_ec_gain = 0.25 }
+        multiply_variable = { country_resource_ec_cost = 0.25 }
+        multiply_variable = { country_resource_pm_gain = 0.25 }
+        multiply_variable = { country_resource_pm_cost = 0.25 }
+        multiply_variable = { country_resource_mm_gain = 0.25 }
+        multiply_variable = { country_resource_mm_cost = 0.25 }
+        multiply_variable = { country_resource_hic_gain = 0.25 }
+        multiply_variable = { country_resource_hic_cost = 0.25 }
+        multiply_variable = { country_resource_energy_cost = 0.25 }
+    }
+    if = {
+        limit = { 
+            set_temp_variable = { temp_resource_fe = country_resource_fe_gain }
+            add_to_temp_variable = { temp_resource_fe = state_resource_fe_num } #获得生产资源总量
+            set_temp_variable = { temp_resource_fe_num = temp_resource_fe } #储存数值
+            check_variable = { country_resource_fe_cost > temp_resource_fe } #检测消耗大于总量
+        }
+        divide_temp_variable = { temp_resource_fe = country_resource_fe_cost }
+
+        multiply_variable = { country_resource_pm_gain = temp_resource_fe }
+        multiply_variable = { country_resource_mm_gain = temp_resource_fe }
+        set_variable = { country_resource_fe_cost = temp_resource_fe_num }
+    }
+    if = {
+        limit = { 
+            set_temp_variable = { temp_resource_cm = country_resource_cm_gain }
+            add_to_temp_variable = { temp_resource_cm = state_resource_cm_num }
+            set_temp_variable = { temp_resource_cm_num = temp_resource_cm }
+            check_variable = { country_resource_cm_cost > temp_resource_cm } 
+        }
+        divide_temp_variable = { temp_resource_cm = country_resource_cm_cost }
+
+        multiply_variable = { country_resource_ec_gain = temp_resource_cm }
+        multiply_variable = { country_resource_mm_gain = temp_resource_cm }
+        set_variable = { country_resource_cm_cost = temp_resource_cm_num }
+    }
+    if = {
+        limit = { 
+            set_temp_variable = { temp_resource_rm = country_resource_rm_gain }
+            add_to_temp_variable = { temp_resource_rm = state_resource_rm_num }
+            set_temp_variable = { temp_resource_rm_num = temp_resource_rm }
+            check_variable = { country_resource_rm_cost > temp_resource_rm } 
+        }
+        divide_temp_variable = { temp_resource_rm = country_resource_rm_cost }
+
+        multiply_variable = { country_resource_ec_gain = temp_resource_rm }
+        multiply_variable = { country_resource_mm_gain = temp_resource_rm }
+        set_variable = { country_resource_rm_cost = temp_resource_rm_num }
+    }
+
+    set_variable = { country_resource_fe_expend = country_resource_fe_cost }
+    set_variable = { country_resource_ec_expend = country_resource_ec_cost }
+    set_variable = { country_resource_pm_expend = country_resource_pm_cost }
+    set_variable = { country_resource_rm_expend = country_resource_rm_cost }
+    set_variable = { country_resource_cm_expend = country_resource_cm_cost }
+    set_variable = { country_resource_mm_expend = country_resource_mm_cost }
+    set_variable = { country_resource_hic_expend = country_resource_hic_cost }
+    set_variable = { country_resource_energy_expend = country_resource_energy_cost }
+
+    set_variable = { country_resource_fe_get = country_resource_fe_gain }
+    set_variable = { country_resource_ec_get = country_resource_ec_gain }
+    set_variable = { country_resource_pm_get = country_resource_pm_gain }
+    set_variable = { country_resource_rm_get = country_resource_rm_gain }
+    set_variable = { country_resource_cm_get = country_resource_cm_gain }
+    set_variable = { country_resource_mm_get = country_resource_mm_gain }
+    set_variable = { country_resource_hic_get = country_resource_hic_gain }
+}

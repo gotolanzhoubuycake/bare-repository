@@ -1,0 +1,490 @@
+focus_tree = {
+	id = Hyakkiyako_base
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = HYA
+		}
+	}
+	default = no
+	##以下为序章剧情线
+	focus = {
+		id = HYA_municipality_information #自治区情报整理
+		#icon = GFX_goal_unknown
+		cost = 5
+		x = 10
+		y = 0
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+				army_experience  = 25
+			}			
+		}
+		focus = {
+			id = HYA_yinyang_meeting #阴阳部工作会议
+			#icon = GFX_goal_unknown
+			relative_position_id = HYA_municipality_information
+			prerequisite = {
+                focus = HYA_municipality_information
+			}			
+			cost = 5
+			x = 0
+			y = 1
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+
+				}			
+	}
+	focus = {
+		id = HYA_visiting_hyakkaryouran #拜访百花缭乱
+		#icon = GFX_goal_unknown
+		relative_position_id = HYA_yinyang_meeting
+		prerequisite = {
+			focus = HYA_yinyang_meeting
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = HYA_municipality_internal_affairs #自治区内部事务
+		#icon = GFX_goal_unknown
+		relative_position_id = HYA_visiting_hyakkaryouran
+		prerequisite = {
+			focus = HYA_visiting_hyakkaryouran
+		}			
+		cost = 5
+		x = -2
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = HYA_approve_cherry_festival #批准樱花祭
+		#icon = GFX_goal_unknown
+		relative_position_id = HYA_municipality_internal_affairs
+		prerequisite = {
+			focus = HYA_municipality_internal_affairs
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = HYA_invite_sensei #邀请老师
+		#icon = GFX_goal_unknown
+		relative_position_id = HYA_approve_cherry_festival
+		prerequisite = {
+			focus = HYA_approve_cherry_festival
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = HYA_investigate_thug #魍魉一座调查
+		#icon = GFX_goal_unknown
+		relative_position_id = HYA_invite_sensei
+		prerequisite = {
+			focus = HYA_invite_sensei
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}
+	focus = {
+		id = HYA_foreign_affairs #自治区对外事务
+		#icon = GFX_goal_unknown
+		relative_position_id = HYA_visiting_hyakkaryouran
+		prerequisite = {
+			focus = HYA_visiting_hyakkaryouran
+		}	
+		cost = 5
+		x = 2
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}
+	focus = {
+		id = HYA_invite_gehenna #邀请格赫娜
+		#icon = GFX_goal_unknown
+		relative_position_id = HYA_foreign_affairs
+		prerequisite = {
+			focus = HYA_foreign_affairs
+		}	
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}
+	focus = {
+		id = HYA_ninjia_apply #忍术研究部的申请
+		#icon = GFX_goal_unknown
+		relative_position_id = HYA_invite_gehenna
+		prerequisite = {
+			focus = HYA_invite_gehenna
+		}	
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}
+	focus = {
+		id = HYA_unconcealed_heart #不忍之心
+		#icon = GFX_goal_unknown
+		relative_position_id = HYA_ninjia_apply
+		prerequisite = {
+			focus = HYA_ninjia_apply
+		}	
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}
+	focus = {
+		id = HYA_umbrella_demon #伞妖袭击事件
+		#icon = GFX_goal_unknown
+		relative_position_id = HYA_unconcealed_heart
+		prerequisite = {
+			focus = HYA_unconcealed_heart
+		}	
+		prerequisite = {
+			focus = HYA_investigate_thug
+		}	
+		cost = 5
+		x = -2
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}
+	focus = {
+		id = HYA_hundred_stories #幻灵百物语
+		#icon = GFX_goal_unknown
+		relative_position_id = HYA_umbrella_demon
+		prerequisite = {
+			focus = HYA_umbrella_demon
+		}	
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}
+	focus = {
+		id = HYA_hundred_stories_study #百物语研究邀请
+		#icon = GFX_goal_unknown
+		relative_position_id = HYA_hundred_stories
+		prerequisite = {
+			focus = HYA_hundred_stories
+		}	
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}
+	focus = {
+		id = HYA_External_visits #启动对外访问项目
+		#icon = GFX_goal_unknown
+		relative_position_id = HYA_hundred_stories_study
+		prerequisite = {
+			focus = HYA_hundred_stories_study
+		}	
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}
+	focus = {
+		id = HYA_letter_from_fbwm #花鸟风月部的预告信
+		#icon = GFX_goal_unknown
+		relative_position_id = HYA_External_visits
+		prerequisite = {
+			focus = HYA_External_visits
+		}	
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}
+	focus = {
+		id = HYA_eternal_miko #永远的巫女
+		#icon = GFX_goal_unknown
+		relative_position_id = HYA_letter_from_fbwm
+		prerequisite = {
+			focus = HYA_letter_from_fbwm
+		}	
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}
+##以下为经济线
+		focus = {
+			id = HYA_municipality_economy #自治区经济状态评估
+			#icon = GFX_goal_unknown
+			relative_position_id = HYA_visiting_hyakkaryouran
+			prerequisite = {
+                focus = HYA_visiting_hyakkaryouran
+			}			
+			cost = 5
+			x = 6
+			y = 1
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+
+				}			
+	}
+		focus = {
+			id = HYA_municipality_fund #设立自治区发展基金
+			#icon = GFX_goal_unknown
+			relative_position_id = HYA_municipality_economy
+			prerequisite = {
+                focus = HYA_municipality_economy
+			}			
+			cost = 5
+			x = 0
+			y = 1
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+
+				}			
+	}
+	focus = {
+		id = HYA_lost_Paradise #失乐园度假村
+		#icon = GFX_goal_unknown
+		relative_position_id = HYA_municipality_fund
+		prerequisite = {
+			focus = HYA_municipality_fund
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = HYA_other_restore #建设其他度假村
+		#icon = GFX_goal_unknown
+		relative_position_id = HYA_lost_Paradise
+		prerequisite = {
+			focus = HYA_lost_Paradise
+		}			
+		cost = 5
+		x = -2
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = HYA_cooperation_with_abbydos #与阿拜多斯合作
+		#icon = GFX_goal_unknown
+		relative_position_id = HYA_lost_Paradise
+		prerequisite = {
+			focus = HYA_lost_Paradise
+		}			
+		cost = 5
+		x = 2
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = HYA_ambition_of_shizu #静子的野望
+		#icon = GFX_goal_unknown
+		relative_position_id = HYA_cooperation_with_abbydos
+		prerequisite = {
+			focus = HYA_other_restore
+		}	
+		prerequisite = {
+			focus = HYA_cooperation_with_abbydos
+		}		
+		cost = 5
+		x = -2
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+##以下为军事线
+		focus = {
+			id = HYA_defend_force #自治区防卫力量强化计划
+			#icon = GFX_goal_unknown
+			relative_position_id = HYA_visiting_hyakkaryouran
+			prerequisite = {
+                focus = HYA_visiting_hyakkaryouran
+			}			
+			cost = 5
+			x = 12
+			y = 1
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+
+				}			
+	}
+		focus = {
+			id = HYA_penetration_assault #强化渗透突袭战术
+			#icon = GFX_goal_unknown
+			relative_position_id = HYA_defend_force
+			prerequisite = {
+                focus = HYA_defend_force
+			}	
+		mutually_exclusive = {
+			focus = HYA_light_composite
+		}		
+			cost = 5
+			x = -2
+			y = 1
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+
+				}			
+	}
+	focus = {
+		id = HYA_exclusive_equipment #定制夜战以及反坦克装备
+		#icon = GFX_goal_unknown
+		relative_position_id = HYA_penetration_assault
+		prerequisite = {
+			focus = HYA_penetration_assault
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = HYA_light_composite #转向轻型合成化作战
+		#icon = GFX_goal_unknown
+		relative_position_id = HYA_defend_force
+		prerequisite = {
+			focus = HYA_defend_force
+		}
+		mutually_exclusive = {
+			focus = HYA_penetration_assault
+		}			
+		cost = 5
+		x = 2
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = HYA_light_mechanize #定制轻型机械化装备
+		#icon = GFX_goal_unknown
+		relative_position_id = HYA_light_composite
+		prerequisite = {
+			focus = HYA_light_composite
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}
+	focus = {
+		id = HYA_communication_system #建立统一沟通体系
+		#icon = GFX_goal_unknown
+		relative_position_id = HYA_exclusive_equipment
+		prerequisite = {
+			focus = HYA_exclusive_equipment
+		}	
+		prerequisite = {
+			focus = HYA_light_mechanize
+		}		
+		cost = 5
+		x = 2
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = HYA_hyakkaryouran_guidance #吸纳百花缭乱战术指导
+		#icon = GFX_goal_unknown
+		relative_position_id = HYA_communication_system
+		prerequisite = {
+			focus = HYA_communication_system
+		}			
+		cost = 5
+		x = -2
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = HYA_ninjia_tech #静子的野望
+		#icon = GFX_goal_unknown
+		relative_position_id = HYA_communication_system
+		prerequisite = {
+			focus = HYA_communication_system
+		}	
+		cost = 5
+		x = 2
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+}

@@ -1,0 +1,16 @@
+state={
+	id=67
+	name="STATE_67"
+	provinces={
+		1405 4721 4973 6509 8518 9304 11625 
+	}
+	history = {
+		owner = D05
+		add_core_of=D05
+		victory_points = {6509 15}
+    }
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

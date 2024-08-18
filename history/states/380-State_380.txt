@@ -1,0 +1,14 @@
+state={
+	id=380
+	name="STATE_380"
+	provinces={
+		3 936 2002 2122 2651 2802 2919 4061 4112 4289 4710 4837 4944 5481 5868 6064 6189 6249 6545 6771 7247 8284 9426 11752 11772 11798 11821 11863 11864 11893 11913 
+	}
+	history = {
+		owner = TRI
+		add_core_of=TRI
+    }
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,16 @@
+state={
+	id=131
+	name="STATE_131"
+	provinces={
+		2141 2592 3392 5063 5576 6817 8011 8344 8575 9220 11237 
+	}
+	history = {
+		owner = D06
+		add_core_of=D06
+		victory_points = {8011 15}
+    }
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,239 @@
+###时间
+    Time_count_effect = {
+        IF = {
+            limit = {
+                check_variable = { global.Time_hours = 24 }
+            }
+            subtract_from_variable = { global.Time_hours = 24 }
+            add_to_variable = { global.Time_days = 1 }
+            story_days_effect_on_actions = yes
+            IF = {
+                limit = {
+                    OR = {
+                        check_variable = { global.Time_months = 1 }
+                        check_variable = { global.Time_months = 3 }
+                        check_variable = { global.Time_months = 5 }
+                        check_variable = { global.Time_months = 7 }
+                        check_variable = { global.Time_months = 8 }
+                        check_variable = { global.Time_months = 10 }
+                        check_variable = { global.Time_months = 12 }
+                    }
+                    check_variable = { global.Time_days > 31 }
+                }
+                subtract_from_variable = { global.Time_days = 31 }
+                add_to_variable = { global.Time_months = 1 }
+                story_months_effect_on_actions = yes
+            }
+            else_if = {
+                limit = {
+                    OR = {
+                        check_variable = { global.Time_months = 4 }
+                        check_variable = { global.Time_months = 6 }
+                        check_variable = { global.Time_months = 9 }
+                        check_variable = { global.Time_months = 11 }
+                    }
+                    check_variable = { global.Time_days > 30 }
+                }
+                subtract_from_variable = { global.Time_days = 30 }
+                add_to_variable = { global.Time_months = 1 }
+                story_months_effect_on_actions = yes
+            }
+            else_if = {
+                limit = {
+                    check_variable = { global.Time_months = 2 }
+                    check_variable = { global.Time_days > 28 }
+                }
+                if = {
+                    limit = {
+                        check_variable = { global.Time_years = 2020 }
+                        check_variable = { global.Time_days > 29 }
+                    }
+                    subtract_from_variable = { global.Time_days = 29 }
+                    add_to_variable = { global.Time_months = 1 }
+                    story_months_effect_on_actions = yes
+                }
+                else_if = {
+                    limit = {
+                        NOT = { check_variable = { global.Time_years = 2020 } }
+                    }
+                    subtract_from_variable = { global.Time_days = 28 }
+                    add_to_variable = { global.Time_months = 1 }
+                    story_months_effect_on_actions = yes
+                }
+            }
+            IF = {
+                limit = {
+                    check_variable = { global.Time_months = 13 }
+                }
+                subtract_from_variable = { global.Time_months = 12 }
+                add_to_variable = { global.Time_years = 1 }
+                story_years_effect_on_actions = yes
+            }
+        }
+    }
+    story_days_effect_on_actions = {
+        #
+        add_to_variable = { global.days_token = 1 }
+        IF = {
+            limit = { check_variable = { global.days_token = 8 } }
+            story_weeks_effect_on_actions = yes
+            set_variable = { global.days_token = 1 }
+        }
+        #
+        every_country = {
+            max_manpower_count = yes
+            war_power_gain_count = yes
+            war_power_gain_effect = yes
+        }
+    }
+    story_weeks_effect_on_actions = {
+        every_country = {
+
+        }
+    }
+    story_months_effect_on_actions = {
+        every_country = {
+
+        }
+    }
+    story_years_effect_on_actions = {
+        
+    }
+
+###昼夜
+    Timetest_in_night_season = {
+        if = {
+            limit = {
+                OR = {
+                    check_variable = { global.Time_months = 5 }
+                    check_variable = { global.Time_months = 6 }
+                    check_variable = { global.Time_months = 7 }
+                }
+            }
+            if = {
+                limit = { check_variable = { global.Time_hours = 20 } }
+                Timetest_in_night = yes
+            }
+            if = {
+                limit = { check_variable = { global.Time_hours = 4 } }
+                Timetest_out_night = yes
+            }
+        }
+        else_if = {
+            limit = {
+                OR = {
+                    check_variable = { global.Time_months = 2 }
+                    check_variable = { global.Time_months = 3 }
+                    check_variable = { global.Time_months = 4 }
+                    check_variable = { global.Time_months = 8 }
+                    check_variable = { global.Time_months = 9 }
+                    check_variable = { global.Time_months = 10 }
+                }
+            }
+            if = {
+                limit = { check_variable = { global.Time_hours = 19 } }
+                Timetest_in_night = yes
+            }
+            if = {
+                limit = { check_variable = { global.Time_hours = 5 } }
+                Timetest_out_night = yes
+            }
+        }
+        else_if = {
+            limit = {
+                OR = {
+                    check_variable = { global.Time_months = 1 }
+                    check_variable = { global.Time_months = 11 }
+                    check_variable = { global.Time_months = 12 }
+                }
+            }
+            if = {
+                limit = { check_variable = { global.Time_hours = 18 } }
+                Timetest_in_night = yes
+            }
+            if = {
+                limit = { check_variable = { global.Time_hours = 6 } }
+                Timetest_out_night = yes
+            }
+        }
+    }
+    Timetest_in_night = {
+        every_country = {
+            add_dynamic_modifier = {
+                modifier = Timetest_night_modifiers
+            }
+            Timetest_night_modifiers_check = yes
+        }
+    }
+    Timetest_out_night = {
+        every_country = {
+            remove_dynamic_modifier = {
+                modifier = Timetest_night_modifiers
+            }
+            Timetest_night_modifiers_check = yes
+        }
+    }
+    Timetest_night_modifiers_check = {
+
+    ##############################################################################################################################
+        #set_variable = { country_night_industrial_capacity_factory_factor = country_night_industrial_capacity_factory_base }
+        set_variable = { country_night_production_speed_buildings_factor_factor = country_night_production_speed_buildings_factor_base }
+        set_variable = { country_night_industry_free_repair_factor_factor = country_night_industry_free_repair_factor_base }
+        ################################################
+        set_variable = { country_night_army_attack_factor = country_night_army_attack_factor_base }
+        set_variable = { country_night_army_speed_factor = country_night_army_speed_factor_base }
+        set_variable = { country_night_army_morale_factor_factor = country_night_army_morale_factor_base }
+        ################################################
+        set_variable = { country_night_air_interception_detect_factor = country_night_air_interception_detect_factor_base }
+        set_variable = { country_night_air_superiority_detect_factor = country_night_air_superiority_detect_factor_base }
+        set_variable = { country_night_air_mission_efficiency = country_night_air_mission_efficiency_base }
+        set_variable = { country_night_air_cas_present_factor = country_night_air_cas_present_factor_base }
+        set_variable = { country_night_air_bombing_targetting = country_night_air_bombing_targetting_base }
+        set_variable = { country_night_air_attack_factor = country_night_air_attack_factor_base }
+    ##############################################################################################################################
+        #add_to_variable = { country_night_industrial_capacity_factory_factor = country_night_industrial_capacity_factory_modifier }
+        add_to_variable = { country_night_production_speed_buildings_factor_factor = country_night_production_speed_buildings_factor_modifier }
+        add_to_variable = { country_night_industry_free_repair_factor_factor = country_night_industry_free_repair_factor_modifier }
+        ################################################
+        add_to_variable = { country_night_army_attack_factor = country_night_army_attack_factor_modifier }
+        add_to_variable = { country_night_army_speed_factor = country_night_army_speed_factor_modifier }
+        add_to_variable = { country_night_army_morale_factor_factor = country_night_army_morale_factor_modifier }
+        ################################################
+        add_to_variable = { country_night_air_interception_detect_factor = country_night_air_interception_detect_factor_modifier }
+        add_to_variable = { country_night_air_superiority_detect_factor = country_night_air_superiority_detect_factor_modifier }
+        add_to_variable = { country_night_air_mission_efficiency = country_night_air_mission_efficiency_modifier }
+        add_to_variable = { country_night_air_cas_present_factor = country_night_air_cas_present_factor_modifier }
+        add_to_variable = { country_night_air_bombing_targetting = country_night_air_bombing_targetting_modifier }
+        add_to_variable = { country_night_air_attack_factor = country_night_air_attack_factor_modifier }
+
+    }
+###人力
+    max_manpower_count = { #地区发展度统计
+        set_variable = { all_state_manpower = 0 }
+        set_variable = { all_core_state_manpower = 0 }
+        set_variable = { all_noncore_state_manpower = 0 }
+        every_controlled_state = {
+            add_to_variable = { PREV.all_state_manpower = state_population }
+            IF = {
+                limit = { is_core_of = PREV }
+                add_to_variable = { PREV.all_core_state_manpower = state_population }
+            }
+            ELSE = {
+                add_to_variable = { PREV.all_noncore_state_manpower = state_population }
+            }
+        }
+    }
+    war_power_gain_count = { #战备值恢复统计
+        set_variable = { war_power_gain = 0 }
+        add_to_variable = { war_power_gain = all_core_state_manpower }
+        multiply_variable = { war_power_gain = modifier@conscription }
+        multiply_variable = { war_power_gain = 0.01 }
+    }
+    war_power_gain_effect = {
+        set_variable = { max_manpower_limit = all_core_state_manpower }
+        multiply_variable = { max_manpower_limit = modifier@conscription }
+        if = {
+            limit = { max_available_manpower < max_manpower_limit }
+            add_manpower = war_power_gain
+        }
+    }

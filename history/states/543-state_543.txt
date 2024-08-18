@@ -1,0 +1,14 @@
+state={
+	id=543
+	name="STATE_543"
+	provinces={
+		89 557 982 1019 1252 1640 1981 2633 3390 3514 4299 4406 5584 6047 6756 8101 8331 8453 8586 8867 9246 9421 9470 9566 10145 10155 10221 10279 10296 10297 10303 10313 10337 
+	}
+	history={
+		owner = RWT
+		add_core_of=RWT
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

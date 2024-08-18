@@ -1,0 +1,15 @@
+state={
+	id=287
+	name="STATE_287"
+        history={
+		owner = GEH
+		add_core_of=GEH
+
+	}
+	provinces={
+		263 1379 2153 2172 4148 4477 4971 6208 7702 8230 8831 10957 
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

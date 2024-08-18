@@ -1,0 +1,16 @@
+state={
+	id=136
+	name="STATE_136"
+	provinces={
+		3564 3983 4221 4839 9094 11036 
+	}
+	history={
+		owner = ARI
+		add_core_of=ARI
+		victory_points = {3983 25}
+	}
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

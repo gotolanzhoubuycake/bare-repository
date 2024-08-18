@@ -1,0 +1,15 @@
+state={
+	id=554
+	name="STATE_554"
+	provinces={
+		811 1464 3280 4529 10105 10107 
+	}
+	history={
+		owner = RWT
+		add_core_of=RWT
+	}
+	manpower=0
+	state_category=wasteland
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

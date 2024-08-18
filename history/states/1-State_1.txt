@@ -1,0 +1,16 @@
+state={
+	id=1
+	name="STATE_1"
+	provinces={
+		509 1705 2097 2550 6620 8464 8573 12042 12043 12103 9383
+	}
+	history = {
+		owner = SRT
+		add_core_of = SRT
+		victory_points = {8573 5}
+    }
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

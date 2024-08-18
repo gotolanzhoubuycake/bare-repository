@@ -1,0 +1,7 @@
+scripted_gui = {
+	Time_test_window_main = {
+        context_type = player_context
+		window_name = "Time_test_window"
+		parent_window_name = time_control_window
+	}
+}

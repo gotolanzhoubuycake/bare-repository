@@ -1,0 +1,16 @@
+state={
+	id=20
+	name="STATE_20"
+	provinces={
+		81 1682 4996 7278 
+	}
+	history = {
+		owner = CAE
+		add_core_of=CAE
+		victory_points = {1682 15}
+    }
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

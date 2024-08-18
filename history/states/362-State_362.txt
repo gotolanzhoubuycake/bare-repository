@@ -1,0 +1,14 @@
+state={
+	id=362
+	name="STATE_362"
+	provinces={
+		360 374 617 1311 2106 2542 4391 4660 6608 7027 7931 8185 8397 8702 9259 9382 12261 12266 
+	}
+	history = {
+		owner = TRI
+		add_core_of=TRI
+    }
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

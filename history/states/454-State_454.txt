@@ -1,0 +1,15 @@
+state={
+	id=454
+	name="STATE_454"
+	provinces={
+		414 631 637 719 1157 1543 2216 2284 2708 2870 2883 4058 4587 5180 5600 5923 6318 7214 7909 8013 8597 8870 9157 9332 11480 11589 11607 11659 
+	}
+	history = {
+		owner = ABY
+		add_core_of=ABY
+		victory_points = {7214 10}
+    }
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

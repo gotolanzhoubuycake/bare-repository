@@ -1,0 +1,83 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "TRI_BOP_container_windows"
+		position = { x = 20 y = 20 }	
+		size = { width = 500 height= 600 }
+		
+		background = {
+			name = "background"		
+			quadTextureSprite = "GFX_tiled_window"
+		}
+
+		containerWindowType = {
+			name = "TRI_house_container"
+			position = { x = 20 y = 100 }
+
+			gridboxtype = {
+				name = "TRI_house_diagram"
+				position = { x = 60 y = 50 }
+				size = { width = 100%% height = 100%% }
+				slotsize = { width = 100%% height = 0 }
+				max_slots_horizontal = 1
+				add_horizontal = no
+			}
+
+			instantTextBoxType = {
+				name = "House_name"
+				position = { x = 80 y = 150 }
+				font = "hoi_24header"
+				text = "TRI_BOP_house_support_header"
+				format = center
+				maxHeight = 24
+			}
+		}
+
+		containerWindowType = {
+			gridboxtype = { #下议院显示图像
+				name = "TRI_senators_diagram"
+				position = { x = 70 y = 300 }
+				size = { width = 100%% height = 100%% }
+				slotsize = { width = 100%% height = 0 }
+				max_slots_horizontal = 1
+				add_horizontal = no
+			}
+
+			instantTextBoxType = {
+				name = "Senators_name"
+				position = { x = 80 y = 300 }
+				font = "hoi_24header"
+				text = "TRI_BOP_senate_support_header"
+				format = center
+				maxHeight = 24
+			}
+		}
+		
+		# Utility buttons for demo, not needed for parliament diagram
+	}
+	
+	
+
+	containerWindowType = {
+		name = "TRI_house_seat_entry"
+		position = { x = 0 y = 0 }
+		size = { width = 20 height = 20}
+	
+		iconType = { 
+			name = "TRI_seat_icon"
+			quadTextureSprite = "GFX_Parliament_Seat"
+			#pdx_tooltip = "SAMPLE_seat_tt"
+		}
+	}
+
+	containerWindowType = {
+		name = "TRI_senators_seat_entry"
+		position = { x = 0 y = 0 }
+		size = { width = 20 height = 20}
+		
+		iconType = { 
+			name = "TRI_senator_seat_icon"
+			quadTextureSprite = "GFX_Parliament_Seat"
+		}
+	}
+}

@@ -1,0 +1,330 @@
+equipment_modules = {
+	#标准-红攻标准甲（红甲） armor
+	#自火-黄攻标准甲 artillery
+	#自歼-神秘攻标准甲 anti_tank
+	#自防-红攻神秘甲 anti_air
+	#喷火-黄攻神秘甲 flame
+	#两栖-神秘攻神秘甲 amphibious
+
+
+	mbt_l_gun_1 = { #红攻
+		abbreviation = "alg1"
+		category = mbt_l_main_armament
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			soft_attack = 3
+			hard_attack = 20
+			build_cost_ic = 1
+			maximum_speed = -1
+			reliability = -0.1
+			breakthrough = 3
+			defense = 3
+		}
+
+		build_cost_resources = {
+			
+		}
+		dismantle_cost_ic = 1
+		xp_cost = 3
+	}
+
+	mbt_h_gun_1 = { #硬攻
+		abbreviation = "alg1"
+		category = mbt_h_main_armament
+		sfx = sfx_ui_sd_module_turret
+
+
+		add_stats = {
+			soft_attack = 3
+			hard_attack = 20
+			build_cost_ic = 1
+			maximum_speed = -1
+			reliability = -0.1
+			breakthrough = 3
+			defense = 3
+		}
+
+		build_cost_resources = {
+		}
+		dismantle_cost_ic = 1
+		xp_cost = 3
+	}
+
+
+
+	mbt_sp_gun_1 = {#蓝攻
+		abbreviation = "aspg1"
+		category = mbt_sp_main_armament
+		sfx = sfx_ui_sd_module_turret
+
+
+
+		add_stats = {
+			soft_attack = 20
+			hard_attack = 20
+			ap_attack = 40
+			build_cost_ic = 1
+			maximum_speed = -1
+			reliability = -0.1
+			breakthrough = 3
+			defense = 3
+
+		}
+		
+		build_cost_resources = {
+		}
+		dismantle_cost_ic = 1
+		xp_cost = 3
+	}
+
+
+
+
+
+	mbt_engine_oil = {
+		abbreviation = "bgas"
+		category = mbt_engine_type
+		sfx = sfx_ui_sd_module_engine
+
+
+
+		add_stats = {
+			build_cost_ic = 2
+			fuel_consumption = 3.5
+			reliability = 0.05
+			maximum_speed = 18
+		}
+		multiply_stats = {
+		}
+		xp_cost = 1
+
+	}
+
+
+
+	mbt_armor_h = {
+		abbreviation = "cast"
+		category = mbt_h_armor_type
+		sfx = sfx_ui_sd_module_sonar
+
+
+		add_stats = {
+			
+		}
+		dismantle_cost_ic = 1
+		xp_cost = 1
+		multiply_stats = {
+			
+		}
+
+		build_cost_resources = {
+		}
+	}
+	mbt_armor_sp = {
+		abbreviation = "cast"
+		category = mbt_sp_armor_type
+		sfx = sfx_ui_sd_module_sonar
+
+
+		add_stats = {
+			hardness = 0.5
+			armor_value = 40
+		}
+		dismantle_cost_ic = 1
+		xp_cost = 1
+		multiply_stats = {
+			
+		}
+
+		build_cost_resources = {
+		}
+	}
+
+
+
+	mbt_4x_suspension = {
+		abbreviation = "a4sb"
+		category = mbt_suspension_type
+		sfx = sfx_ui_sd_module_sonar
+
+		add_stats = {
+		}
+		dismantle_cost_ic  = 2
+		xp_cost = 1
+		multiply_stats =  {
+		}
+	}
+	#定位确认部件
+	mbt_armor_role_lahd = {
+		abbreviation = "mbtlald"
+		category = mbt_armor_role_type
+		sfx = sfx_ui_sd_module_sonar
+		
+		allowed_module_categories = {
+			main_armament_slot = {
+				mbt_l_main_armament
+			}
+			armor_type_slot = {
+				mbt_h_armor_type
+			}
+		}
+		add_stats = {
+
+		}
+
+
+		
+
+		dismantle_cost_ic  = 2
+		xp_cost = 1
+		multiply_stats =  {
+		}
+	}
+
+	mbt_armor_role_hahd = {
+		abbreviation = "mbthahd"
+		category = mbt_armor_role_type
+		sfx = sfx_ui_sd_module_sonar
+		allow_equipment_type = artillery
+		forbid_equipment_type_exact_match = armor
+
+		allowed_module_categories = {
+			main_armament_slot = {
+				mbt_h_main_armament
+			}
+			armor_type_slot = {
+				mbt_h_armor_type
+			}
+		}
+		add_stats = {
+
+		}
+
+
+		
+
+		dismantle_cost_ic  = 2
+		xp_cost = 1
+		multiply_stats =  {
+		}
+	}
+
+	mbt_armor_role_sahd = {
+		abbreviation = "mbtsahd"
+		category = mbt_armor_role_type
+		sfx = sfx_ui_sd_module_sonar
+		allow_equipment_type = anti_tank
+		forbid_equipment_type_exact_match = armor
+		
+		allowed_module_categories = {
+			main_armament_slot = {
+				mbt_sp_main_armament
+			}
+			armor_type_slot = {
+				mbt_h_armor_type
+			}
+		}
+		add_stats = {
+
+		}
+
+
+		
+
+		dismantle_cost_ic  = 2
+		xp_cost = 1
+		multiply_stats =  {
+		}
+	}
+
+	mbt_armor_role_lasd = {
+		abbreviation = "mbtlasd"
+		category = mbt_armor_role_type
+		sfx = sfx_ui_sd_module_sonar
+
+		allow_equipment_type = anti_air
+		forbid_equipment_type_exact_match = armor
+		
+		allowed_module_categories = {
+			main_armament_slot = {
+				mbt_l_main_armament
+			}
+			armor_type_slot = {
+				mbt_sp_armor_type
+			}
+		}
+		add_stats = {
+
+		}
+
+
+		
+
+		dismantle_cost_ic  = 2
+		xp_cost = 1
+		multiply_stats =  {
+		}
+	}
+
+	mbt_armor_role_hasd = {
+		abbreviation = "mbthasd"
+		category = mbt_armor_role_type
+		sfx = sfx_ui_sd_module_sonar
+
+		allow_equipment_type = flame
+		forbid_equipment_type_exact_match = armor
+		
+		allowed_module_categories = {
+			main_armament_slot = {
+				mbt_h_main_armament
+			}
+			armor_type_slot = {
+				mbt_sp_armor_type
+			}
+		}
+		
+		add_stats = {
+
+		}
+
+
+		
+
+		dismantle_cost_ic  = 2
+		xp_cost = 1
+		multiply_stats =  {
+		}
+	}
+
+	mbt_armor_role_sasd = {
+		abbreviation = "mbtsasd"
+		category = mbt_armor_role_type
+		sfx = sfx_ui_sd_module_sonar
+
+		allow_equipment_type = amphibious
+		forbid_equipment_type_exact_match = armor
+
+
+		allowed_module_categories = {
+			main_armament_slot = {
+				mbt_sp_main_armament
+			}
+			armor_type_slot = {
+				mbt_sp_armor_type
+			}
+		}
+		add_stats = {
+
+		}
+
+
+		
+
+		dismantle_cost_ic  = 2
+		xp_cost = 1
+		multiply_stats =  {
+		}
+	}
+
+}

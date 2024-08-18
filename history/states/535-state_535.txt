@@ -1,0 +1,14 @@
+state={
+	id=535
+	name="STATE_535"
+	provinces={
+		142 351 829 847 1378 2902 3083 3739 3772 4256 4514 5410 5764 6197 7325 7345 7421 7816 8360 9516 10889 10929 11016 
+	}
+	history = {
+		owner = CAO
+		add_core_of=CAO
+    }
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,248 @@
+buildings = {
+
+	# show_on_map:
+	#    if provincial = yes, then show_on_map = X is amount per each province
+	#    if provincial = no, then show_on_map = X is amount per state
+
+
+	infrastructure = { #基础设施
+		base_cost = 1500
+		icon_frame = 3
+		max_level = 5
+		value = 1
+		infrastructure_construction_effect = yes
+		infrastructure = yes
+		show_modifier = yes
+		allied_build = yes
+	}
+
+	air_base = { #空军枢纽
+		show_on_map = 1
+		base_cost = 1250
+		icon_frame = 5
+		max_level = 10
+		value = 1
+		infrastructure_construction_effect = yes
+		air_base = yes
+		damage_factor = 0.5
+		allied_build = yes
+	}
+
+	anti_air_building = { #防空设施
+		base_cost = 1500
+		icon_frame = 9
+		max_level = 5 # This is the max unlock level
+		value = 1
+		infrastructure_construction_effect = yes
+		damage_factor = 0.1
+		anti_air = yes
+		disabled_in_dmz = yes
+		allied_build = yes
+		air_defence = 1
+	}
+
+	radar_station = { #雷达设施
+		base_cost = 3375
+		icon_frame = 11
+		max_level = 6 # This is the max unlock level
+		value = 4
+		infrastructure_construction_effect = yes
+		centered = yes
+		allied_build = yes
+		damage_factor = 0.5
+		radar = yes
+	}
+
+	arms_factory = { #重型工业区
+		base_cost = 7200
+		base_cost_conversion = 4000
+		icon_frame = 2
+		max_level = 5000
+		shares_slots = yes
+		value = 8
+		infrastructure_construction_effect = yes
+		#local_resources_HIC = 1
+		military_production = 1
+	}
+
+	industrial_complex = { #工业区
+		base_cost = 10800
+		base_cost_conversion = 9000
+		icon_frame = 1
+		max_level = 5000
+		shares_slots = yes
+		value = 5
+		infrastructure_construction_effect = yes
+		general_production = 1
+	}
+
+	refining_complex = { #精炼区
+		base_cost = 10800
+		icon_frame = 1
+		max_level = 5000
+		shares_slots = yes
+		value = 5
+		infrastructure_construction_effect = yes
+	}
+
+	processing_complex = { #加工区
+		base_cost = 10800
+		icon_frame = 1
+		max_level = 5000
+		shares_slots = yes
+		value = 5
+		infrastructure_construction_effect = yes
+	}
+
+	petrochemical_complex = { #合成区
+		base_cost = 10800
+		icon_frame = 1
+		max_level = 5000
+		shares_slots = yes
+		value = 5
+		infrastructure_construction_effect = yes
+	}
+
+	transmutation_complex = { #嬗变区
+		base_cost = 10800
+		icon_frame = 1
+		max_level = 5000
+		shares_slots = yes
+		value = 5
+		infrastructure_construction_effect = yes
+	}
+
+	synthetic_refinery = { #能源区
+		base_cost = 14500
+		icon_frame = 10
+		max_level = 5000 
+		shares_slots = yes
+		value = 5
+		infrastructure_construction_effect = yes
+		refinery = yes
+		show_modifier = yes
+		fuel_gain_from_states = 1
+	}
+
+	fuel_silo = { #储能区
+		base_cost = 5000
+		icon_frame = 14
+		max_level = 5000 
+		shares_slots = yes
+		value = 5
+		infrastructure_construction_effect = yes
+		fuel_silo = yes
+		show_modifier = yes
+		max_fuel_building = 1.0 #k
+	}
+	
+	supply_node = { #公路枢纽
+		base_cost = 10000
+		provincial = yes
+		disabled_in_dmz = yes
+		icon_frame = 15
+		max_level = 1
+		centered = yes
+		supply_node = yes
+		damage_factor = 0.1
+		allied_build = yes
+		always_shown = yes
+		infrastructure_construction_effect = yes
+	}	
+	
+	rail_way = { #公路
+		base_cost = 100
+		per_level_extra_cost = 50
+		provincial = yes
+		disabled_in_dmz = yes
+		icon_frame = 16
+		max_level = 1
+		allied_build = yes
+		infrastructure_construction_effect = yes
+	}
+	
+	bunker = { #防御工事
+		show_on_map = 1
+		has_destroyed_mesh = yes
+		base_cost = 500
+		per_level_extra_cost = 500
+		provincial = yes
+		disabled_in_dmz = yes
+		icon_frame = 7
+		land_fort = 1
+		max_level = 10
+		value = 1
+		infrastructure_construction_effect = yes
+	}
+	
+	# naval_base = {
+	# 	show_on_map = 1
+	# 	show_on_map_meshes = 3
+	# 	always_shown = yes
+	# 	base_cost = 5000
+	# 	per_level_extra_cost = 1000
+	# 	provincial = yes
+	# 	only_costal = yes
+	# 	is_port = yes
+	# 	icon_frame = 6
+	# 	max_level = 10
+	# 	value = 1
+	# 	allied_build = yes
+	# 	infrastructure_construction_effect = yes
+	# }
+
+	# coastal_bunker = {
+	# 	show_on_map = 1
+	# 	has_destroyed_mesh = yes
+	# 	base_cost = 500
+	# 	per_level_extra_cost = 500
+	# 	provincial = yes
+	# 	disabled_in_dmz = yes
+	# 	only_costal = yes
+	# 	icon_frame = 8
+	# 	naval_fort = 1
+	# 	max_level = 10
+	# 	value = 1
+	# 	infrastructure_construction_effect = yes
+	# }
+
+	# dockyard = {
+	# 	show_on_map = 1
+	# 	show_on_map_meshes = 3
+	# 	base_cost = 6400
+	# 	only_costal = yes
+	# 	naval_production = 1
+	# 	icon_frame = 4
+	# 	only_costal = yes
+	# 	max_level = 20
+	# 	shares_slots = yes
+	# 	value = 5
+	# 	infrastructure_construction_effect = yes
+	# }
+
+	
+
+	# rocket_site = {
+	# 	show_on_map = 1
+	# 	base_cost = 6400
+	# 	icon_frame = 12
+	# 	rocket_production = 5
+	# 	rocket_launch_capacity = 1
+	# 	max_level = 5
+	# 	shares_slots = yes
+	# 	value = 1
+	# 	infrastructure_construction_effect = yes
+	# }
+
+	# nuclear_reactor = { 
+	# 	show_on_map = 1
+	# 	base_cost = 30000
+	# 	icon_frame = 13
+	# 	nuclear_reactor = yes
+	# 	nuclear_production_factor = 1
+	# 	max_level = 1 # This is the max unlock level
+	# 	shares_slots = yes
+	# 	value = 10
+	# 	infrastructure_construction_effect = yes
+	# }
+}

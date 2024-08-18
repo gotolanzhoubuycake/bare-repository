@@ -1,0 +1,188 @@
+focus_tree = {
+	id = Valkyrie_base
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = VAL
+		}
+	}
+	default = no
+	##以下为序章剧情线
+	focus = {
+		id = VAL_aftermath_jailbreak #七囚人越狱事件的余波
+		#icon = GFX_goal_unknown
+		cost = 5
+		x = 10
+		y = 0
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+				army_experience  = 25
+			}			
+		}
+		focus = {
+			id = VAL_press_conferences #应对克洛诺斯记者发布会
+			#icon = GFX_goal_unknown
+			relative_position_id = VAL_aftermath_jailbreak
+			prerequisite = {
+                focus = VAL_aftermath_jailbreak
+			}			
+			cost = 5
+			x = 0
+			y = 1
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+
+				}			
+	}
+	focus = {
+		id = VAL_attendance #出勤
+		#icon = GFX_goal_unknown
+		relative_position_id = VAL_press_conferences
+		prerequisite = {
+			focus = VAL_press_conferences
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = VAL_deal_with_kaiser #与凯撒交易
+		#icon = GFX_goal_unknown
+		relative_position_id = VAL_attendance
+		prerequisite = {
+			focus = VAL_attendance
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = VAL_deal_with_srt #处理不满的SRT学生
+		#icon = GFX_goal_unknown
+		relative_position_id = VAL_deal_with_kaiser
+		prerequisite = {
+			focus = VAL_deal_with_kaiser
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = VAL_propose_of_vice #副局长的建议
+		#icon = GFX_goal_unknown
+		relative_position_id = VAL_deal_with_srt
+		prerequisite = {
+			focus = VAL_deal_with_srt
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+		focus = {
+			id = VAL_military_preparation #整理现有武备
+			#icon = GFX_goal_unknown
+			relative_position_id = VAL_propose_of_vice
+			prerequisite = {
+                focus = VAL_propose_of_vice
+			}			
+			cost = 5
+			x = -2
+			y = 1
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+
+				}			
+	}
+		focus = {
+			id = VAL_military_preparation_plan #武备筹措计划
+			#icon = GFX_goal_unknown
+			relative_position_id = VAL_military_preparation
+			prerequisite = {
+                focus = VAL_military_preparation
+			}			
+			cost = 5
+			x = 0
+			y = 1
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+
+				}			
+	}
+		focus = {
+			id = VAL_integrate_srt #整合SRT学院转学生
+			#icon = GFX_goal_unknown
+			relative_position_id = VAL_propose_of_vice
+			prerequisite = {
+                focus = VAL_propose_of_vice
+			}			
+			cost = 5
+			x = 0
+			y = 1
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+
+				}			
+	}
+	focus = {
+		id = VAL_set_srt_force #为SRT转校生设立专属小队
+		#icon = GFX_goal_unknown
+		relative_position_id = VAL_integrate_srt
+		prerequisite = {
+			focus = VAL_integrate_srt
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+		focus = {
+			id = VAL_deal_with_kaya #与花耶的交易
+			#icon = GFX_goal_unknown
+			relative_position_id = VAL_propose_of_vice
+			prerequisite = {
+                focus = VAL_propose_of_vice
+			}			
+			cost = 5
+			x = 2
+			y = 1
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+
+				}			
+	}
+	focus = {
+		id = VAL_deal_with_sensei #会见老师
+		#icon = GFX_goal_unknown
+		relative_position_id = VAL_deal_with_kaya
+		prerequisite = {
+			focus = VAL_deal_with_kaya
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+}

@@ -1,0 +1,16 @@
+state={
+	id=80
+	name="STATE_80"
+	provinces={
+		3429 4454 4649 5744 7096 7491 8654 11428 11506 
+	}
+	history = {
+		owner = D05
+		add_core_of=D05
+		victory_points = {4451 15}
+    }
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,33 @@
+capital = 150
+oob = "standard_templates"
+
+set_stability = 0.50
+set_war_support = 0.50
+set_research_slots = 4
+set_fuel_ratio = 0.5
+set_convoys = 20
+starting_train_buffer = 0.5
+starting_truck_buffer = 0.5
+
+# Starting tech
+set_technology = {
+}
+
+add_ideas = {
+
+}
+
+recruit_character = ARI_atsuko
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 100
+	fascism = 0
+	communism = 0
+	neutrality = 0
+}

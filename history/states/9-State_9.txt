@@ -1,0 +1,16 @@
+state={
+	id=9
+	name="STATE_9"
+	provinces={
+		428 677 748 942 1158 1357 1997 2971 3258 3531 4047 4059 4199 4610 4665 5304 5963 6038 6040 6789 7185 7228 7951 8059 8240 8679 8719 9124 9215 9363 11875 11888 11965 11978 12001 
+	}
+	history={
+		owner = D03
+		add_core_of=D03
+		victory_points = {8719 15}
+	}
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

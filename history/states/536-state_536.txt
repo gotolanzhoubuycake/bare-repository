@@ -1,0 +1,14 @@
+state={
+	id=536
+	name="STATE_536"
+	provinces={
+		280 421 463 1666 2916 3534 3615 4352 5008 6705 7391 8131 9236 9501 11058 11086 11104 11113 11122 11123 
+	}
+	history={
+		owner = CAP
+		add_core_of=CAP
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,15 @@
+state={
+	id=491
+	name="STATE_491"
+	provinces={
+		449 1039 1169 1729 2283 4279 4926 6136 6181 6695 6730 7847 8842 11464 11583 11602 
+	}
+	history={
+		owner=D02
+		add_core_of=D02
+		victory_points = {1729 15}
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

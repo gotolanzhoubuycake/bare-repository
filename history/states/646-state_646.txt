@@ -1,0 +1,15 @@
+state={
+	id=646
+	name="STATE_646"
+	provinces={
+		1545 2296 4768 6242 6266 7495 11391 11395 
+	}
+	history={
+		owner = D06
+		add_core_of=D06
+
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

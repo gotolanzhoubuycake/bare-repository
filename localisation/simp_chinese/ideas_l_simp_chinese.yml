@@ -1,0 +1,37 @@
+﻿l_simp_chinese:
+
+#民族精神静态部分
+
+#圣三一政治线
+ eden_treaty_step_0_modifier: "争辩无休的《伊甸条约》方针"
+ eden_treaty_step_1_modifier: "大略初定的《伊甸条约》方针"
+ eden_treaty_step_2_modifier: "方略周详的《伊甸条约》方针"
+ eden_treaty_step_3_modifier: "已完成的《伊甸条约》"
+ authorize_eagle_modifier: "以战止戈"
+ authorize_dove_modifier: "铸剑为犁"
+
+ TRI_special_services_investigations: "特殊事务调查部"
+
+ TRI_SCH_teacher_modifier: "夏莱的老师"
+
+ TRI_2st_eden_pact_modifier: "为会谈做出的整备"
+
+ TRI_dissonance_modifier: "不谐之音"
+ TRI_dissonance_modifier_alt: "不谐之音被订正？"
+
+#圣三一军事线
+ 
+
+#圣三一经济线
+ material_allocation_modifier: "物资调配"
+ material_allocation_modifier_desc: "长久以来，我们对于学院内学生的各种配给在现如今的视角看来显得过于宽容。是时候对这些物资进行相对严格的管控了。"
+ trinity_industry_modifier: "圣三一工业"
+ trinity_industry_modifier_desc: "我们的热武器产出过程在相当长的一段时间内都没有得到有效的规制，这导致了相当数量的同学受伤以及物资的损耗。到了将流程规范落实下去，确保一切有序推进的时候了。"
+ trinity_industry_modifier_alt: "$trinity_industry_modifier$"
+ 
+
+
+#民族精神动态部分（一般指装备效果）
+
+#圣三一部分
+ TRI_carryon_package_equipment_modifier: "§Y$infantry_equipment$§!可靠性：§G+10.00%§!\n"

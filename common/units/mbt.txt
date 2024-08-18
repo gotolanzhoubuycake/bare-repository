@@ -1,0 +1,954 @@
+sub_units = { #变种车的编制名字是固定的，擅自改变会出BUG#更正，决定的不是名字而是类型
+#ng为市民部队
+	mbt_lahd = { #黄甲红攻
+		abbreviation = "mbt"
+		sprite = armor
+		map_icon_category = infantry
+
+		priority = 599
+		ai_priority = 200
+		active = yes
+
+		type = {
+			armor
+		}
+		
+		group = armor
+		
+		categories = {
+			category_front_line
+			category_all_infantry
+			category_army
+		}
+		
+		combat_width = 2
+		
+		#Size Definitions
+		max_strength = 30
+		max_organisation = 60
+		default_morale = 0.3
+		manpower = 1000
+
+		#Misc Abilities
+		training_time = 120
+		suppression = 15
+		weight = 0.75
+		supply_consumption = 0.08
+	
+		# this is what moves us and sets speed
+		transport = mbt_chassis
+	
+		need = {
+			mbt_chassis = 5
+		}
+
+		forest = { #丛林
+			attack = -0.05
+			movement = -0.8
+		}
+		mountain = { #山地
+			attack = -0.05
+			movement = -0.65
+		}
+		jungle = {
+			attack = -0.1
+			movement = -0.75
+		}
+		marsh = {
+			attack = -0.05
+			movement = -0.8
+		}
+		urban = {
+			attack = 0.4
+			defence = 0.4
+		}
+		hills = {
+			movement = -0.5
+		}
+		river = {
+			attack = -0.05
+			movement = -0.1
+		}
+
+		desert = {
+			movement = -0.35
+		}
+		amphibious = {
+			attack = -0.1
+		}
+	}
+
+	mbt_hahd = {#黄甲黄攻
+		abbreviation = "mbta"
+		sprite = armor
+		map_icon_category = infantry
+
+		priority = 599
+		ai_priority = 200
+		active = yes
+
+		type = {
+			armor
+			artillery
+		}
+
+
+		
+		group = armor
+		
+		categories = {
+			category_front_line
+			category_all_infantry
+			category_army
+		}
+		
+		combat_width = 2
+		
+		#Size Definitions
+		max_strength = 30
+		max_organisation = 60
+		default_morale = 0.3
+		manpower = 1000
+
+		#Misc Abilities
+		training_time = 120
+		suppression = 15
+		weight = 0.75
+		supply_consumption = 0.08
+	
+		# this is what moves us and sets speed
+		transport = mbt_artillery_chassis
+	
+		need = {
+			mbt_artillery_chassis = 5
+		}
+
+		forest = { #丛林
+			attack = -0.05
+			movement = -0.8
+		}
+		mountain = { #山地
+			attack = -0.05
+			movement = -0.65
+		}
+		jungle = {
+			attack = -0.1
+			movement = -0.75
+		}
+		marsh = {
+			attack = -0.05
+			movement = -0.8
+		}
+		urban = {
+			attack = 0.4
+			defence = 0.4
+		}
+		hills = {
+			movement = -0.5
+		}
+		river = {
+			attack = -0.05
+			movement = -0.1
+		}
+
+		desert = {
+			movement = -0.35
+		}
+		amphibious = {
+			attack = -0.1
+		}
+	}
+
+	mbt_lasd = {#神秘甲红攻
+		abbreviation = "mbtaa"
+		sprite = armor
+		map_icon_category = infantry
+
+		priority = 599
+		ai_priority = 200
+		active = yes
+
+		type = {
+			armor
+			anti_air
+		}
+		
+		group = armor
+		
+		categories = {
+			category_front_line
+			category_all_infantry
+			category_army
+		}
+		
+		combat_width = 2
+		
+		#Size Definitions
+		max_strength = 30
+		max_organisation = 60
+		default_morale = 0.3
+		manpower = 1000
+
+		#Misc Abilities
+		training_time = 120
+		suppression = 15
+		weight = 0.75
+		supply_consumption = 0.08
+	
+		# this is what moves us and sets speed
+		transport = mbt_aa_chassis
+	
+		need = {
+			mbt_aa_chassis = 5
+		}
+
+		forest = { #丛林
+			attack = -0.05
+			movement = -0.8
+		}
+		mountain = { #山地
+			attack = -0.05
+			movement = -0.65
+		}
+		jungle = {
+			attack = -0.1
+			movement = -0.75
+		}
+		marsh = {
+			attack = -0.05
+			movement = -0.8
+		}
+		urban = {
+			attack = 0.4
+			defence = 0.4
+		}
+		hills = {
+			movement = -0.5
+		}
+		river = {
+			attack = -0.05
+			movement = -0.1
+		}
+
+		desert = {
+			movement = -0.35
+		}
+		amphibious = {
+			attack = -0.1
+		}
+	}
+
+	mbt_sahd  = { #标准甲神秘攻
+		abbreviation = "mbtd"
+		sprite = armor
+		map_icon_category = infantry
+
+		priority = 599
+		ai_priority = 200
+		active = yes
+
+		type = {
+			armor
+			anti_tank
+		}
+		
+		group = armor
+		
+		categories = {
+			category_front_line
+			category_all_infantry
+			category_army
+		}
+		
+		combat_width = 2
+		
+		#Size Definitions
+		max_strength = 30
+		max_organisation = 60
+		default_morale = 0.3
+		manpower = 1000
+
+		#Misc Abilities
+		training_time = 120
+		suppression = 15
+		weight = 0.75
+		supply_consumption = 0.08
+	
+		# this is what moves us and sets speed
+		transport = mbt_destroyer_chassis
+	
+		need = {
+			mbt_destroyer_chassis = 5
+		}
+
+		forest = { #丛林
+			attack = -0.05
+			movement = -0.8
+		}
+		mountain = { #山地
+			attack = -0.05
+			movement = -0.65
+		}
+		jungle = {
+			attack = -0.1
+			movement = -0.75
+		}
+		marsh = {
+			attack = -0.05
+			movement = -0.8
+		}
+		urban = {
+			attack = 0.4
+			defence = 0.4
+		}
+		hills = {
+			movement = -0.5
+		}
+		river = {
+			attack = -0.05
+			movement = -0.1
+		}
+
+		desert = {
+			movement = -0.35
+		}
+		amphibious = {
+			attack = -0.1
+		}
+	}
+
+	mbt_hasd = { #例外？黄攻神秘甲
+		abbreviation = "bksb"
+		sprite = armor
+		map_icon_category = infantry
+
+		priority = 599
+		ai_priority = 200
+		active = yes
+
+		type = {
+			armor
+			flame
+		}
+		
+		group = armor
+		
+		categories = {
+			category_front_line
+			category_all_infantry
+			category_army
+		}
+		
+		combat_width = 2
+		
+		#Size Definitions
+		max_strength = 30
+		max_organisation = 60
+		default_morale = 0.3
+		manpower = 1000
+
+		#Misc Abilities
+		training_time = 120
+		suppression = 15
+		weight = 0.75
+		supply_consumption = 0.08
+	
+		# this is what moves us and sets speed
+		transport = mbt_flame_chassis
+	
+		need = {
+			mbt_flame_chassis = 5
+		}
+
+		forest = { #丛林
+			attack = -0.05
+			movement = -0.8
+		}
+		mountain = { #山地
+			attack = -0.05
+			movement = -0.65
+		}
+		jungle = {
+			attack = -0.1
+			movement = -0.75
+		}
+		marsh = {
+			attack = -0.05
+			movement = -0.8
+		}
+		urban = {
+			attack = 0.4
+			defence = 0.4
+		}
+		hills = {
+			movement = -0.5
+		}
+		river = {
+			attack = -0.05
+			movement = -0.1
+		}
+
+		desert = {
+			movement = -0.35
+		}
+		amphibious = {
+			attack = -0.1
+		}
+	}
+ 
+	mbt_sasd = {#例外？神秘攻神秘甲
+		abbreviation = "bksb"
+		sprite = armor
+		map_icon_category = infantry
+
+		priority = 599
+		ai_priority = 200
+		active = yes
+
+		type = {
+			armor
+			amphibious
+		}
+		
+		group = armor
+		
+		categories = {
+			category_front_line
+			category_all_infantry
+			category_army
+		}
+		
+		combat_width = 2
+		
+		#Size Definitions
+		max_strength = 30
+		max_organisation = 60
+		default_morale = 0.3
+		manpower = 1000
+
+		#Misc Abilities
+		training_time = 120
+		suppression = 15
+		weight = 0.75
+		supply_consumption = 0.08
+	
+		# this is what moves us and sets speed
+		transport = mbt_amphibious_chassis
+	
+		need = {
+			mbt_amphibious_chassis = 5
+		}
+
+		forest = { #丛林
+			attack = -0.05
+			movement = -0.8
+		}
+		mountain = { #山地
+			attack = -0.05
+			movement = -0.65
+		}
+		jungle = {
+			attack = -0.1
+			movement = -0.75
+		}
+		marsh = {
+			attack = -0.05
+			movement = -0.8
+		}
+		urban = {
+			attack = 0.4
+			defence = 0.4
+		}
+		hills = {
+			movement = -0.5
+		}
+		river = {
+			attack = -0.05
+			movement = -0.1
+		}
+
+		desert = {
+			movement = -0.35
+		}
+		amphibious = {
+			attack = -0.1
+		}
+	}
+	
+	#############################################
+	mbt_lahd_ng = { #黄甲红攻
+		abbreviation = "mbt"
+		sprite = armor
+		map_icon_category = infantry
+
+		priority = 599
+		ai_priority = 200
+		active = yes
+
+		type = {
+			armor
+		}
+		
+		group = armor
+		
+		categories = {
+			category_front_line
+			category_all_infantry
+			category_army
+		}
+		
+		combat_width = 2
+		
+		#Size Definitions
+		max_strength = 30
+		max_organisation = 60
+		default_morale = 0.3
+		manpower = 1000
+
+		#Misc Abilities
+		training_time = 120
+		suppression = 15
+		weight = 0.75
+		supply_consumption = 0.08
+
+		# this is what moves us and sets speed
+		transport = mbt_chassis
+
+		need = {
+			mbt_chassis = 5
+		}
+
+		forest = { #丛林
+			attack = -0.05
+			movement = -0.8
+		}
+		mountain = { #山地
+			attack = -0.05
+			movement = -0.65
+		}
+		jungle = {
+			attack = -0.1
+			movement = -0.75
+		}
+		marsh = {
+			attack = -0.05
+			movement = -0.8
+		}
+		urban = {
+			attack = 0.4
+			defence = 0.4
+		}
+		hills = {
+			movement = -0.5
+		}
+		river = {
+			attack = -0.05
+			movement = -0.1
+		}
+
+		desert = {
+			movement = -0.35
+		}
+		amphibious = {
+			attack = -0.1
+		}
+	}
+
+	mbt_hahd_ng = {#黄甲黄攻
+		abbreviation = "mbta"
+		sprite = armor
+		map_icon_category = infantry
+
+		priority = 599
+		ai_priority = 200
+		active = yes
+
+		type = {
+			armor
+			artillery
+		}
+
+
+		
+		group = armor
+		
+		categories = {
+			category_front_line
+			category_all_infantry
+			category_army
+		}
+		
+		combat_width = 2
+		
+		#Size Definitions
+		max_strength = 30
+		max_organisation = 60
+		default_morale = 0.3
+		manpower = 1000
+
+		#Misc Abilities
+		training_time = 120
+		suppression = 15
+		weight = 0.75
+		supply_consumption = 0.08
+
+		# this is what moves us and sets speed
+		transport = mbt_artillery_chassis
+
+		need = {
+			mbt_artillery_chassis = 5
+		}
+
+		forest = { #丛林
+			attack = -0.05
+			movement = -0.8
+		}
+		mountain = { #山地
+			attack = -0.05
+			movement = -0.65
+		}
+		jungle = {
+			attack = -0.1
+			movement = -0.75
+		}
+		marsh = {
+			attack = -0.05
+			movement = -0.8
+		}
+		urban = {
+			attack = 0.4
+			defence = 0.4
+		}
+		hills = {
+			movement = -0.5
+		}
+		river = {
+			attack = -0.05
+			movement = -0.1
+		}
+
+		desert = {
+			movement = -0.35
+		}
+		amphibious = {
+			attack = -0.1
+		}
+	}
+
+	mbt_lasd_ng = {#神秘甲红攻
+		abbreviation = "mbtaa"
+		sprite = armor
+		map_icon_category = infantry
+
+		priority = 599
+		ai_priority = 200
+		active = yes
+
+		type = {
+			armor
+			anti_air
+		}
+		
+		group = armor
+		
+		categories = {
+			category_front_line
+			category_all_infantry
+			category_army
+		}
+		
+		combat_width = 2
+		
+		#Size Definitions
+		max_strength = 30
+		max_organisation = 60
+		default_morale = 0.3
+		manpower = 1000
+
+		#Misc Abilities
+		training_time = 120
+		suppression = 15
+		weight = 0.75
+		supply_consumption = 0.08
+
+		# this is what moves us and sets speed
+		transport = mbt_aa_chassis
+
+		need = {
+			mbt_aa_chassis = 5
+		}
+
+		forest = { #丛林
+			attack = -0.05
+			movement = -0.8
+		}
+		mountain = { #山地
+			attack = -0.05
+			movement = -0.65
+		}
+		jungle = {
+			attack = -0.1
+			movement = -0.75
+		}
+		marsh = {
+			attack = -0.05
+			movement = -0.8
+		}
+		urban = {
+			attack = 0.4
+			defence = 0.4
+		}
+		hills = {
+			movement = -0.5
+		}
+		river = {
+			attack = -0.05
+			movement = -0.1
+		}
+
+		desert = {
+			movement = -0.35
+		}
+		amphibious = {
+			attack = -0.1
+		}
+	}
+
+	mbt_sahd_ng  = { #标准甲神秘攻
+		abbreviation = "mbtd"
+		sprite = armor
+		map_icon_category = infantry
+
+		priority = 599
+		ai_priority = 200
+		active = yes
+
+		type = {
+			armor
+			anti_tank
+		}
+		
+		group = armor
+		
+		categories = {
+			category_front_line
+			category_all_infantry
+			category_army
+		}
+		
+		combat_width = 2
+		
+		#Size Definitions
+		max_strength = 30
+		max_organisation = 60
+		default_morale = 0.3
+		manpower = 1000
+
+		#Misc Abilities
+		training_time = 120
+		suppression = 15
+		weight = 0.75
+		supply_consumption = 0.08
+
+		# this is what moves us and sets speed
+		transport = mbt_destroyer_chassis
+
+		need = {
+			mbt_destroyer_chassis = 5
+		}
+
+		forest = { #丛林
+			attack = -0.05
+			movement = -0.8
+		}
+		mountain = { #山地
+			attack = -0.05
+			movement = -0.65
+		}
+		jungle = {
+			attack = -0.1
+			movement = -0.75
+		}
+		marsh = {
+			attack = -0.05
+			movement = -0.8
+		}
+		urban = {
+			attack = 0.4
+			defence = 0.4
+		}
+		hills = {
+			movement = -0.5
+		}
+		river = {
+			attack = -0.05
+			movement = -0.1
+		}
+
+		desert = {
+			movement = -0.35
+		}
+		amphibious = {
+			attack = -0.1
+		}
+	}
+
+	mbt_hasd_ng = { #例外？黄攻神秘甲
+		abbreviation = "bksb"
+		sprite = armor
+		map_icon_category = infantry
+
+		priority = 599
+		ai_priority = 200
+		active = yes
+
+		type = {
+			armor
+			flame
+		}
+		
+		group = armor
+		
+		categories = {
+			category_front_line
+			category_all_infantry
+			category_army
+		}
+		
+		combat_width = 2
+		
+		#Size Definitions
+		max_strength = 30
+		max_organisation = 60
+		default_morale = 0.3
+		manpower = 1000
+
+		#Misc Abilities
+		training_time = 120
+		suppression = 15
+		weight = 0.75
+		supply_consumption = 0.08
+
+		# this is what moves us and sets speed
+		transport = mbt_flame_chassis
+
+		need = {
+			mbt_flame_chassis = 5
+		}
+
+		forest = { #丛林
+			attack = -0.05
+			movement = -0.8
+		}
+		mountain = { #山地
+			attack = -0.05
+			movement = -0.65
+		}
+		jungle = {
+			attack = -0.1
+			movement = -0.75
+		}
+		marsh = {
+			attack = -0.05
+			movement = -0.8
+		}
+		urban = {
+			attack = 0.4
+			defence = 0.4
+		}
+		hills = {
+			movement = -0.5
+		}
+		river = {
+			attack = -0.05
+			movement = -0.1
+		}
+
+		desert = {
+			movement = -0.35
+		}
+		amphibious = {
+			attack = -0.1
+		}
+	}
+
+	mbt_sasd_ng = {#例外？神秘攻神秘甲
+		abbreviation = "bksb"
+		sprite = armor
+		map_icon_category = infantry
+
+		priority = 599
+		ai_priority = 200
+		active = yes
+
+		type = {
+			armor
+			amphibious
+		}
+		
+		group = armor
+		
+		categories = {
+			category_front_line
+			category_all_infantry
+			category_army
+		}
+		
+		combat_width = 2
+		
+		#Size Definitions
+		max_strength = 30
+		max_organisation = 60
+		default_morale = 0.3
+		manpower = 1000
+
+		#Misc Abilities
+		training_time = 120
+		suppression = 15
+		weight = 0.75
+		supply_consumption = 0.08
+
+		# this is what moves us and sets speed
+		transport = mbt_amphibious_chassis
+
+		need = {
+			mbt_amphibious_chassis = 5
+		}
+
+		forest = { #丛林
+			attack = -0.05
+			movement = -0.8
+		}
+		mountain = { #山地
+			attack = -0.05
+			movement = -0.65
+		}
+		jungle = {
+			attack = -0.1
+			movement = -0.75
+		}
+		marsh = {
+			attack = -0.05
+			movement = -0.8
+		}
+		urban = {
+			attack = 0.4
+			defence = 0.4
+		}
+		hills = {
+			movement = -0.5
+		}
+		river = {
+			attack = -0.05
+			movement = -0.1
+		}
+
+		desert = {
+			movement = -0.35
+		}
+		amphibious = {
+			attack = -0.1
+		}
+	}
+
+}

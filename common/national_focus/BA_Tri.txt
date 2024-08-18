@@ -1,0 +1,764 @@
+focus_tree = {
+	id = Trinity_base
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = TRI
+		}
+	}
+	default = no
+##以下为军事线
+	focus = {
+		id = TRI_reorgnize_teaparty_mob #重整茶话会亲卫队
+		#icon = GFX_goal_unknown
+		cost = 5
+		x = 2
+		y = 0
+		search_filters = { FOCUS_FILTER_ARMY }
+		completion_reward = {
+				army_experience  = 25
+			}			
+		}
+	focus = {
+			id = TRI_cooperation_with_justice_club #同正义实现委员会的合练
+			#icon = GFX_goal_unknown
+			relative_position_id = TRI_reorgnize_teaparty_mob
+			prerequisite = {
+                focus = TRI_reorgnize_teaparty_mob
+			}			
+			mutually_exclusive = {
+				focus = TRI_teaparty_leading
+			}
+			cost = 5
+			x = -2
+			y = 1
+			search_filters = { FOCUS_FILTER_ARMY }
+			completion_reward = {
+
+				}			
+	}
+	focus = {
+		id = TRI_teaparty_leading #维持茶话会主导权
+		#icon = GFX_goal_unknown
+		relative_position_id = TRI_reorgnize_teaparty_mob
+		prerequisite = {
+			focus = TRI_reorgnize_teaparty_mob
+		}			
+		mutually_exclusive = {
+			focus = TRI_cooperation_with_justice_club
+		}
+		cost = 5
+		x = 2
+		y = 1
+		search_filters = { FOCUS_FILTER_ARMY }
+		completion_reward = {
+		
+			}		
+	}		
+	focus = {
+		id =TRI_standing_guard #常备之盾
+		#icon = GFX_goal_unknown
+		relative_position_id = TRI_cooperation_with_justice_club
+		prerequisite = {
+			focus = TRI_cooperation_with_justice_club
+			focus = TRI_teaparty_leading
+		}			
+
+		cost = 5
+		x = 2
+		y = 1
+		search_filters = { FOCUS_FILTER_ARMY }
+		completion_reward = {
+			
+			}		
+	}	
+##以下为政治线##
+#以下为第一阶段政治线：【不拥有任何焦点】
+focus = {
+	id = TRI_pax_trinity #圣三一治下的团结
+	#icon = GFX_goal_unknown
+	cost = 5
+	x = 11
+	y = 0
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		add_political_power = 50
+		}		
+		#allow_branch = 不拥有任何焦点	
+	}
+	focus = {
+		id = TRI_prepare_for_eden #落实一切的文书
+		#icon = GFX_goal_unknown
+		relative_position_id = TRI_pax_trinity
+		prerequisite = {
+			focus = TRI_pax_trinity
+		}			
+		
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+			}			
+    }
+	focus = {
+		id = TRI_1st_eden_pact #第一次《伊甸条约》会谈
+		#icon = GFX_goal_unknown
+		relative_position_id = TRI_prepare_for_eden
+		prerequisite = {
+			focus = TRI_prepare_for_eden
+		}			
+		
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+			}			
+    }
+	focus = {
+		id = TRI_calling_for_sisterhood #修女会的传讯
+		#icon = GFX_goal_unknown
+		relative_position_id = TRI_1st_eden_pact
+		prerequisite = {
+			focus = TRI_1st_eden_pact
+		}			
+		
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+			}			
+    }
+	focus = {
+		id = TRI_restart_domestic_struggle #重启院内接触
+		#icon = GFX_goal_unknown
+		relative_position_id = TRI_calling_for_sisterhood
+		prerequisite = {
+			focus = TRI_calling_for_sisterhood
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+			}			
+    }
+
+#以下为拥有焦点：【《伊甸条约》的签订】时显示的国策
+focus = {
+		id = TRI_expand_intellegence #扩展圣三一特殊调查部
+		#icon = GFX_goal_unknown			
+		cost = 5
+		x = 15
+		y = 0
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+			}			
+		#allow_branch = 拥有焦点：《伊甸条约》的签订
+    }
+	focus = {
+		id = TRI_authorize_dove_faction #铸剑为犁
+		#icon = GFX_goal_unknown
+		relative_position_id = TRI_expand_intellegence
+		prerequisite = {
+			focus = TRI_expand_intellegence 
+		}		
+		mutually_exclusive = {
+			focus = TRI_authorize_eagle_faction
+		}	
+		cost = 5
+		x = -1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+			}			
+    }
+	focus = {
+		id = TRI_authorize_eagle_faction #以武止戈
+		#icon = GFX_goal_unknown
+		relative_position_id = TRI_expand_intellegence
+		prerequisite = {
+			focus = TRI_expand_intellegence 
+		}		
+		mutually_exclusive = {
+			focus = TRI_authorize_dove_faction
+		}	
+		cost = 5
+		x = 1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+			}			
+    }
+	focus = {
+		id = TRI_restart_inschool_debate #重启《伊甸条约》院内章程
+		#icon = GFX_goal_unknown
+		relative_position_id = TRI_expand_intellegence
+		prerequisite = {
+			focus = TRI_authorize_dove_faction
+			focus = TRI_authorize_eagle_faction
+		}					
+		cost = 10
+		x = 0
+		y = 2
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+			}			
+    }
+	focus = {
+		id = TRI_turncoat_in_trinity #潜藏于圣三一的叛徒
+		#icon = GFX_goal_unknown
+		relative_position_id = TRI_restart_inschool_debate
+		prerequisite = {
+			focus = TRI_restart_inschool_debate
+		}				
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+			}			
+    }
+	focus = {
+		id = TRI_calling_for_convention #召开圣三一联合会议	
+		#icon = GFX_goal_unknown
+		relative_position_id = TRI_turncoat_in_trinity
+		prerequisite = {
+			focus = TRI_turncoat_in_trinity
+		}			
+		mutually_exclusive = {
+			focus = TRI_calling_for_Schale
+		}		
+		cost = 5
+		x = -1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+			}			
+    }
+	focus = {
+		id = TRI_calling_for_Schale #拨通联邦学生会/夏莱的电话 此处可能处理成动态国策
+		#icon = GFX_goal_unknown
+		relative_position_id = TRI_turncoat_in_trinity
+		prerequisite = {
+			focus = TRI_turncoat_in_trinity
+		}		
+		mutually_exclusive = {
+			focus = TRI_calling_for_convention
+		}	
+		cost = 5
+		x = 1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+			}			
+    }
+	focus = {
+		id = TRI_investigation_in_care #详勘细查，防微杜渐
+		#icon = GFX_goal_unknown
+		relative_position_id = TRI_calling_for_Schale
+		prerequisite = {
+			focus = TRI_calling_for_Schale
+			focus = TRI_calling_for_convention
+		}				
+		cost = 5
+		x = -1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+			}			
+    }
+	focus = {
+		id = TRI_examination_for_training_club #对补习部的考试
+		#icon = GFX_goal_unknown
+		relative_position_id = TRI_investigation_in_care
+		prerequisite = {
+			focus = TRI_investigation_in_care
+		}				
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+			}			
+    }
+	focus = {
+		id = TRI_reunion_of_trinity #圣三一再联合
+		#icon = GFX_goal_unknown
+		relative_position_id = TRI_examination_for_training_club
+		prerequisite = {
+			focus = TRI_examination_for_training_club
+		}				
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+			}			
+    }
+	focus = {
+		id = TRI_reunion_of_trinity #圣三一再联合
+		#icon = GFX_goal_unknown
+		relative_position_id = TRI_examination_for_training_club
+		prerequisite = {
+			focus = TRI_examination_for_training_club
+		}				
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+			}			
+    }
+	focus = {
+		id = TRI_chooseing_pact_place #会晤前的筹备
+		#icon = GFX_goal_unknown
+		relative_position_id = TRI_reunion_of_trinity
+		prerequisite = {
+			focus = TRI_reunion_of_trinity
+		}				
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+			}			
+    }
+	focus = {
+		id = TRI_2st_eden_pact #第二次《伊甸条约》会谈
+		#icon = GFX_goal_unknown
+		relative_position_id = TRI_chooseing_pact_place
+		prerequisite = {
+			focus = TRI_chooseing_pact_place
+		}			
+		cost = 5
+		x = -1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+			}			
+    }
+	focus = {
+		id = TRI_dissonance #失谐奏鸣
+		#icon = GFX_goal_unknown
+		relative_position_id = TRI_chooseing_pact_place
+		prerequisite = {
+			focus = TRI_chooseing_pact_place
+		}		
+		cost = 5
+		x = 1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+			}			
+    }
+	focus = {
+		id = TRI_Unintentional_windfall #无心插柳
+		#icon = GFX_goal_unknown
+		relative_position_id = TRI_2st_eden_pact
+		prerequisite = {
+			focus = TRI_2st_eden_pact
+		}		
+		prerequisite = {
+			focus = TRI_dissonance
+		}
+		cost = 5
+		x = 1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+			}			
+    }
+	focus = {
+		id = TRI_conspiracy_against_conspiracy #密谋，挫败阴谋
+		#icon = GFX_goal_unknown
+		relative_position_id = TRI_Unintentional_windfall
+		prerequisite = {
+			focus = TRI_Unintentional_windfall
+		}		
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+			}			
+    }
+	focus = {
+		id = TRI_sweet_dream_in_one_night #一夕安寝
+		#icon = GFX_goal_unknown
+		relative_position_id = TRI_conspiracy_against_conspiracy
+		prerequisite = {
+			focus = TRI_conspiracy_against_conspiracy
+		}		
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+			}			
+    }
+	focus = {
+		id = TRI_lesson_from_training_club #补习部的教训
+		#icon = GFX_goal_unknown
+		relative_position_id = TRI_sweet_dream_in_one_night
+		prerequisite = {
+			focus = TRI_sweet_dream_in_one_night
+		}		
+		cost = 5
+		x = -1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+			}			
+    }
+	focus = {
+		id = TRI_meeting_for_the_future #面向未来的会议 
+		#icon = GFX_goal_unknown
+		relative_position_id = TRI_sweet_dream_in_one_night
+		prerequisite = {
+			focus = TRI_sweet_dream_in_one_night
+		}		
+		cost = 5
+		x = 1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+			}			
+    }
+	focus = {
+		id = TRI_Congress_for_ending_all_conflict #正式的会议 假国策，激活30天后会触发事件，强制切换到另一条国策线
+		#icon = GFX_goal_unknown
+		relative_position_id = TRI_meeting_for_the_future
+		prerequisite = {
+			focus = TRI_meeting_for_the_future
+		}		
+		prerequisite = {
+			focus = TRI_lesson_from_training_club
+		}
+		cost = 5
+		x = -1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+			}			
+    }
+
+#以下为触发超事件【古圣堂遭受袭击！】后的国策树	
+focus = {
+	id = TRI_unexpected_accident #烽烟骤起
+	#icon = GFX_goal_unknown
+	cost = 5
+	x = 20
+	y = 0
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+
+		}		
+		#allow_branch = 事件：【古圣堂遭受袭击！】已发生
+	}
+	focus = {
+		id = TRI_school_without_leader #群龙无首
+		#icon = GFX_goal_unknown
+		relative_position_id = TRI_unexpected_accident
+		prerequisite = {
+			focus = TRI_unexpected_accident
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+			}			
+    }
+	focus = {
+		id = TRI_across_the_border #越过禁忌的边界
+		#icon = GFX_goal_unknown
+		relative_position_id = TRI_school_without_leader
+		prerequisite = {
+			focus = TRI_school_without_leader
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+			}			
+    }
+	focus = {
+		id = TRI_emergent_situation #紧急事态
+		#icon = GFX_goal_unknown
+		relative_position_id = TRI_across_the_border
+		prerequisite = {
+			focus = TRI_across_the_border
+		}			
+		cost = 10
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+			}			
+    }
+	focus = {
+		id = TRI_sun_rise_again #幽而复明
+		#icon = GFX_goal_unknown
+		relative_position_id = TRI_emergent_situation
+		prerequisite = {
+			focus = TRI_emergent_situation
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+			}			
+    }
+	focus = {
+		id = TRI_reinforce_the_frontline #重铸前线
+		#icon = GFX_goal_unknown
+		relative_position_id = TRI_sun_rise_again
+		prerequisite = {
+			focus = TRI_sun_rise_again
+		}				
+		cost = 5
+		x = -1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+			}			
+    }
+	focus = {
+		id = TRI_smile_under_mask #善意的假面
+		#icon = GFX_goal_unknown
+		relative_position_id = TRI_sun_rise_again
+		prerequisite = {
+			focus = TRI_sun_rise_again
+		}		
+		cost = 5
+		x = 1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+			}			
+    }
+	focus = {
+		id = TRI_after_the_storm #雨破天晴
+		#icon = GFX_goal_unknown
+		relative_position_id = TRI_smile_under_mask
+		prerequisite = {
+			focus = TRI_reinforce_the_frontline
+		}		
+		prerequisite = {
+			focus = TRI_smile_under_mask
+		}	
+		cost = 5
+		x = -1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+			}			
+    }
+	focus = {
+		id = TRI_restrain_the_disaster #遏灾制祸
+		#icon = GFX_goal_unknown
+		relative_position_id = TRI_after_the_storm
+		prerequisite = {
+			focus = TRI_after_the_storm
+		}		
+		cost = 10
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+			}			
+    }
+	focus = {
+		id = TRI_answer_for_thecreed #对古则的解答
+		#icon = GFX_goal_unknown
+		relative_position_id = TRI_restrain_the_disaster
+		prerequisite = {
+			focus = TRI_restrain_the_disaster
+		}		
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+			}			
+    }
+##以下为工业线
+	focus = {
+		id = TRI_welfare_cutting  #遏制无节制福利开支
+		#icon = GFX_goal_unknown
+		cost = 5
+		x = 25
+		y = 0
+		search_filters = { FOCUS_FILTER_ECO }
+		completion_reward = {
+	
+			}		
+		}
+		focus = {
+			id = TRI_weapons_nomalization #规范化热武器出厂流程
+			#icon = GFX_goal_unknown
+			cost = 5
+			x = 27
+			y = 0
+			search_filters = { FOCUS_FILTER_ECO }
+			completion_reward = {
+		
+				}		
+		}
+		focus = {
+			id = TRI_production_specialization #生产管理专业化
+			#icon = GFX_goal_unknown
+			relative_position_id = TRI_welfare_cutting
+			prerequisite = {
+				focus = TRI_welfare_cutting
+			}	
+			prerequisite = {
+				focus = TRI_weapons_nomalization
+			}	
+			cost = 5
+			x = 1
+			y = 1
+			search_filters = { FOCUS_FILTER_ECO }
+			completion_reward = {
+		
+				}		
+		}
+		focus = {
+			id = TRI_carryon_package_facilitation #便携式随身武器包
+			#icon = GFX_goal_unknown
+			relative_position_id = TRI_production_specialization
+			prerequisite = {
+				focus = TRI_production_specialization
+			}	
+			cost = 5
+			x = 0
+			y = 1
+			search_filters = { FOCUS_FILTER_ECO }
+			completion_reward = {
+		
+				}		
+		}
+		focus = {
+			id = TRI_sufficient_sweets_supply #保证充分甜品配给
+			#icon = GFX_goal_unknown
+			relative_position_id = TRI_carryon_package_facilitation
+			prerequisite = {
+				focus = TRI_carryon_package_facilitation
+			}	
+			cost = 5
+			x = 0
+			y = 1
+			search_filters = { FOCUS_FILTER_ECO }
+			completion_reward = {
+		
+				}		
+		}
+		focus = {
+			id = TRI_vast_land #广土袤赠
+			#icon = GFX_goal_unknown
+			relative_position_id = TRI_sufficient_sweets_supply
+			prerequisite = {
+				focus = TRI_sufficient_sweets_supply
+			}	
+			mutually_exclusive = {
+				focus = TRI_expand_reproduction
+			}
+			cost = 5
+			x = -1
+			y = 1
+			search_filters = { FOCUS_FILTER_ECO }
+			completion_reward = {
+		
+				}		
+		}
+		focus = {
+			id = TRI_expand_reproduction #精选细酌
+			#icon = GFX_goal_unknown
+			relative_position_id = TRI_sufficient_sweets_supply
+			prerequisite = {
+				focus = TRI_sufficient_sweets_supply
+			}	
+			mutually_exclusive = {
+				focus = TRI_vast_land
+			}
+			cost = 5
+			x = 1
+			y = 1
+			search_filters = { FOCUS_FILTER_ECO }
+			completion_reward = {
+		
+				}		
+		}
+		focus = {
+			id = TRI_amazing #惹人称羡
+			#icon = GFX_goal_unknown
+			relative_position_id = TRI_vast_land
+			prerequisite = {
+				focus = TRI_vast_land
+			}	
+			cost = 5
+			x = 0
+			y = 1
+			search_filters = { FOCUS_FILTER_ECO }
+			completion_reward = {
+		
+				}		
+		}
+		focus = {
+			id = TRI_gorgeous #优雅绝伦
+			#icon = GFX_goal_unknown
+			relative_position_id = TRI_expand_reproduction
+			prerequisite = {
+				focus = TRI_expand_reproduction
+			}	
+			cost = 5
+			x = 0
+			y = 1
+			search_filters = { FOCUS_FILTER_ECO }
+			completion_reward = {
+		
+				}		
+		}
+}
+
+
+

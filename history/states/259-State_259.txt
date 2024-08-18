@@ -1,0 +1,16 @@
+state={
+	id=259
+	name="STATE_259"
+	provinces={
+		67 1097 1726 2146 2526 3734 5119 5287 5407 5993 7353 7827 7898 10730 10754 
+	}
+	history={
+		owner = CAP
+		add_core_of=CAP
+		victory_points = {67 5}
+	}
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

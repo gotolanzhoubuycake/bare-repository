@@ -1,0 +1,15 @@
+state={
+	id=352
+	name="STATE_352"
+	provinces={
+		61 391 2769 3251 5394 6278 9306 11328 11331 
+	}
+	history = {
+		owner = ABY
+		add_core_of=ABY
+    }
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

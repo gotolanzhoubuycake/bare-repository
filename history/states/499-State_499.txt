@@ -1,0 +1,14 @@
+state={
+	id=499
+	name="STATE_499"
+	provinces={
+		572 1248 3166 3736 3764 4730 5439 5716 6408 6499 7612 8243 8781 11066 11146 11183 
+	}
+	history = {
+		owner = D07
+		add_core_of=D07
+    }
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

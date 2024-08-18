@@ -1,0 +1,15 @@
+state={
+	id=498
+	name="STATE_498"
+	provinces={
+		168 498 543 1306 1628 1796 2750 2948 3284 3914 4868 5852 6910 7679 8069 8124 8384 8462 10994 11006 11090 
+	}
+	history = {
+		owner = D08
+		add_core_of=D08
+		victory_points = {8069 25}
+    }
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,15 @@
+﻿l_simp_chinese:
+#设计器-通用
+tank_designer_amphibious: "神秘|神秘"
+tank_designer_amphibious_role_disallowed: "修改定位部件使该设计可以成为§H神秘|神秘§!定位。"
+tank_designer_artillery: "贯穿|标准"
+tank_designer_artillery_role_disallowed: "修改定位部件使该设计可以成为§H贯穿|标准§!定位。"
+tank_designer_anti_tank: "神秘|标准"
+tank_designer_anti_tank_role_disallowed: "修改定位部件使该设计可以成为§H神秘|标准§!定位。"
+tank_designer_flame: "贯穿|神秘"
+tank_designer_flame_role_disallowed: "修改定位部件使该设计可以成为§H贯穿|神秘§!定位。"
+tank_designer_anti_air: "爆破|神秘"
+tank_designer_anti_air_role_disallowed: "修改定位部件使该设计可以成为§H爆破|神秘§!定位。
+
+ EQ_MOD_SLOT_armor_role_slot_TITLE: "定位"
+

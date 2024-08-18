@@ -1,0 +1,16 @@
+state={
+	id=319
+	name="STATE_319"
+	provinces={
+		228 309 592 826 1941 2616 2813 3522 4108 4330 4427 4588 4950 5311 5538 6276 6331 7323 7687 7802 7955 8470 8633 9083 9084 10998 11011 11076 11089 11092 11112 11117 11124 11158 11173 
+	}
+	history = {
+		owner = SHA
+		add_core_of=SHA
+		victory_points = {592 25}
+    }
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

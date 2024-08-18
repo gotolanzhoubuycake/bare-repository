@@ -1,0 +1,15 @@
+state={
+	id=471
+	name="STATE_471"
+	provinces={
+		1827 2266 2371 2401 2479 3333 3855 5710 5735 6140 7134 7576 7748 8530 8564 8766 12198 12210 12216 12226 12227 3064
+	}
+	history = {
+		owner = MIL
+		add_core_of=MIL
+		victory_points = {3064 5}
+    }
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

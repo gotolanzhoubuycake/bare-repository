@@ -1,0 +1,174 @@
+equipments = {
+	air_ship_airframe = {
+		year = 2019
+
+		can_be_produced = {
+		}
+
+		is_archetype = yes
+		is_convertable = yes
+		picture = archetype_strat_bomber_equipment
+		is_buildable = no
+		type = strategic_bomber
+		type_override = fixed_main_weapon_slot
+		allowed_types = {
+			strategic_bomber
+			fighter
+			interceptor
+			cas
+		}
+		allow_mission_type = training
+		group_by = archetype
+		sprite = heavy_plane
+		air_map_icon_frame = 11
+		interface_category = interface_category_air
+		
+		interface_overview_category_index = 5
+		air_superiority = 0.01
+		reliability = 0.8
+		naval_strike_attack = 0
+		naval_strike_targetting = 0
+		lend_lease_cost = 10
+		manpower = 80
+		fuel_consumption = 0.16
+		build_cost_ic = 16
+		resources = {
+			resources_cm = 1
+		}
+
+		lend_lease_cost = 12
+
+		module_slots = {
+			fixed_main_weapon_slot = {
+				required = yes
+				allowed_module_categories = {
+					air_ship_strat_weapon
+					air_ship_gunship_weapon
+					air_ship_air_weapon
+				}
+			}
+
+			fixed_auxiliary_weapon_slot_1 = { 
+				required = no
+				allowed_module_categories = {
+					air_ship_strat_weapon
+					recon_camera
+					air_ship_gunship_weapon
+				}
+			}
+			fixed_auxiliary_weapon_slot_2 = { 
+				required = no
+				allowed_module_categories = {
+					air_ship_strat_weapon
+					recon_camera
+					air_ship_gunship_weapon
+				}
+			}
+
+			fixed_auxiliary_weapon_slot_3 = { 
+				required = no
+				allowed_module_categories = {
+					air_ship_strat_weapon
+					recon_camera
+					air_ship_gunship_weapon
+				}
+			}
+
+			engine_type_slot = {
+				required = yes
+				allowed_module_categories = {
+					air_ship_engine_type
+				}
+			}
+
+			special_type_slot_1 = {
+				required = no
+				allowed_module_categories = {
+					air_ship_module_defense_turret
+				}
+			}
+
+			special_type_slot_2 = {
+				required = no
+				allowed_module_categories = {
+					air_ship_module_defense_turret
+				}
+			}
+
+			special_type_slot_3 = {
+				required = no
+				allowed_module_categories = {
+					air_ship_module_defense_turret
+				}
+			}
+
+			special_type_slot_4 = {
+				required = no
+				allowed_module_categories = {
+					air_ship_module_defense_turret
+				}
+			}
+
+			special_type_slot_5 = {
+				required = no
+				allowed_module_categories = {
+					air_ship_module_defense_turret
+				}
+			}
+		}
+		
+		module_count_limit = {
+			category = recon_camera
+			count = 1
+		}
+
+		default_modules = {
+			fixed_main_weapon_slot = empty
+			fixed_auxiliary_weapon_slot_1 = empty
+			engine_type_slot = empty
+			special_type_slot_1 = empty
+			special_type_slot_2 = empty
+		}
+	}
+
+	air_ship_airframe_1 = { 
+		abbreviation = "afl0"
+		year = 2019
+
+		archetype = air_ship_airframe
+		module_slots = inherit
+		priority = 5
+
+		air_range = 1000
+		maximum_speed = 100
+		air_agility = 20
+		air_defence = 20
+		weight = 16
+		naval_strike_attack = 0
+		naval_strike_targetting = 0
+	}
+
+	air_ship_airframe_2 = { #Basic
+		abbreviation = "afl1"
+		year = 12019
+
+		archetype = air_ship_airframe
+		parent = air_ship_airframe_1
+		priority = 5
+
+		air_range = 1500
+		maximum_speed = 125
+		air_agility = 25
+		air_defence = 25
+		weight = 18
+		naval_strike_attack = 0
+		naval_strike_targetting = 0
+		build_cost_ic = 18
+		resources = {
+			resources_cm = 2
+		}
+		module_slots = inherit
+
+		
+	}
+}

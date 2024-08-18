@@ -1,0 +1,49 @@
+# This file must be evaluated after the file(s) defining the archetypes being duplicated.
+# The equipment attributes alias, type, variant_name, and derived_variant_name are not duplicated.
+
+duplicate_archetypes = {
+
+	# small_plane
+	#飞艇
+	air_ship_gunship_airframe = {
+		archetype = air_ship_airframe
+		type = cas
+		for_each = {
+			air_superiority = { set = 3 }
+		}
+		air_map_icon_frame = 8
+		interface_overview_category_index = 3
+	}
+
+	air_ship_air_forte_airframe = {
+		archetype = air_ship_airframe
+		type = fighter
+		for_each = {
+			air_superiority = { set = 3 }
+		}
+		air_map_icon_frame = 13
+		interface_overview_category_index = 3
+	}
+	#无人机
+	uav_cas_airframe = {
+		archetype = uav_airframe
+		type = cas
+		air_map_icon_frame = 2
+		interface_overview_category_index = 3
+	}
+
+	uav_recon_airframe = {
+		archetype = uav_airframe
+		type = scout_plane
+		air_map_icon_frame = 13
+		interface_overview_category_index = 3
+	}
+	#直升机
+	helicopter_cas_airframe = {
+		archetype = helicopter_airframe
+		type = cas
+		air_map_icon_frame = 17
+		interface_overview_category_index = 0
+	}
+}
+

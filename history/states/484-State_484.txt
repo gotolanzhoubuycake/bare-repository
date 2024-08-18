@@ -1,0 +1,14 @@
+state={
+	id=484
+	name="STATE_484"
+	provinces={
+		310 408 727 1372 1450 1658 1986 2149 2610 2751 3200 4030 4268 4453 5414 5471 5705 5717 5877 6693 6779 6889 6968 7389 7637 7649 8311 8613 8932 8959 11616 11629 11640 11670 11678 11784 
+	}
+	history = {
+		owner = MIL
+		add_core_of=MIL
+    }
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

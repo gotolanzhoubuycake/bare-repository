@@ -1,0 +1,16 @@
+state={
+	id=350
+	name="STATE_350"
+	provinces={
+		240 5340 7212 9411 11345 
+	}
+	history = {
+		owner = ABY
+		add_core_of=ABY
+		victory_points = {240 15}
+    }
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

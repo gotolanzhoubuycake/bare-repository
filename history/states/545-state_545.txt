@@ -1,0 +1,14 @@
+state={
+	id=545
+	name="STATE_545"
+	provinces={
+		104 913 1061 1315 1375 1582 1870 2453 3244 3393 3557 3595 3799 4331 6758 7513 7539 7579 7694 7832 7908 8047 8661 8785 8865 9555 10146 10192 10209 10224 10248 10309 10375 
+	}
+	history={
+		owner = RWT
+		add_core_of=RWT
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

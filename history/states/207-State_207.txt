@@ -1,0 +1,16 @@
+state={
+	id=207
+	name="STATE_207"
+	provinces={
+		501 586 1182 1804 1901 2462 3165 3786 3844 5215 5589 6428 7107 7567 8198 11014 11026 11033 11073 
+	}
+	history = {
+		owner = ABY
+		add_core_of=ABY
+		victory_points = {3165 10}
+    }
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

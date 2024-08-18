@@ -1,0 +1,16 @@
+state={
+	id=220
+	name="STATE_220"
+	provinces={
+		593 1606 3770 3893 5270 6672 7789 10677 10678 10680 10707 
+	}
+	history = {
+		owner = CAH
+		add_core_of=CAH
+		victory_points = {3893 5}
+    }
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,56 @@
+resources = {
+
+	resources_fe = {
+		icon_frame = 1
+		cic = 0.1
+		convoys = 0.1
+	}
+
+	resources_ec = {
+		icon_frame = 2
+		cic = 0.25
+		convoys = 0.1
+	}
+
+	resources_pm = {
+		icon_frame = 3
+		cic = 0.25
+		convoys = 0.1
+	}
+	
+	resources_rm = {
+		icon_frame = 4
+		cic = 0.2
+		convoys = 0.1
+	}
+	
+	resources_cm = {
+		icon_frame = 5
+		cic = 0.125
+		convoys = 0.1
+	}
+	
+	resources_mm = {
+		icon_frame = 6
+		cic = 0.5
+		convoys = 0.1
+	}
+	
+	##################################################
+	# placeholder_1 = { icon_frame = 11 cic = 0.125 convoys = 0.06 }
+	# placeholder_2 = { icon_frame = 12 cic = 0.125 convoys = 0.06 }
+	# placeholder_3 = { icon_frame = 13 cic = 0.125 convoys = 0.06 }
+	# placeholder_4 = { icon_frame = 14 cic = 0.125 convoys = 0.06 }
+	# placeholder_5 = { icon_frame = 15 cic = 0.125 convoys = 0.06 }
+	# placeholder_6 = { icon_frame = 16 cic = 0.125 convoys = 0.06 }
+	# placeholder_7 = { icon_frame = 17 cic = 0.125 convoys = 0.06 }
+	# placeholder_8 = { icon_frame = 18 cic = 0.125 convoys = 0.06 }
+	# placeholder_9 = { icon_frame = 19 cic = 0.125 convoys = 0.06 }
+	##################################################
+	
+	resources_hic = {
+		icon_frame = 2
+		cic = 1
+		convoys = 0.1
+	}
+}

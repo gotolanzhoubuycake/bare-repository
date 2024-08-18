@@ -1,0 +1,30 @@
+leader_traits = {
+
+    #模板
+    my_trait = {
+        random = no #领导人是否能随机到这个特性
+        sprite = 1 #decides the sprite that appears in the bottom left of an advisor that has this trait. This must be a number, which corresponds with the frame of the GFX_idea_traits_strip spriteType, defined within /Hearts of Iron IV/interface/ideas.gfx by default. Optional.
+        political_power_gain = 0.1 #pp获取
+        equipment_bonus = { #装备效果
+            train_equipment = { 
+                build_cost_ic = 0.05
+                reliability = 0.15
+            }
+        }
+        ai_will_do = { #AI选含有这个特性的领袖、顾问倾向
+            base = 2
+        }
+        command_cap = @tier1 #军事顾问的指挥点数花费
+    }
+
+
+    #追根溯源
+    Find_the_root = {
+        random = no
+        
+        stability_weekly = 0.05
+        opinion_gain_monthly_factor = -0.4
+        custom_modifier_tooltip = Find_the_root_paranoia_modifier_increase_effect_tt
+
+    }
+}

@@ -1,0 +1,15 @@
+state={
+	id=514
+	name="STATE_514"
+	provinces={
+		927 1264 1897 2314 2436 2578 3399 3899 5854 6065 6103 6125 7157 7503 7758 8488 8750 10579 10592 10640 10645 
+	}
+	history = {
+		owner = D11
+		add_core_of=D11
+		victory_points = {6125 15}
+    }
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

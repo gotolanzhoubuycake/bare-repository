@@ -1,0 +1,14 @@
+state={
+	id=420
+	name="STATE_420"
+	provinces={
+		231 343 980 1285 1299 2224 4147 5163 6692 9305 11047 11056 11087 11153 11251 
+	}
+	history = {
+		owner = SHA
+		add_core_of=SHA
+    }
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

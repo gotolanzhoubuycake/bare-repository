@@ -1,0 +1,447 @@
+equipment_modules = {
+	#引擎
+	helicopter_engine_1 = {
+		abbreviation = "bmhe"
+		category = helicopter_engine_type
+		sfx = sfx_ui_sd_module_engine
+
+		add_stats = {
+			maximum_speed = 300
+			fuel_capacity = 150
+			thrust = 26
+			build_cost_ic = 8
+			fuel_consumption = 0.16
+		}
+	}
+
+	helicopter_fast_engine_1 = {
+		abbreviation = "bmhe"
+		category = helicopter_engine_type
+		sfx = sfx_ui_sd_module_engine
+
+		add_stats = {
+			fuel_capacity = 120
+			maximum_speed = 420
+			air_range = 75
+			thrust = 20
+			breakthrough = 1
+			defense = 1
+			build_cost_ic = 16
+			fuel_consumption = 0.20
+		}
+	}
+	#武器
+	helicopter_long_range_atgm_1_2x = {
+		abbreviation = "bas2"
+		category = helicopter_weapon_type
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = cas
+
+		add_stats = {
+			build_cost_ic = 6
+			soft_attack = 4.5
+			hard_attack = 16
+			ap_attack = 120
+			breakthrough = 1.5
+			defense = 1.5
+		}
+		xp_cost = 2
+		allow_mission_type = {
+			cas
+			attack_logistics
+		}
+		mission_type_stats = {
+			limit = {
+				cas
+				attack_logistics
+			}
+			add_stats = {
+				air_agility = 7
+				weight = 7
+				air_ground_attack = 10
+				air_defence = 1
+			}
+		}
+		dismantle_cost_ic = 0.5
+	}
+	
+
+	helicopter_atgm_1_4x = {
+		abbreviation = "bah4"
+		category = helicopter_weapon_type
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = cas
+
+		add_stats = {
+			build_cost_ic = 6
+			soft_attack = 6
+			hard_attack = 20
+			ap_attack = 80
+			breakthrough = 1
+			defense = 1
+		}
+		xp_cost = 2
+		allow_mission_type = {
+			cas
+			attack_logistics
+		}
+		mission_type_stats = {
+			limit = {
+				cas
+				attack_logistics
+			}
+			add_stats = {
+				air_agility = 2
+				weight = 8
+				air_ground_attack = 16
+			}
+		}
+		dismantle_cost_ic = 0.5
+	}
+		######################################
+	helicopter_atgm_1_2x = {
+		abbreviation = "bah2"
+		category = helicopter_weapon_type
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = cas
+
+		add_stats = {
+			build_cost_ic = 4
+			soft_attack = 3.5
+			hard_attack = 14
+			ap_attack = 80
+			breakthrough = 0.5
+			defense = 0.5
+		}
+		xp_cost = 2
+		allow_mission_type = {
+			cas
+			attack_logistics
+		}
+		mission_type_stats = {
+			limit = {
+				cas
+				attack_logistics
+			}
+			add_stats = {
+				air_agility = 3
+				weight = 4
+				air_ground_attack = 12
+			}
+		}
+		dismantle_cost_ic = 0.5
+	}
+
+	helicopter_aam_1_4x = {
+		abbreviation = "bat4"
+		category = helicopter_weapon_type
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = cas
+
+		add_stats = {
+			build_cost_ic = 6
+			air_attack = 12
+			weight = 5
+		}
+		xp_cost = 2
+		allow_mission_type = {
+			air_superiority
+			interception
+		}
+		mission_type_stats = {
+			limit = {
+				air_superiority
+				interception
+			}
+			add_stats = {
+				air_agility = 3
+				air_defence = 3
+			}
+		}
+		dismantle_cost_ic = 0.5
+	}
+
+	helicopter_heavy_gun_1 = {
+		abbreviation = "bgm2"
+		category = balp_helicopter_weapon_type
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = cas
+
+		add_stats = {
+			build_cost_ic = 2.8
+			soft_attack = 7
+			hard_attack = 3
+			air_attack = 4
+			ap_attack = 15
+			breakthrough = 1.8
+			defense = 1.8
+		}
+		xp_cost = 2
+		allow_mission_type = {
+			cas
+			attack_logistics
+		}
+		mission_type_stats = {
+			limit = {
+				cas
+				attack_logistics
+			}
+			add_stats = {
+				air_agility = -3
+				weight = 3
+				air_ground_attack = 12
+				air_attack = 5
+			}
+		}
+		dismantle_cost_ic = 0.5
+	}
+
+	helicopter_light_gun_1 = {
+		abbreviation = "bgm2"
+		category = helicopter_weapon_type
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = cas
+
+		add_stats = {
+			build_cost_ic = 1.3
+			soft_attack = 7
+			air_attack = 3
+			breakthrough = 1.8
+			defense = 1.8
+		}
+		xp_cost = 2
+		allow_mission_type = {
+			cas
+			attack_logistics
+		}
+		mission_type_stats = {
+			limit = {
+				cas
+				attack_logistics
+			}
+			add_stats = {
+				weight = 2
+				air_ground_attack = 6
+				air_attack = 3
+			}
+		}
+		dismantle_cost_ic = 0.5
+	}
+
+	helicopter_rl_1 = {
+		abbreviation = "bgm2"
+		category = helicopter_weapon_type
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = cas
+
+		add_stats = {
+			build_cost_ic = 5.6
+			soft_attack = 13
+			hard_attack = 5
+			ap_attack = 30
+			breakthrough = 1.5
+			defense = 1.5
+		}
+		xp_cost = 2
+		allow_mission_type = {
+			cas
+			attack_logistics
+		}
+		mission_type_stats = {
+			limit = {
+				cas
+				attack_logistics
+			}
+			add_stats = {
+				air_agility = -3
+				weight = 8
+				air_ground_attack = 14
+			}
+		}
+		dismantle_cost_ic = 0.5
+	}
+
+	#成员
+
+	helicopter_crew_carrying_1 = {
+		abbreviation = "bcc"
+		category = helicopter_crew_carrying
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = fighter
+
+		add_stats = {
+			air_attack = 1
+			build_cost_ic = 7
+			breakthrough = 8
+			defense = 11
+			weight = 8
+		}
+		multiply_stats = {
+			air_agility = -0.2
+			air_ground_attack = -0.1
+		}
+		xp_cost = 2
+		allow_mission_type = {
+			paradrop
+			air_supply
+		}
+		dismantle_cost_ic = 0.5
+	}
+
+
+	helicopter_crew_carrying_aromr_1 = {
+		abbreviation = "bcc"
+		category = helicopter_crew_carrying
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = fighter
+
+		add_stats = {
+			air_attack = 1
+			build_cost_ic = 13
+			breakthrough = 12
+			defense = 16
+			hardness = 0.1
+			armor_value = 10
+			soft_attack = 3
+			hard_attack = 2
+			armor_value = 10
+			weight = 12
+
+		}
+		multiply_stats = {
+			air_agility = -0.2
+			air_ground_attack = -0.1
+		}
+		xp_cost = 2
+		allow_mission_type = {
+			paradrop
+			air_supply
+		}
+		dismantle_cost_ic = 0.5
+	}
+
+
+	helicopter_fueltank = {
+		abbreviation = "bft4"
+		category = helicopter_sec_weapon_type
+		sfx = sfx_ui_sd_module_turret
+		add_stats = {
+			build_cost_ic = 2
+			breakthrough = 3
+			defense = 3
+			fuel_capacity = 400
+			air_range = 200
+			air_agility = -2
+			weight = 6
+		}
+		xp_cost = 2
+		dismantle_cost_ic = 0.5
+	}
+
+	helicopter_recon_SOTAS = {
+		abbreviation = "brss"
+		category = helicopter_sec_weapon_type
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			build_cost_ic = 4
+			breakthrough = 2
+			defense = 6
+			weight = 8
+		}
+		xp_cost = 2
+		allow_mission_type = {
+			recon
+		}
+		mission_type_stats = {
+			limit = {
+				recon
+				cas
+				attack_logistics
+			}
+			add_stats = {
+				air_agility = -4
+				night_penalty = -0.2
+			}
+		}
+		dismantle_cost_ic = 0.5
+	}
+
+
+	helicopter_hdgun_hmg_1 = {
+		abbreviation = "bhm3"
+		category = helicopter_hdmg_type
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			build_cost_ic = 2
+			soft_attack = 3
+			hard_attack = 1
+			breakthrough = 3
+			air_agility = -3
+			air_attack = 3
+			air_defence = 4
+			air_ground_attack = 3
+			defense = 2
+			weight = 2
+		}
+		xp_cost = 2
+		dismantle_cost_ic = 0.5
+	}
+
+	helicopter_hdgun_lmg_1 = {
+		abbreviation = "bhm3"
+		category = helicopter_hdmg_type
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			build_cost_ic = 2.5
+			soft_attack = 4
+			breakthrough = 3
+			defense = 3
+			air_agility = -3
+			air_attack = 5
+			air_defence = 3
+			air_ground_attack = 4
+			weight = 2
+		}
+		xp_cost = 2
+		dismantle_cost_ic = 0.5
+	}
+	helicopter_equipment_armor = {
+		abbreviation = "bear"
+		category = helicopter_equipment_type
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			build_cost_ic = 2.5
+			breakthrough = 6
+			defense = 4
+			air_agility = -5
+			air_defence = 12
+			weight = 5
+		}
+		xp_cost = 2
+		dismantle_cost_ic = 0.5
+	}
+
+	helicopter_equipment_lb = {
+		abbreviation = "belb"
+		category = helicopter_equipment_type
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			build_cost_ic = 4
+			air_defence = 6
+			weight = 3
+		}
+		multiply_stats = {
+			soft_attack = 0.12
+			hard_attack = 0.12
+			air_ground_attack = 0.12
+		}
+		xp_cost = 2
+		dismantle_cost_ic = 0.5
+	}
+
+}

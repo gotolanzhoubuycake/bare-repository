@@ -1,0 +1,351 @@
+﻿l_simp_chinese:
+#兵种
+infantry_lald: "学生步兵（爆破轻甲）"
+infantry_lald: "由组织起来的基沃托斯学生组成的战斗小组，使用手中的枪械和班组支援武器进行作战，是各个团体进行战斗时不可或缺的部分，用装甲和火力支援配合她们可以让她们发挥更加高效。\n这组学生使用高射速和范围伤害武器，可以有效的对抗高灵活性的轻甲单位，其较为轻型的护甲可以让她们有效回避敌方重型火力，但面对压制火力则力不从心。"
+infantry_lahd: "学生步兵（爆破重甲）"
+infantry_lahd_desc: "由组织起来的基沃托斯学生组成的战斗小组，使用手中的枪械和班组支援武器进行作战，是各个团体进行战斗时不可或缺的部分。用装甲和火力支援配合她们可以让她们发挥更加高效。\n这组学生使用高射速和范围伤害武器，可以有效的对抗高灵活性的轻甲单位，其重型护甲可以让她们有效应对压制火力，但重型火力能够在打穿她们的护甲的同时也更容易命中她们。"
+infantry_hald: "学生步兵（贯穿轻甲）"
+infantry_hald_desc: "由组织起来的基沃托斯学生组成的战斗小组，使用手中的枪械和班组支援武器进行作战，是各个团体进行战斗时不可或缺的部分，用装甲和火力支援配合她们可以让她们发挥更加高效。\n这组学生使用穿透力较强，但射速较低的武器，可以有效的对抗重甲单位，但难以命中灵活的轻甲单位，其较为轻型的护甲可以让她们有效回避敌方重型火力，但面对压制火力则力不从心。"
+infantry_hahd: "学生步兵（贯穿重甲）"
+infantry_hahd_desc:"由组织起来的基沃托斯学生组成的战斗小组，使用手中的枪械和班组支援武器进行作战，是各个团体进行战斗时不可或缺的部分，用装甲和火力支援配合她们可以让她们发挥更加高效。\n这组学生使用穿透力较强，但射速较低的武器，可以有效的对抗重甲单位，但难以命中灵活的轻甲单位，其重型护甲可以让她们有效应对压制火力，但重型火力能够在打穿她们的护甲的同时也更容易命中她们。"
+infantry_sp: "学生步兵（神秘）"
+infantry_sp_desc: "尽管在古代有所记载，但对基沃托斯神秘的研究直到现在才开始慢慢形成体系。不过，这不影响一些天赋异禀的学生使用神秘进行战斗，作为步兵的她们虽然战斗力往往比较强大，但相对稀有，且需要一定时间的摸索才能掌握她们的力量\n她们使用拥有神秘力量的武器，对于任何目标效果都很不错，且能够有效对抗使用神秘护甲的单位，她们使用的神秘化的护甲能够有效抵御任何普通攻击，但神秘武器可以击败她们。"
+
+
+
+infantry_lald_ng: "市民步兵（爆破轻甲）"
+infantry_lald_ng_desc: "由组织起来的基沃托斯市民组成的战斗小组，使用手中的枪械和班组支援武器进行作战，是各个团体进行战斗时不可或缺的部分，通常来说，他们的平均战斗力不如学生，但如果他们是经过专业训练的士兵的话就是另外一回事了，用装甲和火力支援配合他们可以让他们发挥更加高效。\n这组市民使用高射速和范围伤害武器，可以有效的对抗高灵活性的轻甲单位，其较为轻型的护甲可以让他们有效回避敌方重型火力，但面对压制火力则力不从心。"
+infantry_lahd_ng: "市民步兵（爆破重甲）"
+infantry_lahd_ng_desc: "由组织起来的基沃托斯市民组成的战斗小组，使用手中的枪械和班组支援武器进行作战，是各个团体进行战斗时不可或缺的部分，通常来说，他们的平均战斗力不如学生，但如果他们是经过专业训练的士兵的话就是另外一回事了，用装甲和火力支援配合他们可以让他们发挥更加高效。\n这组市民使用高射速和范围伤害武器，可以有效的对抗高灵活性的轻甲单位，其重型护甲可以让他们有效应对压制火力，但重型火力能够在打穿他们的护甲的同时也更容易命中他们。"
+infantry_hald_ng: "市民步兵（贯穿轻甲）"
+infantry_hald_ng_desc: "由组织起来的基沃托斯市民组成的战斗小组，使用手中的枪械和班组支援武器进行作战，是各个团体进行战斗时不可或缺的部分，通常来说，他们的平均战斗力不如学生，但如果他们是经过专业训练的士兵的话就是另外一回事了，用装甲和火力支援配合他们可以让他们发挥更加高效。\n这组市民使用穿透力较强，但射速较低的武器，可以有效的对抗重甲单位，但难以命中灵活的轻甲单位，其较为轻型的护甲可以让他们有效回避敌方重型火力，但面对压制火力则力不从心。"
+infantry_hahd_ng: "市民步兵（贯穿重甲）"
+infantry_hahd_ng_dsec: "由组织起来的基沃托斯市民组成的战斗小组，使用手中的枪械和班组支援武器进行作战，是各个团体进行战斗时不可或缺的部分，通常来说，他们的平均战斗力不如学生，但如果他们是经过专业训练的士兵的话就是另外一回事了，用装甲和火力支援配合他们可以让他们发挥更加高效。\n这组市民使用穿透力较强，但射速较低的武器，可以有效的对抗重甲单位，但难以命中灵活的轻甲单位，其重型护甲可以让他们有效应对压制火力，但重型火力能够在打穿他们的护甲的同时也更容易命中他们。"
+infantry_sp_ng: "市民步兵（神秘）"
+infantry_sp_ng_desc: "尽管在古代有所记载，但对基沃托斯神秘的研究直到现在才开始慢慢形成体系。但它们一直存在，一些基沃托斯市民有意或无意的掌握了神秘，不论怎么样，他们现在可以使用神秘的力量战斗了。\n他们使用拥有神秘力量的武器，对于任何目标效果都很不错，且能够有效对抗使用神秘护甲的单位，他们使用的神秘化的护甲能够有效抵御任何普通攻击，但神秘武器可以击败他们。"
+
+infantry_lald_am: "自动机步兵（爆破轻甲）"
+infantry_lahd_am: "自动机步兵（爆破重甲）"
+infantry_hald_am: "自动机步兵（贯穿轻甲）"
+infantry_hahd_am: "自动机步兵（贯穿重甲）"
+infantry_sp_am: "自动机步兵（神秘）"
+
+
+fire_support_team_lald: "学生火力支援单位（爆破轻甲）"
+fire_support_team_lahd: "学生火力支援单位（爆破重甲）"
+fire_support_team_hald: "学生火力支援单位（贯穿轻甲）"
+fire_support_team_hahd: "学生火力支援单位（贯穿重甲）"
+fire_support_team_sp: "学生火力支援单位（神秘）"
+
+category_light_artillery: "爆发火力支援部队"
+category_heavy_artillery: "贯穿火力支援部队"
+category_special_artillery: "神秘火力支援部队"
+
+fire_support_team_lald_ng: "市民火力支援单位（爆破轻甲）"
+fire_support_team_lahd_ng: "市民火力支援单位（爆破重甲）"
+fire_support_team_hald_ng: "市民火力支援单位（贯穿轻甲）"
+fire_support_team_hahd_ng: "市民火力支援单位（贯穿重甲）"
+fire_support_team_sp_ng: "市民火力支援单位（神秘）"
+
+tank_designer_apc_chassis:"爆破|标准"
+tank_designer_ifv_chassis:"爆破|标准"
+tank_designer_mbt_chassis:"爆破|标准"
+tank_designer_bm_chassis:"爆破|标准"
+
+#设计器-轮式步战车
+
+apc_l_gun_1: "轮式步战车武器 MK1（爆破）"
+apc_h_gun_1: "轮式步战车武器 MK1（贯穿）"
+apc_sp_gun_1: "轮式步战车武器 MK1（神秘）"
+apc_engine_oil: "燃油引擎"
+apc_armor_l: "轮式步战车装甲 MK1（标准）"
+apc_armor_sp: "轮式步战车装甲 MK1（神秘）"
+apc_4x_suspension: "4X4悬挂"
+
+
+apc_armor_role_lald: "爆破|标准"
+apc_armor_role_hald: "贯穿|标准"
+apc_armor_role_sald: "神秘|标准"
+apc_armor_role_lasd: "爆破|神秘"
+apc_armor_role_hasd: "贯穿|神秘"
+apc_armor_role_sasd: "神秘|神秘"
+
+
+
+
+EQ_MOD_CAT_apc_l_main_armament_TITLE:"轮式步战车武器（爆破）"
+EQ_MOD_CAT_apc_h_main_armament_TITLE:"轮式步战车武器（贯穿）"
+EQ_MOD_CAT_apc_sp_main_armament_TITLE:"轮式步战车武器（神秘）"
+EQ_MOD_CAT_apc_l_armor_type_TITLE:"轮式步战车装甲（标准）"
+EQ_MOD_CAT_apc_sp_armor_type_TITLE:"轮式步战车装甲（神秘）"
+EQ_MOD_CAT_apc_armor_role_type_TITLE:"轮式步战车定位"
+
+
+EQ_MOD_CAT_ifv_l_main_armament_TITLE:"履带步战车武器（爆破）"
+EQ_MOD_CAT_ifv_h_main_armament_TITLE:"履带步战车武器（贯穿）"
+EQ_MOD_CAT_ifv_sp_main_armament_TITLE:"履带步战车武器（神秘）"
+EQ_MOD_CAT_ifv_h_armor_type_TITLE:"履带步战车装甲（标准）"
+EQ_MOD_CAT_ifv_sp_armor_type_TITLE:"履带步战车装甲（神秘）"
+EQ_MOD_CAT_ifv_armor_role_type_TITLE:"履带步战车定位"
+
+
+EQ_MOD_CAT_mbt_l_main_armament_TITLE:"主战坦克武器（爆破）"
+EQ_MOD_CAT_mbt_h_main_armament_TITLE:"主战坦克武器（贯穿）"
+EQ_MOD_CAT_mbt_sp_main_armament_TITLE:"主战坦克武器（神秘）"
+EQ_MOD_CAT_mbt_h_armor_type_TITLE:"主战坦克装甲（标准）"
+EQ_MOD_CAT_mbt_sp_armor_type_TITLE:"主战坦克装甲（神秘）"
+EQ_MOD_CAT_mbt_armor_role_type_TITLE:"主战坦克定位"
+
+EQ_MOD_CAT_bm_l_main_armament_TITLE:"战斗机甲武器（爆破）"
+EQ_MOD_CAT_bm_h_main_armament_TITLE:"战斗机甲武器（贯穿）"
+EQ_MOD_CAT_bm_sp_main_armament_TITLE:"战斗机甲武器（神秘）"
+EQ_MOD_CAT_bm_l_armor_type_TITLE:"战斗机甲装甲（标准）"
+EQ_MOD_CAT_bm_sp_armor_type_TITLE:"战斗机甲装甲（神秘）"
+EQ_MOD_CAT_bm_armor_role_type_TITLE:"战斗机甲定位"
+
+apc_engine_upgrade:"引擎"
+apc_armor_upgrade:"护甲"
+
+apc_chassis:"轮式步战车（爆破|标准）"
+apc_aa_chassis:"轮式步战车（爆破|神秘）"
+apc_artillery_chassis:"轮式步战车（贯穿|标准）"
+apc_destroyer_chassis:"轮式步战车（神秘|标准）"
+apc_amphibious_chassis:"轮式步战车（神秘|神秘）"
+apc_flame_chassis:"轮式步战车（贯穿|神秘）"
+
+
+
+
+apc_chassis_1:"轮式步战车（爆破|标准）"
+apc_aa_chassis_1:"轮式步战车（爆破|神秘）"
+apc_artillery_chassis_1:"轮式步战车（贯穿|标准）"
+apc_destroyer_chassis_1:"轮式步战车（神秘|标准）"
+apc_amphibious_chassis_1:"轮式步战车（神秘|神秘）"
+apc_flame_chassis_1:"轮式步战车（贯穿|神秘）"
+
+
+apc_chassis_2:"轮式步战车（爆破|标准）"
+apc_aa_chassis_2:"轮式步战车（爆破|神秘）"
+apc_artillery_chassis_2:"轮式步战车（贯穿|标准）"
+apc_destroyer_chassis_2:"轮式步战车（神秘|标准）"
+apc_amphibious_chassis_2:"轮式步战车（神秘|神秘）"
+apc_flame_chassis_2:"轮式步战车（贯穿|神秘）"
+
+
+apc_lald: "学生摩托化步兵（爆破|轻甲）"
+apc_hald: "学生摩托化步兵（贯穿|轻甲）"
+apc_sald: "学生摩托化步兵（神秘|轻甲）"
+apc_lasd: "学生摩托化步兵（爆破|神秘）"
+apc_hasd: "学生摩托化步兵（贯穿|神秘）"
+apc_sasd: "学生摩托化步兵（神秘|神秘）"
+
+
+apc_lald_ng: "市民摩托化步兵（爆破|轻甲）"
+apc_hald_ng: "市民摩托化步兵（贯穿|轻甲）"
+apc_sald_ng: "市民摩托化步兵（神秘|轻甲）"
+apc_lasd_ng: "市民摩托化步兵（爆破|神秘）"
+apc_hasd_ng: "市民摩托化步兵（贯穿|神秘）"
+apc_sasd_ng: "市民摩托化步兵（神秘|神秘）"
+
+
+
+ifv_l_gun_1: "履带步战车武器 MK1（爆破）"
+ifv_h_gun_1: "履带步战车武器 MK1（贯穿）"
+ifv_sp_gun_1: "履带步战车武器 MK1（神秘）"
+ifv_engine_oil: "燃油引擎"
+ifv_armor_l: "履带步战车装甲 MK1（标准）"
+ifv_armor_sp: "履带步战车装甲 MK1（神秘）"
+ifv_4x_suspension: "杻杆悬挂"
+
+
+ifv_armor_role_lahd: "爆破|标准"
+ifv_armor_role_hahd: "贯穿|标准"
+ifv_armor_role_sahd: "神秘|标准"
+ifv_armor_role_lasd: "爆破|神秘"
+ifv_armor_role_hasd: "贯穿|神秘"
+ifv_armor_role_sasd: "神秘|神秘"
+
+ifv_lahd: "学生机械化步兵（爆破|重甲）"
+ifv_hahd: "学生机械化步兵（贯穿|重甲）"
+ifv_sahd: "学生机械化步兵（神秘|重甲）"
+ifv_lasd: "学生机械化步兵（爆破|神秘）"
+ifv_hasd: "学生机械化步兵（贯穿|神秘）"
+ifv_sasd: "学生机械化步兵（神秘|神秘）" 
+
+ifv_lahd_ng: "市民机械化步兵（爆破|重甲）"
+ifv_hahd_ng: "市民机械化步兵（贯穿|重甲）"
+ifv_sahd_ng: "市民机械化步兵（神秘|重甲）"
+ifv_lasd_ng: "市民机械化步兵（爆破|神秘）"
+ifv_hasd_ng: "市民机械化步兵（贯穿|神秘）"
+ifv_sasd_ng: "市民机械化步兵（神秘|神秘）" 
+
+
+
+ifv_chassis: "履带步战车（爆破|标准）"
+ifv_aa_chassis: "履带步战车（爆破|神秘）"
+ifv_artillery_chassis: "履带步战车（贯穿|标准）"
+ifv_destroyer_chassis: "履带步战车（神秘|标准）"
+ifv_amphibious_chassis: "履带步战车（神秘|神秘）"
+ifv_flame_chassis: "履带步战车（贯穿|神秘）"
+
+
+
+ifv_chassis_1: "履带步战车（爆破|标准）"
+ifv_aa_chassis_1: "履带步战车（爆破|神秘）"
+ifv_artillery_chassis_1: "履带步战车（贯穿|标准）"
+ifv_destroyer_chassis_1: "履带步战车（神秘|标准）"
+ifv_amphibious_chassis_1: "履带步战车（神秘|神秘）"
+ifv_flame_chassis_1: "履带步战车（贯穿|神秘）"
+
+ifv_chassis_2: "履带步战车（爆破|标准）"
+ifv_aa_chassis_2: "履带步战车（爆破|神秘）"
+ifv_artillery_chassis_2: "履带步战车（贯穿|标准）"
+ifv_destroyer_chassis_2: "履带步战车（神秘|标准）"
+ifv_amphibious_chassis_2: "履带步战车（神秘|神秘）"
+ifv_flame_chassis_2: "履带步战车（贯穿|神秘）"
+
+
+mbt_l_gun_1: "主战坦克武器 MK1（爆破）"
+mbt_h_gun_1: "主战坦克武器 MK1（贯穿）"
+mbt_sp_gun_1: "主战坦克武器 MK1（神秘）"
+mbt_engine_oil: "燃油引擎"
+mbt_armor_h: "主战坦克装甲 MK1（标准）"
+mbt_armor_sp: "主战坦克装甲 MK1（神秘）"
+mbt_4x_suspension: "杻杆悬挂"
+
+
+mbt_armor_role_lahd: "爆破|标准"
+mbt_armor_role_hahd: "贯穿|标准"
+mbt_armor_role_sahd: "神秘|标准"
+mbt_armor_role_lasd: "爆破|神秘"
+mbt_armor_role_hasd: "贯穿|神秘"
+mbt_armor_role_sasd: "神秘|神秘"
+
+mbt_lahd: "学生坦克部队（爆破|重甲）"
+mbt_hahd: "学生坦克部队（贯穿|重甲）"
+mbt_sahd: "学生坦克部队（神秘|重甲）"
+mbt_lasd: "学生坦克部队（爆破|神秘）"
+mbt_hasd: "学生坦克部队（贯穿|神秘）"
+mbt_sasd: "学生坦克部队（神秘|神秘）" 
+
+mbt_lahd_ng: "市民坦克部队（爆破|重甲）"
+mbt_hahd_ng: "市民坦克部队（贯穿|重甲）"
+mbt_sahd_ng: "市民坦克部队（神秘|重甲）"
+mbt_lasd_ng: "市民坦克部队（爆破|神秘）"
+mbt_hasd_ng: "市民坦克部队（贯穿|神秘）"
+mbt_sasd_ng: "市民坦克部队（神秘|神秘）" 
+
+
+
+mbt_chassis: "主战坦克（爆破|标准）"
+mbt_aa_chassis: "主战坦克（爆破|神秘）"
+mbt_artillery_chassis: "主战坦克（贯穿|标准）"
+mbt_destroyer_chassis: "主战坦克（神秘|标准）"
+mbt_amphibious_chassis: "主战坦克（神秘|神秘）"
+mbt_flame_chassis: "主战坦克（贯穿|神秘）"
+
+
+
+mbt_chassis_1: "主战坦克（爆破|标准）"
+mbt_aa_chassis_1: "主战坦克（爆破|神秘）"
+mbt_artillery_chassis_1: "主战坦克（贯穿|标准）"
+mbt_destroyer_chassis_1: "主战坦克（神秘|标准）"
+mbt_amphibious_chassis_1: "主战坦克（神秘|神秘）"
+mbt_flame_chassis_1: "主战坦克（贯穿|神秘）"
+
+mbt_chassis_2: "主战坦克（爆破|标准）"
+mbt_aa_chassis_2: "主战坦克（爆破|神秘）"
+mbt_artillery_chassis_2: "主战坦克（贯穿|标准）"
+mbt_destroyer_chassis_2: "主战坦克（神秘|标准）"
+mbt_amphibious_chassis_2: "主战坦克（神秘|神秘）"
+mbt_flame_chassis_2: "主战坦克（贯穿|神秘）"
+
+
+bm_chassis:"战斗机甲（爆破|标准）"
+bm_aa_chassis:"战斗机甲（爆破|神秘）"
+bm_artillery_chassis:"战斗机甲（贯穿|标准）"
+bm_destroyer_chassis:"战斗机甲（神秘|标准）"
+bm_amphibious_chassis:"战斗机甲（神秘|神秘）"
+bm_flame_chassis:"战斗机甲（贯穿|神秘）"
+
+
+
+
+bm_chassis_1:"战斗机甲（爆破|标准）"
+bm_aa_chassis_1:"战斗机甲（爆破|神秘）"
+bm_artillery_chassis_1:"战斗机甲（贯穿|标准）"
+bm_destroyer_chassis_1:"战斗机甲（神秘|标准）"
+bm_amphibious_chassis_1:"战斗机甲（神秘|神秘）"
+bm_flame_chassis_1:"战斗机甲（贯穿|神秘）"
+
+
+bm_chassis_2:"战斗机甲（爆破|标准）"
+bm_aa_chassis_2:"战斗机甲（爆破|神秘）"
+bm_artillery_chassis_2:"战斗机甲（贯穿|标准）"
+bm_destroyer_chassis_2:"战斗机甲（神秘|标准）"
+bm_amphibious_chassis_2:"战斗机甲（神秘|神秘）"
+bm_flame_chassis_2:"战斗机甲（贯穿|神秘）"
+
+
+bm_l_gun_1: "战斗机甲武器 MK1（爆破）"
+bm_h_gun_1: "战斗机甲武器 MK1（贯穿）"
+bm_sp_gun_1: "战斗机甲武器 MK1（神秘）"
+bm_engine_oil: "燃油引擎"
+bm_armor_h: "战斗机甲装甲 MK1（标准）"
+bm_armor_sp: "战斗机甲装甲 MK1（神秘）"
+bm_4x_suspension: "双足行走机构"
+
+
+
+bm_lald: "学生战斗机甲部队（爆破|轻甲）"
+bm_hald: "学生战斗机甲部队（贯穿|轻甲）"
+bm_sald: "学生战斗机甲部队（神秘|轻甲）"
+bm_lasd: "学生战斗机甲部队（爆破|神秘）"
+bm_hasd: "学生战斗机甲部队（贯穿|神秘）"
+bm_sasd: "学生战斗机甲部队（神秘|神秘）"
+
+
+bm_lald_ng: "市民战斗机甲部队（爆破|轻甲）"
+bm_hald_ng: "市民战斗机甲部队（贯穿|轻甲）"
+bm_sald_ng: "市民战斗机甲部队（神秘|轻甲）"
+bm_lasd_ng: "市民战斗机甲部队（爆破|神秘）"
+bm_hasd_ng: "市民战斗机甲部队（贯穿|神秘）"
+bm_sasd_ng: "市民战斗机甲部队（神秘|神秘）"
+
+bm_armor_role_lald: "爆破|标准"
+bm_armor_role_hald: "贯穿|标准"
+bm_armor_role_sald: "神秘|标准"
+bm_armor_role_lasd: "爆破|神秘"
+bm_armor_role_hasd: "贯穿|神秘"
+bm_armor_role_sasd: "神秘|神秘"
+
+
+auto_mech:"自动机"
+auto_mech_1:"民用自动机"
+auto_mech_2:"作战用自动机"
+
+apc_recon:"轻装侦察小队"
+mbt_recon:"重装侦察小队"
+helicopter_recon:"直升机侦察小队"
+
+support_engineer_equipment_1:"工程设备"
+support_logistics_equipment_1:"后勤设备"
+support_security_T3:"安保设备"
+
+fire_support_team_su_la:"火力支援小队（爆破）"
+fire_support_team_su_ha:"火力支援小队（贯穿）"
+fire_support_team_su_sa:"火力支援小队（神秘）"
+
+air_assest_unit:"空中突击部队"
+air_attack_unit:"武装直升机（抵近支援）"
+
+infantry_anti_air_equipment: "单兵防空武器"
+infantry_anti_air_equipment_1: "单兵防空武器 MK1"
+infantry_anti_air_equipment_2: "单兵防空武器 MK2"
+infantry_anti_air_equipment_3: "单兵防空武器 MK3"
+
+infantry_anti_air:"单兵防空部队(学生)"
+infantry_anti_air_ng:"单兵防空部队(市民)"
+infantry_anti_air_support:"单兵防空小队"
+
+helicopter_logistics_company:"直升机后勤小队"

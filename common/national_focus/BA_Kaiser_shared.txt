@@ -1,0 +1,996 @@
+#	shared_focus = {
+#		id = CAE_
+#		icon = GFX_
+#		prerequisite = { focus = }
+#		mutually_exclusive = { focus =  }
+#		x = -3
+#		y = 0
+#		relative_position_id = 
+#
+#		cost = 10
+#
+#		ai_will_do = {
+#			factor = 1
+#		}
+#
+#		available = {
+#
+#		}
+#		
+#		bypass = {
+#
+#		}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		complete_tooltip = {
+#
+#		}
+#
+#		completion_reward = {
+#
+#		}
+#	}
+shared_focus = {
+	id = CAE_inspect_subsidiaries_planning#集团整体发展规划
+	icon = GFX_goal_unknown
+	
+	#章鱼银行
+	x = 20
+	y = 0
+	offset = {
+		x = -6
+		y = 0
+		trigger = {
+			tag = CAO
+		}
+	}
+	#凯撒PMC
+	offset = {
+		x = 20
+		y = 0
+		trigger = {
+			 tag = CAP 
+		}
+	}
+	#凯撒重工
+	offset = {
+		x = 20
+		y = 0
+		trigger = {
+			tag = CAH
+		}
+	}
+	#凯撒总部
+	offset = {
+		x = 30
+		y = 0
+		trigger = {
+			 tag = CAE 
+		}
+	}
+	#凯撒百货
+	offset = {
+		x = 20
+		y = 0
+		trigger = {
+			 tag = CAB 
+		}
+	}
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 4
+			tag = CAE
+		}
+	}
+
+	available = {
+
+	}
+
+	bypass = {
+		
+	}
+
+	text_icon = GFX_goal_unknown
+
+	joint_trigger = {
+	}
+
+
+
+	completion_reward = {
+		
+	}
+}
+#军事线
+joint_focus = {
+	id = CAE_reorganize_group_army#整编集团武装力量
+	
+	icon = GFX_goal_unknown
+	
+	prerequisite = { focus = CAE_inspect_subsidiaries_planning }
+	
+	x = -6
+	y = 1
+	relative_position_id = CAE_inspect_subsidiaries_planning
+	cost = 5
+
+	text_icon = GFX_goal_unknown
+
+	available = {
+	}
+
+
+	joint_trigger = {
+  		Kaiser_basic_joint_trigger = yes 
+	}
+
+
+	completion_reward = {
+
+	}
+}
+joint_focus = {
+	id = CAE_group_army_force#集团陆军
+	
+	icon = GFX_goal_unknown
+	
+	prerequisite = { focus = CAE_reorganize_group_army }
+	
+	x = -3
+	y = 1
+	relative_position_id = CAE_reorganize_group_army
+	cost = 5
+
+	text_icon = GFX_goal_unknown
+
+	available = {
+	}
+
+
+	joint_trigger = {
+  		Kaiser_basic_joint_trigger = yes 
+	}
+
+
+	completion_reward = {
+
+	}
+}
+joint_focus = {
+	id = CAE_unified_command_system#统一指挥体系
+	
+	icon = GFX_goal_unknown
+	
+	prerequisite = { focus = CAE_group_army_force }
+	mutually_exclusive = {
+	focus = CAE_decentralized_command_system
+		}	
+	x = -1
+	y = 1
+	relative_position_id = CAE_group_army_force
+	cost = 5
+
+	text_icon = GFX_goal_unknown
+
+	available = {
+	}
+
+
+	joint_trigger = {
+  		Kaiser_basic_joint_trigger = yes 
+	}
+
+
+	completion_reward = {
+
+	}
+}
+joint_focus = {
+	id = CAE_affiliated_officer_corps#创立直属军官团
+	
+	icon = GFX_goal_unknown
+	
+	prerequisite = { focus = CAE_unified_command_system  }
+	
+	x = -1
+	y = 1
+	relative_position_id = CAE_unified_command_system
+	cost = 5
+
+	text_icon = GFX_goal_unknown
+
+	available = {
+	}
+
+
+	joint_trigger = {
+  		Kaiser_basic_joint_trigger = yes 
+	}
+
+
+	completion_reward = {
+
+	}
+}
+joint_focus = {
+	id = CAE_unified_command_chain#统一指挥链
+	
+	icon = GFX_goal_unknown
+	
+	prerequisite = { focus = CAE_affiliated_officer_corps }
+	
+	x = 0
+	y = 1
+	relative_position_id = CAE_affiliated_officer_corps
+	cost = 5
+
+	text_icon = GFX_goal_unknown
+
+	available = {
+	}
+
+
+	joint_trigger = {
+  		Kaiser_basic_joint_trigger = yes 
+	}
+
+
+	completion_reward = {
+
+	}
+}
+joint_focus = {
+	id = CAE_logistic_service#集团后勤部队保障体系
+	
+	icon = GFX_goal_unknown
+	
+	prerequisite = { focus = CAE_unified_command_system
+	  focus = CAE_decentralized_command_system
+	  }
+	
+	x = 1
+	y = 1
+	relative_position_id = CAE_unified_command_system
+	cost = 5
+
+	text_icon = GFX_goal_unknown
+
+	available = {
+	}
+
+
+	joint_trigger = {
+  		Kaiser_basic_joint_trigger = yes 
+	}
+
+
+	completion_reward = {
+
+	}
+}
+joint_focus = {
+	id = CAE_engineering_unit#工兵部队
+	
+	icon = GFX_goal_unknown
+	
+	prerequisite = { focus = CAE_logistic_service  }
+	
+	x = 0
+	y = 1
+	relative_position_id = CAE_logistic_service
+	cost = 5
+
+	text_icon = GFX_goal_unknown
+
+	available = {
+	}
+
+
+	joint_trigger = {
+  		Kaiser_basic_joint_trigger = yes 
+	}
+
+
+	completion_reward = {
+
+	}
+}
+joint_focus = {
+	id = CAE_decentralized_command_system#授权分散指挥
+	
+	icon = GFX_goal_unknown
+	
+	prerequisite = { focus = CAE_group_army_force  }
+	mutually_exclusive = {
+	focus = CAE_unified_command_system
+		}	
+	x = 1
+	y = 1
+	relative_position_id = CAE_group_army_force
+	cost = 5
+
+	text_icon = GFX_goal_unknown
+
+	available = {
+	}
+
+
+
+	joint_trigger = {
+  		Kaiser_basic_joint_trigger = yes 
+	}
+
+
+	completion_reward = {
+
+	}
+}
+joint_focus = {
+	id = CAE_military_talents#提拔集团军事人才
+	
+	icon = GFX_goal_unknown
+	
+	prerequisite = { focus = CAE_decentralized_command_system  }
+	
+	x = 1
+	y = 1
+	relative_position_id = CAE_decentralized_command_system
+	cost = 5
+
+	text_icon = GFX_goal_unknown
+
+	available = {
+	}
+
+
+	joint_trigger = {
+  		Kaiser_basic_joint_trigger = yes 
+	}
+
+
+	completion_reward = {
+
+	}
+}
+joint_focus = {
+	id = CAE_decentralized_command#分散指挥链
+	
+	icon = GFX_goal_unknown
+	
+	prerequisite = { focus = CAE_military_talents  }
+	
+	x = 0
+	y = 1
+	relative_position_id = CAE_military_talents
+	cost = 5
+
+	text_icon = GFX_goal_unknown
+
+	available = {
+	}
+
+
+	joint_trigger = {
+  		Kaiser_basic_joint_trigger = yes 
+	}
+
+
+	completion_reward = {
+
+	}
+}
+joint_focus = {
+	id = CAE_military_exercise#凯撒联合军演
+	
+	icon = GFX_goal_unknown
+	
+
+	prerequisite = { focus = CAE_engineering_unit 
+	focus = CAE_unified_command_chain
+	focus = CAE_air_force_officer
+	}
+
+	prerequisite = { focus = CAE_engineering_unit 
+	focus = CAE_decentralized_command
+	focus = CAE_air_force_officer
+	}
+	
+	x = 0
+	y = 1
+	relative_position_id = CAE_engineering_unit
+	cost = 5
+
+	text_icon = GFX_goal_unknown
+
+	available = {
+	}
+
+
+	joint_trigger = {
+  		Kaiser_basic_joint_trigger = yes 
+	}
+
+
+	completion_reward = {
+
+	}
+}
+joint_focus = {
+	id = CAE_group_air_force#集团空军
+	
+	icon = GFX_goal_unknown
+	
+	prerequisite = { focus = CAE_reorganize_group_army  }
+	
+	x = 2
+	y = 1
+	relative_position_id = CAE_reorganize_group_army
+	cost = 5
+
+	text_icon = GFX_goal_unknown
+
+	available = {
+	}
+
+
+	joint_trigger = {
+  		Kaiser_basic_joint_trigger = yes 
+	}
+
+
+	completion_reward = {
+
+	}
+}
+joint_focus = {
+	id = CAE_air_force_hq#设立凯撒空军本部
+	
+	icon = GFX_goal_unknown
+	
+	prerequisite = { focus = CAE_group_air_force  }
+	
+	x = 0
+	y = 1.5
+	relative_position_id = CAE_group_air_force
+	cost = 5
+
+	text_icon = GFX_goal_unknown
+
+	available = {
+	}
+
+
+	joint_trigger = {
+  		Kaiser_basic_joint_trigger = yes 
+	}
+
+
+	completion_reward = {
+
+	}
+}
+joint_focus = {
+	id = CAE_air_force_officer#空军本部士官培训体系
+	
+	icon = GFX_goal_unknown
+	
+	prerequisite = { focus = CAE_air_force_hq  }
+	
+	x = 0
+	y = 1.5
+	relative_position_id = CAE_air_force_hq
+	cost = 5
+
+	text_icon = GFX_goal_unknown
+
+	available = {
+	}
+
+
+	joint_trigger = {
+  		Kaiser_basic_joint_trigger = yes 
+	}
+
+
+	completion_reward = {
+
+	}
+}
+#政治线
+joint_focus = {
+	id = CAE_centralized_management#加强集权型经营
+	
+	icon = GFX_goal_unknown
+	
+	prerequisite = { focus = CAE_inspect_subsidiaries_planning  }
+	
+	x = 0
+	y = 1
+	relative_position_id = CAE_inspect_subsidiaries_planning
+	cost = 5
+
+	text_icon = GFX_goal_unknown
+
+	available = {
+	}
+
+
+	joint_trigger = {
+  		Kaiser_basic_joint_trigger = yes 
+	}
+
+
+	completion_reward = {
+
+	}
+}
+joint_focus = {
+	id = CAE_trade_with_directorate#与董事会的交易
+	
+	icon = GFX_goal_unknown
+	
+	prerequisite = { focus = CAE_centralized_management  }
+	
+	x = -1
+	y = 1
+	relative_position_id = CAE_centralized_management
+	cost = 5
+
+	text_icon = GFX_goal_unknown
+
+	available = {
+	}
+
+
+	joint_trigger = {
+  		Kaiser_basic_joint_trigger = yes 
+	}
+
+
+	completion_reward = {
+
+	}
+}
+joint_focus = {
+	id = CAE_coodinate_subsidiary_companies#协调子公司发展经营情况
+	
+	icon = GFX_goal_unknown
+	
+	prerequisite = { focus = CAE_centralized_management  }
+	
+	x = 1
+	y = 1
+	relative_position_id = CAE_centralized_management
+	cost = 5
+
+	text_icon = GFX_goal_unknown
+
+	available = {
+	}
+
+
+	joint_trigger = {
+  		Kaiser_basic_joint_trigger = yes 
+	}
+
+
+	completion_reward = {
+
+	}
+}
+joint_focus = {
+	id = CAE_ceo_with_discretionary_power#赋予总裁自由裁量权
+	
+	icon = GFX_goal_unknown
+	
+	prerequisite = { focus = CAE_trade_with_directorate  }
+	prerequisite = { focus = CAE_coodinate_subsidiary_companies  }
+	
+	x = 1
+	y = 1
+	relative_position_id = CAE_trade_with_directorate
+	cost = 5
+
+	text_icon = GFX_goal_unknown
+
+	available = {
+	}
+
+
+	joint_trigger = {
+  		Kaiser_basic_joint_trigger = yes 
+	}
+
+
+	completion_reward = {
+
+	}
+}
+joint_focus = {
+	id = CAE_investgate_plan#基沃托斯投资计划
+	
+	icon = GFX_goal_unknown
+	
+	prerequisite = { focus = CAE_ceo_with_discretionary_power  }
+	
+	x = 0
+	y = 1
+	relative_position_id = CAE_ceo_with_discretionary_power
+	cost = 5
+
+	text_icon = GFX_goal_unknown
+
+	available = {
+	}
+
+
+	joint_trigger = {
+  		Kaiser_basic_joint_trigger = yes 
+	}
+
+
+	completion_reward = {
+
+	}
+}
+#经济线
+joint_focus = {
+	id = CAE_establish_sky_university#设立凯撒市民大学
+	
+	icon = GFX_goal_unknown
+	
+	prerequisite = { focus = CAE_inspect_subsidiaries_planning  }
+	
+	x = 6
+	y = 1
+	relative_position_id = CAE_inspect_subsidiaries_planning
+	cost = 5
+
+	text_icon = GFX_goal_unknown
+
+	available = {
+	}
+
+
+	joint_trigger = {
+  		Kaiser_basic_joint_trigger = yes 
+	}
+
+
+	completion_reward = {
+
+	}
+}
+joint_focus = {
+	id = CAE_group_infrastructure_development#集团基建开发
+	
+	icon = GFX_goal_unknown
+	
+	prerequisite = { focus = CAE_establish_sky_university  }
+	
+	x = -1
+	y = 1
+	relative_position_id = CAE_establish_sky_university
+	cost = 5
+
+	text_icon = GFX_goal_unknown
+
+	available = {
+	}
+
+
+	joint_trigger = {
+  		Kaiser_basic_joint_trigger = yes 
+	}
+
+
+	completion_reward = {
+
+	}
+}
+joint_focus = {
+	id = CAE_group_construction_fund#集团建设基金
+	
+	icon = GFX_goal_unknown
+	
+	prerequisite = { focus = CAE_group_infrastructure_development  }
+	
+	x = -1
+	y = 1
+	relative_position_id = CAE_group_infrastructure_development
+	cost = 5
+
+	text_icon = GFX_goal_unknown
+
+	available = {
+	}
+
+
+	joint_trigger = {
+  		Kaiser_basic_joint_trigger = yes 
+	}
+
+
+	completion_reward = {
+
+	}
+}
+joint_focus = {
+	id = CAE_light_industry_projects#新兴轻工业项目
+	
+	icon = GFX_goal_unknown
+	
+	prerequisite = { focus = CAE_group_infrastructure_development  }
+	
+	x = 0
+	y = 1
+	relative_position_id = CAE_group_infrastructure_development
+	cost = 5
+
+	text_icon = GFX_goal_unknown
+
+	available = {
+	}
+
+
+	joint_trigger = {
+  		Kaiser_basic_joint_trigger = yes 
+	}
+
+
+	completion_reward = {
+
+	}
+}
+joint_focus = {
+	id = CAE_resource_plan#资源开发计划
+	
+	icon = GFX_goal_unknown
+	
+	prerequisite = { focus = CAE_light_industry_projects
+                     focus = CAE_group_construction_fund}
+	
+	x = 0
+	y = 1
+	relative_position_id = CAE_light_industry_projects
+	cost = 5
+
+	text_icon = GFX_goal_unknown
+
+	available = {
+	}
+
+
+	joint_trigger = {
+  		Kaiser_basic_joint_trigger = yes 
+	}
+
+
+	completion_reward = {
+
+	}
+}
+joint_focus = {
+	id = CAE_military_plan#军工发展计划
+	
+	icon = GFX_goal_unknown
+	
+	prerequisite = { focus = CAE_resource_plan  }
+	
+	x = -1
+	y = 1
+	relative_position_id = CAE_resource_plan
+	cost = 5
+
+	text_icon = GFX_goal_unknown
+
+	available = {
+	}
+
+
+	joint_trigger = {
+  		Kaiser_basic_joint_trigger = yes 
+	}
+
+
+	completion_reward = {
+
+	}
+}
+joint_focus = {
+	id = CAE_railroad_plan#凯撒铁路计划
+	
+	icon = GFX_goal_unknown
+	
+	prerequisite = { focus = CAE_resource_plan  }
+	
+	x = 0
+	y = 1
+	relative_position_id = CAE_resource_plan
+	cost = 5
+
+	text_icon = GFX_goal_unknown
+
+	available = {
+	}
+
+
+	joint_trigger = {
+  		Kaiser_basic_joint_trigger = yes 
+	}
+
+
+	completion_reward = {
+
+	}
+}
+joint_focus = {
+	id = CAE_army_weapon_plan#集团军备计划
+	
+	icon = GFX_goal_unknown
+	
+	prerequisite = { focus = CAE_establish_sky_university  }
+	
+	x = 1
+	y = 1
+	relative_position_id = CAE_establish_sky_university
+	cost = 5
+
+	text_icon = GFX_goal_unknown
+
+	available = {
+	}
+
+
+	joint_trigger = {
+  		Kaiser_basic_joint_trigger = yes 
+	}
+
+
+	completion_reward = {
+
+	}
+}
+joint_focus = {
+	id = CAE_investgate_fund#军备投资基金
+	
+	icon = GFX_goal_unknown
+	
+	prerequisite = { focus = CAE_army_weapon_plan  }
+	
+	x = 0
+	y = 1
+	relative_position_id = CAE_army_weapon_plan
+	cost = 5
+
+	text_icon = GFX_goal_unknown
+
+	available = {
+	}
+
+
+	joint_trigger = {
+  		Kaiser_basic_joint_trigger = yes 
+	}
+
+
+	completion_reward = {
+
+	}
+}
+joint_focus = {
+	id = CAE_air_plan#集团空军项目
+	
+	icon = GFX_goal_unknown
+	
+	prerequisite = { focus = CAE_army_weapon_plan  }
+	
+	x = 1
+	y = 1
+	relative_position_id = CAE_army_weapon_plan
+	cost = 5
+
+	text_icon = GFX_goal_unknown
+
+	available = {
+	}
+
+
+	joint_trigger = {
+  		Kaiser_basic_joint_trigger = yes 
+	}
+
+
+	completion_reward = {
+
+	}
+}
+joint_focus = {
+	id = CAE_standardize_each_component#标准化各部件
+	
+	icon = GFX_goal_unknown
+	
+	prerequisite = { focus = CAE_investgate_fund 
+	focus = CAE_air_plan}
+	
+	x = 0
+	y = 1
+	relative_position_id = CAE_investgate_fund
+	cost = 5
+
+	text_icon = GFX_goal_unknown
+
+	available = {
+	}
+
+
+	joint_trigger = {
+  		Kaiser_basic_joint_trigger = yes 
+	}
+
+
+	completion_reward = {
+
+	}
+}
+joint_focus = {
+	id = CAE_new_gundam#新式机甲研发
+	
+	icon = GFX_goal_unknown
+	
+	prerequisite = { focus = CAE_standardize_each_component  }
+	
+	x = 0
+	y = 1
+	relative_position_id = CAE_standardize_each_component
+	cost = 5
+
+	text_icon = GFX_goal_unknown
+
+	available = {
+	}
+
+
+	joint_trigger = {
+  		Kaiser_basic_joint_trigger = yes 
+	}
+
+
+	completion_reward = {
+
+	}
+}
+joint_focus = {
+	id = CAE_thermo_baric_warhead#温压武器研发
+	
+	icon = GFX_goal_unknown
+	
+	prerequisite = { focus = CAE_standardize_each_component  }
+	
+	x = 1
+	y = 1
+	relative_position_id = CAE_standardize_each_component
+	cost = 5
+
+	text_icon = GFX_goal_unknown
+
+	available = {
+	}
+
+
+	joint_trigger = {
+  		Kaiser_basic_joint_trigger = yes 
+	}
+
+
+	completion_reward = {
+
+	}
+}

@@ -1,0 +1,15 @@
+state={
+	id=534
+	name="STATE_534"
+	provinces={
+		924 1308 1538 1756 2279 2630 2990 3075 3460 3567 4001 4029 4083 4149 4150 4723 6086 6340 6427 7725 7811 8711 8736 9296 9311 9385 10739 10832 10859 10870 
+	}
+	history = {
+		owner = CAO
+		add_core_of=CAO
+		victory_points = {924 10}
+    }
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

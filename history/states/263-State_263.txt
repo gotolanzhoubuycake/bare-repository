@@ -1,0 +1,15 @@
+state={
+	id=263
+	name="STATE_263"
+	provinces={
+		892 6855 9401 
+	}
+	history={
+		owner = RWT
+		add_core_of=RWT
+	}
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

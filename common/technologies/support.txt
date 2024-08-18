@@ -1,0 +1,179 @@
+technologies = {
+	# support_equipment_T1 = {
+	# 	enable_equipments = { infantry_equipment_0 }
+	# 	research_cost = 2
+	# 	folder = {
+	# 		name = infantry_folder
+	# 		position = { x = 0 y = -1 }
+	# 	}
+	# 	path = { leads_to_tech = burst_support_weapons_T2 }
+	# 	path = { leads_to_tech = penetration_support_weapons_T2 }
+	# 	path = { leads_to_tech = mystical_support_weapons_T3 }
+	# 	dependencies = { tech_MIL_rank_I_token = 1 }
+	# 	categories = { infantry_weapons }
+	# 	ai_will_do = { factor = 1 }
+	# }
+	# burst_support_weapons_T2 = {
+	# 	enable_equipments = { infantry_equipment_0 }
+	# 	research_cost = 2
+	# 	folder = {
+	# 		name = infantry_folder
+	# 		position = { x = -1 y = 3 }
+	# 	}
+	# 	path = { leads_to_tech = burst_support_weapons_T4 }
+	# 	path = { leads_to_tech = burst_support_weapons_upgrade_T3 }
+	# 	sub_technologies = { burst_support_weapons_upgrade_T2 }
+	# 	dependencies = { tech_MIL_rank_II_token = 1 }
+	# 	categories = { infantry_weapons }
+	# 	ai_will_do = { factor = 1 }
+	# }
+	# penetration_support_weapons_T2 = {
+	# 	enable_equipments = { infantry_equipment_0 }
+	# 	research_cost = 2
+	# 	folder = {
+	# 		name = infantry_folder
+	# 		position = { x = 1 y = 3 }
+	# 	}
+	# 	path = { leads_to_tech = penetration_support_weapons_T4 }
+	# 	path = { leads_to_tech = penetration_support_weapons_upgrade_T3 }
+	# 	sub_technologies = { penetration_support_weapons_upgrade_T2 }
+	# 	dependencies = { tech_MIL_rank_II_token = 1 }
+	# 	categories = { infantry_weapons }
+	# 	ai_will_do = { factor = 1 }
+	# }
+	# burst_support_weapons_T4 = {
+	# 	enable_equipments = { infantry_equipment_0 }
+	# 	research_cost = 2
+	# 	folder = {
+	# 		name = infantry_folder
+	# 		position = { x = -1 y = 11 }
+	# 	}
+	# 	path = { leads_to_tech = burst_support_weapons_T5 }
+	# 	sub_technologies = { penetration_support_weapons_upgrade_T4 }
+	# 	dependencies = { tech_MIL_rank_IV_token = 1 }
+	# 	categories = { infantry_weapons }
+	# 	ai_will_do = { factor = 1 }
+	# }
+	# penetration_support_weapons_T4 = {
+	# 	enable_equipments = { infantry_equipment_0 }
+	# 	research_cost = 2
+	# 	folder = {
+	# 		name = infantry_folder
+	# 		position = { x = 1 y = 11 }
+	# 	}
+	# 	path = { leads_to_tech = penetration_support_weapons_T5 }
+	# 	sub_technologies = { penetration_support_weapons_upgrade_T4 }
+	# 	dependencies = { tech_MIL_rank_IV_token = 1 }
+	# 	categories = { infantry_weapons }
+	# 	ai_will_do = { factor = 1 }
+	# }
+	# burst_support_weapons_T5 = {
+	# 	enable_equipments = { infantry_equipment_0 }
+	# 	research_cost = 2
+	# 	folder = {
+	# 		name = infantry_folder
+	# 		position = { x = -2 y = 15 }
+	# 	}
+	# 	dependencies = { tech_MIL_rank_V_token = 1 }
+	# 	categories = { infantry_weapons }
+	# 	ai_will_do = { factor = 1 }
+	# }
+	# penetration_support_weapons_T5 = {
+	# 	enable_equipments = { infantry_equipment_0 }
+	# 	research_cost = 2
+	# 	folder = {
+	# 		name = infantry_folder
+	# 		position = { x = 2 y = 15 }
+	# 	}
+	# 	dependencies = { tech_MIL_rank_V_token = 1 }
+	# 	categories = { infantry_weapons }
+	# 	ai_will_do = { factor = 1 }
+	# }
+	# mystical_support_weapons_T3 = {
+	# 	enable_equipments = { infantry_equipment_0 }
+	# 	research_cost = 2
+	# 	folder = {
+	# 		name = infantry_folder
+	# 		position = { x = 0 y = 7 }
+	# 	}
+	# 	path = { leads_to_tech = mystical_support_weapons_T5 }
+	# 	dependencies = { tech_MIL_rank_III_token = 1 }
+	# 	dependencies = { tech_MYS_rank_III_token = 1 }
+	# 	categories = { infantry_weapons }
+	# 	ai_will_do = { factor = 1 }
+	# }
+	# mystical_support_weapons_T5 = {
+	# 	enable_equipments = { infantry_equipment_0 }
+	# 	research_cost = 2
+	# 	folder = {
+	# 		name = infantry_folder
+	# 		position = { x = 0 y = 15 }
+	# 	}
+	# 	dependencies = { tech_MIL_rank_V_token = 1 }
+	# 	dependencies = { tech_MYS_rank_V_token = 1 }
+	# 	categories = { infantry_weapons }
+	# 	ai_will_do = { factor = 1 }
+	# }
+
+	# burst_support_weapons_upgrade_T2 = {
+	# 	research_cost = 1
+	# 	folder = {
+	# 		name = infantry_folder
+	# 		position = { x = -2 y = 8 }
+	# 	}
+	# 	dependencies = { tech_MIL_rank_II_token = 1 }
+	# 	categories = { infantry_weapons }
+	# 	ai_will_do = { factor = 1 }
+	# }
+	# penetration_support_weapons_upgrade_T2 = {
+	# 	research_cost = 1
+	# 	folder = {
+	# 		name = infantry_folder
+	# 		position = { x = 2 y = 8 }
+	# 	}
+	# 	dependencies = { tech_MIL_rank_II_token = 1 }
+	# 	categories = { infantry_weapons }
+	# 	ai_will_do = { factor = 1 }
+	# }
+	# burst_support_weapons_upgrade_T3 = {
+	# 	research_cost = 1
+	# 	folder = {
+	# 		name = infantry_folder
+	# 		position = { x = -2 y = 7 }
+	# 	}
+	# 	dependencies = { tech_MIL_rank_III_token = 1 }
+	# 	categories = { infantry_weapons }
+	# 	ai_will_do = { factor = 1 }
+	# }
+	# penetration_support_weapons_upgrade_T3 = {
+	# 	research_cost = 1
+	# 	folder = {
+	# 		name = infantry_folder
+	# 		position = { x = 2 y = 7 }
+	# 	}
+	# 	dependencies = { tech_MIL_rank_III_token = 1 }
+	# 	categories = { infantry_weapons }
+	# 	ai_will_do = { factor = 1 }
+	# }
+	# burst_support_weapons_upgrade_T4 = {
+	# 	research_cost = 1
+	# 	folder = {
+	# 		name = infantry_folder
+	# 		position = { x = -1 y = 13 }
+	# 	}
+	# 	dependencies = { tech_MIL_rank_IV_token = 1 }
+	# 	categories = { infantry_weapons }
+	# 	ai_will_do = { factor = 1 }
+	# }
+	# penetration_support_weapons_upgrade_T4 = {
+	# 	research_cost = 1
+	# 	folder = {
+	# 		name = infantry_folder
+	# 		position = { x = 1 y = 13 }
+	# 	}
+	# 	dependencies = { tech_MIL_rank_IV_token = 1 }
+	# 	categories = { infantry_weapons }
+	# 	ai_will_do = { factor = 1 }
+	# }
+
+}

@@ -1,0 +1,15 @@
+state={
+	id=508
+	name="STATE_508"
+	provinces={
+		1571 1662 2168 2315 3530 3608 4419 5101 5183 5189 5343 6631 6793 7100 7366 11885 11944 11996 
+	}
+	history = {
+		owner = CAE
+		add_core_of=CAE
+		victory_points = {11944 15}
+    }
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

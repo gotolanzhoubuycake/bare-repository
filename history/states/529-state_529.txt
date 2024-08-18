@@ -1,0 +1,15 @@
+state={
+	id=529
+	name="STATE_529"
+	provinces={
+		327 336 739 1081 2075 3353 3412 3458 4949 5267 7663 7823 7952 7960 11039 11084 11111 
+	}
+	history = {
+		owner = D09
+		add_core_of=D09
+		victory_points = {7663 10}
+    }
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

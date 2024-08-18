@@ -1,0 +1,15 @@
+state={
+	id=426
+	name="STATE_426"
+	provinces={
+		96 506 807 1258 1416 1861 2250 2509 2891 4095 4169 5193 5263 5546 6023 6739 6753 6989 8029 8105 8445 10488 10526 10572 10578 10580 10590 10600 10614 10616 
+	}
+	history = {
+		owner = HYA
+		add_core_of=HYA
+		victory_points = {10578 10}
+    }
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

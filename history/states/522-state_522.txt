@@ -1,0 +1,14 @@
+state={
+	id=522
+	name="STATE_522"
+	provinces={
+		680 1029 1310 1389 2096 2480 2487 2599 2996 3600 3715 4366 4558 4617 4726 5568 6077 6170 7963 8063 8080 8117 8125 8264 8590 8913 9244 10814 10860 10888 10900 10923 10962 
+	}
+	history={
+		owner = CAB
+		add_core_of=CAB
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

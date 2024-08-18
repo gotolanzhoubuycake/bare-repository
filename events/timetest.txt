@@ -1,0 +1,52 @@
+add_namespace = TimeTest
+
+country_event = {
+	id = TimeTest.1
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		add_to_variable = { global.Time_minutes = 1 }
+		if = {
+			limit = {
+				check_variable = { global.Time_minutes = 6 }
+			}
+			set_variable = { global.Time_minutes = 0 }
+			add_to_variable = { global.Time_hours = 1 }
+			Timetest_in_night_season = yes
+			if = {
+				limit = {
+					check_variable = { global.Time_hours = 24 }
+				}
+				Time_count_effect = yes
+			}
+		}
+		country_event = {
+			id = TimeTest.1
+			hours = 2
+		}
+	}
+}
+country_event = {
+	id = TimeTest.2
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		#set_variable = { country_night__base = 0 }
+		#set_variable = { country_night_industrial_capacity_factory_base = -0.8 }
+		set_variable = { country_night_production_speed_buildings_factor_base = -0.9 }
+		set_variable = { country_night_industry_free_repair_factor_base = -0.75 }
+
+		set_variable = { country_night_army_attack_factor_base = -0.5 }
+		set_variable = { country_night_army_speed_factor_base = -0.8 }
+		set_variable = { country_night_army_morale_factor_base = 0.5 }
+
+		set_variable = { country_night_air_interception_detect_factor_base = -0.2 }
+		set_variable = { country_night_air_superiority_detect_factor_base = -0.2 }
+		set_variable = { country_night_air_mission_efficiency_base = -0.5 }
+		set_variable = { country_night_air_cas_present_factor_base = -0.9 }
+		set_variable = { country_night_air_bombing_targetting_base = -0.5 }
+		set_variable = { country_night_air_attack_factor_base = -0.5 }
+
+		Timetest_night_modifiers_check = yes
+	}
+}

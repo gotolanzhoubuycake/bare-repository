@@ -1,0 +1,16 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_TC_apc_chassis"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/apc.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_TC_helicopter_airframe"
+		textureFile = "gfx/interface/equipmentdesigner/plane/balp_mh60.dds"
+	}
+
+	spriteType = {
+		name = "GFX_TC_balp_helicopter_cas_airframe"
+		textureFile = "gfx/interface/equipmentdesigner/plane/balp_ah64.dds"
+	}
+}

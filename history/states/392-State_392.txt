@@ -1,0 +1,14 @@
+state={
+	id=392
+	name="STATE_392"
+	provinces={
+		265 566 616 663 983 1645 2006 2167 2859 2976 4317 4876 4912 5129 5246 5984 6139 7205 7289 7636 7760 8570 9441 10659 10682 10685 10728 10732 
+	}
+	history = {
+		owner = GEH
+		add_core_of=GEH
+    }
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

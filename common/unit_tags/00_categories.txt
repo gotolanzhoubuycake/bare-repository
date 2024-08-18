@@ -1,0 +1,38 @@
+sub_unit_categories = {
+	category_tanks
+	category_light_infantry
+    category_front_line
+	category_all_infantry
+	category_support_battalions
+	category_militia
+	category_all_armor
+	category_army
+	category_line_artillery
+	category_artillery
+	category_fighter
+	category_heavy_fighter
+	category_cas
+	category_special_forces
+	category_nav_bomber
+	category_tac_bomber
+	category_strat_bomber
+	category_scout_plane
+	category_recon
+	category_mountaineers
+	category_paratroopers
+	category_marines
+	category_anti_air
+	category_amphibious_tanks
+	category_support_artillery
+	category_cavalry
+	category_bus
+
+	category_normlly_infantry #普通步兵
+	category_special_infantry #普通步兵
+	category_student_unit#学生单位
+	category_civ_unit#学生单位
+	category_light_artillery#爆发火力支援单位
+	category_heavy_artillery#贯穿火力支援单位
+	category_special_artillery#神秘火力支援单位
+
+}

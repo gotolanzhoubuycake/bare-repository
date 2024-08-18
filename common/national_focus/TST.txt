@@ -1,0 +1,15 @@
+﻿focus_tree = {
+	id = TST_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 1
+			tag = TST
+			
+		}
+	}
+	
+	default = no
+}

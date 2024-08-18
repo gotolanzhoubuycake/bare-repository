@@ -1,0 +1,15 @@
+state={
+	id=531
+	name="STATE_531"
+	provinces={
+		644 660 884 1913 2184 2771 5474 5618 6869 8909 9292 11045 11120 
+	}
+	history={
+		owner = ARI
+		add_core_of=ARI
+		victory_points = {660 15}
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

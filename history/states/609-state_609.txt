@@ -1,0 +1,16 @@
+state={
+	id=609
+	name="STATE_609"
+	provinces={
+		187 470 1366 1602 1641 1670 1976 2137 2741 3328 5024 5116 5621 5864 5933 6059 6257 6379 6534 6590 6863 7650 7835 8931 9512 11139 11141 11159 11168 11178 11179 11203 11228 11229 
+	}
+	history={
+		owner = CAP
+		add_core_of=CAP
+		victory_points = {11141 10}
+	}
+	manpower=2
+	state_category=rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

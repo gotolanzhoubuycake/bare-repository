@@ -1,0 +1,14 @@
+state={
+	id=513
+	name="STATE_513"
+	provinces={
+		385 767 929 1970 2051 2316 2391 2662 3072 3271 3702 4035 4065 4235 4288 5123 5135 5635 5648 6022 6036 6392 6525 6916 7105 7117 8533 9002 9191 11396 11439 11452 11458 11469 11495 
+	}
+	history = {
+		owner = SHA
+		add_core_of=SHA
+    }
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

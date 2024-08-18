@@ -1,0 +1,15 @@
+state={
+	id=209
+	name="STATE_209"
+	provinces={
+		52 286 2221 3330 4774 5179 5500 5771 6992 7160 8145 8414 8513 9552 10895 10912 
+	}
+	history={
+		owner = CAP
+		add_core_of=CAP
+	}
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

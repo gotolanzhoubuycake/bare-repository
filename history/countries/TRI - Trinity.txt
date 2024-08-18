@@ -1,0 +1,152 @@
+capital = 16
+oob = "standard_templates"
+
+set_stability = 0.50
+set_war_support = 0.50
+set_research_slots = 4
+set_fuel_ratio = 0.5
+set_convoys = 20
+starting_train_buffer = 0.5
+starting_truck_buffer = 0.5
+
+#圣三一权力平衡变量
+#上议院分布
+set_variable = { House_support_num = 12 }
+set_variable = { House_centrist_num = 9 }
+set_variable = { House_opposition_num = 9 }
+
+set_variable = { House_change_num = 0 }
+
+#下议院分布
+set_variable = { Senators_support_num = 26 }
+set_variable = { Senators_centrist_num = 47 }
+set_variable = { Senators_opposition_num = 27 }
+
+set_variable = { Senators_change_num = 0 }
+
+#帕特尔派初始值
+set_variable = { Patel_house_seatNumber = 10 } #帕特尔派席位总数
+set_variable = { Patel_house_seatNum_support = 1 } #帕特尔派支持席位
+set_variable = { Patel_house_seatNum_opposition = 8 } #帕特尔派反对派席位
+set_variable = { Patel_house_seatNum_centrist = 1 } #帕特尔派中间派席位
+
+#菲利乌斯派初始值
+set_variable = { Filius_house_seatNumber = 10 } 
+set_variable = { Filius_house_seatNum_support = 2 }
+set_variable = { Filius_house_seatNum_opposition = 1 }
+set_variable = { Filius_house_seatNum_centrist = 7 }
+
+#圣库特斯派初始值
+set_variable = { Cootes_house_seatNumber = 10 }
+set_variable = { Cootes_house_seatNum_support = 9 }
+set_variable = { Cootes_house_seatNum_opposition = 0 }
+set_variable = { Cootes_house_seatNum_centrist = 1 }
+
+#主要上议院派系标记
+set_country_flag = { #0代表帕特尔，1代表菲利乌斯，2代表圣库特斯	
+	flag = TRI_main_house_party
+	value = 0
+}
+
+TRI_house_init_parliament = yes
+
+#下议院
+
+#正义实现委员会
+set_variable = { Justice_senators_seatNumber = 20 }
+set_variable = { Justice_senators_seatNum_support = 1 }
+set_variable = { Justice_senators_seatNum_opposition = 14 }
+set_variable = { Justice_senators_seatNum_centrist = 5 }
+
+#修女会
+set_variable = { Teresa_senators_seatNumber = 20 }
+set_variable = { Teresa_senators_seatNum_support = 0 }
+set_variable = { Teresa_senators_seatNum_opposition = 0 }
+set_variable = { Teresa_senators_seatNum_centrist = 20 }
+
+#救护骑士团
+set_variable = { Knight_senators_seatNumber = 20 }
+set_variable = { Knight_senators_seatNum_support = 5 }
+set_variable = { Knight_senators_seatNum_opposition = 5 }
+set_variable = { Knight_senators_seatNum_centrist = 10 }
+
+#其他社团
+set_variable = { Others_senators_seatNumber = 40 }
+set_variable = { Others_senators_seatNum_support = 20 }
+set_variable = { Others_senators_seatNum_opposition = 8 }
+set_variable = { Others_senators_seatNum_centrist = 12 }
+
+#主要下议院派系标记
+set_country_flag = { #0代表正义，1代表修女会，2代表救护骑士团，3代表其他社团	
+	flag = TRI_main_senators_party
+	value = 0
+}
+
+TRI_senators_init_parliament = yes
+
+#桐藤渚政治偏执度设计
+set_variable = { TRI_nagisa_paranoia_modifier_increase = 2 }
+
+#【争辩无休的《伊甸条约》方针】民族精神变量
+set_variable = { eden_daily_power_gain = -0.75 }
+set_variable = { eden_stability = -0.15 }
+set_variable = { eden_goods_factor = 0.20 }
+set_variable = { eden_war_support = 0 }
+set_variable = { eden_research_speed = 0 }
+set_variable = { eden_conscription_factor = 0 }
+
+#【特殊事务调查部】民族精神变量
+set_variable = { ssi_operative_slot = 1 }
+set_variable = { ssi_agency_upgrade_time = -0.33 }
+set_variable = { ssi_political_power_gain = 0 }
+set_variable = { ssi_stability = 0 }
+
+#【不谐之音】民族精神变量
+set_variable = { dissonance_daily_power_gain = -0.1 }
+set_variable = { dissonance_stability = -0.1 }
+set_variable = { dissonance_goods_factor = 0.15 }
+set_variable = { dissonance_building_speed = -0.1 }
+set_variable = { dissonance_factory_output = 0 }
+set_variable = { dissonance_training_time = 0 } 
+
+#【物资调配】民族精神变量
+set_variable = { ma_stability = -0.1 }
+set_variable = { ma_goods_factor = -0.1 }
+set_variable = { ma_building_speed = 0 }
+set_variable = { ma_daily_power_gain = 0 }
+set_variable = { ma_economy_cost = 0 }
+
+#【圣三一工业】民族精神变量
+set_variable = { tim_factory_output = 0.05 }
+set_variable = { tim_arms_factory_building_speed = -0.15 }
+set_variable = { tim_building_speed = 0 }
+set_variable = { tim_industrial_building_speed = 0 }
+set_variable = { tim_production_efficiency_cap = 0 }
+set_variable = { tim_production_efficiency_gain = 0 }
+set_variable = { tim_line_change_efficiency = 0 }
+set_variable = { tim_civ_to_mil_cost = 0 }
+set_variable = { tim_mil_to_civ_cost = 0 }
+set_variable = { tim_production_lack = 0 }
+
+# Starting tech
+set_technology = {
+}
+
+add_ideas = {
+
+}
+
+recruit_character = TRI_nagisa
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 100
+	fascism = 0
+	communism = 0
+	neutrality = 0
+}

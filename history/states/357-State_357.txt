@@ -1,0 +1,15 @@
+state={
+	id=357
+	name="STATE_357"
+	provinces={
+		379 1205 1346 1860 2053 2603 2832 3795 4273 4395 4616 4920 5436 6604 7676 7695 7855 8326 8469 8481 8619 9286 9545 9573 10854 10869 10897 10909 10915 10925 10932 10950 10958 
+	}
+	history = {
+		owner = SHA
+		add_core_of=SHA
+    }
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

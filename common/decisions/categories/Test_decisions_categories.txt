@@ -1,0 +1,14 @@
+# Test_time_decisions_categories = {
+# 	visible = {
+# 		is_ai = no
+# 	}
+# 	priority = 100
+# 	visible_when_empty = yes
+# } 
+Test_student_decisions_categories = {
+	visible = {
+		is_ai = no
+	}
+	priority = 99
+	visible_when_empty = yes
+}

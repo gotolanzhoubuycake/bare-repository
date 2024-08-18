@@ -1,0 +1,15 @@
+state={
+	id=335
+	name="STATE_335"
+	provinces={
+		312 594 810 839 1466 2450 3566 5727 5930 6083 7753 7988 8000 8799 9008 
+	}
+	history = {
+		owner = MIL
+		add_core_of=MIL
+    }
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

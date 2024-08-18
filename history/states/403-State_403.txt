@@ -1,0 +1,14 @@
+state={
+	id=403
+	name="STATE_403"
+	provinces={
+		1159 34 1187 2201 2422 3017 3331 3850 3957 4418 4513 4682 5383 5558 5801 6229 7351 7907 8073 8173 8257 8739 9101 10778 10802 10828 10852 10858 10872 10931 10935
+	}
+	history = {
+		owner = GEH
+		add_core_of=GEH
+    }
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

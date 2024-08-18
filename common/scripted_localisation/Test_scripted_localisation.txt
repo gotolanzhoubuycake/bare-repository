@@ -1,0 +1,21 @@
+defined_text = {
+    name = Time_day_night_text
+    text = {
+        trigger = {
+			has_dynamic_modifier = {
+				modifier = Timetest_night_modifiers
+			}
+        }
+        localization_key = Time_day_night_text_night
+    }
+    text = {
+        trigger = {
+			NOT = {
+				has_dynamic_modifier = {
+					modifier = Timetest_night_modifiers
+				}
+			}
+        }
+        localization_key = Time_day_night_text_day
+    }
+}

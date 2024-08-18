@@ -1,0 +1,103 @@
+bookmarks = {
+	bookmark = {
+		name = "GATHERING_STORM_NAME"
+		desc = "GATHERING_STORM_DESC"
+		date = 1936.1.1.12
+		picture = "GFX_select_date_1936"
+		default_country = "MIL"
+		default = yes
+		"SRT"={
+			history = ""
+			ideology = democratic
+			ideas = {
+
+			}
+			focuses = {
+				
+			}
+		}
+		
+		"GEH"={
+			history = ""
+			ideology = democratic
+			ideas = {
+
+			}
+			focuses = {
+				
+			}
+		}
+		
+		"ABY"={
+			history = ""
+			ideology = democratic
+			ideas = {
+
+			}
+			focuses = {
+				
+			}
+		}
+		
+		"TRI"={
+			history = ""
+			ideology = democratic
+			ideas = {
+
+			}
+			focuses = {
+				
+			}
+		}
+		
+		"SHA"={
+			history = ""
+			ideology = democratic
+			ideas = {
+
+			}
+			focuses = {
+				
+			}
+		}
+		
+		"HYA"={
+			history = ""
+			ideology = democratic
+			ideas = {
+
+			}
+			focuses = {
+				
+			}
+		}
+		
+		"MIL"={
+			history = ""
+			ideology = democratic
+			ideas = {
+
+			}
+			focuses = {
+				
+			}
+		}
+		
+		"RWT"={
+			history = ""
+			ideology = democratic
+			ideas = {
+
+			}
+			focuses = {
+				
+			}
+		}
+		
+		
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

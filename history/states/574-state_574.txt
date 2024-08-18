@@ -1,0 +1,15 @@
+state={
+	id=574
+	name="STATE_574"
+	provinces={
+		94 641 736 888 2211 2445 2525 2669 2809 3090 3141 3611 3719 3871 5433 5464 6702 7050 7171 7223 7472 7818 7921 8727 8847 8896 9274 9366 9439 10307 10344 10379 10390 10413 
+	}
+	history={
+		owner = RWT
+		add_core_of=RWT
+	}
+	manpower=0
+	state_category=wasteland
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

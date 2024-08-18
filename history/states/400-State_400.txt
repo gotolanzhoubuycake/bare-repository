@@ -1,0 +1,14 @@
+state={
+	id=400
+	name="STATE_400"
+	provinces={
+		479 657 1497 1597 1846 2478 2768 3644 3696 3982 4618 4619 4995 5992 6019 6049 6102 6234 7483 7828 8255 8457 9010 9507 10417 10425 10447 10451 10460 10465 10475 
+	}
+	history = {
+		owner = GEH
+		add_core_of=GEH
+    }
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

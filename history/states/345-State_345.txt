@@ -1,0 +1,16 @@
+state={
+	id=345
+	name="STATE_345"
+	provinces={
+		186 966 1232 1271 1417 1500 2043 3267 3397 3594 4269 4344 5528 5587 6286 6300 6503 6717 7059 7144 7166 7658 7684 8100 8584 9046 9294 9397 9450 9502 11979 11993 12034 12044 12058 12059 12121 12123 12128 
+	}
+	history = {
+		owner = D13
+		add_core_of=D13
+		victory_points = {5528 10}
+    }
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,736 @@
+focus_tree = {
+	id = Kaiser_base
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = CAE
+		}
+	}
+	default = no
+	##以下为序章剧情线
+	focus = {
+		id = CAE_president_morning #总裁的早晨
+		#icon = GFX_goal_unknown
+		cost = 5
+		x = 20
+		y = 0
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+				
+			}			
+		}
+		focus = {
+			id = CAE_year_report #集团财年整体报告
+			#icon = GFX_goal_unknown
+			relative_position_id = CAE_president_morning
+			prerequisite = {
+                focus = CAE_president_morning
+			}			
+			cost = 5
+			x = 0
+			y = 1
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+
+				}			
+	}
+
+	##以下为主线
+		focus = {
+			id = CAE_inspect_subsidiaries #视察子公司
+			#icon = GFX_goal_unknown
+			relative_position_id = CAE_year_report
+			prerequisite = {
+                focus = CAE_year_report
+			}			
+			cost = 5
+			x = -8
+			y = 1.5
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+
+				}			
+	}
+	focus = {
+		id = CAE_inspect_abbydos #监督阿拜多斯项目进展
+		#icon = GFX_goal_unknown
+		relative_position_id = CAE_inspect_subsidiaries
+		prerequisite = {
+			focus = CAE_inspect_subsidiaries
+		}			
+		cost = 5
+		x = -4
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAE_make_taco_plan #制定章鱼银行年度规划
+		#icon = GFX_goal_unknown
+		relative_position_id = CAE_inspect_abbydos
+		prerequisite = {
+			focus = CAE_inspect_abbydos
+		}			
+		cost = 5
+		x = -2
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAE_arrange_pmc #部署凯撒PMC
+		#icon = GFX_goal_unknown
+		relative_position_id = CAE_inspect_abbydos
+		prerequisite = {
+			focus = CAE_inspect_abbydos
+		}			
+		cost = 5
+		x = 2
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}
+	focus = {
+		id = CAE_hire_zago #雇佣钢盔团
+		#icon = GFX_goal_unknown
+		relative_position_id = CAE_make_taco_plan
+		prerequisite = {
+			focus = CAE_make_taco_plan
+		}		
+		prerequisite = {
+			focus = CAE_arrange_pmc
+		}			
+		cost = 5
+		x = 2
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAE_turn_up_rate #提高阿拜多斯借款利率
+		#icon = GFX_goal_unknown
+		relative_position_id = CAE_hire_zago
+		prerequisite = {
+			focus = CAE_hire_zago
+		}			
+		cost = 5
+		x = -2
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAE_deal_with_black_suit #与黑服的交易
+		#icon = GFX_goal_unknown
+		relative_position_id = CAE_hire_zago
+		prerequisite = {
+			focus = CAE_hire_zago
+		}			
+		cost = 5
+		x = 2
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAE_handling_files #处理黑市泄密文件
+		#icon = GFX_goal_unknown
+		relative_position_id = CAE_turn_up_rate
+		prerequisite = {
+			focus = CAE_turn_up_rate
+		}			
+		prerequisite = {
+			focus = CAE_deal_with_black_suit
+		}		
+		cost = 5
+		x = 2
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAE_military_operation #在阿拜多斯的军事行动
+		#icon = GFX_goal_unknown
+		relative_position_id = CAE_handling_files
+		prerequisite = {
+			focus = CAE_handling_files
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+		focus = {
+			id = CAE_industry_focus #凯撒重工年度中心
+			#icon = GFX_goal_unknown
+			relative_position_id = CAE_inspect_subsidiaries
+			prerequisite = {
+                focus = CAE_inspect_subsidiaries
+			}			
+			cost = 5
+			x = 1
+			y = 1
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+
+				}			
+	}
+	focus = {
+		id = CAE_new_executive_director #派遣新任执行董事
+		#icon = GFX_goal_unknown
+		relative_position_id = CAE_industry_focus
+		prerequisite = {
+			focus = CAE_industry_focus
+		}	
+		cost = 5
+		x = -1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAE_production_list #罗列年度产品移交清单
+		#icon = GFX_goal_unknown
+		relative_position_id = CAE_industry_focus
+		prerequisite = {
+			focus = CAE_industry_focus
+		}			
+		cost = 5
+		x = 1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAE_profit_requirements #对凯撒百货提出盈利要求
+		#icon = GFX_goal_unknown
+		relative_position_id = CAE_inspect_subsidiaries
+			prerequisite = {
+                focus = CAE_inspect_subsidiaries
+			}			
+		cost = 5
+		x = 6
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAE_reorganize_leadership#重组领导层
+		#icon = GFX_goal_unknown
+		relative_position_id = CAE_profit_requirements
+		prerequisite = {
+			focus = CAE_profit_requirements
+		}
+		cost = 5
+		x = -1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAE_increase_shareholding #提高总部持股份额
+		#icon = GFX_goal_unknown
+		relative_position_id = CAE_profit_requirements
+		prerequisite = {
+			focus = CAE_profit_requirements
+		}			
+		cost = 5
+		x = 1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAE_ensure_leadership#确立总部领导权
+		#icon = GFX_goal_unknown
+		relative_position_id = CAE_production_list
+		prerequisite = {
+			focus = CAE_new_executive_director
+		}	
+		prerequisite = {
+			focus = CAE_production_list
+		}	
+		prerequisite = {
+			focus = CAE_reorganize_leadership
+		}	
+		prerequisite = {
+			focus = CAE_increase_shareholding
+		}		
+		cost = 5
+		x = 1.5
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAE_mobility_system #集团内人员流动制度
+		#icon = GFX_goal_unknown
+		relative_position_id = CAE_ensure_leadership
+		prerequisite = {
+			focus = CAE_ensure_leadership
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	##以下为分公司线
+	focus = {
+		id = CAE_branch_Meeting #分公司高管会议
+		#icon = GFX_goal_unknown
+		relative_position_id = CAE_year_report
+		prerequisite = {
+			focus = CAE_year_report
+		}			
+		cost = 5
+		x = 3
+		y = 1.5
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAE_kasier_electronics #凯撒电子
+		#icon = GFX_goal_unknown
+		relative_position_id = CAE_branch_Meeting
+		prerequisite = {
+			focus = CAE_branch_Meeting
+		}	
+		cost = 5
+		x = -2
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAE_phone_launch #新品手机发布会
+		#icon = GFX_goal_unknown
+		relative_position_id = CAE_kasier_electronics
+		prerequisite = {
+			focus = CAE_kasier_electronics
+		}
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAE_estate_company #凯撒地产
+		#icon = GFX_goal_unknown
+		relative_position_id = CAE_branch_Meeting
+		prerequisite = {
+			focus = CAE_branch_Meeting
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAE_selling_real_estate #向子公司出售地产
+		#icon = GFX_goal_unknown
+		relative_position_id = CAE_estate_company
+		prerequisite = {
+			focus = CAE_estate_company
+		}			
+	
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAE_acquiring_seaside_resorts #收购海边度假村
+		#icon = GFX_goal_unknown
+		relative_position_id = CAE_selling_real_estate
+		prerequisite = {
+			focus = CAE_selling_real_estate
+		}	
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAE_acquisition_plan#小兔子镇并购计划
+		#icon = GFX_goal_unknown
+		relative_position_id = CAE_acquiring_seaside_resorts
+		prerequisite = {
+			focus = CAE_acquiring_seaside_resorts
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+		focus = {
+		id = CAE_kexon_games #凯撒游戏
+		#icon = GFX_goal_unknown
+		relative_position_id = CAE_branch_Meeting
+		prerequisite = {
+			focus = CAE_branch_Meeting
+		}			
+		cost = 5
+		x = 3
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAE_draw_bill #应对玩家开发票
+		#icon = GFX_goal_unknown
+		relative_position_id = CAE_kexon_games
+		prerequisite = {
+			focus = CAE_kexon_games
+		}	
+		cost = 5
+		x = -1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAE_truck_complaints #应对卡车投诉
+		#icon = GFX_goal_unknown
+		relative_position_id = CAE_kexon_games
+		prerequisite = {
+			focus = CAE_kexon_games
+		}
+		cost = 5
+		x = 1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAE_project_mx #project mx立项	
+		#icon = GFX_goal_unknown
+		relative_position_id = CAE_draw_bill
+		prerequisite = {
+			focus = CAE_draw_bill
+		}	
+		prerequisite = {
+			focus = CAE_truck_complaints
+		}			
+		cost = 5
+		x = 1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAE_kim_yong_ha #招募金用河
+		#icon = GFX_goal_unknown
+		relative_position_id = 	CAE_project_mx
+		prerequisite = {
+			focus = 	CAE_project_mx
+		}			
+	
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAE_samsung_bioepis #凯撒制药
+		#icon = GFX_goal_unknown
+		relative_position_id = CAE_branch_Meeting
+		prerequisite = {
+			focus = CAE_branch_Meeting
+		}	
+		cost = 5
+		x = 6
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAE_diet_pills #减肥药研发
+		#icon = GFX_goal_unknown
+		relative_position_id = CAE_samsung_bioepis
+		prerequisite = {
+			focus = CAE_samsung_bioepis
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	##以下为军事线
+	focus = {
+		id = CAE_kaiser_sochongsu #凯撒陆军
+		#icon = GFX_goal_unknown
+		relative_position_id = CAE_year_report
+		prerequisite = {
+			focus = CAE_year_report
+		}			
+		cost = 5
+		x = 14
+		y = 1.5
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAE_kaiser_yebigun #建立后备军体制
+		#icon = GFX_goal_unknown
+		relative_position_id = CAE_kaiser_sochongsu
+		prerequisite = {
+			focus = CAE_kaiser_sochongsu
+		}	
+		mutually_exclusive = {
+			focus = CAE_enhance_pmc
+		}		
+		cost = 5
+		x = -2
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAE_capital_defense_command #设立总部警卫司令部
+		#icon = GFX_goal_unknown
+		relative_position_id = CAE_kaiser_yebigun
+		prerequisite = {
+			focus = CAE_kaiser_yebigun
+		}
+		cost = 5
+		x = -1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAE_white_bird_division #设立白鸟部队
+		#icon = GFX_goal_unknown
+		relative_position_id = CAE_capital_defense_command
+		prerequisite = {
+			focus = CAE_capital_defense_command
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAE_enhance_pmc#扩大PMC雇佣规模
+		#icon = GFX_goal_unknown
+		relative_position_id = CAE_kaiser_sochongsu
+		prerequisite = {
+			focus = CAE_kaiser_sochongsu
+		}	
+		mutually_exclusive = {
+			focus = CAE_kaiser_yebigun
+		}				
+		cost = 5
+		x = 2
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAE_form_kaswc #设立特战司令部
+		#icon = GFX_goal_unknown
+		relative_position_id = CAE_kaiser_yebigun
+		prerequisite = {
+			focus = CAE_kaiser_yebigun
+			focus = CAE_enhance_pmc
+		}
+		cost = 5
+		x = 2
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAE_airborne_special_forces_training #空输部队特训
+		#icon = GFX_goal_unknown
+		relative_position_id = CAE_form_kaswc
+		prerequisite = {
+			focus = CAE_form_kaswc
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAE_pmc_weapon #精英PMC特制武器
+		#icon = GFX_goal_unknown
+		relative_position_id = CAE_enhance_pmc
+		prerequisite = {
+			focus = CAE_enhance_pmc
+		}		
+		cost = 5
+		x = 1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}
+	focus = {
+		id = CAE_enhance_sof #精英化凯撒SOF 
+		#icon = GFX_goal_unknown
+		relative_position_id = CAE_pmc_weapon
+		prerequisite = {
+			focus = CAE_pmc_weapon
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAE_estabilsh_kjcs #设立联合参谋本部
+		#icon = GFX_goal_unknown
+		relative_position_id = CAE_airborne_special_forces_training
+		prerequisite = {
+			focus = CAE_white_bird_division
+			focus = CAE_airborne_special_forces_training
+		}		
+		prerequisite = {
+			focus = CAE_enhance_sof
+			focus = CAE_airborne_special_forces_training
+		}	
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}
+
+	##以下为情报线
+	focus = {
+		id = CAE_group_intelligence #集团情报
+		#icon = GFX_goal_unknown
+		relative_position_id = CAE_year_report
+		prerequisite = {
+			focus = CAE_year_report
+		}			
+		cost = 5
+		x = 19
+		y = 1.5
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAE_estabilsh_kcia #为企业安保配置武器
+		#icon = GFX_goal_unknown
+		relative_position_id = CAE_group_intelligence
+		prerequisite = {
+			focus = CAE_group_intelligence
+		}	
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAE_kim_jae_gyu #启用金部长
+		#icon = GFX_goal_unknown
+		relative_position_id = CAE_estabilsh_kcia
+		prerequisite = {
+			focus = CAE_estabilsh_kcia
+		}
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+}

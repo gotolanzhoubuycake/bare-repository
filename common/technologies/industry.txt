@@ -1,0 +1,292 @@
+technologies = {
+	industrial_complex_I = {
+		enable_building = {
+			building = industrial_complex
+			level = 9
+		}
+		folder = {
+			name = industry_folder
+			position = { x = 0 y = 0 }
+		}
+		research_cost = 2
+		path = { leads_to_tech = industrial_complex_II }
+		path = { leads_to_tech = synthetic_refinery_I }
+		dependencies = { tech_CIV_rank_I_token = 1 }
+	}
+	industrial_complex_II = {
+		
+		global_building_slots_factor = 0.25
+		folder = {
+			name = industry_folder
+			position = { x = 2 y = 0 }
+		}
+		research_cost = 2
+		path = { leads_to_tech = industrial_complex_III }
+		path = { leads_to_tech = refining_complex_I }
+		dependencies = { tech_CIV_rank_II_token = 1 }
+	}
+	industrial_complex_III = {
+		global_building_slots_factor = 0.25
+		folder = {
+			name = industry_folder
+			position = { x = 4 y = 0 }
+		}
+		research_cost = 2
+		path = { leads_to_tech = industrial_complex_IV }
+		path = { leads_to_tech = processing_complex_I }
+		path = { leads_to_tech = petrochemical_complex_I }
+		dependencies = { tech_CIV_rank_III_token = 1 }
+	}
+	industrial_complex_IV = {
+		global_building_slots_factor = 0.25
+		folder = {
+			name = industry_folder
+			position = { x = 6 y = 0 }
+		}
+		research_cost = 2
+		path = { leads_to_tech = industrial_complex_V }
+		dependencies = { tech_CIV_rank_IV_token = 1 }
+	}
+	industrial_complex_V = {
+		global_building_slots_factor = 0.25
+		folder = {
+			name = industry_folder
+			position = { x = 8 y = 0 }
+		}
+		research_cost = 2
+		dependencies = { tech_CIV_rank_V_token = 1 }
+	}
+
+	refining_complex_I = {
+		enable_building = {
+			building = refining_complex
+			level = 3
+		}
+		folder = {
+			name = industry_folder
+			position = { x = 2 y = 2 }
+		}
+		research_cost = 2
+		path = { leads_to_tech = refining_complex_II }
+		path = { leads_to_tech = arms_factory_I }
+		dependencies = { tech_CIV_rank_II_token = 1 }
+	}
+	arms_factory_I = {
+		enable_building = {
+			building = arms_factory
+			level = 9
+		}
+		folder = {
+			name = industry_folder
+			position = { x = 2 y = 4 }
+		}
+		research_cost = 2
+		dependencies = { tech_MIL_rank_II_token = 1 }
+	}
+	refining_complex_II = {
+		
+		folder = {
+			name = industry_folder
+			position = { x = 4 y = 2 }
+		}
+		research_cost = 2
+		path = { leads_to_tech = refining_complex_III }
+		dependencies = { tech_CIV_rank_III_token = 1 }
+	}
+	refining_complex_III = {
+
+		folder = {
+			name = industry_folder
+			position = { x = 6 y = 2 }
+		}
+		research_cost = 2
+		path = { leads_to_tech = refining_complex_IV }
+		dependencies = { tech_CIV_rank_IV_token = 1 }
+	}
+	refining_complex_IV = {
+		
+		folder = {
+			name = industry_folder
+			position = { x = 8 y = 2 }
+		}
+		research_cost = 2
+		dependencies = { tech_CIV_rank_V_token = 1 }
+	}
+
+	processing_complex_I = {
+		enable_building = {
+			building = processing_complex
+			level = 3
+		}
+		folder = {
+			name = industry_folder
+			position = { x = 4 y = 4 }
+		}
+		research_cost = 2
+		path = { leads_to_tech = processing_complex_II }
+		dependencies = { tech_CIV_rank_III_token = 1 }
+	}
+	processing_complex_II = {
+
+		folder = {
+			name = industry_folder
+			position = { x = 6 y = 4 }
+		}
+		research_cost = 2
+		path = { leads_to_tech = processing_complex_III }
+		dependencies = { tech_CIV_rank_IV_token = 1 }
+	}
+	processing_complex_III = {
+		
+		folder = {
+			name = industry_folder
+			position = { x = 8 y = 4 }
+		}
+		research_cost = 2
+		dependencies = { tech_CIV_rank_V_token = 1 }
+	}
+	
+	petrochemical_complex_I = {
+		enable_building = {
+			building = petrochemical_complex
+			level = 3
+		}
+		folder = {
+			name = industry_folder
+			position = { x = 4 y = 6 }
+		}
+		research_cost = 2
+		path = { leads_to_tech = petrochemical_complex_II }
+		dependencies = { tech_CIV_rank_III_token = 1 }
+	}
+	petrochemical_complex_II = {
+
+		folder = {
+			name = industry_folder
+			position = { x = 6 y = 6 }
+		}
+		research_cost = 2
+		path = { leads_to_tech = petrochemical_complex_III }
+		dependencies = { tech_CIV_rank_IV_token = 1 }
+	}
+	petrochemical_complex_III = {
+		
+		folder = {
+			name = industry_folder
+			position = { x = 8 y = 6 }
+		}
+		research_cost = 2
+		dependencies = { tech_CIV_rank_V_token = 1 }
+	}
+
+	fuel_silo_I = {
+		enable_building = {
+			building = fuel_silo
+			level = 3
+		}
+		folder = {
+			name = industry_folder
+			position = { x = 4 y = 8 }
+		}
+		research_cost = 2
+		path = { leads_to_tech = fuel_silo_II }
+		dependencies = { tech_CIV_rank_III_token = 1 }
+	}
+	fuel_silo_II = {
+
+		folder = {
+			name = industry_folder
+			position = { x = 6 y = 8 }
+		}
+		research_cost = 2
+		path = { leads_to_tech = fuel_silo_III }
+		dependencies = { tech_CIV_rank_IV_token = 1 }
+	}
+	fuel_silo_III = {
+		
+		folder = {
+			name = industry_folder
+			position = { x = 8 y = 8 }
+		}
+		research_cost = 2
+		dependencies = { tech_CIV_rank_V_token = 1 }
+	}
+
+	synthetic_refinery_I = {
+		enable_building = {
+			building = synthetic_refinery
+			level = 3
+		}
+		folder = {
+			name = industry_folder
+			position = { x = 0 y = 10 }
+		}
+		research_cost = 2
+		path = { leads_to_tech = synthetic_refinery_II }
+		dependencies = { tech_CIV_rank_I_token = 1 }
+	}
+	synthetic_refinery_II = {
+		
+		folder = {
+			name = industry_folder
+			position = { x = 2 y = 10 }
+		}
+		research_cost = 2
+		path = { leads_to_tech = synthetic_refinery_III }
+		dependencies = { tech_CIV_rank_II_token = 1 }
+	}
+	synthetic_refinery_III = {
+
+		folder = {
+			name = industry_folder
+			position = { x = 4 y = 10 }
+		}
+		research_cost = 2
+		path = { leads_to_tech = synthetic_refinery_IV }
+		path = { leads_to_tech = fuel_silo_I }
+		dependencies = { tech_CIV_rank_III_token = 1 }
+	}
+	synthetic_refinery_IV = {
+		
+		folder = {
+			name = industry_folder
+			position = { x = 6 y = 10 }
+		}
+		research_cost = 2
+		path = { leads_to_tech = synthetic_refinery_V }
+		dependencies = { tech_CIV_rank_IV_token = 1 }
+	}
+	synthetic_refinery_V = {
+		
+		folder = {
+			name = industry_folder
+			position = { x = 8 y = 10 }
+		}
+		research_cost = 2
+		dependencies = { tech_CIV_rank_V_token = 1 }
+	}
+
+	transmutation_complex_I = {
+		enable_building = {
+			building = transmutation_complex
+			level = 3
+		}
+		folder = {
+			name = industry_folder
+			position = { x = 4 y = 12 }
+		}
+		research_cost = 2
+		path = { leads_to_tech = transmutation_complex_II }
+		dependencies = { tech_MYS_rank_III_token = 1 }
+		dependencies = { tech_CIV_rank_III_token = 1 }
+	}
+	transmutation_complex_II = {
+		folder = {
+			name = industry_folder
+			position = { x = 8 y = 12 }
+		}
+		research_cost = 2
+		dependencies = { tech_MYS_rank_V_token = 1 }
+		dependencies = { tech_CIV_rank_V_token = 1 }
+	}
+}

@@ -1,0 +1,18 @@
+state={
+	id=610
+	name="STATE_610"
+	provinces={
+		732 1973 2033 2402 2416 2703 3882 4290 4396 4574 4647 4840 5047 5202 5258 5395 5950 6412 6486 6602 6671 6904 6965 7602 7724 7735 8596 8800 8971 9176 11243 11276 11294 11307 11308 11340 
+	}
+	history={
+		owner = CAP
+		add_core_of=CAP
+		victory_points = {5395 10}
+		victory_points = {7724 10}
+		victory_points = {11307 10}
+	}
+	manpower=0
+	state_category=wasteland
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

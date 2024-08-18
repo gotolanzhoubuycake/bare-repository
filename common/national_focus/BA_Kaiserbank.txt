@@ -1,0 +1,411 @@
+focus_tree = {
+	id = Kaiserfactory_base
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = CAO
+		}
+	}
+	default = no
+	##以下为序章剧情线
+	focus = {
+		id = CAO_year_plan #章鱼银行财年计划
+		#icon = GFX_goal_unknown
+		cost = 5
+		x = 7
+		y = 0
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+				
+			}			
+		}
+	##以下为经济线
+		focus = {
+			id = CAO_three_company_meeting #三公司联席会议
+			#icon = GFX_goal_unknown
+			relative_position_id = CAO_year_plan
+			prerequisite = {
+                focus = CAO_year_plan
+			}			
+			cost = 5
+			x = -6
+			y = 1.5
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+
+				}			
+	}
+	focus = {
+		id = CAO_trust_securities #凯撒信托证券
+		#icon = GFX_goal_unknown
+		relative_position_id = CAO_three_company_meeting
+		prerequisite = {
+			focus = CAO_three_company_meeting
+		}			
+		cost = 5
+		x = -4
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAO_high_net_worth_clients #向高净值客户推销
+		#icon = GFX_goal_unknown
+		relative_position_id = CAO_trust_securities
+		prerequisite = {
+			focus = CAO_trust_securities
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}
+	focus = {
+		id = CAO_taco_finace #章鱼金融
+		#icon = GFX_goal_unknown
+		relative_position_id = CAO_three_company_meeting
+		prerequisite = {
+			focus = CAO_three_company_meeting
+		}			
+		cost = 5
+		x = -1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAO_invest_plan #投资集团内潜力项目
+		#icon = GFX_goal_unknown
+		relative_position_id = CAO_taco_finace
+		prerequisite = {
+			focus = CAO_taco_finace
+		}			
+		cost = 5
+		x = -1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAO_sales_volume #扩大电话销售规模
+		#icon = GFX_goal_unknown
+		relative_position_id = CAO_taco_finace
+		prerequisite = {
+			focus = CAO_taco_finace
+		}			
+		cost = 5
+		x = 1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAO_abbydos_rate #提高阿拜多斯借款利率
+		#icon = GFX_goal_unknown
+		relative_position_id = CAO_invest_plan
+		prerequisite = {
+			focus = CAO_invest_plan
+		}			
+		prerequisite = {
+			focus = CAO_sales_volume
+		}
+		cost = 5
+		x = 1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAO_taco_life_insurance #章鱼生命保险
+		#icon = GFX_goal_unknown
+		relative_position_id = CAO_three_company_meeting
+		prerequisite = {
+			focus = CAO_three_company_meeting
+		}			
+		cost = 5
+		x = 2
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+		focus = {
+			id = CAO_enterprise_annuity #向中小企业推销企业年金
+			#icon = GFX_goal_unknown
+			relative_position_id = CAO_taco_life_insurance
+			prerequisite = {
+                focus = CAO_taco_life_insurance
+			}			
+			cost = 5
+			x = 0
+			y = 1
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+
+				}			
+	}
+	##以下为科技线
+	focus = {
+		id = CAO_research_plan #研发计划
+		#icon = GFX_goal_unknown
+		relative_position_id = CAO_year_plan
+		prerequisite = {
+			focus = CAO_year_plan
+		}			
+		cost = 5
+		x = 0
+		y = 1.5
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAO_social_talent #自治区社招人才
+		#icon = GFX_goal_unknown
+		relative_position_id = CAO_research_plan
+		prerequisite = {
+			focus = CAO_research_plan
+		}
+		mutually_exclusive = {
+			focus = CAO_school_talent
+		}		
+		cost = 5
+		x = -1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAO_small_loans #小额贷款产品
+		#icon = GFX_goal_unknown
+		relative_position_id = CAO_social_talent
+		prerequisite = {
+			focus = CAO_social_talent
+			focus = CAO_school_talent
+		}
+		mutually_exclusive = {
+			focus = CAO_fund
+		}		
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAO_credit_card_type #信用卡卡种设计
+		#icon = GFX_goal_unknown
+		relative_position_id = CAO_small_loans
+		prerequisite = {
+			focus = CAO_small_loans
+			focus = CAO_fund
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAO_school_talent#学院校招人才
+		#icon = GFX_goal_unknown
+		relative_position_id = CAO_research_plan
+		prerequisite = {
+			focus = CAO_research_plan
+		}			
+		mutually_exclusive = {
+			focus = CAO_social_talent
+		}		
+		cost = 5
+		x = 1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAO_fund #基金产品
+		#icon = GFX_goal_unknown
+		relative_position_id = CAO_school_talent
+		prerequisite = {
+			focus = CAO_social_talent
+			focus = CAO_school_talent
+		}
+		mutually_exclusive = {
+			focus = CAO_small_loans
+		}		
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAO_insurance#新式保险险种设计
+		#icon = GFX_goal_unknown
+		relative_position_id = CAO_fund
+		prerequisite = {
+			focus = CAO_small_loans
+			focus = CAO_fund
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	##以下为军事线
+	focus = {
+		id = CAO_enhance_security_forces #强化企业安保力量
+		#icon = GFX_goal_unknown
+		relative_position_id = CAO_year_plan
+		prerequisite = {
+			focus = CAO_year_plan
+		}			
+		cost = 5
+		x = 6
+		y = 1.5
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAO_non_lethal_weapon #为保安配置非致命武器
+		#icon = GFX_goal_unknown
+		relative_position_id = CAO_enhance_security_forces
+		prerequisite = {
+			focus = CAO_enhance_security_forces
+		}	
+		cost = 5
+		x = -2
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAO_pmc_training #PMC训练法
+		#icon = GFX_goal_unknown
+		relative_position_id = CAO_non_lethal_weapon
+		prerequisite = {
+			focus = CAO_non_lethal_weapon
+		}
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAO_hire_pmc #雇佣PMC
+		#icon = GFX_goal_unknown
+		relative_position_id = CAO_enhance_security_forces
+		prerequisite = {
+			focus = CAO_enhance_security_forces
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAO_enhance_pmc #强化PMC武器
+		#icon = GFX_goal_unknown
+		relative_position_id = CAO_hire_pmc
+		prerequisite = {
+			focus = CAO_hire_pmc
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAO_security_weapon #设置安保机器人
+		#icon = GFX_goal_unknown
+		relative_position_id = CAO_enhance_security_forces
+		prerequisite = {
+			focus = CAO_enhance_security_forces
+		}
+		cost = 5
+		x = 2
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAO_joint_action_team#联合行动编组
+		#icon = GFX_goal_unknown
+		relative_position_id = CAO_security_weapon
+		prerequisite = {
+			focus = CAO_security_weapon
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAO_temporary_command_authority#向总部申请临时指挥权
+		#icon = GFX_goal_unknown
+		relative_position_id = CAO_enhance_pmc
+		prerequisite = {
+			focus = CAO_pmc_training
+		}		
+		prerequisite = {
+			focus = CAO_enhance_pmc
+		}
+		prerequisite = {
+			focus = CAO_joint_action_team
+		}		
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+}

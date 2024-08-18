@@ -1,0 +1,16 @@
+state={
+	id=275
+	name="STATE_275"
+	provinces={
+		218 294 1471 2567 4297 6749 6754 9221 11504 
+	}
+	history = {
+		owner = ABY
+		add_core_of=ABY
+		victory_points = {4297 20}
+    }
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

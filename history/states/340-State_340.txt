@@ -1,0 +1,15 @@
+state={
+	id=340
+	name="STATE_340"
+	provinces={
+		51 2042 2458 2982 3199 3481 4816 6788 8701 9233 9350 11424 11474 
+	}
+	history = {
+		owner = SHA
+		add_core_of=SHA
+    }
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

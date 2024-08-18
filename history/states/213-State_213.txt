@@ -1,0 +1,15 @@
+state={
+	id=213
+	name="STATE_213"
+	provinces={
+		1757 5825 6518 6990 8982 
+	}
+        history={
+		owner = RWT
+		add_core_of=RWT
+
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

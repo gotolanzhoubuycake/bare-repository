@@ -1,0 +1,14 @@
+state={
+	id=460
+	name="STATE_460"
+	provinces={
+		1529 1671 2017 2105 3202 3282 3379 3937 4128 4608 5243 5904 5912 7340 8444 8788 11553 11601 11603 11648 
+	}
+	history = {
+		owner = ABY
+		add_core_of=ABY
+    }
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

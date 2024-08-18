@@ -1,0 +1,134 @@
+focus_tree = {
+	id = Redwinter_base
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = RWT
+		}
+	}
+	default = no
+	##以下为序章剧情线
+	focus = {
+		id = RED_five_no #欢迎来到红冬联邦
+		#icon = GFX_goal_unknown
+		cost = 5
+		x = 10
+		y = 0
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+				army_experience  = 25
+			}			
+		}
+		focus = {
+			id = RED_ivan_kupala #筹备伊凡库帕拉节
+			#icon = GFX_goal_unknown
+			relative_position_id = RED_five_no
+			prerequisite = {
+                focus = RED_five_no
+			}			
+			cost = 5
+			x = 0
+			y = 1
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+
+				}			
+	}
+	focus = {
+		id = RED_repress_festival #平息节日骚动
+		#icon = GFX_goal_unknown
+		relative_position_id = RED_ivan_kupala
+		prerequisite = {
+			focus = RED_ivan_kupala
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = RED_welcome_gehenna #迎接格赫那代表团
+		#icon = GFX_goal_unknown
+		relative_position_id = RED_repress_festival
+		prerequisite = {
+			focus = RED_repress_festival
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = RED_227_spring #227号温泉乡开张
+		#icon = GFX_goal_unknown
+		relative_position_id = RED_welcome_gehenna
+		prerequisite = {
+			focus = RED_welcome_gehenna
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = RED_wo_22_ne #梅露会展的消息
+		#icon = GFX_goal_unknown
+		relative_position_id = RED_227_spring
+		prerequisite = {
+			focus = RED_227_spring
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = RED_everything_ok #一切照旧
+		#icon = GFX_goal_unknown
+		relative_position_id = RED_wo_22_ne
+		prerequisite = {
+			focus = RED_wo_22_ne
+		}			
+		mutually_exclusive = {
+			focus = RED_things_are_changing
+		}
+		cost = 5
+		x = -1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}
+	focus = {
+		id = RED_things_are_changing #阴云笼罩
+		#icon = GFX_goal_unknown
+		relative_position_id = RED_wo_22_ne
+		prerequisite = {
+			focus = RED_wo_22_ne
+		}	
+		mutually_exclusive = {
+			focus = RED_everything_ok
+		}		
+		cost = 5
+		x = 1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}
+}

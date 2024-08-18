@@ -1,0 +1,16 @@
+state={
+	id=205
+	name="STATE_205"
+	provinces={
+		1590 2262 2344 2952 6601 9252 10977 10989 
+	}
+	history={
+		owner = CAB
+		add_core_of=CAB
+		victory_points = {10989 5}
+	}
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

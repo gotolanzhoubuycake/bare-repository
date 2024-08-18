@@ -1,0 +1,16 @@
+state={
+	id=223
+	name="STATE_223"
+	provinces={
+		502 1313 1442 1893 2388 3562 4425 5495 5615 5946 6377 7046 7245 8292 8822 9097 10771 10776 10791 10818 10825 10871 10877 
+	}
+	history = {
+		owner = D12
+		add_core_of=D12
+		victory_points = {7046 15}
+    }
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

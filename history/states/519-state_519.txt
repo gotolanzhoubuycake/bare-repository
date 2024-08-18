@@ -1,0 +1,14 @@
+state={
+	id=519
+	name="STATE_519"
+	provinces={
+		733 1043 1921 2451 3421 3563 3685 3737 4517 5291 5935 6008 7143 7193 7409 7783 7991 8008 8110 8501 8611 8970 10535 10563 10574 10595 10615 
+	}
+	history={
+		owner = CAP
+		add_core_of=CAP
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

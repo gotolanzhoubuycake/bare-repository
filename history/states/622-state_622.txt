@@ -1,0 +1,15 @@
+state={
+	id=622
+	name="STATE_622"
+	provinces={
+		115 890 1927 2345 2736 3062 3325 3408 3490 3626 3964 4127 4381 4504 4601 5501 5743 6130 6483 6591 7584 7588 7877 7882 8357 8455 8846 8900 9281 9337 11355 11409 11411 11486 11496 
+	}
+	history = {
+		owner = D15
+		add_core_of=D15
+    }
+	manpower=0
+	state_category=wasteland
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

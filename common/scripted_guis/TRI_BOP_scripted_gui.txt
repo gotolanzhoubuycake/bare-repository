@@ -1,0 +1,46 @@
+scripted_gui = {
+
+	TRI_BOP_decision_ui = { #圣三一议会ui
+		window_name = "TRI_BOP_container_windows"
+		context_type = player_context
+
+		visible = {
+			has_country_flag = TRI
+		}
+
+		dynamic_lists = { #上议院议会席位图像
+			TRI_house_diagram = {
+				array = TRI_house_grid_box_array
+				change_scope = no
+				entry_container = TRI_house_seat_entry
+				index = seat_idx
+			}
+		}
+
+		properties = {
+			TRI_seat_icon = {
+				x = TRI_house_x_array^seat_idx
+				y = TRI_house_y_array^seat_idx
+				frame = TRI_house_grid_box_array^seat_idx
+			}
+		}
+
+
+		dynamic_lists = { #下议院议会席位图像
+			TRI_senators_diagram = {
+				array = TRI_senators_grid_box_array
+				change_scope = no
+				entry_container = TRI_senators_seat_entry
+				index = seat_idx
+			}
+		}
+
+		properties = {
+			TRI_senator_seat_icon = {
+				x = TRI_senators_x_array^seat_idx
+				y = TRI_senators_y_array^seat_idx
+				frame = TRI_senators_grid_box_array^seat_idx
+			}
+		}
+	}
+}

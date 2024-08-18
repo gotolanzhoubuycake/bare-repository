@@ -1,0 +1,15 @@
+state={
+	id=44
+	name="STATE_44"
+	provinces={
+		3590 8617 
+	}
+	history = {
+		owner = D01
+		victory_points = {3590 15}
+    }
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

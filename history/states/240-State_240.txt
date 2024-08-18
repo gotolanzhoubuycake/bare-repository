@@ -1,0 +1,15 @@
+state={
+	id=240
+	name="STATE_240"
+	provinces={
+		3506 4187 7335 
+	}
+	history={
+		owner = RWT
+		add_core_of=RWT
+	}
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

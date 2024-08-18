@@ -1,0 +1,155 @@
+sub_units = {
+	air_assest_unit = {
+		abbreviation = "baasu"
+		sprite = infantry
+		map_icon_category = infantry
+		
+		priority = 600
+		ai_priority = 200
+		active = yes
+
+		type = {
+			infantry
+		}
+		
+		group = mobile
+		
+		categories = {
+			category_front_line
+			category_light_infantry
+			category_all_infantry
+			category_army
+		}
+		
+		combat_width = 2
+		
+		#Size Definitions
+		max_strength = 30
+		max_organisation = 40
+		default_morale = 1.2
+		manpower = 800
+
+		#Misc Abilities
+		training_time = 120
+		suppression = 1
+		weight = 0.5
+
+		maximum_speed = -0.89
+		
+		supply_consumption = 0.2
+
+		transport = helicopter_airframe
+
+		essential = {
+			helicopter_airframe
+			infantry_equipment
+		}
+
+		need = {
+			helicopter_airframe = 4
+			infantry_equipment = 160
+		}
+
+		forest = {
+			attack = 0.1
+		}
+		hills = {
+			attack = 0.25
+		}
+		mountain = {
+			attack = 0.4
+		}
+		jungle = {
+			attack = 0.25
+		}
+		marsh = {
+			attack = 0.3
+		}
+		urban = {
+			attack = 0.25
+		}
+		river = {
+			attack = 0.3
+		}
+		amphibious = {
+			attack = 0.6
+		}
+	
+	}
+
+
+	air_attack_unit = {
+		abbreviation = "baasu"
+		sprite = infantry
+		map_icon_category = infantry
+		
+		priority = 600
+		ai_priority = 200
+		active = yes
+
+		type = {
+			infantry
+		}
+		
+		group = mobile
+		
+		categories = {
+			category_army
+		}
+		
+		combat_width = 3
+		
+		#Size Definitions
+		max_strength = 1
+		max_organisation = 0
+		default_morale = 0.16
+		manpower = 600
+
+		#Misc Abilities
+		training_time = 120
+		suppression = 1
+		weight = 0.2
+
+		maximum_speed = -0.89
+		
+		supply_consumption = 0.5
+
+		transport = helicopter_cas_airframe
+
+		essential = {
+			helicopter_cas_airframe
+		}
+
+		need = {
+			helicopter_cas_airframe = 6
+		}
+
+		forest = {
+			attack = 0.1
+		}
+		hills = {
+			attack = 0.25
+		}
+		mountain = {
+			attack = 0.4
+		}
+		jungle = {
+			attack = 0.25
+		}
+		marsh = {
+			attack = 0.3
+		}
+		urban = {
+			attack = 0.25
+		}
+		river = {
+			attack = 0.3
+		}
+		amphibious = {
+			attack = 0.6
+		}
+	
+	}
+	#################
+	#直升机支援连
+}

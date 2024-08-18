@@ -1,0 +1,14 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_helicopter_airframe_medium"
+		texturefile = "gfx/interface/technologies/balp_helicopter_srt.dds"
+	}
+	SpriteType = {
+		name = "GFX_helicopter_airframe_1_medium"
+		texturefile = "gfx/interface/technologies/balp_helicopter_srt.dds"
+	}
+	SpriteType = {
+		name = "GFX_helicopter_airframe_2_medium"
+		texturefile = "gfx/interface/technologies/balp_helicopter_srt.dds"
+	}
+}

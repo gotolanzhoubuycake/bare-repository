@@ -1,0 +1,6 @@
+spriteTypes = { #角色小肖像sprite
+    spriteType = {
+        name = GFX_TRI_Nagisa_small
+        texturefile = "gfx/leaders/TRI/nagisa.dds"
+    }
+}

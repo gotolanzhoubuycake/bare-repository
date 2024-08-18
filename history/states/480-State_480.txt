@@ -1,0 +1,14 @@
+state={
+	id=480
+	name="STATE_480"
+	provinces={
+		995 1295 1303 1760 2089 2363 2818 2861 3153 3811 4132 4178 6117 6473 6548 6827 7520 7653 8577 8928 8949 9022 9150 9269 9542 11511 11538 11594 11620 
+	}
+	history = {
+		owner = MIL
+		add_core_of=MIL
+    }
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

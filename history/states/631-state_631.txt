@@ -1,0 +1,16 @@
+state={
+	id=631
+	name="STATE_631"
+	provinces={
+		130 226 233 256 788 1685 1709 1864 2095 2271 2714 2856 3117 3472 3575 5447 5579 5709 5906 5925 5941 5979 6290 6550 7199 7981 8418 9334 9453 12039 12049 
+	}
+	history = {
+		owner = D14
+		add_core_of=D14
+		victory_points = {3472 15}
+    }
+	manpower=0
+	state_category=wasteland
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

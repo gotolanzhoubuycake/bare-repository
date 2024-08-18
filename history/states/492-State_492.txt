@@ -1,0 +1,15 @@
+state={
+	id=492
+	name="STATE_492"
+	provinces={
+		227 1493 2196 2362 3591 5845 5862 6090 7474 7577 8202 9496 9506 11433 11459 11509 11513 11595 
+	}
+	history = {
+		owner = VAL
+		add_core_of=VAL
+		victory_points = {2362 15}
+    }
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

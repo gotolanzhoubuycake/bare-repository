@@ -1,0 +1,15 @@
+state={
+	id=598
+	name="STATE_598"
+	provinces={
+		220 715 1002 1263 1642 2148 2176 2273 2517 4107 4564 5019 5317 5667 5803 5920 6169 6417 7032 7762 7806 7987 8475 8485 8890 9033 9061 9360 9977 10012 10017 10054 10064 10073 10089 10130 
+	}
+	history={
+		owner = RWT
+		add_core_of=RWT
+	}
+	manpower=0
+	state_category=wasteland
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

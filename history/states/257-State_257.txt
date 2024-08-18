@@ -1,0 +1,16 @@
+state={
+	id=257
+	name="STATE_257"
+	provinces={
+		2114 3434 4399 6292 6673 6947 7261 8130 8355 11068 11083 11105 11118 
+	}
+	history = {
+		owner = CAO
+		add_core_of=CAO
+		victory_points = {4399 5}
+    }
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

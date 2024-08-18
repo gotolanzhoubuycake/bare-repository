@@ -1,0 +1,15 @@
+state={
+	id=507
+	name="STATE_507"
+	provinces={
+		31 99 243 1278 1391 1425 2690 3052 3630 4579 4666 6066 6972 8092 8915 9013 9248 11966 11981 12011 12040 12050 
+	}
+	history={
+		owner = D03
+		add_core_of=D03
+		victory_points = {9013 20}
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

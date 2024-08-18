@@ -1,0 +1,75 @@
+spriteTypes = {
+
+	### ABY
+	spriteType = {
+		name = "GFX_idea_advisor_ABY_hoshino"
+		texturefile = "gfx/interface/ideas/ABY/hoshino.dds"
+	}
+	
+	### ARI
+	spriteType = {
+		name = "GFX_idea_advisor_ARI_atsuko"
+		texturefile = "gfx/interface/ideas/ARI/atsuko.dds"
+	}
+	
+	### GEH
+	spriteType = {
+		name = "GFX_idea_advisor_GEH_hina"
+		texturefile = "gfx/interface/ideas/GEH/hina.dds"
+	}
+	
+	### MIL
+	spriteType = {
+		name = "GFX_idea_advisor_MIL_yuuka"
+		texturefile = "gfx/interface/ideas/MIL/yuuka.dds"
+	}
+	
+	### TRI
+	spriteType = {
+		name = "GFX_idea_advisor_TRI_nagisa"
+		texturefile = "gfx/interface/ideas/TRI/nagisa.dds"
+	}
+	
+	### VAL
+	spriteType = {
+		name = "GFX_idea_advisor_VAL_kanna"
+		texturefile = "gfx/interface/ideas/VAL/kanna.dds"
+	}
+	
+	### SRT
+	spriteType = {
+		name = "GFX_idea_advisor_SRT_miyako"
+		texturefile = "gfx/interface/ideas/SRT/miyako.dds"
+	}
+	
+	### SCH
+	spriteType = {
+		name = "GFX_idea_advisor_SCH_arona"
+		texturefile = "gfx/interface/ideas/SCH/arona.dds"
+	}
+	
+	### RWT
+	spriteType = {
+		name = "GFX_idea_advisor_RWT_cherino"
+		texturefile = "gfx/interface/ideas/RWT/cherino.dds"
+	}
+	
+	### HYA
+	spriteType = {
+		name = "GFX_idea_advisor_HYA_niya"
+		texturefile = "gfx/interface/ideas/HYA/niya.dds"
+	}
+	
+	### SHA
+	spriteType = {
+		name = "GFX_idea_advisor_SHA_kisaki"
+		texturefile = "gfx/interface/ideas/SHA/kisaki.dds"
+	}
+	
+	### CEN
+	spriteType = {
+		name = "GFX_idea_advisor_CEN_rin"
+		texturefile = "gfx/interface/ideas/CEN/rin.dds"
+	}
+	
+}

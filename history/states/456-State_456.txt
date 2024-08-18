@@ -1,0 +1,15 @@
+state={
+	id=456
+	name="STATE_456"
+	provinces={
+		47 229 1152 1631 1675 2115 2558 2562 2725 2767 2958 3005 3299 3303 3810 4225 4320 4556 4680 4830 7249 8569 9035 11404 11426 11442 11455 11462 11484 11491 11531 
+	}
+	history = {
+		owner = ABY
+		add_core_of=ABY
+		victory_points = {1675 10}
+    }
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

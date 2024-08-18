@@ -1,0 +1,14 @@
+state={
+	id=496
+	name="STATE_496"
+	provinces={
+		4621 8010 
+	}
+	history = {
+		owner = HIL
+		add_core_of=HIL
+    }
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,539 @@
+focus_tree = {
+	id = Kaiserfactory_base
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = CAH
+		}
+	}
+	default = no
+	##以下为序章剧情线
+	focus = {
+		id = CAH_manufactory_project #凯撒重工生产规划
+		#icon = GFX_goal_unknown
+		cost = 5
+		x = 7
+		y = 0
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+				
+			}			
+		}
+	##以下为经济线
+		focus = {
+			id = CAH_manufactory_plan #制造计划
+			#icon = GFX_goal_unknown
+			relative_position_id = CAH_manufactory_project
+			prerequisite = {
+                focus = CAH_manufactory_project
+			}			
+			cost = 5
+			x = -8
+			y = 1.5
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+
+				}			
+	}
+	focus = {
+		id = CAH_ship_list #交付凯撒船舶订单
+		#icon = GFX_goal_unknown
+		relative_position_id = CAH_manufactory_plan
+		prerequisite = {
+			focus = CAH_manufactory_plan
+		}			
+		cost = 5
+		x = -6
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAH_new_business_pair #寻求新合作商
+		#icon = GFX_goal_unknown
+		relative_position_id = CAH_ship_list
+		prerequisite = {
+			focus = CAH_ship_list
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}
+	focus = {
+		id = CAH_kasier_air #凯撒航空
+		#icon = GFX_goal_unknown
+		relative_position_id = CAH_manufactory_plan
+		prerequisite = {
+			focus = CAH_manufactory_plan
+		}			
+		cost = 5
+		x = -3
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAH_airplane_improve #空中客车机型优化
+		#icon = GFX_goal_unknown
+		relative_position_id = CAH_kasier_air
+		prerequisite = {
+			focus = CAH_kasier_air
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAH_miltary_plane_improve#军用机产线改良
+		#icon = GFX_goal_unknown
+		relative_position_id = CAH_airplane_improve
+		prerequisite = {
+			focus = CAH_airplane_improve
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAH_heilcopter_improve #直升机改进
+		#icon = GFX_goal_unknown
+		relative_position_id = CAH_miltary_plane_improve
+		prerequisite = {
+			focus = CAH_miltary_plane_improve
+		}			
+		cost = 5
+		x = -1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAH_boomer_improve#轰炸机改进
+		#icon = GFX_goal_unknown
+		relative_position_id = CAH_miltary_plane_improve
+		prerequisite = {
+			focus = CAH_miltary_plane_improve
+		}			
+		cost = 5
+		x = 1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+		focus = {
+			id = CAH_kasier_defend #凯撒防务生产规划
+			#icon = GFX_goal_unknown
+			relative_position_id = CAH_manufactory_plan
+			prerequisite = {
+                focus = CAH_manufactory_plan
+			}			
+			cost = 5
+			x = 1
+			y = 1
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+
+				}			
+	}
+	focus = {
+		id = CAH_soilder_weapon #步兵武器方向
+		#icon = GFX_goal_unknown
+		relative_position_id = CAH_kasier_defend
+		prerequisite = {
+			focus = CAH_kasier_defend
+		}
+		mutually_exclusive = {
+			focus = CAH_aromr_improve
+		}		
+		cost = 5
+		x = -1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAH_more_soilder_weapon #大规模生产枪械
+		#icon = GFX_goal_unknown
+		relative_position_id = CAH_soilder_weapon
+		prerequisite = {
+			focus = CAH_soilder_weapon
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAH_new_cannon_factory #新式野战炮车间
+		#icon = GFX_goal_unknown
+		relative_position_id = CAH_more_soilder_weapon
+		prerequisite = {
+			focus = CAH_more_soilder_weapon
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAH_aromr_improve#装甲部队方向
+		#icon = GFX_goal_unknown
+		relative_position_id = CAH_kasier_defend
+		prerequisite = {
+			focus = CAH_kasier_defend
+		}
+		mutually_exclusive = {
+		focus = CAH_soilder_weapon
+		}	
+		cost = 5
+		x = 1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAH_tank_stc #坦克模块化装配
+		#icon = GFX_goal_unknown
+		relative_position_id = CAH_aromr_improve
+		prerequisite = {
+			focus = CAH_aromr_improve
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAH_gundam_stc#机甲制造模板
+		#icon = GFX_goal_unknown
+		relative_position_id = CAH_tank_stc
+
+		prerequisite = {
+			focus = CAH_tank_stc
+
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAH_kosco_new_factory #凯撒钢铁新工厂投产
+		#icon = GFX_goal_unknown
+		relative_position_id = CAH_manufactory_plan
+		prerequisite = {
+			focus = CAH_manufactory_plan
+		}			
+		cost = 5
+		x = 4
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAH_kaiser_chemical#凯撒化工资源勘探
+		#icon = GFX_goal_unknown
+		relative_position_id = CAH_kosco_new_factory
+
+		prerequisite = {
+			focus = CAH_kosco_new_factory
+
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	##以下为科技线
+	focus = {
+		id = CAH_research_plan #研发计划
+		#icon = GFX_goal_unknown
+		relative_position_id = CAH_manufactory_project
+		prerequisite = {
+			focus = CAH_manufactory_project
+		}			
+		cost = 5
+		x = 0
+		y = 1.5
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAH_social_talent #自治区社招人才
+		#icon = GFX_goal_unknown
+		relative_position_id = CAH_research_plan
+		prerequisite = {
+			focus = CAH_research_plan
+		}
+		mutually_exclusive = {
+			focus = CAH_school_talent
+		}		
+		cost = 5
+		x = -1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAH_fuel_vehicles_research #凯亚汽车燃油车型研发	
+		#icon = GFX_goal_unknown
+		relative_position_id = CAH_social_talent
+		prerequisite = {
+			focus = CAH_social_talent
+			focus = CAH_school_talent
+		}
+		mutually_exclusive = {
+			focus = CAH_new_vehicles_research
+		}		
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAH_next_generation_fighter #次时代战机计划
+		#icon = GFX_goal_unknown
+		relative_position_id = CAH_fuel_vehicles_research
+		prerequisite = {
+			focus = CAH_fuel_vehicles_research
+			focus = CAH_new_vehicles_research
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAH_school_talent#学院校招人才
+		#icon = GFX_goal_unknown
+		relative_position_id = CAH_research_plan
+
+		prerequisite = {
+			focus = CAH_research_plan
+		}			
+		mutually_exclusive = {
+			focus = CAH_social_talent
+		}		
+		cost = 5
+		x = 1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAH_new_vehicles_research #凯亚汽车新能源车型研发
+		#icon = GFX_goal_unknown
+		relative_position_id = CAH_school_talent
+		prerequisite = {
+			focus = CAH_social_talent
+			focus = CAH_school_talent
+		}
+		mutually_exclusive = {
+			focus = CAH_fuel_vehicles_research
+		}		
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAH_kaiser_two_tank#K2主战坦克计划
+		#icon = GFX_goal_unknown
+		relative_position_id = CAH_new_vehicles_research
+		prerequisite = {
+			focus = CAH_fuel_vehicles_research
+			focus = CAH_new_vehicles_research
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	##以下为军事线
+	focus = {
+		id = CAH_enhance_security_forces #强化企业安保力量
+		#icon = GFX_goal_unknown
+		relative_position_id = CAH_manufactory_project
+		prerequisite = {
+			focus = CAH_manufactory_project
+		}			
+		cost = 5
+		x = 6
+		y = 1.5
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAH_security_weapon #为企业安保配置武器
+		#icon = GFX_goal_unknown
+		relative_position_id = CAH_enhance_security_forces
+		prerequisite = {
+			focus = CAH_enhance_security_forces
+		}	
+		cost = 5
+		x = -2
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAH_pmc_training #PMC训练法
+		#icon = GFX_goal_unknown
+		relative_position_id = CAH_security_weapon
+		prerequisite = {
+			focus = CAH_security_weapon
+		}
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAH_hire_pmc #雇佣PMC
+		#icon = GFX_goal_unknown
+		relative_position_id = CAH_enhance_security_forces
+		prerequisite = {
+			focus = CAH_enhance_security_forces
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAH_enhance_pmc#强化PMC武器
+		#icon = GFX_goal_unknown
+		relative_position_id = CAH_hire_pmc
+		prerequisite = {
+			focus = CAH_hire_pmc
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAH_security_robot #设置安保机器人
+		#icon = GFX_goal_unknown
+		relative_position_id = CAH_enhance_security_forces
+		prerequisite = {
+			focus = CAH_enhance_security_forces
+		}
+		cost = 5
+		x = 2
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAH_joint_action_team#联合行动编组
+		#icon = GFX_goal_unknown
+		relative_position_id = CAH_security_robot
+		prerequisite = {
+			focus = CAH_security_robot
+		}			
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+	focus = {
+		id = CAH_temporary_command_authority#向总部申请临时指挥权
+		#icon = GFX_goal_unknown
+		relative_position_id = CAH_enhance_pmc
+		prerequisite = {
+			focus = CAH_pmc_training
+		}		
+		prerequisite = {
+			focus = CAH_enhance_pmc
+		}
+		prerequisite = {
+			focus = CAH_joint_action_team
+		}		
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+		
+			}		
+	}	
+}

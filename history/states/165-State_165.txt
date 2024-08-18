@@ -1,0 +1,15 @@
+state={
+	id=165
+	name="STATE_165"
+	provinces={
+		1242 8994 189 303 852 1373 2863 2921 3121 3212 3403 3526 3829 4903 5362 5663 5749 6215 7368 7537 7606 8623 8670 8686 9498 11013 11034
+	}
+	history = {
+		owner = SHA
+		add_core_of=SHA
+    }
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

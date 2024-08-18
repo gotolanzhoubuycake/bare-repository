@@ -1,0 +1,15 @@
+state={
+	id=338
+	name="STATE_338"
+	provinces={
+		464 718 1117 2319 2867 3078 3933 4026 4168 4480 4699 5484 5591 6454 6877 7252 7643 8147 8345 8746 8917 11667 11668 11720 11740 11758 
+	}
+	history = {
+		owner = MIL
+		add_core_of=MIL
+    }
+	manpower=1
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,292 @@
+technologies = {
+	kivotos_base_tech_token = {
+		folder = {
+			name = school_special_folder
+			position = { x = 0 y = -1 }
+		}
+		allow = { always = no }
+		path = { leads_to_tech = gehenna_base_tech_token }
+		path = { leads_to_tech = trinity_base_tech_token }
+		path = { leads_to_tech = millennium_base_tech_token }
+		path = { leads_to_tech = abydos_base_tech_token }
+		path = { leads_to_tech = arius_base_tech_token }
+		path = { leads_to_tech = valkyrie_base_tech_token }
+		path = { leads_to_tech = shanhaijing_base_tech_token }
+		path = { leads_to_tech = hyakkiyako_base_tech_token }
+		path = { leads_to_tech = redwinter_base_tech_token }
+		path = { leads_to_tech = specialresponseteam_base_tech_token }
+	}
+	gehenna_base_tech_token = {
+		folder = {
+			name = school_special_folder
+			position = { x = -10 y = 1 }
+		}
+		allow = { always = no }
+	}
+	trinity_base_tech_token = {
+		folder = {
+			name = school_special_folder
+			position = { x = -8 y = 1 }
+		}
+		allow = { always = no }
+	}
+	millennium_base_tech_token = {
+		folder = {
+			name = school_special_folder
+			position = { x = -6 y = 1 }
+		}
+		allow = { always = no }
+	}
+	abydos_base_tech_token = {
+		folder = {
+			name = school_special_folder
+			position = { x = -4 y = 1 }
+		}
+		allow = { always = no }
+	}
+	arius_base_tech_token = {
+		folder = {
+			name = school_special_folder
+			position = { x = -2 y = 1 }
+		}
+		allow = { always = no }
+	}
+	valkyrie_base_tech_token = {
+		folder = {
+			name = school_special_folder
+			position = { x = 2 y = 1 }
+		}
+		allow = { always = no }
+	}
+	specialresponseteam_base_tech_token = {
+		folder = {
+			name = school_special_folder
+			position = { x = 4 y = 1 }
+		}
+		allow = { always = no }
+	}
+	shanhaijing_base_tech_token = {
+		folder = {
+			name = school_special_folder
+			position = { x = 6 y = 1 }
+		}
+		allow = { always = no }
+	}
+	hyakkiyako_base_tech_token = {
+		folder = {
+			name = school_special_folder
+			position = { x = 8 y = 1 }
+		}
+		allow = { always = no }
+	}
+	redwinter_base_tech_token = {
+		folder = {
+			name = school_special_folder
+			position = { x = 10 y = 1 }
+		}
+		allow = { always = no }
+	}
+
+	tech_rank_I_token = {
+		# on_research_complete = {
+		# 	add_ideas = tech_rank_I_idea
+		# }
+		folder = {
+			name = school_special_folder
+			position = { x = 0 y = 0 }
+		}
+		path = { leads_to_tech = tech_rank_II_token }
+		allow = { always = no }
+	}
+	tech_rank_II_token = {
+		on_research_complete = {
+			add_ideas = tech_rank_II_idea
+		}
+		folder = {
+			name = school_special_folder
+			position = { x = 2 y = 0 }
+		}
+		path = { leads_to_tech = tech_rank_III_token }
+		allow = { always = no }
+	}
+	tech_rank_III_token = {
+		on_research_complete = {
+			add_ideas = tech_rank_III_idea
+		}
+		folder = {
+			name = school_special_folder
+			position = { x = 4 y = 0 }
+		}
+		path = { leads_to_tech = tech_rank_IV_token }
+		allow = { always = no }
+	}
+	tech_rank_IV_token = {
+		on_research_complete = {
+			add_ideas = tech_rank_IV_idea
+		}
+		folder = {
+			name = school_special_folder
+			position = { x = 6 y = 0 }
+		}
+		path = { leads_to_tech = tech_rank_V_token }
+		allow = { always = no }
+	}
+	tech_rank_V_token = {
+		on_research_complete = {
+			add_ideas = tech_rank_V_idea
+		}
+		folder = {
+			name = school_special_folder
+			position = { x = 8 y = 0 }
+		}
+		allow = { always = no }
+	}
+	
+	tech_CIV_rank_I_token = {
+		folder = {
+			name = school_special_folder
+			position = { x = 0 y = 0 }
+		}
+		research_cost = 3
+		path = { leads_to_tech = tech_CIV_rank_II_token }
+		dependencies = { tech_rank_I_token = 1 }
+		allow = { has_country_flag = tech_CIV_rank_I_available }
+	}
+	tech_CIV_rank_II_token = {
+		folder = {
+			name = school_special_folder
+			position = { x = 2 y = 0 }
+		}
+		research_cost = 3
+		path = { leads_to_tech = tech_CIV_rank_III_token }
+		dependencies = { tech_rank_II_token = 1 }
+		allow = { has_country_flag = tech_CIV_rank_II_available }
+	}
+	tech_CIV_rank_III_token = {
+		folder = {
+			name = school_special_folder
+			position = { x = 4 y = 0 }
+		}
+		research_cost = 3
+		path = { leads_to_tech = tech_CIV_rank_IV_token }
+		dependencies = { tech_rank_III_token = 1 }
+		allow = { has_country_flag = tech_CIV_rank_III_available }
+	}
+	tech_CIV_rank_IV_token = {
+		folder = {
+			name = school_special_folder
+			position = { x = 6 y = 0 }
+		}
+		research_cost = 3
+		path = { leads_to_tech = tech_CIV_rank_V_token }
+		dependencies = { tech_rank_IV_token = 1 }
+		allow = { has_country_flag = tech_CIV_rank_IV_available }
+	}
+	tech_CIV_rank_V_token = {
+		folder = {
+			name = school_special_folder
+			position = { x = 8 y = 0 }
+		}
+		research_cost = 3
+		dependencies = { tech_rank_V_token = 1 }
+		allow = { has_country_flag = tech_CIV_rank_V_available }
+	}
+	
+	tech_MIL_rank_I_token = {
+		folder = {
+			name = school_special_folder
+			position = { x = 0 y = 0 }
+		}
+		research_cost = 3
+		path = { leads_to_tech = tech_MIL_rank_II_token }
+		dependencies = { tech_rank_I_token = 1 }
+		allow = { has_country_flag = tech_MIL_rank_I_available }
+	}
+	tech_MIL_rank_II_token = {
+		folder = {
+			name = school_special_folder
+			position = { x = 2 y = 0 }
+		}
+		research_cost = 3
+		path = { leads_to_tech = tech_MIL_rank_III_token }
+		dependencies = { tech_rank_II_token = 1 }
+		allow = { has_country_flag = tech_MIL_rank_II_available }
+	}
+	tech_MIL_rank_III_token = {
+		folder = {
+			name = school_special_folder
+			position = { x = 4 y = 0 }
+		}
+		research_cost = 3
+		path = { leads_to_tech = tech_MIL_rank_IV_token }
+		dependencies = { tech_rank_III_token = 1 }
+		allow = { has_country_flag = tech_MIL_rank_III_available }
+	}
+	tech_MIL_rank_IV_token = {
+		folder = {
+			name = school_special_folder
+			position = { x = 6 y = 0 }
+		}
+		research_cost = 3
+		path = { leads_to_tech = tech_MIL_rank_V_token }
+		dependencies = { tech_rank_IV_token = 1 }
+		allow = { has_country_flag = tech_MIL_rank_IV_available }
+	}
+	tech_MIL_rank_V_token = {
+		folder = {
+			name = school_special_folder
+			position = { x = 8 y = 0 }
+		}
+		research_cost = 3
+		dependencies = { tech_rank_V_token = 1 }
+		allow = { has_country_flag = tech_MIL_rank_V_available }
+	}
+
+	tech_MYS_rank_I_token = {
+		folder = {
+			name = school_special_folder
+			position = { x = 0 y = 0 }
+		}
+		research_cost = 3
+	 #	path = { leads_to_tech = tech_MYS_rank_II_token }
+	 	path = { leads_to_tech = tech_MYS_rank_III_token }
+		dependencies = { tech_rank_I_token = 1 }
+		allow = { has_country_flag = tech_MYS_rank_I_available }
+	}
+	tech_MYS_rank_II_token = {
+		folder = {
+			name = school_special_folder
+			position = { x = 2 y = 0 }
+		}
+		path = { leads_to_tech = tech_MYS_rank_III_token }
+		allow = { always = no }
+	}
+	tech_MYS_rank_III_token = {
+		folder = {
+			name = school_special_folder
+			position = { x = 4 y = 0 }
+		}
+		research_cost = 3
+	 #	path = { leads_to_tech = tech_MYS_rank_IV_token }
+	 	path = { leads_to_tech = tech_MYS_rank_V_token }
+		dependencies = { tech_rank_III_token = 1 }
+		allow = { has_country_flag = tech_MYS_rank_III_available }
+	}
+	tech_MYS_rank_IV_token = {
+		folder = {
+			name = school_special_folder
+			position = { x = 6 y = 0 }
+		}
+		path = { leads_to_tech = tech_MYS_rank_V_token }
+		allow = { always = no }
+	}
+	tech_MYS_rank_V_token = {
+		folder = {
+			name = school_special_folder
+			position = { x = 8 y = 0 }
+		}
+		research_cost = 3
+		dependencies = { tech_rank_V_token = 1 }
+		allow = { has_country_flag = tech_MYS_rank_V_available }
+	}
+}

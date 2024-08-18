@@ -1,0 +1,26 @@
+GEH = "countries/Gehenna.txt"
+ABY = "countries/Abydos.txt"
+ARI = "countries/Arius.txt"
+VAL = "countries/Valkyrie.txt"
+ODY = "countries/Odyssey.txt"
+KRO = "countries/Kronos.txt"
+SHA = "countries/Shanhaijing.txt"
+TRI = "countries/Trinity.txt"
+HYA = "countries/Hyakkiyako.txt"
+MIL = "countries/Millennium.txt"
+RWT = "countries/Redwinter.txt"
+SRT = "countries/Specialresponseteam.txt"
+CAE = "countries/Caesar.txt"
+CAP = "countries/Caesarpmc.txt"
+CAB = "countries/Caesarbm.txt"
+CAH = "countries/Caesarhi.txt"
+CAO = "countries/CaesarO.txt"
+CEN = "countries/Centralstudentcouncil.txt"
+SCH = "countries/Schale.txt"
+WLH = "countries/Wlidhunt.txt"
+HIL = "countries/Highland.txt"
+AUR = "countries/Aurora.txt"
+
+
+
+

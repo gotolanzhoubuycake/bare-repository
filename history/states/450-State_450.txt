@@ -1,0 +1,15 @@
+state={
+	id=450
+	name="STATE_450"
+	provinces={
+		300 1580 2305 3210 6703 7459 8967 
+	}
+	history = {
+		owner = HYA
+		add_core_of=HYA
+		victory_points = {300 10}
+    }
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,15 @@
+state={
+	id=445
+	name="STATE_445"
+	provinces={
+		97 481 482 605 744 876 968 1035 1624 1719 1793 2258 2739 3273 3943 4020 4348 4532 4693 4859 5259 5797 6516 6836 7786 7966 8024 8065 8165 8250 8383 8411 8471 8793 9048 9228 9391 9430 9914 9962 9971 9989 10003 
+	}
+	history = {
+		owner = HYA
+		add_core_of=HYA
+		victory_points = {8165 10}
+    }
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}
