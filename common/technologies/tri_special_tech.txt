@@ -1,0 +1,158 @@
+technologies = { #三一特殊科技
+    tech_TRI_FOO = { #茶会直属前进炮兵观察员
+        folder = {
+            name = tri_special_folder
+            position = { x = -4 y = 0 }
+        }
+        dependencies = { trinity_base_tech_token }
+        start_year = 1936
+        path = { leads_to_tech = tech_TRI_FOO1 }
+        research_cost = 2
+        #categories = { }
+
+    }
+    tech_TRI_FOO1 = { #炮兵观察员个人装备
+        folder = {
+            name = tri_special_folder
+            position = { x = -4 y = 2 }
+        }
+        start_year = 1938
+        path = { leads_to_tech = tech_TRI_FOO2 }
+        research_cost = 2
+        #categories = { }
+
+    }
+    tech_TRI_FOO2 = { #茶会直属炮兵换装
+        folder = {
+            name = tri_special_folder
+            position = { x = -4 y = 4 }
+        }
+        start_year = 1940
+        research_cost = 2
+        #categories = { }
+
+    }
+
+    tech_TRI_Justyna = { #启封圣徒会武装
+        folder = {
+            name = tri_special_folder
+            position = { x = 1.5 y = 0 }
+        }
+        dependencies = { trinity_base_tech_token }
+        start_year = 1936
+        path = { leads_to_tech = tech_TRI_Justyna1 }
+        path = { leads_to_tech = tech_TRI_Justyna2 }
+        research_cost = 2
+        #categories = { }
+        
+        #enable_equipments = { }#解锁圣徒会步枪制造
+
+    }
+    tech_TRI_Justyna1 = { #圣徒会训练法
+        folder = {
+            name = tri_special_folder
+            position = { x = 0 y = 2 }
+        }
+        start_year = 1938
+        XOR = { tech_TRI_Justyna2 }
+        path = { leads_to_tech = tech_TRI_Justyna3 }
+        research_cost = 2
+        #categories = { }
+
+    }
+    tech_TRI_Justyna2 = { #推广圣徒会制服
+        folder = {
+            name = tri_special_folder
+            position = { x = 3 y = 2 }
+        }
+        start_year = 1938
+        XOR = { tech_TRI_Justyna1 }
+        path = { leads_to_tech = tech_TRI_Justyna3 }
+        research_cost = 2
+        #categories = { }
+
+    }
+    tech_TRI_Justyna3 = { #启封禁忌武装
+        folder = {
+            name = tri_special_folder
+            position = { x = 1.5 y = 4 }
+        }
+        start_year = 1940
+        path = { leads_to_tech = tech_TRI_Justyna1 }
+        path = { leads_to_tech = tech_TRI_Justyna2 }
+        research_cost = 2
+        #categories = { }
+
+        #enable_equipments = { } #解锁圣徒会等离子枪
+        
+    }
+
+    tech_TRI_tea_and_dessert = { #引进高端茶叶
+        folder = {
+            name = tri_special_folder
+            position = { x = 8 y = 0 }
+        }
+        dependencies = { trinity_base_tech_token }
+        start_year = 1936
+        XOR = { tech_TRI_tea_and_dessert3 }
+        path = { leads_to_tech = tech_TRI_tea_and_dessert1 }
+        research_cost = 2
+        #categories = { }
+
+    }
+    tech_TRI_tea_and_dessert1 = { #改进甜点工艺
+        folder = {
+            name = tri_special_folder
+            position = { x = 8 y = 2 }
+        }
+        start_year = 1938
+        path = { leads_to_tech = tech_TRI_tea_and_dessert2 }
+        research_cost = 2
+        #categories = { }
+
+    }
+    tech_TRI_tea_and_dessert2 = { #仪式化茶会流程
+        folder = {
+            name = tri_special_folder
+            position = { x = 8 y = 4 }
+        }
+        start_year = 1940
+        research_cost = 2
+        #categories = { }
+
+    }
+    tech_TRI_tea_and_dessert3 = { #自治区连锁奶茶店
+        folder = {
+            name = tri_special_folder
+            position = { x = 10 y = 0 }
+        }
+        dependencies = { trinity_base_tech_token }
+        start_year = 1936
+        XOR = { tech_TRI_tea_and_dessert }
+        path = { leads_to_tech = tech_TRI_tea_and_dessert4 }
+        research_cost = 2
+        #categories = { }
+
+    }
+    tech_TRI_tea_and_dessert4 = { #开发新品奶茶
+        folder = {
+            name = tri_special_folder
+            position = { x = 10 y = 2 }
+        }
+        start_year = 1938
+        path = { leads_to_tech = tech_TRI_tea_and_dessert5 }
+        research_cost = 2
+        #categories = { }
+
+    }
+    tech_TRI_tea_and_dessert5 = { #增加奶茶配料
+        folder = {
+            name = tri_special_folder
+            position = { x = 10 y = 4 }
+        }
+        start_year = 1940
+        research_cost = 2
+        #categories = { }
+
+    }
+}

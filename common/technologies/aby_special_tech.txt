@@ -1,0 +1,120 @@
+technologies = { #阿拜多斯特殊科技
+##自行车线
+    tech_ABY_cycling_team = { #成立阿拜多斯自行车队
+        folder = {
+            name = aby_special_folder
+            position = { x = -3 y = 0 }
+        }
+        dependencies = { abydos_base_tech_token }
+        start_year = 1936
+        path = { leads_to_tech = tech_ABY_bicycle_repairing }
+        research_cost = 2
+        #categories = {  }
+        enable_subunits = { bicycle_battalion } 
+    }
+    tech_ABY_bicycle_repairing = { #自行车维护技术
+        folder = {
+            name = aby_special_folder
+            position = { x = -3 y = 2 }
+        }
+        start_year = 1938
+        path = { leads_to_tech = tech_ABY_long_distance_cycling }
+        research_cost = 2
+        #categories = {  }
+        bicycle_battalion = { }
+    }
+    tech_ABY_long_distance_cycling = { #自行车长程骑行装备
+        folder = {
+            name = aby_special_folder
+            position = { x = -3 y = 4 }
+        }
+        start_year = 1940
+        research_cost = 2
+        #categories = {  }
+        bicycle_battalion = { }
+    }
+##自行车线
+
+##无人机线
+    tech_ABY_chasing_UAV = { #无人机采购
+        folder = {
+            name = aby_special_folder
+            position = { x = 0 y = 2 }
+        }
+        dependencies = { abydos_base_tech_token }
+        start_year = 1936
+        path = { leads_to_tech = tech_ABY_medic_UAV }
+        path = { leads_to_tech = tech_ABY_transport_UAV }
+        path = { leads_to_tech = tech_ABY_armed_UAV }
+        research_cost = 2
+        #categories = {  }
+        enable_equipments = { uav_airframe_2 }
+    }
+    tech_ABY_medic_UAV = { #医疗无人机改进
+        folder = {
+            name = aby_special_folder
+            position = { x = 3 y = 0 }
+        }
+        start_year = 1938
+        research_cost = 2
+        #categories = {  }
+        uav_airframe = { }
+    }
+    tech_ABY_transport_UAV = { #运输无人机改进
+        folder = {
+            name = aby_special_folder
+            position = { x = 3 y = 2 }
+        }
+        start_year = 1938
+        research_cost = 2
+        #categories = {  }
+        uav_airframe = { }
+    }
+    tech_ABY_armed_UAV = { #武装无人机改进
+        folder = {
+            name = aby_special_folder
+            position = { x = 3 y = 4 }
+        }
+        start_year = 1938
+        research_cost = 2
+        #categories = {  }
+        uav_airframe = { }
+    }
+##无人机线
+
+##建设线
+    tech_ABY_learn_from_old_student_union = { #旧学生会的历史教训
+        folder = {
+            name = aby_special_folder
+            position = { x = 6 y = 0 }
+        }
+        dependencies = { abydos_base_tech_token }
+        start_year = 1936
+        path = { leads_to_tech = tech_ABY_desertification_countermeasure }
+        research_cost = 2
+        #categories = {  }
+
+    }
+    tech_ABY_desertification_countermeasure = { #确立沙漠化对策方针
+        folder = {
+            name = aby_special_folder
+            position = { x = 6 y = 2 }
+        }
+        start_year = 1938
+        path = { leads_to_tech = tech_ABY_long_distance_cycling }
+        research_cost = 2
+        #categories = {  }
+
+    }
+    tech_ABY_ensure_urban_security = { #确保市区安全
+        folder = {
+            name = aby_special_folder
+            position = { x = 6 y = 4 }
+        }
+        start_year = 1940
+        research_cost = 2
+        #categories = {  }
+
+    }
+##建设线
+}

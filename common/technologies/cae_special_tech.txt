@@ -1,0 +1,137 @@
+technologies = { #PMC特殊科技
+#军事
+    tech_CAE_PMC_discipline = { #PMC训练
+        folder = {
+            name = cae_special_folder
+            position = { x = -3 y = 0 }
+        }
+        allow = {
+            OR = {
+                original_tag = CAE
+                original_tag = CAP
+                original_tag = CAH
+            }
+        }
+        start_year = 1936
+        path = { leads_to_tech = tech_CAE_PMC_unique_equipment }
+        research_cost = 2
+        #categories = {  }
+    }
+    tech_CAE_PMC_unique_equipment = { #PMC专属装备
+        folder = {
+            name = cae_special_folder
+            position = { x = -3 y = 2 }
+        }
+        start_year = 1938
+        path = { leads_to_tech = tech_CAE_regularize_reserve_duty_discipline }
+        research_cost = 2
+        #categories = {  }
+        #PMC编制# = {
+            need = { railway_gun_equipment = 1 }
+            need = { #单兵反坦克炮# = 3 }
+        }
+        enable_equipments = { 
+            railway_gun_equipment_2
+            #单兵反坦克炮#
+        }
+    }
+    tech_CAE_regularize_reserve_duty_discipline = { #预备军正规化训练
+        folder = {
+            name = cae_special_folder
+            position = { x = -3 y = 4 }
+        }
+        start_year = 1940
+        path = { leads_to_tech = tech_CAE_reserve_duty_superintendents }
+        research_cost = 2
+        #categories = {  }
+    }
+    tech_CAE_reserve_duty_superintendents = { #设立预备军督战队
+        folder = {
+            name = cae_special_folder
+            position = { x = -3 y = 6 }
+        }
+        start_year = 1942
+        research_cost = 2
+        #categories = {  }
+    }
+#军事
+#商业
+    tech_CAE_farm_produce = { #凯撒农产供应链优化
+        folder = {
+            name = cae_special_folder
+            position = { x = 0 y = 0 }
+        }
+        allow = {
+            OR = {
+                original_tag = CAE
+                original_tag = CAP
+                original_tag = CAH
+            }
+        }
+        start_year = 1936
+        path = { leads_to_tech = tech_CAE_monopolise_food }
+        research_cost = 2
+        #categories = {  }
+    }
+    tech_CAE_monopolise_food = { #确保凯撒食品垄断
+        folder = {
+            name = cae_special_folder
+            position = { x = 0 y = 2 }
+        }
+        start_year = 1938
+        path = { leads_to_tech = tech_CAE_expand_department_store_business }
+        research_cost = 2
+        #categories = {  }
+
+    }
+    tech_CAE_expand_department_store_business = { #扩张凯撒百货销售范围
+        folder = {
+            name = cae_special_folder
+            position = { x = 0 y = 4 }
+        }
+        start_year = 1940
+        research_cost = 2
+        #categories = {  }
+    }
+#商业
+
+#经管
+    tech_CAE_intergrated_konzern_management_system = { #财阀联合管理体系
+
+        folder = {
+            name = cae_special_folder
+            position = { x = 2 y = 0 }
+        }
+        allow = {
+            OR = {
+                original_tag = CAE
+                original_tag = CAP
+                original_tag = CAH
+            }
+        }
+        start_year = 1936
+        path = { leads_to_tech = tech_CAE_get_rid_of_weak_subsidiary_companies }
+        research_cost = 2
+        #categories = {  }
+    }
+    tech_CAE_get_rid_of_weak_subsidiary_companies = { #淘汰弱小子公司
+        folder = {
+            name = cae_special_folder
+            position = { x = 2 y = 2 }
+        }
+        start_year = 1938
+        path = { leads_to_tech = tech_CAE_tighten_control_over_subsidiary_companies }
+        research_cost = 2
+        #categories = {  }
+
+    }
+    tech_CAE_tighten_control_over_subsidiary_companies = { #加强分公司控制力
+        folder = {
+            name = cae_special_folder
+            position = { x = 2 y = 4 }
+        }
+        start_year = 1940
+        research_cost = 2
+        #categories = {  }
+    }
+}

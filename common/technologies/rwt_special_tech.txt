@@ -1,0 +1,238 @@
+technologies = { #赤冬特殊科技
+    tech_RWT_engineers = { #重装工兵培训
+        folder = {
+            name = red_special_folder
+            position = { x = -4 y = 0 }
+        }
+        dependencies = { redwinter_base_tech_token }
+        start_year = 1936
+        path = { leads_to_tech = tech_RWT_engineers2 }
+        research_cost = 2
+        #categories = {  }
+        #enable_subunits = { } #启用赤冬专用工兵支援连,赤冬工兵连拥有更多的堑壕值以及战斗加成
+        #enable_equipments = {  } #可以使用并生产专用装备
+
+    }
+    tech_RWT_engineers2 = { #赤冬工兵手册
+        folder = {
+            name = red_special_folder
+            position = { x = -4 y = 2 }
+        }
+        start_year = 1938
+        path = { leads_to_tech = tech_RWT_engineers3 }
+        research_cost = 2
+        #categories = {  }
+        ##赤冬工兵连# = { #加强渡河、补给消耗减免
+		#	river = {
+		#		attack = 0.15	
+		#		defence = 0.15
+		#	}
+        #   supply_consumption_factor = -0.15
+		#	fuel_consumption_factor = -0.15
+        #}
+
+    }
+    tech_RWT_engineers3 = { #强化战斗工兵连
+        folder = {
+            name = red_special_folder
+            position = { x = -4 y = 4 }
+        }
+        start_year = 1940
+        research_cost = 2
+        #categories = {  }
+        ##赤冬工兵连# = {
+        #   maximum_speed = 0.1 增加移速
+        #   need = { #工兵部队需要使用机械化载具以及步战车
+        #       apc_chassis = 5 #轮式步战车
+        #       ifv_chassis = 5 #履带步战车
+        #       mechanized_equipment = 5 #机械化装备
+        #   }
+        #   forest = {  #加强全地形作战能力
+		#		attack = 0.05
+		#	}
+		#	hills = {
+		#		attack = 0.05
+		#	}
+		#	mountain = {
+		#		attack = 0.05
+		#	}
+		#	jungle = {
+		#		attack = 0.05
+		#	}
+		#	marsh = {
+		#		attack = 0.05
+		#	}
+		#	plains = {
+		#		attack = 0.05
+		#	}
+		#	desert = {
+		#		attack = 0.05
+		#	}
+		#	river = {
+		#		attack = 0.05
+		#	}
+		#	fort = {
+		#		attack = 0.05
+		#	}
+		#	amphibious = {
+		#		attack = 0.05
+		#	}
+		#	urban = {
+		#		attack = 0.05
+		#	}
+        #}
+    }
+
+    tech_RWT_armor = { #红冬装甲科技研究
+        folder = {
+            name = red_special_folder
+            position = { x = 2 y = 0 }
+        }
+        allow = { always = no } #内战结束后可研究
+        dependencies = { redwinter_base_tech_token }
+        start_year = 1936
+        path = { leads_to_tech = tech_RWT_artillery }
+        path = { leads_to_tech = tech_RWT_tank }
+        research_cost = 2
+        #categories = {  }
+
+        #enable_equipments = {  } #启用底盘：T55（肃清君），T72（超级肃清君）
+
+    }
+    tech_RWT_artillery = { #信火一体方向
+        folder = {
+            name = red_special_folder
+            position = { x = 0 y = 2 }
+        }
+        XOR = { tech_RWT_tank }
+        start_year = 1938
+        path = { leads_to_tech = tech_RWT_artillery2 }
+        research_cost = 2
+        #categories = {  }
+
+        #enable_equipments = {  } #履带，6*6轮式
+        #enable_equipment_modules = {  } #配件：电动半自动输弹机，综合数据链终端
+
+    }
+    tech_RWT_artillery2 = { #数字化炮兵
+        folder = {
+            name = red_special_folder
+            position = { x = 0 y = 4 }
+        }
+        start_year = 1940
+        path = { leads_to_tech = tech_RWT_artillery3 }
+        research_cost = 2
+        #categories = {  }
+
+        #enable_equipments = {  } #启用底盘：越野卡车底盘，8*8轮式装甲车底盘
+        #enable_equipment_modules = {  } #配件：火力系统模块化;卡车底盘专属配件：液压发射稳定系统，扩展射界;武器：122mm榴弹炮（赤冬）
+
+    }
+    tech_RWT_artillery3 = { #次时代轻坦克
+        folder = {
+            name = red_special_folder
+            position = { x = 0 y = 6 }
+        }
+        start_year = 1942
+        path = { leads_to_tech = tech_RWT_artillery4 }
+        research_cost = 2
+        #categories = {  }
+
+        #enable_equipments = {  } #启用：新式轻坦底盘
+        #enable_equipment_modules = {  } #配件：车载无人机;武器：新式105mm主炮（轻），试验性105mm电热化学炮（轻）
+    }
+    tech_RWT_artillery4 = { #新式火箭炮
+        folder = {
+            name = red_special_folder
+            position = { x = 0 y = 8 }
+        }
+        start_year = 1944
+        research_cost = 2
+        #categories = {  }
+
+        #enable_equipment_modules = {  } #启用自走火箭炮专属配件：模块化储运一体发射箱，巡飞弹备弹箱;武器：122mm火箭炮（中）
+    }
+    tech_RWT_tank = { #甲弹对抗方向
+        folder = {
+            name = red_special_folder
+            position = { x = 4 y = 2 }
+        }
+        XOR = { tech_RWT_artillery }
+        start_year = 1938
+        path = { leads_to_tech = tech_RWT_tank2 }
+        research_cost = 2
+        #categories = {  }
+
+        #enable_equipments = {  } #启用T90底盘，主炮，及相关配件
+        #enable_equipment_modules = {  }
+
+    }
+    tech_RWT_tank2 = { #次时代重装坦克研究
+        folder = {
+            name = red_special_folder
+            position = { x = 4 y = 4 }
+        }
+        start_year = 1940
+        path = { leads_to_tech = tech_RWT_tank3 }
+        research_cost = 2
+        #categories = {  }
+
+        #enable_equipments = {  } #启用T14底盘，125mm主炮，及相关配件
+        #enable_equipment_modules = {  } 
+
+    }
+    tech_RWT_tank3 = { #次时代重装坦克配件研究
+        folder = {
+            name = red_special_folder
+            position = { x = 4 y = 6 }
+        }
+        start_year = 1942
+        research_cost = 2
+        #categories = {  }
+
+        #enable_equipment_modules = {  } #启用武器：弹炮结合防空系统，试验性152mm*2火炮，152mm火炮
+    }
+
+    tech_RWT_industry = { #工务部建设经验总结
+        folder = {
+            name = red_special_folder
+            position = { x = 7 y = 0 }
+        }
+        allow = { always = no } #内战结束后可研究，需要工务部不被禁止
+        dependencies = { redwinter_base_tech_token }
+        start_year = 1936
+        path = { leads_to_tech = tech_RWT_industry2 }
+        research_cost = 2
+        #categories = {  }
+        #建造速度+维修速度+地块工厂上限+
+        global_building_slots_factor = 0.15
+        production_speed_buildings_factor = 0.15
+		industry_repair_factor = 0.15
+    }
+    tech_RWT_industry2 = { #建设经验总结推广
+        folder = {
+            name = red_special_folder
+            position = { x = 7 y = 2 }
+        }
+        allow = { always = no } #工务部影响力为：重要派系。
+        start_year = 1938
+        research_cost = 2
+        #categories = {  }
+        #生产上限+生产效率增长+战略资源获取+
+        production_factory_max_efficiency_factor = 0.1
+        production_factory_efficiency_gain_factor = 0.1
+        local_resources_factor = 0.1
+    }
+    tech_RWT_industry3 = { #设立社会工程学学科
+        folder = {
+            name = red_special_folder
+            position = { x = 9 y = 0 }
+        }
+        start_year = 1940
+        research_cost = 3
+        #categories = {  }
+        #科研++pp+
+        research_speed_factor = 0.1
+        political_power_gain = 0.1
+    }
+}
