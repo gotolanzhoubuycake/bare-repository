@@ -1,0 +1,108 @@
+technologies = {
+#训练
+    tech_ARI_special_team_dicipline = { #特殊小队训练
+        folder = {
+            name = ari_special_folder
+            position = { x = -3 y = 0 }
+        }
+        dependencies = { arius_base_tech_token }
+        start_year = 1936
+        path = { leads_to_tech = tech_ARI_CQB_dicipline }
+        research_cost = 2
+        #categories = {  }
+
+    }
+    tech_ARI_CQB_dicipline = { #室内CQB特训
+        folder = {
+            name = ari_special_folder
+            position = { x = -3 y = 2 }
+        }
+        start_year = 1938
+        path = { leads_to_tech = tech_ARI_slaughter_dicipline }
+        research_cost = 2
+        #categories = {  }
+
+    }
+    tech_ARI_slaughter_dicipline = { #杀戮训练
+        folder = {
+            name = ari_special_folder
+            position = { x = -3 y = 4 }
+        }
+        start_year = 1940
+        research_cost = 2
+        #categories = {  }
+
+    }
+#训练
+
+#圣徒会
+    tech_ARI_treaty_with_Justyna = { #与圣徒会签订契约
+        folder = {
+            name = ari_special_folder
+            position = { x = 0 y = 0 }
+        }
+        dependencies = { arius_base_tech_token }
+        allow = {} #古圣堂袭击后
+        start_year = 1936
+        path = { leads_to_tech = tech_ARI_Justyna_weapon_design }
+        research_cost = 2
+        #categories = {  }
+
+    }
+    tech_ARI_Justyna_weapon_design = { #圣徒会武器设计
+        folder = {
+            name = ari_special_folder
+            position = { x = 0 y = 2 }
+        }
+        start_year = 1938
+        path = { leads_to_tech = tech_ARI_barbara }
+        research_cost = 2
+        #categories = {  }
+
+    }
+    tech_ARI_barbara = { #解封巴尔巴拉
+        folder = {
+            name = ari_special_folder
+            position = { x = 0 y = 4 }
+        }
+        start_year = 1940
+        research_cost = 2
+        #categories = {  }
+
+    }
+#圣徒会
+
+    tech_ARI_defense_system = { #自治区防御体系
+        folder = {
+            name = ari_special_folder
+            position = { x = 3 y = 0 }
+        }
+        dependencies = { arius_base_tech_token }
+        start_year = 1936
+        path = { leads_to_tech = tech_ARI_excavate_offensive_tunnel }
+        research_cost = 2
+        #categories = {  }
+
+    }
+    tech_ARI_excavate_offensive_tunnel = { #挖掘进攻坑道
+        folder = {
+            name = ari_special_folder
+            position = { x = 3 y = 2 }
+        }
+        start_year = 1938
+        path = { leads_to_tech = tech_ARI_thermobaric_grenade }
+        research_cost = 2
+        #categories = {  }
+
+    }
+    tech_ARI_thermobaric_grenade = { #配置温压手雷
+        folder = {
+            name = ari_special_folder
+            position = { x = 3 y = 4 }
+        }
+        start_year = 1940
+        research_cost = 2
+        #categories = {  }
+
+    }
+}
