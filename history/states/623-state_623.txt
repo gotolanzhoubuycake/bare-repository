@@ -7,6 +7,7 @@ state={
 	history = {
 		owner = D15
 		add_core_of=D15
+		victory_points = {4530 15}
     }
 	manpower=0
 	state_category=wasteland

@@ -1,0 +1,128 @@
+characters = { #红冬角色
+	RWT_momiji = { #秋泉红叶		
+		name = RWT_momiji_name
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_RWT_momiji"
+				small = "GFX_idea_advisor_RWT_momiji"
+			}
+	}
+
+	RWT_meru = { #姬木爱瑠
+		name = RWT_meru_name
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_RWT_meru"
+				small = "GFX_idea_advisor_RWT_meru"
+			}
+	}
+
+	RWT_marina = { #池仓真里奈,a
+		name = RWT_marina_name
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_RWT_marina"
+				small = "GFX_idea_advisor_RWT_marina"
+			}
+		advisor = {
+			slot =  political_advisor
+			idea_token = RWT_marina_idea
+			allowed  = {
+					original_tag  = RWT
+				}
+				traits  = {
+				}				
+			}
+	}
+
+	RWT_tomoe = { #佐城巴,a
+		name = RWT_tomoe_name
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_RWT_tomoe"
+				small = "GFX_idea_advisor_RWT_tomoe"
+			}
+		advisor = {
+			slot =  political_advisor
+			idea_token = RWT_tomoe_idea
+			allowed  = {
+					original_tag  = RWT
+				}
+				traits  = {
+				}				
+			}
+	}
+
+	RWT_cherino = { #连河切里诺,l,g
+		name = RWT_cherino_name
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_RWT_cherino"
+				small = "GFX_idea_advisor_RWT_cherino"
+			}
+		country_leader = {
+			#ideology = communism
+			traits = { }
+			expire = "-1.1.1.1"
+			id = -1
+		}
+		field_marshal = {
+			traits = { }
+			skills = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skil = 1
+		}
+ 	}
+
+	RWT_merino = { #安守实里,l,g
+		name = RWT_merino_name
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_RWT_merino"
+				small = "GFX_idea_advisor_RWT_merino"
+			}
+		country_leader = {
+			#ideology = communism
+			traits = { }
+			expire = "-1.1.1.1"
+			id = -1
+		}
+	}
+
+	RWT_takane = { #三善贵音
+		name = RWT_takane_name
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_RWT_takane"
+				small = "GFX_idea_advisor_RWT_takane"
+			}
+	}
+
+	RWT_yakumo = { #荒槙八云
+		name = RWT_yakumo_name
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_RWT_yakumo"
+				small = "GFX_idea_advisor_RWT_yakumo"
+			}
+	}
+
+	RWT_shigure = { #间宵时雨
+		name = RWT_shigure_name
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_RWT_shigure"
+				small = "GFX_idea_advisor_RWT_shigure"
+			}
+	}
+
+	RWT_nodoka = { #天见和香
+		name = RWT_nodoka_name
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_RWT_nodoka"
+				small = "GFX_idea_advisor_RWT_nodoka"
+			}
+	}

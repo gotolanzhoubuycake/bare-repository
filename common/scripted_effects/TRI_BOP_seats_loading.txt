@@ -1,13 +1,14 @@
 #这个文件主要实现议会席位生成，不涉及重新计算席位，除非要进行图像分布修改，请勿随意修改
 
 TRI_house_init_parliament = { #上议院
-	#TRI_BOP_house_party_seats = yes
 	
+	TRI_BOP_house_party_seats = yes
+
 	# Generate partial sums t1 = (P1), t2 = (P1 + P2), t3 = (P1 + P2 + P3)
 	# so that we can use resize_array to fill our array with the right number of seats for each party
-	set_temp_variable = { t1 = Patel_house_seatNumber }
-	set_temp_variable = { t2 = Filius_house_seatNumber }
-	set_temp_variable = { t3 = Cootes_house_seatNumber }
+	set_temp_variable = { t1 = House_support_num }
+	set_temp_variable = { t2 = House_centrist_num }
+	set_temp_variable = { t3 = House_opposition_num }
 
 	add_to_temp_variable = { t2 = t1 }
 	add_to_temp_variable = { t3 = t2 }
@@ -21,20 +22,23 @@ TRI_house_init_parliament = { #上议院
 		size = t1
 	}
 	# Resize array to t2 seats, setting P2 frame numbers to 2 (Party 2 color)
-	resize_array = {
+	resize_array = { #黄色点为4号
 		array = TRI_house_grid_box_array
-		value = 2
+		value = 4
 		size = t2
 	}
 	# Resize array to t3 seats, setting P3 frame numbers to 3 (Party 3 color)
-	resize_array = {
+	resize_array = { #红色点为3号
 		array = TRI_house_grid_box_array
-		value = 3
+		value = 2
 		size = t3
 	}
 
 	# Setup positions (ideally only done once in a history file or game-start event, this is inefficient)
-	
+	House_parliament_gui_positions = yes
+}
+
+House_parliament_gui_positions = {	
 	clear_array = TRI_house_x_array
 	clear_array = TRI_house_y_array
 
@@ -101,18 +105,17 @@ TRI_house_init_parliament = { #上议院
 }
 
 TRI_senators_init_parliament = { #下议院
-	TRI_BOP_senators_party_seats = yes
 	
+	TRI_BOP_senators_party_seats = yes
+
 	# Generate partial sums t1 = (P1), t2 = (P1 + P2), t3 = (P1 + P2 + P3)
 	# so that we can use resize_array to fill our array with the right number of seats for each party
-	set_temp_variable = { t1 = Justice_senators_seatNumber }
-	set_temp_variable = { t2 = Teresa_senators_seatNumber }
-	set_temp_variable = { t3 = Knight_senators_seatNumber }
-	set_temp_variable = { t4 = Others_senators_seatNumber } 
+	set_temp_variable = { t1 = Senators_support_num }
+	set_temp_variable = { t2 = Senators_centrist_num }
+	set_temp_variable = { t3 = Senators_opposition_num }
 
 	add_to_temp_variable = { t2 = t1 }
 	add_to_temp_variable = { t3 = t2 }
-	add_to_temp_variable = { t4 = t3 }
 
 
 	clear_array = TRI_senators_grid_box_array
@@ -124,26 +127,23 @@ TRI_senators_init_parliament = { #下议院
 		size = t1
 	}
 	# Resize array to t2 seats, setting P2 frame numbers to 2 (Party 2 color)
-	resize_array = {
+	resize_array = { #黄色点为4号
 		array = TRI_senators_grid_box_array
-		value = 2
+		value = 4
 		size = t2
 	}
 	# Resize array to t3 seats, setting P3 frame numbers to 3 (Party 3 color)
-	resize_array = {
+	resize_array = { #红色点为3号
 		array = TRI_senators_grid_box_array
-		value = 3
+		value = 2
 		size = t3
 	}
 
-	resize_array = {
-		array = TRI_senators_grid_box_array
-		value = 4
-		size = t4
-	}
-
 	# Setup positions (ideally only done once in a history file or game-start event, this is inefficient)
-	
+	Senators_parliament_gui_positions = yes
+}
+
+Senators_parliament_gui_positions = {	
 	clear_array = TRI_senators_x_array
 	clear_array = TRI_senators_y_array
 
@@ -349,15 +349,16 @@ TRI_senators_init_parliament = { #下议院
 	add_to_array = { TRI_senators_y_array = 133 }
 }
 
-TRI_reload_house_parliament_gui = {
+TRI_reload_house_parliament_gui = { #重新计算上议院席位后的显示
 
 	clear_array = TRI_house_grid_box_array
 
-	set_temp_variable = { t1 = Patel_house_seatNumber }
-	set_temp_variable = { t2 = Filius_house_seatNumber }
-	set_temp_variable = ( t3 = 30 )
+	set_temp_variable = { t1 = House_support_num }
+	set_temp_variable = { t2 = House_centrist_num }
+	set_temp_variable = { t3 = House_opposition_num }
 
 	add_to_temp_variable = { t2 = t1 }
+	add_to_temp_variable = { t3 = t2 }
 
 	resize_array = {
 		array = TRI_house_grid_box_array
@@ -367,30 +368,28 @@ TRI_reload_house_parliament_gui = {
 
 	resize_array = {
 		array = TRI_house_grid_box_array
-		value = 2
+		value = 4
 		size = t2
 	}
 
 	resize_array = {
 		array = TRI_house_grid_box_array
-		value = 3
+		value = 2
 		size = t3
 	}
 
 }
 
-TRI_reload_senators_parliament_gui = {
+TRI_reload_senators_parliament_gui = { #重新计算下议院席位后的显示
 
 	clear_array = TRI_senators_grid_box_array
 
-	set_temp_variable = { t1 = Justice_senators_seatNumber }
-	set_temp_variable = { t2 = Teresa_senators_seatNumber }
-	set_temp_variable = { t3 = Knight_senators_seatNumber }
-	set_temp_variable = { t4 = Others_senators_seatNumber }
+	set_temp_variable = { t1 = Senators_support_num }
+	set_temp_variable = { t2 = Senators_centrist_num }
+	set_temp_variable = { t3 = Senators_opposition_num }
 
 	add_to_temp_variable = { t2 = t1 }
 	add_to_temp_variable = { t3 = t2 }
-	add_to_temp_variable = { t4 = t3 }
 
 	resize_array = {
 		array = TRI_senators_grid_box_array
@@ -400,19 +399,14 @@ TRI_reload_senators_parliament_gui = {
 
 	resize_array = {
 		array = TRI_senators_grid_box_array
-		value = 2
+		value = 4
 		size = t2
 	}
 
 	resize_array = {
 		array = TRI_senators_grid_box_array
-		value = 3
+		value = 2
 		size = t3
 	}
 
-	resize_array = {
-		array = TRI_senators_grid_box_array
-		value = 4
-		size = t4
-	}
 }

@@ -8,8 +8,6 @@ state={
 		owner = CAP
 		add_core_of=CAP
 		victory_points = {5395 10}
-		victory_points = {7724 10}
-		victory_points = {11307 10}
 	}
 	manpower=0
 	state_category=wasteland

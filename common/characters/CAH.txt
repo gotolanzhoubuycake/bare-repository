@@ -1,0 +1,17 @@
+    CAH_ceo ={ 
+		name=CAH_ceo_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_CAH_ceo
+				small=GFX_portrait_CAH_ceo_small
+			}	
+		}
+
+        country_leader = {
+			ideology = liberalism
+			traits = { industry_oligrach }
+			expire = "-1.1.1.1"
+			id = -1
+		}
+
+	}

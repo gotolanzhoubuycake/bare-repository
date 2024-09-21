@@ -1,0 +1,17 @@
+    CAP_general ={ 
+		name=CAP_general_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_CAP_general
+				small=GFX_portrait_CAP_general_small
+			}	
+		}
+
+        country_leader = {
+			ideology = liberalism
+			traits = { professional_chief }
+			expire = "-1.1.1.1"
+			id = -1
+		}
+
+	}

@@ -10,19 +10,10 @@ starting_train_buffer = 0.5
 starting_truck_buffer = 0.5
 
 #圣三一权力平衡变量
-#上议院分布
-set_variable = { House_support_num = 12 }
-set_variable = { House_centrist_num = 9 }
-set_variable = { House_opposition_num = 9 }
 
-set_variable = { House_change_num = 0 }
+set_variable = { House_change_num = 0 }#上议会变化总数
 
-#下议院分布
-set_variable = { Senators_support_num = 26 }
-set_variable = { Senators_centrist_num = 47 }
-set_variable = { Senators_opposition_num = 27 }
-
-set_variable = { Senators_change_num = 0 }
+set_variable = { Senators_change_num = 0 }#下议会变化总数
 
 #帕特尔派初始值
 set_variable = { Patel_house_seatNumber = 10 } #帕特尔派席位总数
@@ -30,11 +21,25 @@ set_variable = { Patel_house_seatNum_support = 1 } #帕特尔派支持席位
 set_variable = { Patel_house_seatNum_opposition = 8 } #帕特尔派反对派席位
 set_variable = { Patel_house_seatNum_centrist = 1 } #帕特尔派中间派席位
 
+set_variable = { Patel_change_num = 0 }#席位变化值
+
+set_country_flag = { #派系立场标记0代表支持,1为中立,2为反对
+	flag = TRI_Patel_position
+	value = 2
+}
+
 #菲利乌斯派初始值
 set_variable = { Filius_house_seatNumber = 10 } 
 set_variable = { Filius_house_seatNum_support = 2 }
 set_variable = { Filius_house_seatNum_opposition = 1 }
 set_variable = { Filius_house_seatNum_centrist = 7 }
+
+set_variable = { Filius_change_num = 0 }
+
+set_country_flag = {
+	flag = TRI_Filius_posiion
+	value = 1
+}
 
 #圣库特斯派初始值
 set_variable = { Cootes_house_seatNumber = 10 }
@@ -42,9 +47,10 @@ set_variable = { Cootes_house_seatNum_support = 9 }
 set_variable = { Cootes_house_seatNum_opposition = 0 }
 set_variable = { Cootes_house_seatNum_centrist = 1 }
 
-#主要上议院派系标记
-set_country_flag = { #0代表帕特尔，1代表菲利乌斯，2代表圣库特斯	
-	flag = TRI_main_house_party
+set_variable = { Cootes_change_num = 0 }
+
+set_country_flag = {
+	flag = TRI_Cootes_position
 	value = 0
 }
 
@@ -85,15 +91,41 @@ set_country_flag = { #0代表正义，1代表修女会，2代表救护骑士团�
 TRI_senators_init_parliament = yes
 
 #桐藤渚政治偏执度设计
-set_variable = { TRI_nagisa_paranoia_modifier_increase = 2 }
+set_variable = { TRI_nagisa_paranoia_total = 0 } #偏执度总计，上限为100，用于计算数值范围触发事件
+set_variable = { TRI_nagisa_paranoia_modifier_increase = 2 } #每周偏执度
 
-#【争辩无休的《伊甸条约》方针】民族精神变量
+#【《伊甸条约》方针】全部民族精神变量
 set_variable = { eden_daily_power_gain = -0.75 }
 set_variable = { eden_stability = -0.15 }
 set_variable = { eden_goods_factor = 0.20 }
 set_variable = { eden_war_support = 0 }
 set_variable = { eden_research_speed = 0 }
 set_variable = { eden_conscription_factor = 0 }
+
+#【濒临破灭的《伊甸条约》】及其后续的全部民族精神变量
+set_variable = { eden_broken_daily_power_gain = -0.5 }
+set_variable = { eden_broken_weekly_stability = -0.002 }
+set_variable = { eden_broken_factory_output = -0.2 }
+set_variable = { eden_broken_stability = 0 }
+
+set_variable = { eden_broken_economy_cost = 1.00 }
+set_variable = { eden_broken_trade_laws_cost = 1.00 }
+set_variable = { eden_broken_mobilization_laws_cost = 1.00 }
+
+set_variable = { eden_broken_advisor_cost = 1.00 }
+set_variable = { eden_broken_army_chief_cost = 1.00 }
+set_variable = { eden_broken_air_chief_cost = 1.00 }
+
+set_variable = { eden_broken_research_speed = 0 }
+
+#【混乱的前线】民族精神变量
+set_variable = { cf_army_org_factor = -0.20 }
+set_variable = { cf_army_org_regain = -0.10 }
+set_variable = { cf_land_reinforce_rate = -0.04 }
+set_variable = { cf_training_time_factor = 1.00 }
+set_variable = { cf_army_core_attack_factor = 0.10 }
+set_variable = { cf_army_core_defence_factor = 0.10 }
+set_variable = { cf_experience_gain_army_factor = -0.3 }
 
 #【特殊事务调查部】民族精神变量
 set_variable = { ssi_operative_slot = 1 }

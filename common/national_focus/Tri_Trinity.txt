@@ -34,20 +34,20 @@ focus_tree = {
 ##以下为军事线
 	focus = {
 		id = TRI_reorgnize_teaparty_mob #重整茶话会亲卫队
-		icon = GFX_goal_unknown
+		icon = GFX_goal_TRI_reorgnize_teaparty_mob
 		cost = 5
 		x = 2
 		y = 0
 		search_filters = { FOCUS_FILTER_ARMY }
 		completion_reward = {
-				army_experience = 25
+			army_experience = 25
 		}			
 	}
 
 
 	focus = {
 		id = TRI_cooperation_with_justice_club #同正义实现委员会的合练
-		icon = GFX_goal_unknown
+		icon = GFX_goal_TRI_cooperation_with_justice_club
 		relative_position_id = TRI_reorgnize_teaparty_mob
 		prerequisite = { focus = TRI_reorgnize_teaparty_mob }			
 		mutually_exclusive = { focus = TRI_teaparty_leading }
@@ -64,7 +64,7 @@ focus_tree = {
 
 	focus = {
 		id = TRI_teaparty_leading #维持茶话会主导权
-		icon = GFX_goal_unknown
+		icon = GFX_goal_TRI_teaparty_leading
 		relative_position_id = TRI_reorgnize_teaparty_mob
 		prerequisite = { focus = TRI_reorgnize_teaparty_mob }			
 		mutually_exclusive = { focus = TRI_cooperation_with_justice_club }
@@ -81,7 +81,7 @@ focus_tree = {
 
 	focus = {
 		id =TRI_standing_guard #常备之盾
-		icon = GFX_goal_unknown
+		icon = GFX_goal_TRI_standing_guard
 		relative_position_id = TRI_cooperation_with_justice_club
 		prerequisite = {
 			focus = TRI_cooperation_with_justice_club
@@ -137,623 +137,606 @@ focus_tree = {
 			
 		}
 	}
+	
+	##以下为政治线##
+	#以下为第一阶段政治线：【不拥有任何焦点】
+	focus = {
+		id = TRI_pax_trinity #圣三一治下的团结
+		icon = GFX_goal_TRI_pax_trinity
 
+		#allow_branch = 不拥有任何焦点
 
-
-##以下为政治线##
-#以下为第一阶段政治线：【不拥有任何焦点】
-focus = {
-	id = TRI_pax_trinity #圣三一治下的团结
-	icon = GFX_goal_TRI_pax_trinity
-
-	cost = 5
-	x = 10
-	y = 0
-	search_filters = { FOCUS_FILTER_POLITICAL }
-	completion_reward = {
-		add_political_power = 50
-	}		
-	#allow_branch = 不拥有任何焦点
-}
-
-
-focus = {
-	id = TRI_prepare_for_eden #落实一切的文书
-	icon = GFX_goal_unknown
-	relative_position_id = TRI_pax_trinity
-	prerequisite = { focus = TRI_pax_trinity }			
-		
-	cost = 5
-	x = 0
-	y = 1
-	search_filters = { FOCUS_FILTER_POLITICAL }
-	completion_reward = {
-		add_political_power = 50
-		add_stability = 0.05
-		add_dynamic_modifier = { modifier = eden_treaty_step_0_modifier }
-	}			
-}
-
-
-focus = {
-	id = TRI_1st_eden_pact #第一次《伊甸条约》会谈
-	icon = GFX_goal_unknown	
-	relative_position_id = TRI_prepare_for_eden
-	prerequisite = { focus = TRI_prepare_for_eden }			
-		
-	cost = 5
-	x = 0
-	y = 1
-	search_filters = { FOCUS_FILTER_POLITICAL }
-	completion_reward = {
-		add_political_power = 75
-	}			
-}
-
-
-focus = {
-	id = TRI_calling_for_sisterhood #修女会的传讯
-	icon = GFX_goal_unknown	
-	relative_position_id = TRI_1st_eden_pact
-	prerequisite = { focus = TRI_1st_eden_pact }			
-		
-	cost = 5
-	x = 0
-	y = 1
-	search_filters = { FOCUS_FILTER_POLITICAL }
-	completion_reward = {
-		add_political_power = 100
-		#启用政治顾问：伊落玛丽
-	}			
-}
-
-
-focus = {
-	id = TRI_restart_domestic_struggle #重启院内接触
-	icon = GFX_goal_unknown	
-	relative_position_id = TRI_calling_for_sisterhood
-	prerequisite = { focus = TRI_calling_for_sisterhood }	
-
-	cost = 5
-	x = -1
-	y = 1
-	search_filters = { FOCUS_FILTER_POLITICAL }
-	completion_reward = {
-		add_political_power = 50
-		#启用政治顾问：羽川莲见、鹫见芹奈
-		#激活焦点抉择：《伊甸条约》的签订，并于【圣三一的权力平衡】决议组下添加新的决议。
-		#需要在事件effect里将《伊甸条约》签订事件标签 = yes
-		#并且用 mark_focus_tree_layout_dirty = yes 刷新国策树
-	}			
-}
-
-#以下为拥有焦点：【《伊甸条约》的签订】时显示的国策
-focus = {
-	id = TRI_expand_intellegence #扩展圣三一特殊调查部
-	icon = GFX_goal_unknown
-	relative_position_id = TRI_calling_for_sisterhood
-	prerequisite = { focus = TRI_calling_for_sisterhood }
-
-	allow_branch = {#拥有焦点：《伊甸条约》的签订
-	#	has_event_target = #《伊甸条约》签订事件标签
+		cost = 5
+		x = 10
+		y = 0
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_political_power = 50
+			}		
 	}
 
-	cost = 5
-	x = 2
-	y = 2
-	search_filters = { FOCUS_FILTER_POLITICAL }
-	completion_reward = {
-		add_stability = -0.10
-		#建立间谍机构：【圣三一特殊调查部】
-		create_intelligence_agency = yes
-	}			
+	focus = {
+		id = TRI_prepare_for_eden #落实一切的文书
+		icon = GFX_goal_TRI_prepare_for_eden
+		relative_position_id = TRI_pax_trinity
+		prerequisite = { focus = TRI_pax_trinity }			
+		
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+			add_dynamic_modifier = { modifier = eden_treaty_step_0_modifier }
+		}			
+	}
 	
-}
-
-
-focus = {
-	id = TRI_authorize_dove_faction #铸剑为犁
-	icon = GFX_goal_unknown	
-	relative_position_id = TRI_restart_domestic_struggle
-	prerequisite = { focus = TRI_restart_domestic_struggle }		
-	mutually_exclusive = { focus = TRI_authorize_eagle_faction }
-
-	cost = 5
-	x = 1
-	y = 1
-	search_filters = { FOCUS_FILTER_POLITICAL }
-	completion_reward = {
-		add_stability = 0.05
+	focus = {
+		id = TRI_1st_eden_pact #第一次《伊甸条约》会谈
+		icon = GFX_goal_TRI_1st_eden_pact	
+		relative_position_id = TRI_prepare_for_eden
+		prerequisite = { focus = TRI_prepare_for_eden }			
 		
-		add_to_variable = { eden_war_support = -0.10 }
-		add_to_variable = { eden_research_speed = 0.05 }
-		custom_effect_tooltip = eden_step_0_authorize_dove
-
-		add_timed_idea = {
-			idea = TRI_authorize_dove
-			days = 90
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_political_power = 75
+		}			
+	}
+	
+	focus = {
+		id = TRI_calling_for_sisterhood #修女会的传讯
+		icon = GFX_goal_TRI_calling_for_sisterhood	
+		relative_position_id = TRI_1st_eden_pact
+		prerequisite = { focus = TRI_1st_eden_pact }			
+		
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_political_power = 100
+			#启用政治顾问：伊落玛丽
+		}	
+	}
+	
+	focus = {
+		id = TRI_restart_domestic_struggle #重启院内接触
+		icon = GFX_goal_TRI_restart_domestic_struggle	
+		relative_position_id = TRI_calling_for_sisterhood
+		prerequisite = { focus = TRI_calling_for_sisterhood }	
+		
+		cost = 5
+		x = -1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_political_power = 50
+			#启用政治顾问：羽川莲见、鹫见芹奈
+			#激活焦点抉择：《伊甸条约》的签订，并于【圣三一的权力平衡】决议组下添加新的决议。
+			#需要在事件effect里将《伊甸条约》签订事件标签 = yes
+			#并且用 mark_focus_tree_layout_dirty = yes 刷新国策树
+		}		
+	}
+	
+	#以下为拥有焦点：【《伊甸条约》的签订】时显示的国策
+	focus = {
+		id = TRI_expand_intellegence #扩展圣三一特殊调查部
+		icon = GFX_goal_TRI_expand_intellegence
+		relative_position_id = TRI_calling_for_sisterhood
+		prerequisite = { focus = TRI_calling_for_sisterhood }
+		allow_branch = {#拥有焦点：《伊甸条约》的签订
+			#has_event_target = #《伊甸条约》签订事件标签
 		}
-
 		
-	}			
-}
-
-
-focus = {
-	id = TRI_authorize_eagle_faction #以武止戈
-	icon = GFX_goal_unknown	
-	relative_position_id = TRI_restart_domestic_struggle
-	prerequisite = { focus = TRI_restart_domestic_struggle }		
-	mutually_exclusive = { focus = TRI_authorize_dove_faction }
-
-	cost = 5
-	x = -1
-	y = 1
-	search_filters = { FOCUS_FILTER_POLITICAL }
-	completion_reward = {
-		add_political_power = 50
-		add_war_support = 0.10
+		cost = 5
+		x = 2
+		y = 2
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_stability = -0.10
+			#建立间谍机构：【圣三一特殊调查部】
+			create_intelligence_agency = yes
+		}			
+	}
+	focus = {
+		id = TRI_authorize_dove_faction #铸剑为犁
+		icon = GFX_goal_TRI_authorize_dove_faction	
+		relative_position_id = TRI_restart_domestic_struggle
+		prerequisite = { focus = TRI_restart_domestic_struggle }		
+		mutually_exclusive = { focus = TRI_authorize_eagle_faction }
 		
-		hidden_effect = {
-			add_to_variable = { eden_stability = -0.05 }
-			add_to_variable = { eden_conscription_factor = 0.10 }
-		}
+		cost = 5
+		x = 1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_stability = 0.05
 
-		custom_effect_tooltip = eden_step_0_authorize_eagle
-
-		add_timed_idea = {
-			idea = TRI_authorize_eagle
-			days = 120
-		}
+			add_to_variable = { eden_war_support = -0.10 }
+			add_to_variable = { eden_research_speed = 0.05 }
+			custom_effect_tooltip = eden_step_0_authorize_dove
+			add_timed_idea = {
+				idea = TRI_authorize_dove
+				days = 90
+			}
+		}			
+	}
+	
+	focus = {
+		id = TRI_authorize_eagle_faction #以武止戈
+		icon = GFX_goal_TRI_authorize_eagle_faction	
+		relative_position_id = TRI_restart_domestic_struggle
+		prerequisite = { focus = TRI_restart_domestic_struggle }		
+		mutually_exclusive = { focus = TRI_authorize_dove_faction }
 		
-		
-		#圣三一下议会+6支持席位
-		set_variable = { Senators_change_num = 6 }
+		cost = 5
+		x = -1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.10
 
-		if = { 
+			hidden_effect = {
+				add_to_variable = { eden_stability = -0.05 }
+				add_to_variable = { eden_conscription_factor = 0.10 }
+			}
+			custom_effect_tooltip = eden_step_0_authorize_eagle
 			
-			limit = {
-				check_variable = { Senators_centrist_num > Senators_change_num }
+			add_timed_idea = {
+				idea = TRI_authorize_eagle
+				days = 120
 			}
 			
-			subtract_from_variable = { Senators_centrist_num = Senators_change_num }
-			add_to_variable = { Senators_support_num = Senators_change_num }
-
-			custom_effect_tooltip = TRI_Senators_party_change_oppo
-			TRI_reload_senators_parliament_gui = yes
-		}
-
-		#上议院+4支持席位
-		set_variable = { House_change_num = 4 }
-		if = {
-			limit = {
-				check_variable = { House_centrist_num > House_change_num }
+			#圣三一下议会+6支持席位
+			set_variable = { Senators_change_num = 6 }
+			
+			if = { 
+				limit = {
+					check_variable = { Senators_centrist_num > Senators_change_num }
+				}
+				subtract_from_variable = { Senators_centrist_num = Senators_change_num }
+				add_to_variable = { Senators_support_num = Senators_change_num }
+				
+				custom_effect_tooltip = TRI_Senators_party_change_oppo
+				TRI_reload_senators_parliament_gui = yes
 			}
+			
+			#上议院+4支持席位
+			set_variable = { House_change_num = 4 }
+			if = {
+				limit = {
+					check_variable = { House_centrist_num > House_change_num }
+				}
+				
+				subtract_from_variable = { House_centrist_num = House_change_num }
+				add_to_variable = { House_support_num = House_change_num }
 
-			subtract_from_variable = { House_centrist_num = House_change_num }
-			add_to_variable = { House_support_num = House_change_num }
+				custom_effect_tooltip = TRI_House_party_change_oppo
+				TRI_reload_house_parliament_gui = yes
+			}
+		}			
+	}
+	
+	focus = {
+		id = TRI_restart_inschool_debate #重启《伊甸条约》院内章程
+		icon = GFX_goal_TRI_restart_inschool_debate	
+		relative_position_id = TRI_expand_intellegence
+		prerequisite = {
+			focus = TRI_authorize_dove_faction
+			focus = TRI_authorize_eagle_faction
+		}					
+		prerequisite = { focus = TRI_expand_intellegence }
 
-			custom_effect_tooltip = TRI_House_party_change_oppo
-			TRI_reload_house_parliament_gui = yes
-		}
-
-		
-	}			
-}
-
-
-focus = {
-	id = TRI_restart_inschool_debate #重启《伊甸条约》院内章程
-	icon = GFX_goal_unknown	
-	relative_position_id = TRI_expand_intellegence
-	prerequisite = {
-		focus = TRI_authorize_dove_faction
-		focus = TRI_authorize_eagle_faction
-	}					
-	prerequisite = { focus = TRI_expand_intellegence  }
-
-	cost = 10
-	x = -2
-	y = 1
-	search_filters = { FOCUS_FILTER_POLITICAL }
-	completion_reward = {
-		random_owned_controlled_state = {
-			limit = {
-				free_building_slots = {
-					building = industrial_complex
-					size < 10
-					include_locked = yes
+		cost = 10
+		x = -2
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 10
+						include_locked = yes
+					}
+				}
+				
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
 				}
 			}
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = industrial_complex
-				level = 1
-				instant_build = yes
+			
+			custom_effect_tooltip = eden_step_0_to_1_desc
+			hidden_effect = {
+				remove_dynamic_modifier = { modifier = eden_treaty_step_0_modifier }
+				add_to_variable = { eden_daily_power_gain = 0.15 }
+				add_to_variable = { eden_stability = 0.05 }
+				add_to_variable = { eden_goods_factor = -0.10 }
+				add_dynamic_modifier = { modifier = eden_treaty_step_1_modifier }
+			}
+		}			
+	}
+	
+	focus = {
+		id = TRI_turncoat_in_trinity #潜藏于圣三一的叛徒
+		icon = GFX_goal_TRI_turncoat_in_trinity	
+		relative_position_id = TRI_restart_inschool_debate
+		prerequisite = { focus = TRI_restart_inschool_debate }
+		
+		available = {
+			TRI_nagisa = { is_country_leader = yes }
+		}
+		
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		select_effect = {
+			#通过触发事件使桐藤渚获得特质
+			#桐藤渚获得特质——追根溯源:每6日偏执度+2%,稳定度+5%,改善关系-40%
+		}
+		
+		completion_reward = {
+			#桐藤渚获得特质描述
+			custom_effect_tooltip = TRI_focus_select_effect_tt
+			add_country_leader_trait = TRI_nagisa_Find_the_root
+			#桐藤渚偏执度-5
+			add_to_variable = { TRI_nagisa_paranoia_total = -5 }
+			
+			add_dynamic_modifier = { modifier = TRI_special_services_investigations }
+		}			
+	}
+	
+	focus = {
+		id = TRI_calling_for_convention #召开圣三一联合会议	
+		icon = GFX_goal_TRI_calling_for_convention	
+		relative_position_id = TRI_turncoat_in_trinity
+		prerequisite = { focus = TRI_turncoat_in_trinity }			
+		mutually_exclusive = { focus = TRI_calling_for_Schale }
+		
+		cost = 5
+		x = -1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_political_power = 75
+			#TODO:所有派系激进度-10%（对立派系效果翻倍）
+			
+			#TODO:桐藤渚偏执度-10%
+			add_to_variable = { TRI_nagisa_paranoia_total = -10 }
+			
+			#圣三一下议会+10支持席位
+			set_variable = { Senators_change_num = 10 }
+			if = { 
+				limit = {
+					check_variable = { Senators_centrist_num > Senators_change_num }
+				}
+				
+				subtract_from_variable = { Senators_centrist_num = Senators_change_num }
+				add_to_variable = { Senators_support_num = Senators_change_num }
+				
+				custom_effect_tooltip = TRI_Senators_party_change_oppo
+				TRI_reload_senators_parliament_gui = yes
+			}
+		}			
+	}
+	
+	focus = {
+		id = TRI_calling_for_Schale #拨通联邦学生会/夏莱的电话 此处可能处理成动态国策
+		icon = GFX_goal_TRI_calling_for_Schale	
+		relative_position_id = TRI_turncoat_in_trinity
+		prerequisite = { focus = TRI_turncoat_in_trinity }		
+		mutually_exclusive = { focus = TRI_calling_for_convention }
+		
+		available = {
+			SCH = {
+				exists = yes
 			}
 		}
 		
-		custom_effect_tooltip = eden_step_0_to_1_desc
-		hidden_effect = {
-			remove_dynamic_modifier = { modifier = eden_treaty_step_0_modifier }
-			add_to_variable = { eden_daily_power_gain = 0.15 }
-			add_to_variable = { eden_stability = 0.05 }
-			add_to_variable = { eden_goods_factor = -0.10 }
-			add_dynamic_modifier = { modifier = eden_treaty_step_1_modifier }
+		cost = 5
+		x = 1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+			#TODO:所有派系激进度+10%
+			#TODO:桐藤渚偏执度-5%
+			add_to_variable = { TRI_nagisa_paranoia_total = -5 }
+			
+			add_ideas = TRI_SCH_teacher_modifier
+		}			
+	}
+	
+	focus = {
+		id = TRI_investigation_in_care #详勘细查，防微杜渐
+		icon = GFX_goal_TRI_investigation_in_care	
+		relative_position_id = TRI_calling_for_Schale
+		prerequisite = {
+			focus = TRI_calling_for_Schale
+			focus = TRI_calling_for_convention
 		}
-	}			
-}
-
-
-focus = {
-	id = TRI_turncoat_in_trinity #潜藏于圣三一的叛徒
-	icon = GFX_goal_unknown	
-	relative_position_id = TRI_restart_inschool_debate
-	prerequisite = { focus = TRI_restart_inschool_debate }
-
-	available = {
-		TRI_nagisa = { is_country_leader = yes }
-	}
-
-	cost = 5
-	x = 0
-	y = 1
-	search_filters = { FOCUS_FILTER_POLITICAL }
-
-	select_effect = {
 		
-		
-		
-		#桐藤渚获得特质——追根溯源:每6日偏执度+2%,稳定度+5%,改善关系-40%
-	}
-
-	completion_reward = {
-		#桐藤渚获得特质描述
-		custom_effect_tooltip = TRI_focus_select_effect_tt
-		add_country_leader_trait = Find_the_root
-		
-		add_dynamic_modifier = { modifier = TRI_special_services_investigations }
-	}			
-}
-
-
-focus = {
-	id = TRI_calling_for_convention #召开圣三一联合会议	
-	icon = GFX_goal_unknown	
-	relative_position_id = TRI_turncoat_in_trinity
-	prerequisite = { focus = TRI_turncoat_in_trinity }			
-	mutually_exclusive = { focus = TRI_calling_for_Schale }
-
-	cost = 5
-	x = -1
-	y = 1
-	search_filters = { FOCUS_FILTER_POLITICAL }
-	completion_reward = {
-		add_political_power = 75
-		#TODO:所有派系激进度-10%（对立派系效果翻倍）
-
-		#TODO:桐藤渚偏执度-10%
-
-		#圣三一下议会+10支持席位
-		set_variable = { Senators_change_num = 10 }
-
-		if = { 
-
-			limit = {
-				check_variable = { Senators_centrist_num > Senators_change_num }
+		cost = 5
+		x = -1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			hidden_effect = {
+				add_to_variable = { ssi_political_power_gain = -0.10 }
+				add_to_variable = { ssi_stability = 0.05 }
 			}
-
-			subtract_from_variable = { Senators_centrist_num = Senators_change_num }
-			add_to_variable = { Senators_support_num = Senators_change_num }
-
-			custom_effect_tooltip = TRI_Senators_party_change_oppo
-			TRI_reload_senators_parliament_gui = yes
-		}
-	}			
-}
-
-
-focus = {
-	id = TRI_calling_for_Schale #拨通联邦学生会/夏莱的电话 此处可能处理成动态国策
-	icon = GFX_goal_unknown	
-	relative_position_id = TRI_turncoat_in_trinity
-	prerequisite = { focus = TRI_turncoat_in_trinity }		
-	mutually_exclusive = { focus = TRI_calling_for_convention }
-
-	available = {
-		SCH = {
-			exists = yes
-		}
+			
+			custom_effect_tooltip = TRI_investigation_in_care_ns_tt
+			#TODO:于决议组下添加GUI：【圣三一特殊事务调查部】并启用决议组：【对内部的调查】
+		}			
 	}
-
-	cost = 5
-	x = 1
-	y = 1
-	search_filters = { FOCUS_FILTER_POLITICAL }
-	completion_reward = {
-
-		#TODO:所有派系激进度+10%
-		#TODO:桐藤渚偏执度-5%
-		add_ideas = TRI_SCH_teacher_modifier
-
-	}			
-}
-
-
-focus = {
-	id = TRI_investigation_in_care #详勘细查，防微杜渐
-	icon = GFX_goal_unknown	
-	relative_position_id = TRI_calling_for_Schale
-	prerequisite = {
-		focus = TRI_calling_for_Schale
-		focus = TRI_calling_for_convention
-	}
-
-	cost = 5
-	x = -1
-	y = 1
-	search_filters = { FOCUS_FILTER_POLITICAL }
-	completion_reward = {
+	
+	focus = {
+		id = TRI_examination_for_training_club #对补习部的考试
+		icon = GFX_goal_TRI_examination_for_training_club	
+		relative_position_id = TRI_investigation_in_care
+		prerequisite = { focus = TRI_investigation_in_care }
 		
-		hidden_effect = {
-			add_to_variable = { ssi_political_power_gain = -0.10 }
-			add_to_variable = { ssi_stability = 0.05 }
-		}
-
-		custom_effect_tooltip = TRI_investigation_in_care_ns_tt
-
-		#TODO:于决议组下添加GUI：【圣三一特殊事务调查部】并启用决议组：【对内部的调查】
-
-	}			
-}
-
-
-focus = {
-	id = TRI_examination_for_training_club #对补习部的考试
-	icon = GFX_goal_unknown	
-	relative_position_id = TRI_investigation_in_care
-	prerequisite = { focus = TRI_investigation_in_care }
-
-	cost = 5
-	x = 0
-	y = 1
-	search_filters = { FOCUS_FILTER_POLITICAL }
-	completion_reward = {
-		add_political_power = 50
-		#TODO:于决议组：【圣三一特殊事务调查部】下追加决议组：【对补习部的调查】
-		#TODO:桐藤渚偏执度-10%
-	}			
-}
-
-focus = {
-	id = TRI_reunion_of_trinity #圣三一再联合
-	icon = GFX_goal_unknown	
-	relative_position_id = TRI_examination_for_training_club
-	prerequisite = { focus = TRI_examination_for_training_club 
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_political_power = 50
+			#TODO:于决议组：【圣三一特殊事务调查部】下追加决议组：【对补习部的调查】
+			#TODO:桐藤渚偏执度-10%
+			add_to_variable = { TRI_nagisa_paranoia_total = -10 }
+		}			
 	}
-
-	cost = 5
-	x = 0
-	y = 1
-	search_filters = { FOCUS_FILTER_POLITICAL }
-	completion_reward = {
-		add_political_power = 100
-		#TODO:桐藤渚偏执度-20%
-		#TODO:于GUI【圣三一的团结】支持度中添加20%的基础支持度
-		#TODO:于GUI【圣三一的团结】中添加:所有社团的激进程度-15%
-	}			
-}
-
-
-focus = {
-	id = TRI_chooseing_pact_place #会晤前的筹备
-	icon = GFX_goal_unknown	
-	relative_position_id = TRI_reunion_of_trinity
-	prerequisite = { focus = TRI_reunion_of_trinity }				
 	
-	cost = 5
-	x = 0
-	y = 1
-	search_filters = { FOCUS_FILTER_POLITICAL }
-	completion_reward = {
-		add_political_power = 100
-		stability_factor = 0.05
-		#TODO:桐藤渚偏执度-10%
-
-		hidden_effect = {
-			remove_dynamic_modifier = { modifier = eden_treaty_step_1_modifier }
-			add_to_variable = { eden_daily_power_gain = 0.20 }
-			add_to_variable = { eden_war_support = 0.10 }
-			add_to_variable = { eden_goods_factor = -0.10 }
-			add_dynamic_modifier = { modifier = eden_treaty_step_2_modifier }
-		}
-
-		custom_effect_tooltip = eden_step_1_to_2_desc
-
-	}			
-}
-
-
-focus = {
-	id = TRI_2st_eden_pact #第二次《伊甸条约》会谈
-	icon = GFX_goal_unknown	
-	relative_position_id = TRI_chooseing_pact_place
-	prerequisite = { focus = TRI_chooseing_pact_place }			
-	
-	bypass = {
-
-		#TODO:如果超事件－第二次《伊甸条约》会谈已被触发：则该国策将会被跳过
-
+	focus = {
+		id = TRI_reunion_of_trinity #圣三一再联合
+		icon = GFX_goal_TRI_reunion_of_trinity	
+		relative_position_id = TRI_examination_for_training_club
+		prerequisite = { focus = TRI_examination_for_training_club }
+		
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_political_power = 100
+			#TODO:桐藤渚偏执度-20%
+			add_to_variable = { TRI_nagisa_paranoia_total = -20 }
+			
+			#TODO:于GUI【圣三一的团结】支持度中添加20%的基础支持度
+			#TODO:于GUI【圣三一的团结】中添加:所有社团的激进程度-15%
+		}			
 	}
-
-	cost = 5
-	x = -1
-	y = 1
-	search_filters = { FOCUS_FILTER_POLITICAL }
-	completion_reward = {
-		#TODO:触发超事件第二次《伊甸条约》会谈
-		add_political_power = 100
-		add_timed_idea = {
-			idea = TRI_2st_eden_pact_modifier
-			days = 120
-		}
-
-		#TODO:如果超事件－第二次《伊甸条约》会谈已被触发：则该国策将会被跳过,并且上议院席位朝着反对玩家的方向移动2个席位,下议院朝着反对玩家的方向移动2个席位,并使得桐藤渚的偏执度+30%。
-	}			
-}
-
-
-focus = {
-	id = TRI_dissonance #失谐奏鸣
-	icon = GFX_goal_unknown	
-	relative_position_id = TRI_chooseing_pact_place
-	prerequisite = { focus = TRI_chooseing_pact_place }
-
-	cost = 5
-	x = 1
-	y = 1
-	search_filters = { FOCUS_FILTER_POLITICAL }
-	completion_reward = {
-		add_dynamic_modifier = { modifier = TRI_dissonance_modifier }
-	}			
-}
-
-
-focus = {
-	id = TRI_Unintentional_windfall #无心插柳
-	icon = GFX_goal_unknown	
-	relative_position_id = TRI_2st_eden_pact
-	prerequisite = { focus = TRI_2st_eden_pact }		
-	prerequisite = { focus = TRI_dissonance }
-
-	cost = 5
-	x = 1
-	y = 1
-	search_filters = { FOCUS_FILTER_POLITICAL }
-	completion_reward = {
-
-		hidden_effect = { #不谐之音效果修改
-			add_to_variable = { dissonance_stability = -0.05 }
-			add_to_variable = { dissonance_factory_output = -0.05 }
-			add_to_variable = { dissonance_training_time = 0.20 }
-		}
-
-		custom_effect_tooltip = TRI_dissonance_modifier_ns_tt
-
-		hidden_effect = {
-			add_to_variable = { ssi_operative_slot = 1 }
-			#TODO:获得间谍：获得间谍：白洲梓
-			#在间谍机构【圣三一特殊事务调查部】中添加任务：对茶话会的渗透
-			#TODO:启用军事顾问：白洲梓
-			#当白洲梓成为军事顾问时，接下来的国策事件组带来的负面影响将会降低；当白洲梓执行任务“对茶话会的渗透”时，该任务不会失败。
-		}
-
-		custom_effect_tooltip = TRI_investigation_in_care_alt_ns_tt
-	}			
-}
-
-
-focus = {
-	id = TRI_conspiracy_against_conspiracy #密谋，挫败阴谋
-	icon = GFX_goal_unknown	
-	relative_position_id = TRI_Unintentional_windfall
-	prerequisite = { focus = TRI_Unintentional_windfall }		
+	
+	focus = {
+		id = TRI_chooseing_pact_place #会晤前的筹备
+		icon = GFX_goal_TRI_chooseing_pact_place	
+		relative_position_id = TRI_reunion_of_trinity
+		prerequisite = { focus = TRI_reunion_of_trinity }				
 		
-	cost = 5
-	x = 0
-	y = 1
-	search_filters = { FOCUS_FILTER_POLITICAL }
-	completion_reward = {
-		add_political_power = 50
-		#启用政治顾问：阿慈谷日富美、下江小春
-		#触发事件移除桐藤渚特质【追根溯源】
-	}			
-}
-
-
-focus = {
-	id = TRI_sweet_dream_in_one_night #一夕安寝
-	icon = GFX_goal_unknown	
-	relative_position_id = TRI_conspiracy_against_conspiracy
-	prerequisite = { focus = TRI_conspiracy_against_conspiracy }		
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
+			#TODO:桐藤渚偏执度-10%
+			add_to_variable = { TRI_nagisa_paranoia_total = -10 }
+			
+			hidden_effect = {
+				remove_dynamic_modifier = { modifier = eden_treaty_step_1_modifier }
+				add_to_variable = { eden_daily_power_gain = 0.20 }
+				add_to_variable = { eden_war_support = 0.10 }
+				add_to_variable = { eden_goods_factor = -0.10 }
+				add_dynamic_modifier = { modifier = eden_treaty_step_2_modifier }
+			}
+			
+			custom_effect_tooltip = eden_step_1_to_2_desc
+		}			
+	}
 	
-	cost = 5
-	x = 0
-	y = 1
-	search_filters = { FOCUS_FILTER_POLITICAL }
-	completion_reward = {
-		remove_dynamic_modifier = { modifier = TRI_dissonance_modifier }
-		add_ideas = TRI_dissonance_modifier_alt
-
-		#触发事件，用于①将【对圣园未花的调查】决议组加入GUI【圣三一特殊调查部】；②将【补习部调查】决议组移除出GUI【圣三一特殊调查部】
-	}			
-}
-
-
-focus = {
-	id = TRI_lesson_from_training_club #补习部的教训
-	icon = GFX_goal_unknown	
-	relative_position_id = TRI_sweet_dream_in_one_night
-	prerequisite = { focus = TRI_sweet_dream_in_one_night }		
-	
-	cost = 5
-	x = -1
-	y = 1
-	search_filters = { FOCUS_FILTER_POLITICAL }
-	completion_reward = {
-		add_political_power = 100
-		#桐藤渚添加特质【温和的统领】(雇佣政治顾问和军事顾问的花费-25%)
-	}			
-}
-
-
-focus = {
-	id = TRI_meeting_for_the_future #面向未来的会议 
-	icon = GFX_goal_unknown	
-	relative_position_id = TRI_sweet_dream_in_one_night
-	prerequisite = { focus = TRI_sweet_dream_in_one_night }		
-	
-	cost = 5
-	x = 1
-	y = 1
-	search_filters = { FOCUS_FILTER_POLITICAL }
-	completion_reward = {
-		add_political_power = 200
-		#暂时锁定GUI【圣三一的团结】的数值
-	}			
-}
-
-
-focus = {
-	id = TRI_Congress_for_ending_all_conflict #正式的会议 假国策，激活30天后会触发事件，强制切换到另一条国策线
-	icon = GFX_goal_unknown	
-	relative_position_id = TRI_meeting_for_the_future
-	prerequisite = { focus = TRI_meeting_for_the_future }		
-	prerequisite = { focus = TRI_lesson_from_training_club }
+	focus = {
+		id = TRI_2st_eden_pact #第二次《伊甸条约》会谈
+		icon = GFX_goal_TRI_2st_eden_pact	
+		relative_position_id = TRI_chooseing_pact_place
+		prerequisite = { focus = TRI_chooseing_pact_place }			
 		
-	cost = 5
-	x = -1
-	y = 1
-	search_filters = { FOCUS_FILTER_POLITICAL }
-	completion_reward = {
-		custom_effect_tooltip = eden_step_2_to_3
-		#30天后触发事件
-	}			
-}
-
-#以下为触发超事件【古圣堂遭受袭击！】后的国策树	
-focus = {
-	id = TRI_unexpected_accident #烽烟骤起
-	icon = GFX_goal_unknown	
-	cost = 5
-	x = 20
-	y = 0
-	search_filters = { FOCUS_FILTER_POLITICAL }
-	completion_reward = {
-
+		bypass = {
+			#TODO:如果超事件－第二次《伊甸条约》会谈已被触发：则该国策将会被跳过
+		}
+		
+		cost = 5
+		x = -1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			#TODO:触发超事件第二次《伊甸条约》会谈
+			add_political_power = 100
+			add_timed_idea = {
+				idea = TRI_2st_eden_pact_modifier
+				days = 120
+			}
+			
+			#TODO:如果超事件－第二次《伊甸条约》会谈已被触发：则该国策将会被跳过,并且上议院席位朝着反对玩家的方向移动2个席位,下议院朝着反对玩家的方向移动2个席位,并使得桐藤渚的偏执度+30%。
+		}			
+	}
+	
+	focus = {
+		id = TRI_dissonance #失谐奏鸣
+		icon = GFX_goal_TRI_dissonance	
+		relative_position_id = TRI_chooseing_pact_place
+		prerequisite = { focus = TRI_chooseing_pact_place }
+		
+		cost = 5
+		x = 1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_dynamic_modifier = { modifier = TRI_dissonance_modifier }
 		}		
-		#allow_branch = 事件：【古圣堂遭受袭击！】已发生
 	}
+	
+	focus = {
+		id = TRI_Unintentional_windfall #无心插柳
+		icon = GFX_goal_TRI_Unintentional_windfall	
+		relative_position_id = TRI_2st_eden_pact
+		prerequisite = { focus = TRI_2st_eden_pact }		
+		prerequisite = { focus = TRI_dissonance }
+		
+		cost = 5
+		x = 1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			
+			hidden_effect = { #不谐之音效果修改
+				add_to_variable = { dissonance_stability = -0.05 }
+				add_to_variable = { dissonance_factory_output = -0.05 }
+				add_to_variable = { dissonance_training_time = 0.20 }
+			}
+			
+			custom_effect_tooltip = TRI_dissonance_modifier_ns_tt
+			hidden_effect = {
+				add_to_variable = { ssi_operative_slot = 1 }
+				#TODO:获得间谍：获得间谍：白洲梓
+				#在间谍机构【圣三一特殊事务调查部】中添加任务：对茶话会的渗透
+				#TODO:启用军事顾问：白洲梓
+				#当白洲梓成为军事顾问时，接下来的国策事件组带来的负面影响将会降低；当白洲梓执行任务“对茶话会的渗透”时，该任务不会失败。
+			}
+			
+			custom_effect_tooltip = TRI_investigation_in_care_alt_ns_tt
+		}			
+	}
+	
+	focus = {
+		id = TRI_conspiracy_against_conspiracy #密谋，挫败阴谋
+		icon = GFX_goal_unknown	
+		relative_position_id = TRI_Unintentional_windfall
+		prerequisite = { focus = TRI_Unintentional_windfall }		
+		
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_political_power = 50
+			#启用政治顾问：阿慈谷日富美、下江小春
+			#触发事件移除桐藤渚特质【追根溯源】
+		}			
+	}
+	
+	focus = {
+		id = TRI_sweet_dream_in_one_night #一夕安寝
+		icon = GFX_goal_unknown	
+		relative_position_id = TRI_conspiracy_against_conspiracy
+		prerequisite = { focus = TRI_conspiracy_against_conspiracy }		
+		
+		cost = 5
+		x = 0
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			remove_dynamic_modifier = { modifier = TRI_dissonance_modifier }
+			add_ideas = TRI_dissonance_modifier_alt
+			
+			#触发事件，用于①将【对圣园未花的调查】决议组加入GUI【圣三一特殊调查部】；②将【补习部调查】决议组移除出GUI【圣三一特殊调查部】
+		}			
+	}
+	
+	focus = {
+		id = TRI_lesson_from_training_club #补习部的教训
+		icon = GFX_goal_unknown	
+		relative_position_id = TRI_sweet_dream_in_one_night
+		prerequisite = { focus = TRI_sweet_dream_in_one_night }		
+		
+		cost = 5
+		x = -1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_political_power = 100
+			#桐藤渚添加特质【温和的统领】(雇佣政治顾问和军事顾问的花费-25%)
+			remove_country_leader_trait = TRI_nagisa_Mild_leader
+			add_country_leader_trait = TRI_nagisa_Mild_leader_alt
+		}			
+	}
+	
+	focus = {
+		id = TRI_meeting_for_the_future #面向未来的会议 
+		icon = GFX_goal_unknown	
+		relative_position_id = TRI_sweet_dream_in_one_night
+		prerequisite = { focus = TRI_sweet_dream_in_one_night }		
+		
+		cost = 5
+		x = 1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_political_power = 200
+			#暂时锁定GUI【圣三一的团结】的数值
+		}			
+	}
+	
+	focus = {
+		id = TRI_Congress_for_ending_all_conflict #正式的会议 假国策，激活30天后会触发事件，强制切换到另一条国策线
+		icon = GFX_goal_unknown	
+		relative_position_id = TRI_meeting_for_the_future
+		prerequisite = { focus = TRI_meeting_for_the_future }		
+		prerequisite = { focus = TRI_lesson_from_training_club }
+		
+		cost = 5
+		x = -1
+		y = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+			remove_dynamic_modifier = { modifier = eden_treaty_step_2_modifier }
+			add_dynamic_modifier = { modifier = eden_treaty_step_3_modifier }
+			custom_effect_tooltip = eden_step_2_to_3
+			#30天后触发事件
+		}
+	}
+	
+	#以下为触发超事件【古圣堂遭受袭击！】后的国策树
+	focus = {
+		id = TRI_unexpected_accident #烽烟骤起
+		icon = GFX_goal_unknown	
+
+		#allow_branch = 事件：【古圣堂遭受袭击！】已发生
+		
+		cost = 5
+		x = 20
+		y = 0
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+
+			hidden_effect = {
+				remove_dynamic_modifier = { modifier = eden_treaty_step_3_modifier }
+				add_dynamic_modifier = { modifier = eden_treaty_step_4_modifier }
+			}
+			
+			#补国策本地化效果
+			custom_effect_tooltip = eden_step_3_to_4_desc
+			
+			#添加民族精神:混乱的前线
+			add_dynamic_modifier = { modifier = TRI_chaotic_frontline }
+			
+			#TODO:民族精神【圣三一的团结】增加效果:支持席位超过50%时,每席位带来的稳定度提升降低0.5%
+		}		
+	}
+	
 	focus = {
 		id = TRI_school_without_leader #群龙无首
 		icon = GFX_goal_unknown	
@@ -761,14 +744,19 @@ focus = {
 		prerequisite = {
 			focus = TRI_unexpected_accident
 		}			
+		
 		cost = 5
 		x = 0
 		y = 1
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			#暂时移除领袖桐藤渚的所有效果
+			#为领袖：桐藤渚添加特质：【失踪的领袖】效果：（无法切换政治顾问、军事顾问和任何法案）
 
-			}			
-    }
+		}			
+	}
+	
+	
 	focus = {
 		id = TRI_across_the_border #越过禁忌的边界
 		icon = GFX_goal_unknown	
@@ -781,8 +769,11 @@ focus = {
 		y = 1
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-
-			}			
+			#替换国家领袖“桐藤渚”为“浦和花子”。
+			#为浦和花子添加特质:【临危受命】,效果:(指挥点数获取-50%,指挥点数上限-50%。核心领土攻防+10%)
+			#添加特质：【修女会的摄政】，效果：（在花子执政期间，修女会的成员不受其他影响，在议会中将完全支持）
+			#添加特质:【绯言慎行的智者】,效果:(稳定度+5%,每日政治点数获取+0.2。)
+		}			
     }
 	focus = {
 		id = TRI_emergent_situation #紧急事态
@@ -797,7 +788,24 @@ focus = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 
-			}			
+			#将国家领袖浦和花子的特质【临危受命】添加效果:(指挥点数获取+30%,指挥点数上限+60%,计划上限+10%)
+
+			
+			hidden_effect = {
+				remove_dynamic_modifier = { modifier = eden_treaty_step_4_modifier }
+				add_to_variable = { eden_broken_daily_power_gain = 0.4 }
+				add_to_variable = { eden_broken_factory_output = 0.1 }
+				add_to_variable = { eden_broken_advisor_cost = -0.5 }
+				add_to_variable = { eden_broken_army_chief_cost = -0.5 }
+				add_to_variable = { eden_broken_air_chief_cost = -0.5 }
+				add_to_variable = { eden_broken_economy_cost = -0.5 }
+				add_to_variable = { eden_broken_mobilization_laws_cost = -0.5 }
+				add_to_variable = { eden_broken_trade_laws_cost = -0.5 }
+				add_dynamic_modifier = { modifier = eden_treaty_step_5_modifier }
+			}
+
+			custom_effect_tooltip = eden_step_4_to_5_desc
+		}			
     }
 	focus = {
 		id = TRI_sun_rise_again #幽而复明
@@ -812,7 +820,21 @@ focus = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 
-			}			
+			add_political_power = 200
+
+			hidden_effect = {
+				add_to_variable = { eden_broken_daily_power_gain = 0.1 }
+				add_to_variable = { eden_broken_factory_output = 0.15 }
+				add_to_variable = { eden_broken_advisor_cost = -0.5 }
+				add_to_variable = { eden_broken_army_chief_cost = -0.5 }
+				add_to_variable = { eden_broken_air_chief_cost = -0.5 }
+				add_to_variable = { eden_broken_economy_cost = -0.5 }
+				add_to_variable = { eden_broken_mobilization_laws_cost = -0.5 }
+				add_to_variable = { eden_broken_trade_laws_cost = -0.5 }
+			}
+
+			custom_effect_tooltip = eden_treaty_step_5_add_modifier_1
+		}			
     }
 	focus = {
 		id = TRI_reinforce_the_frontline #重铸前线
@@ -826,8 +848,9 @@ focus = {
 		y = 1
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-
-			}			
+			#在古圣堂边界获得6支缺乏装备的部队。它们分别来自：茶话会x2，正义实现委员会x2，修女会x2
+			#替换民族精神【混乱的前线】为【携手并肩的前线】，效果替换为：（组织度＋5％，组织度恢复速度－10％，增员率－2％。战备每日恢复＋100）
+		}			
     }
 	focus = {
 		id = TRI_smile_under_mask #善意的假面
@@ -842,7 +865,11 @@ focus = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 
-			}			
+			add_political_power = 100
+			
+			#为政治顾问：阿慈谷日富美添加效果：每日政治点数获取+10%,稳定度+10%
+
+		}			
     }
 	focus = {
 		id = TRI_after_the_storm #雨破天晴
@@ -859,8 +886,16 @@ focus = {
 		y = 1
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			hidden_effect = {
+				add_to_variable = { eden_broken_daily_power_gain = 0.3 }
+				add_to_variable = { eden_broken_stability = 0.05 }
+			}
 
-			}			
+			custom_effect_tooltip = eden_treaty_step_5_add_modifier_2
+
+			#立刻使上议院的议员朝着支持《伊甸条约》的方向移动10个席位
+			#立刻使下议院的议员朝着支持《伊甸条约》的方向移动30个席位
+		}			
     }
 	focus = {
 		id = TRI_restrain_the_disaster #遏灾制祸
@@ -875,7 +910,11 @@ focus = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 
-			}			
+			#获得民族精神：【扫除威胁!】效果：(对【阿里乌斯】的战斗获得15%的攻击和防御加成;战备恢复速度+100%)——直到阿里乌斯被消灭。
+			#替换国家领袖：“浦和花子”为“桐藤渚”。
+			#解锁政治顾问：浦和花子
+			#获得任务：最后的阻碍：消灭阿里乌斯。当阿里乌斯被消灭后,30天,将会触发一个奖励事件(使得桐藤渚的特质得到提升。)
+		}			
     }
 	focus = {
 		id = TRI_answer_for_thecreed #对古则的解答
@@ -890,7 +929,15 @@ focus = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 
-			}			
+			add_political_power = 150
+			hidden_effect = {
+				add_to_variable = { eden_broken_daily_power_gain = 0.20 }
+				add_to_variable = { eden_broken_stability = 0.15 }
+				add_to_variable = { eden_broken_research_speed = 0.10 }
+			}
+
+			custom_effect_tooltip = eden_treaty_step_5_add_modifier_3
+		}			
     }
 
 
@@ -914,9 +961,11 @@ focus = {
 
 			if = { 
 				limit = {
-					check_variable = { Senators_centrist_num > Senators_change_num }
+					OR = {
+						check_variable = { Senators_centrist_num > Senators_change_num }
+						check_variable = { Senators_centrist_num = Senators_change_num }
+					}
 				}
-				
 				subtract_from_variable = { Senators_centrist_num = Senators_change_num }
 				add_to_variable = { Senators_opposition_num = Senators_change_num }
 
@@ -945,7 +994,6 @@ focus = {
 				limit = {
 					check_variable = { House_centrist_num > House_change_num }
 				}
-
 				
 				subtract_from_variable = { House_centrist_num = House_change_num }
 				add_to_variable = { House_opposition_num = House_change_num }
@@ -953,6 +1001,14 @@ focus = {
 				custom_effect_tooltip = TRI_House_party_change
 				TRI_reload_house_parliament_gui = yes
 			}
+
+			#下为对议会系统计算席位的详细步骤，上为粗略版本
+			#custom_effect_tooltip = TRI_House_party_change
+			#set_variable = { Patel_change_num = 1 }
+
+			#TRI_Patel_add_opposition_seats = yes
+			#TRI_BOP_house_party_seats = yes
+			#TRI_reload_house_parliament_gui = yes
 
 		}		
 	}

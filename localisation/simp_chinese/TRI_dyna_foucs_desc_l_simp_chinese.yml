@@ -1,7 +1,7 @@
 ﻿l_simp_chinese:
 ###国策追加效果描述
 
-#【争辩无休的《伊甸条约》方针】修改为【大略初定的《伊甸条约》方针】
+#【争辩无休的《伊甸条约》方针】开始的国策修正描述
  eden_step_0_to_1: "§Y$eden_treaty_step_0_modifier$§!将变为§Y$eden_treaty_step_1_modifier$§!"
  eden_step_0_to_1_desc: "$eden_step_0_to_1$\n追加效果：\n每日政治点数获取：§G+0.15§!\n稳定度：§G+5.00%§!\n生活消费品系数：§Y-10.0%§!\n\n"
  eden_step_0_authorize_dove: "§Y$eden_treaty_step_0_modifier$§!追加效果：\n战争支持度：§R-10.00%§!\n科研速度：§G+5.00%§!\n\n"
@@ -11,6 +11,16 @@
  eden_step_1_to_2_desc: "$eden_step_1_to_2$\n追加效果：\n每日政治点数获取：§G+0.20§!\n战争支持度：§G+10.00%§!\n生活消费品系数：§Y-10.00%§!\n\n"
 
  eden_step_2_to_3: "§Y$eden_treaty_step_2_modifier$§!将变为§Y$eden_treaty_step_3_modifier$§!\n效果无变化"
+
+ eden_step_3_to_4: "§Y$eden_treaty_step_3_modifier$§!将变为§Y$eden_treaty_step_5_modifier$§!\n"
+ eden_step_3_to_4_desc: "$eden_step_3_to_4$效果变化：\n每周稳定度：§R-0.20%§!\n每日政治点数获取：§R-0.50§!\n工厂产出：§R-20.00%§!\n征兵法案花费：§R+100%§!\n贸易法案花费：§R+100%§!\n经济法案花费：§R+100%§!\n政治顾问花费：§R+100%§!\n陆军部长花费：§R+100%§!\n空军部长花费：§R+100%§!\n\n"
+ 
+ eden_step_4_to_5: "§Y$eden_treaty_step_4_modifier$§!将变为：§Y$eden_treaty_step_5_modifier$§!\n"
+ eden_step_4_to_5_desc: "$eden_step_4_to_5$追加效果：\n每日政治点数：§G+0.40§!\n工厂产出：§G+10.00%§!\n征兵法案花费：§G-50%§!\n贸易法案花费：§G-50%§!\n经济法案花费：§G-50%§!\n政治顾问花费：§G-50%§!\n陆军部长花费：§G-50%§!\n空军部长花费：§G-50%§!\n\n"
+
+ eden_treaty_step_5_add_modifier_1: "§Y$eden_treaty_step_5_modifier$§!追加效果：\n每日政治点数：§G+0.10§!\n工厂产出：§G+15.00%§!\n征兵法案花费：§G-50%§!\n贸易法案花费：§G-50%§!\n经济法案花费：§G-50%§!\n政治顾问花费：§G-50%§!\n陆军部长花费：§G-50%§!\n空军部长花费：§G-50%§!\n\n"
+ eden_treaty_step_5_add_modifier_2: "§Y$eden_treaty_step_5_modifier$§!追加效果：\n每日政治点数：§G+0.30§!\n稳定度：§G+5.00%§!\n\n"
+ eden_treaty_step_5_add_modifier_3: "§Y$eden_treaty_step_5_modifier$§!追加效果：\n每日政治点数：§G+0.20§!\n稳定度：§G+15.00%§!\n科研速度：§G+10.00%§!\n\n"
  
 #特殊事务调查部
  TRI_investigation_in_care_ns_tt: "§Y$TRI_special_services_investigations$§!追加效果：\n稳定度：§G+5.00%§!\n每日政治点数获取：§R-0.10§!\n\n"

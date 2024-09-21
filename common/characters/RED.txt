@@ -1,0 +1,287 @@
+    RED_cherino ={ 
+		name=RED_cherino_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_red_cherino
+				small=GFX_portrait_red_cherino_small
+			}	
+		}
+
+        country_leader = {
+			ideology = liberalism
+			traits = { iron_beard }
+			expire = "-1.1.1.1"
+			id = -1
+		}
+
+        advisor = {
+			slot = army_chief
+			idea_token = RED_cherino_ac
+			allowed = {
+				original_tag = RED
+			}
+			available = {
+				original_tag = RED
+			}
+			traits = {
+				great_general_of_redwinter
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    RED_marina ={ 
+		name=RED_marina_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_red_marina
+				small=GFX_portrait_red_marina_small
+			}	
+		}
+
+        advisor = {
+			slot = army_chief
+			idea_token = RED_marina_ac
+			allowed = {
+				original_tag = RED
+			}
+			available = {
+				original_tag = RED
+			}
+			traits = {
+				head_of_security_department
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    RED_tomoe ={ 
+		name=RED_tomoe_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_red_tomoe
+				small=GFX_portrait_red_tomoe_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = RED_tomoe_pa
+			allowed = {
+				original_tag = RED
+			}
+			available = {
+				original_tag = RED
+			} 
+			traits = {
+				girl_behind_general_secretary
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    RED_nodoka ={ 
+		name=RED_nodoka_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_red_nodoka
+				small=GFX_portrait_red_nodoka_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = RED_nadoka_pa
+			allowed = {
+				original_tag = RED
+			}
+			available = {
+				original_tag = RED
+			} 
+			traits = {
+				gaze_from_far_away
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    RED_shigure ={ 
+		name=RED_shigure_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_red_shigure
+				small=GFX_portrait_red_shigure_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = RED_shigure_pa
+			allowed = {
+				original_tag = RED
+			}
+			available = {
+				original_tag = RED
+			} 
+			traits = {
+				taste_of_vodka
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    RED_minori ={ 
+		name=RED_minori_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_red_minori
+				small=GFX_portrait_red_minori_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = RED_minori_pa
+			allowed = {
+				original_tag = RED
+			}
+			available = {
+				original_tag = RED
+			} 
+			traits = {
+				leader_of_student_workers
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    RED_meru ={ 
+		name=RED_meru_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_red_meru
+				small=GFX_portrait_red_meru_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = RED_meru_pa
+			allowed = {
+				original_tag = RED
+			}
+			available = {
+				original_tag = RED
+			} 
+			traits = {
+				deadline_chaser
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    RED_momiji ={ 
+		name=RED_momiji_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_red_momiji
+				small=GFX_portrait_red_momiji_small
+			}	
+		}
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}

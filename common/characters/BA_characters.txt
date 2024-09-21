@@ -1,1418 +1,1505 @@
-characters={
-    ###阿拜多斯ABY 开始###
-    ABY_hoshino ={
-		name=ABY_hoshino_name
-		portraits={
-			civilian={
-				large=GFX_portrait_aby_hoshino
-				small=GFX_portrait_aby_hoshino_small
-			}	
-		}
-	}
-
-	ABY_shiroko ={ 
-		name=ABY_shiroko_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_aby_shiroko
-				small=GFX_portrait_aby_shiroko_small
-			}	
-		}
-	}
-
-    ABY_ayane ={ 
-		name=ABY_ayane_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_aby_ayane
-				small=GFX_portrait_aby_ayane_small
-			}	
-		}
-	}
-
-    ABY_ayane ={ 
-		name=ABY_ayane_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_aby_ayane
-				small=GFX_portrait_aby_ayane_small
-			}	
-		}
-	}
-
-    ABY_nonomi ={ 
-		name=ABY_nonomi_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_aby_nonomi
-				small=GFX_portrait_aby_nonomi_small
-			}	
-		}
-	}
-    ###阿拜多斯ABY 结束###
-
-
-
-    ###圣三一TRI 开始###
-    TRI_seia ={ 
-		name=TRI_seia_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_tri_seia
-				small=GFX_portrait_tri_seia_small
-			}	
-		}
-	}
-
-    TRI_nagisa ={ 
-		name=TRI_nagisa_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_tri_nagisa
-				small=GFX_portrait_tri_nagisa_small
-			}	
-		}
-	}
-
-    TRI_mika ={ 
-		name=TRI_mika_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_tri_mika
-				small=GFX_portrait_tri_mika_small
-			}	
-		}
-	}
-
-    TRI_shimiko ={ 
-		name=TRI_shimiko_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_tri_shimiko
-				small=GFX_portrait_tri_shimiko_small
-			}	
-		}
-	}
-
-    TRI_ui ={ 
-		name=TRI_ui_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_tri_ui
-				small=GFX_portrait_tri_ui_small
-			}	
-		}
-	}
-
-    TRI_suzumi ={ 
-		name=TRI_suzumi_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_tri_suzumi
-				small=GFX_portrait_tri_suzumi_small
-			}	
-		}
-	}
-
-    TRI_reisa ={ 
-		name=TRI_reisa_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_tri_reisa
-				small=GFX_portrait_tri_reisa_small
-			}	
-		}
-	}
-
-    TRI_hifumi ={ 
-		name=TRI_hifumi_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_tri_hifumi
-				small=GFX_portrait_tri_hifumi_small
-			}	
-		}
-	}
-
-    TRI_azusa ={ 
-		name=TRI_azusa_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_tri_azusa
-				small=GFX_portrait_tri_azusa_small
-			}	
-		}
-	}
-
-    TRI_hanako ={ 
-		name=TRI_hanako_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_tri_hanako
-				small=GFX_portrait_tri_hanako_small
-			}	
-		}
-	}
-
-    TRI_koharu ={ 
-		name=TRI_koharu_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_tri_koharu
-				small=GFX_portrait_tri_koharu_small
-			}	
-		}
-	}
-
-    TRI_mine ={ 
-		name=TRI_mine_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_tri_mine
-				small=GFX_portrait_tri_mine_small
-			}	
-		}
-	}
-
-    TRI_hanae ={ 
-		name=TRI_hanae_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_tri_hanae
-				small=GFX_portrait_tri_hanae_small
-			}	
-		}
-	}
-
-    TRI_serina ={ 
-		name=TRI_serina_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_tri_serina
-				small=GFX_portrait_tri_serina_small
-			}	
-		}
-	}
-
-    TRI_tsurugi ={ 
-		name=TRI_tsurugi_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_tri_tsurugi
-				small=GFX_portrait_tri_tsurugi_small
-			}	
-		}
-	}
-
-    TRI_hasumi ={ 
-		name=TRI_hasumi_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_tri_hasumi
-				small=GFX_portrait_tri_hasumi_small
-			}	
-		}
-	}
-
-    TRI_mashiro ={ 
-		name=TRI_mashiro_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_tri_mashiro
-				small=GFX_portrait_tri_mashiro_small
-			}	
-		}
-	}
-
-    TRI_ichika ={ 
-		name=TRI_ichika_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_tri_ichika
-				small=GFX_portrait_tri_ichika_small
-			}	
-		}
-	}
-
-    TRI_natsu ={ 
-		name=TRI_natsu_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_tri_natsu
-				small=GFX_portrait_tri_natsu_small
-			}	
-		}
-	}
-
-    TRI_airi ={ 
-		name=TRI_airi_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_tri_airi
-				small=GFX_portrait_tri_airi_small
-			}	
-		}
-	}
-
-    TRI_yoshimi ={ 
-		name=TRI_yoshimi_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_tri_yoshimi
-				small=GFX_portrait_tri_yoshimi_small
-			}	
-		}
-	}
-
-    TRI_kazusa ={ 
-		name=TRI_kazusa_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_tri_kazusa
-				small=GFX_portrait_tri_kazusa_small
-			}	
-		}
-	}
-
-    TRI_hinata ={ 
-		name=TRI_hinata_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_tri_hinata
-				small=GFX_portrait_tri_hinata_small
-			}	
-		}
-	}
-
-    TRI_mari ={ 
-		name=TRI_mari_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_tri_mari
-				small=GFX_portrait_tri_mari_small
-			}	
-		}
-	}
-
-    TRI_sakurako ={ 
-		name=TRI_sakurako_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_tri_sakurako
-				small=GFX_portrait_tri_sakurako_small
-			}	
-		}
-	}
-    ###圣三一TRI 结束###
-
-    ###格黑娜GEH 开始###
-    GEH_hina ={ 
-		name=GEH_hina_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_geh_hina
-				small=GFX_portrait_geh_hina_small
-			}	
-		}
-	}
-
-    GEH_ako ={ 
-		name=GEH_ako_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_geh_ako
-				small=GFX_portrait_geh_ako_small
-			}	
-		}
-	}
-
-    GEH_iori ={ 
-		name=GEH_iori_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_geh_iori
-				small=GFX_portrait_geh_iori_small
-			}	
-		}
-	}
-
-    GEH_chinatsu ={ 
-		name=GEH_chinatsu_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_geh_chinatsu
-				small=GFX_portrait_geh_chinatsu_small
-			}	
-		}
-	}
-
-    GEH_makoto ={ 
-		name=GEH_makoto_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_geh_makoto
-				small=GFX_portrait_geh_makoto_small
-			}	
-		}
-	}
-
-    GEH_iroha ={ 
-		name=GEH_iroha_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_geh_iroha
-				small=GFX_portrait_geh_iroha_small
-			}	
-		}
-	}
-
-    GEH_ibuki ={ 
-		name=GEH_ibuki_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_geh_ibuki
-				small=GFX_portrait_geh_ibuki_small
-			}	
-		}
-	}
-
-    GEH_satsuki ={ 
-		name=GEH_satsuki_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_geh_satsuki
-				small=GFX_portrait_geh_satsuki_small
-			}	
-		}
-	}
-
-
-    GEH_aru ={ 
-		name=GEH_aru_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_geh_aru
-				small=GFX_portrait_geh_aru_small
-			}	
-		}
-	}
-
-    GEH_mutsuki ={ 
-		name=GEH_mutsuki_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_geh_mutsuki
-				small=GFX_portrait_geh_mutsuki_small
-			}	
-		}
-	}
-
-    GEH_kayoko ={ 
-		name=GEH_kayoko_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_geh_kayoko
-				small=GFX_portrait_geh_kayoko_small
-			}	
-		}
-	}
-
-    GEH_haruka ={ 
-		name=GEH_haruka_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_geh_haruka
-				small=GFX_portrait_geh_haruka_small
-			}	
-		}
-	}
-
-    GEH_fuuka ={ 
-		name=GEH_fuuka_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_geh_fuuka
-				small=GFX_portrait_geh_fuuka_small
-			}	
-		}
-	}
-
-    GEH_juri ={ 
-		name=GEH_juri_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_geh_juri
-				small=GFX_portrait_geh_juri_small
-			}	
-		}
-	}
-
-    GEH_haruna ={ 
-		name=GEH_haruna_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_geh_haruna
-				small=GFX_portrait_geh_haruna_small
-			}	
-		}
-	}
-
-    GEH_izumi ={ 
-		name=GEH_izumi_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_geh_izumi
-				small=GFX_portrait_geh_izumi_small
-			}	
-		}
-	}
-
-    GEH_junko ={ 
-		name=GEH_junko_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_geh_junko
-				small=GFX_portrait_geh_junko_small
-			}	
-		}
-	}
-
-    GEH_akari ={ 
-		name=GEH_akari_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_geh_akari
-				small=GFX_portrait_geh_akari_small
-			}	
-		}
-	}
-
-    GEH_sena ={ 
-		name=GEH_sena_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_geh_sena
-				small=GFX_portrait_geh_sena_small
-			}	
-		}
-	}
-
-    GEH_megu ={ 
-		name=GEH_megu_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_geh_megu
-				small=GFX_portrait_geh_megu_small
-			}	
-		}
-	}
-
-    GEH_kasumi ={ 
-		name=GEH_kasumi_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_geh_kasumi
-				small=GFX_portrait_geh_kasumi_small
-			}	
-		}
-	}
-    ###格黑娜GEH 结束###
-
-
-
-    ###千禧年MIL 开始###
-    MIL_rio ={ 
-		name=MIL_rio_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_mil_rio
-				small=GFX_portrait_mil_rio_small
-			}	
-		}
-	}
-
-    MIL_yuuka ={ 
-		name=MIL_yuuka_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_mil_yuuka
-				small=GFX_portrait_mil_yuuka_small
-			}	
-		}
-	}
-
-    MIL_noa ={ 
-		name=MIL_noa_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_mil_noa
-				small=GFX_portrait_mil_noa_small
-			}	
-		}
-	}
-
-    MIL_koyuki ={ 
-		name=MIL_koyuki_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_mil_koyuki
-				small=GFX_portrait_mil_koyuki_small
-			}	
-		}
-	}
-
-    MIL_chihiro ={ 
-		name=MIL_chihiro_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_mil_chihiro
-				small=GFX_portrait_mil_chihiro_small
-			}	
-		}
-	}
-
-    MIL_maki ={ 
-		name=MIL_maki_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_mil_maki
-				small=GFX_portrait_mil_maki_small
-			}	
-		}
-	}
-
-    MIL_haru ={ 
-		name=MIL_haru_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_mil_haru
-				small=GFX_portrait_mil_haru_small
-			}	
-		}
-	}
-
-    MIL_kotama ={ 
-		name=MIL_kotama_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_mil_kotama
-				small=GFX_portrait_mil_kotama_small
-			}	
-		}
-	}
-
-    MIL_himari ={ 
-		name=MIL_himari_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_mil_himari
-				small=GFX_portrait_mil_himari_small
-			}	
-		}
-	}
-
-    MIL_eimi ={ 
-		name=MIL_eimi_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_mil_eimi
-				small=GFX_portrait_mil_eimi_small
-			}	
-		}
-	}
-
-    MIL_yuzu ={ 
-		name=MIL_yuzu_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_mil_yuzu
-				small=GFX_portrait_mil_yuzu_small
-			}	
-		}
-	}
-
-    #PS:这里爱丽丝使用英文，而非罗马音
-    MIL_alice ={ 
-		name=MIL_alice_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_mil_alice
-				small=GFX_portrait_mil_alice_small
-			}	
-		}
-	}
-
-    MIL_momoe ={ 
-		name=MIL_momoe_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_mil_momoe
-				small=GFX_portrait_mil_momoe_small
-			}	
-		}
-	}
-
-    MIL_midori ={ 
-		name=MIL_midori_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_mil_midori
-				small=GFX_portrait_mil_midori_small
-			}	
-		}
-	}
-
-    MIL_hibiki ={ 
-		name=MIL_hibiki_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_mil_hibiki
-				small=GFX_portrait_mil_hibiki_small
-			}	
-		}
-	}
-
-    MIL_utaha ={ 
-		name=MIL_utaha_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_mil_utaha
-				small=GFX_portrait_mil_utaha_small
-			}	
-		}
-	}
-
-    MIL_kotori ={ 
-		name=MIL_kotori_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_mil_kotori
-				small=GFX_portrait_mil_kotori_small
-			}	
-		}
-	}
-
-    MIL_neru ={ 
-		name=MIL_neru_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_mil_neru
-				small=GFX_portrait_mil_neru_small
-			}	
-		}
-	}
-
-    MIL_karin ={ 
-		name=MIL_karin_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_mil_karin
-				small=GFX_portrait_mil_karin_small
-			}	
-		}
-	}
-
-    MIL_akane ={ 
-		name=MIL_akane_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_mil_akane
-				small=GFX_portrait_mil_akane_small
-			}	
-		}
-	}
-
-    MIL_asuna ={ 
-		name=MIL_asuna_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_mil_asuna
-				small=GFX_portrait_mil_asuna_small
-			}	
-		}
-	}
-
-    MIL_toki ={ 
-		name=MIL_toki_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_mil_toki
-				small=GFX_portrait_mil_toki_small
-			}	
-		}
-	}
-
-    MIL_sumire ={ 
-		name=MIL_sumire_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_mil_sumire
-				small=GFX_portrait_mil_sumire_small
-			}	
-		}
-	}
-    ###千禧年MIL 结束###
-
-
-    ###赤冬RED 开始###
-    RED_cherino ={ 
-		name=RED_cherino_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_red_cherino
-				small=GFX_portrait_red_cherino_small
-			}	
-		}
-	}
-
-    RED_marina ={ 
-		name=RED_marina_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_red_marina
-				small=GFX_portrait_red_marina_small
-			}	
-		}
-	}
-
-    RED_tomoe ={ 
-		name=RED_tomoe_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_red_tomoe
-				small=GFX_portrait_red_tomoe_small
-			}	
-		}
-	}
-
-    RED_nodoka ={ 
-		name=RED_nodoka_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_red_nodoka
-				small=GFX_portrait_red_nodoka_small
-			}	
-		}
-	}
-
-    RED_shigure ={ 
-		name=RED_shigure_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_red_shigure
-				small=GFX_portrait_red_shigure_small
-			}	
-		}
-	}
-
-    RED_minori ={ 
-		name=RED_minori_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_red_minori
-				small=GFX_portrait_red_minori_small
-			}	
-		}
-	}
-
-    RED_meru ={ 
-		name=RED_meru_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_red_meru
-				small=GFX_portrait_red_meru_small
-			}	
-		}
-	}
-
-    RED_momiji ={ 
-		name=RED_momiji_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_red_momiji
-				small=GFX_portrait_red_momiji_small
-			}	
-		}
-	}
-    ###赤冬RED 结束###
-
-
-
-    ###夏莱SCH 开始###
-    SCH_sensei ={ 
-		name=SCH_sensei_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_sch_sensei
-				small=GFX_portrait_sch_sensei_small
-			}	
-		}
-	}
-
-    SCH_arona ={ 
-		name=SCH_arona_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_sch_arona
-				small=GFX_portrait_sch_arona_small
-			}	
-		}
-	}
-
-    SCH_purana ={ 
-		name=SCH_purana_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_sch_purana
-				small=GFX_portrait_sch_purana_small
-			}	
-		}
-	}
-    ###夏莱SCH 结束###
-
-
-
-    ###联邦学生会CEN 开始###
-    CEN_rin ={ 
-		name=CEN_rin_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_cen_rin
-				small=GFX_portrait_cen_rin_small
-			}	
-		}
-	}
-
-    CEN_momoka ={ 
-		name=CEN_momoka_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_cen_momoka
-				small=GFX_portrait_cen_momoka_small
-			}	
-		}
-	}
-
-    CEN_ayumu ={ 
-		name=CEN_ayumu_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_cen_ayumu
-				small=GFX_portrait_cen_ayumu_small
-			}	
-		}
-	}
-
-    CEN_aoi ={ 
-		name=CEN_aoi_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_cen_aoi
-				small=GFX_portrait_cen_aoi_small
-			}	
-		}
-	}
-    ###联邦学生会CEN 结束###
-
-
-
-    ###山海经SHA 开始###
-    SHA_kisaki ={ 
-		name=SHA_kisaki_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_sha_kisaki
-				small=GFX_portrait_sha_kisaki_small
-			}	
-		}
-	}
-
-    SHA_mina ={ 
-		name=SHA_mina_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_sha_mina
-				small=GFX_portrait_sha_mina_small
-			}	
-		}
-	}
-
-    #鹿山丽情
-    SHA_reiju ={ 
-		name=SHA_reiju_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_sha_reiju
-				small=GFX_portrait_sha_reiju_small
-			}	
-		}
-	}
-
-    SHA_rumi ={ 
-		name=SHA_rumi_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_sha_rumi
-				small=GFX_portrait_sha_rumi_small
-			}	
-		}
-	}
-
-    SHA_shun ={ 
-		name=SHA_shun_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_sha_shun
-				small=GFX_portrait_sha_shun_small
-			}	
-		}
-
-
-    SHA_kokona ={ 
-		name=SHA_kokona_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_sha_kokona
-				small=GFX_portrait_sha_kokona_small
-			}	
-		}
-	}
+# characters={
+#     ###阿拜多斯ABY 开始###
+#     ABY_hoshino ={
+# 		name=ABY_hoshino_name
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_ABY_hoshino
+# 				small=GFX_idea_advisor_ABY_hoshino
+# 			}	
+# 		}
+# 		country_leader = {
+# 			ideology = conservatism
+# 			traits = { }
+# 			expire = "2042.1.1.1"
+# 			id = -1
+# 		}
+# 	}
+
+# 	ABY_shiroko ={ 
+# 		name=ABY_shiroko_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_aby_shiroko
+# 				small=GFX_portrait_aby_shiroko_small
+# 			}	
+# 		}
+# 	}
+
+#     ABY_ayane ={ 
+# 		name=ABY_ayane_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_aby_ayane
+# 				small=GFX_portrait_aby_ayane_small
+# 			}	
+# 		}
+# 	}
+
+#     ABY_ayane ={ 
+# 		name=ABY_ayane_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_aby_ayane
+# 				small=GFX_portrait_aby_ayane_small
+# 			}	
+# 		}
+# 	}
+
+#     ABY_nonomi ={ 
+# 		name=ABY_nonomi_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_aby_nonomi
+# 				small=GFX_portrait_aby_nonomi_small
+# 			}	
+# 		}
+# 	}
+#     ###阿拜多斯ABY 结束###
+
+
+
+#     ###圣三一TRI 开始###
+#     TRI_seia ={ 
+# 		name=TRI_seia_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_tri_seia
+# 				small=GFX_portrait_tri_seia_small
+# 			}	
+# 		}
+# 	}
+
+# 	TRI_nagisa = {
+# 		name = TRI_nagisa_name
+# 		portraits = {
+# 			civilian = {
+# 				large = GFX_portrait_TRI_nagisa
+# 				small = GFX_idea_advisor_TRI_nagisa
+# 			}
+# 		}
+# 		country_leader = {
+# 			ideology = conservatism
+# 			traits = { }
+# 			expire = "2042.1.1.1"
+# 			id = -1
+# 		}
+# 	}
+
+#     TRI_mika ={ 
+# 		name=TRI_mika_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_tri_mika
+# 				small=GFX_portrait_tri_mika_small
+# 			}	
+# 		}
+# 	}
+
+#     TRI_shimiko ={ 
+# 		name=TRI_shimiko_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_tri_shimiko
+# 				small=GFX_portrait_tri_shimiko_small
+# 			}	
+# 		}
+# 	}
+
+#     TRI_ui ={ 
+# 		name=TRI_ui_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_tri_ui
+# 				small=GFX_portrait_tri_ui_small
+# 			}	
+# 		}
+# 	}
+
+#     TRI_suzumi ={ 
+# 		name=TRI_suzumi_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_tri_suzumi
+# 				small=GFX_portrait_tri_suzumi_small
+# 			}	
+# 		}
+# 	}
+
+#     TRI_reisa ={ 
+# 		name=TRI_reisa_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_tri_reisa
+# 				small=GFX_portrait_tri_reisa_small
+# 			}	
+# 		}
+# 	}
+
+#     TRI_hifumi ={ 
+# 		name=TRI_hifumi_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_tri_hifumi
+# 				small=GFX_portrait_tri_hifumi_small
+# 			}	
+# 		}
+# 	}
+
+#     TRI_azusa ={ 
+# 		name=TRI_azusa_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_tri_azusa
+# 				small=GFX_portrait_tri_azusa_small
+# 			}	
+# 		}
+# 	}
+
+#     TRI_hanako ={ 
+# 		name=TRI_hanako_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_tri_hanako
+# 				small=GFX_portrait_tri_hanako_small
+# 			}	
+# 		}
+# 	}
+
+#     TRI_koharu ={ 
+# 		name=TRI_koharu_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_tri_koharu
+# 				small=GFX_portrait_tri_koharu_small
+# 			}	
+# 		}
+# 	}
+
+#     TRI_mine ={ 
+# 		name=TRI_mine_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_tri_mine
+# 				small=GFX_portrait_tri_mine_small
+# 			}	
+# 		}
+# 	}
+
+#     TRI_hanae ={ 
+# 		name=TRI_hanae_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_tri_hanae
+# 				small=GFX_portrait_tri_hanae_small
+# 			}	
+# 		}
+# 	}
+
+#     TRI_serina ={ 
+# 		name=TRI_serina_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_tri_serina
+# 				small=GFX_portrait_tri_serina_small
+# 			}	
+# 		}
+# 	}
+
+#     TRI_tsurugi ={ 
+# 		name=TRI_tsurugi_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_tri_tsurugi
+# 				small=GFX_portrait_tri_tsurugi_small
+# 			}	
+# 		}
+# 	}
+
+#     TRI_hasumi ={ 
+# 		name=TRI_hasumi_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_tri_hasumi
+# 				small=GFX_portrait_tri_hasumi_small
+# 			}	
+# 		}
+# 	}
+
+#     TRI_mashiro ={ 
+# 		name=TRI_mashiro_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_tri_mashiro
+# 				small=GFX_portrait_tri_mashiro_small
+# 			}	
+# 		}
+# 	}
+
+#     TRI_ichika ={ 
+# 		name=TRI_ichika_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_tri_ichika
+# 				small=GFX_portrait_tri_ichika_small
+# 			}	
+# 		}
+# 	}
+
+#     TRI_natsu ={ 
+# 		name=TRI_natsu_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_tri_natsu
+# 				small=GFX_portrait_tri_natsu_small
+# 			}	
+# 		}
+# 	}
+
+#     TRI_airi ={ 
+# 		name=TRI_airi_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_tri_airi
+# 				small=GFX_portrait_tri_airi_small
+# 			}	
+# 		}
+# 	}
+
+#     TRI_yoshimi ={ 
+# 		name=TRI_yoshimi_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_tri_yoshimi
+# 				small=GFX_portrait_tri_yoshimi_small
+# 			}	
+# 		}
+# 	}
+
+#     TRI_kazusa ={ 
+# 		name=TRI_kazusa_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_tri_kazusa
+# 				small=GFX_portrait_tri_kazusa_small
+# 			}	
+# 		}
+# 	}
+
+#     TRI_hinata ={ 
+# 		name=TRI_hinata_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_tri_hinata
+# 				small=GFX_portrait_tri_hinata_small
+# 			}	
+# 		}
+# 	}
+
+#     TRI_mari ={ 
+# 		name=TRI_mari_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_tri_mari
+# 				small=GFX_portrait_tri_mari_small
+# 			}	
+# 		}
+# 	}
+
+#     TRI_sakurako ={ 
+# 		name=TRI_sakurako_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_tri_sakurako
+# 				small=GFX_portrait_tri_sakurako_small
+# 			}	
+# 		}
+# 	}
+#     ###圣三一TRI 结束###
+
+#     ###格黑娜GEH 开始###
+# 	GEH_hina = {
+# 		name = GEH_hina_name
+# 		portraits = {
+# 			civilian = {
+# 				large = GFX_portrait_GEH_hina
+# 				small = GFX_idea_advisor_GEH_hina
+# 			}
+# 		}
+# 		country_leader = {
+# 			ideology = conservatism
+# 			traits = { }
+# 			expire = "2042.1.1.1"
+# 			id = -1
+# 		}
+# 	}
+
+#     GEH_ako ={ 
+# 		name=GEH_ako_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_geh_ako
+# 				small=GFX_portrait_geh_ako_small
+# 			}	
+# 		}
+# 	}
+
+#     GEH_iori ={ 
+# 		name=GEH_iori_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_geh_iori
+# 				small=GFX_portrait_geh_iori_small
+# 			}	
+# 		}
+# 	}
+
+#     GEH_chinatsu ={ 
+# 		name=GEH_chinatsu_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_geh_chinatsu
+# 				small=GFX_portrait_geh_chinatsu_small
+# 			}	
+# 		}
+# 	}
+
+#     GEH_makoto ={ 
+# 		name=GEH_makoto_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_geh_makoto
+# 				small=GFX_portrait_geh_makoto_small
+# 			}	
+# 		}
+# 	}
+
+#     GEH_iroha ={ 
+# 		name=GEH_iroha_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_geh_iroha
+# 				small=GFX_portrait_geh_iroha_small
+# 			}	
+# 		}
+# 	}
+
+#     GEH_ibuki ={ 
+# 		name=GEH_ibuki_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_geh_ibuki
+# 				small=GFX_portrait_geh_ibuki_small
+# 			}	
+# 		}
+# 	}
+
+#     GEH_satsuki ={ 
+# 		name=GEH_satsuki_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_geh_satsuki
+# 				small=GFX_portrait_geh_satsuki_small
+# 			}	
+# 		}
+# 	}
+
+
+#     GEH_aru ={ 
+# 		name=GEH_aru_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_geh_aru
+# 				small=GFX_portrait_geh_aru_small
+# 			}	
+# 		}
+# 	}
+
+#     GEH_mutsuki ={ 
+# 		name=GEH_mutsuki_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_geh_mutsuki
+# 				small=GFX_portrait_geh_mutsuki_small
+# 			}	
+# 		}
+# 	}
+
+#     GEH_kayoko ={ 
+# 		name=GEH_kayoko_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_geh_kayoko
+# 				small=GFX_portrait_geh_kayoko_small
+# 			}	
+# 		}
+# 	}
+
+#     GEH_haruka ={ 
+# 		name=GEH_haruka_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_geh_haruka
+# 				small=GFX_portrait_geh_haruka_small
+# 			}	
+# 		}
+# 	}
+
+#     GEH_fuuka ={ 
+# 		name=GEH_fuuka_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_geh_fuuka
+# 				small=GFX_portrait_geh_fuuka_small
+# 			}	
+# 		}
+# 	}
+
+#     GEH_juri ={ 
+# 		name=GEH_juri_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_geh_juri
+# 				small=GFX_portrait_geh_juri_small
+# 			}	
+# 		}
+# 	}
+
+#     GEH_haruna ={ 
+# 		name=GEH_haruna_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_geh_haruna
+# 				small=GFX_portrait_geh_haruna_small
+# 			}	
+# 		}
+# 	}
+
+#     GEH_izumi ={ 
+# 		name=GEH_izumi_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_geh_izumi
+# 				small=GFX_portrait_geh_izumi_small
+# 			}	
+# 		}
+# 	}
+
+#     GEH_junko ={ 
+# 		name=GEH_junko_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_geh_junko
+# 				small=GFX_portrait_geh_junko_small
+# 			}	
+# 		}
+# 	}
+
+#     GEH_akari ={ 
+# 		name=GEH_akari_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_geh_akari
+# 				small=GFX_portrait_geh_akari_small
+# 			}	
+# 		}
+# 	}
+
+#     GEH_sena ={ 
+# 		name=GEH_sena_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_geh_sena
+# 				small=GFX_portrait_geh_sena_small
+# 			}	
+# 		}
+# 	}
+
+#     GEH_megu ={ 
+# 		name=GEH_megu_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_geh_megu
+# 				small=GFX_portrait_geh_megu_small
+# 			}	
+# 		}
+# 	}
+
+#     GEH_kasumi ={ 
+# 		name=GEH_kasumi_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_geh_kasumi
+# 				small=GFX_portrait_geh_kasumi_small
+# 			}	
+# 		}
+# 	}
+#     ###格黑娜GEH 结束###
+
+
+
+#     ###千禧年MIL 开始###
+#     MIL_rio ={ 
+# 		name=MIL_rio_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_mil_rio
+# 				small=GFX_portrait_mil_rio_small
+# 			}	
+# 		}
+# 	}
+
+# 	MIL_yuuka = {
+# 		name = MIL_yuuka_name
+# 		portraits = {
+# 			civilian = {
+# 				large = GFX_portrait_MIL_yuuka
+# 				small = GFX_idea_advisor_MIL_yuuka
+# 			}
+# 		}
+# 		country_leader = {
+# 			ideology = conservatism
+# 			traits = { }
+# 			expire = "2042.1.1.1"
+# 			id = -1
+# 		}
+# 	}
+
+#     MIL_noa ={ 
+# 		name=MIL_noa_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_mil_noa
+# 				small=GFX_portrait_mil_noa_small
+# 			}	
+# 		}
+# 	}
+
+#     MIL_koyuki ={ 
+# 		name=MIL_koyuki_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_mil_koyuki
+# 				small=GFX_portrait_mil_koyuki_small
+# 			}	
+# 		}
+# 	}
+
+#     MIL_chihiro ={ 
+# 		name=MIL_chihiro_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_mil_chihiro
+# 				small=GFX_portrait_mil_chihiro_small
+# 			}	
+# 		}
+# 	}
+
+#     MIL_maki ={ 
+# 		name=MIL_maki_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_mil_maki
+# 				small=GFX_portrait_mil_maki_small
+# 			}	
+# 		}
+# 	}
+
+#     MIL_haru ={ 
+# 		name=MIL_haru_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_mil_haru
+# 				small=GFX_portrait_mil_haru_small
+# 			}	
+# 		}
+# 	}
+
+#     MIL_kotama ={ 
+# 		name=MIL_kotama_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_mil_kotama
+# 				small=GFX_portrait_mil_kotama_small
+# 			}	
+# 		}
+# 	}
+
+#     MIL_himari ={ 
+# 		name=MIL_himari_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_mil_himari
+# 				small=GFX_portrait_mil_himari_small
+# 			}	
+# 		}
+# 	}
+
+#     MIL_eimi ={ 
+# 		name=MIL_eimi_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_mil_eimi
+# 				small=GFX_portrait_mil_eimi_small
+# 			}	
+# 		}
+# 	}
+
+#     MIL_yuzu ={ 
+# 		name=MIL_yuzu_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_mil_yuzu
+# 				small=GFX_portrait_mil_yuzu_small
+# 			}	
+# 		}
+# 	}
+
+#     #PS:这里爱丽丝使用英文，而非罗马音
+#     MIL_alice ={ 
+# 		name=MIL_alice_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_mil_alice
+# 				small=GFX_portrait_mil_alice_small
+# 			}	
+# 		}
+# 	}
+
+#     MIL_momoe ={ 
+# 		name=MIL_momoe_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_mil_momoe
+# 				small=GFX_portrait_mil_momoe_small
+# 			}	
+# 		}
+# 	}
+
+#     MIL_midori ={ 
+# 		name=MIL_midori_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_mil_midori
+# 				small=GFX_portrait_mil_midori_small
+# 			}	
+# 		}
+# 	}
+
+#     MIL_hibiki ={ 
+# 		name=MIL_hibiki_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_mil_hibiki
+# 				small=GFX_portrait_mil_hibiki_small
+# 			}	
+# 		}
+# 	}
+
+#     MIL_utaha ={ 
+# 		name=MIL_utaha_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_mil_utaha
+# 				small=GFX_portrait_mil_utaha_small
+# 			}	
+# 		}
+# 	}
+
+#     MIL_kotori ={ 
+# 		name=MIL_kotori_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_mil_kotori
+# 				small=GFX_portrait_mil_kotori_small
+# 			}	
+# 		}
+# 	}
+
+#     MIL_neru ={ 
+# 		name=MIL_neru_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_mil_neru
+# 				small=GFX_portrait_mil_neru_small
+# 			}	
+# 		}
+# 	}
+
+#     MIL_karin ={ 
+# 		name=MIL_karin_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_mil_karin
+# 				small=GFX_portrait_mil_karin_small
+# 			}	
+# 		}
+# 	}
+
+#     MIL_akane ={ 
+# 		name=MIL_akane_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_mil_akane
+# 				small=GFX_portrait_mil_akane_small
+# 			}	
+# 		}
+# 	}
+
+#     MIL_asuna ={ 
+# 		name=MIL_asuna_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_mil_asuna
+# 				small=GFX_portrait_mil_asuna_small
+# 			}	
+# 		}
+# 	}
+
+#     MIL_toki ={ 
+# 		name=MIL_toki_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_mil_toki
+# 				small=GFX_portrait_mil_toki_small
+# 			}	
+# 		}
+# 	}
+
+#     MIL_sumire ={ 
+# 		name=MIL_sumire_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_mil_sumire
+# 				small=GFX_portrait_mil_sumire_small
+# 			}	
+# 		}
+# 	}
+#     ###千禧年MIL 结束###
+
+
+#     ###赤冬RED 开始###
+#     RED_cherino ={ 
+# 		name=RED_cherino_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_red_cherino
+# 				small=GFX_portrait_red_cherino_small
+# 			}	
+# 		}
+# 	}
+
+#     RED_marina ={ 
+# 		name=RED_marina_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_red_marina
+# 				small=GFX_portrait_red_marina_small
+# 			}	
+# 		}
+# 	}
+
+#     RED_tomoe ={ 
+# 		name=RED_tomoe_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_red_tomoe
+# 				small=GFX_portrait_red_tomoe_small
+# 			}	
+# 		}
+# 	}
+
+#     RED_nodoka ={ 
+# 		name=RED_nodoka_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_red_nodoka
+# 				small=GFX_portrait_red_nodoka_small
+# 			}	
+# 		}
+# 	}
+
+#     RED_shigure ={ 
+# 		name=RED_shigure_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_red_shigure
+# 				small=GFX_portrait_red_shigure_small
+# 			}	
+# 		}
+# 	}
+
+#     RED_minori ={ 
+# 		name=RED_minori_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_red_minori
+# 				small=GFX_portrait_red_minori_small
+# 			}	
+# 		}
+# 	}
+
+#     RED_meru ={ 
+# 		name=RED_meru_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_red_meru
+# 				small=GFX_portrait_red_meru_small
+# 			}	
+# 		}
+# 	}
+
+#     RED_momiji ={ 
+# 		name=RED_momiji_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_red_momiji
+# 				small=GFX_portrait_red_momiji_small
+# 			}	
+# 		}
+# 	}
+#     ###赤冬RED 结束###
+
+
+
+#     ###夏莱SCH 开始###
+#     SCH_sensei ={ 
+# 		name=SCH_sensei_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_sch_sensei
+# 				small=GFX_portrait_sch_sensei_small
+# 			}	
+# 		}
+
+# 	}
+
+#     SCH_arona ={ 
+# 		name=SCH_arona_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_SCH_arona
+# 				small=GFX_idea_advisor_SCH_arona
+# 			}	
+# 		}
+# 		country_leader = {
+# 			ideology = conservatism
+# 			traits = { }
+# 			expire = "2042.1.1.1"
+# 			id = -1
+# 		}
+# 	}
+
+#     SCH_purana ={ 
+# 		name=SCH_purana_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_sch_purana
+# 				small=GFX_portrait_sch_purana_small
+# 			}	
+# 		}
+# 	}
+#     ###夏莱SCH 结束###
+
+
+
+#     ###联邦学生会CEN 开始###
+# 	CEN_rin = {
+# 		name = CEN_rin_name
+# 		portraits = {
+# 			civilian = {
+# 				large = GFX_portrait_CEN_rin
+# 				small = GFX_idea_advisor_CEN_rin
+# 			}
+# 		}
+# 		country_leader = {
+# 			ideology = conservatism
+# 			traits = { }
+# 			expire = "2042.1.1.1"
+# 			id = -1
+# 		}
+# 	}
+
+#     CEN_momoka ={ 
+# 		name=CEN_momoka_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_cen_momoka
+# 				small=GFX_portrait_cen_momoka_small
+# 			}	
+# 		}
+# 	}
+
+#     CEN_ayumu ={ 
+# 		name=CEN_ayumu_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_cen_ayumu
+# 				small=GFX_portrait_cen_ayumu_small
+# 			}	
+# 		}
+# 	}
+
+#     CEN_aoi ={ 
+# 		name=CEN_aoi_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_cen_aoi
+# 				small=GFX_portrait_cen_aoi_small
+# 			}	
+# 		}
+# 	}
+#     ###联邦学生会CEN 结束###
+
+
+
+#     ###山海经SHA 开始###
+# 	SHA_kisaki = {
+# 		name = SHA_kisaki_name
+# 		portraits = {
+# 			civilian = {
+# 				large = GFX_portrait_SHA_kisaki
+# 				small = GFX_idea_advisor_SHA_kisaki
+# 			}
+# 		}
+# 		country_leader = {
+# 			ideology = conservatism
+# 			traits = { }
+# 			expire = "2042.1.1.1"
+# 			id = -1
+# 		}
+# 	}
+
+#     SHA_mina ={ 
+# 		name=SHA_mina_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_sha_mina
+# 				small=GFX_portrait_sha_mina_small
+# 			}	
+# 		}
+# 	}
+
+#     #鹿山丽情
+#     SHA_reiju ={ 
+# 		name=SHA_reiju_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_sha_reiju
+# 				small=GFX_portrait_sha_reiju_small
+# 			}	
+# 		}
+# 	}
+
+#     SHA_rumi ={ 
+# 		name=SHA_rumi_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_sha_rumi
+# 				small=GFX_portrait_sha_rumi_small
+# 			}	
+# 		}
+# 	}
+
+#     SHA_shun ={ 
+# 		name=SHA_shun_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_sha_shun
+# 				small=GFX_portrait_sha_shun_small
+# 			}	
+# 		}
+# 	}
+
+#     SHA_kokona ={ 
+# 		name=SHA_kokona_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_sha_kokona
+# 				small=GFX_portrait_sha_kokona_small
+# 			}	
+# 		}
+# 	}
     
-    SHA_saye ={ 
-		name=SHA_saye_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_sha_saye
-				small=GFX_portrait_sha_saye_small
-			}	
-		}
-	}
+#     SHA_saye ={ 
+# 		name=SHA_saye_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_sha_saye
+# 				small=GFX_portrait_sha_saye_small
+# 			}	
+# 		}
+# 	}
 
-    #申谷海 七囚人之一
-    SHA_kai ={ 
-		name=SHA_kai_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_sha_kai
-				small=GFX_portrait_sha_kai_small
-			}	
-		}
-	}
-    ###山海经SHA 结束###
-
-
-
-    ###百鬼夜行HYA 开始###
-    HYA_yukari ={ 
-		name=HYA_yukari_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_hya_yukari
-				small=GFX_portrait_hya_yukari_small
-			}	
-		}
-	}
-
-    HYA_renge ={ 
-		name=HYA_renge_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_hya_renge
-				small=GFX_portrait_hya_renge_small
-			}	
-		}
-	}
-
-    HYA_kikyu ={ 
-		name=HYA_kikyu_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_hya_kikyu
-				small=GFX_portrait_hya_kikyu_small
-			}	
-		}
-	}
-
-    HYA_nagusa ={ 
-		name=HYA_nagusa_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_hya_nagusa
-				small=GFX_portrait_hya_nagusa_small
-			}	
-		}
-	}
-
-    HYA_chise ={ 
-		name=HYA_chise_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_hya_chise
-				small=GFX_portrait_hya_chise_small
-			}	
-		}
-	}
-
-    HYA_kaho ={ 
-		name=HYA_kaho_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_hya_kaho
-				small=GFX_portrait_hya_kaho_small
-			}	
-		}
-	}
-
-    HYA_tsubaki ={ 
-		name=HYA_tsubaki_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_hya_tsubaki
-				small=GFX_portrait_hya_tsubaki_small
-			}	
-		}
-	}
-
-    HYA_memori ={ 
-		name=HYA_memori_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_hya_memori
-				small=GFX_portrait_hya_memori_small
-			}	
-		}
-	}
-
-    HYA_kaede ={ 
-		name=HYA_kaede_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_hya_kaede
-				small=GFX_portrait_hya_kaede_small
-			}	
-		}
-	}
-
-    HYA_izuna ={ 
-		name=HYA_izuna_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_hya_izuna
-				small=GFX_portrait_hya_izuna_small
-			}	
-		}
-	}
-
-    HYA_michiru ={ 
-		name=HYA_michiru_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_hya_michiru
-				small=GFX_portrait_hya_michiru_small
-			}	
-		}
-	}
-
-    HYA_tsukuyu ={ 
-		name=HYA_tsukuyu_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_hya_tsukuyu
-				small=GFX_portrait_hya_tsukuyu_small
-			}	
-		}
-	}
-
-    HYA_pina ={ 
-		name=HYA_pina_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_hya_pina
-				small=GFX_portrait_hya_pina_small
-			}	
-		}
-	}
-
-    HYA_shizuko ={ 
-		name=HYA_shizuko_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_hya_shizuko
-				small=GFX_portrait_hya_shizuko_small
-			}	
-		}
-	}
-
-    #大狐狸，暂且先归入百鬼夜行
-    HYA_wakamo ={ 
-		name=HYA_wakamo_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_hya_wakamo
-				small=GFX_portrait_hya_wakamo_small
-			}	
-		}
-	}
-
-    #葛叶
-    HYA_kuzuha ={ 
-		name=HYA_kuzuha_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_hya_kuzuha
-				small=GFX_portrait_hya_kuzuha_small
-			}	
-		}
-	}
-    ###百鬼夜行HYA 结束###
+#     #申谷海 七囚人之一
+#     SHA_kai ={ 
+# 		name=SHA_kai_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_sha_kai
+# 				small=GFX_portrait_sha_kai_small
+# 			}	
+# 		}
+# 	}
+#     ###山海经SHA 结束###
 
 
 
-    ###瓦尔基里VAL 开始###
-    VAL_kanna ={ 
-		name=VAL_kanna_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_val_kanna
-				small=GFX_portrait_val_kanna_small
-			}	
-		}
-	}
-
-    VAL_fubuki ={ 
-		name=VAL_fubuki_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_val_fubuki
-				small=GFX_portrait_val_fubuki_small
-			}	
-		}
-	} 
-
-    VAL_kirino ={ 
-		name=VAL_kirino_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_val_kirino
-				small=GFX_portrait_val_kirino_small
-			}	
-		}
-	}
-    ###瓦尔基里VAL 结束###
+#     ###百鬼夜行HYA 开始###
+# 	HYA_niya = {
+# 		name = HYA_niya_name
+# 		portraits = {
+# 			civilian = {
+# 				large = GFX_portrait_HYA_niya
+# 				small = GFX_idea_advisor_HYA_niya
+# 			}
+# 		}
+# 		country_leader = {
+# 			ideology = conservatism
+# 			traits = { }
+# 			expire = "2042.1.1.1"
+# 			id = -1
+# 		}
+# 	}
 
 
+#     HYA_yukari ={ 
+# 		name=HYA_yukari_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_hya_yukari
+# 				small=GFX_portrait_hya_yukari_small
+# 			}	
+# 		}
+# 	}
 
-    ###阿里乌斯ARI 开始###
-    ARI_atsuko ={ 
-		name=ARI_atsuko_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_ari_atsuko
-				small=GFX_portrait_ari_atsuko_small
-			}	
-		}
-	}
+#     HYA_renge ={ 
+# 		name=HYA_renge_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_hya_renge
+# 				small=GFX_portrait_hya_renge_small
+# 			}	
+# 		}
+# 	}
 
-    ARI_saori ={ 
-		name=ARI_saori_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_ari_saori
-				small=GFX_portrait_ari_saori_small
-			}	
-		}
-	}
+#     HYA_kikyu ={ 
+# 		name=HYA_kikyu_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_hya_kikyu
+# 				small=GFX_portrait_hya_kikyu_small
+# 			}	
+# 		}
+# 	}
 
-    ARI_misaki ={ 
-		name=ARI_misaki_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_ari_misaki
-				small=GFX_portrait_ari_misaki_small
-			}	
-		}
-	}
+#     HYA_nagusa ={ 
+# 		name=HYA_nagusa_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_hya_nagusa
+# 				small=GFX_portrait_hya_nagusa_small
+# 			}	
+# 		}
+# 	}
 
-    ARI_hiyuri  ={ 
-		name=ARI_hiyuri_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_ari_hiyuri 
-				small=GFX_portrait_ari_hiyuri_small
-			}	
-		}
-	}
-    ###阿里乌斯ARI 结束###
+#     HYA_chise ={ 
+# 		name=HYA_chise_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_hya_chise
+# 				small=GFX_portrait_hya_chise_small
+# 			}	
+# 		}
+# 	}
+
+#     HYA_kaho ={ 
+# 		name=HYA_kaho_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_hya_kaho
+# 				small=GFX_portrait_hya_kaho_small
+# 			}	
+# 		}
+# 	}
+
+#     HYA_tsubaki ={ 
+# 		name=HYA_tsubaki_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_hya_tsubaki
+# 				small=GFX_portrait_hya_tsubaki_small
+# 			}	
+# 		}
+# 	}
+
+#     HYA_memori ={ 
+# 		name=HYA_memori_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_hya_memori
+# 				small=GFX_portrait_hya_memori_small
+# 			}	
+# 		}
+# 	}
+
+#     HYA_kaede ={ 
+# 		name=HYA_kaede_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_hya_kaede
+# 				small=GFX_portrait_hya_kaede_small
+# 			}	
+# 		}
+# 	}
+
+#     HYA_izuna ={ 
+# 		name=HYA_izuna_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_hya_izuna
+# 				small=GFX_portrait_hya_izuna_small
+# 			}	
+# 		}
+# 	}
+
+#     HYA_michiru ={ 
+# 		name=HYA_michiru_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_hya_michiru
+# 				small=GFX_portrait_hya_michiru_small
+# 			}	
+# 		}
+# 	}
+
+#     HYA_tsukuyu ={ 
+# 		name=HYA_tsukuyu_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_hya_tsukuyu
+# 				small=GFX_portrait_hya_tsukuyu_small
+# 			}	
+# 		}
+# 	}
+
+#     HYA_pina ={ 
+# 		name=HYA_pina_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_hya_pina
+# 				small=GFX_portrait_hya_pina_small
+# 			}	
+# 		}
+# 	}
+
+#     HYA_shizuko ={ 
+# 		name=HYA_shizuko_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_hya_shizuko
+# 				small=GFX_portrait_hya_shizuko_small
+# 			}	
+# 		}
+# 	}
+
+#     #大狐狸，暂且先归入百鬼夜行
+#     HYA_wakamo ={ 
+# 		name=HYA_wakamo_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_hya_wakamo
+# 				small=GFX_portrait_hya_wakamo_small
+# 			}	
+# 		}
+# 	}
+
+#     #葛叶
+#     HYA_kuzuha ={ 
+# 		name=HYA_kuzuha_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_hya_kuzuha
+# 				small=GFX_portrait_hya_kuzuha_small
+# 			}	
+# 		}
+# 	}
+#     ###百鬼夜行HYA 结束###
 
 
 
-    ###特殊反应部队SRT 开始###
-    SRT_miyako  ={ 
-		name=SRT_miyako_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_srt_miyako 
-				small=GFX_portrait_srt_miyako_small
-			}	
-		}
-	}
+#     ###瓦尔基里VAL 开始###
+# 	VAL_kanna = {
+# 		name = VAL_kanna_name
+# 		portraits = {
+# 			civilian = {
+# 				large = GFX_portrait_VAL_kanna
+# 				small = GFX_idea_advisor_VAL_kanna
+# 			}
+# 		}
+# 		country_leader = {
+# 			ideology = conservatism
+# 			traits = { }
+# 			expire = "2042.1.1.1"
+# 			id = -1
+# 		}
+# 	}
 
-    SRT_saki  ={ 
-		name=SRT_saki_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_srt_saki 
-				small=GFX_portrait_srt_saki_small
-			}	
-		}
-	}
+#     VAL_fubuki ={ 
+# 		name=VAL_fubuki_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_val_fubuki
+# 				small=GFX_portrait_val_fubuki_small
+# 			}	
+# 		}
+# 	} 
 
-    SRT_miyu  ={ 
-		name=SRT_miyu_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_srt_miyu 
-				small=GFX_portrait_srt_miyu_small
-			}	
-		}
-	}
+#     VAL_kirino ={ 
+# 		name=VAL_kirino_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_val_kirino
+# 				small=GFX_portrait_val_kirino_small
+# 			}	
+# 		}
+# 	}
+#     ###瓦尔基里VAL 结束###
 
-    SRT_moe  ={ 
-		name=SRT_moe_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_srt_moe 
-				small=GFX_portrait_srt_moe_small
-			}	
-		}
-	}
-    ###特殊反应部队SRT 结束###
-	RWT_momiji = { #秋泉红叶		
-		name = RWT_momiji_name
-		portraits = {
-			civilian = {
-				large = "GFX_portrait_RWT_momiji"
-				small = "GFX_idea_advisor_RWT_momiji"
-			}
-	}
 
-	RWT_meru = { #姬木爱瑠
-		name = RWT_meru_name
-		portraits = {
-			civilian = {
-				large = "GFX_portrait_RWT_meru"
-				small = "GFX_idea_advisor_RWT_meru"
-			}
-	}
 
-	RWT_marina = { #池仓真里奈,a
-		name = RWT_marina_name
-		portraits = {
-			civilian = {
-				large = "GFX_portrait_RWT_marina"
-				small = "GFX_idea_advisor_RWT_marina"
-			}
-		advisor = {
-			slot =  political_advisor
-			idea_token = RWT_marina_idea
-			allowed  = {
-					original_tag  = RWT
-				}
-				traits  = {
-				}				
-			}
-	}
+#     ###阿里乌斯ARI 开始###
+# 	ARI_atsuko = {
+# 		name = ARI_atsuko_name
+# 		portraits = {
+# 			civilian = {
+# 				large = GFX_portrait_ARI_atsuko
+# 				small = GFX_idea_advisor_ARI_atsuko
+# 			}
+# 		}
+# 		country_leader = {
+# 			ideology = conservatism
+# 			traits = { }
+# 			expire = "2042.1.1.1"
+# 			id = -1
+# 		}
+# 	}
 
-	RWT_tomoe = { #佐城巴,a
-		name = RWT_tomoe_name
-		portraits = {
-			civilian = {
-				large = "GFX_portrait_RWT_tomoe"
-				small = "GFX_idea_advisor_RWT_tomoe"
-			}
-		advisor = {
-			slot =  political_advisor
-			idea_token = RWT_tomoe_idea
-			allowed  = {
-					original_tag  = RWT
-				}
-				traits  = {
-				}				
-			}
-	}
+#     ARI_saori ={ 
+# 		name=ARI_saori_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_ari_saori
+# 				small=GFX_portrait_ari_saori_small
+# 			}	
+# 		}
+# 	}
 
-	RWT_cherino = { #连河切里诺,l,g
-		name = RWT_cherino_name
-		portraits = {
-			civilian = {
-				large = "GFX_portrait_RWT_cherino"
-				small = "GFX_idea_advisor_RWT_cherino"
-			}
-		country_leader = {
-			#ideology = communism
-			traits = { }
-			expire = "-1.1.1.1"
-			id = -1
-		}
-		field_marshal = {
-			traits = { }
-			skills = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skil = 1
-		}
- 	}
+#     ARI_misaki ={ 
+# 		name=ARI_misaki_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_ari_misaki
+# 				small=GFX_portrait_ari_misaki_small
+# 			}	
+# 		}
+# 	}
 
-	RWT_merino = { #安守实里,l,g
-		name = RWT_merino_name
-		portraits = {
-			civilian = {
-				large = "GFX_portrait_RWT_merino"
-				small = "GFX_idea_advisor_RWT_merino"
-			}
-		country_leader = {
-			#ideology = communism
-			traits = { }
-			expire = "-1.1.1.1"
-			id = -1
-		}
-	}
+#     ARI_hiyuri  ={ 
+# 		name=ARI_hiyuri_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_ari_hiyuri 
+# 				small=GFX_portrait_ari_hiyuri_small
+# 			}	
+# 		}
+# 	}
+#     ###阿里乌斯ARI 结束###
 
-	RWT_takane = { #三善贵音
-		name = RWT_takane_name
-		portraits = {
-			civilian = {
-				large = "GFX_portrait_RWT_takane"
-				small = "GFX_idea_advisor_RWT_takane"
-			}
-	}
 
-	RWT_yakumo = { #荒槙八云
-		name = RWT_yakumo_name
-		portraits = {
-			civilian = {
-				large = "GFX_portrait_RWT_yakumo"
-				small = "GFX_idea_advisor_RWT_yakumo"
-			}
-	}
 
-	RWT_shigure = { #间宵时雨
-		name = RWT_shigure_name
-		portraits = {
-			civilian = {
-				large = "GFX_portrait_RWT_shigure"
-				small = "GFX_idea_advisor_RWT_shigure"
-			}
-	}
+#     ###特殊反应部队SRT 开始###
+# 	SRT_miyako = {
+# 		name = SRT_miyako_name
+# 		portraits = {
+# 			civilian = {
+# 				large = GFX_portrait_SRT_miyako
+# 				small = GFX_idea_advisor_SRT_miyako
+# 			}
+# 		}
+# 		country_leader = {
+# 			ideology = conservatism
+# 			traits = { }
+# 			expire = "2042.1.1.1"
+# 			id = -1
+# 		}
+# 	}
 
-	RWT_nodoka = { #天见和香
-		name = RWT_nodoka_name
-		portraits = {
-			civilian = {
-				large = "GFX_portrait_RWT_nodoka"
-				small = "GFX_idea_advisor_RWT_nodoka"
-			}
-	}
+#     SRT_saki  ={ 
+# 		name=SRT_saki_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_srt_saki 
+# 				small=GFX_portrait_srt_saki_small
+# 			}	
+# 		}
+# 	}
 
-}
+#     SRT_miyu  ={ 
+# 		name=SRT_miyu_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_srt_miyu 
+# 				small=GFX_portrait_srt_miyu_small
+# 			}	
+# 		}
+# 	}
+
+#     SRT_moe  ={ 
+# 		name=SRT_moe_name 
+# 		portraits={
+# 			civilian={
+# 				large=GFX_portrait_srt_moe 
+# 				small=GFX_portrait_srt_moe_small
+# 			}	
+# 		}
+# 	}
+#     ###特殊反应部队SRT 结束###
+# 	RWT_momiji = { #秋泉红叶		
+# 		name = RWT_momiji_name
+# 		portraits = {
+# 			civilian = {
+# 				large = "GFX_portrait_RWT_momiji"
+# 				small = "GFX_idea_advisor_RWT_momiji"
+# 			}
+# 		}
+# 	}
+
+# 	RWT_meru = { #姬木爱瑠
+# 		name = RWT_meru_name
+# 		portraits = {
+# 			civilian = {
+# 				large = "GFX_portrait_RWT_meru"
+# 				small = "GFX_idea_advisor_RWT_meru"
+# 			}
+# 		}
+# 	}
+
+# 	RWT_marina = { #池仓真里奈,a
+# 		name = RWT_marina_name
+# 		portraits = {
+# 			civilian = {
+# 				large = "GFX_portrait_RWT_marina"
+# 				small = "GFX_idea_advisor_RWT_marina"
+# 			}
+# 		advisor = {
+# 			slot =  political_advisor
+# 			idea_token = RWT_marina_idea
+# 			allowed  = {
+# 					original_tag  = RWT
+# 				}
+# 				traits  = {
+# 				}				
+# 			}
+# 		}
+# 	}
+
+# 	RWT_tomoe = { #佐城巴,a
+# 		name = RWT_tomoe_name
+# 		portraits = {
+# 			civilian = {
+# 				large = "GFX_portrait_RWT_tomoe"
+# 				small = "GFX_idea_advisor_RWT_tomoe"
+# 			}
+# 		advisor = {
+# 			slot =  political_advisor
+# 			idea_token = RWT_tomoe_idea
+# 			allowed  = {
+# 					original_tag  = RWT
+# 				}
+# 				traits  = {
+# 				}				
+# 			}
+# 		}
+# 	}
+
+# 	RWT_cherino = { #连河切里诺,l,g
+# 	name = RWT_cherino_name
+# 	portraits = {
+# 		civilian = {
+# 			large = GFX_portrait_RWT_cherino
+# 			small = GFX_idea_advisor_RWT_cherino
+# 		}
+# 	}
+# 	country_leader = {
+# 		ideology = conservatism
+# 		traits = { }
+# 		expire = "2042.1.1.1"
+# 		id = -1
+# 	}
+# 		field_marshal = {
+# 			traits = { }
+# 			skills = 1
+# 			attack_skill = 1
+# 			defense_skill = 1
+# 			planning_skill = 1
+# 			logistics_skil = 1
+# 		}
+#  	}
+
+# 	RWT_merino = { #安守实里,l,g
+# 		name = RWT_merino_name
+# 		portraits = {
+# 			civilian = {
+# 				large = "GFX_portrait_RWT_merino"
+# 				small = "GFX_idea_advisor_RWT_merino"
+# 			}
+# 		}
+# 		country_leader = {
+# 			#ideology = communism
+# 			traits = { }
+# 			expire = "-1.1.1.1"
+# 			id = -1
+# 		}
+# 	}
+
+# 	RWT_takane = { #三善贵音
+# 		name = RWT_takane_name
+# 		portraits = {
+# 			civilian = {
+# 				large = "GFX_portrait_RWT_takane"
+# 				small = "GFX_idea_advisor_RWT_takane"
+# 			}
+# 	    }
+# 	}
+
+# 	RWT_yakumo = { #荒槙八云
+# 		name = RWT_yakumo_name
+# 		portraits = {
+# 			civilian = {
+# 				large = "GFX_portrait_RWT_yakumo"
+# 				small = "GFX_idea_advisor_RWT_yakumo"
+# 			}
+# 	    }
+#    }
+
+# 	RWT_shigure = { #间宵时雨
+# 		name = RWT_shigure_name
+# 		portraits = {
+# 			civilian = {
+# 				large = "GFX_portrait_RWT_shigure"
+# 				small = "GFX_idea_advisor_RWT_shigure"
+# 			}
+# 		}
+# 	}
+
+# 	RWT_nodoka = { #天见和香
+# 		name = RWT_nodoka_name
+# 		portraits = {
+# 			civilian = {
+# 				large = "GFX_portrait_RWT_nodoka"
+# 				small = "GFX_idea_advisor_RWT_nodoka"
+# 			}
+# 	    }
+# 	}
+# }

@@ -7,7 +7,6 @@ state={
 	history = {
 		owner = CAO
 		add_core_of=CAO
-		victory_points = {924 10}
     }
 	manpower=0
 	buildings_max_level_factor=1.000

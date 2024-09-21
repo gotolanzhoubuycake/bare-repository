@@ -3,7 +3,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "TRI_BOP_container_windows"
 		position = { x = 20 y = 20 }	
-		size = { width = 500 height= 600 }
+		size = { width = 510 height= 700 }
 		
 		background = {
 			name = "background"		
@@ -12,11 +12,11 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "TRI_house_container"
-			position = { x = 20 y = 100 }
+			position = { x = 0 y = 100 }
 
 			gridboxtype = {
 				name = "TRI_house_diagram"
-				position = { x = 60 y = 50 }
+				position = { x = 10 y = 0 }
 				size = { width = 100%% height = 100%% }
 				slotsize = { width = 100%% height = 0 }
 				max_slots_horizontal = 1
@@ -25,18 +25,39 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "House_name"
-				position = { x = 80 y = 150 }
+				position = { x = 0 y = 100 }
 				font = "hoi_24header"
 				text = "TRI_BOP_house_support_header"
 				format = center
 				maxHeight = 24
 			}
+
+			instantTextBoxType = {
+				name = "House_branch_title"
+				position = { x = 0 y = 135 }
+				font = "hoi_18mbs"
+				text = "TRI_BOP_seats_desc"
+				format = center
+				maxHeight = 18
+			}
+
+			instantTextBoxType = {
+				name = "House_branch_num"
+				position = { x = 0 y = 155 }
+				font = "hoi_18mbs"
+				text = "TRI_BOP_house_seats_num_desc"
+				format = center
+				maxHeight = 18
+			}
 		}
 
 		containerWindowType = {
+			name = "TRI_senators_container"
+			position = { x = 175 y = 35 }
+
 			gridboxtype = { #下议院显示图像
 				name = "TRI_senators_diagram"
-				position = { x = 70 y = 300 }
+				position = { x = 10 y = 0 }
 				size = { width = 100%% height = 100%% }
 				slotsize = { width = 100%% height = 0 }
 				max_slots_horizontal = 1
@@ -45,10 +66,43 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "Senators_name"
-				position = { x = 80 y = 300 }
+				position = { x = 65 y = 165 }
 				font = "hoi_24header"
 				text = "TRI_BOP_senate_support_header"
 				format = center
+				maxHeight = 24
+			}
+
+			instantTextBoxType = {
+				name = "Senators_branch_title"
+				position = { x = 65 y = 195 }
+				font = "hoi_18mbs"
+				text = "TRI_BOP_seats_desc"
+				format = center
+				maxHeight = 18
+			}
+
+			instantTextBoxType = {
+				name = "Senators_branch_num"
+				position = { x = 65 y = 215 }
+				font = "hoi_18mbs"
+				text = "TRI_BOP_sneate_seats_num_desc"
+				format = center
+				maxHeight = 18
+			}
+		}
+
+		containerWindowType = {
+			name = "TRI_party_position"
+			position = { x = 10 y = 300 }
+
+			instantTextBoxType = {
+				name = "Patel_position_text"
+				position = { x = 5 y = 50 }
+				font = "hoi_24header"
+				text = "TRI_BOP_P_position_tt"
+				format = left
+				maxWidth = 600
 				maxHeight = 24
 			}
 		}

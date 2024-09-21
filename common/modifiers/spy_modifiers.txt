@@ -1,0 +1,10 @@
+intel_network_state_level_penalty = {
+	max_planning_factor = -0.4
+	max_dig_in = -2
+	air_accidents = 0.02
+}
+
+created_intelligence_agency = {
+	operative_slot = 3
+	new_operative_slot_bonus = 3
+}

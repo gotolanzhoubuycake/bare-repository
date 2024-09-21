@@ -106,7 +106,65 @@ eden_treaty_step_3_modifier = { #【已完成的《伊甸条约》】
 	conscription_factor = eden_conscription_factor
 }
 
+eden_treaty_step_4_modifier = { #【濒临破灭的《伊甸条约》】
 
+	icon = "GFX_idea_unknown"
+	enable = { always = yes }
+
+	#政治方面
+	stability_weekly = eden_broken_weekly_stability
+	political_power_gain = eden_broken_daily_power_gain
+	#顾问、法律
+	political_advisor_cost_factor = eden_broken_advisor_cost
+	army_chief_cost_factor = eden_broken_army_chief_cost
+	air_chief_cost_factor = eden_broken_air_chief_cost
+	economy_cost_factor = eden_broken_economy_cost
+	trade_laws_cost_factor = eden_broken_trade_laws_cost
+	mobilization_laws_cost_factor = eden_broken_mobilization_laws_cost
+
+	#经济方面
+	industrial_capacity_factory = eden_broken_factory_output
+}
+
+eden_treaty_step_5_modifier = { #【逐渐稳定的《伊甸条约》】
+
+	icon = "GFX_idea_unknown"
+	enable = { always = yes }
+
+	#政治方面
+	stability_factor = eden_broken_stability
+	stability_weekly = eden_broken_weekly_stability
+	political_power_gain = eden_broken_daily_power_gain
+
+	#顾问、法律
+	political_advisor_cost_factor = eden_broken_advisor_cost
+	army_chief_cost_factor = eden_broken_army_chief_cost
+	air_chief_cost_factor = eden_broken_air_chief_cost
+	economy_cost_factor = eden_broken_economy_cost
+	trade_laws_cost_factor = eden_broken_trade_laws_cost
+	mobilization_laws_cost_factor = eden_broken_manpower_cost
+
+	#经济方面
+	industrial_capacity_factory = eden_broken_factory_output
+
+	#科技方面
+	research_speed_factor = eden_broken_research_speed
+}
+
+#混乱的前线
+TRI_chaotic_frontline = { #【混乱的前线】
+
+	icon = "GFX_idea_unknown"
+	enable = { always = yes }
+
+	army_org_factor = cf_army_org_factor
+	army_org_regain = cf_army_org_regain
+	land_reinforce_rate = cf_land_reinforce_rate
+	training_time_factor = cf_training_time_factor
+	army_core_attack_factor = cf_army_core_attack_factor
+	army_core_defence_factor = cf_army_core_defence_factor
+	experience_gain_army_factor = 	cf_experience_gain_army_factor
+}
 
 #特别调查部
 TRI_special_services_investigations = {

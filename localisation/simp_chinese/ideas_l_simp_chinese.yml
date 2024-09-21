@@ -7,6 +7,8 @@
  eden_treaty_step_1_modifier: "大略初定的《伊甸条约》方针"
  eden_treaty_step_2_modifier: "方略周详的《伊甸条约》方针"
  eden_treaty_step_3_modifier: "已完成的《伊甸条约》"
+ eden_treaty_step_4_modifier: "濒临破灭的《伊甸条约》"
+ eden_treaty_step_5_modifier: "逐渐稳定的《伊甸条约》"
  authorize_eagle_modifier: "以战止戈"
  authorize_dove_modifier: "铸剑为犁"
 
@@ -18,6 +20,8 @@
 
  TRI_dissonance_modifier: "不谐之音"
  TRI_dissonance_modifier_alt: "不谐之音被订正？"
+
+ TRI_chaotic_frontline: "混乱的前线"
 
 #圣三一军事线
  

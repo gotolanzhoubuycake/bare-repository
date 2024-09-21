@@ -1,0 +1,622 @@
+   HYA_yukari ={ 
+		name=HYA_yukari_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_hya_yukari
+				small=GFX_portrait_hya_yukari_small
+			}	
+		}
+
+        advisor = {
+			slot = army_chief
+			idea_token = HYA_yukari_ac
+			allowed = {
+				original_tag = HYA
+			}
+			available = {
+				original_tag = HYA
+			}
+			traits = {
+				girl_like_wind
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    HYA_renge ={ 
+		name=HYA_renge_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_hya_renge
+				small=GFX_portrait_hya_renge_small
+			}	
+		}
+
+        advisor = {
+			slot = army_chief
+			idea_token = HYA_renge_ac
+			allowed = {
+				original_tag = HYA
+			}
+			available = {
+				original_tag = HYA
+			}
+			traits = {
+				fire_lotus
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    HYA_kikyu ={ 
+		name=HYA_kikyu_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_hya_kikyu
+				small=GFX_portrait_hya_kikyu_small
+			}	
+		}
+
+        advisor = {
+			slot = army_chief
+			idea_token = HYA_kikyu_ac
+			allowed = {
+				original_tag = HYA
+			}
+			available = {
+				original_tag = HYA
+			}
+			traits = {
+				resourceful_army_chief
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    HYA_nagusa ={ 
+		name=HYA_nagusa_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_hya_nagusa
+				small=GFX_portrait_hya_nagusa_small
+			}	
+		}
+
+        advisor = {
+			slot = army_chief
+			idea_token = HYA_nagusa_ac
+			allowed = {
+				original_tag = HYA
+			}
+			available = {
+				original_tag = HYA
+			}
+			traits = {
+				obscure_prophet
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = HYA_nagusa_pa
+			allowed = {
+				original_tag = HYA
+			}
+			available = {
+				original_tag = HYA
+			} 
+			traits = {
+				true_leader_of_hyakaryuran
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    HYA_chise ={ 
+		name=HYA_chise_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_hya_chise
+				small=GFX_portrait_hya_chise_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = HYA_chise_pa
+			allowed = {
+				original_tag = HYA
+			}
+			available = {
+				original_tag = HYA
+			} 
+			traits = {
+				cute_fujuo
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    HYA_kaho ={ 
+		name=HYA_kaho_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_hya_kaho
+				small=GFX_portrait_hya_kaho_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = HYA_kaho_pa
+			allowed = {
+				original_tag = HYA
+			}
+			available = {
+				original_tag = HYA
+			} 
+			traits = {
+				fan_of_chise
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    HYA_niya ={ 
+		name=HYA_niya_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_hya_niya
+				small=GFX_portrait_hya_niya_small
+			}
+		}
+
+        country_leader = {
+			ideology = liberalism
+			traits = { mystery_of_heaven }
+			expire = "-1.1.1.1"
+			id = -1
+		}
+
+	}
+
+
+    HYA_tsubaki ={ 
+		name=HYA_tsubaki_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_hya_tsubaki
+				small=GFX_portrait_hya_tsubaki_small
+			}	
+		}
+
+        advisor = {
+			slot = army_chief
+			idea_token = HYA_tsubaki_ac
+			allowed = {
+				original_tag = HYA
+			}
+			available = {
+				original_tag = HYA
+			}
+			traits = {
+				sleep_beauty
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    HYA_memori ={ 
+		name=HYA_memori_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_hya_memori
+				small=GFX_portrait_hya_memori_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = HYA_memori_pa
+			allowed = {
+				original_tag = HYA
+			}
+			available = {
+				original_tag = HYA
+			} 
+			traits = {
+				bride_in_learning
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    HYA_kaede ={ 
+		name=HYA_kaede_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_hya_kaede
+				small=GFX_portrait_hya_kaede_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = HYA_kaede_pa
+			allowed = {
+				original_tag = HYA
+			}
+			available = {
+				original_tag = HYA
+			} 
+			traits = {
+				practicing_girl
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    HYA_izuna ={ 
+		name=HYA_izuna_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_hya_izuna
+				small=GFX_portrait_hya_izuna_small
+			}	
+		}
+
+        advisor = {
+			slot = army_chief
+			idea_token = HYA_izuna_ac
+			allowed = {
+				original_tag = HYA
+			}
+			available = {
+				original_tag = HYA
+			}
+			traits = {
+				fox_ninja
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    HYA_michiru ={ 
+		name=HYA_michiru_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_hya_michiru
+				small=GFX_portrait_hya_michiru_small
+			}	
+		}
+
+        advisor = {
+			slot = army_chief
+			idea_token = HYA_michiru_ac
+			allowed = {
+				original_tag = HYA
+			}
+			available = {
+				original_tag = HYA
+			}
+			traits = {
+				infiltration_expert
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    HYA_tsukuyo ={ 
+		name=HYA_tsukuyo_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_hya_tsukuyo
+				small=GFX_portrait_hya_tsukuyo_small
+			}	
+		}
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    HYA_umika ={ 
+		name=HYA_umika_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_hya_umika
+				small=GFX_portrait_hya_umika_small
+			}	
+		}
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    HYA_pina ={ 
+		name=HYA_pina_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_hya_pina
+				small=GFX_portrait_hya_pina_small
+			}	
+		}
+
+        advisor = {
+			slot = army_chief
+			idea_token = HYA_pina_ac
+			allowed = {
+				original_tag = HYA
+			}
+			available = {
+				original_tag = HYA
+			}
+			traits = {
+				some_like_it_hot
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    HYA_shizuko ={ 
+		name=HYA_shizuko_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_hya_shizuko
+				small=GFX_portrait_hya_shizuko_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = HYA_shizuko_pa
+			allowed = {
+				original_tag = HYA
+			}
+			available = {
+				original_tag = HYA
+			} 
+			traits = {
+				great_festival_holder
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    #大狐狸，暂且先归入百鬼夜行
+    HYA_wakamo ={ 
+		name=HYA_wakamo_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_hya_wakamo
+				small=GFX_portrait_hya_wakamo_small
+			}	
+		}
+
+        advisor = {
+			slot = army_chief
+			idea_token = HYA_wakamo_ac
+			allowed = {
+				original_tag = HYA
+			}
+			available = {
+				original_tag = HYA
+			}
+			traits = {
+				fox_of_disaster
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    #葛叶
+    HYA_kuzuha ={ 
+		name=HYA_kuzuha_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_hya_kuzuha
+				small=GFX_portrait_hya_kuzuha_small
+			}	
+		}
+
+        country_leader = {
+			ideology = liberalism
+			traits = { live_in_sukima }
+			expire = "-1.1.1.1"
+			id = -1
+		}
+
+	}

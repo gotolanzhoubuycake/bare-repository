@@ -1,0 +1,841 @@
+    ###千禧年MIL 开始###
+    MIL_rio ={ 
+		name=MIL_rio_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_mil_rio
+				small=GFX_portrait_mil_rio_small
+			}	
+		}
+
+        country_leader = {
+			ideology = liberalism
+			traits = { master_of_seminar }
+			expire = "-1.1.1.1"
+			id = -1
+		}
+
+	}
+
+    MIL_yuuka ={ 
+		name=MIL_yuuka_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_mil_yuuka
+				small=GFX_portrait_mil_yuuka_small
+			}	
+		}
+
+        country_leader = {
+			ideology = liberalism
+			traits = { cold_calculator }
+			expire = "-1.1.1.1"
+			id = -1
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = MIL_yuuka_pa
+			allowed = {
+				original_tag = MIL
+			}
+			available = {
+				original_tag = MIL
+			} 
+			traits = {
+				budget_controller
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    MIL_noa ={ 
+		name=MIL_noa_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_mil_noa
+				small=GFX_portrait_mil_noa_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = MIL_noa_pa
+			allowed = {
+				original_tag = MIL
+			}
+			available = {
+				original_tag = MIL
+			} 
+			traits = {
+				secretary_of_seminar
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    MIL_koyuki ={ 
+		name=MIL_koyuki_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_mil_koyuki
+				small=GFX_portrait_mil_koyuki_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = MIL_koyuki_pa
+			allowed = {
+				original_tag = MIL
+			}
+			available = {
+				original_tag = MIL
+			} 
+			traits = {
+				bunny_girl_on_argo
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    MIL_chihiro ={ 
+		name=MIL_chihiro_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_mil_chihiro
+				small=GFX_portrait_mil_chihiro_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = MIL_chihiro_pa
+			allowed = {
+				original_tag = MIL
+			}
+			available = {
+				original_tag = MIL
+			} 
+			traits = {
+				sound_of_truth
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+	}
+
+    MIL_maki ={ 
+		name=MIL_maki_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_mil_maki
+				small=GFX_portrait_mil_maki_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = MIL_maki_pa
+			allowed = {
+				original_tag = MIL
+			}
+			available = {
+				original_tag = MIL
+			} 
+			traits = {
+				colorful_spray
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    MIL_haru ={ 
+		name=MIL_haru_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_mil_haru
+				small=GFX_portrait_mil_haru_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = MIL_haru_pa
+			allowed = {
+				original_tag = MIL
+			}
+			available = {
+				original_tag = MIL
+			} 
+			traits = {
+				energy_drink_love
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    MIL_kotama ={ 
+		name=MIL_kotama_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_mil_kotama
+				small=GFX_portrait_mil_kotama_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = MIL_kotama_pa
+			allowed = {
+				original_tag = MIL
+			}
+			available = {
+				original_tag = MIL
+			} 
+			traits = {
+				ears_in_dark
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    MIL_himari ={ 
+		name=MIL_himari_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_mil_himari
+				small=GFX_portrait_mil_himari_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = MIL_himari_pa
+			allowed = {
+				original_tag = MIL
+			}
+			available = {
+				original_tag = MIL
+			} 
+			traits = {
+				genius_hacker
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    MIL_eimi ={ 
+		name=MIL_eimi_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_mil_eimi
+				small=GFX_portrait_mil_eimi_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = MIL_eimi_pa
+			allowed = {
+				original_tag = MIL
+			}
+			available = {
+				original_tag = MIL
+			} 
+			traits = {
+				so_hot_body
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    MIL_yuzu ={ 
+		name=MIL_yuzu_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_mil_yuzu
+				small=GFX_portrait_mil_yuzu_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = MIL_yuzu_pa
+			allowed = {
+				original_tag = MIL
+			}
+			available = {
+				original_tag = MIL
+			} 
+			traits = {
+				yuzu_queen
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    #PS:这里爱丽丝使用英文，而非罗马音
+    MIL_alice ={ 
+		name=MIL_alice_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_mil_alice
+				small=GFX_portrait_mil_alice_small
+			}	
+		}
+
+        advisor = {
+			slot = army_chief
+			idea_token = MIL_alice_ac
+			allowed = {
+				original_tag = MIL
+			}
+			available = {
+				original_tag = MIL
+			}
+			traits = {
+				warrior_of_light
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    MIL_momoe ={ 
+		name=MIL_momoe_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_mil_momoe
+				small=GFX_portrait_mil_momoe_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = MIL_momoe_pa
+			allowed = {
+				original_tag = MIL
+			}
+			available = {
+				original_tag = MIL
+			} 
+			traits = {
+				game_developer_momoe
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    MIL_midori ={ 
+		name=MIL_midori_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_mil_midori
+				small=GFX_portrait_mil_midori_small
+			}	
+        }
+
+		advisor = {
+			slot = political_advisor
+			idea_token = MIL_midori_pa
+			allowed = {
+				original_tag = MIL
+			}
+			available = {
+				original_tag = MIL
+			} 
+			traits = {
+				game_developer_midori
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    MIL_hibiki ={ 
+		name=MIL_hibiki_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_mil_hibiki
+				small=GFX_portrait_mil_hibiki_small
+			}	
+		}
+
+        advisor = {
+			slot = army_chief
+			idea_token = MIL_hibiki_ac
+			allowed = {
+				original_tag = MIL
+			}
+			available = {
+				original_tag = MIL
+			}
+			traits = {
+				mortar_engineer
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    MIL_utaha ={ 
+		name=MIL_utaha_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_mil_utaha
+				small=GFX_portrait_mil_utaha_small
+			}	
+		}
+
+        advisor = {
+			slot = army_chief
+			idea_token = MIL_utaha_ac
+			allowed = {
+				original_tag = MIL
+			}
+			available = {
+				original_tag = MIL
+			}
+			traits = {
+				auto_robot_engineer
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    MIL_kotori ={ 
+		name=MIL_kotori_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_mil_kotori
+				small=GFX_portrait_mil_kotori_small
+			}	
+		}
+
+        advisor = {
+			slot = army_chief
+			idea_token = MIL_kotori_ac
+			allowed = {
+				original_tag = MIL
+			}
+			available = {
+				original_tag = MIL
+			}
+			traits = {
+				equipment_testing_engineer
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    MIL_neru ={ 
+		name=MIL_neru_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_mil_neru
+				small=GFX_portrait_mil_neru_small
+			}	
+		}
+
+        advisor = {
+			slot = army_chief
+			idea_token = MIL_neru_ac
+			allowed = {
+				original_tag = MIL
+			}
+			available = {
+				original_tag = MIL
+			}
+			traits = {
+				short_maid
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    MIL_karin ={ 
+		name=MIL_karin_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_mil_karin
+				small=GFX_portrait_mil_karin_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = MIL_karin_pa
+			allowed = {
+				original_tag = MIL
+			}
+			available = {
+				original_tag = MIL
+			} 
+			traits = {
+				far_range_sniper
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    MIL_akane ={ 
+		name=MIL_akane_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_mil_akane
+				small=GFX_portrait_mil_akane_small
+			}	
+		}
+
+        advisor = {
+			slot = army_chief
+			idea_token = MIL_akane_ac
+			allowed = {
+				original_tag = MIL
+			}
+			available = {
+				original_tag = MIL
+			}
+			traits = {
+				caring_maid
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    MIL_asuna ={ 
+		name=MIL_asuna_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_mil_asuna
+				small=GFX_portrait_mil_asuna_small
+			}	
+		}
+
+        advisor = {
+			slot = army_chief
+			idea_token = MIL_asuna_ac
+			allowed = {
+				original_tag = MIL
+			}
+			available = {
+				original_tag = MIL
+			}
+			traits = {
+				super_luck_maid
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    MIL_toki ={ 
+		name=MIL_toki_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_mil_toki
+				small=GFX_portrait_mil_toki_small
+			}	
+		}
+
+        advisor = {
+			slot = army_chief
+			idea_token = MIL_toki_ac
+			allowed = {
+				original_tag = MIL
+			}
+			available = {
+				original_tag = MIL
+			}
+			traits = {
+				secret_weapon_of_cc
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    MIL_sumire ={ 
+		name=MIL_sumire_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_mil_sumire
+				small=GFX_portrait_mil_sumire_small
+			}	
+		}
+
+        advisor = {
+			slot = army_chief
+			idea_token = MIL_sumire_ac
+			allowed = {
+				original_tag = MIL
+			}
+			available = {
+				original_tag = MIL
+			}
+			traits = {
+				fitness_instructor
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+    ###千禧年MIL 结束###

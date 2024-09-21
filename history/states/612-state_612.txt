@@ -7,7 +7,7 @@ state={
 	history={
 		owner = CAP
 		add_core_of=CAP
-		victory_points = {11630 10}
+		victory_points = {11630 20}
 	}
 	manpower=0
 	state_category=wasteland

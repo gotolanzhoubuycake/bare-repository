@@ -1,9 +1,14 @@
 ﻿l_simp_chinese:
   TRI_BOP_decisions_categories: "圣三一权力平衡"
-  TRI_BOP_senate_support_header: "§H下议院§!"
+  
   TRI_BOP_house_support_header: "§H上议院§!"
-  TRI_BOP_senate_support_amount: "§G[?TRI.senators_support]§!/§Y[?TRI.senators_total]§!"
-  TRI_BOP_house_support_amount: "§G[?TRI.representatives_support]§!/§Y[?TRI.representatives_total]§!"
+  TRI_BOP_seats_desc: "§G支持§!/§Y中立§!/§R反对§!"
+  TRI_BOP_house_seats_num_desc: "§G[?TRI.House_support_num]§!/§Y[?TRI.House_centrist_num]§!/§R[?TRI.House_opposition_num]§!"
+  TRI_BOP_senate_support_header: "§H下议院§!"
+  TRI_BOP_sneate_seats_num_desc: "§G[?TRI.Senators_support_num]§!/§Y[?TRI.Senators_centrist_num]§!/§R[?TRI.Senators_opposition_num]§!"
+  TRI_BOP_P_position_tt: "帕特尔派（未花）对当前的态度：§R反对§!"
+  #TRI_BOP_senate_support_amount: "§G[?TRI.senators_support]§!/§Y[?TRI.senators_total]§!"
+  #TRI_BOP_house_support_amount: "§G[?TRI.representatives_support]§!/§Y[?TRI.representatives_total]§!"
   #TRI_BOP_decisions_categories_desc: "即便是最默默无闻的学生也对当前学院内遭遇的重大事件持有其自身的看法。我们或许可以通过一些手段影响他们的立场——不可否认的是：想要达成我们的目的，我们就必须要团结尽可能多的人到我们的旗帜之下……\n\n\n当前焦点：\n\n已选择的立场：\n\n茶会意见      （§G赞成§!/弃权/§Y反对§!）\n\n$TRI_BOP_decisions_tt_P$\n$TRI_BOP_decisions_tt_F$\n$TRI_BOP_decisions_tt_S$\n\n$TRI_BOP_decisions_tt_teaparty_total$\n根据立场的比率：[?TRI_BOP_teaparty_approval_rating|G0%]\n\n社团意见      （§G赞成§!/弃权/§Y反对§!）\n\n$TRI_BOP_decisions_tt_JUS$\n$TRI_BOP_decisions_tt_SIS$\n$TRI_BOP_decisions_tt_HOS$\n$TRI_BOP_decisions_tt_ETC$\n\n$TRI_BOP_decisions_tt_other_total$\n根据立场的比率：[?TRI_BOP_other_approval_rating|G0%]\n"
   #TRI_BOP_decisions_tt_P: "帕特尔派：                  [?TRI_BOP_decisions_P_agree|G0]/[?TRI_BOP_decisions_P_abstentions|0]/[?TRI_BOP_decisions_P_against|Y0]"
   #TRI_BOP_decisions_tt_F: "菲利乌斯派：            [?TRI_BOP_decisions_F_agree|G0]/[?TRI_BOP_decisions_F_abstentions|0]/[?TRI_BOP_decisions_F_against|Y0]"

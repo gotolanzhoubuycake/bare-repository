@@ -1,0 +1,167 @@
+    ###联邦学生会CEN 开始###
+    CEN_rin ={ 
+		name=CEN_rin_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_cen_rin
+				small=GFX_portrait_cen_rin_small
+			}	
+		}
+
+        country_leader = {
+			ideology = liberalism
+			traits = { acting_president }
+			expire = "-1.1.1.1"
+			id = -1
+		}
+
+	}
+
+    CEN_momoka ={ 
+		name=CEN_momoka_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_cen_momoka
+				small=GFX_portrait_cen_momoka_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = CEN_momoka_pa
+			allowed = {
+				original_tag = CEN
+			}
+			available = {
+				original_tag = CEN
+			} 
+			traits = {
+				master_of_being_lazy
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    CEN_ayumu ={ 
+		name=CEN_ayumu_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_cen_ayumu
+				small=GFX_portrait_cen_ayumu_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = CEN_ayumu_pa
+			allowed = {
+				original_tag = CEN
+			}
+			available = {
+				original_tag = CEN
+			} 
+			traits = {
+				hard_working_secretary
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    CEN_aoi ={ 
+		name=CEN_aoi_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_cen_aoi
+				small=GFX_portrait_cen_aoi_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = CEN_aoi_pa
+			allowed = {
+				original_tag = CEN
+			}
+			available = {
+				original_tag = CEN
+			} 
+			traits = {
+				fiscal_actuary
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    CEN_kaye ={ 
+		name=CEN_kaye_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_cen_kaye
+				small=GFX_portrait_cen_kaye_small
+			}	
+		}
+
+        advisor = {
+			slot = army_chief
+			idea_token = CEN_kaye_ac
+			allowed = {
+				original_tag = CEN
+			}
+			available = {
+				original_tag = CEN
+			}
+			traits = {
+				minister_of_defence
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+        
+	}

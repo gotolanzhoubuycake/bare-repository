@@ -1,10 +1,27 @@
 # Allocate a random number of seats to Parties 1, 2, 3 and 4
 #这个脚本主要进行圣三一的议会席位运算
 
-TRI_BOP_house_party_seats = {
-	#set_variable = { Patel_house_seatNumber = 10 }
-	#set_variable = { Filius_house_seatNumber = 10 }
-	#set_variable = { Cootes_house_seatNumber = 10 }
+TRI_BOP_house_party_seats = { #关于上议会的支持反对中立席位的计算
+
+	#总计支持、中立、反对的席位
+	set_variable = { House_support_num = 0 }
+
+	add_to_variable = { House_support_num = Patel_house_seatNum_support }
+	add_to_variable = { House_support_num = Filius_house_seatNum_support }
+	add_to_variable = { House_support_num = Cootes_house_seatNum_support }
+
+	set_variable = { House_centrist_num = 0 }
+
+	add_to_variable = { House_centrist_num = Patel_house_seatNum_centrist }
+	add_to_variable = { House_centrist_num = Filius_house_seatNum_centrist }
+	add_to_variable = { House_centrist_num = Cootes_house_seatNum_centrist }
+
+	set_variable = { House_opposition_num = 0 }
+
+	add_to_variable = { House_opposition_num = Patel_house_seatNum_opposition }
+	add_to_variable = { House_opposition_num = Filius_house_seatNum_opposition }
+	add_to_variable = { House_opposition_num = Cootes_house_seatNum_opposition }
+
 
 	#set_temp_variable = { total = Patel_house_seatNumber }
 	#add_to_temp_variable = { total = Filius_house_seatNumber }
@@ -15,11 +32,29 @@ TRI_BOP_house_party_seats = {
 
 }
 
-TRI_BOP_senators_party_seats = {
-	set_variable = { Justice_senators_seatNumber = 20 }
-	set_variable = { Teresa_senators_seatNumber = 20 }
-	set_variable = { Knight_senators_seatNumber = 20 }
-	set_variable = { Others_senators_seatNumber = 40 }
+TRI_BOP_senators_party_seats = { #关于下议会的支持反对中立席位计算
+
+	#总计支持、中立、反对的席位
+	set_variable = { Senators_support_num = 0 }
+
+	add_to_variable = { Senators_support_num = Justice_senators_seatNum_support }
+	add_to_variable = { Senators_support_num = Teresa_senators_seatNum_support }
+	add_to_variable = { Senators_support_num = Knight_senators_seatNum_support }
+	add_to_variable = { Senators_support_num = Others_senators_seatNum_support }
+
+	set_variable = { Senators_centrist_num = 0 }
+
+	add_to_variable = { Senators_centrist_num = Justice_senators_seatNum_centrist }
+	add_to_variable = { Senators_centrist_num = Teresa_senators_seatNum_centrist }
+	add_to_variable = { Senators_centrist_num = Knight_senators_seatNum_centrist }
+	add_to_variable = { Senators_centrist_num = Others_senators_seatNum_centrist }
+
+	set_variable = { Senators_opposition_num = 0 }
+
+	add_to_variable = { Senators_opposition_num = Justice_senators_seatNum_opposition }
+	add_to_variable = { Senators_opposition_num = Teresa_senators_seatNum_opposition }
+	add_to_variable = { Senators_opposition_num = Knight_senators_seatNum_opposition }
+	add_to_variable = { Senators_opposition_num = Others_senators_seatNum_opposition }
 
 	#set_temp_variable = { total = Justice_senators_seatNumber }
 	#add_to_temp_variable = { total = Teresa_senators_seatNumber }
@@ -32,4 +67,296 @@ TRI_BOP_senators_party_seats = {
 
 }
 
+#TODO:随机给非支持\非反对的派系分配变化席位的数量(派系态度判断应在这里完成)
 
+
+TRI_Patel_add_opposition_seats = { #Patel的反对派系的席位变化算法
+
+	set_temp_variable = { sub = Patel_house_seatNum_centrist }
+	subtract_from_temp_variable = { sub = Patel_change_num }
+	
+	if = { #判断被减数是否大于等于减数
+		limit = {
+			OR = {
+				check_variable = { sub > 0 }
+				check_variable = { sub = 0 }
+			}
+		}
+
+		subtract_from_variable = { Patel_house_seatNum_centrist = Patel_change_num }
+		add_to_variable = { Patel_house_seatNum_opposition = Patel_change_num }	
+
+		custom_effect_tooltip = TRI_House_party_change
+	}
+	else = { #被减数小于减数,意味着中立席位会消耗完或者已经被消耗完
+		
+		set_temp_variable = { Patel_sub = Patel_change_num }
+		subtract_from_temp_variable = { Patel_sub = Patel_house_seatNum_centrist }
+
+		subtract_from_variable = { Patel_house_seatNum_support = Patel_sub }
+		add_to_variable = { Patel_house_seatNum_opposition = Patel_change_num }
+		set_variable = { Patel_house_seatNum_centrist = 0 }
+	}
+}
+
+TRI_Patel_add_support_seats = { #Patel的支持派系的席位变化算法
+
+	set_temp_variable = { sub = Patel_house_seatNum_centrist }
+	subtract_from_temp_variable = { sub = Patel_change_num }
+	
+	if = { #判断被减数是否大于等于减数
+		limit = {
+			OR = {
+				check_variable = { sub > 0 }
+				check_variable = { sub = 0 }
+			}
+		}
+
+		subtract_from_variable = { Patel_house_seatNum_centrist = Patel_change_num }
+		add_to_variable = { Patel_house_seatNum_support = Patel_change_num }	
+
+		custom_effect_tooltip = TRI_House_party_change
+	}
+	else = { #被减数小于减数,意味着中立席位会消耗完或者已经被消耗完
+		
+		set_temp_variable = { Patel_sub = Patel_change_num }
+		subtract_from_temp_variable = { Patel_sub = Patel_house_seatNum_centrist }
+
+		subtract_from_variable = { Patel_house_seatNum_opposition = Patel_sub }
+		add_to_variable = { Patel_house_seatNum_support = Patel_change_num }
+		set_variable = { Patel_house_seatNum_centrist = 0 }
+	}
+}
+
+TRI_Patel_add_opposition_to_centrist = {
+
+	set_temp_variable = { sub = Patel_house_seatNum_opposition }
+	subtract_from_temp_variable = { sub = Patel_change_num }
+
+	if = { #当反对派人数不够时
+		limit = { 
+			check_variable = { sub < 0 }
+		}
+
+		add_to_variable = { Patel_house_seatNum_centrist = Patel_house_seatNum_opposition }
+		set_variable = { Patel_house_seatNum_opposition = 0 }
+	}
+	else = {
+		add_to_variable = { Patel_house_seatNum_centrist = sub }
+		subtract_from_variable = { Patel_house_seatNum_opposition = sub }
+	}
+}
+
+TRI_Patel_add_support_to_centrist = {
+
+	set_temp_variable = { sub = Patel_house_seatNum_support }
+	subtract_from_temp_variable = { sub = Patel_change_num }
+
+	if = { #当支持派人数不够时
+		limit = {
+			check_variable = { sub < 0 }
+		}
+
+		add_to_variable = { Patel_house_seatNum_centrist = Patel_house_seatNum_support }
+		set_variable = { Patel_house_seatNum_support = 0 }
+	}
+	else = {
+		add_to_variable = { Patel_house_seatNum_centrist = sub }
+		subtract_from_variable = { Patel_house_seatNum_support = sub }
+	}
+	
+}
+
+TRI_Filius_add_opposition_seats = { #Filius的反对派系的席位变化算法
+
+	set_temp_variable = { sub = Filius_house_seatNum_centrist }
+	subtract_from_temp_variable = { sub = Filius_change_num }
+	
+	if = { #判断被减数是否大于等于减数
+		limit = {
+			OR = {
+				check_variable = { sub > 0 }
+				check_variable = { sub = 0 }
+			}
+		}
+
+		subtract_from_variable = { Filius_house_seatNum_centrist = Filius_change_num }
+		add_to_variable = { Filius_house_seatNum_opposition = Filius_change_num }	
+
+		custom_effect_tooltip = TRI_House_party_change
+	}
+	else = { #被减数小于减数,意味着中立席位会消耗完或者已经被消耗完
+		
+		set_temp_variable = { Filius_sub = Filius_change_num }
+		subtract_from_temp_variable = { Filius_sub = Filius_house_seatNum_centrist }
+
+		subtract_from_variable = { Filius_house_seatNum_support = Filius_sub }
+		add_to_variable = { Filius_house_seatNum_opposition = Filius_change_num }
+		set_variable = { Filius_house_seatNum_centrist = 0 }
+	}
+}
+
+TRI_Patel_add_support_seats = { #Filius的支持派系的席位变化算法
+
+	set_temp_variable = { sub = Filius_house_seatNum_centrist }
+	subtract_from_temp_variable = { sub = Filius_change_num }
+	
+	if = { #判断被减数是否大于等于减数
+		limit = {
+			OR = {
+				check_variable = { sub > 0 }
+				check_variable = { sub = 0 }
+			}
+		}
+
+		subtract_from_variable = { Filius_house_seatNum_centrist = Filius_change_num }
+		add_to_variable = { Filius_house_seatNum_support = Filius_change_num }	
+
+		custom_effect_tooltip = TRI_House_party_change
+	}
+	else = { #被减数小于减数,意味着中立席位会消耗完或者已经被消耗完
+		
+		set_temp_variable = { Filius_sub = Filius_change_num }
+		subtract_from_temp_variable = { Filius_sub = Filius_house_seatNum_centrist }
+
+		subtract_from_variable = { Filius_house_seatNum_opposition = Filius_sub }
+		add_to_variable = { Filius_house_seatNum_support = Filius_change_num }
+		set_variable = { Filius_house_seatNum_centrist = 0 }
+	}
+}
+
+TRI_Patel_add_opposition_to_centrist = {
+
+	set_temp_variable = { sub = Filius_house_seatNum_opposition }
+	subtract_from_temp_variable = { sub = Filius_change_num }
+
+	if = { #当反对派人数不够时
+		limit = { 
+			check_variable = { sub < 0 }
+		}
+
+		add_to_variable = { Filius_house_seatNum_centrist = Filius_house_seatNum_opposition }
+		set_variable = { Filius_house_seatNum_opposition = 0 }
+	}
+	else = {
+		add_to_variable = { Filius_house_seatNum_centrist = sub }
+		subtract_from_variable = { Filius_house_seatNum_opposition = sub }
+	}
+}
+
+TRI_Patel_add_support_to_centrist = {
+
+	set_temp_variable = { sub = Filius_house_seatNum_support }
+	subtract_from_temp_variable = { sub = Filius_change_num }
+
+	if = { #当支持派人数不够时
+		limit = {
+			check_variable = { sub < 0 }
+		}
+
+		add_to_variable = { Filius_house_seatNum_centrist = Filius_house_seatNum_support }
+		set_variable = { Filius_house_seatNum_support = 0 }
+	}
+	else = {
+		add_to_variable = { Filius_house_seatNum_centrist = sub }
+		subtract_from_variable = { Filius_house_seatNum_support = sub }
+	}
+	
+}
+
+TRI_Filius_add_opposition_seats = { #Cootes的反对派系的席位变化算法
+
+	set_temp_variable = { sub = Cootes_house_seatNum_centrist }
+	subtract_from_temp_variable = { sub = Cootes_change_num }
+	
+	if = { #判断被减数是否大于等于减数
+		limit = {
+			OR = {
+				check_variable = { sub > 0 }
+				check_variable = { sub = 0 }
+			}
+		}
+
+		subtract_from_variable = { Cootes_house_seatNum_centrist = Cootes_change_num }
+		add_to_variable = { Cootes_house_seatNum_opposition = Cootes_change_num }	
+
+		custom_effect_tooltip = TRI_House_party_change
+	}
+	else = { #被减数小于减数,意味着中立席位会消耗完或者已经被消耗完
+		
+		set_temp_variable = { Cootes_sub = Cootes_change_num }
+		subtract_from_temp_variable = { Cootes_sub = Cootes_house_seatNum_centrist }
+
+		subtract_from_variable = { Cootes_house_seatNum_support = Cootes_sub }
+		add_to_variable = { Cootes_house_seatNum_opposition = Cootes_change_num }
+		set_variable = { Cootes_house_seatNum_centrist = 0 }
+	}
+}
+
+TRI_Patel_add_support_seats = { #Cootes的支持派系的席位变化算法
+
+	set_temp_variable = { sub = Cootes_house_seatNum_centrist }
+	subtract_from_temp_variable = { sub = Cootes_change_num }
+	
+	if = { #判断被减数是否大于等于减数
+		limit = {
+			OR = {
+				check_variable = { sub > 0 }
+				check_variable = { sub = 0 }
+			}
+		}
+
+		subtract_from_variable = { Cootes_house_seatNum_centrist = Cootes_change_num }
+		add_to_variable = { Cootes_house_seatNum_support = Cootes_change_num }	
+
+		custom_effect_tooltip = TRI_House_party_change
+	}
+	else = { #被减数小于减数,意味着中立席位会消耗完或者已经被消耗完
+		
+		set_temp_variable = { Cootes_sub = Cootes_change_num }
+		subtract_from_temp_variable = { Cootes_sub = Cootes_house_seatNum_centrist }
+
+		subtract_from_variable = { Cootes_house_seatNum_opposition = Cootes_sub }
+		add_to_variable = { Cootes_house_seatNum_support = Cootes_change_num }
+		set_variable = { Cootes_house_seatNum_centrist = 0 }
+	}
+}
+
+TRI_Patel_add_opposition_to_centrist = {
+
+	set_temp_variable = { sub = Cootes_house_seatNum_opposition }
+	subtract_from_temp_variable = { sub = Cootes_change_num }
+
+	if = { #当反对派人数不够时
+		limit = { 
+			check_variable = { sub < 0 }
+		}
+
+		add_to_variable = { Cootess_house_seatNum_centrist = Cootes_house_seatNum_opposition }
+		set_variable = { Cootes_house_seatNum_opposition = 0 }
+	}
+	else = {
+		add_to_variable = { Cootes_house_seatNum_centrist = sub }
+		subtract_from_variable = { Cootes_house_seatNum_opposition = sub }
+	}
+}
+
+TRI_Patel_add_support_to_centrist = {
+
+	set_temp_variable = { sub = Cootes_house_seatNum_support }
+	subtract_from_temp_variable = { sub = Cootes_change_num }
+
+	if = { #当支持派人数不够时
+		limit = {
+			check_variable = { sub < 0 }
+		}
+
+		add_to_variable = { Cootes_house_seatNum_centrist = Cootes_house_seatNum_support }
+		set_variable = { Cootes_house_seatNum_support = 0 }
+	}
+	else = {
+		add_to_variable = { Cootes_house_seatNum_centrist = sub }
+		subtract_from_variable = { Cootes_house_seatNum_support = sub }
+	}
+	
+}

@@ -1,0 +1,292 @@
+
+    ###山海经SHA 开始###
+    SHA_kisaki ={ 
+		name=SHA_kisaki_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_sha_kisaki
+				small=GFX_portrait_sha_kisaki_small
+			}	
+		}
+
+        country_leader = {
+			ideology = liberalism
+			traits = { black_monarch }
+			expire = "-1.1.1.1"
+			id = -1
+		}
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    SHA_mina ={ 
+		name=SHA_mina_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_sha_mina
+				small=GFX_portrait_sha_mina_small
+			}	
+		}
+
+        advisor = {
+			slot = army_chief
+			idea_token = SHA_mina_ac
+			allowed = {
+				original_tag = SHA
+			}
+			available = {
+				original_tag = SHA
+			}
+			traits = {
+				guard_of_kisaki
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    #鹿山丽情
+    SHA_reiju ={ 
+		name=SHA_reiju_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_sha_reiju
+				small=GFX_portrait_sha_reiju_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = SHA_reiju_pa
+			allowed = {
+				original_tag = SHA
+			}
+			available = {
+				original_tag = SHA
+			} 
+			traits = {
+				first_kitchen_helper
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    SHA_rumi ={ 
+		name=SHA_rumi_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_sha_rumi
+				small=GFX_portrait_sha_rumi_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = SHA_rumi_pa
+			allowed = {
+				original_tag = SHA
+			}
+			available = {
+				original_tag = SHA
+			} 
+			traits = {
+				magic_cook
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    SHA_shun ={ 
+		name=SHA_shun_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_sha_shun
+				small=GFX_portrait_sha_shun_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = SHA_shun_pa
+			allowed = {
+				original_tag = SHA
+			}
+			available = {
+				original_tag = SHA
+			} 
+			traits = {
+				caretaker_of_plum_blossom_garden
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+    }
+
+    SHA_kokona ={ 
+		name=SHA_kokona_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_sha_kokona
+				small=GFX_portrait_sha_kokona_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = SHA_kokona_pa
+			allowed = {
+				original_tag = SHA
+			}
+			available = {
+				original_tag = SHA
+			} 
+			traits = {
+				little_lady
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+    
+    SHA_saye ={ 
+		name=SHA_saye_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_sha_saye
+				small=GFX_portrait_sha_saye_small
+			}	
+		}
+
+        advisor = {
+			slot = army_chief
+			idea_token = SHA_saye_ac
+			allowed = {
+				original_tag = SHA
+			}
+			available = {
+				original_tag = SHA
+			}
+			traits = {
+				alchemy_master
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = SHA_saye_pa
+			allowed = {
+				original_tag = SHA
+			}
+			available = {
+				original_tag = SHA
+			} 
+			traits = {
+				avatar_of_anubis_pa
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    #申谷海 七囚人之一
+    SHA_kai ={ 
+		name=SHA_kai_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_sha_kai
+				small=GFX_portrait_sha_kai_small
+			}	
+		}
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+    ###山海经SHA 结束###

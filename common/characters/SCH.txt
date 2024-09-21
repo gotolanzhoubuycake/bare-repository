@@ -1,0 +1,240 @@
+    SCH_sensei ={ 
+		name=SCH_sensei_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_sch_sensei
+				small=GFX_portrait_sch_sensei_small
+			}	
+		}
+
+        country_leader = {
+			ideology = liberalism
+			traits = { responsebility_of_adult }
+			expire = "-1.1.1.1"
+			id = -1
+		}
+
+	}
+
+    SCH_arona ={ 
+		name=SCH_arona_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_sch_arona
+				small=GFX_portrait_sch_arona_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = SCH_arona_pa
+			allowed = {
+				original_tag = SCH
+			}
+			available = {
+				original_tag = SCH
+			} 
+			traits = {
+				older_sister_of_schale
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    SCH_purana ={ 
+		name=SCH_purana_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_sch_purana
+				small=GFX_portrait_sch_purana_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = SCH_purana_pa
+			allowed = {
+				original_tag = SCH
+			}
+			available = {
+				original_tag = SCH
+			} 
+			traits = {
+				younger_sister_of_schale
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    SCH_miku ={ 
+		name=SCH_miku_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_sch_miku
+				small=GFX_portrait_sch_miku_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = SCH_miku_pa
+			allowed = {
+				original_tag = SCH
+			}
+			available = {
+				original_tag = SCH
+			} 
+			traits = {
+				princess_of_the_world
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+
+	}
+
+    SCH_mikoto ={ 
+		name=SCH_mikoto_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_sch_mikoto
+				small=GFX_portrait_sch_mikoto_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = SCH_mikoto_pa
+			allowed = {
+				original_tag = SCH
+			}
+			available = {
+				original_tag = SCH
+			} 
+			traits = {
+				ultra_railgun
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    SCH_ruiko ={ 
+		name=SCH_ruiko_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_sch_ruiko
+				small=GFX_portrait_sch_ruiko_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = SCH_ruiko_pa
+			allowed = {
+				original_tag = SCH
+			}
+			available = {
+				original_tag = SCH
+			} 
+			traits = {
+				updraft_girl
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    SCH_misaki ={ 
+		name=SCH_misaki_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_sch_misaki
+				small=GFX_portrait_sch_misaki_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = SCH_ruiko_pa
+			allowed = {
+				original_tag = SCH
+			}
+			available = {
+				original_tag = SCH
+			} 
+			traits = {
+				blonder_hair_doll_master
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}

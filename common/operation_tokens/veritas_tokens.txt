@@ -1,0 +1,18 @@
+token_niyaniya = {
+	name = OPERATION_token_niyaniya
+	desc = OPERATION_token_niyaniya_DESC
+	icon = GFX_infiltrate_civilian_bg
+	text_icon = GFX_text_infiltrate_civilian_token
+
+	intel_source = army
+	intel_gain = 25
+	intel_source = civilian
+	intel_gain = 25
+}
+
+token_hide = {
+	name = OPERATION_token_niyaniya
+	desc = OPERATION_token_niyaniya_DESC
+	icon = GFX_infiltrate_civilian_bg
+	text_icon = GFX_text_infiltrate_civilian_token
+}

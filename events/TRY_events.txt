@@ -1,0 +1,1148 @@
+#################
+###圣三一事件组###
+#################
+
+
+#1开始是正常事件
+#200开始时调查事件
+#1000开始是超事件
+
+#欢迎来到圣三一！
+country_event = {
+    id = TRY_events.1
+    title = TRY_events.1.t
+    desc = TRY_events.1.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.1.a
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#在意，载疑，再议
+country_event = {
+    id = TRY_events.2
+    title = TRY_events.2.t
+    desc = TRY_events.2.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.2.a
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#各怀鬼胎
+country_event = {
+    id = TRY_events.3
+    title = TRY_events.3.t
+    desc = TRY_events.3.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.3.a
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+
+    option = {
+		name = TRY_events.3.b
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+
+    option = {
+		name = TRY_events.3.c
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#意料之外的使者
+country_event = {
+    id = TRY_events.4
+    title = TRY_events.4.t
+    desc = TRY_events.4.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.4.a
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#简要的会面
+country_event = {
+    id = TRY_events.5
+    title = TRY_events.5.t
+    desc = TRY_events.5.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.5.a
+
+        #将【圣三一的权力平衡】焦点设置为：《伊甸条约》的签订
+        custom_effect_tooltip = TRY_event_focus_decided
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#既有近虑
+country_event = {
+    id = TRY_events.6
+    title = TRY_events.6.t
+    desc = TRY_events.6.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.6.a
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+
+    option = {
+		name = TRY_events.6.b
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+
+    option = {
+		name = TRY_events.6.c
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#乐园之辩
+country_event = {
+    id = TRY_events.7
+    title = TRY_events.7.t
+    desc = TRY_events.7.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.7.a
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+
+    option = {
+		name = TRY_events.7.b
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#乌云笼于庙堂之上
+country_event = {
+    id = TRY_events.8
+    title = TRY_events.8.t
+    desc = TRY_events.8.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.8.a
+
+        trigger = { has_country_flag = ba_enabled_nonhistoric_choice }
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+
+    option = {
+		name = TRY_events.8.b
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#离心之盟
+country_event = {
+    id = TRY_events.9
+    title = TRY_events.9.t
+    desc = TRY_events.9.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.9.a
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+
+    option = {
+		name = TRY_events.9.b
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+
+    option = {
+		name = TRY_events.9.c
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#危险机密被泄露？
+country_event = {
+    id = TRY_events.10
+    title = TRY_events.10.t
+    desc = TRY_events.10.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.10.a
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#外来者
+country_event = {
+    id = TRY_events.11
+    title = TRY_events.11.t
+    desc = TRY_events.11.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.11.a
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#与老师的会面
+country_event = {
+    id = TRY_events.12
+    title = TRY_events.12.t
+    desc = TRY_events.12.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.12.a
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#第二次伊甸条约地点选址
+country_event = {
+    id = TRY_events.13
+    title = TRY_events.13.t
+    desc = TRY_events.13.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.13.a
+
+        #非历史线出现
+        trigger = { has_country_flag = ba_enabled_nonhistoric_choice }
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+
+    option = {
+		name = TRY_events.13.a
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+
+#逐渐强烈的杂音
+country_event = {
+    id = TRY_events.14
+    title = TRY_events.14.t
+    desc = TRY_events.14.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.14.a
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#冲击
+country_event = {
+    id = TRY_events.15
+    title = TRY_events.15.t
+    desc = TRY_events.15.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.15.a
+
+        hidden_effect = {
+            country_event = { id = TRY_events.16 days = 3 }
+        }
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#独行，以及反叛
+country_event = {
+    id = TRY_events.16
+    title = TRY_events.16.t
+    desc = TRY_events.16.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.16.a
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#激战
+country_event = {
+    id = TRY_events.17
+    title = TRY_events.17.t
+    desc = TRY_events.17.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.17.a
+
+        custom_effect_tooltip = TRY_event_nagisa_nolonger_paranoia
+
+        hidden_effect = {
+            country_event = { id = TRY_events.18 days = 5 }
+        }
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#幕后的真凶（mika暴露）
+country_event = {
+    id = TRY_events.18
+    title = TRY_events.18.t
+    desc = TRY_events.18.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.18.a
+
+        set_country_flag = TRY_event_enable_mika_problem_decision
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#死斗
+country_event = {
+    id = TRY_events.19
+    title = TRY_events.19.t
+    desc = TRY_events.19.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.19.a
+
+        hidden_effect = {
+            country_event = { id = TRY_events.20 days = 1 }
+        }
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#死斗·其二
+country_event = {
+    id = TRY_events.20
+    title = TRY_events.20.t
+    desc = TRY_events.20.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.20.a
+
+        hidden_effect = {
+            country_event = { id = TRY_events.21 days = 1 }
+        }
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#死斗·其三
+country_event = {
+    id = TRY_events.21
+    title = TRY_events.21.t
+    desc = TRY_events.21.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.21.a
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#一夕安寝
+country_event = {
+    id = TRY_events.22
+    title = TRY_events.22.t
+    desc = TRY_events.22.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.22.a
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#十万火急
+country_event = {
+    id = TRY_events.23
+    title = TRY_events.23.t
+    desc = TRY_events.23.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.23.a
+
+        custom_effect_tooltip = TRY_event_add_mika_to_survey
+
+        hidden_effect = {
+            country_event = { id = TRY_events.24 days = 1 }
+        }
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#完美落幕
+country_event = {
+    id = TRY_events.24
+    title = TRY_events.24.t
+    desc = TRY_events.24.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.24.a
+
+        custom_effect_tooltip = TRY_event_remove_hoshubu_to_survey
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#名为信任的纽带
+country_event = {
+    id = TRY_events.25
+    title = TRY_events.25.t
+    desc = TRY_events.25.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.25.a
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#剑拔弩张的会面
+country_event = {
+    id = TRY_events.26
+    title = TRY_events.26.t
+    desc = TRY_events.26.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.26.a
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#灼天的硝火
+country_event = {
+    id = TRY_events.27
+    title = TRY_events.27.t
+    desc = TRY_events.27.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.27.a
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#弥散而出的混乱
+country_event = {
+    id = TRY_events.28
+    title = TRY_events.28.t
+    desc = TRY_events.28.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.28.a
+
+        #将国家领导人渚的头像上打上MISSING的红色标记，同时将效果替换成“失踪的领袖”，这个效果将会在每个周期损失大量稳定度；陆军属性也将会大大降低；此时无法任命内阁成员。
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#摇摇欲坠
+country_event = {
+    id = TRY_events.29
+    title = TRY_events.29.t
+    desc = TRY_events.29.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.29.a
+
+        ##正义实现委员会的支持度降低至30%，抵抗力量提升至60
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#凶镬延漫
+country_event = {
+    id = TRY_events.30
+    title = TRY_events.30.t
+    desc = TRY_events.30.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.30.a
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#临时代管协议
+country_event = {
+    id = TRY_events.31
+    title = TRY_events.31.t
+    desc = TRY_events.31.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.31.a
+
+        #将圣三一的国家领袖替换为浦和花子
+        #于【圣三一特殊调查部】添加《古圣堂袭击》调查决议
+        #替换【与重要社团的交联】决议为：①加快修女会世俗化进程②收拢正义实现委员会残部③镇压暴乱的正义实现委员会部员④为救护骑士团增派救援物资⑤要求救护骑士团优先关注前线⑥向自警团等社团下放权力⑦征召其它社团成员
+
+        hidden_effect = {
+            country_event = { id = TRY_events.32 days = 60 } #两个月是60days吗
+        }
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#意外访客
+country_event = {
+    id = TRY_events.32
+    title = TRY_events.32.t
+    desc = TRY_events.32.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.32.a
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#逆乱
+country_event = {
+    id = TRY_events.33
+    title = TRY_events.33.t
+    desc = TRY_events.33.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.33.a
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#无解的谜题
+country_event = {
+    id = TRY_events.34
+    title = TRY_events.34.t
+    desc = TRY_events.34.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.34.a
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#转机
+country_event = {
+    id = TRY_events.35
+    title = TRY_events.35.t
+    desc = TRY_events.35.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.35.a
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#“邪恶的暗部领袖”
+country_event = {
+    id = TRY_events.36
+    title = TRY_events.36.t
+    desc = TRY_events.36.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.36.a
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#战壕速递
+country_event = {
+    id = TRY_events.37
+    title = TRY_events.37.t
+    desc = TRY_events.37.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.37.a
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#正义，青春与友谊
+country_event = {
+    id = TRY_events.38
+    title = TRY_events.38.t
+    desc = TRY_events.38.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.38.a
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#新以代之
+country_event = {
+    id = TRY_events.39
+    title = TRY_events.39.t
+    desc = TRY_events.39.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.39.a
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#乐园之议
+country_event = {
+    id = TRY_events.40
+    title = TRY_events.40.t
+    desc = TRY_events.40.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.40.a
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#最后的挣扎
+country_event = {
+    id = TRY_events.41
+    title = TRY_events.41.t
+    desc = TRY_events.41.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.41.a
+
+         hidden_effect = {
+            country_event = { id = TRY_events.42 days = 60 } #两个月是60days吗
+        }
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#余波
+country_event = {
+    id = TRY_events.42
+    title = TRY_events.42.t
+    desc = TRY_events.42.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.42.a
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+###调查事件###
+#正义实现委员会的精英？
+country_event = {
+    id = TRY_events.200
+    title = TRY_events.200.t
+    desc = TRY_events.200.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.200.a
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+
+#声名在外的怪人
+country_event = {
+    id = TRY_events.201
+    title = TRY_events.201.t
+    desc = TRY_events.201.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.201.a
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#举止诡异的新生
+country_event = {
+    id = TRY_events.202
+    title = TRY_events.202.t
+    desc = TRY_events.202.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.202.a
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+
+    option = {
+		name = TRY_events.202.b
+
+        add_political_power = -1
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+#必须且必要的...
+country_event = {
+    id = TRY_events.203
+    title = TRY_events.203.t
+    desc = TRY_events.203.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.203.a
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}
+
+###超事件###
+#第一次《伊甸条约》会谈
+country_event = {
+    id = TRY_events.1000
+    title = TRY_events.1000.t
+    desc = TRY_events.1000.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    #这里需要进一步完善
+    option = {
+		name = TRY_events.1000.a
+
+        trigger = {
+            original_tag = TRY
+        }
+
+        hidden_effect = {
+            country_event = { id = TRY_events.3 days = 1 }
+        }
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+
+    option = {
+		name = TRY_events.1000.b
+
+        trigger = {
+            NOT = { original_tag = TRY }
+        }
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+
+}
+
+#古圣堂遇袭！
+country_event = {
+    id = TRY_events.1001
+    title = TRY_events.1001.t
+    desc = TRY_events.1001.d
+    picture = GFX_TRY_events_pic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+    option = {
+		name = TRY_events.1001.a
+
+        trigger = {
+            original_tag = TRY
+        }
+
+        hidden_effect = {
+            country_event = { id = TRY_events.27 days = 1 }
+        }
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+
+    option = {
+		name = TRY_events.1001.b
+
+        trigger = {
+            NOT = { original_tag = TRY }
+        }
+
+		ai_chance = {
+			factor = 100
+		}
+    }
+}

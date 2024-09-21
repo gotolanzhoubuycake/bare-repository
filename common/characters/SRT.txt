@@ -1,0 +1,158 @@
+    SRT_miyako  ={ 
+		name=SRT_miyako_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_srt_miyako 
+				small=GFX_portrait_srt_miyako_small
+			}	
+		}
+
+        country_leader = {
+			ideology = liberalism
+			traits = { rabbit_of_kabano }
+			expire = "-1.1.1.1"
+			id = -1
+		}
+
+        advisor = {
+			slot = army_chief
+			idea_token = SRT_miyako_ac
+			allowed = {
+				original_tag = SRT
+			}
+			available = {
+				original_tag = SRT
+			}
+			traits = {
+				rabbit_one
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    SRT_saki  ={ 
+		name=SRT_saki_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_srt_saki 
+				small=GFX_portrait_srt_saki_small
+			}	
+		}
+
+        advisor = {
+			slot = army_chief
+			idea_token = SRT_saki_ac
+			allowed = {
+				original_tag = SRT
+			}
+			available = {
+				original_tag = SRT
+			}
+			traits = {
+				rabbit_two
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    SRT_miyu  ={ 
+		name=SRT_miyu_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_srt_miyu 
+				small=GFX_portrait_srt_miyu_small
+			}	
+		}
+
+        advisor = {
+			slot = army_chief
+			idea_token = SRT_miyu_ac
+			allowed = {
+				original_tag = SRT
+			}
+			available = {
+				original_tag = SRT
+			}
+			traits = {
+				rabbit_four
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    SRT_moe  ={ 
+		name=SRT_moe_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_srt_moe 
+				small=GFX_portrait_srt_moe_small
+			}	
+		}
+
+        advisor = {
+			slot = army_chief
+			idea_token = SRT_moe_ac
+			allowed = {
+				original_tag = SRT
+			}
+			available = {
+				original_tag = SRT
+			}
+			traits = {
+				rabbit_three
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}

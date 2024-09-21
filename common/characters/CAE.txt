@@ -1,0 +1,17 @@
+    CAE_president ={ 
+		name=CAE_president_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_CAE_president
+				small=GFX_portrait_CAE_president_small
+			}	
+		}
+
+        country_leader = {
+			ideology = liberalism
+			traits = { greedy_oligarch }
+			expire = "-1.1.1.1"
+			id = -1
+		}
+
+	}

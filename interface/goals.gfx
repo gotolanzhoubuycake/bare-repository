@@ -2,10 +2,127 @@ spriteTypes = {
 
 	#### Generic continuous goal icons
 
+
+	#TRI
+
+	SpriteType = {
+		name = "GFX_goal_TRI_reorgnize_teaparty_mob"
+		texturefile = "gfx/interface/goals/重整茶会卫队.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_cooperation_with_justice_club"
+		texturefile = "gfx/interface/goals/同正义实现委员会的合练.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_teaparty_leading"
+		texturefile = "gfx/interface/goals/确立茶话会的主导权.png"			
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_standing_guard"
+		texturefile = "gfx/interface/goals/常备之盾.png"			
+	}
+
+	
+	
 	SpriteType = {
 		name = "GFX_goal_TRI_pax_trinity"
 		texturefile = "gfx/interface/goals/圣三一治下的团结.png"			
 	}
+	
+	SpriteType = {
+		name = "GFX_goal_TRI_prepare_for_eden"
+		texturefile = "gfx/interface/goals/落实一切的文书.png"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_1st_eden_pact"
+		texturefile = "gfx/interface/goals/第一次《伊甸园条约》会谈.png"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_calling_for_sisterhood"
+		texturefile = "gfx/interface/goals/修女会的传讯.png"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_restart_domestic_struggle"
+		texturefile = "gfx/interface/goals/重启院内接触.png"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_expand_intellegence"
+		texturefile = "gfx/interface/goals/扩展圣三一特殊调查部.png"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_authorize_eagle_faction"
+		texturefile = "gfx/interface/goals/以战止戈.png"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_authorize_dove_faction"
+		texturefile = "gfx/interface/goals/铸剑为犁.png"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_restart_inschool_debate"
+		texturefile = "gfx/interface/goals/重启《伊甸园条约》院内议程.png"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_turncoat_in_trinity"
+		texturefile = "gfx/interface/goals/潜藏于圣三一的叛徒.png"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_calling_for_convention"
+		texturefile = "gfx/interface/goals/召开圣三一联合会议.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_TRI_calling_for_Schale"
+		texturefile = "gfx/interface/goals/拨通联邦学生会的电话.png"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_investigation_in_care"
+		texturefile = "gfx/interface/goals/详勘细查，防微杜渐.png"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_examination_for_training_club"
+		texturefile = "gfx/interface/goals/对补习部的考试.png"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_reunion_of_trinity"
+		texturefile = "gfx/interface/goals/圣三一再联合.png"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_chooseing_pact_place"
+		texturefile = "gfx/interface/goals/会晤前的筹备.png"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_2st_eden_pact"
+		texturefile = "gfx/interface/goals/第二次伊甸园条约会谈.png"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_dissonance"
+		texturefile = "gfx/interface/goals/失谐奏鸣.png"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_TRI_Unintentional_windfall"
+		texturefile = "gfx/interface/goals/无心插柳.png"
+	}
+
+
 
 	SpriteType = {
 		name = "GFX_goal_TRI_welfare_cutting"

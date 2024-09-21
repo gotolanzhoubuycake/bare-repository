@@ -1,0 +1,379 @@
+characters={
+    ###阿拜多斯ABY 开始###
+    ABY_hoshino ={
+		name=ABY_hoshino_name
+		portraits={
+			civilian={
+				large=GFX_portrait_ABY_hoshino
+				small=GFX_portrait_ABY_hoshino_small
+			}	
+		}
+
+        country_leader = {
+			ideology = liberalism
+			traits = { chairman_of_tasakui }
+			expire = "-1.1.1.1"
+			id = -1
+		}
+
+		advisor = {
+			slot = army_chief
+			idea_token = ABY_hoshino_ac
+			allowed = {
+				original_tag = ABY
+			}
+			available = {
+				original_tag = ABY
+			}
+			traits = {
+				master_of_suppress
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = ABY_hoshino_pa
+			allowed = {
+				original_tag = ABY
+			}
+			available = {
+				original_tag = ABY
+			} 
+			traits = {
+				eye_of_horus
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+		field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+	ABY_shiroko ={ 
+		name=ABY_shiroko_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_ABY_shiroko
+				small=GFX_portrait_ABY_shiroko_small
+			}	
+		}
+
+        advisor = {
+			slot = army_chief
+			idea_token = ABY_shiroko_ac
+			allowed = {
+				original_tag = ABY
+			}
+			available = {
+				original_tag = ABY
+			}
+			traits = {
+				riding_girl
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = ABY_shiroko_pa
+			allowed = {
+				original_tag = ABY
+			}
+			available = {
+				original_tag = ABY
+			} 
+			traits = {
+				young_anubis
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+		field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    ABY_ayane ={ 
+		name=ABY_ayane_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_ABY_ayane
+				small=GFX_portrait_ABY_ayane_small
+			}	
+		}
+
+        country_leader = {
+			ideology = liberalism
+			traits = { chairman_of_abydos_student_union }
+			expire = "-1.1.1.1"
+			id = -1
+		}
+
+		advisor = {
+			slot = army_chief
+			idea_token = ABY_ayane_ac
+			allowed = {
+				original_tag = ABY
+			}
+			available = {
+				original_tag = ABY
+			}
+			traits = {
+				medicial_support
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = ABY_ayane_pa
+			allowed = {
+				original_tag = ABY
+			}
+			available = {
+				original_tag = ABY
+			} 
+			traits = {
+				only_normal_girl
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+		field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+    ABY_nonomi ={ 
+		name=ABY_nonomi_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_ABY_nonomi
+				small=GFX_portrait_ABY_nonomi_small
+			}	
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = ABY_nonomi_ac
+			allowed = {
+				original_tag = ABY
+			}
+			available = {
+				original_tag = ABY
+			}
+			traits = {
+				massive_artillery_pressing
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = ABY_nonomi_pa
+			allowed = {
+				original_tag = ABY
+			}
+			available = {
+				original_tag = ABY
+			} 
+			traits = {
+				princess_of_nephthys
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+		field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+        
+	}
+
+    ABY_serika ={ 
+		name=ABY_serika_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_ABY_serika
+				small=GFX_portrait_ABY_serika_small
+			}	
+		}
+
+        advisor = {
+			slot = army_chief
+			idea_token = ABY_serika_ac
+			allowed = {
+				original_tag = ABY
+			}
+			available = {
+				original_tag = ABY
+			}
+			traits = {
+				neko_dash
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = ABY_serika_pa
+			allowed = {
+				original_tag = ABY
+			}
+			available = {
+				original_tag = ABY
+			} 
+			traits = {
+				working_princess
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+    ABY_yume = { 
+		name = ABY_yume_name 
+		portraits = {
+			civilian = {
+                large = GFX_portrait_ABY_yume
+				small = GFX_portrait_ABY_yume_small
+			}
+		}
+
+        advisor = {
+			slot = political_advisor
+			idea_token = ABY_yume_pa
+			allowed = {
+				original_tag = ABY
+			}
+			available = {
+				original_tag = ABY
+			} 
+			traits = {
+				old_days_shadow
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+	}
+
+    #黑白子
+    ABY_shiroko_terror = { 
+		name = ABY_shiroko_terror_name 
+		portraits = {
+			civilian = {
+				large = GFX_portrait_ABY_shiroko_terror
+                small = GFX_portrait_ABY_shiroko_terror_small
+			}
+		}
+
+        country_leader = {
+			ideology = liberalism
+			traits = { avatar_of_anubis }
+			expire = "-1.1.1.1"
+			id = -1
+		}
+
+        advisor = {
+			slot = army_chief
+			idea_token = ABY_shiroko_terror_ac
+			allowed = {
+				original_tag = ABY
+			}
+			available = {
+				original_tag = ABY
+			}
+			traits = {
+				army_chief_precursor_of_color
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = ABY_shiroko_terror_pa
+			allowed = {
+				original_tag = ABY
+			}
+			available = {
+				original_tag = ABY
+			} 
+			traits = {
+				avatar_of_anubis_pa #同名，和国家领袖区分
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+    ###阿拜多斯ABY 结束###
+}

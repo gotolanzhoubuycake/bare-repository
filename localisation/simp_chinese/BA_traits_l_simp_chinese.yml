@@ -3,5 +3,7 @@
 #人物特性本地化
 
 #追根溯源
- Find_the_root: "追根溯源"
- Find_the_root_paranoia_modifier_increase_effect_tt: "  - 政治偏执度每周提高§R2§!点"
+ TRI_nagisa_Find_the_root: "追根溯源"
+ TRI_nagisa_Find_the_root_paranoia_modifier_increase_effect_tt: "  - 政治偏执度每周提高§R2§!点"
+ TRI_nagisa_Mild_leader: "温和的领袖"
+ TRI_nagisa_Mild_leader_alt: "$TRI_nagisa_Mild_leader$"

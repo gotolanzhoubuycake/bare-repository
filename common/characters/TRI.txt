@@ -1,0 +1,952 @@
+
+characters={
+    ###圣三一TRI 开始###
+    TRI_seia ={ 
+		name=TRI_seia_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_TRI_seia
+				small=GFX_portrait_TRI_seia_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = TRI_seia_pa
+			allowed = {
+				original_tag = TRI
+			}
+			available = {
+				original_tag = TRI
+			} 
+			traits = {
+				obscure_prophet
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    TRI_nagisa ={ 
+		name=TRI_nagisa_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_TRI_nagisa
+				small=GFX_portrait_TRI_nagisa_small
+			}	
+		}
+
+        country_leader = {
+			ideology = liberalism
+			traits = { mild_leader }
+			expire = "-1.1.1.1"
+			id = -1
+		}
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    TRI_mika ={ 
+		name=TRI_mika_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_TRI_mika
+				small=GFX_portrait_TRI_mika_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = TRI_mika_pa
+			allowed = {
+				original_tag = TRI
+			}
+			available = {
+				original_tag = TRI
+			} 
+			traits = {
+				innocent_princess
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    TRI_shimiko ={ 
+		name=TRI_shimiko_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_TRI_shimiko
+				small=GFX_portrait_TRI_shimiko_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = TRI_shimiko_pa
+			allowed = {
+				original_tag = TRI
+			}
+			available = {
+				original_tag = TRI
+			} 
+			traits = {
+				butler_of_great_library
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+ 
+    TRI_ui ={ 
+		name=TRI_ui_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_TRI_ui
+				small=GFX_portrait_TRI_ui_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = TRI_ui_pa
+			allowed = {
+				original_tag = TRI
+			}
+			available = {
+				original_tag = TRI
+			} 
+			traits = {
+				master_of_great_library
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    TRI_suzumi ={ 
+		name=TRI_suzumi_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_TRI_suzumi
+				small=GFX_portrait_TRI_suzumi_small
+			}	
+		}
+
+        advisor = {
+			slot = army_chief
+			idea_token = TRI_suzumi_ac
+			allowed = {
+				original_tag = TRI
+			}
+			available = {
+				original_tag = TRI
+			}
+			traits = {
+				slience_protector_of_trinity
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = TRI_suzumi_pa
+			allowed = {
+				original_tag = TRI
+			}
+			available = {
+				original_tag = TRI
+			} 
+			traits = {
+				white_flash_of_trinity
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    TRI_reisa ={ 
+		name=TRI_reisa_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_TRI_reisa
+				small=GFX_portrait_TRI_reisa_small
+			}	
+		}
+
+        advisor = {
+			slot = army_chief
+			idea_token = TRI_reisa_ac
+			allowed = {
+				original_tag = TRI
+			}
+			available = {
+				original_tag = TRI
+			}
+			traits = {
+				energetic_baka
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    TRI_hifumi ={ 
+		name=TRI_hifumi_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_TRI_hifumi
+				small=GFX_portrait_TRI_hifumi_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = TRI_hifumi_pa
+			allowed = {
+				original_tag = TRI
+			}
+			available = {
+				original_tag = TRI
+			} 
+			traits = {
+				ordinary_girl
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    TRI_azusa ={ 
+		name=TRI_azusa_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_TRI_azusa
+				small=GFX_portrait_TRI_azusa_small
+			}	
+		}
+
+        advisor = {
+			slot = army_chief
+			idea_token = TRI_azusa_ac
+			allowed = {
+				original_tag = TRI
+			}
+			available = {
+				original_tag = TRI
+			}
+			traits = {
+				slience_guerrilla_warfare_master
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    TRI_hanako ={ 
+		name=TRI_hanako_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_TRI_hanako
+				small=GFX_portrait_TRI_hanako_small
+			}	
+		}
+
+        country_leader = {
+			ideology = liberalism
+			traits = { h_loved_sage }
+			expire = "-1.1.1.1"
+			id = -1
+		}
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    TRI_koharu ={ 
+		name=TRI_koharu_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_TRI_koharu
+				small=GFX_portrait_TRI_koharu_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = TRI_koharu_pa
+			allowed = {
+				original_tag = TRI
+			}
+			available = {
+				original_tag = TRI
+			} 
+			traits = {
+				cute_baka_of_trinity
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    TRI_mine ={ 
+		name=TRI_mine_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_TRI_mine
+				small=GFX_portrait_TRI_mine_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = TRI_mine_pa
+			allowed = {
+				original_tag = TRI
+			}
+			available = {
+				original_tag = TRI
+			} 
+			traits = {
+				savior_at_any_cost
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    TRI_hanae ={ 
+		name=TRI_hanae_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_TRI_hanae
+				small=GFX_portrait_TRI_hanae_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = TRI_hanae_pa
+			allowed = {
+				original_tag = TRI
+			}
+			available = {
+				original_tag = TRI
+			} 
+			traits = {
+				energetic_nurse
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    TRI_serina ={ 
+		name=TRI_serina_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_TRI_serina
+				small=GFX_portrait_TRI_serina_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = TRI_serina_pa
+			allowed = {
+				original_tag = TRI
+			}
+			available = {
+				original_tag = TRI
+			} 
+			traits = {
+				sweet_nurse
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    TRI_tsurugi ={ 
+		name=TRI_tsurugi_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_TRI_tsurugi
+				small=GFX_portrait_TRI_tsurugi_small
+			}	
+		}
+
+        advisor = {
+			slot = army_chief
+			idea_token = TRI_tsurugi_ac
+			allowed = {
+				original_tag = TRI
+			}
+			available = {
+				original_tag = TRI
+			}
+			traits = {
+				screaming_death
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    TRI_hasumi ={ 
+		name=TRI_hasumi_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_TRI_hasumi
+				small=GFX_portrait_TRI_hasumi_small
+			}	
+		}
+
+        advisor = {
+			slot = army_chief
+			idea_token = TRI_hasumi_ac
+			allowed = {
+				original_tag = TRI
+			}
+			available = {
+				original_tag = TRI
+			}
+			traits = {
+				serious_vice_chairman
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    TRI_mashiro ={ 
+		name=TRI_mashiro_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_TRI_mashiro
+				small=GFX_portrait_TRI_mashiro_small
+			}	
+		}
+
+        advisor = {
+			slot = army_chief
+			idea_token = TRI_mashiro_ac
+			allowed = {
+				original_tag = TRI
+			}
+			available = {
+				original_tag = TRI
+			}
+			traits = {
+				long_range_justice_supporter
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    TRI_ichika ={ 
+		name=TRI_ichika_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_TRI_ichika
+				small=GFX_portrait_TRI_ichika_small
+			}	
+		}
+
+        advisor = {
+			slot = army_chief
+			idea_token = TRI_ichika_ac
+			allowed = {
+				original_tag = TRI
+			}
+			available = {
+				original_tag = TRI
+			}
+			traits = {
+				restraint_arbiter
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    TRI_natsu ={ 
+		name=TRI_natsu_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_TRI_natsu
+				small=GFX_portrait_TRI_natsu_small
+			}	
+		}
+
+        advisor = {
+			slot = army_chief
+			idea_token = TRI_natsu_ac
+			allowed = {
+				original_tag = TRI
+			}
+			available = {
+				original_tag = TRI
+			}
+			traits = {
+				thinker_of_romantic
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    TRI_airi ={ 
+		name=TRI_airi_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_TRI_airi
+				small=GFX_portrait_TRI_airi_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = TRI_airi_pa
+			allowed = {
+				original_tag = TRI
+			}
+			available = {
+				original_tag = TRI
+			} 
+			traits = {
+				mint_icecream
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    TRI_yoshimi ={ 
+		name=TRI_yoshimi_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_TRI_yoshimi
+				small=GFX_portrait_TRI_yoshimi_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = TRI_yoshimi_pa
+			allowed = {
+				original_tag = TRI
+			}
+			available = {
+				original_tag = TRI
+			} 
+			traits = {
+				rare_sweet_hunter
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    TRI_kazusa ={ 
+		name=TRI_kazusa_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_TRI_kazusa
+				small=GFX_portrait_TRI_kazusa_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = TRI_kazusa_pa
+			allowed = {
+				original_tag = TRI
+			}
+			available = {
+				original_tag = TRI
+			} 
+			traits = {
+				legend_of_kathy_paruge
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    TRI_hinata ={ 
+		name=TRI_hinata_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_TRI_hinata
+				small=GFX_portrait_TRI_hinata_small
+			}	
+		}
+
+        advisor = {
+			slot = army_chief
+			idea_token = TRI_hinata_ac
+			allowed = {
+				original_tag = TRI
+			}
+			available = {
+				original_tag = TRI
+			}
+			traits = {
+				timid_haracles
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    TRI_mari ={ 
+		name=TRI_mari_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_TRI_mari
+				small=GFX_portrait_TRI_mari_small
+			}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = TRI_mari_pa
+			allowed = {
+				original_tag = TRI
+			}
+			available = {
+				original_tag = TRI
+			} 
+			traits = {
+				hightly_welcomed_sister
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+
+    TRI_sakurako ={ 
+		name=TRI_sakurako_name 
+		portraits={
+			civilian={
+				large=GFX_portrait_TRI_sakurako
+				small=GFX_portrait_TRI_sakurako_small
+			}	
+		}
+
+        advisor = {
+			slot = army_chief
+			idea_token = TRI_sakurako_ac
+			allowed = {
+				original_tag = TRI
+			}
+			available = {
+				original_tag = TRI
+			}
+			traits = {
+				gentle_war_leader
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = TRI_sakurako_pa
+			allowed = {
+				original_tag = TRI
+			}
+			available = {
+				original_tag = TRI
+			} 
+			traits = {
+				devout_secret_keeper
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+        }
+
+        field_marshal = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+
+	}
+}
