@@ -4,6 +4,9 @@ state={
 	provinces={
 		136 179 2848 3666 3775 3910 4844 7869 8612 8947 9224 11811 11848 11868 
 	}
+	resources = {
+		resources_el = 6
+	}
 	history = {
 		owner = TRI
 		add_core_of=TRI

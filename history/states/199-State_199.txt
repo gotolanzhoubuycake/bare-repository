@@ -4,6 +4,9 @@ state={
 	provinces={
 		4038 4182 5373 6411 7432 8305 11107 
 	}
+	resources = {
+		resources_el = 48
+	}
 	history = {
 		add_extra_state_shared_building_slots = 2
 		buildings = {

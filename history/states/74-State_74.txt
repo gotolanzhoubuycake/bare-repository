@@ -3,6 +3,8 @@ state={
 	name="STATE_74"
 	resources={
 		resources_cm = 20
+		resources_el = 30
+
 	}
 	provinces={
 		338 537 2041 2142 4384 5042 5938 8014 8303 8491 9265 11437 

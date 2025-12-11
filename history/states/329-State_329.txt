@@ -8,6 +8,7 @@ state={
 		resources_cm = 80
 		resources_mm = 40
 		resources_rm = 80
+		resources_el = 178
 	}
 	history = {
 		owner = CEN
