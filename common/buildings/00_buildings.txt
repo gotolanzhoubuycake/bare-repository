@@ -39,6 +39,7 @@ buildings = {
 
 		show_modifier = yes
 		allied_build = yes
+		affects_energy = yes
 
 		infrastructure_construction_effect = yes
 		level_cap = {
@@ -74,7 +75,10 @@ buildings = {
 		disabled_in_dmz = yes
 		icon_frame = 28
 		value = 8
+
+		refinery = yes
 		infrastructure_construction_effect = yes
+		
 		local_resources_resources_hic = 4
 		level_cap = {
 			shares_slots = yes
@@ -147,18 +151,22 @@ buildings = {
 		value = 1
 		spawn_point = naval_base_spawn 
 		specialization = { specialization_naval }
-		tags = { facility }
+
+		##暂时移除清单以防止本地化问题
+		##tags = { facility }
+
 		disabled_in_dmz = yes
 		need_supply = yes
 		need_detection = yes
 		detecting_intel_type = navy
 		only_display_if_exists = yes
 		special_icon = GFX_specialization_naval
-		level_cap = {
-			province_max = 1
-			state_max = 1
-			group_by = special_project_facility
-		}
+		
+		#level_cap = {
+		#	province_max = 1
+		#	state_max = 1
+		#	group_by = special_project_facility
+		#}
 		only_costal = yes
 	}
 
@@ -409,22 +417,25 @@ buildings = {
 		icon_frame = 35
 		value = 5
 		infrastructure_construction_effect = yes
-		local_resources_resources_cm = 0 
+		#local_resources_resources_cm = 0 
+		local_resources_resources_el = 50
 		state_modifiers = {
 			local_factories = 0.2
 			state_resources_factor = 0.05
 			state_production_speed_buildings_factor = -0.25
 			local_manpower = -0.15
 			state_resource_cost_resources_cm = 3
+			local_factory_energy_consumption = -0.4
 		}
 		country_modifiers = {
 			modifiers = {
 				fuel_gain_from_states = -1
 			}
 		}
-		local_resources_resources_el = 50
 		
+		refinery = yes
 		show_modifier = yes
+		affects_energy = yes
 
 		level_cap = {
 			shares_slots = yes
@@ -437,17 +448,21 @@ buildings = {
 		icon_frame = 36
 		value = 5
 		infrastructure_construction_effect = yes
-		local_resources_resources_cm = 0 
+		#local_resources_resources_cm = 0 
+		local_resources_resources_el = 45
 		state_modifiers = {
 			local_factories = 0.2
 			state_resources_factor = 0.05
 			state_production_speed_buildings_factor = -0.15
 			state_resource_cost_resources_cm = 4
+			#
+			local_factory_energy_consumption = -0.65
 		}
 
-		local_resources_resources_el = 45
 		
+		refinery = yes
 		show_modifier = yes
+		affects_energy = yes
 
 		level_cap = {
 			shares_slots = yes
@@ -460,19 +475,23 @@ buildings = {
 		icon_frame = 37
 		value = 5
 		infrastructure_construction_effect = yes
-		local_resources_resources_cm = 0 
-		local_resources_resources_mm = 0 
+		#local_resources_resources_cm = 0 
+		#local_resources_resources_mm = 0 
+		local_resources_resources_el = 60
 		state_modifiers = {
 			local_factories = 0.25
 			state_resources_factor = 0.1
 			state_production_speed_buildings_factor = -0.15
 			state_resource_cost_resources_cm = 2
 			state_resource_cost_resources_mm = 4
+			#
+			local_factory_energy_consumption = -0.3
 		}
 
-		local_resources_resources_el = 60
 		
+		refinery = yes
 		show_modifier = yes
+		affects_energy = yes
 
 		level_cap = {
 			shares_slots = yes
@@ -668,7 +687,8 @@ buildings = {
 		specialization = { specialization_nuclear }
 		need_supply = yes
 		need_detection = yes
-		tags = { facility }
+		##暂时移除清单以防止本地化问题
+		#tags = { facility }
 		disabled_in_dmz = yes
 		only_display_if_exists = yes
 		special_icon = GFX_specialization_nuclear
@@ -683,11 +703,12 @@ buildings = {
 		#	}
 		#	factor = 10
 		#}
-		level_cap = {
-			province_max = 1
-			state_max = 1
-			group_by = special_project_facility
-		}
+
+		#level_cap = {
+		#	province_max = 1
+		#	state_max = 1
+		#	group_by = special_project_facility
+		#}
 	}
 
 	air_facility = {
@@ -737,7 +758,7 @@ buildings = {
 	}
 
 	batech_facility = {
-		show_on_map = 1
+		show_on_map = 0
 		base_cost = 12000
 		per_controlled_building_extra_cost = 5000
 		damage_factor = 0 # This building can't be damaged by regular strat bombing

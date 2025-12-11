@@ -36,6 +36,12 @@ resources = {
 		convoys = 0.1
 	}
 
+	resources_hic = {
+		icon_frame = 7
+		cic = 1
+		convoys = 0.1
+	}
+
 	resources_el = {
 		icon_frame = 8
 		cic = 0.125
@@ -53,10 +59,4 @@ resources = {
 	# placeholder_8 = { icon_frame = 18 cic = 0.125 convoys = 0.06 }
 	# placeholder_9 = { icon_frame = 19 cic = 0.125 convoys = 0.06 }
 	##################################################
-	
-	resources_hic = {
-		icon_frame = 7
-		cic = 1
-		convoys = 0.1
-	}
 }
