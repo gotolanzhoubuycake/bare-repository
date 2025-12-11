@@ -285,7 +285,7 @@ guiTypes = {
                     containerWindowType = {
                         name = "goals_section"
                         position = { x = 0 y = 5 }
-                        size = { width=100%% height=500 }
+                        size = { width=100%% height=800}
 
                         containerWindowType = {
                             name = "header_section"
@@ -2126,10 +2126,10 @@ guiTypes = {
 
         instantTextboxType = {
             name = "ratio"
-            position = { x = 4 y = 61 }
+            position = { x = 1 y = 61 }
             font = "hoi_16mbs"
             text = "(XX%)"
-            maxWidth = 50
+            maxWidth = 57
             maxHeight = 20
             format = center
         }

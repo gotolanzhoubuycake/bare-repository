@@ -41,6 +41,39 @@ defined_text = {
 	}
 
 	text = {
+		trigger = {
+			ROOT = {
+				check_variable = {
+					faction_goal_type_index = 4
+				}
+			}
+		}
+		localization_key = ALF_faction_goal_unlock_military_name
+	}
+
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = {
+					faction_goal_type_index = 5
+				}
+			}
+		}
+		localization_key = ALF_faction_goal_unlock_research_name
+	}
+
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = {
+					faction_goal_type_index = 6
+				}
+			}
+		}
+		localization_key = ALF_faction_goal_spy_master_name
+	}
+
+	text = {
 	    localization_key = FACTION_GOAL_INDEX_SL_DEFAULT_DESC
 	}
 }

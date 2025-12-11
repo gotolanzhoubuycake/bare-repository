@@ -28,7 +28,7 @@ ALF_faction_goal_stand_the_ground = {
 	name = ALF_faction_goal_stand_the_ground_name
 	description = ALF_faction_goal_stand_the_ground_desc
 	category = short_term
-	group = FOCUS_FILTER_INTERNAL_AFFAIRS
+	group = FOCUS_FILTER_CONSOLIDATION
 	available = {
 		FROM = {
 			tag = ALF
@@ -49,7 +49,12 @@ ALF_faction_goal_stand_the_ground = {
 		}
 	}
 	complete_effect = {
-		ALF = {
+		add_faction_power_projection = 50
+		add_faction_initiative = 1
+		custom_effect_tooltip = generic_skip_one_line_tt
+		every_faction_member = {
+			limit = {
+			}
 			add_political_power = 50
 		}
 		#弹窗#
@@ -105,12 +110,25 @@ ALF_faction_goal_secure_the_area = {
 		}
 	}
 	complete_effect = {
-		ALF = {
+		add_faction_power_projection = 50
+		add_faction_initiative = 1
+		custom_effect_tooltip = generic_skip_one_line_tt
+		every_possible_country = {
+			limit = {
+				tag = ALF
+			}
 			add_political_power = 50
 			ALF_improve_livability_2_pts = yes
+			unlock_military_industrial_organization_tooltip = mio:ALF_truck_Organization_Producter
 		}
-		#unlock_military_industrial_organization_tooltip = mio:ALF_Infantry_Organization_Producter
-		unlock_military_industrial_organization_tooltip = mio:ALF_truck_Organization_Producter
+		every_faction_member = {
+			limit = {
+				NOT = {
+					tag = ALF
+				}
+			}
+			add_political_power = 50
+		}
 		#弹窗#
 		hidden_effect = {
 			every_faction_member = {
@@ -129,6 +147,178 @@ ALF_faction_goal_secure_the_area = {
 	}
 }
 
+##重建阿里乌斯作战参谋部
+ALF_faction_goal_unlock_military = {
+	name = ALF_faction_goal_unlock_military_name
+	description = ALF_faction_goal_unlock_military_desc
+	category = short_term
+	group = FOCUS_FILTER_WAR_SUPPORT
+	available = {
+		FROM = {
+			tag = ALF
+		}
+	}
+	visible = {
+		FROM = {
+			tag = ALF
+			has_faction_military_unlocked = no
+		}
+	}
+	completed = {
+		scope:faction = {
+			has_army_manpower = {
+				size > 30000
+			}
+		}
+	}
+	complete_effect = {
+		set_faction_military_unlocked = yes
+		add_faction_initiative = 1
+		#弹窗#
+		hidden_effect = {
+			every_faction_member = {
+				limit = {
+					is_ai = no
+				}
+				set_variable = {
+					faction_goal_type_index = 4
+				}
+				BARE_FIRE_FACTION_GOAL_COMPLETE_POPUP_EFFECT = yes
+			}
+		}
+	}
+	ai_will_do = {
+		base = 1000		# They should always do this if they can
+	}
+}
+
+
+##组建联合科研机关
+ALF_faction_goal_unlock_research = {
+	name = ALF_faction_goal_unlock_research_name
+	description = ALF_faction_goal_unlock_research_desc
+	category = short_term
+	group = FOCUS_FILTER_RESEARCH
+	available = {
+		FROM = { tag = ALF }
+	}
+	visible = {
+		FROM = { 
+			has_faction_research_unlocked = no
+			tag = ALF
+		}
+	}
+	completed = {
+		ALF = {
+			has_completed_focus = ALF_united_research_facility
+		}
+	}
+	complete_effect = {
+		set_faction_research_unlocked = yes
+		add_faction_initiative = 1
+		#弹窗#
+		hidden_effect = {
+			every_faction_member = {
+				limit = {
+					is_ai = no
+				}
+				set_variable = {
+					faction_goal_type_index = 5
+				}
+				BARE_FIRE_FACTION_GOAL_COMPLETE_POPUP_EFFECT = yes
+			}
+		}
+	}
+	ai_will_do = {
+		base = 1000 # They should always do this if they can
+	}
+}
+
+##组建情报机构##
+ALF_faction_goal_spy_master = {
+	name = ALF_faction_goal_spy_master_name
+	description = ALF_faction_goal_spy_master_desc
+	group = FOCUS_FILTER_POLITICAL_CHARACTER
+	category = short_term
+	allowed = {
+		FROM = {
+			tag = ALF
+		}
+	}
+	visible = {
+		FROM = {
+			tag = ALF
+			is_spymaster = no
+		}
+	}
+	completed = {
+		ALF = {
+			is_spymaster = yes
+			agency_upgrade_number > 5
+		}
+	}
+	complete_effect = {
+		add_faction_power_projection = 50
+		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = THE_SPY_MASTER
+		add_faction_initiative = 1
+		custom_effect_tooltip = generic_skip_one_line_tt
+		every_faction_member = {
+			limit = {
+				has_intelligence_agency = no
+			}
+			create_intelligence_agency = yes
+		}
+		every_faction_member = {
+			limit = {
+				has_intelligence_agency = yes
+				NOT = {
+					has_done_agency_upgrade = upgrade_form_department
+				}
+			}
+			upgrade_intelligence_agency = upgrade_form_department
+		}
+		every_faction_member = {
+			limit = {
+				has_intelligence_agency = yes
+				has_done_agency_upgrade = upgrade_form_department
+				NOT = {
+					has_done_agency_upgrade = upgrade_crypto_strength
+				}
+			}
+			upgrade_intelligence_agency = upgrade_crypto_strength
+		}
+		every_faction_member = {
+			# Fallback in case someone completed everything
+			visible_when_empty = yes
+			limit = {
+				has_intelligence_agency = yes
+				agency_upgrade_number > 30
+			}
+			add_political_power = 100
+		}
+		#弹窗#
+		hidden_effect = {
+			every_faction_member = {
+				limit = {
+					is_ai = no
+				}
+				set_variable = {
+					faction_goal_type_index = 6
+				}
+				BARE_FIRE_FACTION_GOAL_COMPLETE_POPUP_EFFECT = yes
+			}
+		}
+	}
+	ai_will_do = {
+		base = 1000
+	}
+}
+
+##中期
+##工业发展
+##通电
+##击败凯撒集团
 ##长期
 ALF_faction_goal_back_to_home = {
 	name = ALF_faction_goal_back_to_home_name
@@ -160,6 +350,10 @@ ALF_faction_goal_back_to_home = {
 			army_experience = 100
 			air_experience = 100
 			ALF_improve_livability_10_pts = yes
+			add_faction_power_projection = 50
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_faction_initiative = 2
+			custom_effect_tooltip = generic_skip_one_line_tt
 		}
 		#弹窗#
 		hidden_effect = {

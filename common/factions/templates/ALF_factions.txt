@@ -17,6 +17,12 @@ ALF_faction_template = {
 	goals = {
 		ALF_faction_goal_stand_the_ground
 		ALF_faction_goal_secure_the_area
+
+		ALF_faction_goal_unlock_military
+		ALF_faction_goal_unlock_research
+		ALF_faction_goal_spy_master
+		#
+		
 		#
 		ALF_faction_goal_back_to_home
 	}

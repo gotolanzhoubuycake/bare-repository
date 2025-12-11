@@ -2418,7 +2418,7 @@ BA_Design_helicopter_Organization_Producter = {
 			BA_Design_helicopter_Organization_Producter13
 		}
 		mutually_exclusive = {
-			BA_Design_helicopter_Organization_Producter15
+			BA_Design_helicopter_Organization_Producter14
 			BA_Design_helicopter_Organization_Producter16
 		}
 		production_bonus = {

@@ -1582,6 +1582,11 @@ focus_tree = {
         available = {
             has_completed_focus = ALF_support_the_pilots
         }
+        bypass = {
+            FSC = {
+                exists = no
+            }
+        }
         completion_reward = {
             add_research_slot = 1
             if = {

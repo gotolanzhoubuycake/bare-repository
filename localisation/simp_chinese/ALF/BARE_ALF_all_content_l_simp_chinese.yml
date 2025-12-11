@@ -47,6 +47,15 @@
  ALF_faction_goal_secure_the_area_desc: "安全是发展的必要前提。流亡者必须利用这个短暂的机遇窗口，迅速稳固周边的地区。\n\n§G微渺但重要的胜利。§!"
  ALF_faction_goal_secure_the_area_flag: "§C利非汀权杖行动§!：§G已完成§!"
 
+ ALF_faction_goal_spy_master_name: "扩大特别勤务处"
+ ALF_faction_goal_spy_master_desc: "情报工作是流亡者能先人一步的基本前提。必须扩大情报部门的规模，以便更好地了解周边环境，并为未来的行动做好准备。\n\n§R无所遁形……§!"
+
+ ALF_faction_goal_unlock_military_name: "重建作战参谋部"
+ ALF_faction_goal_unlock_military_desc: "阿里乌斯学园曾经的作战参谋部在内战中遭到严重破坏，其长久以来的组织体系已经荡然无存。为了应对接下来的战斗，重建它将是一个极为重要的短期事务。\n\n§R群龙无首的军队只会是乌合之众。§!"
+
+ ALF_faction_goal_unlock_research_name: "组建联合研究所"
+ ALF_faction_goal_unlock_research_desc: "和自由飞行员的合作也许是一个机遇：她们拥有先进的航空技术和经验，通过合作，流亡者们在航空技术上的空白也许能迎头赶上。\n\n§G钢铁的伊卡洛斯不惧烈阳。§!"
+
  ALF_faction_goal_back_to_home_name: "完成未竟之事"
  ALF_faction_goal_back_to_home_desc: "失败是一次考验，却从来不是终局。贝阿多莉切将会明白，阿里乌斯永远都不会屈服于野心家的阴谋诡计。而复仇的烈火，会将她彻底焚尽为灰。\n\n§R我们向来说到做到。§!"
  ALF_faction_goal_back_to_home_complete_flag: "§G贝阿多莉切的统治已遭终结§!"
