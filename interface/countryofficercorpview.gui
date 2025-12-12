@@ -673,7 +673,49 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "land_doctrine_button" # A container window of the format X_doctrine_button will automatically be linked to doctrine folder "X"
-				position = { x=9999 y=9999 } #先藏起来
+				position = { x=9999 y=9999 } #虚空
+				#position = { x=260 y=-11 } #先藏起来
+				size = {width=20 height=20}
+				clipping = no
+
+				buttonType = {
+					#Subdoctrine background
+					name = "button"
+					quadTextureSprite = "GFX_doctrines_officer_corps_button_land"
+					position = { x=28 y=45 }
+				}
+
+				iconType = {
+					#Subdoctrine motive. Also can control what's displayed before subdoctrine is chosen. 
+					name = "icon"
+					position = { x=61 y=69 }
+					Orientation = CENTER
+					spriteType = "GFX_land_doctrine_medium" # Default icon when no grand doctrine is active
+					alwaystransparent = yes
+					centerposition = yes
+				}
+
+				iconType = {
+					name = "number_container"
+					position = { x=62 y=95 }
+					Orientation = CENTER
+					spriteType = "GFX_bronze_number_container"
+					alwaystransparent = yes
+					centerposition = yes
+				}
+
+				gridBoxType = {
+					#Container for numbers
+					name = track_status_grid
+					position = { x=48 y=98 }
+					slotsize = { width = 16 height = 16 }
+					max_slots_vertical = 1
+				}
+			}
+
+			containerWindowType = {
+				name = "baland_doctrine_button" # A container window of the format X_doctrine_button will automatically be linked to doctrine folder "X"
+				position = { x=260 y=-11 } 
 				size = {width=20 height=20}
 				clipping = no
 

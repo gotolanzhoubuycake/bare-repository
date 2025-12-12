@@ -1,0 +1,161 @@
+trinity_superior_firepower = {
+	folder = baland
+	name = GD_TRINITY_SUPERIOR_FIREPOWER_NAME
+	description = GD_TRINITY_SUPERIOR_FIREPOWER_DESC
+	icon = GFX_doctrine_superior_firepower_medium
+	available = {
+		always = yes
+	}
+	xp_cost = 100
+	xp_type = army
+	ai_will_do = {
+		base = 1
+		modifier = {
+			factor = 0
+			is_major = no
+		}
+	}
+	tracks = {
+		infantry
+		combat_support
+		combat_support
+		armor
+		operations
+	}
+	# EFFECTS
+	#enable_tactic = tactic_overwhelming_fire
+	#enable_subunits = {
+	#	royal_artillery_support_company_units
+	#}
+	category_line_artillery = {
+		soft_attack = 0.1
+	}
+	category_support_artillery = {
+		soft_attack = 0.05
+	}
+	milestones = {
+		{
+			#Infantry
+			enable_tactic = tactic_elastic_defense
+			supply_consumption_factor = -0.1
+			effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_variable = infantry_milestone_var
+						}
+					}
+					set_variable = {
+						infantry_milestone_var = 1
+					}
+				}
+				else = {
+					add_to_variable = {
+						infantry_milestone_var = 1
+					}
+				}
+			}
+		}
+		{
+			#Artillery/Support
+			additional_brigade_column_size = 1
+			category_support_battalions = {
+				max_organisation = 10
+			}
+			planning_decay_rate_factor = -0.1
+			enable_tactic = tactic_barrage
+			effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_variable = support_milestone_var
+						}
+					}
+					set_variable = {
+						support_milestone_var = 1
+					}
+				}
+				else = {
+					add_to_variable = {
+						support_milestone_var = 1
+					}
+				}
+			}
+		}
+		{
+			#Artillery/Support
+			additional_brigade_column_size = 1
+			category_support_battalions = {
+				max_organisation = 10
+			}
+			planning_decay_rate_factor = -0.1
+			enable_tactic = tactic_barrage
+			effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_variable = support_milestone_var
+						}
+					}
+					set_variable = {
+						support_milestone_var = 1
+					}
+				}
+				else = {
+					add_to_variable = {
+						support_milestone_var = 1
+					}
+				}
+			}
+		}
+		{
+			#Armor
+			enable_tactic = tactic_delay
+			category_army = {
+				default_morale = 0.2
+			}
+			effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_variable = armor_milestone_var
+						}
+					}
+					set_variable = {
+						armor_milestone_var = 1
+					}
+				}
+				else = {
+					add_to_variable = {
+						armor_milestone_var = 1
+					}
+				}
+			}
+		}
+		{
+			#Operations
+			enable_tactic = tactic_tactical_withdrawal
+			category_army = {
+				default_morale = 0.4
+			}
+			planning_decay_rate_factor = -0.1
+			effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_variable = operations_milestone_var
+						}
+					}
+					set_variable = {
+						operations_milestone_var = 1
+					}
+				}
+				else = {
+					add_to_variable = {
+						operations_milestone_var = 1
+					}
+				}
+			}
+		}
+	}
+}

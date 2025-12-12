@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ GD_TRINITY_SUPERIOR_FIREPOWER_NAME: "圣三一军事传统"
+ GD_TRINITY_SUPERIOR_FIREPOWER_DESC: "§W圣三一的武装力量以其长久的军事传统著称，各式轻重火炮是其主力作战部队毫无疑问的核心。通过严格协同训练，圣三一步兵部队可以在徐进火力的掩护下对关键地带实施进攻，或是依赖压倒性火力直接摧毁当面之敌。\n\n随着新时代的降临，圣三一亦在积极探索新的作战模式。将各式自行火炮与信息化前观系统整合进作战系统，被视作圣三一的现代化军事蓝图的重要构想。§!\n\n§Y圣三一军事传统：§!\n§W炮兵与战斗支援槽位：§!§G+1§!\n§W现代化炮兵（次要学说）：§!§G可用§!"
+
+ SD_trinity_super_heavy_artillery_NAME: "现代化炮兵"
+ SD_trinity_super_heavy_artillery_DESC: "现代化炮兵战术是一种以自行火炮和数字化系统为中心的炮兵运用学说，通过将先进的火控系统与高机动性的自行火炮相结合，炮兵及其它支援火力能够在战场上迅速部署并实施精准打击。\n\n这种战术强调信息化作战和快速反应能力，使得炮兵部队能够在动态变化的战场环境中保持优势。除此之外，现代化炮兵战术还极为重视电子信息领域的攻防作战。炮兵可以利用电子战等方式伪装自己的位置和意图，从而获得出其不意的打击效果。\n\n§G该学说影响的单位：\n§!§Y$category_support_battalions$§!\n§Y$category_line_artillery$§!\n§Y$category_self_propelled_artillery$§!\n§Y$category_anti_air$§!"
+ SD_TSHA_artillery_command_network: "信息化炮兵指挥网络"
+ SD_TSHA_position_camouflage_tactics: "先进伪装阵地"
+ SD_TSHA_precision_strike: "精确射击"
+ SD_TSHA_modern_artillery_deployment: "战略机动"
+ SD_TSHA_massive_destruction: "同时着弹炮击"
