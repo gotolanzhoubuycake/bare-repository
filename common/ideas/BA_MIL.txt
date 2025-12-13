@@ -81,5 +81,88 @@ ideas = {
                 production_speed_buildings_factor = -0.2
             }
         }
+
+        # 不合格社团审查1
+        MIL_unqualified_club_investigate_1 = {
+            name = MIL_unqualified_club_investigate
+            picture = MIL_unqualified_club_investigate
+
+            allowed = {
+                original_tag = MIL
+            }
+
+            modifier = {
+                political_power_factor = -0.05
+                stability_factor = -0.05
+                consumer_goods_factor = -0.25
+            }
+        }
+
+        # 不合格社团审查2
+        MIL_unqualified_club_investigate_2 = {
+            name = MIL_unqualified_club_investigate
+            picture = MIL_unqualified_club_investigate
+
+            allowed = {
+                original_tag = MIL
+            }
+
+            modifier = {
+                political_power_factor = -0.1
+                stability_factor = -0.1
+                consumer_goods_factor = -0.25
+                industrial_capacity_factory = 0.05
+            }
+        }
+
+        # 不合格社团审查3
+        MIL_unqualified_club_investigate_3 = {
+            name = MIL_unqualified_club_investigate
+            picture = MIL_unqualified_club_investigate
+
+            allowed = {
+                original_tag = MIL
+            }
+
+            modifier = {
+                political_power_factor = -0.1
+                stability_factor = -0.1
+                consumer_goods_factor = -0.4
+                industrial_capacity_factory = 0.05
+            }
+        }
+
+        # 审查大获成功
+        MIL_investigate_success = {
+            name = MIL_investigate_success
+            picture = MIL_investigate_success
+
+            allowed = {
+                original_tag = MIL
+            }
+
+            modifier = {
+                political_power_factor = 0.05
+                stability_factor = 0.05
+                consumer_goods_factor = -0.4
+                industrial_capacity_factory = 0.1
+            }
+        }
+
+        # 死战到底
+        MIL_till_the_last_man_standing = {
+            name = MIL_till_the_last_man_standing
+            picture = MIL_till_the_last_man_standing
+
+            modifier = {
+                army_org = 0.1
+                experience_loss_factor = 0.25
+            }
+
+            targeted_modifier = {
+                tag = CAE
+                defense_bonus_against = 0.1
+            }
+        }
     }
 }
