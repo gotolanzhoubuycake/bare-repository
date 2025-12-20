@@ -1,5 +1,5 @@
-new_strategic_destruction = {
-    folder = air
+generic_strategic_destruction = {
+    folder = baair
 
     name = GRAND_DOCTRINE_STRATEGIC_DESTRUCTION
     description = GRAND_DOCTRINE_STRATEGIC_DESTRUCTION_DESC
@@ -110,8 +110,8 @@ new_strategic_destruction = {
     }
 }
 
-new_battlefield_support = {
-    folder = air
+generic_battlefield_support = {
+    folder = baair
 
     name = GRAND_DOCTRINE_BATTLEFIELD_SUPPORT
     description = GRAND_DOCTRINE_BATTLEFIELD_SUPPORT_DESC
@@ -188,7 +188,7 @@ new_battlefield_support = {
         {
             #3 Medium Aircraft
 			air_mission_xp_gain_factor = 0.1
-            tac_bomber = {
+            category_tac_bomber = {
                 air_bombing = 0.10
             }
 
@@ -228,8 +228,8 @@ new_battlefield_support = {
     }
 }
 
-new_operational_integrity = {
-    folder = air
+generic_operational_integrity = {
+    folder = baair
 
     name = GRAND_DOCTRINE_OPERATIONAL_INTEGRITY
     description = GRAND_DOCTRINE_OPERATIONAL_INTEGRITY_DESC

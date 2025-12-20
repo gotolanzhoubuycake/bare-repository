@@ -976,8 +976,8 @@ guiTypes = {
 			}
 
 			containerWindowType = {
-				name = "air_doctrine_button" # A container window of the format X_doctrine_button will automatically be linked to doctrine folder "X"
-				position = { x=9999 y=9999 }
+				name = "baair_doctrine_button" # A container window of the format X_doctrine_button will automatically be linked to doctrine folder "X"
+				position = { x=260 y=-10 }
 				size = {width=20 height=20}
 				clipping = no
 

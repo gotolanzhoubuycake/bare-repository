@@ -39,6 +39,11 @@ spriteTypes = {
         texturefile = "gfx/interface/bookmark/ARI_intro.dds"
     }
 
+    spriteType = {
+        name = "GFX_MIL_intro"
+        texturefile = "gfx/interface/bookmark/MIL_intro.dds"
+    }
+
 	spriteType = {
         name = "GFX_TRI_eden_treaty_path"
         texturefile = "gfx/interface/bookmark/highlight_path/TRI_eden_treaty_path.dds"
@@ -57,6 +62,11 @@ spriteTypes = {
 	spriteType = {
         name = "GFX_ARI_liberation_path"
         texturefile = "gfx/interface/bookmark/highlight_path/ARI_liberation_path.dds"
+    }
+
+    spriteType = {
+        name = "GFX_MIL_friendship_path"
+        texturefile = "gfx/interface/bookmark/highlight_path/MIL_friendship_path.dds"
     }
 
 	spriteType = {
@@ -80,6 +90,12 @@ spriteTypes = {
 	spriteType = {
         name = "GFX_ARI_liberation_path_picture"
         texturefile = "gfx/interface/bookmark/highlight_picture/ARI_liberation_path_picture.dds"
+        legacy_lazy_load = no
+	}
+
+    spriteType = {
+        name = "GFX_MIL_friendship_path_picture"
+        texturefile = "gfx/interface/bookmark/highlight_picture/MIL_friendship_path_picture.dds"
         legacy_lazy_load = no
 	}
 

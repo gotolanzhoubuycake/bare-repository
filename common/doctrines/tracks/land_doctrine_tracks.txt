@@ -11,6 +11,21 @@ infantry = {
     }
 }
 
+track_sf = {
+    name = DOCTRINE_TRACK_SF
+    background = "GFX_grand_battleplan_bg"
+    icon = "GFX_doctrine_milestone_ships_naval"
+    icon_frame = "GFX_doctrine_decor_land"
+    mastery = {
+        multiplier = 1.0
+        categories = {
+            category_all_infantry
+            category_special_forces
+            category_special_infantry
+        }
+    }
+}
+
 combat_support = {
     name = DOCTRINE_TRACK_COMBAT_SUPPORT
     background = "GFX_sup_firepower_bg"
@@ -36,10 +51,10 @@ armor = {
         categories = {
 	        category_tanks
 	        category_all_armor
-            
+            category_mech   
         }
         sub_units = {
-            armored_car
+            
         }
     }
 }

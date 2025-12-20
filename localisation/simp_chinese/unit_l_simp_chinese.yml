@@ -452,8 +452,10 @@
  category_heavy_fighter: "重型战斗机"
  category_cas: "近距支援机"
  category_nav_bomber: "海军轰炸机"
- category_tac_bomber: "战术轰炸机"
- category_strat_bomber: "战略轰炸机"
+##
+ category_tac_bomber: "中型攻击机"
+ category_strat_bomber: "重型攻击机"
+##
  category_anti_air: "防空单位"
  category_scout_plane: "侦察机"
  TRANSPORT_ALREADY_ACTIVE: "我们已经在海运途中"
@@ -603,7 +605,7 @@
  airborne_light_armor_desc: "配备极轻装甲载具和革新性的滑翔原理后，空降装甲师已不再是异想天开。这种部署既快速又出人意料，所带来的战术优势绝不容小觑。"
  mountaineers_ski: "滑雪部队"
  category_mountaineers: "所有山地步兵"
- category_paratroopers: "所有空降兵"
+ category_paratroopers: "所有空中突击部队"
  category_marines: "所有海军陆战队"
  rangers_support: "游骑兵"
  rangers_support_desc: "游骑兵是最精锐的散兵部队，擅长渗透和近距离作战。" #TODO CD
@@ -640,9 +642,9 @@
  long_range_patrol_support_desc: "擅长侦察和摧毁任务的精英步兵队。"
  category_cavalry: "马背骑兵"
  category_support_artillery: "火炮支援连"
+ category_special_infantry: "所有神秘属性步兵"
 
-
-
+ transport_plane: "运输机及空中炮艇"
 
 category_bm: "战斗机甲"
 category_mech: "装甲骑兵"

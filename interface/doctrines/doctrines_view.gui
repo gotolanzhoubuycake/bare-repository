@@ -171,6 +171,7 @@ guiTypes = {
 			position = { x = 128 y = 1 }
 			slotsize = { width = 256 height = 62 }
 			max_slots_vertical = 1
+			max_slots_horizontal = 2
 		}
 	}
 
@@ -203,7 +204,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "select_button"
-			spriteType = "GFX_tiled_decisions_bg_small"
+			spriteType = "GFX_tiled_paper_small_bg"
 			position = { x = 0 y = 0 }
 			orientation = upper_left
 			size = { x = 246 y = 71 }
@@ -621,7 +622,7 @@ guiTypes = {
 			size = { width= 520 height=400 }
 			background = {
 				name = "background"
-				spriteType = "GFX_tiled_paper_bg"
+				spriteType = "GFX_tiled_plain_bg"
 				frame = 1
 				alwaystransparent = yes
 			}
@@ -629,7 +630,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "description_text"
 				position = { x = 20 y = 18 }
-				font = "hoi4_typewriter16"
+				font = "LXGW_975_16b"
 				maxWidth = 490
 				maxHeight = 370
 				format = left
@@ -665,7 +666,7 @@ guiTypes = {
 				# Without this background, scrolling doesn't work properly..
 				background = {
 					name = "background"
-					spriteType = "GFX_tiled_paper_small_bg"
+					spriteType = "GFX_tiled_plain_bg"
 				}
 
 				gridBoxType = {

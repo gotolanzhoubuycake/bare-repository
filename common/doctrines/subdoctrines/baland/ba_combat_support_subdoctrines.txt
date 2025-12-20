@@ -8,30 +8,72 @@ SD_TSHA = {
 	xp_cost = 100
 	xp_type = army
 	available = {
-		always = yes
+		has_doctrine = trinity_superior_firepower
+	}
+	visible = {
+		has_doctrine = trinity_superior_firepower
 	}
 	ai_will_do = {
 		base = 1
 		modifier = {
 			factor = 75
-			original_tag = SOV
-		}
-		modifier = {
-			factor = 75
-			original_tag = ENG
-		}
-		modifier = {
-			factor = 75
-			original_tag = FRA
+			original_tag = TRI
 		}
 	}
 	# EFFECTS
 	enable_tactic = tactic_artillery_22
+	fire_support_team_la = {
+		combat_width = -0.8
+	}
+	fire_support_team_sp = {
+		combat_width = -0.8
+	}
 	category_line_artillery = {
 		max_organisation = 5
+		max_strength = 0.05
 	}
 	category_self_propelled_artillery = {
 		max_organisation = 5
+		max_strength = 0.05
+	}
+	recon = {
+		battalion_mult = {
+			category = category_line_artillery
+			soft_attack = 0.05
+			#defense = 0.1
+		}
+		battalion_mult = {
+			category = category_self_propelled_artillery
+			soft_attack = 0.05
+			#defense = 0.1
+		}
+		recon = 0.15
+	}
+	apc_recon = {
+		battalion_mult = {
+			category = category_line_artillery
+			soft_attack = 0.05
+			#defense = 0.1
+		}
+		battalion_mult = {
+			category = category_self_propelled_artillery
+			soft_attack = 0.05
+			#defense = 0.1
+		}
+		recon = 0.15
+	}
+	ifv_recon = {
+		battalion_mult = {
+			category = category_line_artillery
+			soft_attack = 0.05
+			#defense = 0.1
+		}
+		battalion_mult = {
+			category = category_self_propelled_artillery
+			soft_attack = 0.05
+			#defense = 0.1
+		}
+		recon = 0.15
 	}
 	rewards = {
 		artillery_command_network = {
@@ -58,6 +100,13 @@ SD_TSHA = {
 			category_self_propelled_artillery = {
 				defense = 0.1
 			}
+			engineer = {
+				max_organisation = 5
+				battalion_mult = {
+					category = category_all_infantry
+					entrenchment = 0.02
+				}
+			}
 		}
 		precision_strike = {
 			#3
@@ -68,6 +117,26 @@ SD_TSHA = {
 			category_line_artillery = {
 				ap_attack = 0.1
 				hard_attack = 0.1
+			}
+			apc_artillery_unit = {
+				urban = {
+					attack = 0.2
+				}
+			}
+			ifv_artillery_unit = {
+				urban = {
+					attack = 0.2
+				}
+			}
+			medium_sp_artillery_brigade = {
+				urban = {
+					attack = 0.2
+				}
+			}
+			heavy_sp_artillery_brigade = {
+				urban = {
+					attack = 0.2
+				}
 			}
 		}
 		modern_artillery_deployment = {
@@ -82,15 +151,29 @@ SD_TSHA = {
 				initiative = 0.02
 				#supply_consumption = -0.02
 			}
+			light_sp_artillery_brigade = {
+				max_organisation = 10
+				maximum_speed = 0.5
+			}
+			medium_sp_artillery_brigade = {
+				max_organisation = 10
+				maximum_speed = 0.5
+			}
+			heavy_sp_artillery_brigade = {
+				max_organisation = 10
+				maximum_speed = 0.5
+			}
 		}
 		massive_destruction = {
 			#5
 			category_line_artillery = {
 				soft_attack = 0.1
+				hard_attack = 0.05
 				breakthrough = 0.1
 			}
 			category_line_artillery = {
 				soft_attack = 0.1
+				hard_attack = 0.05
 				breakthrough = 0.1
 			}
 		}

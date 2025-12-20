@@ -14,6 +14,9 @@ guiTypes = {
 		containerWindowType = { # Dummy for legacy reasons
 		        name = "air_doctrine_folder"
 		}
+		containerWindowType = { # Dummy for legacy reasons
+		        name = "baland_doctrine_folder"
+		}
 
                 # Duplicate of "special_forces_doctrine_folder", but with only Rangers
 		containerWindowType = {
@@ -387,6 +390,24 @@ guiTypes = {
 				name = "special_forces_doctrine_folder_title"
 				text = "special_forces"
 				position = { x=568 y=18}
+				font = "hoi_20bs"
+				maxWidth = 160
+				maxHeight = 20
+				format = center
+				alwaystransparent = "yes"
+			}
+			##仅为防止报错
+			buttonType = {
+				name = "baland_doctrine_folder_tab"
+				position = { x = 9999 y = 9999 }
+				quadTextureSprite = "GFX_specialforcesdoctrine_tab_large"
+				frame = 1
+				clicksound = ui_doctrine_tab_air
+			}
+			instantTextBoxType = {
+				name = "baland_doctrine_folder_title"
+				text = "special_forces"
+				position = { x=9999 y=9999}
 				font = "hoi_20bs"
 				maxWidth = 160
 				maxHeight = 20

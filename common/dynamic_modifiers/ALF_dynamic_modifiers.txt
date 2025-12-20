@@ -13,7 +13,8 @@ ALF_party_modifier = {
 	enable = {
 		always = yes
 	}
-	encryption = 1
+	crypto_strength = 1
+	decryption_power = 1
 	equipment_capture_factor = 0.1
 	political_power_factor = 0.1
 	stability_factor = ALF_party_stability_factor_var
