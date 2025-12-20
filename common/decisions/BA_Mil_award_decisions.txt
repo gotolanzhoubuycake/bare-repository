@@ -339,7 +339,7 @@ MIL_award_engineer_department_decisions = {
             }
         }
     }
-    MIL_award_engineer_department_whimsical_ideas = {
+    MIL_award_engineer_department_more_payout = {
         cost = 50
         days_remove = 60
         modifier = {
@@ -525,7 +525,7 @@ MIL_award_game_development_decisions = {
             }
         }
     }
-    MIL_award_game_development_update = {
+    MIL_award_game_development_debug = {
         cost = 25
         days_remove = 60
         days_re_enable = 45

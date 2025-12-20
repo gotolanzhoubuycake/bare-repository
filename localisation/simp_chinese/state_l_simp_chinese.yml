@@ -1,6 +1,7 @@
 ﻿l_simp_chinese:
  STATE_UPGRADE_BUILDING: "升级$BUILDING|H$。"
  STATE_UPGRADE_BUILDING_DESC: "建造时间：$COST|H$"
+ PROVINCE_BUILDING_LEVEL: "$BUILDING|H$（等级：$LEVEL|H$/$MAX_LEVEL|H$）"
  STATE_BUILDING_LEVEL: "$BUILDING|H$（等级：$LEVEL|H$）"
  STATE_BUILDING_LEVEL_SHARED_SLOTS: "$LEVEL|H$ $BUILDING|H$"
  STATE_BUILDING_INCONSTRUCTION: "施工中：$LEVEL|H$"
@@ -21,6 +22,7 @@
  STATE_CORE: "§T$COUNTRY|H$将$STATE|H$视为核心地区。§!"
  STATE_CORE_DESC: "核心地区被视为你的势力不可分割的一部分。如果它被另一个势力占有，你会拥有无可非议的理由对其开战来收复失地。成功占领这个地区后不需要占领政策——收复之后它将变成你本土的一部分。"
  STATE_CLAIM: "§T$COUNTRY|H$对$STATE|H$有领土要求。§!"
+ STATE_CONTESTED_OWNER: "§T$COUNTRY|H$是$STATE|H$有争议的拥有者。§!"
 #  STATE_POPULATION: "§H战备值§!：$AVAIL|*Y$/$MAXAVAIL|*Y$\n§H未动员发展度§!：$LOCKED|*Y$/$MAXLOCKED|*Y$\n"
 #  STATE_POPULATION: "§H可用战备值§!：$MAXAVAIL|*Y$\n§H地区发展度§!：$MAXLOCKED|*Y$\n"
  STATE_POPULATION: ""
@@ -61,6 +63,7 @@
  enclave: "飞地"
  small_island: "小岛"
  tiny_island: "极小岛屿"
+ large_island: "大型岛屿"
  pastoral: "牧区"
  OCCUPATION_BREAKDOWN: "占领明细："
  OCCUPATION_BREAKDOWN_ENTRY: "\n$COUNTRY|Y$：$OCCUPATION|Y%0$"

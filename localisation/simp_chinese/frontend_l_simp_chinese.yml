@@ -61,6 +61,7 @@
  SM_EFFECT_VOLUME: "音效音量"
  SM_MUSIC_VOLUME: "音乐音量"
  SM_SCROLL_SPEED: "滚动速度"
+ SM_CORNER_SCROLL: "启用角落滚动"
  SM_ZOOM_SPEED: "缩放速度"
  SM_MOUSE_SPEED: "滑鼠速度"
  SM_MODE: "模式"

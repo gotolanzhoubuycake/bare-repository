@@ -20,7 +20,7 @@ country_event = {
 				}
 				complete_national_focus = MIL_veritas_dream
 	}
- 
+
 		ai_chance = {
 			base = 1
 		}
@@ -125,4 +125,80 @@ country_event = {
 			base = 1
 		}
     }
+}
+
+# 调查决定
+country_event = {
+    id = MIL_event.7
+    title = MIL_event.7.t
+    desc = MIL_event.7.d
+
+    is_triggered_only = yes
+
+}
+
+# 真理部的新任务
+country_event = {
+    id = MIL_event.8
+    title = MIL_event.8.t
+    desc = MIL_event.8.d
+
+    is_triggered_only = yes
+
+    immediate = {
+        add_political_power = 50
+    }
+
+}
+
+# 真理部的发现
+country_event = {
+    id = MIL_event.9
+    title = MIL_event.9.t
+    desc = MIL_event.9.d
+
+    is_triggered_only = yes
+
+    immediate = {
+        add_political_power = 100
+        add_stability = -0.05
+    }
+
+}
+
+# 凯撒的交涉意见
+country_event = {
+    id = MIL_event.10
+    title = MIL_event.10.t
+    desc = MIL_event.10.d
+
+    is_triggered_only = yes
+
+    immediate = {
+        add_opinion_modifier = {
+            target = CAE
+            modifier = negotiate_with_cae
+        }
+        reverse_add_opinion_modifier = {
+            target = MIL
+            modifier = negotiate_with_cae
+        }
+    }
+
+}
+
+country_event = {
+    id = MIL_event.11
+    title = MIL_event.11.t
+    desc = MIL_event.11.d
+
+    is_triggered_only = yes
+}
+
+country_event = {
+    id = MIL_event.12
+    title = MIL_event.12.t
+    desc = MIL_event.12.d
+
+    is_triggered_only = yes
 }

@@ -1,0 +1,5 @@
+opinion_modifiers = {
+    negotiate_with_cae = {
+        value = -200
+    }
+}
