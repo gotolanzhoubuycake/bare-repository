@@ -87,10 +87,12 @@ set_technology = {
 	#attack_helicopter_T2 = 1
 	#General_helicopter_T2 = 1
 	Infantry_fighting_vehicle_T1 = 1
-	#Armored_Vehicles_T1 = 1
+	Armored_Vehicles_T1 = 1
+	Armored_Vehicles_ART_T1 = 1
 
 	#支援装备
 	fire_support_weapons_T1 = 1
+	special_fire_support_weapons_T1 = 1
 	support_equipment_T1 = 1
 	#support_engineer_T2 = 1
 	#support_logistics_T2 = 1

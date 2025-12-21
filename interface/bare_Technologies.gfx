@@ -1299,6 +1299,10 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_assault_vehicle_dummy_upgrade_medium"
+		texturefile = "gfx/interface/technologies/sp_armored_engineer.dds"
+	}
+	SpriteType = {
 		name = "GFX_assault_vehicle_attack_upgrade1_medium"
 		texturefile = "gfx/interface/technologies/armor/assault_vehicle_attack_upgrade1.dds"
 	}

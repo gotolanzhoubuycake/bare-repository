@@ -245,7 +245,7 @@ air_cavalry = {
 	xp_cost = 100
 	xp_type = army
 	available = {
-		is_special_project_completed = sp:sp_air_helicopter
+		#is_special_project_completed = sp:sp_air_helicopter
 	}
 	visible = {
 		has_dlc = "Gotterdammerung"

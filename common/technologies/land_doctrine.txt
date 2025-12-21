@@ -2313,6 +2313,13 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 50
 		#xp_research_bonus = 1
+
+		allow = {
+			tag = MIL
+			##↓↓防止AI虚空研究这个科技，实装后可以去掉↓↓##
+			always = no
+		}
+
 		path = {
 			leads_to_tech = Millennium_2
 			research_cost_coeff = 1
@@ -2332,24 +2339,28 @@ technologies = {
 		categories = {
 			land_doctrine
 		}
-		allow = {
-			tag = MIL
-		}
+		
 		ai_will_do = {
 			factor = 30
 		}
-		folder = {
-			name = land_doctrine_folder
-			position = {
-				x = -2
-				y = 0
-			}
-		}
+		#folder = {
+		#	name = land_doctrine_folder
+		#	position = {
+		#		x = -2
+		#		y = 0
+		#	}
+		#}
 	}
 	Millennium_2 = {
 		xp_research_type = army
 		xp_unlock_cost = 150
 		#xp_research_bonus = 1
+
+		allow = {
+			tag = MIL
+			##↓↓防止AI虚空研究这个科技，实装后可以去掉↓↓##
+			always = no
+		}
 
 		doctrine = yes
 		research_cost = 4.5
@@ -2359,18 +2370,25 @@ technologies = {
 		ai_will_do = {
 			factor = 30
 		}
-		folder = {
-			name = land_doctrine_folder
-			position = {
-				x = -2
-				y = 2
-			}
-		}
+		#folder = {
+		#	name = land_doctrine_folder
+		#	position = {
+		#		x = -2
+		#		y = 2
+		#	}
+		#}
 	}
 	Abydos_1 = {
 		xp_research_type = army
 		xp_unlock_cost = 50
 		#xp_research_bonus = 1
+
+		allow = {
+			tag = ABY
+			##↓↓防止AI虚空研究这个科技，实装后可以去掉↓↓##
+			always = no
+		}
+
 		path = {
 			leads_to_tech = Abydos_2
 			research_cost_coeff = 1
@@ -2388,24 +2406,28 @@ technologies = {
 		max_dig_in = 5
 		dig_in_speed_factor = 0.25
 		enable_tactic = tactic_infantry_23
-		allow = {
-			tag = ABY
-		}
+
 		ai_will_do = {
 			factor = 30
 		}
-		folder = {
-			name = land_doctrine_folder
-			position = {
-				x = -2
-				y = 0
-			}
-		}
+		#folder = {
+		#	name = land_doctrine_folder
+		#	position = {
+		#		x = -2
+		#		y = 0
+		#	}
+		#}
 	}
 	Abydos_2 = {
 		xp_research_type = army
 		xp_unlock_cost = 150
 		#xp_research_bonus = 1
+
+		allow = {
+			tag = ABY
+			##↓↓防止AI虚空研究这个科技，实装后可以去掉↓↓##
+			always = no
+		}
 
 		doctrine = yes
 		research_cost = 4.5
@@ -2416,18 +2438,25 @@ technologies = {
 		ai_will_do = {
 			factor = 30
 		}
-		folder = {
-			name = land_doctrine_folder
-			position = {
-				x = -2
-				y = 2
-			}
-		}
+		#folder = {
+		#	name = land_doctrine_folder
+		#	position = {
+		#		x = -2
+		#		y = 2
+		#	}
+		#}
 	}
 	Hyakkiyako_1 = {
 		xp_research_type = army
 		xp_unlock_cost = 50
 		#xp_research_bonus = 1
+
+		allow = {
+			tag = HYA
+			##↓↓防止AI虚空研究这个科技，实装后可以去掉↓↓##
+			always = no
+		}
+
 		path = {
 			leads_to_tech = Hyakkiyako_2
 			research_cost_coeff = 1
@@ -2438,24 +2467,28 @@ technologies = {
 			land_doctrine
 			cat_grand_battle_plan
 		}
-		allow = {
-			tag = HYA
-		}
+		
 		ai_will_do = {
 			factor = 30
 		}
-		folder = {
-			name = land_doctrine_folder
-			position = {
-				x = -2
-				y = 0
-			}
-		}
+		#folder = {
+		#	name = land_doctrine_folder
+		#	position = {
+		#		x = -2
+		#		y = 0
+		#	}
+		#}
 	}
 	Hyakkiyako_2 = {
 		xp_research_type = army
 		xp_unlock_cost = 150
 		#xp_research_bonus = 1
+
+		allow = {
+			tag = HYA
+			##↓↓防止AI虚空研究这个科技，实装后可以去掉↓↓##
+			always = no
+		}
 
 		doctrine = yes
 		research_cost = 4.5
@@ -2466,18 +2499,25 @@ technologies = {
 		ai_will_do = {
 			factor = 30
 		}
-		folder = {
-			name = land_doctrine_folder
-			position = {
-				x = -2
-				y = 2
-			}
-		}
+		#folder = {
+		#	name = land_doctrine_folder
+		#	position = {
+		#		x = -2
+		#		y = 2
+		#	}
+		#}
 	}
 	Shanhaijing_1 = {
 		xp_research_type = army
 		xp_unlock_cost = 50
 		#xp_research_bonus = 1
+
+		allow = {
+			tag = SHA
+			##↓↓防止AI虚空研究这个科技，实装后可以去掉↓↓##
+			always = no
+		}
+
 		path = {
 			leads_to_tech = Shanhaijing_2
 			research_cost_coeff = 1
@@ -2488,24 +2528,28 @@ technologies = {
 			land_doctrine
 			cat_grand_battle_plan
 		}
-		allow = {
-			tag = SHA
-		}
+		
 		ai_will_do = {
 			factor = 30
 		}
-		folder = {
-			name = land_doctrine_folder
-			position = {
-				x = -2
-				y = 0
-			}
-		}
+		#folder = {
+		#	name = land_doctrine_folder
+		#	position = {
+		#		x = -2
+		#		y = 0
+		#	}
+		#}
 	}
 	Shanhaijing_2 = {
 		xp_research_type = army
 		xp_unlock_cost = 150
 		#xp_research_bonus = 1
+
+		allow = {
+			tag = SHA
+			##↓↓防止AI虚空研究这个科技，实装后可以去掉↓↓##
+			always = no
+		}
 
 		doctrine = yes
 		research_cost = 4.5
@@ -2516,18 +2560,25 @@ technologies = {
 		ai_will_do = {
 			factor = 30
 		}
-		folder = {
-			name = land_doctrine_folder
-			position = {
-				x = -2
-				y = 2
-			}
-		}
+		#folder = {
+		#	name = land_doctrine_folder
+		#	position = {
+		#		x = -2
+		#		y = 2
+		#	}
+		#}
 	}
 	RedWinter_1 = {
 		xp_research_type = army
 		xp_unlock_cost = 50
 		#xp_research_bonus = 1
+
+		allow = {
+			tag = RWT
+			##↓↓防止AI虚空研究这个科技，实装后可以去掉↓↓##
+			always = no
+		}
+
 		path = {
 			leads_to_tech = RedWinter_2
 			research_cost_coeff = 1
@@ -2538,24 +2589,28 @@ technologies = {
 			land_doctrine
 			cat_grand_battle_plan
 		}
-		allow = {
-			tag = RWT
-		}
+		
 		ai_will_do = {
 			factor = 30
 		}
-		folder = {
-			name = land_doctrine_folder
-			position = {
-				x = -2
-				y = 0
-			}
-		}
+		#folder = {
+		#	name = land_doctrine_folder
+		#	position = {
+		#		x = -2
+		#		y = 0
+		#	}
+		#}
 	}
 	RedWinter_2 = {
 		xp_research_type = army
 		xp_unlock_cost = 150
 		#xp_research_bonus = 1
+
+		allow = {
+			tag = RWT
+			##↓↓防止AI虚空研究这个科技，实装后可以去掉↓↓##
+			always = no
+		}
 
 		doctrine = yes
 		research_cost = 4.5
@@ -2566,18 +2621,25 @@ technologies = {
 		ai_will_do = {
 			factor = 30
 		}
-		folder = {
-			name = land_doctrine_folder
-			position = {
-				x = -2
-				y = 2
-			}
-		}
+		#folder = {
+		#	name = land_doctrine_folder
+		#	position = {
+		#		x = -2
+		#		y = 2
+		#	}
+		#}
 	}
 	Specialresponseteam_1 = {
 		xp_research_type = army
 		xp_unlock_cost = 50
 		#xp_research_bonus = 1
+
+		allow = {
+			tag = SRT
+			##↓↓防止AI虚空研究这个科技，实装后可以去掉↓↓##
+			always = no
+		}
+
 		path = {
 			leads_to_tech = Specialresponseteam_2
 			research_cost_coeff = 1
@@ -2596,24 +2658,28 @@ technologies = {
 		categories = {
 			land_doctrine
 		}
-		allow = {
-			tag = SRT
-		}
+		
 		ai_will_do = {
 			factor = 30
 		}
-		folder = {
-			name = land_doctrine_folder
-			position = {
-				x = -2
-				y = 0
-			}
-		}
+		#folder = {
+		#	name = land_doctrine_folder
+		#	position = {
+		#		x = -2
+		#		y = 0
+		#	}
+		#}
 	}
 	Specialresponseteam_2 = {
 		xp_research_type = army
 		xp_unlock_cost = 150
 		#xp_research_bonus = 1
+
+		allow = {
+			tag = SRT
+			##↓↓防止AI虚空研究这个科技，实装后可以去掉↓↓##
+			always = no
+		}
 
 		doctrine = yes
 		research_cost = 4.5
@@ -2624,18 +2690,25 @@ technologies = {
 		ai_will_do = {
 			factor = 30
 		}
-		folder = {
-			name = land_doctrine_folder
-			position = {
-				x = -2
-				y = 2
-			}
-		}
+		#folder = {
+		#	name = land_doctrine_folder
+		#	position = {
+		#		x = -2
+		#		y = 2
+		#	}
+		#}
 	}
 	Valkyrie_1 = {
 		xp_research_type = army
 		xp_unlock_cost = 50
 		#xp_research_bonus = 1
+
+		allow = {
+			tag = VAL
+			##↓↓防止AI虚空研究这个科技，实装后可以去掉↓↓##
+			always = no
+		}
+		
 		path = {
 			leads_to_tech = Valkyrie_2
 			research_cost_coeff = 1
@@ -2646,24 +2719,28 @@ technologies = {
 			land_doctrine
 			cat_grand_battle_plan
 		}
-		allow = {
-			tag = VAL
-		}
+		
 		ai_will_do = {
 			factor = 30
 		}
-		folder = {
-			name = land_doctrine_folder
-			position = {
-				x = -2
-				y = 0
-			}
-		}
+		#folder = {
+		#	name = land_doctrine_folder
+		#	position = {
+		#		x = -2
+		#		y = 0
+		#	}
+		#}
 	}
 	Valkyrie_2 = {
 		xp_research_type = army
 		xp_unlock_cost = 150
 		#xp_research_bonus = 1
+
+		allow = {
+			tag = VAL
+			##↓↓防止AI虚空研究这个科技，实装后可以去掉↓↓##
+			always = no
+		}
 
 		doctrine = yes
 		research_cost = 4.5
@@ -2674,13 +2751,13 @@ technologies = {
 		ai_will_do = {
 			factor = 30
 		}
-		folder = {
-			name = land_doctrine_folder
-			position = {
-				x = -2
-				y = 2
-			}
-		}
+		#folder = {
+		#	name = land_doctrine_folder
+		#	position = {
+		#		x = -2
+		#		y = 2
+		#	}
+		#}
 	}
 	Arius_1 = {
 		xp_research_type = army

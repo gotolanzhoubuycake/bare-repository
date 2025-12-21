@@ -910,6 +910,8 @@ heavy_bm_aa_MK4_desc: "先进的重型防空机甲，拥有凶猛的防空火力
 heavy_bm_destroyer_MK4: "重型格斗机甲 MK4"
 # heavy_bm_destroyer_MK4_desc: "专用于反装甲的先进重型机甲，一旦跟上，就能摧毁任何敌人的装甲单位。"
 
+assault_vehicle_dummy_upgrade: "改进自救工具"
+assault_vehicle_dummy_upgrade_desc: "调整了大小与折叠性，可以收纳在工具箱或装甲挂点上的自救工具，可以处理一些意外情况。"
 assault_vehicle_attack_upgrade1: "突击载具武备升级 MK1"
 assault_vehicle_attack_upgrade1_desc: "改进的弹药和主要武器提升了载具的火力。"
 assault_vehicle_attack_upgrade2: "突击载具武备升级 MK2"

@@ -1,0 +1,7 @@
+spriteTypes = {
+    #spriteType = { 
+	#	name = "GFX_unit_category_support_artillery"
+	#	textureFile = "gfx/interface/counters/divisions_large/support_unit_art_icon.dds"
+	#	noOfFrames = 2
+	#}
+}

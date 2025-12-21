@@ -41,14 +41,14 @@ duplicate_archetypes = {
 	#中型无人机
 	medium_uav_cas_airframe = {
 		archetype = medium_uav_airframe
-		type = cas
+		type = tactical_bomber
 		air_map_icon_frame = 2
 		interface_overview_category_index = 3
 	}
 	#无人机
 	heavy_uav_cas_airframe = {
 		archetype = heavy_uav_airframe
-		type = cas
+		type = strat_bomber
 		air_map_icon_frame = 14
 		interface_overview_category_index = 3
 	}

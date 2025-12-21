@@ -117,7 +117,8 @@ soundeffect = {
 		sound = TRI_idle_7
 		sound = TRI_idle_8
 		sound = TRI_idle_9
-		sound = TRI_idle_10
+		##亲爱的没有语音10
+		#sound = TRI_idle_10
 	} 
 	max_audible = 1
 	max_audible_behaviour = fail
