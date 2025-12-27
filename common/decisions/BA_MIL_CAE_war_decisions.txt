@@ -1,0 +1,3 @@
+MIL_cae_war_decision_category = {
+
+}
