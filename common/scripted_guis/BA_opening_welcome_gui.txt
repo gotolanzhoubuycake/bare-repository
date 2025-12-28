@@ -52,6 +52,12 @@ scripted_gui = {
 					BARE_opening_welcome_type = 3 
 				}
 			}
+
+			BARE_openingWelcome_type_button_5_click = {
+				set_variable = {
+					BARE_opening_welcome_type = 4 
+				}
+			}
 		}
 
 		triggers = {
@@ -159,6 +165,29 @@ scripted_gui = {
 		
 		}
 	}
+
+	BARE_welcome_splash_text_5 = {
+		context_type = player_context
+		window_name = "BARE_welcome_splash_text_5_container"
+		parent_window_name = "BA_welcome_splash_container" 
+		dirty = BARE_opening_welcome_type
+		ai_enabled = {
+			always = no
+		}
+
+		visible = {
+			check_variable = {
+				BARE_opening_welcome_type = 4
+			}
+		}
+
+		triggers = {
+
+		
+		}
+	}
+
+	
 
 }
 

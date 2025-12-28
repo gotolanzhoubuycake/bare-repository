@@ -296,7 +296,7 @@ guiTypes = {
 			
 		ButtonType = {
 			name = "single_player_button"
-			position = { x = 580% y = 110% }
+			position = { x = 580% y = 70% }
 			quadTextureSprite ="GFX_mm_start_game"			
 			clicksound = click_default			
 			oversound = ui_menu_over
@@ -304,7 +304,7 @@ guiTypes = {
 
 		ButtonType = {
 			name = "multi_player_button"
-			position = { x = 555 y = 340%}
+			position = { x = 555 y = 300%}
 			quadTextureSprite ="GFX_mm_mutiplayer"			
 			clicksound = click_default
 			oversound = ui_menu_over
@@ -320,7 +320,7 @@ guiTypes = {
 		instantTextBoxType = {
 
 			name ="version_label"
-			position = { x = 800 y = 372% }
+			position = { x = -600 y = 602% }
 			textureFile = ""
 			font = "hoi_18b"
 			borderSize = {x = 0 y = 0}
@@ -338,7 +338,7 @@ guiTypes = {
 		
 		ButtonType = {
 			name = "settings_button"
-			position = { x = 1030 y = 350% }
+			position = { x = 1030 y = 310% }
 			quadTextureSprite ="GFX_mm_settings"	
 			clicksound = click_default
 			oversound = ui_menu_over
@@ -346,7 +346,7 @@ guiTypes = {
 		
 		buttonType = {
 			name = "career_profile_button"
-			position = {  x = 435 y = 482% }
+			position = {  x = 435 y = 442% }
 			quadTextureSprite ="GFX_mm_personal_document"
 			clicksound = click_default
 			oversound = ui_menu_over
@@ -373,7 +373,7 @@ guiTypes = {
 
 		ButtonType = {
 			name = "credits_button"
-			position = { x = 691 y = 487%}
+			position = { x = 691 y = 447%}
 			quadTextureSprite ="GFX_mm_credits"	
 			clicksound = click_default
 			oversound = ui_menu_over
@@ -381,7 +381,7 @@ guiTypes = {
 		
 		ButtonType = {
 			name = "nudge_button"
-			position = { x = 1030 y = 417% }
+			position = { x = 1030 y = 377% }
 			quadTextureSprite ="GFX_mm_nudge"
 			clicksound = click_default
 			oversound = ui_menu_over
@@ -389,7 +389,7 @@ guiTypes = {
 
 		ButtonType = {
 			name = "exit_button"
-			position = { x = 945 y = 492% }
+			position = { x = 945 y = 452% }
 			quadTextureSprite ="GFX_mm_exit"		
 			clicksound = click_default
 			oversound = ui_menu_over
