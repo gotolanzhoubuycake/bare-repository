@@ -70,3 +70,7 @@
  MIL_award_game_development_test: "开发试玩版本"
  MIL_award_game_development_debug: "改进游戏机制设计"
  MIL_award_game_department_new_invention: "千年游戏大赏"
+
+ MIL_CAE_economic_situation: "凯撒经济状况"
+ MIL_cae_war_decision_category: "凯撒冲突决议组"
+ MIL_cae_war_decision_category_desc: "凯撒冲突决议组"

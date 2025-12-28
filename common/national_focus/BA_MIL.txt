@@ -191,6 +191,14 @@ focus_tree = {
 		prerequisite = {
 			focus = MIL_fuck_kaiser
 		}
+
+		completion_reward = {
+			set_variable = {
+				var = cae_economic_situation
+				value = 120
+				tooltip = MIL_CAE_economic_situation
+			}
+		}
 	}
 	focus = { #守护我们的千年！
 		id = MIL_protect_mil
