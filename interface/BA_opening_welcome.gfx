@@ -28,6 +28,10 @@ spriteTypes = {
 		textureFile = "gfx/interface/opening_welcome/school/BARE_openingWelcome_school_bg_ALF.dds"
 	}
 	spriteType = {
+		name = "GFX_BARE_openingWelcome_school_bg_MIL"
+		textureFile = "gfx/interface/opening_welcome/school/BARE_openingWelcome_school_bg_MIL.dds"
+	}
+	spriteType = {
 		name = "GFX_BARE_openingWelcome_type_button"
 		textureFile = "gfx/interface/opening_welcome/BARE_openingWelcome_type_button_bg.dds"
 	}

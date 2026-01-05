@@ -68,6 +68,7 @@ scripted_gui = {
 					tag = GEH
 					tag = TRI
 					tag = ALF
+					tag = MIL
 				}
                 is_ai = no
 			}
