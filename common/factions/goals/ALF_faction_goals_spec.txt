@@ -192,18 +192,19 @@ ALF_faction_goal_unlock_military = {
 	}
 }
 
-
 ##组建联合科研机关
 ALF_faction_goal_unlock_research = {
 	name = ALF_faction_goal_unlock_research_name
 	description = ALF_faction_goal_unlock_research_desc
-	category = short_term
+	category = medium_term
 	group = FOCUS_FILTER_RESEARCH
 	available = {
-		FROM = { tag = ALF }
+		FROM = {
+			tag = ALF
+		}
 	}
 	visible = {
-		FROM = { 
+		FROM = {
 			has_faction_research_unlocked = no
 			tag = ALF
 		}
@@ -230,7 +231,7 @@ ALF_faction_goal_unlock_research = {
 		}
 	}
 	ai_will_do = {
-		base = 1000 # They should always do this if they can
+		base = 1000		# They should always do this if they can
 	}
 }
 
@@ -317,8 +318,212 @@ ALF_faction_goal_spy_master = {
 
 ##中期
 ##工业发展
+ALF_faction_industrial_expansion = {
+	name = ALF_faction_industrial_expansion_name
+	description = ALF_faction_industrial_expansion_desc
+	category = medium_term
+	group = FOCUS_FILTER_INDUSTRY
+	available = {
+		FROM = {
+			tag = ALF
+		}
+	}
+	visible = {
+		FROM = {
+			tag = ALF
+		}
+	}
+	#select_effect = {
+	#
+	#}
+	#auto_complete = yes
+	completed = {
+		ALF = {
+			num_of_factories > 70
+		}
+	}
+	complete_effect = {
+		ALF = {
+			ALF_medium_improve_livability_modifier_effect = yes
+			add_faction_power_projection = 50
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_faction_initiative = 1
+			custom_effect_tooltip = generic_skip_one_line_tt
+			random_owned_state = {
+				limit = {
+					is_owned_and_controlled_by = ALF
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = heavy_arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_owned_and_controlled_by = ALF
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = heavy_arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		#弹窗#
+		hidden_effect = {
+			every_faction_member = {
+				limit = {
+					is_ai = no
+				}
+				set_variable = {
+					faction_goal_type_index = 7
+				}
+				BARE_FIRE_FACTION_GOAL_COMPLETE_POPUP_EFFECT = yes
+			}
+		}
+	}
+	ai_will_do = {
+		base = 1000		# They should always do this if they can
+	}
+}
+
 ##通电
+ALF_faction_ensure_power_supply = {
+	name = ALF_faction_ensure_power_supply_name
+	description = ALF_faction_ensure_power_supply_desc
+	category = medium_term
+	group = resources_to_market_icon
+	available = {
+		FROM = {
+			tag = ALF
+		}
+	}
+	visible = {
+		FROM = {
+			tag = ALF
+		}
+	}
+	#select_effect = {
+	#
+	#}
+	#auto_complete = yes
+	completed = {
+		ALF = {
+			has_resources_in_country = {
+				resource = resources_el
+				amount > 499
+				extracted = yes
+			}
+		}
+	}
+	complete_effect = {
+		ALF = {
+			ALF_medium_improve_livability_modifier_effect = yes
+			add_stability = 0.1
+			add_war_support = 0.1
+			add_faction_power_projection = 50
+			custom_effect_tooltip = generic_skip_one_line_tt		
+			random_owned_state = {
+				limit = {
+					is_owned_and_controlled_by = ALF
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = fuel_silo
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_owned_and_controlled_by = ALF
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = fuel_silo
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		#弹窗#
+		hidden_effect = {
+			every_faction_member = {
+				limit = {
+					is_ai = no
+				}
+				set_variable = {
+					faction_goal_type_index = 8
+				}
+				BARE_FIRE_FACTION_GOAL_COMPLETE_POPUP_EFFECT = yes
+			}
+		}
+	}
+	ai_will_do = {
+		base = 1000		# They should always do this if they can
+	}
+}
+
 ##击败凯撒集团
+ALF_faction_knock_out_kaiser = {
+	name = ALF_faction_knock_out_kaiser_name
+	description = ALF_faction_knock_out_kaiser_desc
+	category = long_term
+	group = FOCUS_FILTER_ANNEXATION
+	available = {
+		FROM = {
+			tag = ALF
+		}
+	}
+	visible = {
+		FROM = {
+			tag = ALF
+		}
+	}
+	#select_effect = {
+	#
+	#}
+	#auto_complete = yes
+	completed = {
+		ALF = {
+			has_country_flag = ALF_faction_knock_out_kaiser_goal_flag
+		}
+	}
+	complete_effect = {
+		ALF = {
+			add_political_power = 100
+			add_mastery = {
+				amount = 50
+				# FILTERS:
+				folder = baland
+			}
+			ALF_improve_livability_5_pts = yes
+			add_faction_power_projection = 50
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_faction_initiative = 1
+			custom_effect_tooltip = generic_skip_one_line_tt
+		}
+		#弹窗#
+		hidden_effect = {
+			every_faction_member = {
+				limit = {
+					is_ai = no
+				}
+				set_variable = {
+					faction_goal_type_index = 9
+				}
+				BARE_FIRE_FACTION_GOAL_COMPLETE_POPUP_EFFECT = yes
+			}
+		}
+	}
+	ai_will_do = {
+		base = 1000		# They should always do this if they can
+	}
+}
+
 ##长期
 ALF_faction_goal_back_to_home = {
 	name = ALF_faction_goal_back_to_home_name

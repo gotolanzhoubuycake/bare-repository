@@ -227,7 +227,7 @@ equipments = {
 		is_convertable = yes
 		picture = archetype_strat_bomber_equipment
 		is_buildable = no
-		type = heavy_fighter
+		type = fighter
 		type_override = fixed_main_weapon_slot
 		allowed_types = {
 			fighter

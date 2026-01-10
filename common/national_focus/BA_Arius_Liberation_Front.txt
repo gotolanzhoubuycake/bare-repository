@@ -132,7 +132,7 @@ focus_tree = {
     focus = {
         #阴影……
         id = ALF_threat_is_coming
-        icon = GFX_goal_unknown
+        icon = GFX_goal_ALF_threat_is_coming
         relative_position_id = ALF_stand_our_ground
         prerequisite = {
             focus = ALF_stand_our_ground
@@ -154,7 +154,7 @@ focus_tree = {
     focus = {
         #组建自警团
         id = ALF_establish_law_enforement_team
-        icon = GFX_goal_unknown
+        icon = GFX_goal_ALF_establish_law_enforement_team
         relative_position_id = ALF_threat_is_coming
         prerequisite = {
             focus = ALF_threat_is_coming
@@ -175,7 +175,7 @@ focus_tree = {
     focus = {
         #启用废弃库存
         id = ALF_Enable_abandoned_inventory
-        icon = GFX_goal_unknown
+        icon = GFX_goal_ALF_Enable_abandoned_inventory
         relative_position_id = ALF_threat_is_coming
         prerequisite = {
             focus = ALF_threat_is_coming
@@ -193,7 +193,7 @@ focus_tree = {
     focus = {
         #重组邮政系统
         id = ALF_Reorganize_the_postal_system
-        icon = GFX_goal_unknown
+        icon = GFX_goal_ALF_Reorganize_the_postal_system
         relative_position_id = ALF_threat_is_coming
         prerequisite = {
             focus = ALF_threat_is_coming
@@ -210,7 +210,7 @@ focus_tree = {
     focus = {
         #进行社区摸排
         id = ALF_Conduct_community_surveys
-        icon = GFX_goal_unknown
+        icon = GFX_goal_ALF_Conduct_community_surveys
         relative_position_id = ALF_threat_is_coming
         prerequisite = {
             focus = ALF_threat_is_coming
@@ -237,7 +237,7 @@ focus_tree = {
     focus = {
         #作战计划：庇护之羽
         id = ALF_operation_protect_wing
-        icon = GFX_goal_unknown
+        icon = GFX_goal_ALF_operation_protect_wing
         relative_position_id = ALF_threat_is_coming
         prerequisite = {
             focus = ALF_threat_is_coming
@@ -265,7 +265,7 @@ focus_tree = {
     focus = {
         #目标：金钗盗贼团
         id = ALF_target_HTG
-        icon = GFX_goal_unknown
+        icon = GFX_goal_ALF_target_HTG
         relative_position_id = ALF_operation_protect_wing
         prerequisite = {
             focus = ALF_operation_protect_wing
@@ -292,7 +292,7 @@ focus_tree = {
     focus = {
         #目标：圣徒升天会
         id = ALF_target_COS
-        icon = GFX_goal_unknown
+        icon = GFX_goal_ALF_target_COS
         relative_position_id = ALF_operation_protect_wing
         prerequisite = {
             focus = ALF_operation_protect_wing
@@ -319,7 +319,7 @@ focus_tree = {
     focus = {
         #噤声行动
         id = ALF_target_AVG
-        icon = GFX_goal_unknown
+        icon = GFX_goal_ALF_target_AVG
         relative_position_id = ALF_operation_protect_wing
         prerequisite = {
             focus = ALF_operation_protect_wing
@@ -343,7 +343,7 @@ focus_tree = {
     focus = {
         #升起旗帜
         id = ALF_Raise_the_flag
-        icon = GFX_goal_unknown
+        icon = GFX_goal_ALF_Raise_the_flag
         relative_position_id = ALF_target_AVG
         prerequisite = {
             focus = ALF_target_AVG

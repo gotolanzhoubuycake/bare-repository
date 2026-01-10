@@ -56,6 +56,12 @@
  ALF_faction_goal_unlock_research_name: "组建联合研究所"
  ALF_faction_goal_unlock_research_desc: "和自由飞行员的合作也许是一个机遇：她们拥有先进的航空技术和经验，通过合作，流亡者们在航空技术上的空白也许能迎头赶上。\n\n§G钢铁的伊卡洛斯不惧烈阳。§!"
 
+ ALF_faction_industrial_expansion_name: "工业扩张计划"
+ ALF_faction_industrial_expansion_desc: "思想的批判远不及物质的批判。我们必须确保拥有足够的工业产能，才能在接下来的决战中有一战之力。"
+
+ ALF_faction_ensure_power_supply_name: "完成用电覆盖"
+ ALF_faction_ensure_power_supply_desc: "电力供应始终是我们需要关注的核心问题。确保全域供电是我们对于所有人的重要承诺。"
+
  ALF_faction_knock_out_kaiser_name: "击退凯撒集团"
  ALF_faction_knock_out_kaiser_desc: "凯撒集团一直在秘密支持黑市地带的各种暴力社团。必须以强而有力的行动，斩断这只幕后黑手。"
  ALF_faction_knock_out_kaiser_goal_flag: "在§Y公司战争§!中取得§G胜利§!"

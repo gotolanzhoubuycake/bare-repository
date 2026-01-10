@@ -74,6 +74,39 @@ defined_text = {
 	}
 
 	text = {
+		trigger = {
+			ROOT = {
+				check_variable = {
+					faction_goal_type_index = 7
+				}
+			}
+		}
+		localization_key = ALF_faction_industrial_expansion_name
+	}
+
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = {
+					faction_goal_type_index = 8
+				}
+			}
+		}
+		localization_key = ALF_faction_ensure_power_supply_name
+	}
+
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = {
+					faction_goal_type_index = 9
+				}
+			}
+		}
+		localization_key = ALF_faction_knock_out_kaiser_name
+	}
+
+	text = {
 	    localization_key = FACTION_GOAL_INDEX_SL_DEFAULT_DESC
 	}
 }

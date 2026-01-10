@@ -808,6 +808,7 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			set_country_flag = ALF_knock_down_the_giant_achievement_flag
+			set_country_flag = ALF_faction_knock_out_kaiser_goal_flag
 		}
 	}
 	option = {

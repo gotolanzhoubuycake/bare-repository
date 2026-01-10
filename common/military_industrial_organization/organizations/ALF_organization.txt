@@ -115,6 +115,7 @@ ALF_plane_Organization_Producter = {
 	available = {
 		FROM = {
 			tag = ALF
+			has_completed_focus = ALF_united_research_facility
 		}
 	}
 }
@@ -133,6 +134,7 @@ ALF_helicopter_Organization_Producter = {
 	available = {
 		FROM = {
 			tag = ALF
+			has_completed_focus = ALF_united_research_facility
 		}
 	}
 }
