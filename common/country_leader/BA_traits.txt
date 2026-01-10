@@ -1295,7 +1295,7 @@ leader_traits = {
 	##分析员
 	ALF_intelligence_analyst = {
 		random = no
-		decryption = 1
+		decryption_power = 1
 		operative_slot = 1
 		agency_upgrade_time = -0.2
 	}
