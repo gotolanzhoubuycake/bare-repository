@@ -1,10 +1,20 @@
 #权力平衡决议组
 MIL_bop_decision_category = {
-	icon = generic_research
+    icon = generic_research
 
 
-	visible = {
-		original_tag = MIL
-	}
-	priority = 1098
+    visible = {
+        original_tag = MIL
+    }
+    priority = 1098
+}
+
+# 与凯撒的冲突决议组 -- 千年侧
+MIL_cae_war_decision_category = {
+    icon = generic_research
+
+    visible = {
+        original_tag = MIL
+    }
+    priority = 1099 # 位置待调整
 }

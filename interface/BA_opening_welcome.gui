@@ -28,7 +28,7 @@ guiTypes = {
 
         buttonType = {
             name = "BARE_openingWelcome_type_button_1"
-			position = { x = 303 y = 259 }
+			position = { x = 263 y = 259 }
             orientation = UPPER_LEFT
 
             quadTextureSprite = "GFX_BARE_openingWelcome_type_button"
@@ -40,7 +40,7 @@ guiTypes = {
 
         buttonType = {
             name = "BARE_openingWelcome_type_button_2"
-			position = { x = 539 y = 259 }
+			position = { x = 459 y = 259 }
             orientation = UPPER_LEFT
 
            quadTextureSprite = "GFX_BARE_openingWelcome_type_button"
@@ -52,7 +52,7 @@ guiTypes = {
 
         buttonType = {
            name = "BARE_openingWelcome_type_button_3"
-			position = { x = 765 y = 259 }
+			position = { x = 665 y = 259 }
             orientation = UPPER_LEFT
 
             quadTextureSprite = "GFX_BARE_openingWelcome_type_button"
@@ -60,11 +60,21 @@ guiTypes = {
             buttonFont = "FZLanTYJW_B_36"
             clicksound = click_default
         }
+        
+        buttonType = {
+            name = "BARE_openingWelcome_type_button_5"
+			position = { x = 861 y = 259 }
+            orientation = UPPER_LEFT
 
+            quadTextureSprite = "GFX_BARE_openingWelcome_type_button"
+            text = "BARE_openingWelcome_type_button_5_text"
+            buttonFont = "FZLanTYJW_B_36"
+            clicksound = click_default
+        }
 
         buttonType = {
             name = "BARE_openingWelcome_type_button_4"
-			position = { x = 1001 y = 259 }
+			position = { x = 1017 y = 259 }
             orientation = UPPER_LEFT
 
             quadTextureSprite = "GFX_BARE_openingWelcome_type_button"
@@ -258,6 +268,41 @@ guiTypes = {
     }
 
 
-    
+    containerWindowType = {
+        name = "BARE_welcome_splash_text_5_container"
+		size = { width = 960 height = 460 }
+		position = { x = 45 y = 389 }
+
+		background = {
+			name = "Background"
+            spriteType ="GFX_tiled_window_transparent"
+		}
+        
+        # instantTextboxType = {
+        #     name = "welcome_text"
+        #     position = { x = 0 y = 0 }
+        #     orientation = UPPER_LEFT
+        #     font = "LXGW_975_20b"
+        #     borderSize = {x = 0 y = 0}
+        #     text = "BARE_welcome_text"
+        #     format = left
+        #     scrollbarType = "BA_welcome_ipad_scroll"
+        #     maxWidth = 943
+        #     maxHeight = 454
+        # }
+
+        instantTextboxType = {
+            name = "welcome_text_thanks"
+           position = { x = 0 y = 0 }
+            orientation = UPPER_LEFT
+            font = "FZLanTYJW_B_20"
+            borderSize = {x = 0 y = 0}
+            text = "BARE_welcome_text"
+            format = center
+            scrollbarType = "BA_welcome_ipad_scroll"
+            maxWidth = 943
+            maxHeight = 454
+        }
+    }
 }
 

@@ -79,6 +79,27 @@ Get_BARE_welcome_text = {
 		localization_key = ALF_welcome_text_2
 	}
 
+
+	text = {
+		trigger = { 
+			check_variable = {
+				BARE_opening_welcome_type = 0
+			}
+			tag = MIL
+		}
+		localization_key = MIL_welcome_text_1
+	}
+
+	text = {
+		trigger = { 
+			check_variable = {
+				BARE_opening_welcome_type = 1
+			}
+			tag = MIL
+		}
+		localization_key = MIL_welcome_text_2
+	}
+
 	text = {
 		trigger = { 
 			check_variable = {
@@ -111,6 +132,14 @@ Get_BARE_welcome_text = {
 			}
 		}
 		localization_key = welcome_text_4
+	}
+	text = {
+		trigger = { 
+			check_variable = {
+				BARE_opening_welcome_type = 4
+			}
+		}
+		localization_key = welcome_text_5
 	}
 	text = {
 		localization_key = ""
@@ -221,6 +250,29 @@ Get_BARE_openingWelcome_type_button_4_text = {
 	}
 }
 
+Get_BARE_openingWelcome_type_button_5_text = {
+	name = Get_BARE_openingWelcome_type_button_5_text
+
+	text = {
+		trigger = { 
+			check_variable = {
+				BARE_opening_welcome_type = 4
+			}
+		}
+		localization_key = BARE_openingWelcome_type_button_5_on
+	}
+
+	text = {
+		trigger = { 
+			not = {
+				check_variable = {
+					BARE_opening_welcome_type = 4
+				}
+			}
+		}
+		localization_key = BARE_openingWelcome_type_button_5_off
+	}
+}
 
 
 Get_BARE_openingWelcome_school_bg = {
@@ -254,6 +306,13 @@ Get_BARE_openingWelcome_school_bg = {
 	}
 
 	text = {
+		trigger = { 
+			tag = MIL
+		}
+		localization_key = "GFX_BARE_openingWelcome_school_bg_MIL"
+	}
+
+	text = {
 		localization_key = "GFX_BARE_openingWelcome_school_bg_normal"
 	}
 }
@@ -269,6 +328,7 @@ Get_BARE_openingWelcome_confirm_button_text = {
 				tag = TRI
 				tag = ARI
 				tag = GEH
+				tag = MIL
 				##
 				tag = ALF
 			}

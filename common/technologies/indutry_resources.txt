@@ -1082,11 +1082,12 @@ technologies = {
 
 		research_cost = 1.5
 		
-		
-		industrial_capacity_factory = 0.1
+		country_resource_resources_el = 48
+		industrial_capacity_factory = 0.05
 	}
 
 	Power_Development_T2 = {
+		energy_gain_factor = 0.03
 		folder = {
 			name = industry_resource_folder
 			position = {
@@ -1119,6 +1120,7 @@ technologies = {
 
 	}
 	Power_Development_T3 = {
+		energy_gain_factor = 0.03
 		folder = {
 			name = industry_resource_folder
 			position = {
@@ -1156,6 +1158,7 @@ technologies = {
 	}
 
 	Power_Development_T4 = {
+		energy_gain_factor = 0.03
 		folder = {
 			name = industry_resource_folder
 			position = {
@@ -1189,6 +1192,7 @@ technologies = {
 	}
 
 	Power_Development_T5 = {
+		energy_gain_factor = 0.03
 		folder = {
 			name = industry_resource_folder
 			position = {
@@ -1225,6 +1229,9 @@ technologies = {
 
 	####生态发电站
 	Ecological_power_generation_T1= {
+
+		energy_gain_factor = 0.03
+
 		folder = {
 			name = industry_resource_folder
 			position = {
@@ -1254,6 +1261,8 @@ technologies = {
 	}
 
 	Ecological_power_generation_T2 = {
+
+		energy_gain_factor = 0.03
 		folder = {
 			name = industry_resource_folder
 			position = {
@@ -1290,6 +1299,7 @@ technologies = {
 	}
 
 	Ecological_power_generation_T3 = {
+		energy_gain_factor = 0.03
 		folder = {
 			name = industry_resource_folder
 			position = {
@@ -1319,6 +1329,8 @@ technologies = {
 	}
 
 	Ecological_power_generation_T4 = {
+
+		energy_gain_factor = 0.03
 		folder = {
 			name = industry_resource_folder
 			position = {
@@ -1353,6 +1365,7 @@ technologies = {
 
 	####欧帕兹发电
 	Opaz_Power_Generation_T1= {
+		energy_gain_factor = 0.03
 		folder = {
 			name = industry_resource_folder
 			position = {
@@ -1383,6 +1396,7 @@ technologies = {
 	}
 
 	Opaz_Power_Generation_T2 = {
+		energy_gain_factor = 0.03
 		folder = {
 			name = industry_resource_folder
 			position = {
@@ -1419,6 +1433,7 @@ technologies = {
 	}
 
 	Opaz_Power_Generation_T3 = {
+		energy_gain_factor = 0.03
 		folder = {
 			name = industry_resource_folder
 			position = {
@@ -1448,6 +1463,7 @@ technologies = {
 	}
 
 	Opaz_Power_Generation_T4 = {
+		energy_gain_factor = 0.03
 		folder = {
 			name = industry_resource_folder
 			position = {
