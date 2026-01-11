@@ -47,6 +47,9 @@ ALF_armed_force_dynamic_modifier = {
 		always = yes
 	}
 	ALF_military_reform_int = ALF_military_reform_dynamic_modifier_var
+	
+	baland_mastery_gain_factor = 0.2
+	#operations_track_mastery_gain_factor = 0.1
 	##军事理念##
 	##训练
 	max_dig_in_factor = ALF_AMF_max_dig_in_factor_var

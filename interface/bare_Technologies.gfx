@@ -2384,4 +2384,15 @@ spriteTypes = {
 		name = "GFX_bd_medical_medium"
 		texturefile = "gfx/interface/technologies/bd_tech/bd_medical.dds"
 	}
+
+	##列车炮##
+	SpriteType = {
+		name = "GFX_railway_gun_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/generic_railway_gun.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_railway_gun_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/FRA_railway_gun.dds"
+	}
 }

@@ -439,8 +439,11 @@ Hipper_test_decisions_categories = {
             is_ai = no
         }
         complete_effect = {
-            ALF_WINS_EDEN_IRON_PACT_WAR_PEACE_EVENT_POPUP_EFFECT = yes
-            set_global_flag = EDEN_IRON_PACT_WAR_scenario_global_flag
+            CEN = {
+                TEST_BARE_PEACE_EVENT_POPUP_DEFAULT_FOR_CAPITULATION = yes
+            }
+            TEST_BARE_PEACE_EVENT_POPUP_DEFAULT_FOR_CAPITULATION = yes
+            #set_global_flag = EDEN_IRON_PACT_WAR_scenario_global_flag
         }
     }
     initializ_ALF_hipp = {

@@ -165,9 +165,9 @@ ALF_faction_goal_unlock_military = {
 		}
 	}
 	completed = {
-		scope:faction = {
+		ALF = {
 			has_army_manpower = {
-				size > 30000
+				size > 40000
 			}
 		}
 	}

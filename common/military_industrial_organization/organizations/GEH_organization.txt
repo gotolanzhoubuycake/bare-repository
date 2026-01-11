@@ -532,38 +532,14 @@ Gehenna_Volcano_support_equipment_organization = {
 		icon = GFX_generic_mio_trait_icon_efficiency_gain
 		special_trait_background = yes
 		position = {
-			x = 9
-			y = 1
+			x = 8
+			y = 4
 		}
 		available = {
-			if = {
-				limit = {
-					FROM = {
-						original_tag = GEH
-					}
-				}
-				FROM = {
-					mio:Gehenna_Volcano_support_equipment_organization = {
-						NOT = {
-							is_mio_trait_completed = GVS_Increase_Financing_size_trait
-						}
-					}
-				}
-			}
-			if = {
-				limit = {
-					FROM = {
-						original_tag = ALF
-					}
-				}
-				FROM = {
-					mio:ALF_Gehenna_Volcano_support_equipment_organization = {
-						NOT = {
-							is_mio_trait_completed = GVS_Increase_Financing_size_trait
-						}
-					}
-				}
-			}
+			
+		}
+		mutually_exclusive = {
+			GVS_Increase_Financing_size_trait
 		}
 		on_complete = {
 			set_variable = {
@@ -584,37 +560,13 @@ Gehenna_Volcano_support_equipment_organization = {
 		special_trait_background = yes
 		position = {
 			x = 9
-			y = 0
+			y = 4
 		}
 		available = {
-			if = {
-				limit = {
-					FROM = {
-						original_tag = GEH
-					}
-				}
-				FROM = {
-					mio:Gehenna_Volcano_support_equipment_organization = {
-						NOT = {
-							is_mio_trait_completed = GVS_Expansion_daily_necessities_trait
-						}
-					}
-				}
-			}
-			if = {
-				limit = {
-					FROM = {
-						original_tag = ALF
-					}
-				}
-				FROM = {
-					mio:ALF_Gehenna_Volcano_support_equipment_organization = {
-						NOT = {
-							is_mio_trait_completed = GVS_Expansion_daily_necessities_trait
-						}
-					}
-				}
-			}
+
+		}
+		mutually_exclusive = {
+			GVS_Expansion_daily_necessities_trait
 		}
 		on_complete = {
 			set_variable = {
@@ -632,7 +584,7 @@ Gehenna_Volcano_support_equipment_organization = {
 		special_trait_background = yes
 		position = {
 			x = 9
-			y = 3
+			y = 0
 		}
 		available = {
 			custom_trigger_tooltip = {

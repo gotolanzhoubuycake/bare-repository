@@ -1228,10 +1228,11 @@ tech_super_railwaygun_units_unlock: "超重型列车炮"
 
 railway_gun: "列车炮"
 railway_gun_equipment: "列车炮组件"
-railway_gun_equipment: "列车炮组件"
+railway_gun_equipment_1: "列车炮组件"
+railway_gun_equipment_2: "改进型列车炮组件"
 
 super_heavy_railway_gun: "超重型列车炮"
 super_heavy_railway_gun_equipment: "超重型列车炮组件"
-super_heavy_railway_gun_equipment: "超重型列车炮组件"
+super_heavy_railway_gun_equipment_1: "超重型列车炮组件"
 
 bare_rangers_support_tech: "游骑兵小队"

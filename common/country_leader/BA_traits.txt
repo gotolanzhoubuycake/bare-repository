@@ -1295,6 +1295,9 @@ leader_traits = {
 	##分析员
 	ALF_intelligence_analyst = {
 		random = no
+		resistance_growth = -0.05
+		civilian_intel_to_others = -10
+		army_intel_to_others = -10
 		decryption_power = 1
 		operative_slot = 1
 		agency_upgrade_time = -0.2
