@@ -13,3 +13,73 @@ MIL_Imaginary_System_Upgrade = { #虚数系统
     icon = "GFX_idea_unknown"
     research_speed_factor = MIL_award_imaginary_number_network_research_speed
 }
+#新建部门的混乱
+The_chaos_of_the_newly_established_department_modifier = {
+	
+	icon = "GFX_idea_unknown"
+	
+	#军队方面
+	combat_readiness_factor = established_department_combat_readiness_factor
+}
+
+#千年特战部队
+The_millennium_special_forces_modifier = {
+	
+	icon = "GFX_idea_unknown"
+	
+	#军队方面
+	combat_readiness_factor = special_forces_combat_readiness_factor
+}
+
+# 承平日久的安保部
+MIL_security_department_of_long_peace = {
+    icon = "MIL_security_department_of_long_peace"
+    
+    army_attack_factor = MIL_security_department_army_attack
+    army_defence_factor = MIL_security_department_army_defence
+    army_org_factor = MIL_security_department_army_org
+    planning_speed = MIL_security_department_planning_speed
+    planning_factor = MIL_security_department_planning_factor
+    land_doctrine_cost_factor = MIL_security_department_land_doctrine_cost
+    air_doctrine_cost_factor = MIL_security_department_air_doctrine_cost
+    army_chief_cost_factor = MIL_security_department_army_chief_cost
+    air_chief_cost_factor = MIL_security_department_air_chief_cost
+    high_command_cost_factor = MIL_security_department_high_command_cost
+}
+
+
+# 钢铁洪流
+MIL_steel_torrent = {
+    icon = GFX_idea_MIL_steel_torrent
+    enable = { always = yes }
+    
+    # Automaton/Mech modifiers
+    army_armor_speed_factor = MIL_var_steel_torrent_speed
+    army_armor_defence_factor = MIL_var_steel_torrent_defense
+    army_armor_breakthrough_factor = MIL_var_steel_torrent_breakthrough
+    army_armor_attack_factor = MIL_var_steel_torrent_attack
+    # Cost/Reliability handled via static idea or tech bonus
+}
+
+# 千年天空的守护者
+MIL_guardian_of_millennium_sky = {
+    icon = GFX_idea_MIL_guardian_of_millennium_sky
+    enable = { always = yes }
+    
+    air_mission_efficiency = MIL_var_sky_guardian_efficiency
+    air_night_penalty = MIL_var_sky_guardian_night_penalty
+    air_weather_penalty = MIL_var_sky_guardian_weather_penalty
+    air_experience_gain_factor = MIL_var_sky_guardian_xp_gain
+    air_ace_generation_chance_factor = MIL_var_sky_guardian_ace_chance
+    experience_loss_factor = MIL_var_sky_guardian_xp_loss
+}
+
+# 翱翔天际之鹰
+MIL_soaring_eagle = {
+    icon = GFX_idea_MIL_soaring_eagle
+    enable = { always = yes }
+    
+    air_mission_efficiency = 0.05
+    air_agility_factor = 0.05
+    # Production cost handled via static idea
+}

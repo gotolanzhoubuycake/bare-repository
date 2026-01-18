@@ -1680,11 +1680,15 @@ focus_tree = {
 		cost = 2
 		x = 80
 		y = 0
+		available = {
+			# 前置要求：财政危机已经缓解
+			# has_idea = TRI_financial_crisis_solved 
+		}
 		completion_reward = {
 			army_experience = 30
 			air_experience = 30
-			#解锁千年安全委员会校园防卫改革计划相关决议（第1，2条）
-			#触发事件“改革的方向”
+			# unlocking_decisions = MIL_security_reform_decisions # 解锁决议
+			# country_event = { id = mil_reform.1 } # 触发事件“改革的方向”
 		}
 	}
 	focus = { #整合C&C
@@ -1695,14 +1699,18 @@ focus_tree = {
 		cost = 3
 		x = -4
 		y = 1
-		prerequisite = {
-			focus = MIL_Security_Committee_Defense_Reform_Plan
+		prerequisite = { focus = MIL_Security_Committee_Defense_Reform_Plan }
+		available = {
+			# 研讨会选择了倾向C&C的改革方向
+			# has_country_flag = MIL_reform_direction_cc 
 		}
 		completion_reward = {
-			#解锁编制“千年特战生”
-			#获得科技“千年单兵特战机甲”
-			#解锁学院特殊科技中特战生相关分支
-			#获得民族精神“重组安保部”
+			# create_unit = ... # 解锁编制“千年特战生”
+			set_technologies = { individual_special_operations_mech_equipment_tech = 1 }
+			
+			# 获得民族精神“重组安保部” (整备度-50%, 持续180天)
+			# 这里我们添加动态修正，并设定一个计时器变量或使用 timed idea
+			add_dynamic_modifier = { modifier = MIL_reorganized_security_department_dynamic days = 180 }
 		}
 	}
 	focus = { #书记官的设想
@@ -1758,8 +1766,19 @@ focus_tree = {
 		}
 		completion_reward = {
 			army_experience = 50
-			#民族精神承平日久的安保部追加效果
+			add_to_variable = { MIL_security_department_army_attack = 0.05 }
+			add_to_variable = { MIL_security_department_army_defence = 0.05 }
+			add_to_variable = { MIL_security_department_planning_speed = 0.05 }
+			add_to_variable = { MIL_security_department_planning_factor = 0.05 }
 			#获得民族精神“千年特战部队”
+			add_temporary_status_base_modifier = { days = -1 } # 刷新修正强制生效
+			add_ideas = MIL_special_ops_force_1 # 获得新精神（暂无加成）
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = MIL_security_department_tooltip_3
+					add_idea = MIL_security_department_tooltip_4
+				}
+			}
 		}
 	}
 	focus = { #单兵特战机甲开发
@@ -1774,8 +1793,23 @@ focus_tree = {
 			focus = MIL_Special_Forces_Training_Program
 		}
 		completion_reward = {
-			#民族精神“千年特战部队”追加效果
-			#“单兵特战机甲改进”科技100%加速卡*1
+			# 分支逻辑判断：
+			# 情况A：如果目前是【基础版】，说明还没做训练国策 -> 变为【机甲版】
+			if = {
+				limit = { has_idea = MIL_special_ops_force_1 }
+				swap_ideas = {
+					remove_idea = MIL_special_ops_force_1
+					add_idea = MIL_special_ops_force_2_mech
+				}
+			}
+			# 情况B：如果目前是【训练版】，说明已经做了训练国策 -> 变为【合成版】
+			else = {
+				limit = { has_idea = MIL_special_ops_force_2_training }
+				swap_ideas = {
+					remove_idea = MIL_special_ops_force_2_training
+					add_idea = MIL_special_ops_force_3_combined
+				}
+			}
 		}
 	}
 	focus = { #C&C的地狱训练
@@ -1790,7 +1824,22 @@ focus_tree = {
 			focus = MIL_Special_Forces_Training_Program
 		}
 		completion_reward = {
-			#民族精神“千年特战部队”追加效果
+			# 分支逻辑判断：
+			# 情况A：如果目前是【基础版】，说明还没做机甲国策 -> 变为【训练版】
+			if = {
+				limit = { has_idea = MIL_special_ops_force_1 }
+				swap_ideas = {
+					remove_idea = MIL_special_ops_force_1
+					add_idea = MIL_special_ops_force_2_training
+				}
+			}
+			# 情况B：如果目前是【机甲版】，说明已经做了机甲国策 -> 变为【合成版】
+			else = {
+				swap_ideas = {
+					remove_idea = MIL_special_ops_force_2_mech
+					add_idea = MIL_special_ops_force_3_combined
+				}
+			}
 		}
 	}
 	focus = { #独属于千年的利刃
@@ -1808,8 +1857,21 @@ focus_tree = {
 			focus = MIL_Special_Forces_Exoskeleton_Development
 		}
 		completion_reward = {
-			#民族精神承平日久的安保部追加效果
-			#民族精神“千年特战部队”追加效果
+			add_to_variable = { MIL_security_department_army_attack = 0.05 }
+			add_to_variable = { MIL_security_department_army_defence = 0.05 }
+			add_to_variable = { MIL_security_department_planning_speed = 0.05 }
+			add_to_variable = { MIL_security_department_planning_factor = 0.05 }
+			swap_ideas = {
+				remove_idea = MIL_special_ops_force_3_combined
+				add_idea = MIL_special_ops_force_4_final
+			}
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = MIL_security_department_tooltip_1
+					add_idea = MIL_security_department_tooltip_2
+					
+				}
+			}
 		}
 	}
 	focus = { #机械筑成的高墙
@@ -1824,9 +1886,19 @@ focus_tree = {
 			focus = MIL_Security_Committee_Defense_Reform_Plan
 		}
 		completion_reward = {
-			#获得民族精神，“钢铁洪流”
-			#民族精神承平日久的安保部追加效果
-			#解锁自动机相关科技
+			add_to_variable = { MIL_security_department_army_attack = 0.05 }
+			add_to_variable = { MIL_security_department_army_defence = 0.05 }
+			add_to_variable = { MIL_security_department_planning_speed = 0.05 }
+			add_to_variable = { MIL_security_department_planning_factor = 0.05 }
+			add_idea = steel_torrent_modifier
+
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = MIL_security_department_tooltip_2
+					add_idea = MIL_security_department_tooltip_3
+				}
+				
+			}
 		}
 	}
 	focus = { #操作系统升级
@@ -1871,7 +1943,17 @@ focus_tree = {
 			focus = MIL_Operating_System_Upgrade
 		}
 		completion_reward = {
-			#民族精神民族精神承平日久的安保部追加效果
+			add_to_variable = { MIL_security_department_army_attack = 0.05 }
+			add_to_variable = { MIL_security_department_army_defence = 0.05 }
+			add_to_variable = { MIL_security_department_planning_speed = 0.05 }
+			add_to_variable = { MIL_security_department_planning_factor = 0.05 }
+
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = MIL_security_department_tooltip_3
+					add_idea = MIL_security_department_tooltip_4
+				}
+			}
 		}
 	}
 	focus = { #更强的火力更好的防护
