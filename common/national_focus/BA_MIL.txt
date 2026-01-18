@@ -1677,20 +1677,32 @@ focus_tree = {
 		id = MIL_Security_Committee_Defense_Reform_Plan
 		icon = GFX_goal_MIL_Security_Committee_Defense_Reform_Plan
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 2
 		x = 80
 		y = 0
+		completion_reward = {
+			army_experience = 30
+			air_experience = 30
+			#解锁千年安全委员会校园防卫改革计划相关决议（第1，2条）
+			#触发事件“改革的方向”
+		}
 	}
 	focus = { #整合C&C
 		id = MIL_Integrate_C_and_C
 		icon = GFX_goal_MIL_Integrate_C_and_C
 		relative_position_id = MIL_Security_Committee_Defense_Reform_Plan
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 3
 		x = -4
 		y = 1
 		prerequisite = {
 			focus = MIL_Security_Committee_Defense_Reform_Plan
+		}
+		completion_reward = {
+			#解锁编制“千年特战生”
+			#获得科技“千年单兵特战机甲”
+			#解锁学院特殊科技中特战生相关分支
+			#获得民族精神“重组安保部”
 		}
 	}
 	focus = { #书记官的设想
@@ -1698,11 +1710,16 @@ focus_tree = {
 		icon = GFX_goal_MIL_noa_Concept
 		relative_position_id = MIL_Security_Committee_Defense_Reform_Plan
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 2
 		x = -5
 		y = 2
 		prerequisite = {
 			focus = MIL_Integrate_C_and_C
+		}
+		#bypass = { NOT = { has_idea = 重组安保部 } }
+		completion_reward = {
+			army_experience = 50
+			#民族精神重组安保部追加效果
 		}
 	}
 	focus = { #Yuuka的约法三章
@@ -1710,11 +1727,16 @@ focus_tree = {
 		icon = GFX_goal_MIL_The_three_rules_of_Yuuka
 		relative_position_id = MIL_Security_Committee_Defense_Reform_Plan
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 2
 		x = -3
 		y = 2
 		prerequisite = {
 			focus = MIL_Integrate_C_and_C
+		}
+		#bypass = { NOT = { has_idea = 重组安保部 } }
+		completion_reward = {
+			army_experience = 50
+			#民族精神重组安保部追加效果
 		}
 	}
 	focus = { #特战生训练计划
@@ -1722,7 +1744,7 @@ focus_tree = {
 		icon = GFX_goal_MIL_Special_Forces_Training_Program
 		relative_position_id = MIL_Security_Committee_Defense_Reform_Plan
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 6
 		x = -4
 		y = 3
 		prerequisite = {
@@ -1731,17 +1753,29 @@ focus_tree = {
 		prerequisite = {
 			focus = MIL_noa_Concept
 		}
+		available = {
+			#NOT = { has_idea = 重组安保部 }
+		}
+		completion_reward = {
+			army_experience = 50
+			#民族精神承平日久的安保部追加效果
+			#获得民族精神“千年特战部队”
+		}
 	}
 	focus = { #单兵特战机甲开发
 		id = MIL_Special_Forces_Exoskeleton_Development
 		icon = GFX_goal_MIL_Special_Forces_Exoskeleton_Development
 		relative_position_id = MIL_Security_Committee_Defense_Reform_Plan
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 5
 		x = -5
 		y = 4
 		prerequisite = {
 			focus = MIL_Special_Forces_Training_Program
+		}
+		completion_reward = {
+			#民族精神“千年特战部队”追加效果
+			#“单兵特战机甲改进”科技100%加速卡*1
 		}
 	}
 	focus = { #C&C的地狱训练
@@ -1749,11 +1783,14 @@ focus_tree = {
 		icon = GFX_goal_MIL_Special_Forces_Hell_Training
 		relative_position_id = MIL_Security_Committee_Defense_Reform_Plan
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 5
 		x = -3
 		y = 4
 		prerequisite = {
 			focus = MIL_Special_Forces_Training_Program
+		}
+		completion_reward = {
+			#民族精神“千年特战部队”追加效果
 		}
 	}
 	focus = { #独属于千年的利刃
@@ -1761,7 +1798,7 @@ focus_tree = {
 		icon = GFX_goal_MIL_Special_Forces_Hell_Training_Unique
 		relative_position_id = MIL_Security_Committee_Defense_Reform_Plan
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 6
 		x = -4
 		y = 5
 		prerequisite = {
@@ -1770,17 +1807,26 @@ focus_tree = {
 		prerequisite = {
 			focus = MIL_Special_Forces_Exoskeleton_Development
 		}
+		completion_reward = {
+			#民族精神承平日久的安保部追加效果
+			#民族精神“千年特战部队”追加效果
+		}
 	}
 	focus = { #机械筑成的高墙
 		id = MIL_Mechanical_Built_High_Wall
 		icon = GFX_goal_MIL_Mechanical_Built_High_Wall
 		relative_position_id = MIL_Security_Committee_Defense_Reform_Plan
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 5
 		x = 0
 		y = 1
 		prerequisite = {
 			focus = MIL_Security_Committee_Defense_Reform_Plan
+		}
+		completion_reward = {
+			#获得民族精神，“钢铁洪流”
+			#民族精神承平日久的安保部追加效果
+			#解锁自动机相关科技
 		}
 	}
 	focus = { #操作系统升级
@@ -1788,11 +1834,14 @@ focus_tree = {
 		icon = GFX_goal_MIL_Operating_System_Upgrade
 		relative_position_id = MIL_Security_Committee_Defense_Reform_Plan
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 5
 		x = -1
 		y = 2
 		prerequisite = {
 			focus = MIL_Mechanical_Built_High_Wall
+		}
+		completion_reward = {
+			#民族精神“钢铁洪流”追加效果
 		}
 	}
 	focus = { #抽卡时间到
@@ -1800,11 +1849,14 @@ focus_tree = {
 		icon = GFX_goal_MIL_Card_Drawing_Time
 		relative_position_id = MIL_Security_Committee_Defense_Reform_Plan
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 5
 		x = 1
 		y = 2
 		prerequisite = {
 			focus = MIL_Mechanical_Built_High_Wall
+		}
+		completion_reward = {
+			#民族精神“钢铁洪流”追加效果
 		}
 	}
 	focus = { #自动机操作训练
@@ -1812,11 +1864,14 @@ focus_tree = {
 		icon = GFX_goal_MIL_Automaton_Operation_Training
 		relative_position_id = MIL_Security_Committee_Defense_Reform_Plan
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 5
 		x = -1
 		y = 3
 		prerequisite = {
 			focus = MIL_Operating_System_Upgrade
+		}
+		completion_reward = {
+			#民族精神民族精神承平日久的安保部追加效果
 		}
 	}
 	focus = { #更强的火力更好的防护
@@ -1824,11 +1879,14 @@ focus_tree = {
 		icon = GFX_goal_MIL_Stronger_Firepower_Better_Protection
 		relative_position_id = MIL_Security_Committee_Defense_Reform_Plan
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 5
 		x = 1
 		y = 3
 		prerequisite = {
 			focus = MIL_Card_Drawing_Time
+		}
+		completion_reward = {
+			#民族精神“钢铁洪流”追加效果
 		}
 	}
 	focus = { #千年的钢铁长城
@@ -1836,7 +1894,7 @@ focus_tree = {
 		icon = GFX_goal_MIL_Millennium_Steel_Wall
 		relative_position_id = MIL_Security_Committee_Defense_Reform_Plan
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 6
 		x = 0
 		y = 5
 		prerequisite = {
@@ -1844,6 +1902,9 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = MIL_Automaton_Operation_Training
+		}
+		completion_reward = {
+			#民族精神“钢铁洪流”追加效果
 		}
 	}
 	focus = { #重组安保部
@@ -1885,11 +1946,15 @@ focus_tree = {
 		icon = GFX_goal_MIL_Guard_the_Sky_of_a_Millennium
 		relative_position_id = MIL_Security_Committee_Defense_Reform_Plan
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 3
 		x = 5
 		y = 2
 		prerequisite = {
 			focus = MIL_Reorganize_the_Security_Department
+		}
+		completion_reward = {
+			air_experience = 100
+			#获得民族精神“千年天空的守护者”
 		}
 	}
 	focus = { #实用化无人机开发
@@ -1897,11 +1962,14 @@ focus_tree = {
 		icon = GFX_goal_MIL_Practical_Drone_Development
 		relative_position_id = MIL_Security_Committee_Defense_Reform_Plan
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 5
 		x = 4
 		y = 3
 		prerequisite = {
 			focus = MIL_Guard_the_Sky_of_a_Millennium
+		}
+		completion_reward = {
+			#解锁决议“实用化飞行器设计”
 		}
 	}
 	focus = { #悄无声息的猎杀者
@@ -1909,11 +1977,14 @@ focus_tree = {
 		icon = GFX_goal_MIL_Silent_Hunter
 		relative_position_id = MIL_Security_Committee_Defense_Reform_Plan
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 5
 		x = 4
 		y = 4
 		prerequisite = {
 			focus = MIL_Practical_Drone_Development
+		}
+		completion_reward = {
+			#民族精神千年天空的守护者追加效果
 		}
 	}
 	focus = { #小规模空中战术推演
@@ -1921,11 +1992,15 @@ focus_tree = {
 		icon = GFX_goal_MIL_Small_Scale_Air_Tactics
 		relative_position_id = MIL_Security_Committee_Defense_Reform_Plan
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 3
 		x = 6
 		y = 3
 		prerequisite = {
 			focus = MIL_Guard_the_Sky_of_a_Millennium
+		}
+		completion_reward = {
+			air_experience = 50
+			#民族精神千年天空的守护者追加效果
 		}
 	}
 	focus = { #“鹰击长空”对抗演习
@@ -1933,11 +2008,14 @@ focus_tree = {
 		icon = GFX_goal_MIL_Eagle_Strike_Exercise
 		relative_position_id = MIL_Security_Committee_Defense_Reform_Plan
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 6
 		x = 6
 		y = 4
 		prerequisite = {
 			focus = MIL_Small_Scale_Air_Tactics
+		}
+		completion_reward = {
+			#民族精神“千年天空的守护者”追加效果
 		}
 	}
 	focus = { #翱翔天际之鹰
@@ -1945,7 +2023,7 @@ focus_tree = {
 		icon = GFX_goal_MIL_Soaring_Sky_Eagle
 		relative_position_id = MIL_Security_Committee_Defense_Reform_Plan
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 6
 		x = 5
 		y = 5
 		prerequisite = {
@@ -1954,17 +2032,23 @@ focus_tree = {
 		prerequisite = {
 			focus = MIL_Silent_Hunter
 		}
+		completion_reward = {
+			#将民族精神“千年天空守护者”替换为“翱翔天际之鹰”，追加效果
+		}
 	}
 	focus = { #看不见的防线
 		id = MIL_Invisible_Defense_Line
 		icon = GFX_goal_MIL_Invisible_Defense_Line
 		relative_position_id = MIL_Security_Committee_Defense_Reform_Plan
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 3
 		x = 10
 		y = 2
 		prerequisite = {
 			focus = MIL_Reorganize_the_Security_Department
+		}
+		completion_reward = {
+			#获得民族精神“千年网络防线”
 		}
 	}
 	focus = { #信息安全大于天
@@ -1972,11 +2056,14 @@ focus_tree = {
 		icon = GFX_goal_MIL_Information_Security
 		relative_position_id = MIL_Security_Committee_Defense_Reform_Plan
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 3
 		x = 9
 		y = 3
 		prerequisite = {
 			focus = MIL_Invisible_Defense_Line
+		}
+		completion_reward = {
+			#民族精神“千年网络防线”追加效果
 		}
 	}
 	focus = { #千年学生信息系统
@@ -1984,7 +2071,7 @@ focus_tree = {
 		icon = GFX_goal_MIL_Millennium_Student_Information_System
 		relative_position_id = MIL_Security_Committee_Defense_Reform_Plan
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 3
 		x = 9
 		y = 4
 		prerequisite = {
@@ -1996,7 +2083,7 @@ focus_tree = {
 		icon = GFX_goal_MIL_Networked_Weapons
 		relative_position_id = MIL_Security_Committee_Defense_Reform_Plan
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 3
 		x = 11
 		y = 3
 		prerequisite = {
@@ -2008,11 +2095,14 @@ focus_tree = {
 		icon = GFX_goal_MIL_Networked_Weapons_Necessary
 		relative_position_id = MIL_Security_Committee_Defense_Reform_Plan
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 3
 		x = 11
 		y = 4
 		prerequisite = {
 			focus = MIL_Networked_Weapons
+		}
+		completion_reward = {
+			#解锁间谍行动“盒武器，启动！”
 		}
 	}
 	focus = { #坚不可摧的防线
@@ -2020,7 +2110,7 @@ focus_tree = {
 		icon = GFX_goal_MIL_Impenetrable_Defense_Line
 		relative_position_id = MIL_Security_Committee_Defense_Reform_Plan
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 3
 		x = 10
 		y = 5
 		prerequisite = {
@@ -2028,6 +2118,9 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = MIL_Millennium_Student_Information_System
+		}
+		completion_reward = {
+			#民族精神“千年网络防线”追加效果
 		}
 	}
 	focus = { #千年安定的守护者
