@@ -1706,7 +1706,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			# create_unit = ... # 解锁编制“千年特战生”
-			set_technologies = { individual_special_operations_mech_equipment_tech = 1 }
+			set_technology  = { individual_special_operations_mech_equipment_tech = 1 }
 			
 			# 获得民族精神“重组安保部” (整备度-50%, 持续180天)
 			# 这里我们添加动态修正，并设定一个计时器变量或使用 timed idea
@@ -1771,7 +1771,7 @@ focus_tree = {
 			add_to_variable = { MIL_security_department_planning_speed = 0.05 }
 			add_to_variable = { MIL_security_department_planning_factor = 0.05 }
 			#获得民族精神“千年特战部队”
-			add_temporary_status_base_modifier = { days = -1 } # 刷新修正强制生效
+			force_update_dynamic_modifier = yes
 			add_ideas = MIL_special_ops_force_1 # 获得新精神（暂无加成）
 			effect_tooltip = {
 				swap_ideas = {
@@ -1803,7 +1803,7 @@ focus_tree = {
 				}
 			}
 			# 情况B：如果目前是【训练版】，说明已经做了训练国策 -> 变为【合成版】
-			else = {
+			else_if = {
 				limit = { has_idea = MIL_special_ops_force_2_training }
 				swap_ideas = {
 					remove_idea = MIL_special_ops_force_2_training
@@ -1890,7 +1890,7 @@ focus_tree = {
 			add_to_variable = { MIL_security_department_army_defence = 0.05 }
 			add_to_variable = { MIL_security_department_planning_speed = 0.05 }
 			add_to_variable = { MIL_security_department_planning_factor = 0.05 }
-			add_idea = steel_torrent_modifier
+			add_ideas = steel_torrent_modifier
 
 			effect_tooltip = {
 				swap_ideas = {
