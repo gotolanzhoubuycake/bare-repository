@@ -1,0 +1,153 @@
+equipments = {
+
+	MIL_Individual_Special_Operations_Mech_equipment = {
+		year = 2019
+		is_archetype = yes
+		picture = archetype_medium_tank_equipment		
+		is_buildable = no
+		is_convertable = yes
+		type = mechanized
+		group_by = archetype
+		
+		interface_category = interface_category_armor
+		active = no
+		
+		#Misc Abilities
+		maximum_speed = 11
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 10
+		breakthrough = 30
+		hardness = 0.4
+		armor_value = 50
+
+		#Offensive Abilities
+		soft_attack = 40
+		hard_attack = 25
+		ap_attack = 25
+		air_attack = 0
+
+		#Space taken in convoy
+		lend_lease_cost = 12
+		
+		build_cost_ic = 2.5
+		resources = {
+			resources_cm = 3
+			resources_hic = 1
+		}
+	}
+	
+	
+	
+	MIL_Individual_Special_Operations_Mech_equipment_1 = {
+		#Misc Abilities
+		maximum_speed = 11
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 15
+		breakthrough = 35
+		hardness = 0.4
+		armor_value = 50
+
+		#Offensive Abilities
+		soft_attack = 40
+		hard_attack = 25
+		ap_attack = 25
+		air_attack = 0
+
+		#Space taken in convoy
+		lend_lease_cost = 12
+		
+		build_cost_ic = 2.5
+		resources = {
+			resources_cm = 3
+			resources_hic = 1
+		}
+		
+	}
+	MIL_Individual_Special_Operations_Mech_equipment_2 = {
+		#Misc Abilities
+		maximum_speed = 11
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 18
+		breakthrough = 40
+		hardness = 0.4
+		armor_value = 50
+
+		#Offensive Abilities
+		soft_attack = 45
+		hard_attack = 25
+		ap_attack = 25
+		air_attack = 0
+
+		#Space taken in convoy
+		lend_lease_cost = 12
+		
+		build_cost_ic = 2.6
+		resources = {
+			resources_cm = 3
+			resources_hic = 1
+		}
+		
+	}
+	MIL_Individual_Special_Operations_Mech_equipment_3 = {
+		#Misc Abilities
+		maximum_speed = 11
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 20
+		breakthrough = 45
+		hardness = 0.4
+		armor_value = 50
+
+		#Offensive Abilities
+		soft_attack = 50
+		hard_attack = 30
+		ap_attack = 25
+		air_attack = 0
+
+		#Space taken in convoy
+		lend_lease_cost = 12
+		
+		build_cost_ic = 2.7
+		resources = {
+			resources_cm = 3
+			resources_hic = 1
+		}
+		
+	}
+	MIL_Individual_Special_Operations_Mech_equipment_4 = {
+		#Misc Abilities
+		maximum_speed = 11
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 25
+		breakthrough = 45
+		hardness = 0.4
+		armor_value = 50
+
+		#Offensive Abilities
+		soft_attack = 60
+		hard_attack = 30
+		ap_attack = 25
+		air_attack = 0
+
+		#Space taken in convoy
+		lend_lease_cost = 12
+		
+		build_cost_ic = 2.8
+		resources = {
+			resources_cm = 3
+			resources_hic = 1
+		}
+		
+	}
+
+}
+	

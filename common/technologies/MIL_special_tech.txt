@@ -4,7 +4,10 @@ technologies = {
         start_year = 2019
 
         enable_equipments = {
-            Individual_Special_Operations_Mech_equipment
+            MIL_Individual_Special_Operations_Mech_equipment
+        }
+        enable_subunits = {
+            MIL_Individual_Special_Operations_Mech
         }
 
         allow = {
