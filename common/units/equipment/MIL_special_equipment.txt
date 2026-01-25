@@ -10,7 +10,6 @@ equipments = {
 		group_by = archetype
 		
 		interface_category = interface_category_armor
-		active = no
 		
 		#Misc Abilities
 		maximum_speed = 11
@@ -41,6 +40,8 @@ equipments = {
 	
 	
 	MIL_Individual_Special_Operations_Mech_equipment_1 = {
+
+		archetype = MIL_Individual_Special_Operations_Mech_equipment
 		#Misc Abilities
 		maximum_speed = 11
 		reliability = 0.8
@@ -68,6 +69,10 @@ equipments = {
 		
 	}
 	MIL_Individual_Special_Operations_Mech_equipment_2 = {
+
+		archetype = MIL_Individual_Special_Operations_Mech_equipment
+		parent = MIL_Individual_Special_Operations_Mech_equipment_1
+		
 		#Misc Abilities
 		maximum_speed = 11
 		reliability = 0.8
@@ -95,6 +100,10 @@ equipments = {
 		
 	}
 	MIL_Individual_Special_Operations_Mech_equipment_3 = {
+
+		archetype = MIL_Individual_Special_Operations_Mech_equipment
+
+		parent = MIL_Individual_Special_Operations_Mech_equipment_2
 		#Misc Abilities
 		maximum_speed = 11
 		reliability = 0.8
@@ -122,6 +131,10 @@ equipments = {
 		
 	}
 	MIL_Individual_Special_Operations_Mech_equipment_4 = {
+
+		archetype = MIL_Individual_Special_Operations_Mech_equipment
+
+		parent = MIL_Individual_Special_Operations_Mech_equipment_3
 		#Misc Abilities
 		maximum_speed = 11
 		reliability = 0.8

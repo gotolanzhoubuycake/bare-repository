@@ -9,6 +9,18 @@ MIL_bop_decision_category = {
     priority = 1098
 }
 
+MIL_Sport_decision_category = {
+    icon = generic_research
+
+
+    visible = {
+        original_tag = MIL
+    }
+    scripted_gui = BARE_MIL_sport_GUI_SG
+    visible_when_empty = yes
+    priority = 1098
+}
+
 # 与凯撒的冲突决议组 -- 千年侧
 MIL_cae_war_decision_category = {
     icon = generic_research

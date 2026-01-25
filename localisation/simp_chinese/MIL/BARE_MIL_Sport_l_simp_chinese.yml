@@ -1,0 +1,19 @@
+﻿l_simp_chinese:
+BARE_MIL_sport_GUI_Detail_Text: "§b“晄轮大祭”是基沃托斯最为重要的活动之一，而这一届的”晄轮大祭“将由千年科技学园举办，这不仅是我们千年科技学园风采的大好机会，更是扫清财政危机的阴霾的机会。\n\n但是”晄轮大祭“的准备工作将会消耗我们的大量资源，同时其准备工作的效果将会直接决定运动会的举办结果。而财政危机的余波尚未消散，我们的资源必须精打细算，同时在千年内部，有一部分学生学生因为不擅长运动而反对举办”晄轮大祭“，他们可能会采取破坏性的行动来表达意见。\n\n合理分配资源，开源节流，同时保证安保工作，将会是成功举办”晄轮大祭“的关键。千年科技学园将尽可能为其提供支持。§!"
+
+BARE_MIL_sport_GUI_Time_Text: "距离“晄轮大祭”举办剩余[?BARE_MIL_sport_Month_Time_Var]个自然月"
+BARE_MIL_sport_GUI_Top_Text: "“晄轮大祭”筹办工作数据统计"
+BARE_MIL_sport_GUI_Bottom_Text: "千年信息管理系统“有理数”"
+BARE_MIL_sport_GUI_Info_Text_1_1: "每月经费:"
+BARE_MIL_sport_GUI_Info_Text_1_2: "[?BARE_MIL_sport_Fee_Have_Var]/[?BARE_MIL_sport_Fee_All_Var]"
+BARE_MIL_sport_GUI_Info_Text_1_3: "额外获得:[?BARE_MIL_sport_Fee_Extra_Var]/每月消耗:[?BARE_MIL_sport_Fee_Month_Cost_Var]"
+
+BARE_MIL_sport_GUI_Info_Text_2_1: "安保等级:"
+BARE_MIL_sport_GUI_Info_Text_2_2: "[?BARE_MIL_sport_Security_Have_Var]/[?BARE_MIL_sport_Security_Max_Var]"
+BARE_MIL_sport_GUI_Info_Text_3_1: "科技等级:"
+BARE_MIL_sport_GUI_Info_Text_3_2: "[?BARE_MIL_sport_Tech_Have_Var]/[?BARE_MIL_sport_Tech_Max_Var]"
+
+BARE_MIL_sport_GUI_Info_Text_4_1: "学生支持度:[?BARE_MIL_sport_Student_Support_Var]%"
+
+BARE_MIL_sport_GUI_Info_Text_5_1: "准备综合评分:[?BARE_MIL_sport_Score_Var]"
+BARE_MIL_sport_GUI_Info_Text_6_1: "场地准备程度:"
