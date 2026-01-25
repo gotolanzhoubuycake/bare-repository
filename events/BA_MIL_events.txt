@@ -202,3 +202,59 @@ country_event = {
 
     is_triggered_only = yes
 }
+
+### 与凯撒战争相关事件 ###
+add_namespace = MIL_cae_war
+
+# 事件2：凯撒商品禁售公告
+# 由决议"全面禁用凯撒商品"触发
+country_event = {
+    id = MIL_cae_war.2
+    title = MIL_cae_war.2.t
+    desc = MIL_cae_war.2.d
+
+    is_triggered_only = yes
+    fire_only_once = yes
+
+    option = {
+        name = MIL_cae_war.2.a
+        ai_chance = {
+            base = 1
+        }
+    }
+}
+
+# 事件3：凯撒系统大瘫痪
+# 由决议"对凯撒实施网络攻击"触发
+country_event = {
+    id = MIL_cae_war.3
+    title = MIL_cae_war.3.t
+    desc = MIL_cae_war.3.d
+
+    is_triggered_only = yes
+
+    option = {
+        name = MIL_cae_war.3.a
+        ai_chance = {
+            base = 1
+        }
+    }
+}
+
+# 事件5：对凯撒的宣战书
+# 由决议"寻求联邦学生会的支持"触发
+country_event = {
+    id = MIL_cae_war.5
+    title = MIL_cae_war.5.t
+    desc = MIL_cae_war.5.d
+
+    is_triggered_only = yes
+    fire_only_once = yes
+
+    option = {
+        name = MIL_cae_war.5.a
+        ai_chance = {
+            base = 1
+        }
+    }
+}

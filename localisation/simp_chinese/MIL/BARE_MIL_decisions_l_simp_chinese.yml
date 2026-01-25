@@ -71,7 +71,47 @@
  MIL_award_game_development_debug: "改进游戏机制设计"
  MIL_award_game_department_new_invention: "千年游戏大赏"
 
- MIL_CAE_economic_situation: "凯撒经济状况"
+ MIL_CAE_economic_situation: "凯撒经济状况："
  MIL_cae_war_decision_category: "凯撒冲突决议组"
  MIL_cae_war_decision_category_desc: "凯撒冲突决议组"
  MIL_Sport_decision_category: "大运动会"
+ MIL_cae_war_decision_category_desc: "通过一系列决议打击凯撒的经济状况，为与凯撒的战争做好准备。"
+
+ # 决议1：号召停用凯撒商品
+ MIL_boycott_CAE_products: "号召停用凯撒商品"
+ MIL_boycott_CAE_products_desc: "号召千年学园的学生们停止使用凯撒的商品，以此向凯撒施压。"
+ MIL_boycott_CAE_products_tt: "民族精神$MIL_fight_against_cae$追加效果：生活消费品系数+10%，战争支持度+5%\n每周凯撒经济状况-1%"
+
+ # 决议2：全面禁用凯撒商品
+ MIL_ban_all_CAE_products: "全面禁用凯撒商品"
+ MIL_ban_all_CAE_products_desc: "在千年学园范围内全面禁止凯撒商品的销售和使用。"
+ MIL_ban_all_CAE_products_tt: "民族精神$MIL_fight_against_cae$追加效果：生活消费品系数+10%，战争支持度+5%\n每周凯撒经济状况-1.5%"
+
+ # 决议3：对凯撒实施网络攻击
+ MIL_cyber_attack_CAE: "对凯撒实施网络攻击"
+ MIL_cyber_attack_CAE_desc: "利用真理部的技术力量对凯撒的网络系统发起攻击。"
+ MIL_cyber_attack_CAE_tt: "凯撒经济状况-5%"
+ MIL_cyber_attack_CAE_first_tt: "凯撒经济状况-5%\n凯撒获得临时民族精神$CAE_network_paralysis$（45天）!"
+
+ # 决议4：释放对千年有利的谈判消息
+ MIL_release_negotiation_info: "释放对千年有利的谈判消息"
+ MIL_release_negotiation_info_desc: "向外界发布对千年有利的谈判消息，打击凯撒的公信力。"
+ MIL_release_negotiation_info_tt: "凯撒经济状况-5%"
+
+ # 决议5：寻求联邦学生会的支持
+ MIL_seek_CEN_support: "寻求联邦学生会的支持"
+ MIL_seek_CEN_support_desc: "向联邦学生会寻求对千年立场的支持，增强千年在基沃托斯的影响力。"
+ MIL_seek_CEN_support_tt: "凯撒经济状况-10%\n触发事件"
+
+ # 决议6：寻求其他学院的支持
+ MIL_seek_TRI_support: "寻求圣三一的支持"
+ MIL_seek_TRI_support_desc: "向圣三一寻求对千年立场的支持。"
+ MIL_seek_GEH_support: "寻求格黑娜的支持"
+ MIL_seek_GEH_support_desc: "向格黑娜寻求对千年立场的支持。"
+ MIL_seek_SHA_support: "寻求山海经的支持"
+ MIL_seek_SHA_support_desc: "向山海经寻求对千年立场的支持。"
+ MIL_seek_HYA_support: "寻求百鬼夜行的支持"
+ MIL_seek_HYA_support_desc: "向百鬼夜行寻求对千年立场的支持。"
+ MIL_seek_RWT_support: "寻求赤冬的支持"
+ MIL_seek_RWT_support_desc: "向赤冬寻求对千年立场的支持。"
+ MIL_seek_academy_support_tt: "凯撒经济状况-5%"

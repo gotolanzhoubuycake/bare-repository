@@ -27,6 +27,9 @@ MIL_cae_war_decision_category = {
 
     visible = {
         original_tag = MIL
+        has_completed_focus = MIL_protect_mil
     }
+
+    visible_when_empty = yes
     priority = 1099 # 位置待调整
 }

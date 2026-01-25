@@ -42,5 +42,38 @@ ideas = {
 				stability_factor = -0.1 #稳定度
 			}
 		}
+
+		# 武装入侵千年
+		# 对千年单位攻防+10%，组织度+5%，组织度恢复+5%
+		CAE_armed_invasion_MIL = {
+			name = CAE_armed_invasion_MIL
+            picture = CAE_armed_invasion_MIL
+
+			modifier = {
+				army_org_factor = 0.05
+				army_org_regain = 0.05
+			}
+
+			targeted_modifier = {
+				tag = MIL
+				attack_bonus_against = 0.1
+    			defense_bonus_against = 0.1
+			}
+		}
+
+		# 网络系统瘫痪（临时精神，通过add_timed_idea添加，持续45日）
+		# 效果：单位攻防-5%，单位组织度-5%，组织度恢复-5%
+		CAE_network_paralysis = {
+			name = CAE_network_paralysis
+			picture = CAE_network_paralysis
+
+			modifier = {
+				army_attack_factor = -0.05
+				army_defence_factor = -0.05
+				army_org_factor = -0.05
+				army_org_regain = -0.05
+			}
+		}
+
 	}
 }

@@ -134,7 +134,7 @@ ideas = {
             picture = MIL_till_the_last_man_standing
 
             modifier = {
-                army_org = 0.1
+                army_org_factor = 0.1
                 experience_loss_factor = 0.25
             }
 
