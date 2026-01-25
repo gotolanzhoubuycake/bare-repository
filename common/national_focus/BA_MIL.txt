@@ -194,7 +194,7 @@ focus_tree = {
 
 		completion_reward = {
 			set_variable = {
-				var = cae_economic_situation
+				var = global.cae_economic_situation
 				value = 120
 				tooltip = MIL_CAE_economic_situation
 			}
@@ -210,6 +210,21 @@ focus_tree = {
 		y = 5
 		prerequisite = {
 			focus = MIL_Tense_situation
+		}
+
+		completion_reward = {
+			# 千年启用动态modifier"与凯撒的战争"
+			add_dynamic_modifier = {
+				modifier = MIL_fight_against_cae
+			}
+			# 凯撒获得民族精神"武装入侵千年"
+			CAE = {
+				add_ideas = CAE_armed_invasion_MIL
+				# 开启经济修正动态机制
+				add_dynamic_modifier = {
+					modifier = CAE_economic_status
+				}
+			}
 		}
 	}
 	focus = { #不放弃一寸土地

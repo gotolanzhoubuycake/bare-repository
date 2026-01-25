@@ -11,3 +11,19 @@ MIL_event.11.t: "油盐不进的凯撒集团"
 MIL_event.11.d: "油盐不进的凯撒集团"
 MIL_event.12.t: "新闻：一触即发的火药桶"
 MIL_event.12.d: "新闻：一触即发的火药桶"
+
+### 与凯撒战争相关事件 ###
+# 事件2：凯撒商品禁售公告
+MIL_cae_war.2.t: "凯撒商品禁售公告"
+MIL_cae_war.2.d: "凯撒商品禁售公告"
+MIL_cae_war.2.a: "这是必要的牺牲"
+
+# 事件3：凯撒系统大瘫痪
+MIL_cae_war.3.t: "凯撒系统大瘫痪"
+MIL_cae_war.3.d: "凯撒系统大瘫痪"
+MIL_cae_war.3.a: "干得漂亮！"
+
+# 事件5：对凯撒的宣战书
+MIL_cae_war.5.t: "对凯撒的宣战书"
+MIL_cae_war.5.d: "对凯撒的宣战书"
+MIL_cae_war.5.a: "正义必将胜利"
