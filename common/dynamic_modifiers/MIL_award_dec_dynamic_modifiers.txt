@@ -38,8 +38,8 @@ MIL_security_department_of_long_peace = {
     army_attack_factor = MIL_security_department_army_attack
     army_defence_factor = MIL_security_department_army_defence
     army_org_factor = MIL_security_department_army_org
-    planning_speed = MIL_security_department_planning_speed
-    planning_factor = MIL_security_department_planning_factor
+    planning_speed_factor = MIL_security_department_planning_speed
+    max_planning_factor = MIL_security_department_planning_factor
     land_doctrine_cost_factor = MIL_security_department_land_doctrine_cost
     air_doctrine_cost_factor = MIL_security_department_air_doctrine_cost
     army_chief_cost_factor = MIL_security_department_army_chief_cost
@@ -82,4 +82,30 @@ MIL_soaring_eagle = {
     air_mission_efficiency = 0.05
     air_agility_factor = 0.05
     # Production cost handled via static idea
+}
+
+
+BARE_MIL_sport_Student_Support_Modifier = {
+    icon = GFX_idea_BARE_MIL_sport_Student_Support_Modifier 
+    enable = { always = yes }
+
+
+    stability_factor =  BARE_MIL_sport_Student_Support_Modifier_stability_factor_var
+    research_speed_factor =  BARE_MIL_sport_Student_Support_Modifier_research_speed_factor_var
+    production_speed_buildings_factor =  BARE_MIL_sport_Student_Support_Modifier_production_speed_buildings_factor_var
+    industrial_capacity_factory =  BARE_MIL_sport_Student_Support_Modifier_industrial_capacity_factory_var
+    
+}
+
+
+
+BARE_MIL_sport_Tech_Modifier = {
+    icon = GFX_idea_BARE_MIL_sport_Tech_Modifier 
+    enable = { always = yes }
+
+
+    stability_factor =  BARE_MIL_sport_Tech_Modifier_stability_factor_var
+    research_speed_factor =  BARE_MIL_sport_Tech_Modifier_research_speed_factor_var
+    production_speed_buildings_factor =  BARE_MIL_sport_Tech_Modifier_production_speed_buildings_factor_var
+    
 }

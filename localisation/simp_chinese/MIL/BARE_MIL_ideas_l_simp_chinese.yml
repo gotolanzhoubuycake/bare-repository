@@ -268,3 +268,14 @@ MIL_fight_against_cae: "与凯撒的战争"
 CAE_economic_status: "凯撒经济状况"
 CAE_economic_status_desc: "作为一家追求利润的巨型企业，凯撒集团的经济状况将直接影响着其在战争中的战斗力。经济状况越好，凯撒集团的部队就越强大；反之，经济状况恶化将导致凯撒集团的战斗力大幅下降，并最终让他们不得不承认失败。\n\n当前效果基于经济状况偏离基准值（100）的程度：每偏离2点=1%战斗力影响。"
 MIL_boycott_CAE_products: "号召停用凯撒商品"
+
+
+
+
+
+
+
+
+
+#运动会相关精神
+BARE_MIL_sport_Student_Support_Modifier: "晄轮大祭-学生支持度修正"

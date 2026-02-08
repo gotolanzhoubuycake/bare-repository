@@ -15,9 +15,21 @@ MIL_Sport_decision_category = {
 
     visible = {
         original_tag = MIL
+        has_global_flag = BARE_MIL_Sport_prepare_flag
     }
     scripted_gui = BARE_MIL_sport_GUI_SG
     visible_when_empty = yes
+    priority = 1098
+}
+
+MIL_Sport_decision_test_category = {
+    icon = generic_research
+
+
+    visible = {
+        original_tag = MIL
+        is_debug = yes
+    }
     priority = 1098
 }
 
