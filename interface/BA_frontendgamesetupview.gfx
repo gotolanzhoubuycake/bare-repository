@@ -55,6 +55,11 @@ spriteTypes = {
     }
 
 	spriteType = {
+        name = "GFX_ARI_liberation_path"
+        texturefile = "gfx/interface/bookmark/highlight_path/ARI_liberation_path.dds"
+    }
+
+	spriteType = {
 		name = "GFX_TRI_eden_treaty_path_picture"
 		texturefile = "gfx/interface/bookmark/highlight_picture/TRI_eden_treaty_path_picture.dds"
 		legacy_lazy_load = no
@@ -69,6 +74,12 @@ spriteTypes = {
 	spriteType = {
         name = "GFX_ARI_revenge_path_picture"
         texturefile = "gfx/interface/bookmark/highlight_picture/ARI_revenge_path_picture.dds"
+        legacy_lazy_load = no
+	}
+
+	spriteType = {
+        name = "GFX_ARI_liberation_path_picture"
+        texturefile = "gfx/interface/bookmark/highlight_picture/ARI_liberation_path_picture.dds"
         legacy_lazy_load = no
 	}
 

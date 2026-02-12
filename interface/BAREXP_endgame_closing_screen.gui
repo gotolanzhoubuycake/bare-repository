@@ -1,0 +1,105 @@
+guiTypes = {
+	containerWindowType = {
+		name = "BAREXP_endgame_closing_screen_menu"
+		position = {x=480 y=100}
+		size = { width=900 height=920 }
+
+		fade_time = 300
+		fade_type = linear
+		moveable = yes
+		
+		background = {
+			name = "Background"
+			spriteType = "GFX_endgame_closing_screen_menu_bg"
+		}
+
+		instantTextboxType = {
+			name = "Endgame_Headline"
+			position = {x = 195 y = 192}
+			font = "hoi_30header"
+			text = "BAREXP_endgame_closing_screen_menu_Headline"
+			maxWidth = 500
+			maxHeight = 23
+			format = center
+		}
+		
+		buttonType = {
+			name = "endgame_exit_button" 
+			position = {x = 840 y = 135 }	
+			spriteType = "GFX_closebutton"
+			shortcut = "SPACE"
+			clicksound = click_close
+		}
+
+		buttonType = {
+			name = "endgame_continue_button" 
+			position = {x = 325 y = 847 }	
+			spriteType = "GFX_BAREXP_ending_button_ready_button"
+			shortcut = "SPACE"
+			clicksound = click_close
+		}
+
+		instantTextboxType = {
+			name = "endgame_continue_button_text"
+			position = {x = 321 y = 854 }	
+			font = "hoi_30header"
+			text = "BAREXP_endgame_continue_button_text"
+			maxWidth = 241
+			maxHeight = 60
+			format = center
+		}
+	}
+		
+	containerWindowType = {
+		name = "BAREXP_endgame_closing_screen_container"
+		position = {x=0 y=0}
+		size = { width=880 height=900 }
+
+		iconType = {
+			name = "BAREXP_endgame_closing_screen_poster" 
+			position = {x = 37 y = 240 }
+		}
+
+		instantTextboxType = {
+			name = "BAREXP_endgame_slogan"
+			position = {x = 60 y = 250 }  
+			font = "hoi_24header"  
+			text = "BAREXP_ENDGAME_SLOGAN"
+			maxWidth = 775
+			maxHeight = 500
+			format = left
+		}
+
+		#Put whatever you want about the country here
+		instantTextboxType = {
+			name = "BAREXP_endgame_Summary" 
+			position = {x = 60 y = 290 }
+			font = "hoi_18mbs"
+			text = "BAREXP_ENDGAME_SUMMARY"
+			maxWidth = 775
+			maxHeight = 500
+			format = left
+		}
+
+		#instantTextboxType = {
+		#	name = "BAREXP_endgame_THANKS" 
+		#	position = {x = 50 y = 520}
+		#	font = "hoi_18mbs"
+		#	text = "BAREXP_ENDGAME_THANKS"
+		#	maxWidth = 800
+		#	maxHeight = 500
+		#	format = left
+		#}
+
+		#instantTextboxType = {
+		#	name = "BAREXP_endgame_THANKS_TITLE" 
+		#	position = {x = 50 y = 480}
+		#	font = "hoi_24header"
+		#	text = "BAREXP_ENDGAME_THANKS_TITLE"
+		#	maxWidth = 800
+		#	maxHeight = 500
+		#	format = left
+		#}
+
+	}
+}

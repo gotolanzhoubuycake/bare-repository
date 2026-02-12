@@ -15,19 +15,28 @@ ALF_party_modifier = {
 	}
 	encryption = 1
 	equipment_capture_factor = 0.1
+	political_power_factor = 0.1
 	stability_factor = ALF_party_stability_factor_var
 	war_support_factor = ALF_war_support_factor_var
 	production_lack_of_resource_penalty_factor = ALF_production_lack_of_resource_penalty_factor_var
 	cic_construction_boost_factor = ALF_cic_construction_boost_factor_var
-}
 
-##流亡者军改
-ALF_military_reform_dynamic_modifier = {
-	icon = "GFX_idea_unknown"
-	enable = {
-		always = yes
-	}
-	ALF_military_reform_int = ALF_military_reform_dynamic_modifier_var
+	##
+	non_core_manpower = ALF_party_non_core_manpower_var
+	resistance_target = ALF_party_resistance_target_var
+	monthly_population = ALF_monthly_population_var
+
+	##意识形态变化##
+	drift_defence_factor = 0.5
+	Egalitarianism_ideology_drift = ALF_party_Egalitarianism_ideology_drift_var
+	Progressivism_ideology_drift = ALF_party_Progressivism_ideology_drift_var
+	Authoritarian_ideology_drift = ALF_party_Authoritarian_ideology_drift_var
+	Liberalism_ideology_drift = ALF_party_Liberalism_ideology_drift_var
+	Mysticism_ideology_drift = ALF_party_Mysticism_ideology_drift_var
+
+	##战后效果##
+	party_popularity_stability_factor = ALF_party_popularity_stability_factor_var
+	max_command_power = ALF_max_command_power_var
 }
 
 ##流亡者武装力量
@@ -36,12 +45,13 @@ ALF_armed_force_dynamic_modifier = {
 	enable = {
 		always = yes
 	}
+	ALF_military_reform_int = ALF_military_reform_dynamic_modifier_var
 	##军事理念##
 	##训练
 	max_dig_in_factor = ALF_AMF_max_dig_in_factor_var
 	dig_in_speed_factor = ALF_AMF_dig_in_speed_factor_var
 	army_org_factor = ALF_AMF_army_org_factor_var
-	army_morale_factor = ALF_AMF_army_morale_factor_var
+	army_morale_factor = 0.1
 	org_loss_when_moving = ALF_AMF_org_loss_when_moving_var
 	pocket_penalty = ALF_AMF_pocket_penalty_var
 	##军官
@@ -59,7 +69,7 @@ ALF_armed_force_dynamic_modifier = {
 	##军事发展
 	##炮兵buff
 	army_artillery_attack_factor = ALF_AMF_army_artillery_attack_factor_var
-	army_artillery_defence_factor = ALF_AMF_army_artillery_defence_factor_var
+	coordination_bonus =  ALF_AMF_coordination_bonus_var
 	#experience_gain_artillery_combat_factor = ALF_AMF_experience_gain_artillery_combat_factor_var
 	##装甲buff
 	army_armor_attack_factor = ALF_AMF_army_armor_attack_factor_var
@@ -70,6 +80,12 @@ ALF_armed_force_dynamic_modifier = {
 	special_forces_cap = ALF_AMF_special_forces_cap_var
 	special_forces_attack_factor = ALF_AMF_special_forces_attack_factor_var
 	##空军能力
+	air_superiority_efficiency = ALF_AMF_air_superiority_efficiency_var
+	air_superiority_bonus_in_combat = ALF_AMF_air_superiority_bonus_in_combat_var
+	air_interception_detect_factor = ALF_AMF_air_interception_detect_factor_var
+	air_cas_efficiency = ALF_AMF_air_cas_efficiency_var
+	air_mission_efficiency = ALF_AMF_air_mission_efficiency_var
+	air_range_factor = ALF_AMF_air_range_factor_var
 	##终极buff##
 	breakthrough_factor = ALF_AMF_breakthrough_factor_var
 	army_attack_factor = ALF_AMF_army_attack_factor_var
@@ -98,4 +114,26 @@ ALF_city_loadout_optimized_dynamic_modifier = {
 	}
 	local_factories = 0.1
 	local_supplies = 0.1
+}
+
+##破碎之地
+ALF_ruins_of_civil_war_dynamic_modifier = {
+	icon = "GFX_idea_unknown"
+	enable = {
+		always = yes
+	}
+	local_factories = -0.5
+	local_resources = -0.5
+	local_manpower = -0.7
+	local_supplies = -0.2
+}
+
+##攻势
+ALF_war_operation_dynamic_modifier = {
+	icon = "GFX_idea_unknown"
+	enable = {
+		always = yes
+	}
+	army_attack_factor = 0.2
+	army_defence_factor = 0.2
 }

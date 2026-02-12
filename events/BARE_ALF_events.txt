@@ -23,10 +23,20 @@ country_event = {
 			ALF = {
 				country_event = {
 					id = ALF.1
-					days = 3
+					days = 1
 				}
 				##特种部队等级：不落下风
 				force_update_dynamic_modifier = yes
+				if = {
+					limit = {
+						NOT = {
+							has_tech = bare_cavalry_tech
+						}
+					}
+					set_technology = {
+						bare_cavalry_tech = 1
+					}
+				}
 			}
 			goto_state = 199
 		}
@@ -352,6 +362,22 @@ country_event = {
 	option = {
 		name = ALF.16.a
 		custom_effect_tooltip = ALF_raise_flag_tt
+		set_country_flag = ALF_phrase_2_flag
+		mark_focus_tree_layout_dirty = yes
+		complete_national_focus = ALF_a_long_way_to_go
+		##对凯撒之战的倒计时
+		hidden_effect = {
+			country_event = {
+				id = ALF.30
+				days = 850
+			}
+			country_event = {
+				id = ALF.41
+				days = 365
+			}
+		}
+		##
+		set_country_flag = ALF_ending_of_a_long_march_achievement_flag
 	}
 }
 
@@ -464,6 +490,8 @@ country_event = {
 		197 = {
 			add_extra_state_shared_building_slots = 10
 		}
+		##关闭翻修决议
+		set_country_flag = ALF_new_capital_complete_flag
 	}
 }
 
@@ -475,12 +503,868 @@ country_event = {
 	picture = GFX_FSC_Leader_portrait_picture
 	is_triggered_only = yes
 	immediate = {
-
 	}
 	option = {
 		name = ALF.22.a
 		ALF = {
 			add_to_faction = FSC
 		}
+	}
+}
+
+country_event = {
+	id = ALF.23
+	#picture = GFX_common_event_gui_test
+	title = ALF.23.t
+	desc = ALF.23.desc
+	is_triggered_only = yes
+	immediate = {
+	}
+	option = {
+		name = ALF.23.a
+		country_event = {
+			id = ALF.24
+		}
+	}
+	option = {
+		name = ALF.23.b
+		country_event = {
+			id = ALF.25
+		}
+	}
+}
+
+country_event = {
+	id = ALF.24
+	#picture = GFX_common_event_gui_test
+	title = ALF.24.t
+	desc = ALF.24.desc
+	is_triggered_only = yes
+	immediate = {
+	}
+	option = {
+		name = ALF.24.a
+		set_country_flag = ALF_redwinter_guards_staff_event_flag
+		ALF_improve_livability_10_pts = yes
+	}
+}
+
+country_event = {
+	id = ALF.25
+	#picture = GFX_common_event_gui_test
+	title = ALF.25.t
+	desc = ALF.25.desc
+	is_triggered_only = yes
+	immediate = {
+	}
+	option = {
+		name = ALF.25.a
+		set_country_flag = ALF_redwinter_workers_staff_event_flag
+		ALF_improve_livability_10_pts = yes
+	}
+}
+
+country_event = {
+	id = ALF.26
+	#picture = GFX_common_event_gui_test
+	title = ALF.26.t
+	desc = ALF.26.desc
+	is_triggered_only = yes
+	immediate = {
+	}
+	option = {
+		name = ALF.26.a
+		country_event = {
+			id = ALF.27
+		}
+	}
+	option = {
+		name = ALF.26.b
+		country_event = {
+			id = ALF.28
+		}
+	}
+}
+
+country_event = {
+	id = ALF.27
+	#picture = GFX_common_event_gui_test
+	title = ALF.27.t
+	desc = ALF.27.desc
+	is_triggered_only = yes
+	immediate = {
+	}
+	option = {
+		name = ALF.27.a
+		set_country_flag = ALF_gehenna_Pandemonium_staff_event_flag
+		ALF_improve_livability_10_pts = yes
+	}
+}
+
+country_event = {
+	id = ALF.28
+	#picture = GFX_common_event_gui_test
+	title = ALF.28.t
+	desc = ALF.28.desc
+	is_triggered_only = yes
+	immediate = {
+	}
+	option = {
+		name = ALF.28.a
+		set_country_flag = ALF_gehenna_perfect_team_staff_event_flag
+		ALF_improve_livability_10_pts = yes
+	}
+}
+
+country_event = {
+	id = ALF.29
+	#picture = GFX_common_event_gui_test
+	title = ALF.29.t
+	desc = ALF.29.desc
+	is_triggered_only = yes
+	immediate = {
+	}
+	option = {
+		name = ALF.29.a
+		custom_effect_tooltip = ALF_support_sf_independent_tt
+		add_to_variable = {
+			mrd_sf_progress = 1
+		}
+		add_to_variable = {
+			ALF_AMF_special_forces_cap_var = 0.1
+		}
+		add_to_variable = {
+			ALF_AMF_special_forces_attack_factor_var = 0.05
+		}
+	}
+	option = {
+		name = ALF.29.b
+		custom_effect_tooltip = ALF_support_sf_integrate_tt
+		add_to_variable = {
+			mrd_sf_progress = 1
+		}
+		add_to_variable = {
+			ALF_AMF_land_night_attack_var = 0.05
+		}
+		add_to_variable = {
+			ALF_AMF_special_forces_attack_factor_var = 0.05
+		}
+	}
+}
+
+country_event = {
+	id = ALF.30
+	#picture = GFX_common_event_gui_test
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+	}
+	option = {
+		name = ALF.30.a
+		if = {
+			limit = {
+				NOT = {
+					has_completed_focus = ALF_change_outfit
+				}
+			}
+			complete_national_focus = ALF_change_outfit
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_completed_focus = ALF_infiltrate_kaiser
+				}
+			}
+			complete_national_focus = ALF_infiltrate_kaiser
+			country_event = {
+				id = ALF.31
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ALF.31
+	#picture = GFX_common_event_gui_test
+	title = ALF.31.t
+	desc = ALF.31.desc
+	is_triggered_only = yes
+	immediate = {
+	}
+	option = {
+		name = ALF.31.a
+	}
+}
+
+country_event = {
+	id = ALF.32
+	#picture = GFX_common_event_gui_test
+	title = ALF.32.t
+	desc = ALF.32.desc
+	is_triggered_only = yes
+	immediate = {
+	}
+	option = {
+		name = ALF.32.a
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = the_enterprise_war_begins
+				}
+			}
+			set_global_flag = the_enterprise_war_begins
+		}
+		unlock_decision_category_tooltip = ALF_anti_kaiser_operation_category
+		activate_mission = ALF_EPW_Stage_1_trigger_mission
+		activate_mission = ALF_EPW_counter_mission
+		mark_focus_tree_layout_dirty = yes
+		complete_national_focus = ALF_fate_calls
+	}
+}
+
+country_event = {
+	id = ALF.33
+	#picture = GFX_common_event_gui_test
+	title = ALF.33.t
+	desc = ALF.33.desc
+	is_triggered_only = yes
+	immediate = {
+	}
+	option = {
+		name = ALF.33.a
+		custom_effect_tooltip = ALF_EPW_Broke_Out_tt
+		set_country_flag = ALF_EPW_STAGE2_flag
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+##阿里乌斯解放战争
+country_event = {
+	id = ALF.34
+	#picture = GFX_common_event_gui_test
+	title = ALF.34.t
+	desc = ALF.34.desc
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			scoped_play_song = BARE_SuperEvent_Sound_lap_time
+		}
+	}
+	option = {
+		name = ALF.34.a
+		activate_mission = ALF_GBO_trigger_mission
+		set_country_flag = ALF_GBO_begins_flag
+		set_global_flag = ARIUS_IN_BLACKMARKET_ROAD_OPEN_GLOBAL_FLAG
+	}
+}
+
+##伊甸条约打断
+country_event = {
+	id = ALF.35
+	#picture = GFX_common_event_gui_test
+	title = ALF.35.t
+	desc = ALF.35.desc
+	is_triggered_only = yes
+	immediate = {
+	}
+	option = {
+		name = ALF.35.a
+		news_event = {
+			id = ALF_news_event.4
+			days = 15
+		}
+		##触发圣三一和格黑娜政变
+		hidden_effect = {
+			TRI = {
+				country_event = {
+					id = ALF.46
+					days = 45
+				}
+			}
+			GEH = {
+				country_event = {
+					id = ALF.50
+					days = 70
+				}
+			}
+		}
+	}
+}
+
+##公司战争胜利
+country_event = {
+	id = ALF.36
+	#picture = GFX_common_event_gui_test
+	title = ALF.36.t
+	desc = ALF.36.desc
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ALF_knock_down_the_giant_achievement_flag
+		}
+	}
+	option = {
+		name = ALF.36.a
+		activate_mission = ALF_GBO_counter_mission
+		country_event = {
+			id = ALF.44
+			days = 14
+		}
+		hidden_effect = {
+			country_event = {
+				id = ALF.42
+				days = 28
+			}
+		}
+	}
+}
+
+#新家-其二
+country_event = {
+	id = ALF.37
+	#picture = GFX_common_event_gui_test
+	title = ALF.37.t
+	desc = ALF.37.desc
+	is_triggered_only = yes
+	option = {
+		name = ALF.37.a
+	}
+}
+
+#故园-其二
+country_event = {
+	id = ALF.38
+	#picture = GFX_common_event_gui_test
+	title = ALF.38.t
+	desc = ALF.38.desc
+	is_triggered_only = yes
+	option = {
+		name = ALF.38.a
+	}
+}
+
+##测绘
+country_event = {
+	id = ALF.39
+	#picture = GFX_common_event_gui_test
+	title = ALF.39.t
+	desc = ALF.39.desc
+	is_triggered_only = yes
+	option = {
+		name = ALF.39.a
+		add_war_support = 0.1
+	}
+}
+
+##致夏莱
+country_event = {
+	id = ALF.40
+	#picture = GFX_common_event_gui_test
+	title = ALF.40.t
+	desc = ALF.40.desc
+	is_triggered_only = yes
+	option = {
+		name = ALF.40.a
+	}
+}
+
+##不速之客（未花）
+country_event = {
+	id = ALF.41
+	#picture = GFX_common_event_gui_test
+	title = ALF.41.t
+	desc = ALF.41.desc
+	is_triggered_only = yes
+	option = {
+		name = ALF.41.a
+		custom_effect_tooltip = mika_s_bet_tt
+	}
+}
+
+country_event = {
+	id = ALF.42
+	#picture = GFX_common_event_gui_test
+	title = ALF.42.t
+	desc = ALF.42.desc
+	is_triggered_only = yes
+	option = {
+		name = ALF.42.a
+		custom_effect_tooltip = mika_s_bet_echo_tt
+	}
+}
+
+##
+country_event = {
+	id = ALF.43
+	#picture = GFX_common_event_gui_test
+	title = ALF.43.t
+	desc = ALF.43.desc
+	is_triggered_only = yes
+	option = {
+		name = ALF.43.a
+		trigger = {
+			tag = ALF
+		}
+		ARI = {
+			start_civil_war = {
+				ideology = Egalitarianism_ideology
+				size = 0.3
+				capital = 530
+				states = {
+					530
+				}
+				set_country_flag = ALF_ARI_ARR_aliases_country_flag
+				ALF = {
+					set_autonomy = {
+						target = PREV
+						autonomous_state = autonomy_bare_trusteeship_area
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = ALF.43.b
+		trigger = {
+			tag = ARI
+		}
+		add_timed_idea = {
+			idea = ALF_ARI_striked
+			days = 30
+		}
+	}
+}
+
+###
+country_event = {
+	id = ALF.44
+	picture = GFX_FSC_Leader_portrait_picture
+	title = ALF.44.t
+	desc = ALF.44.desc
+	is_triggered_only = yes
+	option = {
+		name = ALF.44.a
+		###
+		add_equipment_to_stockpile = {
+			type = small_uav_recon_equipment_2
+			amount = 100
+			producer = FSC
+		}
+		add_equipment_to_stockpile = {
+			type = heavy_uav_equipment_2
+			amount = 200
+			producer = FSC
+		}
+		###
+		custom_effect_tooltip = ALF_oob_heavyarmor_tt
+		if = {
+			limit = {
+				NOT = {
+					has_tech = medium_tank_artillery_MK1
+				}
+			}
+			set_technology = {
+				medium_tank_artillery_MK1 = 1
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_tech = medium_tank_MK2
+				}
+			}
+			set_technology = {
+				medium_tank_MK2 = 1
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_tech = medium_tank_artillery_MK2
+				}
+			}
+			set_technology = {
+				medium_tank_artillery_MK2 = 1
+			}
+		}
+		hidden_effect = {
+			load_oob = "ALF_oob_heavyarmor"
+		}
+		ALF = {
+			annex_country = {
+				target = FSC
+				transfer_troops = no
+			}
+		}
+		every_state = {
+			limit = {
+				is_core_of = FSC
+			}
+			remove_core_of = FSC
+			add_core_of = ALF
+		}
+	}
+}
+
+##冲滩胜利
+country_event = {
+	id = ALF.45
+	#picture = GFX_common_event_gui_test
+	title = ALF.45.t
+	desc = ALF.45.desc
+	is_triggered_only = yes
+	option = {
+		name = ALF.45.a
+		custom_effect_tooltip = ALF_dead_of_the_evil_tt
+		set_country_flag = ALF_Gabriel_operation_success
+		##改名##
+		drop_cosmetic_tag = yes
+		set_cosmetic_tag = ALF_SchoolName_Cosmetic
+		##移除deff##
+		remove_ideas = ALF_shadow_follows
+		##增加debuff并完成国策
+		complete_national_focus = ALF_a_long_way_back_home
+		mark_focus_tree_layout_dirty = yes
+		##
+		set_country_flag = ALF_go_home_achievement_flag
+	}
+}
+
+##圣三一政变事件链
+##抗议蔓延
+country_event = {
+	id = ALF.46
+	#picture = GFX_common_event_gui_test
+	title = ALF.46.t
+	desc = ALF.46.desc
+	hidden = yes
+	is_triggered_only = yes
+	option = {
+		name = ALF.46.a
+		ALF_failure_impact_of_eden_treaty_TRI_stage_0 = yes
+	}
+}
+
+##团结会夺权
+country_event = {
+	id = ALF.47
+	#picture = GFX_common_event_gui_test
+	title = ALF.47.t
+	desc = ALF.47.desc
+	hidden = yes
+	is_triggered_only = yes
+	option = {
+		name = ALF.47.a
+		ALF_failure_impact_of_eden_treaty_TRI_stage_1 = yes
+	}
+}
+
+##镇压抗议
+country_event = {
+	id = ALF.48
+	#picture = GFX_common_event_gui_test
+	title = ALF.48.t
+	desc = ALF.48.desc
+	hidden = yes
+	is_triggered_only = yes
+	option = {
+		name = ALF.48.a
+		ALF_failure_impact_of_eden_treaty_TRI_stage_2 = yes
+	}
+}
+
+##临时委员会成立
+country_event = {
+	id = ALF.49
+	#picture = GFX_common_event_gui_test
+	title = ALF.49.t
+	desc = ALF.49.desc
+	hidden = yes
+	is_triggered_only = yes
+	option = {
+		name = ALF.49.a
+		ALF_failure_impact_of_eden_treaty_TRI_stage_3 = yes
+	}
+}
+
+##格黑娜政变事件链
+country_event = {
+	id = ALF.50
+	#picture = GFX_common_event_gui_test
+	title = ALF.50.t
+	desc = ALF.50.desc
+	hidden = yes
+	is_triggered_only = yes
+	option = {
+		name = ALF.50.a
+		ALF_failure_impact_of_eden_treaty_GEH_stage_0 = yes
+	}
+}
+
+country_event = {
+	id = ALF.51
+	#picture = GFX_common_event_gui_test
+	title = ALF.51.t
+	desc = ALF.51.desc
+	hidden = yes
+	is_triggered_only = yes
+	option = {
+		name = ALF.51.a
+		ALF_failure_impact_of_eden_treaty_GEH_stage_1 = yes
+	}
+}
+
+##伊甸条约提醒
+country_event = {
+	id = ALF.52
+	#picture = GFX_common_event_gui_test
+	title = ALF.52.t
+	desc = ALF.52.desc
+	is_triggered_only = yes
+	option = {
+		name = ALF.52.a
+		country_event = {
+			id = ALF.35
+			days = 30
+		}
+	}
+}
+
+##收官
+country_event = {
+	id = ALF.53
+	#picture = GFX_common_event_gui_test
+	title = ALF.53.t
+	desc = ALF.53.desc
+	is_triggered_only = yes
+	option = {
+		name = ALF.53.a
+		set_global_flag = TRI_coup_complete_flag
+	}
+}
+
+##跨过瓦砾
+country_event = {
+	id = ALF.54
+	#picture = GFX_common_event_gui_test
+	title = ALF.54.t
+	desc = ALF.54.desc
+	is_triggered_only = yes
+	option = {
+		name = ALF.54.a
+		add_stability = -0.01
+	}
+}
+
+##审视罪恶
+country_event = {
+	id = ALF.55
+	#picture = GFX_common_event_gui_test
+	title = ALF.55.t
+	desc = ALF.55.desc
+	is_triggered_only = yes
+	option = {
+		name = ALF.55.a
+		add_political_power = -1
+	}
+}
+
+##面对命运
+country_event = {
+	id = ALF.56
+	#picture = GFX_common_event_gui_test
+	title = ALF.56.t
+	desc = ALF.56.desc
+	is_triggered_only = yes
+	option = {
+		name = ALF.56.a
+		add_war_support = -0.01
+	}
+}
+
+##真容
+country_event = {
+	id = ALF.57
+	#picture = GFX_common_event_gui_test
+	title = ALF.57.t
+	desc = ALF.57.desc
+	is_triggered_only = yes
+	option = {
+		name = ALF.57.a
+		custom_effect_tooltip = ALF_justice_war_tt
+		complete_national_focus = ALF_3rd_eden_pact_treaty
+		set_portraits = {
+			character = ALF_The_Leader
+			civilian = {
+				large = "GFX_BARE_Portrait_ALF_the_leader_no_mask"
+				small = "GFX_BARE_Portrait_ALF_the_leader_no_mask_small"
+			}
+		}
+		add_country_leader_trait = ALF_justice_prevails
+		set_country_flag = ALF_ready_for_2nd_liberation_war_flag
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+##首次接触
+country_event = {
+	id = ALF.58
+	#picture = GFX_common_event_gui_test
+	title = ALF.58.t
+	desc = ALF.58.desc
+	is_triggered_only = yes
+	option = {
+		name = ALF.58.a
+	}
+}
+
+##现在：圣三一
+country_event = {
+	id = ALF.59
+	#picture = GFX_common_event_gui_test
+	title = ALF.59.t
+	desc = ALF.59.desc
+	is_triggered_only = yes
+	option = {
+		name = ALF.59.a
+		custom_effect_tooltip = a_spirit_for_winning_tt
+	}
+}
+
+##现状：格黑娜
+country_event = {
+	id = ALF.60
+	#picture = GFX_common_event_gui_test
+	title = ALF.60.t
+	desc = ALF.60.desc
+	is_triggered_only = yes
+	option = {
+		name = ALF.60.a
+	}
+}
+
+##现状：绝境同盟
+country_event = {
+	id = ALF.61
+	#picture = GFX_common_event_gui_test
+	title = ALF.61.t
+	desc = ALF.61.desc
+	is_triggered_only = yes
+	option = {
+		name = ALF.61.a
+	}
+}
+
+##钢铁协约计时器
+country_event = {
+	id = ALF.62
+	hidden = yes
+	title = ALF.62.t
+	desc = ALF.62.desc
+	is_triggered_only = yes
+	option = {
+		name = ALF.62.a
+		news_event = {
+			id = ALF_news_event.8
+		}
+		TRA = {
+			create_faction = TRA_GEA_Axis
+			add_to_faction = GEA
+		}
+		activate_mission = ALF_UOP_counter_mission
+	}
+}
+
+##光复战争
+country_event = {
+	id = ALF.63
+	#picture = GFX_common_event_gui_test
+	title = ALF.63.t
+	desc = ALF.63.desc
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			news_event = ALF_news_event.10
+			initialize_UOP_states_array_effect = yes
+			ALF = {
+				ALF_UOP_calculate_power_score = yes
+			}
+			TRA = {
+				ALF_UOP_calculate_power_score = yes
+			}
+		}
+	}
+	option = {
+		name = ALF.63.a
+		set_country_flag = ALF_UOP_begains_flag
+		activate_mission = ALF_UOP_trigger_mission
+		custom_effect_tooltip = unlock_2nd_liberation_war_focus_tree_tt
+		complete_national_focus = ALF_2nd_liberation_war
+		set_global_flag = ALF_THE_2ND_LIBERATION_WAR_BEGINS_NOW_GLOBAL_FLAG
+		mark_focus_tree_layout_dirty = yes
+		####
+		TRT = {
+			add_to_war = {
+				targeted_alliance = ALF
+				enemy = TRA
+				hostility_reason = asked_to_join
+			}
+		}
+		GER = {
+			add_to_war = {
+				targeted_alliance = ALF
+				enemy = TRA
+				hostility_reason = asked_to_join
+			}
+		}
+	}
+}
+
+##修宪
+country_event = {
+	id = ALF.64
+	#picture = GFX_common_event_gui_test
+	title = ALF.64.t
+	desc = ALF.64.desc
+	is_triggered_only = yes
+	option = {
+		name = ALF.64.a
+		set_country_flag = ALF_support_the_old_ways_flag
+	}
+	option = {
+		name = ALF.64.b
+		set_country_flag = ALF_support_the_new_dawn_flag
+	}
+}
+
+##伊甸条约胜利：好结局
+country_event = {
+	id = ALF.65
+	#picture = GFX_common_event_gui_test
+	title = ALF.65.t
+	desc = ALF.65.desc
+	is_triggered_only = yes
+	option = {
+		name = ALF.65.a
+		set_country_flag = ALF_2ND_LIBERATION_WAR_SUCCESS_FLAG
+		mark_focus_tree_layout_dirty = yes
+		complete_national_focus = ALF_like_the_rising_sun
+		news_event = {
+			id = ALF_news_event.9
+		}
+		set_country_flag = ALF_win_the_final_battle_achievement_flag
+	}
+}
+
+country_event = {
+	id = ALF.66
+	#picture = GFX_common_event_gui_test
+	title = ALF.66.t
+	desc = ALF.66.desc
+	is_triggered_only = yes
+	option = {
+		name = ALF.66.a
+		custom_effect_tooltip = ALF_bare_good_end_tt
+		BARE_ALF_GOOD_END_ENDING_SCREEN_EFFECT = yes
 	}
 }

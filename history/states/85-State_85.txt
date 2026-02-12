@@ -1,6 +1,9 @@
 state={
 	id=85
 	name="STATE_85"
+	resources = {
+		resources_el = 10
+	}
 	provinces={
 		523 3098 4078 5211 6876 7293 8589 11292 11380 
 	}

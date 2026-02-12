@@ -6,6 +6,7 @@ state={
 	}
 	resources = {
 		resources_mm = 6
+		resources_el = 14
 	}
 	history = {
 		owner = TRI

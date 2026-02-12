@@ -2138,6 +2138,9 @@ focus_tree = {
 			search_filters = { FOCUS_FILTER_POLITICAL }
 			allow_branch = {
 				has_global_flag = Eden_treaty_negotiation_TRI_win
+				NOT = {
+					has_global_flag = BA_2st_eden_pact_disrupted
+				}
 			}
 			select_effect = {
 				country_event = TRI_events.26

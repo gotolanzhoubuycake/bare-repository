@@ -54,6 +54,22 @@ soundeffect = {
 	}
 }
 
+soundeffect = {
+	name = BARE_SuperEvent_Sound_enterprise_war
+	volume = 0.8
+	sounds = {
+		sound = BARE_SuperEvent_Sound_enterprise_war
+	}
+}
+
+soundeffect = {
+	name = BARE_SuperEvent_Sound_2ND_LIBERATION_WAR
+	volume = 0.8
+	sounds = {
+		sound = BARE_SuperEvent_Sound_2ND_LIBERATION_WAR
+	}
+}
+
 sound = {
 	name = "BARE_SuperEvent_Sound_EDEN_TREATY_STRIKE"
 	file = "BARE_SuperEvent_Sound/BARE_SuperEvent_Sound_EDEN_TREATY_STRIKE.wav"
@@ -89,6 +105,16 @@ sound = {
 	file = "BARE_SuperEvent_Sound/BARE_SuperEvent_Sound_GEH_TRI_Total_War.wav"
 }
 
+sound = {
+	name = "BARE_SuperEvent_Sound_enterprise_war"
+	file = "BARE_SuperEvent_Sound/BARE_SuperEvent_Sound_enterprise_war.wav"
+}
+
+sound = {
+	name = "BARE_SuperEvent_Sound_2ND_LIBERATION_WAR"
+	file = "BARE_SuperEvent_Sound/BARE_SuperEvent_Sound_2ND_LIBERATION_WAR.wav"
+}
+
 category = {
 	name = "BARE_SuperEvent_Sound"
 	soundeffects = {
@@ -99,5 +125,7 @@ category = {
 		BARE_SuperEvent_Sound_LSGSJ_GSC_IN
 		BARE_SuperEvent_Sound_Eden_Treaty_wins_piano_motion
 		BARE_SuperEvent_Sound_GEH_TRI_Total_War
+		BARE_SuperEvent_Sound_enterprise_war
+		BARE_SuperEvent_Sound_2ND_LIBERATION_WAR
 	}
 }

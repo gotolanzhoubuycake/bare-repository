@@ -55,6 +55,26 @@ Hipper_test_decisions_categories = {
 			}
 		}
 	}
+	###
+	Alf_for_glory_decision = {
+		visible = {
+			is_debug = yes
+		}
+		available = {
+			is_ai = no
+			tag = ALF
+		}
+		complete_effect = {
+			set_portraits = {
+				character = ALF_The_Leader
+				civilian = {
+					large = "GFX_BARE_Portrait_ALF_the_leader_no_mask"
+					small = "GFX_BARE_Portrait_ALF_the_leader_no_mask_small"
+				}
+			}
+			add_country_leader_trait = ALF_justice_prevails
+		}
+	}
 	###FIRE ECW WAR###
 	###启动古圣堂之战##
 	Fire_ECW_WAR_HIPPER = {
@@ -276,6 +296,18 @@ Hipper_test_decisions_categories = {
 			BARE_SuperEvent_2_effect_10 = yes
 		}
 	}
+	Fire_super_type2_event11_hipp = {
+		visible = {
+			is_debug = yes
+			has_global_flag = show_se_test_decision_flag
+		}
+		available = {
+			is_ai = no
+		}
+		complete_effect = {
+			BARE_SuperEvent_2_effect_11 = yes
+		}
+	}
 	#################
 	#################
 	BAREXP_show_superevent1_gui = {
@@ -374,6 +406,30 @@ Hipper_test_decisions_categories = {
 			BSE_Fire_Super_Event_index_8 = yes
 		}
 	}
+	BAREXP_show_superevent9_gui = {
+		visible = {
+			is_debug = yes
+			has_global_flag = show_se_test_decision_flag
+		}
+		available = {
+			is_ai = no
+		}
+		complete_effect = {
+			BSE_Fire_Super_Event_index_9 = yes
+		}
+	}
+	BAREXP_show_superevent10_gui = {
+		visible = {
+			is_debug = yes
+			has_global_flag = show_se_test_decision_flag
+		}
+		available = {
+			is_ai = no
+		}
+		complete_effect = {
+			BSE_Fire_Super_Event_index_10 = yes
+		}
+	}
 	###查看结算警告###
 	check_war_end_flavor_hipp = {
 		visible = {
@@ -383,7 +439,8 @@ Hipper_test_decisions_categories = {
 			is_ai = no
 		}
 		complete_effect = {
-			TEST_BARE_PEACE_EVENT_POPUP_ARI_WIN_TRI_FOR_CAPITULATION = yes
+			ALF_WINS_EDEN_IRON_PACT_WAR_PEACE_EVENT_POPUP_EFFECT = yes
+			set_global_flag = EDEN_IRON_PACT_WAR_scenario_global_flag
 		}
 	}
 	initializ_ALF_hipp = {
@@ -403,6 +460,7 @@ Hipper_test_decisions_categories = {
 	show_ALF_phrase_1_all_focus_tree_decision = {
 		visible = {
 			is_debug = yes
+			tag = ALF
 		}
 		available = {
 			is_ai = no
@@ -412,24 +470,193 @@ Hipper_test_decisions_categories = {
 			mark_focus_tree_layout_dirty = yes
 		}
 	}
-	###
-	Alf_for_glory_decision = {
+	show_ALF_phrase_2_all_focus_tree_decision = {
+		visible = {
+			is_debug = yes
+			tag = ALF
+		}
+		available = {
+			is_ai = no
+		}
+		complete_effect = {
+			set_country_flag = ALF_phrase_2_flag
+			set_global_flag = the_enterprise_war_begins
+			set_country_flag = ALF_EPW_STAGE2_flag
+			set_global_flag = EPW_ENDS_global_flag
+			set_country_flag = ALF_ready_for_2nd_liberation_war_flag
+			set_country_flag = ALF_Gabriel_operation_success
+			set_global_flag = ALF_THE_2ND_LIBERATION_WAR_BEGINS_NOW_GLOBAL_FLAG
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	active_kaiser_mission_decision = {
+		visible = {
+			is_debug = yes
+			tag = ALF
+		}
+		available = {
+			is_ai = no
+		}
+		complete_effect = {
+			activate_mission = ALF_EPW_Stage_2_trigger_mission
+			activate_mission = ALF_EPW_Stage_2_timer_mission
+		}
+	}
+	initialize_TRI_eden_failure = {
 		visible = {
 			is_debug = yes
 		}
 		available = {
 			is_ai = no
-			tag = ALF
 		}
 		complete_effect = {
-			set_portraits = {
-				character = ALF_The_Leader
-				civilian = {
-					large = "GFX_BARE_Portrait_ALF_the_leader_no_mask"
-					small = "GFX_BARE_Portrait_ALF_the_leader_no_mask_small"
+			ALF_failure_impact_of_eden_treaty_TRI_stage_1 = yes
+			ALF_failure_impact_of_eden_treaty_TRI_stage_2 = yes
+			ALF_failure_impact_of_eden_treaty_TRI_stage_3 = yes
+		}
+	}
+	initialize_2nd_liberation_war = {
+		visible = {
+			is_debug = yes
+		}
+		available = {
+			is_ai = no
+		}
+		complete_effect = {
+			TRA = {
+				create_faction = TRA_GEA_Axis
+				add_to_faction = GEA
+			}
+			ALF = {
+				add_to_faction = TRT
+				add_to_faction = GER
+			}
+		}
+	}
+	peace_test_2nd_liberation_war_decision = {
+		visible = {
+			is_debug = yes
+		}
+		available = {
+			is_ai = no
+		}
+		complete_effect = {
+			every_possible_country = {
+				limit = {
+					OR = {
+						tag = GEA
+						is_subject_of = GEA
+					}
+				}
+				every_possible_country = {
+					limit = {
+						OR = {
+							tag = ALF
+							is_ally_with = ALF
+						}
+					}
+					white_peace = PREV
 				}
 			}
-			add_country_leader_trait = ALF_justice_prevails
+			GER = {
+				annex_country = {
+					target = GEA
+					transfer_troops = no
+				}
+				set_autonomy = {
+					target = A06
+					autonomous_state = autonomy_bare_trusteeship_area
+					end_wars = yes
+					end_civil_wars = yes
+				}
+				set_autonomy = {
+					target = A08
+					autonomous_state = autonomy_bare_trusteeship_area
+					end_wars = yes
+					end_civil_wars = yes
+				}
+				set_autonomy = {
+					target = A09
+					autonomous_state = autonomy_bare_trusteeship_area
+					end_wars = yes
+					end_civil_wars = yes
+				}
+				set_autonomy = {
+					target = A11
+					autonomous_state = autonomy_bare_trusteeship_area
+					end_wars = yes
+					end_civil_wars = yes
+				}
+			}
+			every_possible_country = {
+				limit = {
+					OR = {
+						tag = TRA
+						is_subject_of = TRA
+					}
+				}
+				every_possible_country = {
+					limit = {
+						OR = {
+							tag = ALF
+							is_ally_with = ALF
+						}
+					}
+					white_peace = PREV
+				}
+			}
+			TRT = {
+				annex_country = {
+					target = TRA
+					transfer_troops = no
+				}
+				annex_country = {
+					target = TRI
+					transfer_troops = yes
+				}
+				set_autonomy = {
+					target = A01
+					autonomous_state = autonomy_bare_trusteeship_area
+					end_wars = yes
+					end_civil_wars = yes
+				}
+				set_autonomy = {
+					target = A02
+					autonomous_state = autonomy_bare_trusteeship_area
+					end_wars = yes
+					end_civil_wars = yes
+				}
+				set_autonomy = {
+					target = A04
+					autonomous_state = autonomy_bare_trusteeship_area
+					end_wars = yes
+					end_civil_wars = yes
+				}
+				set_autonomy = {
+					target = A05
+					autonomous_state = autonomy_bare_trusteeship_area
+					end_wars = yes
+					end_civil_wars = yes
+				}
+			}
+		}
+	}
+
+	BAREXP_endgame_closing_screen_gui = {
+		visible = {
+			always = yes
+		}
+		complete_effect = {
+		    BARE_ALF_GOOD_END_ENDING_SCREEN_EFFECT = yes
+		}
+	}
+
+	BAREXP_endgame_closing_screen_ALF_BAD_END = {
+		visible = {
+			always = yes
+		}
+		complete_effect = {
+		    BARE_ALF_BAD_END_ENDING_SCREEN_EFFECT = yes
 		}
 	}
 }

@@ -23,13 +23,13 @@ opinion_modifiers = {
 	}
 
 	holds_our_cores = {
-		value = 10
+		value = -5
 	}
 	holds_our_claims = {
 		value = -15
 	}
 	claims_on_us = { 
-		value = 5
+		value = -1
 	}
 	at_war_with_faction = {
 		value = -25

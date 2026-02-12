@@ -1,0 +1,28 @@
+##发射志愿军##
+ALF_2ND_liberation_war_volunteers = {
+    allowed = {
+        NOT = {
+            original_tag = TRI
+        }
+        NOT = {
+            original_tag = GEH
+        }
+    }
+    enable = {
+        has_idea = ALF_volunteers_from_farway
+    }
+
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = send_volunteers_desire
+        id = ALF
+        value = 1000
+    }
+
+    ai_strategy = {
+        type = support
+        id = ALF
+        value = 100
+    }
+}

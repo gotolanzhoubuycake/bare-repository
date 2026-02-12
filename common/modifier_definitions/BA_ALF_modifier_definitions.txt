@@ -9,6 +9,6 @@ ALF_Livability_int = {
 ##军事改革进度##
 ALF_military_reform_int = {
 	color_type = good
-	value_type = number
+	value_type = percentage
 	precision = 2
 }

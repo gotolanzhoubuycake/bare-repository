@@ -7,6 +7,7 @@ state={
 	resources = {
 		resources_cm = 20
 		resources_mm = 2
+		resources_el = 4
 	}
 	history = {
 		buildings = {

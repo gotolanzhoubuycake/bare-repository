@@ -6,6 +6,10 @@
 
  #no_ideology_type_desc: "总之可别当成画大饼了。"
  Egalitarianism_ideology_drift: "§Y平等哲学§!每周认同率"
+ Authoritarian_ideology_drift: "§Y专制哲学§!每周认同率"
+ Liberalism_ideology_drift: "§Y开明哲学§!每周认同率"
+ Mysticism_ideology_drift: "§Y神秘哲学§!每周认同率"
+ Progressivism_ideology_drift: "§Y进步哲学§!每周认同率"
 
 #################
 #政治冷感

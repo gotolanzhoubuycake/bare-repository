@@ -7,3 +7,24 @@
  TRI_politic_allies_achievement_NAME: "政治影响"
  TRI_politic_allies_achievement_DESC: "§L“乌合之众”的另一个意思是，人多力量大。§!"
  TRI_politic_allies_achievement_condition_tt: "作为§Y[TRI.GetFlag]圣三一§!，同时任用§G三名政治顾问§!。"
+
+ is_playing_ALF_tt: "势力可以启用§Y[ALF.GetNameWithFlag]§!"
+ ALF_ending_of_a_long_march_achievement_NAME: "流亡之路"
+ ALF_ending_of_a_long_march_achievement_tt: "作为§Y[ALF.GetFlag]流亡者§!，在青蓝丘度过§C第一个日夜§!。"
+ ALF_ending_of_a_long_march_achievement_DESC: "§L阿里乌斯，我的家\n我生于此，死于此\n爱与怒各占一半\n我恨你，我的家\n\n——远方歌谣§!"
+
+ ALF_rasing_the_flag_achievement_NAME: "旗帜升起"
+ ALF_rasing_the_flag_achievement_tt: "作为§Y[ALF.GetFlag]流亡者§!，§G找回§!§C丢失的旧校旗§!。"
+ ALF_rasing_the_flag_achievement_DESC: "§L“我以为再也不会找回这面旗帜了……简直像做梦一样。”\n\n——领袖§!"
+
+ ALF_knock_down_the_giant_achievement_NAME: "击倒巨人"
+ ALF_knock_down_the_giant_achievement_tt: "作为§Y[ALF.GetFlag]流亡者§!，击退§O凯撒集团§!的§R干涉§!。"
+ ALF_knock_down_the_giant_achievement_DESC: "§L就算是夜之城的荒坂塔也照样被烧了。我对这个结果毫不意外。§!"
+
+ ALF_go_home_achievement_NAME: "完成未竟之事"
+ ALF_go_home_achievement_tt: "作为§Y[ALF.GetFlag]流亡者§!，终结§O贝阿多莉切§!的§R残酷统治§!。"
+ ALF_go_home_achievement_DESC: "§L“阿里乌斯，母校！我们回来了，我们要把你从叛徒的手中解救出来了！”§!"
+
+ ALF_win_the_final_battle_achievement_NAME: "跨越和平之门"
+ ALF_win_the_final_battle_achievement_tt: "作为§Y[ALF.GetFlag]阿里乌斯分校§!和§G伊甸条约§!，击溃§O钢铁协定§!和它那§R不切实际的野心§!。"
+ ALF_win_the_final_battle_achievement_DESC: "§L乐观的人选择无视命运，悲观的人最终接受命运，勇敢的人奋起征服命运。\n\n你们的胜利证明了一件事：预言也只过是关于可能性的惊鸿一瞥而已。\n做得好。\n\n——老师§!"

@@ -18,28 +18,7 @@ ideas = {
             }
         }
 
-        # 承平日久的安保部
-        MIL_security_department_of_long_peace = {
-            name = MIL_security_department_of_long_peace
-            picture = MIL_security_department_of_long_peace
 
-            allowed = {
-                original_tag = MIL
-            }
-
-            modifier = {
-                army_attack_factor = -0.2
-                army_defence_factor = -0.2
-                army_org_factor = -0.1
-                planning_speed = -0.2
-                planning_factor = -0.2
-                land_doctrine_cost_factor = 0.35
-                air_doctrine_cost_factor = 0.35
-                army_chief_cost_factor = 0.33
-                air_chief_cost_factor = 0.33
-                high_command_cost_factor = 0.33
-            }
-        }
 
         # 过于前卫的飞行器
         MIL_overly_advanced_aircraft = {
@@ -81,5 +60,307 @@ ideas = {
                 production_speed_buildings_factor = -0.2
             }
         }
+
+        # 不合格社团审查1
+        MIL_unqualified_club_investigate_1 = {
+            name = MIL_unqualified_club_investigate
+            picture = MIL_unqualified_club_investigate
+
+            allowed = {
+                original_tag = MIL
+            }
+
+            modifier = {
+                political_power_factor = -0.05
+                stability_factor = -0.05
+                consumer_goods_factor = -0.25
+            }
+        }
+
+        # 不合格社团审查2
+        MIL_unqualified_club_investigate_2 = {
+            name = MIL_unqualified_club_investigate
+            picture = MIL_unqualified_club_investigate
+
+            allowed = {
+                original_tag = MIL
+            }
+
+            modifier = {
+                political_power_factor = -0.1
+                stability_factor = -0.1
+                consumer_goods_factor = -0.25
+                industrial_capacity_factory = 0.05
+            }
+        }
+
+        # 不合格社团审查3
+        MIL_unqualified_club_investigate_3 = {
+            name = MIL_unqualified_club_investigate
+            picture = MIL_unqualified_club_investigate
+
+            allowed = {
+                original_tag = MIL
+            }
+
+            modifier = {
+                political_power_factor = -0.1
+                stability_factor = -0.1
+                consumer_goods_factor = -0.4
+                industrial_capacity_factory = 0.05
+            }
+        }
+
+        # 审查大获成功
+        MIL_investigate_success = {
+            name = MIL_investigate_success
+            picture = MIL_investigate_success
+
+            allowed = {
+                original_tag = MIL
+            }
+
+            modifier = {
+                political_power_factor = 0.05
+                stability_factor = 0.05
+                consumer_goods_factor = -0.4
+                industrial_capacity_factory = 0.1
+            }
+        }
+
+        # 死战到底
+        MIL_till_the_last_man_standing = {
+            name = MIL_till_the_last_man_standing
+            picture = MIL_till_the_last_man_standing
+
+            modifier = {
+                army_org_factor = 0.1
+                experience_loss_factor = 0.25
+            }
+
+            targeted_modifier = {
+                tag = CAE
+                defense_bonus_against = 0.1
+            }
+        }
+
+		MIL_security_department_tooltip_0 = {
+			name = MIL_security_department_name # 承平日久的安保部
+			removal_cost = -1
+			modifier = { } 
+		}
+
+
+		MIL_security_department_tooltip_1 = {
+			name = MIL_security_department_name
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				planning_speed = 0.05
+				planning_factor = 0.05
+			}
+		}
+
+
+		MIL_security_department_tooltip_2 = {
+			name = MIL_security_department_name
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.10
+				army_defence_factor = 0.10
+				planning_speed = 0.10
+				planning_factor = 0.10
+			}
+		}
+
+
+		MIL_security_department_tooltip_3 = {
+			name = MIL_security_department_name
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.15
+				army_defence_factor = 0.15
+				planning_speed = 0.15
+				planning_factor = 0.15
+			}
+		}
+
+
+		MIL_security_department_tooltip_4 = {
+			name = MIL_security_department_name
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.20
+				army_defence_factor = 0.20
+				planning_speed = 0.20
+				planning_factor = 0.20
+			}
+		} 
+
+
+		# 千年特战部队 - 阶段变化
+		# ==========================================
+
+		# 阶段1：特战生训练计划完成
+		MIL_special_ops_force_1 = {
+			name = MIL_special_ops_force_name
+			picture = idea_MIL_special_ops_force
+			modifier = {
+			}
+		}
+
+		# 阶段2A：只完成了机甲开发
+		MIL_special_ops_force_2_mech = {
+			name = MIL_special_ops_force_name
+			picture = idea_MIL_special_ops_force
+			
+			# 装备修正：包含机甲和自动机
+			equipment_bonus = {
+				Individual_Special_Operations_Mech_equipment = {
+					reliability = 0.10      # 可靠性 +10%
+					build_cost_ic = -0.10   # 生产花费 -10%
+				}
+				auto_mech = {
+					reliability = 0.10
+					build_cost_ic = -0.10
+				}
+			}
+			modifier = {
+			}
+		}
+
+		# 阶段2B：只完成了【C&C的地狱训练】
+		# 效果：基础 + C&C特训修正
+		MIL_special_ops_force_2_training = {
+			name = MIL_special_ops_force_name
+			picture = idea_MIL_special_ops_force
+			modifier = {
+				
+				# C&C特训修正
+				special_forces_training_time_factor = 0.10  # 特种部队训练时间 +10%
+				special_forces_cap = 0.10            # 特种部队上限 +10%
+				terrain_penalty_reduction = 0.10            # 地形惩罚 -10% (正数即为减少惩罚)
+			}
+		}
+
+		# 阶段3：机甲 + 训练 都已完成（合成版）
+		# 效果：基础 + 机甲修正 + C&C特训修正
+		MIL_special_ops_force_3_combined = {
+			name = MIL_special_ops_force_name
+			picture = idea_MIL_special_ops_force
+			
+			equipment_bonus = {
+				Individual_Special_Operations_Mech_equipment = {
+					reliability = 0.10
+					build_cost_ic = -0.10
+				}
+				auto_mech = {
+					reliability = 0.10
+					build_cost_ic = -0.10
+				}
+			}
+			modifier = {
+				
+				# C&C特训修正
+				special_forces_training_time_factor = 0.10
+				special_forces_cap = 0.10
+				terrain_penalty_reduction = 0.10
+			}
+		}
+
+		# 阶段4：独属于千年的利刃（完全体）
+		# 效果：合成版所有效果 + 最终攻防 10%
+		MIL_special_ops_force_4_final = {
+			name = MIL_special_ops_force_name
+			picture = idea_MIL_special_ops_force
+			
+			equipment_bonus = {
+				Individual_Special_Operations_Mech_equipment = {
+					reliability = 0.10
+					build_cost_ic = -0.10
+				}
+				auto_mech = {
+					reliability = 0.10
+					build_cost_ic = -0.10
+				}
+			}
+			modifier = {
+				
+				# C&C特训修正
+				special_forces_training_time_factor = 0.10
+				special_forces_cap = 0.10
+				terrain_penalty_reduction = 0.10
+				
+				# 最终追加：特种攻防 +10%
+				special_forces_attack_factor = 0.10
+				special_forces_defence_factor = 0.10
+			}
+		}
+
+		# ==========================================
+		# 千年天空的守护者 (Guardian of the Sky)
+		# ==========================================
+
+		# 阶段 0：初始获得 (无效果)
+		MIL_sky_guardian_tooltip_0 = {
+			name = "千年天空的守护者"
+			picture = GFX_idea_MIL_sky_guardian
+			removal_cost = -1
+			modifier = { }
+		}
+
+		# 阶段 1：完成“悄无声息的猎杀者”
+		# 效果：效率+10%，恶劣天气-10%，夜间-10%
+		MIL_sky_guardian_tooltip_1 = {
+			name = "千年天空的守护者"
+			picture = GFX_idea_MIL_sky_guardian
+			removal_cost = -1
+			modifier = {
+				air_mission_efficiency = 0.10
+				air_weather_penalty = -0.10
+				air_night_penalty = -0.10
+			}
+		}
+
+		# 阶段 2：完成“小规模空中战术推演”
+		# 累计效果：效率+10%，天气/夜间-10% | 经验获取+5%
+		MIL_sky_guardian_tooltip_2 = {
+			name = "千年天空的守护者"
+			picture = GFX_idea_MIL_sky_guardian
+			removal_cost = -1
+			modifier = {
+				air_mission_efficiency = 0.10
+				air_weather_penalty = -0.10
+				air_night_penalty = -0.10
+				
+				air_training_xp_gain_factor = 0.05 # 或者是 air_experience_gain_factor
+			}
+		}
+
+		# 阶段 3：完成“鹰击长空对抗演习”
+		# 累计效果：效率+15%(10+5)，天气/夜间-10%，经验获取+5% | 每日经验+0.1，王牌+10%，战损经验减少-25%
+		MIL_sky_guardian_tooltip_3 = {
+			name = "千年天空的守护者"
+			picture = GFX_idea_MIL_sky_guardian
+			removal_cost = -1
+			modifier = {
+				air_mission_efficiency = 0.15 # 10% + 5%
+				air_weather_penalty = -0.10
+				air_night_penalty = -0.10
+				air_training_xp_gain_factor = 0.05
+				
+				# 追加效果
+				air_experience_gain = 0.1
+				air_ace_generation_chance_factor = 0.10
+				air_wing_xp_loss_when_killed_factor = -0.25
+			}
+		}
+
+
+
+
     }
 }
+
+

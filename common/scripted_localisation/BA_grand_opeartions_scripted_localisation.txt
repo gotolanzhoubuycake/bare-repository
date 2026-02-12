@@ -494,7 +494,13 @@ defined_text = {
 	name = operation_protect_wing_sl
 	text = {
 		trigger = {
-			is_controlled_by = ROOT
+			CONTROLLER = {
+				OR = {
+					tag = ROOT
+					is_ally_with = ROOT
+					is_subject_of = ROOT
+				}
+			}
 		}
 		localization_key = operation_protect_wing_sl_control_by_us
 	}

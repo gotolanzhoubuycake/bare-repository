@@ -1,144 +1,180 @@
 ##测试脚本，勿动##
-TEST_BARE_PEACE_EVENT_POPUP_DEFAULT_FOR_CAPITULATION = {            
-        set_global_flag = show_peace_popup_alert
-		TRI = {
-			save_global_event_target_as = winning_country
-		}
-		ARI = {
-			save_global_event_target_as = losing_country
-		}
-
-		if = {
-			limit = {
-				event_target:losing_country = {
-					any_allied_country = {
-						has_war_together_with = event_target:losing_country
-					}
+TEST_BARE_PEACE_EVENT_POPUP_DEFAULT_FOR_CAPITULATION = {
+	set_global_flag = show_peace_popup_alert
+	TRI = {
+		save_global_event_target_as = winning_country
+	}
+	ARI = {
+		save_global_event_target_as = losing_country
+	}
+	if = {
+		limit = {
+			event_target:losing_country = {
+				any_allied_country = {
+					has_war_together_with = event_target:losing_country
 				}
 			}
-				set_global_flag = losing_country_multiple
 		}
-
-		if = {
-			limit = {
-				event_target:winning_country = {
-					any_allied_country = {
-						has_war_together_with = event_target:winning_country
-					}
+		set_global_flag = losing_country_multiple
+	}
+	if = {
+		limit = {
+			event_target:winning_country = {
+				any_allied_country = {
+					has_war_together_with = event_target:winning_country
 				}
 			}
-				set_global_flag = winning_country_multiple
 		}
-	    add_to_variable = { global.peace_popup_dirty = 1 }
+		set_global_flag = winning_country_multiple
+	}
+	add_to_variable = {
+		global.peace_popup_dirty = 1
+	}
 }
 
-TEST_BARE_PEACE_EVENT_POPUP_ARI_WIN_GEH_FOR_CAPITULATION = {              
-        set_global_flag = show_peace_popup_alert
-		ARI = {
-			save_global_event_target_as = winning_country
-		}
-		GEH = {
-			save_global_event_target_as = losing_country
-		}
-
-		if = {
-			limit = {
-				event_target:losing_country = {
-					any_allied_country = {
-						has_war_together_with = event_target:losing_country
-					}
+TEST_BARE_PEACE_EVENT_POPUP_ARI_WIN_GEH_FOR_CAPITULATION = {
+	set_global_flag = show_peace_popup_alert
+	ARI = {
+		save_global_event_target_as = winning_country
+	}
+	GEH = {
+		save_global_event_target_as = losing_country
+	}
+	if = {
+		limit = {
+			event_target:losing_country = {
+				any_allied_country = {
+					has_war_together_with = event_target:losing_country
 				}
 			}
-				set_global_flag = losing_country_multiple
 		}
-
-		if = {
-			limit = {
-				event_target:winning_country = {
-					any_allied_country = {
-						has_war_together_with = event_target:winning_country
-					}
+		set_global_flag = losing_country_multiple
+	}
+	if = {
+		limit = {
+			event_target:winning_country = {
+				any_allied_country = {
+					has_war_together_with = event_target:winning_country
 				}
 			}
-				set_global_flag = winning_country_multiple
 		}
-	    add_to_variable = { global.peace_popup_dirty = 1 }
+		set_global_flag = winning_country_multiple
+	}
+	add_to_variable = {
+		global.peace_popup_dirty = 1
+	}
 }
 
-TEST_BARE_PEACE_EVENT_POPUP_ARI_WIN_TRI_FOR_CAPITULATION = {          
-        set_global_flag = show_peace_popup_alert
-		ARI = {
-			save_global_event_target_as = winning_country
-		}
-		TRI = {
-			save_global_event_target_as = losing_country
-		}
-
-		if = {
-			limit = {
-				event_target:losing_country = {
-					any_allied_country = {
-						has_war_together_with = event_target:losing_country
-					}
+TEST_BARE_PEACE_EVENT_POPUP_ARI_WIN_TRI_FOR_CAPITULATION = {
+	set_global_flag = show_peace_popup_alert
+	ARI = {
+		save_global_event_target_as = winning_country
+	}
+	TRI = {
+		save_global_event_target_as = losing_country
+	}
+	if = {
+		limit = {
+			event_target:losing_country = {
+				any_allied_country = {
+					has_war_together_with = event_target:losing_country
 				}
 			}
-				set_global_flag = losing_country_multiple
 		}
-
-		if = {
-			limit = {
-				event_target:winning_country = {
-					any_allied_country = {
-						has_war_together_with = event_target:winning_country
-					}
+		set_global_flag = losing_country_multiple
+	}
+	if = {
+		limit = {
+			event_target:winning_country = {
+				any_allied_country = {
+					has_war_together_with = event_target:winning_country
 				}
 			}
-				set_global_flag = winning_country_multiple
 		}
-	    add_to_variable = { global.peace_popup_dirty = 1 }
+		set_global_flag = winning_country_multiple
+	}
+	add_to_variable = {
+		global.peace_popup_dirty = 1
+	}
 }
 
 ##理论上说，这东西就可以互动自定义本地化文件而无需额外定义脚本。
 ##但如果遇到不能解决的问题，请和测试脚本一样对特定国家进行定义。
-BARE_PEACE_EVENT_POPUP_DEFAULT_FOR_CAPITULATION = {                
-    set_global_flag = show_peace_popup_alert
-		FROM = {
-			save_global_event_target_as = winning_country
-		}
-		ROOT = {
-			save_global_event_target_as = losing_country
-		}
-
-		if = {
-			limit = {
-				event_target:losing_country = {
-					any_allied_country = {
-						has_war_together_with = event_target:losing_country
-					}
+BARE_PEACE_EVENT_POPUP_DEFAULT_FOR_CAPITULATION = {
+	set_global_flag = show_peace_popup_alert
+	FROM = {
+		save_global_event_target_as = winning_country
+	}
+	ROOT = {
+		save_global_event_target_as = losing_country
+	}
+	if = {
+		limit = {
+			event_target:losing_country = {
+				any_allied_country = {
+					has_war_together_with = event_target:losing_country
 				}
 			}
-			##理论上说这是给集团冲突准备的。
-			#可以差分化当一方阵营没有完全投降时的本地化内容，但没啥必要。
-			#set_global_flag = losing_country_multiple
 		}
-
-		if = {
-			limit = {
-				event_target:winning_country = {
-					any_allied_country = {
-						has_war_together_with = event_target:winning_country
-					}
+		##理论上说这是给集团冲突准备的。
+		#可以差分化当一方阵营没有完全投降时的本地化内容，但没啥必要。
+		#set_global_flag = losing_country_multiple
+	}
+	if = {
+		limit = {
+			event_target:winning_country = {
+				any_allied_country = {
+					has_war_together_with = event_target:winning_country
 				}
 			}
-			##理论上说这是给集团冲突准备的。
-			#可以差分化当一方阵营没有完全投降时的本地化内容，但没啥必要。
-			#set_global_flag = winning_country_multiple
 		}
-	    add_to_variable = { global.peace_popup_dirty = 1 }
+		##理论上说这是给集团冲突准备的。
+		#可以差分化当一方阵营没有完全投降时的本地化内容，但没啥必要。
+		#set_global_flag = winning_country_multiple
+	}
+	add_to_variable = {
+		global.peace_popup_dirty = 1
+	}
+}
+
+##########################################
+ALF_WINS_EDEN_IRON_PACT_WAR_PEACE_EVENT_POPUP_EFFECT = {
+	clr_global_for_peace_popup = yes
+	ALF = {
+		save_global_event_target_as = winning_country
+		set_country_flag = ALF_EDEN_IRON_PACT_WAR_success
+	}
+	TRA = {
+		save_global_event_target_as = losing_country
+	}
+	set_global_flag = show_peace_popup_alert
+	if = {
+		limit = {
+			event_target:losing_country = {
+				any_allied_country = {
+					has_war_together_with = event_target:losing_country
+				}
+			}
+		}
+		set_global_flag = losing_country_multiple
+	}
+	if = {
+		limit = {
+			event_target:winning_country = {
+				any_allied_country = {
+					has_war_together_with = event_target:winning_country
+				}
+			}
+		}
+		set_global_flag = winning_country_multiple
+	}
+	add_to_variable = {
+		global.peace_popup_dirty = 1
+	}
 }
 
 clr_global_for_peace_popup = {
-    clr_global_flag = show_peace_popup_alert
+	clr_global_flag = show_peace_popup_alert
 	clr_global_flag = losing_country_multiple
 	clr_global_flag = winning_country_multiple
 	clr_global_flag = war_continuing

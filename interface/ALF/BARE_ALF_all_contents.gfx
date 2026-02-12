@@ -1,5 +1,10 @@
 spriteTypes = {
-	###国家精神配图
+	###国家精神&配图
+	spriteType = {
+        name = "GFX_idea_ALF_atsuko_idea"
+        texturefile = "gfx/interface/ideas/ALF/atsuko_small.dds"
+	}
+
 	spriteType = {
         name = "GFX_ALF_armed_force_dynamic_modifier_desc_picture"
         texturefile = "gfx/interface/ideas/ALF/ideas_picture/ALF_armed_force_dynamic_modifier_desc_picture.dds"
@@ -16,6 +21,30 @@ spriteTypes = {
         name = "GFX_ALF_new_capital_decision_ui_picture"
         texturefile = "gfx/interface/decisions/ALF/ALF_new_capital_decision_ui_picture.dds"
 		#legacy_lazy_load = no
+	}
+
+	spriteType = {
+        name = "GFX_ALF_infiltrate_kaiser_pic"
+        texturefile = "gfx/interface/ideas/ALF/ideas_picture/ALF_infiltrate_kaiser_pic.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+        name = "GFX_ALF_way_for_glory_pic"
+        texturefile = "gfx/interface/ideas/ALF/ideas_picture/ALF_way_for_glory_pic.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+        name = "GFX_ALF_toward_the_last_object_pic"
+        texturefile = "gfx/interface/ideas/ALF/ideas_picture/ALF_toward_the_last_object_pic.dds"
+		legacy_lazy_load = no
+	}
+
+	##顾问
+	spriteType = {
+        name = "GFX_portrait_ALF_hiyuri_small"
+        texturefile = "gfx/leaders/ARI/hiyori_small.dds"
 	}
 
 	#事件#
@@ -38,5 +67,231 @@ spriteTypes = {
 		horizontal = yes
 		
 		#steps = 100
+	}
+
+	##########################
+	#####     国策
+	##########################
+
+	SpriteType = {
+		name = "GFX_goal_ALF_a_great_march"
+		texturefile = "gfx/interface/goals/ALF/goal_ALF_a_great_march.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_ALF_begin_new_journey"
+		texturefile = "gfx/interface/goals/ALF/goal_ALF_begin_new_journey.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_ALF_memory_of_old_home"
+		texturefile = "gfx/interface/goals/ALF/goal_ALF_memory_of_old_home.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_ALF_recovery_old_stuff"
+		texturefile = "gfx/interface/goals/ALF/goal_ALF_recovery_old_stuff.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_ALF_settled_in_new_home"
+		texturefile = "gfx/interface/goals/ALF/goal_ALF_settled_in_new_home.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_ALF_stand_our_ground"
+		texturefile = "gfx/interface/goals/ALF/goal_ALF_stand_our_ground.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_ALF_a_great_march_shine"
+		texturefile = "gfx/interface/goals/ALF/goal_ALF_a_great_march.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ALF/goal_ALF_a_great_march.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ALF/goal_ALF_a_great_march.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_/goal_ALF_begin_new_journey_shine"
+		texturefile = "gfx/interface/goals/ALF//goal_ALF_begin_new_journey.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ALF//goal_ALF_begin_new_journey.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ALF//goal_ALF_begin_new_journey.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_goal_ALF_memory_of_old_home_shine"
+		texturefile = "gfx/interface/goals/ALF/goal_ALF_memory_of_old_home.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ALF/goal_ALF_memory_of_old_home.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ALF/goal_ALF_memory_of_old_home.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_goal_ALF_recovery_old_stuff_shine"
+		texturefile = "gfx/interface/goals/ALF/goal_ALF_recovery_old_stuff.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ALF/goal_ALF_recovery_old_stuff.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ALF/goal_ALF_recovery_old_stuff.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_goal_ALF_settled_in_new_home_shine"
+		texturefile = "gfx/interface/goals/ALF/goal_ALF_settled_in_new_home.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ALF/goal_ALF_settled_in_new_home.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ALF/goal_ALF_settled_in_new_home.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_goal_ALF_stand_our_ground_shine"
+		texturefile = "gfx/interface/goals/ALF/goal_ALF_stand_our_ground.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ALF/goal_ALF_stand_our_ground.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ALF/goal_ALF_stand_our_ground.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
 	}
 }

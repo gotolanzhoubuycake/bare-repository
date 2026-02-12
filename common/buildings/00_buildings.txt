@@ -422,7 +422,7 @@ buildings = {
 				fuel_gain_from_states = -1
 			}
 		}
-
+		local_resources_resources_el = 50
 		
 		show_modifier = yes
 
@@ -445,7 +445,7 @@ buildings = {
 			state_resource_cost_resources_cm = 4
 		}
 
-
+		local_resources_resources_el = 45
 		
 		show_modifier = yes
 
@@ -470,7 +470,7 @@ buildings = {
 			state_resource_cost_resources_mm = 4
 		}
 
-
+		local_resources_resources_el = 60
 		
 		show_modifier = yes
 

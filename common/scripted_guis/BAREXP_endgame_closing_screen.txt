@@ -1,0 +1,53 @@
+scripted_gui = {
+	BAREXP_endgame_closing_screen_menu = {
+		context_type = player_context
+		window_name = "BAREXP_endgame_closing_screen_menu"
+		visible = {
+			is_ai = no
+			check_variable = {
+				game_ends_here = 1
+			}
+		}
+		triggers = {
+			
+		}
+		effects = {
+			endgame_exit_button_click = {
+				set_variable = {
+					game_ends_here = 0
+				}
+			}
+
+			endgame_continue_button_click = {
+				set_variable = {
+					game_ends_here = 0
+				}
+			}
+		}
+	}
+
+	BAREXP_endgame_closing_screen = {
+		parent_window_name = BAREXP_endgame_closing_screen_menu
+		context_type = player_context
+		window_name = "BAREXP_endgame_closing_screen_container"
+		ai_enabled = {
+			always = no
+		}
+		visible = {
+			is_ai = no
+			check_variable = {
+				game_ends_here = 1
+			}
+		}
+		dynamic_lists = {
+		}
+		properties = {
+			BAREXP_endgame_closing_screen_poster = {
+				image = "[ROOT.GET_BAREXP_ENDGAME_CLOSING_SCREEN_COUNTRY_POSTER]"
+			}
+		}
+		effects = {
+		
+		}
+	}
+}

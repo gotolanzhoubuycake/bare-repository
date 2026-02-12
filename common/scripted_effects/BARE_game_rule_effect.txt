@@ -1,89 +1,89 @@
 BARE_RULE_story_settings_ALF_SELECTED_effect = {
 	195 = {
-		transfer_state_to = BMG
 		add_core_of = BMG
+		transfer_state_to = BMG
 	}
 	196 = {
-		transfer_state_to = DCA
 		add_core_of = DCA
+		transfer_state_to = DCA
 	}
 	197 = {
-		transfer_state_to = AVG
 		add_core_of = AVG
+		transfer_state_to = AVG
 	}
 	198 = {
-		transfer_state_to = COS
 		add_core_of = COS
+		transfer_state_to = COS
 	}
 	##Add Via Event
 	#199 = { transfer_state_to = ALF }
 	200 = {
-		transfer_state_to = HTG
 		add_core_of = HTG
+		transfer_state_to = HTG
 	}
 	201 = {
-		transfer_state_to = COS
 		add_core_of = COS
+		transfer_state_to = COS
 	}
 	202 = {
-		transfer_state_to = WSG
 		add_core_of = WSG
+		transfer_state_to = WSG
 	}
 	217 = {
-		transfer_state_to = WSG
 		add_core_of = WSG
+		transfer_state_to = WSG
 	}
 	218 = {
-		transfer_state_to = FSC
 		add_core_of = FSC
+		transfer_state_to = FSC
 	}
 	219 = {
-		transfer_state_to = FSC
 		add_core_of = FSC
+		transfer_state_to = FSC
 	}
 	221 = {
-		transfer_state_to = KHG
 		add_core_of = KHG
+		transfer_state_to = KHG
 	}
 	222 = {
-		transfer_state_to = BMR
 		add_core_of = BMR
+		transfer_state_to = BMR
 	}
 	524 = {
-		transfer_state_to = WSG
 		add_core_of = WSG
+		transfer_state_to = WSG
 	}
 	525 = {
-		transfer_state_to = FSC
 		add_core_of = FSC
+		transfer_state_to = FSC
 	}
 	526 = {
-		transfer_state_to = BMT
 		add_core_of = BMT
+		transfer_state_to = BMT
 	}
 	584 = {
-		transfer_state_to = BMG
 		add_core_of = BMG
+		transfer_state_to = BMG
 	}
 	657 = {
-		transfer_state_to = HTG
 		add_core_of = HTG
+		transfer_state_to = HTG
 	}
 	658 = {
-		transfer_state_to = WSG
 		add_core_of = WSG
+		transfer_state_to = WSG
 	}
 	659 = {
-		transfer_state_to = AVG
 		add_core_of = AVG
+		transfer_state_to = AVG
 	}
 	660 = {
-		transfer_state_to = BMT
 		add_core_of = BMT
+		transfer_state_to = BMT
 	}
 	661 = {
-		transfer_state_to = BMT
 		add_core_of = BMT
+		transfer_state_to = BMT
 	}
 	###指定政治状态###
 	A47 = {
@@ -101,27 +101,75 @@ BARE_RULE_story_settings_ALF_SELECTED_effect = {
 			autonomy_state = autonomy_BlackMarket_subject
 		}
 	}
-	###加载编制模版###
-    COS = {
+	###加载编制模版和人力###
+	every_state = {
+		BARE_Combat_Readiness_count_State = yes
+	}
+	every_country = {
+		BARE_Combat_Readiness_count_Country = yes
+	}
+	COS = {
+		BARE_RULE_story_settings_ALF_SELECTED_manpower_initialize_effect = yes
 		load_oob = "COS_oob_2019"
 	}
 	HTG = {
+		BARE_RULE_story_settings_ALF_SELECTED_manpower_initialize_effect = yes
 		load_oob = "HTG_oob_2019"
 	}
 	AVG = {
+		BARE_RULE_story_settings_ALF_SELECTED_manpower_initialize_effect = yes
 		load_oob = "AVG_oob_2019"
 	}
 	A47 = {
+		BARE_RULE_story_settings_ALF_SELECTED_manpower_initialize_effect = yes
 		load_oob = "A47_2019_ALF_Story"
 	}
-
+	FSC = {
+		BARE_RULE_story_settings_ALF_SELECTED_manpower_initialize_effect = yes
+		load_oob = "FSC_oob_2019"
+		load_oob = "FSC_2019_air_legacy"
+	}
+	WSG = {
+		BARE_RULE_story_settings_ALF_SELECTED_manpower_initialize_effect = yes
+		load_oob = "WSG_oob_2019"
+	}
+	BMG = {
+		BARE_RULE_story_settings_ALF_SELECTED_manpower_initialize_effect = yes
+		load_oob = "BMG_oob_2019"
+	}
+	BMR = {
+		BARE_RULE_story_settings_ALF_SELECTED_manpower_initialize_effect = yes
+		load_oob = "BMR_oob_2019"
+	}
+	BMT = {
+		BARE_RULE_story_settings_ALF_SELECTED_manpower_initialize_effect = yes
+		load_oob = "BMT_oob_2019"
+	}
+	KHG = {
+		BARE_RULE_story_settings_ALF_SELECTED_manpower_initialize_effect = yes
+		load_oob = "KHG_oob_2019"
+	}
+	DCA = {
+		BARE_RULE_story_settings_ALF_SELECTED_manpower_initialize_effect = yes
+		load_oob = "DCA_oob_2019"
+	}
 	###触发事件###
 	A47 = {
 		country_event = {
 			id = ALF.99
-			days = 2
 		}
 	}
 }
 
 ####
+BARE_RULE_story_settings_ALF_SELECTED_manpower_initialize_effect = {
+	THIS = {
+		set_temp_variable = {
+			BARE_Combat_Readinness_Remain_temp = BARE_Combat_Readinness_Remain
+		}
+		multiply_temp_variable = {
+			BARE_Combat_Readinness_Remain_temp = 1000
+		}
+		add_manpower = BARE_Combat_Readinness_Remain_temp
+	}
+}

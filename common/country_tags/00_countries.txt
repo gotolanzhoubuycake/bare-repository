@@ -26,6 +26,7 @@ SWC = "countries/SweetsClub.txt"  ##甜品部
 TVC = "countries/TrinityVigilanteCrew.txt"  ##自警团
 UPA = "countries/UnexpectedAlliance.txt" ##补课部
 AJD = "countries/AnjouDominion.txt" ##安如骑士团
+TRR = "countries/TrinityRiots.txt" ##安如骑士团
 ###########圣三一文化结束############
 HYA = "countries/Hyakkiyako.txt"
 MIL = "countries/Millennium.txt"

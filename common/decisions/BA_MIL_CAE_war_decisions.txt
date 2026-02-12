@@ -1,0 +1,359 @@
+MIL_cae_war_decision_category = {
+
+    # 决议1：号召停用凯撒商品
+    # 前置：完成国策"一个公司最害怕的事情"
+    # 花费100pp，持续30天
+    # 完成后：民族精神追加效果生活消费品系数+10%，战争支持度+5%，每周凯撒经济状况-1%
+    MIL_boycott_CAE_products = {
+        icon = MIL_boycott_CAE_products
+
+        visible = {
+            has_completed_focus = MIL_scared_company
+        }
+
+        available = {
+            NOT = { has_country_flag = MIL_boycott_CAE_products_done }
+        }
+
+        cost = 100
+        days_remove = 30
+        fire_only_once = yes # 决策只支持完成一次
+
+        remove_effect = {
+            custom_effect_tooltip = MIL_boycott_CAE_products_tt
+            set_country_flag = MIL_boycott_CAE_products_done
+            # 追加民族精神效果
+            add_to_variable = { global.MIL_cae_war_consumer_goods = 0.1 }
+            add_to_variable = { MIL_cae_war_war_support = 0.05 }
+            # 设置每周经济状况减少的flag
+            set_country_flag = MIL_cae_eco_weekly_minus_1
+        }
+
+        ai_will_do = {
+            base = 10
+        }
+    }
+
+    # 决议2：全面禁用凯撒商品
+    # 前置：完成国策"不给凯撒提供一份收益"
+    # 花费150pp，持续30天
+    # 完成后：民族精神追加效果生活消费品系数+10%，战争支持度+5%，每周凯撒经济状况-1.5%，触发事件
+    MIL_ban_all_CAE_products = {
+        icon = generic_civil_support
+
+        visible = {
+            has_completed_focus = MIL_no_money_to_kaiser
+        }
+
+        available = {
+            has_country_flag = MIL_boycott_CAE_products_done # 在决策1完成后才允许执行
+            NOT = { has_country_flag = MIL_ban_all_CAE_products_done }
+        }
+
+        cost = 150
+        days_remove = 30
+        fire_only_once = yes
+
+        complete_effect = {
+
+        }
+
+        remove_effect = {
+            custom_effect_tooltip = MIL_ban_all_CAE_products_tt
+            set_country_flag = MIL_ban_all_CAE_products_done
+            # 追加民族精神效果
+            add_to_variable = { global.MIL_cae_war_consumer_goods = 0.1 }
+            add_to_variable = { global.MIL_cae_war_war_support = 0.05 }
+            # 更新每周经济状况减少
+            set_country_flag = MIL_cae_eco_weekly_minus_1_5
+            # 触发事件
+            country_event = { id = MIL_cae_war.2 }
+        }
+
+        ai_will_do = {
+            base = 10
+        }
+    }
+
+    # 决议3：对凯撒实施网络攻击
+    # 前置：完成国策"一个公司最害怕的事情"
+    # 花费50pp，间隔30日可用，持续15天
+    # 完成后：凯撒经济状况-5%，触发事件（仅第一次给凯撒临时精神）
+    MIL_cyber_attack_CAE = {
+        icon = generic_industry
+
+        visible = {
+            has_completed_focus = MIL_scared_company
+        }
+
+
+        cost = 50
+        days_remove = 15
+        days_re_enable = 30
+
+        remove_effect = {
+            # 根据是否第一次使用显示不同的tooltip
+            if = {
+                limit = {
+                    NOT = { has_country_flag = MIL_cyber_attack_first_done }
+                }
+                custom_effect_tooltip = MIL_cyber_attack_CAE_first_tt
+            }
+            else = {
+                custom_effect_tooltip = MIL_cyber_attack_CAE_tt
+            }
+            # 减少凯撒经济状况
+            subtract_from_variable = { global.cae_economic_situation = 5 }
+            # 第一次使用时给凯撒临时精神
+            if = {
+                limit = {
+                    NOT = { has_country_flag = MIL_cyber_attack_first_done }
+                }
+                # 触发事件
+                country_event = { id = MIL_cae_war.3 }
+                set_country_flag = MIL_cyber_attack_first_done
+                CAE = {
+                    add_timed_idea = {
+                        idea = CAE_network_paralysis
+                        days = 45
+                    }
+                }
+            }
+        }
+
+        ai_will_do = {
+            base = 8
+        }
+    }
+
+    # 决议4：释放对千年有利的谈判消息
+    # 前置：完成国策"打谈结合，攻心为上"
+    # 花费50pp，持续5天，间隔10天可用
+    # 完成后：凯撒经济状况-5%
+    MIL_release_negotiation_info = {
+        icon = generic_political_discourse
+
+        visible = {
+            has_completed_focus = MIL_attack_and_conversation
+        }
+
+        cost = 50
+        days_remove = 5
+        days_re_enable = 10
+
+
+        remove_effect = {
+            custom_effect_tooltip = MIL_release_negotiation_info_tt
+            # 减少凯撒经济状况
+            subtract_from_variable  = { global.cae_economic_situation = 5 }
+        }
+
+        ai_will_do = {
+            base = 6
+        }
+    }
+
+    # 决议5：寻求联邦学生会的支持
+    # 花费100pp，持续15天
+    # 完成后：触发事件，凯撒经济状况-10%
+    MIL_seek_CEN_support = {
+        icon = generic_political_discourse
+
+        visible = {
+            has_completed_focus = MIL_protect_mil
+        }
+
+
+        cost = 100
+        days_remove = 15
+        fire_only_once = yes
+
+        remove_effect = {
+            set_country_flag = MIL_seek_CEN_support_done
+            custom_effect_tooltip = MIL_seek_CEN_support_tt
+            # 减少凯撒经济状况
+            subtract_from_variable = { global.cae_economic_situation = 10 }
+            # 触发事件
+            country_event = { id = MIL_cae_war.5 }
+        }
+
+        ai_will_do = {
+            base = 10
+        }
+    }
+
+    # 决议6：寻求其他学院的支持（圣三一）
+    # 前置：完成决议5
+    # 持续15天，间隔30日可用
+    # 完成后：凯撒经济状况-5%
+    MIL_seek_TRI_support = {
+        icon = generic_political_discourse
+
+        visible = {
+            has_country_flag = MIL_seek_CEN_support_done
+            TRI = { exists = yes }
+        }
+
+        available = {
+            NOT = { has_country_flag = mil_cae_war_is_finding_support}
+        }
+
+        cost = 0
+        days_remove = 15
+
+        complete_effect = {
+            set_country_flag = {
+                flag = mil_cae_war_is_finding_support
+                days = 30
+                value = 1
+            }
+        }
+
+        remove_effect = {
+            custom_effect_tooltip = MIL_seek_academy_support_tt
+            subtract_from_variable = { global.cae_economic_situation = 5 }
+        }
+
+        ai_will_do = {
+            base = 5
+        }
+    }
+
+    # 决议6：寻求其他学院的支持（格黑娜）
+    #GEH
+    MIL_seek_GEH_support = {
+        icon = generic_political_discourse
+
+        visible = {
+            has_country_flag = MIL_seek_CEN_support_done
+            GEH = { exists = yes }
+        }
+
+        available = {
+            NOT = { has_country_flag = mil_cae_war_is_finding_support}
+        }
+
+        cost = 0
+        days_remove = 15
+
+        complete_effect = {
+            set_country_flag = {
+                flag = mil_cae_war_is_finding_support
+                days = 30
+                value = 1
+            }
+        }
+
+        remove_effect = {
+            custom_effect_tooltip = MIL_seek_academy_support_tt
+            subtract_from_variable = { global.cae_economic_situation = 5 }
+        }
+
+        ai_will_do = {
+            base = 5
+        }
+    }
+
+    # 决议6：寻求其他学院的支持（山海经）
+    MIL_seek_SHA_support = {
+        icon = generic_political_discourse
+
+        visible = {
+            has_country_flag = MIL_seek_CEN_support_done
+            SHA = { exists = yes }
+        }
+
+        available = {
+            NOT = { has_country_flag = mil_cae_war_is_finding_support}
+        }
+
+        cost = 0
+        days_remove = 15
+
+        complete_effect = {
+            set_country_flag = {
+                flag = mil_cae_war_is_finding_support
+                days = 30
+                value = 1
+            }
+        }
+
+        remove_effect = {
+            custom_effect_tooltip = MIL_seek_academy_support_tt
+            subtract_from_variable = { global.cae_economic_situation = 5 }
+        }
+
+        ai_will_do = {
+            base = 5
+        }
+    }
+
+    # 决议6：寻求其他学院的支持（百鬼夜行）
+    MIL_seek_HYA_support = {
+        icon = generic_political_discourse
+
+        visible = {
+            has_country_flag = MIL_seek_CEN_support_done
+            HYA = { exists = yes }
+        }
+
+        available = {
+            NOT = { has_country_flag = mil_cae_war_is_finding_support}
+        }
+
+        cost = 0
+        days_remove = 15
+
+        complete_effect = {
+            set_country_flag = {
+                flag = mil_cae_war_is_finding_support
+                days = 30
+                value = 1
+            }
+        }
+
+        remove_effect = {
+            custom_effect_tooltip = MIL_seek_academy_support_tt
+            subtract_from_variable = { global.cae_economic_situation = 5 }
+        }
+
+        ai_will_do = {
+            base = 5
+        }
+    }
+
+    # 决议6：寻求其他学院的支持（赤冬）
+    MIL_seek_RWT_support = {
+        icon = generic_political_discourse
+
+        visible = {
+            has_country_flag = MIL_seek_CEN_support_done
+            RWT = { exists = yes }
+        }
+
+        available = {
+            NOT = { has_country_flag = mil_cae_war_is_finding_support}
+        }
+
+        cost = 0
+        days_remove = 15
+
+        complete_effect = {
+            set_country_flag = {
+                flag = mil_cae_war_is_finding_support
+                days = 30
+                value = 1
+            }
+        }
+
+        remove_effect = {
+            custom_effect_tooltip = MIL_seek_academy_support_tt
+            subtract_from_variable = { global.cae_economic_situation = 5 }
+        }
+
+        ai_will_do = {
+            base = 5
+        }
+    }
+
+}

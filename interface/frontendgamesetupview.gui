@@ -706,7 +706,14 @@ guiTypes = {
 				pdx_tooltip = "ARI_revenge_path_tt"
 				#alwaystransparent = yes
 			}
-		
+			
+			iconType = {
+				name = "GFX_ARI_liberation_path"
+				quadTextureSprite = "GFX_ARI_liberation_path"
+				position = { x = 0  y = 50 }
+				pdx_tooltip = "ARI_liberation_path_tt"
+				#alwaystransparent = yes
+			}
 		}
 
 		#####
@@ -1832,7 +1839,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "custom_settings_btn"
-			position = { x = 357 y = 12 }
+			position = { x = 356 y = 8 }
 			quadTextureSprite ="GFX_custom_set_button_2"
 			pdx_tooltip = FE_CUSTOM_DIFFUCULTY
 		}
@@ -1850,7 +1857,7 @@ guiTypes = {
 		}
 
 		instantTextBoxType={
-			position = {x = 9 y = 12 }
+			position = {x = 8 y = 13 }
 			name = "difficulty_text"
 			font = "hoi_24header"
 			borderSize = {x = 0 y = 0}
@@ -1862,7 +1869,7 @@ guiTypes = {
 
 		checkboxType = {
 			name = "very_easy_cb"
-			position = { x=9 y=47}
+			position = { x=10 y=46}
 			quadTextureSprite ="GFX_difficulty_button_civilian"
 			buttonText = "FE_DIFFICULTY_EASY"
 			buttonFont = "hoi_20b"
@@ -1871,7 +1878,7 @@ guiTypes = {
 
 		checkboxType = {
 			name = "easy_cb"
-			position = { x=125 y=47}
+			position = { x=125 y=46}
 			quadTextureSprite ="GFX_difficulty_button_recruit"
 			buttonText = "FE_DIFFICULTY_EASY"
 			buttonFont = "hoi_20b"
@@ -1880,7 +1887,7 @@ guiTypes = {
 
 		checkboxType = {
 			name = "normal_cb"
-			position = { x=241 y=47}
+			position = { x=240 y=46}
 			quadTextureSprite ="GFX_difficulty_button_regular"
 			clicksound = click_checkbox
 			buttonText = "FE_DIFFICULTY_NORMAL"
@@ -1889,7 +1896,7 @@ guiTypes = {
 
 		checkboxType = {
 			name = "hard_cb"
-			position = { x=357 y=47}
+			position = { x=356 y=46}
 			quadTextureSprite ="GFX_difficulty_button_veteran"
 			buttonText = "FE_DIFFICULTY_HARD"
 			buttonFont = "hoi_20b"
@@ -1898,7 +1905,7 @@ guiTypes = {
 
 		checkboxType = {
 			name = "very_hard_cb"
-			position = { x=473 y=47}
+			position = { x=472 y=46}
 			quadTextureSprite ="GFX_difficulty_button_elite"
 			buttonText = "FE_DIFFICULTY_VERY_HARD"
 			buttonFont = "hoi_20b"
@@ -1966,7 +1973,7 @@ guiTypes = {
 		}
 
 		instantTextBoxType={
-			position = {x = 30 y = 103 }
+			position = {x = 30 y = 100 }
 			name = "ironman_text"
 			font = "hoi_24header"
 			maxWidth = 370
@@ -1979,13 +1986,13 @@ guiTypes = {
 
 		checkboxType = {
 			name = "ironman_cb"
-			position = { x=530 y =101}
+			position = { x=530 y =98}
 			quadTextureSprite ="GFX_generic_checkbox"
 			clicksound = click_checkbox
 		}
 
 		instantTextBoxType={
-			position = {x = 30 y = 148 }
+			position = {x = 30 y = 149 }
 			name = "historical_text"
 			font = "hoi_24header"
 			maxWidth = 370
@@ -1998,7 +2005,7 @@ guiTypes = {
 
 		checkboxType = {
 			name = "historical_cb"
-			position = { x=530 y =145}
+			position = { x=530 y =147}
 			quadTextureSprite ="GFX_generic_checkbox"
 			clicksound = click_checkbox
 		}
@@ -2264,7 +2271,7 @@ guiTypes = {
 
 			ButtonType = {
 				name = "back_button"
-				position = { x = 20 y = 40 }
+				position = { x = 20 y = 35 }
 				quadTextureSprite ="GFX_button_148x34"
 				buttonText = "MAIN_MENU_BACK"
 				buttonFont = "hoi_20b"
@@ -2276,7 +2283,7 @@ guiTypes = {
 
 			ButtonType = {
 				name = "load_button"
-				position = { x = 180 y = 40 }
+				position = { x = 180 y = 35 }
 				quadTextureSprite ="GFX_button_148x34"
 				buttonText = "MENU_BAR_LOAD"
 				buttonFont = "hoi_20b"
@@ -2288,7 +2295,7 @@ guiTypes = {
 
 			ButtonType = {
 				name = "options_button"
-				position = { x = 340 y = 40 }
+				position = { x = 340 y = 35 }
 				quadTextureSprite ="GFX_button_148x34"
 				buttonText = "OPTIONS"
 				buttonFont = "hoi_20b"
@@ -2300,14 +2307,14 @@ guiTypes = {
 
 			iconType = {
 				name = "enabled_achievement_icons"
-				position = { x = -344 y = -115 }
+				position = { x = -344 y = -120 }
 				quadTextureSprite ="GFX_enabled_achievement_icons"
 				Orientation = "LOWER_RIGHT"
 			}
 
 			ButtonType = {
 				name = "play_button"
-				position = { x = -262 y = -100 }
+				position = { x = -262 y = -104 }
 				quadTextureSprite ="GFX_play_button"
 				buttonText = "FE_START"
 				buttonFont = "hoi_30header"

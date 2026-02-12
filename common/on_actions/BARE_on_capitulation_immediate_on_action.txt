@@ -1,224 +1,504 @@
 #所有投降事件都写这里，避免混乱
 on_actions = {
-	on_capitulation_immediate = {
-		effect = {
-			############################古圣堂之战#####################################
-			if = {
-				limit = {
-					has_global_flag = ECW_active_global_flag					#古圣堂之战 开始
-					not = {
-						has_global_flag = Arius_defeated						#古圣堂之战 阿里乌斯正常战败
-					}
-				}
-				if = {
-					limit = {
-						original_tag = TRI
-					}
-					SCH = {
-						set_major = yes
-						become_exiled_in = {
-							target = TRI
-							legitimacy = 100
-						}
-					}
-				}
-				else_if = {
-					limit = {
-						original_tag = GEH
-					}
-					SCH = {
-						set_major = yes
-						become_exiled_in = {
-							target = GEH
-							legitimacy = 100
-						}
-					}
-				}
-				else_if = {
-					#如果有人偷家投降，就触发战败事件
-					limit = {
-						original_tag = ARI
-					}
-					Cathedral_war_ARI_cathedral_fall = yes
-					Cathedral_war_ARI_defeated = yes
-				}
-			}
-			############################“救护”行动#####################################
-			else_if = {
-				limit = {
-					has_global_flag = TRI_Rescue_Operation_start_global_flag
-					not = {
-						has_global_flag = TRI_Rescue_Operation_end_global_flag
-					}
-					original_tag = ARI
-				}
-				TRI = {
-					puppet = {
-						target = ARI
-						end_wars = yes
-						end_civil_wars = yes
-					}
-					country_event = {
-						id = TRI_ZJ.3
-						days = 1
-					}
-				}
-				set_global_flag = TRI_Rescue_Operation_end_global_flag
-				ARI = {
-					add_dynamic_modifier = {
-						modifier = ARI_NOGOVMODE
-					}
-					delete_unit = {
-					}
-					# country_lock_all_division_template = yes
-					530 = {
-						PREV = {
-							division_template = {
-								name = "伊甸条约组织维和部队"
-								is_locked = yes
-								force_allow_recruiting = no
-								regiments = {
-									infantry = {
-										x = 0
-										y = 0
-									}
-									infantry = {
-										x = 0
-										y = 1
-									}
-									infantry = {
-										x = 0
-										y = 2
-									}
-									infantry = {
-										x = 0
-										y = 3
-									}
-									infantry = {
-										x = 0
-										y = 4
-									}
-								}
-								support = {
-								}
-							}
-						}
-						create_unit = {
-							division = "name = \"伊甸条约组织维和部队\" division_template = \"伊甸条约组织维和部队\" start_experience_factor = 1 start_equipment_factor = 1 start_manpower_factor = 1"
-							owner = PREV
-							count = 8
-							allow_spawning_on_enemy_provs = yes							#允许创建在敌方省份上
-							divisional_commander_xp = 1000							#为战地指挥官分配经验
-						}
-					}
-					remove_ideas = {
-						millaws_beatrice_order
-					}
-					remove_dynamic_modifier = {
-						modifier = ARI_armed_students_modifier
-					}
-					remove_dynamic_modifier = {
-						modifier = ARI_tax_farming
-					}
-					remove_dynamic_modifier = {
-						modifier = ARI_nihilism
-					}
-					remove_dynamic_modifier = {
-						modifier = ARI_special_force
-					}
-					remove_dynamic_modifier = {
-						modifier = ARI_broken_provisioning_system
-					}
-					remove_dynamic_modifier = {
-						modifier = ARI_forbidden_weapons
-					}
-					set_politics = {
-						ruling_party = no_ideology
-					}
-					set_popularities = {
-						no_ideology = 100
-					}
-					ARI_YTY_WHBD = {
-						promote_leader = yes
-					}
-					country_event = {
-						id = ARI_ZJ.9
-						days = 1
-					}
-				}
-				TRI = {
-					news_event = {
-						id = BARE_World_News.18
-						days = 1
-					}
-				}
-			}
-			############################铺路石维和行动#####################################
-			else_if = {
-				limit = {
-					has_global_flag = GEH_annex_paving_stone_operation_start_flag
-					not = {
-						has_global_flag = GEH_annex_paving_stone_operation_end_flag
-					}
-				}
-				if = {
-					limit = {
-						original_tag = A10
-					}
-					set_global_flag = GEH_annex_paving_stone_operation_end_flag
-					GEH = {
-						annex_country = {
-							target = A10
-							transfer_troops = no
-						}
-					}
-				}
-			}
-			############################流亡者#####################################
-			else_if = {
-				limit = {
-					FROM = {
-						tag = ALF
-					}
-					ROOT = {
-						OR = {
-							tag = COS
-							tag = HTG
-							tag = AVG
-						}
-					}
-				}
-				if = {
-					limit = {
-						ROOT = {
-							tag = AVG
-						}
-					}
-					FROM = {
-						country_event = {
-							id = ALF.15
-							days = 2
-						}
-					}
-				}
-				FROM = {
-					annex_country = {
-						target = ROOT
-						transfer_troops = no
-					}
-				}
-			}
-			############################其他情况投降#####################################
-			else_if = {
-				#正常投降
-				limit = {
-					BARE_is_surrender_trigger = yes
-				}
-				FROM = {
-					white_peace = ROOT
-				}
-			}
-			BARE_PEACE_EVENT_POPUP_DEFAULT_FOR_CAPITULATION = yes
-		}
-	}
+    on_capitulation_immediate = {
+        effect = {
+            ############################古圣堂之战#####################################
+            if = {
+                limit = {
+                    has_global_flag = ECW_active_global_flag					#古圣堂之战 开始
+                    not = {
+                        has_global_flag = Arius_defeated						#古圣堂之战 阿里乌斯正常战败
+                    }
+                }
+                if = {
+                    limit = {
+                        original_tag = TRI
+                    }
+                    SCH = {
+                        set_major = yes
+                        become_exiled_in = {
+                            target = TRI
+                            legitimacy = 100
+                        }
+                    }
+                }
+                else_if = {
+                    limit = {
+                        original_tag = GEH
+                    }
+                    SCH = {
+                        set_major = yes
+                        become_exiled_in = {
+                            target = GEH
+                            legitimacy = 100
+                        }
+                    }
+                }
+                else_if = {
+                    #如果有人偷家投降，就触发战败事件
+                    limit = {
+                        original_tag = ARI
+                    }
+                    Cathedral_war_ARI_cathedral_fall = yes
+                    Cathedral_war_ARI_defeated = yes
+                }
+            }
+            ############################“救护”行动#####################################
+            else_if = {
+                limit = {
+                    has_global_flag = TRI_Rescue_Operation_start_global_flag
+                    not = {
+                        has_global_flag = TRI_Rescue_Operation_end_global_flag
+                    }
+                    original_tag = ARI
+                }
+                TRI = {
+                    puppet = {
+                        target = ARI
+                        end_wars = yes
+                        end_civil_wars = yes
+                    }
+                    country_event = {
+                        id = TRI_ZJ.3
+                        days = 1
+                    }
+                }
+                set_global_flag = TRI_Rescue_Operation_end_global_flag
+                ARI = {
+                    add_dynamic_modifier = {
+                        modifier = ARI_NOGOVMODE
+                    }
+                    delete_unit = {
+                    }
+                    # country_lock_all_division_template = yes
+                    530 = {
+                        PREV = {
+                            division_template = {
+                                name = "伊甸条约组织维和部队"
+                                is_locked = yes
+                                force_allow_recruiting = no
+                                regiments = {
+                                    infantry = {
+                                        x = 0
+                                        y = 0
+                                    }
+                                    infantry = {
+                                        x = 0
+                                        y = 1
+                                    }
+                                    infantry = {
+                                        x = 0
+                                        y = 2
+                                    }
+                                    infantry = {
+                                        x = 0
+                                        y = 3
+                                    }
+                                    infantry = {
+                                        x = 0
+                                        y = 4
+                                    }
+                                }
+                                support = {
+                                }
+                            }
+                        }
+                        create_unit = {
+                            division = "name = "伊甸条约组织维和部队" division_template = "伊甸条约组织维和部队" start_experience_factor = 1 start_equipment_factor = 1 start_manpower_factor = 1"
+                            owner = PREV
+                            count = 8
+                            allow_spawning_on_enemy_provs = yes							#允许创建在敌方省份上
+                            divisional_commander_xp = 1000							#为战地指挥官分配经验
+                        }
+                    }
+                    remove_ideas = {
+                        millaws_beatrice_order
+                    }
+                    remove_dynamic_modifier = {
+                        modifier = ARI_armed_students_modifier
+                    }
+                    remove_dynamic_modifier = {
+                        modifier = ARI_tax_farming
+                    }
+                    remove_dynamic_modifier = {
+                        modifier = ARI_nihilism
+                    }
+                    remove_dynamic_modifier = {
+                        modifier = ARI_special_force
+                    }
+                    remove_dynamic_modifier = {
+                        modifier = ARI_broken_provisioning_system
+                    }
+                    remove_dynamic_modifier = {
+                        modifier = ARI_forbidden_weapons
+                    }
+                    set_politics = {
+                        ruling_party = no_ideology
+                    }
+                    set_popularities = {
+                        no_ideology = 100
+                    }
+                    ARI_YTY_WHBD = {
+                        promote_leader = yes
+                    }
+                    country_event = {
+                        id = ARI_ZJ.9
+                        days = 1
+                    }
+                }
+                TRI = {
+                    news_event = {
+                        id = BARE_World_News.18
+                        days = 1
+                    }
+                }
+            }
+            ############################铺路石维和行动#####################################
+            else_if = {
+                limit = {
+                    has_global_flag = GEH_annex_paving_stone_operation_start_flag
+                    not = {
+                        has_global_flag = GEH_annex_paving_stone_operation_end_flag
+                    }
+                }
+                if = {
+                    limit = {
+                        original_tag = A10
+                    }
+                    set_global_flag = GEH_annex_paving_stone_operation_end_flag
+                    GEH = {
+                        annex_country = {
+                            target = A10
+                            transfer_troops = no
+                        }
+                    }
+                }
+            }
+            ############################流亡者#####################################
+            else_if = {
+                limit = {
+                    FROM = {
+                        tag = ALF
+                    }
+                    ROOT = {
+                        OR = {
+                            tag = COS
+                            tag = HTG
+                            tag = AVG
+                            ##
+                            tag = A47
+                            tag = WSG
+                            tag = DCA
+                            tag = KHG
+                            tag = BMG
+                            tag = BMT
+                            tag = BMR
+                        }
+                    }
+                }
+                if = {
+                    limit = {
+                        ROOT = {
+                            tag = AVG
+                        }
+                    }
+                    FROM = {
+                        country_event = {
+                            id = ALF.15
+                            days = 2
+                        }
+                    }
+                }
+                FROM = {
+                    annex_country = {
+                        target = ROOT
+                        transfer_troops = no
+                    }
+                }
+            }
+            ##公司战争，凯撒重工和凯撒信贷都被踹飞之后##
+            else_if = {
+                limit = {
+                    FROM = {
+                        tag = ALF
+                    }
+                    ROOT = {
+                        tag = CAH
+                    }
+                    CAB = {
+                        has_capitulated = yes
+                    }
+                }
+                ##什么都不要发生！！交给另一个action处理！！
+            }
+            else_if = {
+                limit = {
+                    FROM = {
+                        tag = ALF
+                    }
+                    ROOT = {
+                        tag = CAB
+                    }
+                    CAH = {
+                        has_capitulated = yes
+                    }
+                }
+                ##什么都不要发生！！交给另一个action处理！！
+            }
+            else_if = {
+                limit = {
+                    FROM = {
+                        tag = ALF
+                    }
+                    ROOT = {
+                        tag = ARI
+                    }
+                }
+                FROM = {
+                    annex_country = {
+                        target = ROOT
+                        transfer_troops = no
+                    }
+                    random_country = {
+                        limit = {
+                            original_tag = ARI
+                            is_subject_of = ALF
+                        }
+                        ALF = {
+                            annex_country = {
+                                target = PREV
+                                transfer_troops = no
+                            }
+                        }
+                    }
+                }
+            }
+            ############################丢人现眼（流亡者线）#####################################
+            else_if = {
+                limit = {
+                    FROM = {
+                        tag = TRA
+                    }
+                    ROOT = {
+                        tag = TRR
+                    }
+                }
+                FROM = {
+                    annex_country = {
+                        target = ROOT
+                        transfer_troops = no
+                    }
+                }
+                every_state = {
+                    limit = {
+                        is_core_of = TRR
+                    }
+                    remove_core_of = TRR
+                }
+            }
+            else_if = {
+                limit = {
+                    FROM = {
+                        tag = GEA
+                    }
+                    ROOT = {
+                        tag = GEL
+                    }
+                }
+                FROM = {
+                    annex_country = {
+                        target = ROOT
+                        transfer_troops = no
+                    }
+                    country_event = {
+                        id = ALF.51
+                    }
+                }
+                every_state = {
+                    limit = {
+                        is_core_of = GEL
+                    }
+                    remove_core_of = GEL
+                }
+            }
+            ########################光复战争#####################
+            else_if = {
+                limit = {
+                    FROM = {
+                        OR = {
+                            tag = ALF
+                            is_ally_with = ALF
+                        }
+                    }
+                    ROOT = {
+                        tag = GEA
+                    }
+                    TRA = {
+                        has_capitulated = yes
+                    }
+                }
+                every_possible_country = {
+                    limit = {
+                        OR = {
+                            tag = ALF
+                            is_ally_with = ALF
+                        }
+                    }
+                    white_peace = GEA
+                    white_peace = TRA
+                }
+                ALF_end_2nd_liberation_war_effect = yes
+            }
+            else_if = {
+                limit = {
+                    FROM = {
+                        OR = {
+                            tag = ALF
+                            is_ally_with = ALF
+                        }
+                    }
+                    ROOT = {
+                        tag = TRA
+                    }
+                    GEA = {
+                        has_capitulated = yes
+                    }
+                }
+                every_possible_country = {
+                    limit = {
+                        OR = {
+                            tag = ALF
+                            is_ally_with = ALF
+                        }
+                    }
+                    white_peace = GEA
+                    white_peace = TRA
+                }
+                ALF_end_2nd_liberation_war_effect = yes
+            }
+            else_if = {
+                limit = {
+                    FROM = {
+                        OR = {
+                            tag = ALF
+                            is_ally_with = ALF
+                        }
+                    }
+                    ROOT = {
+                        OR = {
+                            tag = A45
+                            tag = A46
+                        }
+                    }
+                }
+                ##什么都不要发生！！交给另一个action处理！！
+            }
+            ############################其他情况投降#####################################
+            else_if = {
+                #正常投降
+                limit = {
+                    BARE_is_surrender_trigger = yes
+                }
+                FROM = {
+                    white_peace = ROOT
+                }
+            }
+            ###################一些设置###############################
+            BARE_PEACE_EVENT_POPUP_DEFAULT_FOR_CAPITULATION = yes
+        }
+    }
+
+    on_capitulation = {
+        effect = {
+            ########################光复战争#####################
+            if = {
+                limit = {
+                    FROM = {
+                        OR = {
+                            tag = ALF
+                            is_ally_with = ALF
+                        }
+                    }
+                    ROOT = {
+                        OR = {
+                            tag = A45
+                            tag = A46
+                        }
+                    }
+                }
+                ALF = {
+                    annex_country = {
+                        target = ROOT
+                        transfer_troops = no
+                    }
+                    release_autonomy = {
+                        target = ROOT
+                        autonomy_state = autonomy_bare_trusteeship_area
+                        freedom_level = 0.5
+                    }
+                }
+            }
+            ##公司战争，凯撒重工和凯撒信贷都被踹飞之后##
+            else_if = {
+                limit = {
+                    FROM = {
+                        tag = ALF
+                    }
+                    ROOT = {
+                        tag = CAH
+                    }
+                    CAB = {
+                        has_capitulated = yes
+                    }
+                }
+                every_country = {
+                    limit = {
+                        has_war_with = ALF
+                    }
+                    white_peace = ALF
+                }
+                ALF = {
+                    annex_country = {
+                        target = CAH
+                        transfer_troops = no
+                    }
+                    release_autonomy = {
+                        target = CAH
+                        autonomy_state = autonomy_bare_trusteeship_area
+                        freedom_level = 0.5
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    FROM = {
+                        tag = ALF
+                    }
+                    ROOT = {
+                        tag = CAB
+                    }
+                    CAH = {
+                        has_capitulated = yes
+                    }
+                }
+                every_country = {
+                    limit = {
+                        has_war_with = ALF
+                    }
+                    white_peace = ALF
+                }
+                ALF = {
+                    annex_country = {
+                        target = CAH
+                        transfer_troops = no
+                    }
+                    release_autonomy = {
+                        target = CAH
+                        autonomy_state = autonomy_bare_trusteeship_area
+                        freedom_level = 0.5
+                    }
+                }
+            }
+        }
+    }
 }

@@ -11,6 +11,11 @@ on_actions = {
 				}
 				random_country = {
 					BARE_RULE_story_settings_ALF_SELECTED_effect = yes
+					ALF = {
+						set_variable = {
+							BARE_opening_welcome_type = 1
+						}
+					}
 				}
 			}
 			else = {

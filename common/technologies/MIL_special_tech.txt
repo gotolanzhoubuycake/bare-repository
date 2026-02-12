@@ -1,0 +1,18 @@
+technologies = {
+    individual_special_operations_mech_equipment_tech = {
+        research_cost = 1
+        start_year = 2019
+
+        enable_equipments = {
+            MIL_Individual_Special_Operations_Mech_equipment_1
+        }
+        enable_subunits = {
+            MIL_Individual_Special_Operations_Mech
+        }
+
+        allow = {
+            always = no
+        }
+    }        
+    
+}

@@ -36,7 +36,10 @@ autonomy_state = {
 
 	allowed = {
 		OVERLORD = {
-			Great_Game_can_be_college_overlord = yes
+			OR = {
+				Great_Game_can_be_college_overlord = yes
+				tag = ALF
+			}
 		}
 	}
 
@@ -87,7 +90,10 @@ autonomy_state = {
 
 	allowed = {
 		OVERLORD = {
-			Great_Game_can_be_college_overlord = yes
+			OR = {
+				Great_Game_can_be_college_overlord = yes
+				tag = ALF
+			}
 		}
 	}
 
@@ -138,7 +144,10 @@ autonomy_state = {
 
 	allowed = {
 		OVERLORD = {
-			Great_Game_can_be_college_overlord = yes
+			OR = {
+				Great_Game_can_be_college_overlord = yes
+				tag = ALF
+			}
 		}
 	}
 

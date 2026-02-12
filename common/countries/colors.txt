@@ -77,6 +77,10 @@ TRI = {
 	color = rgb { 255 250 205 }
 	color_ui = rgb { 255 250 205 }
 }
+TRR = {
+	color = rgb { 255 192 203 }
+	color_ui = rgb { 255 192 203 }
+}
 TEP = {
 	color = rgb { 250 128 114 }
 	color_ui = rgb { 260 138 124 }

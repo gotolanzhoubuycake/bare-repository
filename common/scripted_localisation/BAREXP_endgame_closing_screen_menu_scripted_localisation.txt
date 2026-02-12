@@ -1,0 +1,90 @@
+##注意了！分为标题、描述、评价3个主干！
+##独特结算需要如示例进行独特定义
+##不可以动最下方的DEFAULT文本，这是必须有的默认文本。
+
+defined_text = {
+    name = GET_BAREXP_ENDGAME_CLOSING_SCREEN_COUNTRY_POSTER
+	text = { 
+		trigger = {
+			tag = TRI
+		}
+		localization_key = "GFX_BAREXP_ENDGAME_CLOSING_SCREEN_COUNTRY_POSTER_SUCCESS_TRI"
+    }
+	text = { 
+		trigger = {
+			tag = ALF
+			has_country_flag = GOOD_ENDING_ALF_FLAG
+		}
+		localization_key = "GFX_BAREXP_ENDGAME_CLOSING_SCREEN_COUNTRY_POSTER_SUCCESS_ALF"
+    }
+	text = { 
+		trigger = {
+			tag = ALF
+			has_country_flag = BAD_ENDING_ALF_FLAG
+		}
+		localization_key = "GFX_BAREXP_ENDGAME_CLOSING_SCREEN_COUNTRY_POSTER_BAD_SUCCESS_ALF"
+    }
+}
+
+
+defined_text = {
+	name = GET_BAREXP_ENDGAME_SLOGAN
+	text = { 
+		trigger = {
+			tag = ALF
+			has_country_flag = BAD_ENDING_ALF_FLAG
+		}
+		localization_key = BAREXP_ENDGAME_SLOGAN_BAD_SUCCESS_ALF
+    }
+	text = {
+	    localization_key = BAREXP_ENDGAME_SLOGAN_DEFAULT
+	}
+}
+
+defined_text = {
+	name = GET_BAREXP_ENDGAME_Title
+	text = {
+	    trigger = {
+			tag = TRI
+		}
+		localization_key = BAREXP_EG_Title_TRI_Successful
+	}
+	text = {
+	    localization_key = BAREXP_ENDGAME_TITLE_DEFAULT
+	}
+}
+
+defined_text = {
+	name = GET_BAREXP_ENDGAME_SUMMARY
+	text = {
+	    trigger = {
+			tag = TRI
+		}
+		localization_key = BAREXP_ENDGAME_SUMMARY_TRI_Successful
+	}
+	text = {
+	    trigger = {
+			tag = ALF
+			has_country_flag = GOOD_ENDING_ALF_FLAG
+		}
+		localization_key = BAREXP_ENDGAME_SUMMARY_ALF_Successful
+	}
+	text = { 
+		trigger = {
+			tag = ALF
+			has_country_flag = BAD_ENDING_ALF_FLAG
+		}
+		localization_key = BAREXP_ENDGAME_SUMMARY_ALF_BAD_Successful
+    }
+	text = {
+	    localization_key = BAREXP_ENDGAME_SUMMARY_DEFAULT
+	}
+}
+
+##按钮
+defined_text = {
+	name = GET_BAREXP_ENDGAME_CONTINUE_BUTTON_TEXT
+	text = {
+	    localization_key = BAREXP_ENDGAME_CONTINUE_BUTTON_TEXT_DEFAULT
+	}
+}

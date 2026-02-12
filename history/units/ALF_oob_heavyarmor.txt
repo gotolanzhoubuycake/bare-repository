@@ -1,0 +1,51 @@
+division_template = {
+	name = "Heavy Armor Regiment"		
+
+	regiments = {
+		apc_unit = {x = 0 y = 0}
+		apc_unit = {x = 0 y = 1}
+		apc_unit = {x = 0 y = 2}
+		apc_unit = {x = 0 y = 3}
+		apc_unit = {x = 0 y = 4}
+		medium_armor = {x = 1 y = 0}
+		medium_armor = {x = 1 y = 1}
+		medium_armor = {x = 1 y = 2}
+		medium_armor = {x = 1 y = 3}
+		medium_armor = {x = 1 y = 4}
+		medium_sp_artillery_brigade = {x = 2 y = 0}
+		medium_sp_artillery_brigade = {x = 2 y = 1}
+		medium_sp_artillery_brigade = {x = 2 y = 2}
+		medium_sp_artillery_brigade = {x = 2 y = 3}
+		apc_unit = {x = 3 y = 0}
+		apc_unit = {x = 3 y = 1}
+		medium_armor = {x = 4 y = 0}
+		medium_armor = {x = 4 y = 1}
+
+	}
+	support = {
+		apc_recon = {x = 0 y = 0}
+		motorized_logistics_company = {x = 0 y = 1}
+		maintenance_company = {x = 0 y = 2}
+		engineer = {x = 0 y = 3}
+		signal_company = {x = 0 y = 4}
+	}
+}
+
+units = {
+	division = {
+		name = "重型装甲战斗营 青蓝丘"
+		location = 6168
+		division_template = "Heavy Armor Regiment" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+	}
+	division = {
+		name = "重型装甲战斗营 特鲁圣堂"
+		location = 6168
+		division_template = "Heavy Armor Regiment" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+	}
+}
+
+###

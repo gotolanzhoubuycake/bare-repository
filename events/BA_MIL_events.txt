@@ -1,4 +1,5 @@
 add_namespace = MIL_event
+add_namespace = MIL_sport_event
 country_event = {
     id = MIL_event.1
     title = MIL_event.1.t
@@ -20,7 +21,7 @@ country_event = {
 				}
 				complete_national_focus = MIL_veritas_dream
 	}
- 
+
 		ai_chance = {
 			base = 1
 		}
@@ -121,6 +122,161 @@ country_event = {
 
     option = {
 		name = MIL_event.6.a
+		ai_chance = {
+			base = 1
+		}
+    }
+}
+
+# 调查决定
+country_event = {
+    id = MIL_event.7
+    title = MIL_event.7.t
+    desc = MIL_event.7.d
+
+    is_triggered_only = yes
+
+}
+
+# 真理部的新任务
+country_event = {
+    id = MIL_event.8
+    title = MIL_event.8.t
+    desc = MIL_event.8.d
+
+    is_triggered_only = yes
+
+    immediate = {
+        add_political_power = 50
+    }
+
+}
+
+# 真理部的发现
+country_event = {
+    id = MIL_event.9
+    title = MIL_event.9.t
+    desc = MIL_event.9.d
+
+    is_triggered_only = yes
+
+    immediate = {
+        add_political_power = 100
+        add_stability = -0.05
+    }
+
+}
+
+# 凯撒的交涉意见
+country_event = {
+    id = MIL_event.10
+    title = MIL_event.10.t
+    desc = MIL_event.10.d
+
+    is_triggered_only = yes
+
+    immediate = {
+        add_opinion_modifier = {
+            target = CAE
+            modifier = negotiate_with_cae
+        }
+        reverse_add_opinion_modifier = {
+            target = MIL
+            modifier = negotiate_with_cae
+        }
+    }
+
+}
+
+country_event = {
+    id = MIL_event.11
+    title = MIL_event.11.t
+    desc = MIL_event.11.d
+
+    is_triggered_only = yes
+}
+
+country_event = {
+    id = MIL_event.12
+    title = MIL_event.12.t
+    desc = MIL_event.12.d
+
+    is_triggered_only = yes
+}
+
+### 与凯撒战争相关事件 ###
+add_namespace = MIL_cae_war
+
+# 事件2：凯撒商品禁售公告
+# 由决议"全面禁用凯撒商品"触发
+country_event = {
+    id = MIL_cae_war.2
+    title = MIL_cae_war.2.t
+    desc = MIL_cae_war.2.d
+
+    is_triggered_only = yes
+    fire_only_once = yes
+
+    option = {
+        name = MIL_cae_war.2.a
+        ai_chance = {
+            base = 1
+        }
+    }
+}
+
+# 事件3：凯撒系统大瘫痪
+# 由决议"对凯撒实施网络攻击"触发
+country_event = {
+    id = MIL_cae_war.3
+    title = MIL_cae_war.3.t
+    desc = MIL_cae_war.3.d
+
+    is_triggered_only = yes
+
+    option = {
+        name = MIL_cae_war.3.a
+        ai_chance = {
+            base = 1
+        }
+    }
+}
+
+# 事件5：对凯撒的宣战书
+# 由决议"寻求联邦学生会的支持"触发
+country_event = {
+    id = MIL_cae_war.5
+    title = MIL_cae_war.5.t
+    desc = MIL_cae_war.5.d
+
+    is_triggered_only = yes
+    fire_only_once = yes
+
+    option = {
+        name = MIL_cae_war.5.a
+        ai_chance = {
+            base = 1
+        }
+    }
+}
+
+
+
+country_event = {
+    id = MIL_sport_event.1
+    title = MIL_sport_event.1.t
+    desc = MIL_sport_event.1.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+
+
+    option = {
+		name = MIL_sport_event.1.a
+		BARE_MIL_Sport_Init_effect = yes
+
 		ai_chance = {
 			base = 1
 		}

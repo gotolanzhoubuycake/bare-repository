@@ -15,13 +15,21 @@ spriteTypes = {
 		name = "GFX_BARE_openingWelcome_school_bg_TRI"
 		textureFile = "gfx/interface/opening_welcome/school/BARE_openingWelcome_school_bg_TRI.dds"
 	}
-	    spriteType = {
+	spriteType = {
 		name = "GFX_BARE_openingWelcome_school_bg_GEH"
 		textureFile = "gfx/interface/opening_welcome/school/BARE_openingWelcome_school_bg_GEH.dds"
 	}
-	    spriteType = {
+	spriteType = {
 		name = "GFX_BARE_openingWelcome_school_bg_ARI"
 		textureFile = "gfx/interface/opening_welcome/school/BARE_openingWelcome_school_bg_ARI.dds"
+	}
+	spriteType = {
+		name = "GFX_BARE_openingWelcome_school_bg_ALF"
+		textureFile = "gfx/interface/opening_welcome/school/BARE_openingWelcome_school_bg_ALF.dds"
+	}
+	spriteType = {
+		name = "GFX_BARE_openingWelcome_school_bg_MIL"
+		textureFile = "gfx/interface/opening_welcome/school/BARE_openingWelcome_school_bg_MIL.dds"
 	}
 	spriteType = {
 		name = "GFX_BARE_openingWelcome_type_button"

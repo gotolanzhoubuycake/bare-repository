@@ -5,7 +5,7 @@ scripted_gui = {
 
 		properties = {
 			progressbar = {
-				frame = ALF_mrd_progressbar_var
+				frame = ALF_mrd_progressbar_show_var
 			}
 		}
 	}

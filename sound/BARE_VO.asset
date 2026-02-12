@@ -18,6 +18,18 @@ category = {
 		GEH_infantry_positive_combat
 		GEH_infantry_idle
 		GEH_infantry_move_out
+		#
+		ALF_infantry_retreat
+		ALF_infantry_neural_combat
+		ALF_infantry_positive_combat
+		ALF_infantry_idle
+		ALF_infantry_move_out
+
+		MIL_infantry_retreat
+		MIL_infantry_neural_combat
+		MIL_infantry_positive_combat
+		MIL_infantry_idle
+		MIL_infantry_move_out
     }
 }
 
@@ -359,7 +371,227 @@ soundeffect = {
 	playbackrate_random_offset = { 0.0 -0.15 }
 }
 
+##流亡者##（套用阿里乌斯）
+####阿里乌斯####
 
+#撤退
+soundeffect = {
+	name = "ALF_infantry_retreat"
+	
+	sounds = {
+		sound = ARI_retreat_1
+		sound = ARI_retreat_2
+		sound = ARI_retreat_3
+		sound = ARI_retreat_4
+	} 
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.7
+	volume_random_offset = {0.0 -0.15}
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+
+#进攻
+soundeffect = {
+	name = "ALF_infantry_neural_combat"
+	
+	sounds = {
+		sound = ARI_fight_1
+		sound = ARI_fight_2
+		sound = ARI_fight_3
+		sound = ARI_fight_4
+		sound = ARI_fight_5
+		sound = ARI_fight_6
+		sound = ARI_fight_7
+		sound = ARI_fight_8
+	} 
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.7
+	volume_random_offset = {0.0 -0.15}
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+
+
+#进攻
+soundeffect = {
+	name = "ALF_infantry_positive_combat"
+	
+	sounds = {
+		sound = ARI_fight_1
+		sound = ARI_fight_2
+		sound = ARI_fight_3
+		sound = ARI_fight_4
+		sound = ARI_fight_5
+		sound = ARI_fight_6
+		sound = ARI_fight_7
+		sound = ARI_fight_8
+	} 
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.7
+	volume_random_offset = {0.0 -0.15}
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+
+#选中
+soundeffect = {
+	name = "ALF_infantry_idle"
+	
+	sounds = {
+		sound = ARI_idle_1
+		sound = ARI_idle_2
+		sound = ARI_idle_3
+		sound = ARI_idle_4
+		sound = ARI_idle_5
+		sound = ARI_idle_6
+		sound = ARI_idle_7
+		sound = ARI_idle_8
+		sound = ARI_idle_9
+		sound = ARI_idle_10
+		sound = ARI_idle_11
+	} 
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.7
+	volume_random_offset = {0.0 -0.15}
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+
+#移动
+soundeffect = {
+	name = "ALF_infantry_move_out"
+	
+	sounds = {
+		sound = ARI_move_out_1
+		sound = ARI_move_out_2
+		sound = ARI_move_out_3
+		sound = ARI_move_out_4
+		sound = ARI_move_out_5
+		sound = ARI_move_out_6
+		sound = ARI_move_out_7
+		sound = ARI_move_out_8
+	} 
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.7
+	volume_random_offset = {0.0 -0.15}
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+
+
+
+#撤退
+soundeffect = {
+	name = "MIL_infantry_retreat"
+	
+	sounds = {
+		sound = MIL_retreat_1
+		sound = MIL_retreat_2
+		sound = MIL_retreat_3
+		sound = MIL_retreat_4
+		sound = MIL_retreat_5
+		sound = MIL_retreat_6
+		sound = MIL_retreat_7
+	} 
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.7
+	volume_random_offset = {0.0 -0.15}
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+
+#进攻
+soundeffect = {
+	name = "MIL_infantry_neural_combat"
+	
+	sounds = {
+		sound = MIL_fight_1
+		sound = MIL_fight_2
+		sound = MIL_fight_3
+		sound = MIL_fight_4
+		sound = MIL_fight_5
+		sound = MIL_fight_6
+		sound = MIL_fight_7
+		sound = MIL_fight_8
+		sound = MIL_fight_9
+		sound = MIL_fight_10
+		sound = MIL_fight_11
+		sound = MIL_fight_12
+	} 
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.7
+	volume_random_offset = {0.0 -0.15}
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+
+
+#进攻
+soundeffect = {
+	name = "MIL_infantry_positive_combat"
+	
+	sounds = {
+		sound = MIL_fight_1
+		sound = MIL_fight_2
+		sound = MIL_fight_3
+		sound = MIL_fight_4
+		sound = MIL_fight_5
+		sound = MIL_fight_6
+		sound = MIL_fight_7
+		sound = MIL_fight_8
+		sound = MIL_fight_9
+		sound = MIL_fight_10
+		sound = MIL_fight_11
+		sound = MIL_fight_12
+	} 
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.7
+	volume_random_offset = {0.0 -0.15}
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+
+#选中
+soundeffect = {
+	name = "MIL_infantry_idle"
+	
+	sounds = {
+		sound = MIL_idle_1
+		sound = MIL_idle_2
+		sound = MIL_idle_3
+		sound = MIL_idle_4
+		sound = MIL_idle_5
+		sound = MIL_idle_6
+		sound = MIL_idle_7
+		sound = MIL_idle_8
+	} 
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.7
+	volume_random_offset = {0.0 -0.15}
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+
+#移动
+soundeffect = {
+	name = "MIL_infantry_move_out"
+	
+	sounds = {
+		sound = MIL_move_out_1
+		sound = MIL_move_out_2
+		sound = MIL_move_out_3
+		sound = MIL_move_out_4
+		sound = MIL_move_out_5
+		sound = MIL_move_out_6
+		sound = MIL_move_out_7
+	} 
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.7
+	volume_random_offset = {0.0 -0.15}
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
 
 ##################
 #Animations Sound Effect
@@ -932,4 +1164,180 @@ sound = {
 sound = {
 	name = "TRI_move_out_10"
 	file = "BARE_TRI_sound/TRI_move_out_10.wav"
+}
+
+##千禧
+#选中
+sound = {
+	name = "MIL_idle_1"
+	file = "BARE_MIL_sound/MIL_idle_1.wav"
+}
+
+sound = {
+	name = "MIL_idle_2"
+	file = "BARE_MIL_sound/MIL_idle_2.wav"
+}
+
+sound = {
+	name = "MIL_idle_3"
+	file = "BARE_MIL_sound/MIL_idle_3.wav"
+}
+
+sound = {
+	name = "MIL_idle_4"
+	file = "BARE_MIL_sound/MIL_idle_4.wav"
+}
+
+sound = {
+	name = "MIL_idle_5"
+	file = "BARE_MIL_sound/MIL_idle_5.wav"
+}
+
+sound = {
+	name = "MIL_idle_6"
+	file = "BARE_MIL_sound/MIL_idle_6.wav"
+}
+
+sound = {
+	name = "MIL_idle_7"
+	file = "BARE_MIL_sound/MIL_idle_7.wav"
+}
+
+sound = {
+	name = "MIL_idle_8"
+	file = "BARE_MIL_sound/MIL_idle_8.wav"
+}
+
+
+sound = {
+	name = "MIL_move_out_1"
+	file = "BARE_MIL_sound/MIL_move_out_1.wav"
+}
+
+sound = {
+	name = "MIL_move_out_2"
+	file = "BARE_MIL_sound/MIL_move_out_2.wav"
+}
+
+sound = {
+	name = "MIL_move_out_3"
+	file = "BARE_MIL_sound/MIL_move_out_3.wav"
+}
+
+sound = {
+	name = "MIL_move_out_4"
+	file = "BARE_MIL_sound/MIL_move_out_4.wav"
+}
+
+sound = {
+	name = "MIL_move_out_5"
+	file = "BARE_MIL_sound/MIL_move_out_5.wav"
+}
+
+sound = {
+	name = "MIL_move_out_6"
+	file = "BARE_MIL_sound/MIL_move_out_6.wav"
+}
+
+sound = {
+	name = "MIL_move_out_7"
+	file = "BARE_MIL_sound/MIL_move_out_7.wav"
+}
+
+
+#交战（进攻+防御）
+sound = {
+	name = "MIL_fight_1"
+	file = "BARE_MIL_sound/MIL_fight_1.wav"
+}
+
+sound = {
+	name = "MIL_fight_2"
+	file = "BARE_MIL_sound/MIL_fight_2.wav"
+}
+
+sound = {
+	name = "MIL_fight_3"
+	file = "BARE_MIL_sound/MIL_fight_3.wav"
+}
+
+sound = {
+	name = "MIL_fight_4"
+	file = "BARE_MIL_sound/MIL_fight_4.wav"
+}
+
+sound = {
+	name = "MIL_fight_5"
+	file = "BARE_MIL_sound/MIL_fight_5.wav"
+}
+
+sound = {
+	name = "MIL_fight_6"
+	file = "BARE_MIL_sound/MIL_fight_6.wav"
+}
+
+sound = {
+	name = "MIL_fight_7"
+	file = "BARE_MIL_sound/MIL_fight_7.wav"
+}
+
+sound = {
+	name = "MIL_fight_8"
+	file = "BARE_MIL_sound/MIL_fight_8.wav"
+}
+
+sound = {
+	name = "MIL_fight_9"
+	file = "BARE_MIL_sound/MIL_fight_9.wav"
+}
+
+sound = {
+	name = "MIL_fight_10"
+	file = "BARE_MIL_sound/MIL_fight_10.wav"
+}
+
+sound = {
+	name = "MIL_fight_11"
+	file = "BARE_MIL_sound/MIL_fight_11.wav"
+}
+
+sound = {
+	name = "MIL_fight_12"
+	file = "BARE_MIL_sound/MIL_fight_12.wav"
+}
+
+
+sound = {
+	name = "MIL_retreat_1"
+	file = "BARE_MIL_sound/MIL_retreat_1.wav"
+}
+
+sound = {
+	name = "MIL_retreat_2"
+	file = "BARE_MIL_sound/MIL_retreat_2.wav"
+}
+
+sound = {
+	name = "MIL_retreat_3"
+	file = "BARE_MIL_sound/MIL_retreat_3.wav"
+}
+
+sound = {
+	name = "MIL_retreat_4"
+	file = "BARE_MIL_sound/MIL_retreat_4.wav"
+}
+
+sound = {
+	name = "MIL_retreat_5"
+	file = "BARE_MIL_sound/MIL_retreat_5.wav"
+}
+
+sound = {
+	name = "MIL_retreat_6"
+	file = "BARE_MIL_sound/MIL_retreat_6.wav"
+}
+
+sound = {
+	name = "MIL_retreat_7"
+	file = "BARE_MIL_sound/MIL_retreat_7.wav"
 }

@@ -27,7 +27,7 @@ guiTypes = {
 			name = "progressbar_value"
 			position = {x = 230 y = 60}
 			font = "hoi_24header"
-			text = "[?ALF_mrd_progressbar_var]%"
+			text = "[?ALF_mrd_progressbar_var|%]"
 			alwaystransparent = yes
 		}
 	}

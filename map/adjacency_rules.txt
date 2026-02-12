@@ -1,49 +1,62 @@
-adjacency_rule =
-{
+adjacency_rule = {
 	name = "ARIUS_IN"
-
-	
-	contested =
-	{
+	contested = {
 		army = yes
 		navy = no
 		submarine = no
 		trade = yes
 	}
-	enemy =
-	{
+	enemy = {
 		army = yes
 		navy = no
 		submarine = no
 		trade = yes
 	}
-	friend =
-	{
+	friend = {
 		army = yes
 		navy = no
 		submarine = no
 		trade = yes
 	}
-	neutral =
-	{
+	neutral = {
 		army = yes
 		navy = no
 		submarine = no
 		trade = yes
 	}
-
-	required_provinces = { 6360 5612 3358 5968 2755 }
-
+	required_provinces = {
+		6360
+		5612
+		3358
+		5968
+		2755
+		6766
+		3978
+		7824
+		11002
+	}
 	is_disabled = {
 		not = {
-			tag = ARI
+			OR = {
+				tag = ARI
+				tag = ALF
+			}
 			has_global_flag = ARIUS_IN_DISABLED
 		}
-		
-		
+		if = {
+			limit = {
+				tag = ALF
+			}
+			NOT = {
+				has_global_flag = ARIUS_IN_BLACKMARKET_ROAD_OPEN_GLOBAL_FLAG
+			}
+		}
 		tooltip = ARIUS_IN_tt
 	}
-
 	icon = 6360
-	offset = { 0 0 0 }
+	offset = {
+		0
+		0
+		0
+	}
 }

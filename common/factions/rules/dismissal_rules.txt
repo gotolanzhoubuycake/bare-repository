@@ -1,0 +1,23 @@
+
+ ##   ##  ### ###  ##  #  #  ## 
+#  # #  #  #   #  #  # ## # #   
+#### #     #   #  #  # # ##  #  
+#  # #  #  #   #  #  # #  #   # 
+#  #  ##   #  ###  ##  #  # ##  
+
+
+dismissal_rule_world_tension = {
+	type = dismissal_rules
+	ai_will_do = {
+		base = 0
+		modifier = {  
+			add = 1
+			has_government = democratic
+			is_faction_leader = yes 
+		}
+	}
+	dismiss_member_trigger = {
+		has_added_tension_amount > 0.1
+	}
+}
+

@@ -211,60 +211,116 @@ Eden_treaty_next_phase = {
 		}
 		#协议阶段结束
 		else = {
-			clr_global_flag = Eden_treaty_negotiation_ongoing
-			set_global_flag = Eden_treaty_negotiation_completed
-			set_global_flag = BA_2st_eden_pact_end
-			activate_mission = Eden_treaty_to_be_signed
-			140 = {
-				set_demilitarized_zone = yes
-			}
-			529 = {
-				set_demilitarized_zone = yes
-			}
 			if = {
 				limit = {
-					check_variable = {
-						global.Eden_treaty_negotiation_phase_leader^1 = TRI
+					has_game_rule = {
+						rule = BARE_RULE_story_settings_ALF
+						option = BARE_RULE_story_settings_ALF_SELECTED
 					}
 				}
-				set_temp_variable = {
-					extra_point = GEH_weights@var:global.Eden_treaty_phase_negotiating
-				}
-				multiply_temp_variable = {
-					extra_point = 0.15
-				}
-				add_to_temp_variable = {
-					GEH_point = extra_point
-				}
-			}
-			else_if = {
-				limit = {
-					check_variable = {
-						global.Eden_treaty_negotiation_phase_leader^1 = GEH
+				##先结束这个决议链
+				clr_global_flag = Eden_treaty_negotiation_ongoing
+				set_global_flag = Eden_treaty_negotiation_completed
+				set_global_flag = BA_2st_eden_pact_end
+				if = {
+					limit = {
+						check_variable = {
+							global.Eden_treaty_negotiation_phase_leader^1 = TRI
+						}
+					}
+					set_temp_variable = {
+						extra_point = GEH_weights@var:global.Eden_treaty_phase_negotiating
+					}
+					multiply_temp_variable = {
+						extra_point = 0.15
+					}
+					add_to_temp_variable = {
+						GEH_point = extra_point
 					}
 				}
-				set_temp_variable = {
-					extra_point = TRI_weights@var:global.Eden_treaty_phase_negotiating
+				else_if = {
+					limit = {
+						check_variable = {
+							global.Eden_treaty_negotiation_phase_leader^1 = GEH
+						}
+					}
+					set_temp_variable = {
+						extra_point = TRI_weights@var:global.Eden_treaty_phase_negotiating
+					}
+					multiply_temp_variable = {
+						extra_point = 0.15
+					}
+					add_to_temp_variable = {
+						TRI_point = extra_point
+					}
 				}
-				multiply_temp_variable = {
-					extra_point = 0.15
+				clear_variable = global.Eden_treaty_phase
+				clear_variable = global.Eden_treaty_progress
+				##发射流亡者规则的效果##
+				ALF = {
+					country_event = {
+						id = ALF.52
+					}
 				}
-				add_to_temp_variable = {
-					TRI_point = extra_point
+				set_global_flag = BA_2st_eden_pact_disrupted
+			}
+			##无规则正常运行
+			else = {
+				clr_global_flag = Eden_treaty_negotiation_ongoing
+				set_global_flag = Eden_treaty_negotiation_completed
+				set_global_flag = BA_2st_eden_pact_end
+				activate_mission = Eden_treaty_to_be_signed
+				140 = {
+					set_demilitarized_zone = yes
 				}
-			}
-			clear_variable = global.Eden_treaty_phase
-			clear_variable = global.Eden_treaty_progress
-			TRI = {
-				country_event = Eden_pact.100
-				clear_variable = Eden_treaty_weights
-			}
-			GEH = {
-				country_event = Eden_pact.100
-				clear_variable = Eden_treaty_weights
-			}
-			ARI = {
-				country_event = Eden_pact.102
+				529 = {
+					set_demilitarized_zone = yes
+				}
+				if = {
+					limit = {
+						check_variable = {
+							global.Eden_treaty_negotiation_phase_leader^1 = TRI
+						}
+					}
+					set_temp_variable = {
+						extra_point = GEH_weights@var:global.Eden_treaty_phase_negotiating
+					}
+					multiply_temp_variable = {
+						extra_point = 0.15
+					}
+					add_to_temp_variable = {
+						GEH_point = extra_point
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							global.Eden_treaty_negotiation_phase_leader^1 = GEH
+						}
+					}
+					set_temp_variable = {
+						extra_point = TRI_weights@var:global.Eden_treaty_phase_negotiating
+					}
+					multiply_temp_variable = {
+						extra_point = 0.15
+					}
+					add_to_temp_variable = {
+						TRI_point = extra_point
+					}
+				}
+				clear_variable = global.Eden_treaty_phase
+				clear_variable = global.Eden_treaty_progress
+				TRI = {
+					country_event = Eden_pact.100
+					clear_variable = Eden_treaty_weights
+				}
+				GEH = {
+					country_event = Eden_pact.100
+					clear_variable = Eden_treaty_weights
+				}
+				ARI = {
+					country_event = Eden_pact.102
+				}
 			}
 		}
 		if = {
@@ -308,7 +364,6 @@ Eden_treaty_get_winner = {
 		}
 		GEH = {
 			mark_focus_tree_layout_dirty = yes
-
 		}
 		if = {
 			limit = {
@@ -396,7 +451,6 @@ Cathedral_war_ARI_cathedral_fall = {
 }
 
 Cathedral_war_ARI_defeated = {
-	
 	if = {
 		limit = {
 			not = {
@@ -404,7 +458,6 @@ Cathedral_war_ARI_defeated = {
 			}
 		}
 		set_global_flag = Arius_defeated
-
 		ARI = {
 			white_peace = {
 				tag = GEH
@@ -414,23 +467,19 @@ Cathedral_war_ARI_defeated = {
 				tag = TRI
 				tooltip = WAR_GST_JS_LOC
 			}
-
 			140 = {
-				transfer_state_to = TRI		#转移控制者和拥有者给予指定TAG
+				transfer_state_to = TRI				#转移控制者和拥有者给予指定TAG
 			}
 			529 = {
-				transfer_state_to = TRI		#转移控制者和拥有者给予指定TAG
+				transfer_state_to = TRI				#转移控制者和拥有者给予指定TAG
 			}
 			683 = {
-				transfer_state_to = TRI		#转移控制者和拥有者给予指定TAG
+				transfer_state_to = TRI				#转移控制者和拥有者给予指定TAG
 			}
 			684 = {
-				transfer_state_to = TRI		#转移控制者和拥有者给予指定TAG
+				transfer_state_to = TRI				#转移控制者和拥有者给予指定TAG
 			}
 		}
-
-
-		
 		if = {
 			limit = {
 				TRI = {
@@ -444,15 +493,12 @@ Cathedral_war_ARI_defeated = {
 				}
 			}
 		}
-
 		TRI = {
 			dismantle_faction = yes
 		}
 		GEH = {
 			dismantle_faction = yes
-
 		}
-		
 		###移出所有因古圣堂之战而出现的动态修正并自动营救所有学生###
 		# for_each_scope_loop = { #没有动态修正了
 		# 	array = global.GST_JS_ZBH
@@ -494,10 +540,8 @@ Cathedral_war_ARI_defeated = {
 			load_focus_tree = ARI_NULL
 			country_lock_all_division_template = yes
 		}
-		
 		news_event = Eden_pact.1002
 	}
-	
 }
 
 Eden_treaty_formally_signed = {
@@ -508,7 +552,6 @@ Eden_treaty_formally_signed = {
 				has_global_flag = Eden_treaty_has_been_signed
 			}
 		}
-
 		set_global_flag = Eden_treaty_has_been_signed
 		for_each_scope_loop = {
 			array = global.Eden_treaty_negotiation_phase_leader
@@ -541,10 +584,7 @@ Eden_treaty_formally_signed = {
 				modifier = Eden_treaty_modifier
 			}
 		}
-
 	}
-
-	
 }
 
 ###古圣堂之战###
@@ -997,9 +1037,9 @@ Eden_treaty_war_GEH_debuff = {
 	GEH = {
 		if = {
 			limit = {
-				has_global_flag = ARI_ZhunBeiDu_1_JieDuanBiaoZhi			#低准备度
+				has_global_flag = ARI_ZhunBeiDu_1_JieDuanBiaoZhi				#低准备度
 			}
-			add_stability = -0.05		#稳定度修正
+			add_stability = -0.05			#稳定度修正
 			set_variable = {
 				GEH_a_unpredictable_attack_army_org_factor = -0.2
 			}
@@ -1014,16 +1054,16 @@ Eden_treaty_war_GEH_debuff = {
 			}
 			hidden_effect = {
 				add_dynamic_modifier = {
-					modifier = GEH_a_unpredictable_attack				#措手不及
+					modifier = GEH_a_unpredictable_attack					#措手不及
 				}
 			}
 			custom_effect_tooltip = GEH_War_breaks_out_tt_1
 		}
 		else_if = {
 			limit = {
-				has_global_flag = ARI_ZhunBeiDu_2_JieDuanBiaoZhi			#低准备度
+				has_global_flag = ARI_ZhunBeiDu_2_JieDuanBiaoZhi				#低准备度
 			}
-			add_stability = -0.1		#稳定度修正
+			add_stability = -0.1			#稳定度修正
 			set_variable = {
 				GEH_a_unpredictable_attack_army_org_factor = -0.4
 			}
@@ -1038,16 +1078,16 @@ Eden_treaty_war_GEH_debuff = {
 			}
 			hidden_effect = {
 				add_dynamic_modifier = {
-					modifier = GEH_a_unpredictable_attack				#措手不及
+					modifier = GEH_a_unpredictable_attack					#措手不及
 				}
 			}
 			custom_effect_tooltip = GEH_War_breaks_out_tt_2
 		}
 		else_if = {
 			limit = {
-				has_global_flag = ARI_ZhunBeiDu_3_JieDuanBiaoZhi			#低准备度
+				has_global_flag = ARI_ZhunBeiDu_3_JieDuanBiaoZhi				#低准备度
 			}
-			add_stability = -0.1		#稳定度修正
+			add_stability = -0.1			#稳定度修正
 			set_variable = {
 				GEH_a_unpredictable_attack_army_org_factor = -0.6
 			}
@@ -1062,7 +1102,7 @@ Eden_treaty_war_GEH_debuff = {
 			}
 			hidden_effect = {
 				add_dynamic_modifier = {
-					modifier = GEH_a_unpredictable_attack				#措手不及
+					modifier = GEH_a_unpredictable_attack					#措手不及
 				}
 			}
 			custom_effect_tooltip = GEH_War_breaks_out_tt_3
@@ -1073,6 +1113,4 @@ Eden_treaty_war_GEH_debuff = {
 			days = 15
 		}
 	}
-	
 }
-

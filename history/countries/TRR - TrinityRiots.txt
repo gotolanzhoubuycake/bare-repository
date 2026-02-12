@@ -1,0 +1,116 @@
+#capital = 40
+#oob = "SCH_2019"
+
+set_stability = 0.50
+set_war_support = 0.50
+set_research_slots = 3
+set_fuel_ratio = 0.5
+set_convoys = 20
+starting_train_buffer = 0.5
+
+
+# Starting tech
+set_technology = {
+	#突破
+	T1_infantry_weapon = 1
+	T2_infantry_weapon = 1
+	#T3_infantry_weapon = 1
+	T1_mobile_vehicle = 1
+	T2_mobile_vehicle = 1
+	T1_assult_vehicle = 1
+	T2_assult_vehicle = 1
+	T1_drone = 1
+	#T2_drone = 1
+	T1_electronic = 1
+	T2_electronic = 1
+	T1_production = 1
+	T2_production = 1
+
+	#BD
+	bd_level_T1 = 1
+	#bd_level_T2 = 1
+
+	#工程学（电子学electronics）
+	Personal_Computer_T1 = 1
+	Personal_Computer_T2 = 1
+	Digital_control_system_T1 = 1
+	Industrial_Robots_T1 = 1
+	Communications_radar_T1 = 1
+	Communications_radar_T2 = 1
+	Communication_Network_T1 = 1
+	Communication_Network_T2 = 1
+
+	#工业资源
+	industrial_complex_T1 = 1
+	industrial_complex_T2 = 1
+	#Opaz_Power_Generation_T1 = 1
+	Power_Development_T2 = 1
+	Metal_Refining_T1 = 1
+	Electronic_technology_upgrade_T1 = 1
+	Rare_metal_smelting_T1 = 1
+	Oil_Processing_T1 = 1
+	#Opaz_smelting_T1 = 1
+
+	#工业
+	Industrial_construction_T1 = 1
+	Industrial_construction_T2 = 1
+	Heavy_industry_T1 = 1
+	Infrastructure_construction_T1 = 1
+	Infrastructure_construction_T2 = 1
+	Train_T1 = 1
+
+	#空军（无人机）
+	recon_drone = 1
+	light_fighting_drone = 1
+	light_attack_drone = 1
+	#fighting_drone = 1
+	#attack_drone = 1
+
+	#装甲车辆（坦克）
+	light_tank_MK1 = 1
+	medium_tank_MK1 = 1
+
+	#机动载具
+	civilian_car_equipment_T1 = 1
+	Civilian_helicopter_T1 = 1
+	#attack_helicopter_T2 = 1
+	General_helicopter_T2 = 1
+	Infantry_fighting_vehicle_T1 = 1
+	Armored_Vehicles_T1 = 1
+
+	#支援装备
+	fire_support_weapons_T1 = 1
+	support_equipment_T1 = 1
+	support_logistics_T2 = 1
+	support_security_T2 = 1
+	air_defense_weapons_T1 = 1
+
+	#步兵装备
+	infantry_weapons_T1 = 1
+	infantry_weapons_T2 = 1
+	
+
+	infantry_weapons_upgrade_uniform_T1 = 1
+	infantry_weapons_upgrade_uniform_T2 = 1
+	
+	infantry_weapons_upgrade_armor_T2 = 1
+	infantry_weapons_upgrade_carrying_gear_T2 = 1
+	troop_training_T1 = 1
+	#troop_training_T2 = 1
+	infantry_weapons_upgrade_communication_T1 = 1
+	infantry_weapons_upgrade_communication_T2 = 1
+	infantry_weapons_upgrade_suppressive_weapon_T1 = 1
+	#infantry_weapons_upgrade_suppressive_weapon_T2 = 1
+	infantry_weapons_upgrade_sighting_T1 = 1
+}
+
+add_ideas = {
+	BARE_Combat_Readiness_Start_Idea
+}
+
+set_politics = {
+	ruling_party = no_ideology
+}
+set_popularities = {
+	no_ideology = 100
+}

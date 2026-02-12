@@ -82,7 +82,7 @@ spriteTypes = {
 		name = "GFX_BA_news_20"
 		textureFile = "gfx/event_pictures/BA_news_event/BA_news_20.dds"
 	}	
-		spriteType = {
+	spriteType = {
 		name = "GFX_BA_news_21"
 		textureFile = "gfx/event_pictures/BA_news_event/BA_news_21.dds"
 	}	
@@ -90,5 +90,44 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_BA_news_cathedral_war"
 		textureFile = "gfx/event_pictures/BA_news_event/BA_news_cathedral_war.dds"
-	}	
+	}
+	##
+	spriteType = {
+		name = "GFX_ALF_news_event_1"
+		textureFile = "gfx/event_pictures/BA_news_event/ALF_news_event_1.dds"
+	}
+	spriteType = {
+		name = "GFX_ALF_news_event_3"
+		textureFile = "gfx/event_pictures/BA_news_event/ALF_news_event_3.dds"
+	}
+	spriteType = {
+		name = "GFX_ALF_news_event_4"
+		textureFile = "gfx/event_pictures/BA_news_event/ALF_news_event_4.dds"
+	}
+	spriteType = {
+		name = "GFX_ALF_news_event_5"
+		textureFile = "gfx/event_pictures/BA_news_event/ALF_news_event_5.dds"
+	}
+	spriteType = {
+		name = "GFX_ALF_news_event_6"
+		textureFile = "gfx/event_pictures/BA_news_event/ALF_news_event_6.dds"
+	}
+	spriteType = {
+		name = "GFX_ALF_news_event_8"
+		textureFile = "gfx/event_pictures/BA_news_event/ALF_news_event_8.dds"
+	}
+	spriteType = {
+		name = "GFX_ALF_news_event_9"
+		textureFile = "gfx/event_pictures/BA_news_event/ALF_news_event_9.dds"
+	}
+	spriteType = {
+		name = "GFX_ALF_news_event_10"
+		textureFile = "gfx/event_pictures/BA_news_event/ALF_news_event_10.dds"
+	}
+	spriteType = {
+		name = "GFX_ALF_news_event_11"
+		textureFile = "gfx/event_pictures/BA_news_event/ALF_news_event_11.dds"
+	}
+
+
 }

@@ -5,6 +5,7 @@
  state_resource_resources_rm: "稀有金属"
  state_resource_resources_cm: "常规金属"
  state_resource_resources_mm: "欧帕兹"
+ state_resource_resources_el: "电力"
  state_resource_resources_hic: "重工业产能"
 
  temporary_state_resource_resources_fe: "化石能源"
@@ -13,6 +14,7 @@
  temporary_state_resource_resources_rm: "稀有金属"
  temporary_state_resource_resources_cm: "常规金属"
  temporary_state_resource_resources_mm: "欧帕兹"
+ temporary_state_resource_resources_el: "电力"
 
  temporary_state_resource_resources_hic: "军用重工产能"
 
@@ -22,6 +24,7 @@
  country_resource_resources_rm: "稀有金属"
  country_resource_resources_cm: "常规金属"
  country_resource_resources_mm: "欧帕兹"
+ country_resource_resources_el: "电力"
 
  country_resource_resources_hic: "军用重工产能"
 
@@ -31,6 +34,7 @@
  state_resource_cost_resources_rm: "稀有金属消耗"
  state_resource_cost_resources_cm: "常规金属消耗"
  state_resource_cost_resources_mm: "欧帕兹消耗"
+ state_resource_cost_resources_el: "电力消耗"
 
  state_resource_cost_resources_hic: "军用重工产能消耗"
 
@@ -40,6 +44,7 @@
  country_resource_cost_resources_rm: "稀有金属消耗"
  country_resource_cost_resources_cm: "常规金属消耗"
  country_resource_cost_resources_mm: "欧帕兹消耗"
+ country_resource_cost_resources_el: "电力消耗"
 
  country_resource_cost_resources_hic: "军用重工产能消耗"
 
@@ -49,6 +54,7 @@
  PRODUCTION_MATERIALS_RESOURCES_MM: "欧帕兹"
  PRODUCTION_MATERIALS_RESOURCES_CM: "常规金属"
  PRODUCTION_MATERIALS_RESOURCES_RM: "稀有金属"
+ PRODUCTION_MATERIALS_RESOURCES_EL: "电力"
 
  PRODUCTION_MATERIALS_RESOURCES_HIC: "军用重工产能"
 
@@ -58,6 +64,7 @@
  resources_rm_desc: "包含钨，铬等稀有金属，用量和储备不是很大，但也不可或缺。"
  resources_cm_desc: "包含钢，铜，铝等用量很大的金属，对于维持基沃托斯的工业生产十分重要。"
  resources_mm_desc: "目前没有一个通用的定义，但一般来说这个代表了使用欧帕兹技术需要的特殊材料，目前只能通过遗迹开采或是人工合成。"
+ resources_el_desc: "让基沃托斯运转的各类能源的代称，"
  resources_hic_desc: "制造大玩具所需的空间和设备，对于制造钢铁巨兽来说十分必要"
 
 

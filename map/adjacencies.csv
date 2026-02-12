@@ -42,10 +42,17 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 1913;8834;impassable;-1;-1;-1;-1;-1;;Arius impassable
 7449;1067;impassable;-1;-1;-1;-1;-1;;Arius impassable
 7449;9175;impassable;-1;-1;-1;-1;-1;;Arius impassable
+##
 6360;5612;;-1;-1;-1;-1;-1;ARIUS_IN;ARIUS_IN_1
 6360;3358;;-1;-1;-1;-1;-1;ARIUS_IN;ARIUS_IN_2
 6360;5968;;-1;-1;-1;-1;-1;ARIUS_IN;ARIUS_IN_3
 6360;2755;;-1;-1;-1;-1;-1;ARIUS_IN;ARIUS_IN_4
+##
+6360;6766;;-1;-1;-1;-1;-1;ARIUS_IN;ARIUS_IN_5
+6360;3978;;-1;-1;-1;-1;-1;ARIUS_IN;ARIUS_IN_6
+6360;7824;;-1;-1;-1;-1;-1;ARIUS_IN;ARIUS_IN_7
+6360;11002;;-1;-1;-1;-1;-1;ARIUS_IN;ARIUS_IN_8
+##
 8004;4881;;-1;-1;-1;-1;-1;;sea
 8798;4825;;-1;-1;-1;-1;-1;;sea
 7028;12225;;-1;-1;-1;-1;-1;;sea

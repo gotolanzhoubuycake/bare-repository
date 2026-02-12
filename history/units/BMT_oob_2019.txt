@@ -1,0 +1,116 @@
+division_template = {
+	name = "Combat Militia"		
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry_militia = { x = 0 y = 2 }
+		infantry_militia = { x = 1 y = 0 }
+		infantry_militia = { x = 1 y = 1 }
+		infantry_militia = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Armor Regiment"		
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+units = {
+	division= {
+		name = "战斗民兵"
+		location = 10824
+		division_template = "Combat Militia" #这个师用的编制的名字
+		start_experience_factor = 0.3 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "战斗民兵"
+		location = 10824
+		division_template = "Combat Militia" #这个师用的编制的名字
+		start_experience_factor = 0.3 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "战斗民兵"
+		location = 10824
+		division_template = "Combat Militia" #这个师用的编制的名字
+		start_experience_factor = 0.3 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "战斗民兵"
+		location = 10824
+		division_template = "Combat Militia" #这个师用的编制的名字
+		start_experience_factor = 0.3 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "战斗民兵"
+		location = 10824
+		division_template = "Combat Militia" #这个师用的编制的名字
+		start_experience_factor = 0.3 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "战斗民兵"
+		location = 10824
+		division_template = "Combat Militia" #这个师用的编制的名字
+		start_experience_factor = 0.3 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "战斗民兵"
+		location = 10824
+		division_template = "Combat Militia" #这个师用的编制的名字
+		start_experience_factor = 0.3 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "战斗民兵"
+		location = 10824
+		division_template = "Combat Militia" #这个师用的编制的名字
+		start_experience_factor = 0.3 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "战斗民兵"
+		location = 10824
+		division_template = "Combat Militia" #这个师用的编制的名字
+		start_experience_factor = 0.3 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "战斗摩托团"
+		location = 10824
+		division_template = "Armor Regiment" #这个师用的编制的名字
+		start_experience_factor = 0.6 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+	division= {
+		name = "战斗摩托团"
+		location = 10824
+		division_template = "Armor Regiment" #这个师用的编制的名字
+		start_experience_factor = 0.6 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+}

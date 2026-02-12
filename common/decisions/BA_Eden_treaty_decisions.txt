@@ -1732,9 +1732,29 @@ Eden_treaty_negotiation_decisions = {
 			base = 1
 		}
 	}
+
+	###用于流亡者的情报
+	ALF_Eden_treaty_timer_mission = {
+		priority = 100
+		is_good = no
+		days_mission_timeout = 365
+		activation = {
+			always = no
+		}
+		available = {
+			always = no
+		}
+		complete_effect = {
+
+		}
+		timeout_effect = {
+			activate_mission = ALF_Eden_treaty_timer_mission
+		}
+	}
 }
 
 Eden_treaty_to_be_signed_decisions = {
+	###阿里乌斯夫人触发器###
 	Eden_treaty_to_be_signed = {
 		days_mission_timeout = 70
 		available = {

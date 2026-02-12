@@ -1,130 +1,624 @@
 ideas = {
-	country = {
-		##游击军队
-		ALF_partisan_army = {
-			#picture = unknown
-			modifier = {
-				max_planning_factor = -0.5
-				planning_speed = -0.2
-				no_supply_grace = 48
-			}
-		}
-		
-		##游击军队改善
-		ALF_solving_partisan_army_1 = {
-			#picture = unknown
-			modifier = {
-				max_planning_factor = -0.2
-				planning_speed = -0.1
-				no_supply_grace = 48
-			}
-		}
-		##思维落后
-		ALF_far_from_advance_warfare = {
-			#picture = unknown
-			modifier = {
-			}
-		}
-		##夫人的影子
-		ALF_shadow_follows = {
-			#picture = unknown
-			modifier = {
-			}
-		}
-		##我们能做到
-		ALF_we_can_do_this = {
-			#picture = unknown
-			modifier = {
-				stability_factor = 0.1
-				war_support_factor = 0.1
-				industrial_capacity_factory = 0.1
-			}
-		}
-		##人口普查
-		ALF_population_investigate = {
-			#picture = unknown
-			modifier = {
+    country = {
+        ##游击军队
+        ALF_partisan_army = {
+            #picture = unknown
+            modifier = {
+                max_planning_factor = -0.5
+                planning_speed = -0.2
+                no_supply_grace = 48
+            }
+        }
+        ##游击军队改善
+        ALF_solving_partisan_army_1 = {
+            #picture = unknown
+            modifier = {
+                max_planning_factor = -0.2
+                planning_speed = -0.1
+                no_supply_grace = 48
+            }
+        }
+        ##思维落后
+        ALF_far_from_advance_warfare = {
+            #picture = unknown
+            modifier = {
+            }
+        }
+        ##夫人的影子
+        ALF_shadow_follows = {
+            #picture = unknown
+            modifier = {
+                political_power_factor = -0.05
+                stability_factor = -0.05
+            }
+        }
+        ##人口普查
+        ALF_population_investigate = {
+            #picture = unknown
+            modifier = {
+                can_use_combat_readiness_percentage = 0.1
+                combat_readiness_recovery_percentage = 0.1
+            }
+        }
+        ##流亡者参谋本部
+        ALF_officer_group = {
+            #picture = unknown
+            modifier = {
+                command_abilities_cost_factor = -0.2
+                command_power_gain_mult = 0.2
+                skill_bonus_factor = 0.1
+            }
+        }
+        ##特别突击训练
+        ALF_combat_trainning = {
+            #picture = unknown
+            modifier = {
+                dont_lose_dig_in_on_attack = 1
+                river_crossing_factor = -0.1
+                initiative_factor = 0.1
+            }
+        }
+        ##电力合同收入
+        ALF_CEN_electric_contract = {
+            #picture = unknown
+            modifier = {
+                consumer_goods_factor = -0.05
+            }
+        }
+        ##供电##
+        ALF_CEN_electric_contract_1 = {
+            #picture = unknown
+            modifier = {
+                consumer_goods_factor = -0.05
+            }
+            research_bonus = {
+                power_development = 0.1
+            }
+        }
+        ##遮天蔽日
+        ALF_cover_the_sky = {
+            #picture = unknown
+            modifier = {
+                consumer_goods_factor = -0.05
+            }
+            equipment_bonus = {
+                small_uav_cas_airframe = {
+                    instant = yes
+                    build_cost_ic = -0.1
+                }
+                small_uav_recon_airframe = {
+                    instant = yes
+                    build_cost_ic = -0.1
+                }
+                medium_uav_cas_airframe = {
+                    instant = yes
+                    build_cost_ic = -0.1
+                }
+                heavy_uav_cas_airframe = {
+                    instant = yes
+                    build_cost_ic = -0.1
+                }
+            }
+        }
+        ##工业动员
+        ALF_industrial_mobilization = {
+            #picture = unknown
+            modifier = {
+                industrial_capacity_factory = 0.2
+                production_factory_efficiency_gain_factor = 0.2
+            }
+        }
+        ##预备役动员
+        ALF_manpower_mobilization = {
+            #picture = unknown
+            modifier = {
+                weekly_manpower = 500
+            }
+        }
+        ##我们能做到
+        ALF_we_can_do_this_idea = {
+            #picture = unknown
+            modifier = {
+                stability_factor = 0.1
+                war_support_factor = 0.1
+            }
+        }
+        ##众志成城
+        ALF_united_as_on_idea = {
+            #picture = unknown
+            modifier = {
+                industrial_capacity_factory = 0.2
+            }
+        }
+        ##猛击软肋
+        ALF_hit_on_weakness = {
+            #picture = unknown
+            targeted_modifier = {
+                tag = ALF
+                defense_bonus_against = -0.1
+            }
+        }
+        ##审判日
+        ALF_day_of_judgement = {
+            #picture = unknown
+            targeted_modifier = {
+                tag = ARI
+                attack_bonus_against = 0.1
+                defense_bonus_against = 0.1
+            }
+        }
+        ##针对性后勤设计
+        ALF_customized_the_supplyline = {
+            #picture = unknown
+            modifier = {
+                no_supply_grace = 24
+                out_of_supply_factor = 0.2
+                supply_node_range = 0.05
+            }
+        }
+        ##强袭作战
+        ALF_speed_and_breakthrough = {
+            #picture = unknown
+            modifier = {
+                army_attack_speed_factor = 0.1
+                army_speed_factor = 0.05
+            }
+        }
+        ##突然袭击
+        ALF_ARI_striked = {
+            #picture = unknown
+            modifier = {
+                army_speed_factor = -0.2
+                breakthrough_factor = -0.5
+                land_reinforce_rate = -0.1
+            }
+        }
+        ##从内战中恢复##
+        ALF_recover_from_civil_war = {
+            #picture = unknown
+            modifier = {
+                consumer_goods_expected_value = 0.3
+                resistance_target = -0.5
+                resistance_growth = -0.5
+                stability_factor = -0.2
+            }
+        }
+        ##和平病
+        ALF_peace_sickness = {
+            #picture = unknown
+            modifier = {
+                war_support_factor = -0.2
+            }
+        }
+        ##旗帜飘扬##
+        ALF_flag_waves = {
+            #picture = unknown
+            modifier = {
+                political_power_factor = 0.1
+                war_stability_factor = 0.1
+                army_morale_factor = 0.1
+            }
+        }
+        ##秤亚津子##
+        ALF_atsuko_idea = {
+            picture = GFX_idea_ALF_atsuko_idea
+            traits = {
+                princess_of_arius
+            }
+        }
+        ##打破陈规
+        ALF_root_out_old_story = {
+            #picture = unknown
+            modifier = {
+                political_power_factor = 0.2
+                line_change_production_efficiency_factor = 0.2
+                encryption = 1
+            }
+        }
+        ##修订宪章
+        ALF_new_constitution = {
+            #picture = unknown
+            modifier = {
+                political_power_factor = -0.4
+                stability_factor = -0.2
+                war_support_factor = -0.2
+            }
+        }
+        ##修订宪章
+        ALF_new_constitution_1 = {
+            #picture = unknown
+            modifier = {
+                political_power_factor = -0.2
+                stability_factor = -0.1
+                war_support_factor = -0.1
+            }
+        }
+        ALF_clear_rubbles = {
+            #picture = unknown
+            modifier = {
+                production_speed_buildings_factor = 0.1
+                industry_repair_factor = 0.3
+            }
+        }
+        ##崭新的外交姿态
+        ALF_new_diplomacy_posture = {
+            #picture = unknown
+            modifier = {
+                Progressivism_ideology_acceptance = 20
+                Liberalism_ideology_acceptance = 20
+                trade_opinion_factor = 0.1
+            }
+        }
+        ##背水一战
+        ALF_the_battle_with_no_step_back = {
+            #picture = unknown
+            modifier = {
+                army_defence_factor = 0.05
+                land_reinforce_rate = 0.02
+            }
+        }
+        ##
+        ALF_the_final_war = {
+            #picture = unknown
+            modifier = {
+                training_time_factor = -0.1
+            }
+        }
+        ##
+        ALF_stand_up_the_committee = {
+            modifier = {
+                weekly_manpower = 400
+            }
+        }
+        ##
+        ALF_they_shall_no_pass = {
+            modifier = {
+                surrender_limit = 0.1
+                war_support_factor = 0.1
+            }
+        }
+        ##
+        ALF_Unlimited_bombing = {
+            modifier = {
+                air_strategic_bomber_bombing_factor = 3
+                army_attack_factor = 0.2
+                army_defence_factor = 0.2
+                air_cas_efficiency = 0.3
+                air_cas_present_factor = 0.3
+                ground_attack_factor = 0.3
+            }
+        }
+        ##志愿军
+        ALF_volunteers_from_farway = {
+            rule = {
+                can_send_volunteers = yes
+            }
+            modifier = {
+                send_volunteer_size = 3
+                send_volunteers_tension = -1
+                send_volunteer_divisions_required = -1
+                air_volunteer_cap = 100
+            }
+        }
+
+		##三班倒
+		ALF_full_work_schedule_idea = {
+            rule = {
+                can_send_volunteers = yes
+            }
+            modifier = {
+                industrial_capacity_factory = 0.2
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+            }
+        }
+
+		##暂停重建计划
+		ALF_cancel_rebuild_plan_idea = {
+            rule = {
+                can_send_volunteers = yes
+            }
+            modifier = {
+				production_speed_buildings_factor = -0.3
+				production_speed_supply_node_factor = 0.05
+                production_lack_of_resource_penalty_factor = -0.5
 				can_use_combat_readiness_percentage = 0.1
-				combat_readiness_recovery_percentage = 0.1
-			}
-		}
-		##流亡者参谋本部
-		ALF_officer_group = {
-			#picture = unknown
-			modifier = {
-				command_abilities_cost_factor = -0.2
-				command_power_gain_mult = 0.2
-				skill_bonus_factor = 0.1
-			}
-		}
-		##特别突击训练
-		ALF_combat_trainning_0 = {
-			#picture = unknown
-			modifier = {
-				dont_lose_dig_in_on_attack = 1
-				river_crossing_factor = -0.1
-				army_core_defence_factor = 0.1
-			}
-		}
-		##强化边境
-		ALF_combat_trainning_1 = {
-			#picture = unknown
-			modifier = {
-				dont_lose_dig_in_on_attack = 1
-				river_crossing_factor = -0.1
-				army_core_defence_factor = 0.1
-			}
-		}
-		##电力合同收入
-		ALF_CEN_electric_contract = {
-			#picture = unknown
-			modifier = {
-				consumer_goods_factor = -0.05
-			}
-		}
-		##供电##
-		ALF_CEN_electric_contract_1 = {
-			#picture = unknown
-			modifier = {
-				consumer_goods_factor = -0.05
-			}
-			research_bonus = {
-				power_development = 0.1
-			}
-		}
-	}
-	####
-	industrial_concern = {
-		ALF_technology_left_behind = {
-			#picture = unknown
-			allowed = {
-				tag = ALF
-			}
-			available = {
-				tag = ALF
-			}
-			allowed_to_remove = {
-				always = no
-			}
-			modifier = {
-				research_speed_factor = -0.5
-			}
-		}
-		##弥补技术断层
-		ALF_technology_left_behind_1 = {
-			#picture = unknown
-			allowed = {
-				tag = ALF
-			}
-			available = {
-				tag = ALF
-			}
-			allowed_to_remove = {
-				always = no
-			}
-			modifier = {
-				research_speed_factor = -0.2
-			}
-		}
-	}
+                combat_readiness_recovery_percentage = 0.1
+            }
+        }
+
+        #####给圣三一和格黑娜的buff
+        ALF_TRA_BUFF = {
+            modifier = {
+                surrender_limit = 0.2
+                training_time_factor = -0.15
+                political_power_gain = 0.4
+                command_power_gain_mult = 0.3
+                industrial_capacity_factory = 0.1
+                consumer_goods_factor = -0.1
+                army_infantry_defence_factor = 0.2
+                #
+                experience_gain_air = 0.05
+                experience_gain_air_factor = 0.1
+                air_training_xp_gain_factor = 0.25
+                air_mission_xp_gain_factor = 0.05
+                special_forces_cap = 0.1
+            }
+            equipment_bonus = {
+                infantry_equipment = {
+                    reliability = 0.1
+                    instant = yes
+                }
+                artillery = {
+                    soft_attack = 0.4
+                    build_cost_ic = -0.15
+                    reliability_factor = 0.1
+                    instant = yes
+                }
+                armor = {
+                    reliability_factor = 0.05
+                    soft_attack = 0.05
+                    instant = yes
+                }
+                cas = {
+                    build_cost_ic = -0.1
+                    instant = yes
+                }
+                fighter = {
+                    build_cost_ic = -0.1
+                    instant = yes
+                }
+            }
+            research_bonus = {
+                mystical = 0.1
+                fire_support = 0.1
+                infantry_weapons = 0.1
+                electronics = 0.15
+            }
+        }
+        #####给圣三一和格黑娜的buff
+        ALF_GEA_BUFF = {
+            modifier = {
+                political_power_factor = 0.1
+                war_support_factor = 0.15
+                stability_factor = 0.2
+                stability_weekly_factor = 0.005
+                army_org_factor = 0.45
+                army_morale_factor = 0.15
+                industrial_capacity_factory = 0.4
+                army_attack_factor = 0.25
+                army_defence_factor = 0.2
+                army_org_regain = 0.1
+                army_speed_factor = 0.1
+                production_factory_efficiency_gain_factor = 0.25
+                production_lack_of_resource_penalty_factor = -0.2
+                production_factory_max_efficiency_factor = 0.3
+                army_core_attack_factor = 0.35
+                army_core_defence_factor = 0.35
+                minimum_training_level = -0.1
+                resistance_target = -0.15
+                resistance_damage_to_garrison = -0.2
+                supply_factor = 0.1
+                production_speed_rail_way_factor = 0.2
+                production_speed_supply_node_factor = 0.3
+                production_speed_bunker_factor = 0.4
+                supply_consumption_factor = -0.2
+                out_of_supply_factor = -0.1
+                combat_readiness_recovery_percentage = 0.1
+                unit_light_armor_design_cost_factor = -0.5
+                unit_medium_armor_design_cost_factor = -0.5
+                unit_heavy_armor_design_cost_factor = -0.5
+                unit_apc_unit_design_cost_factor = -0.5
+                unit_ifv_unit_design_cost_factor = -0.5
+                cas_damage_reduction = 0.1
+                max_dig_in_factor = 0.05
+                recon_factor = 0.1
+                industry_free_repair_factor = 0.3
+                industry_air_damage_factor = -0.15
+                land_reinforce_rate = 0.02
+                org_loss_when_moving = -0.05
+                experience_gain_army_factor = 0.15
+                experience_gain_air_factor = 0.2
+                air_accidents = -0.2
+                line_change_production_efficiency_factor = 0.2
+                land_night_attack = 0.12
+                max_planning = 0.1
+                air_cas_efficiency = 0.1
+                ground_attack_factor = 0.15
+                research_speed_factor = 0.1
+                war_support_weekly_factor = 0.005
+            }
+            equipment_bonus = {
+                train_equipment = {
+                    build_cost_ic = -0.1
+                    instant = yes
+                }
+                motorized_equipment = {
+                    build_cost_ic = -0.1
+                    instant = yes
+                }
+                light_fire_support_equipment = {
+                    reliability = -0.1
+                    soft_attack = 0.1
+                    build_cost_ic = -0.05
+                    instant = yes
+                }
+                heavy_fire_support_equipment = {
+                    reliability = -0.1
+                    ap_attack = 0.1
+                    hard_attack = 0.1
+                    build_cost_ic = -0.05
+                    instant = yes
+                }
+                special_fire_support_equipment = {
+                    reliability = -0.05
+                    build_cost_ic = -0.1
+                    instant = yes
+                }
+                infantry_anti_air_equipment = {
+                    reliability = -0.05
+                    build_cost_ic = -0.1
+                    instant = yes
+                }
+                infantry_equipment = {
+                    soft_attack = 0.12
+                    hard_attack = 0.05
+                    breakthrough = 0.05
+                    instant = yes
+                }
+                infantry_anti_air_equipment = {
+                    defense = 0.05
+                    entrenchment = 0.05
+                    air_attack = 0.15
+                    breakthrough = 0.1
+                    instant = yes
+                }
+                apc_aa_equipment = {
+                    defense = 0.05
+                    entrenchment = 0.05
+                    air_attack = 0.15
+                    breakthrough = 0.1
+                    instant = yes
+                }
+                ifv_aa_equipment = {
+                    defense = 0.05
+                    entrenchment = 0.05
+                    air_attack = 0.15
+                    breakthrough = 0.1
+                    instant = yes
+                }
+                light_tank_aa_chassis = {
+                    defense = 0.05
+                    entrenchment = 0.05
+                    air_attack = 0.15
+                    breakthrough = 0.1
+                    instant = yes
+                }
+                medium_tank_aa_chassis = {
+                    defense = 0.05
+                    entrenchment = 0.05
+                    air_attack = 0.15
+                    breakthrough = 0.1
+                    instant = yes
+                }
+                heavy_tank_aa_chassis = {
+                    defense = 0.05
+                    ap_attack = 0.1
+                    hard_attack = 0.1
+                    entrenchment = 0.05
+                    air_attack = 0.15
+                    breakthrough = 0.1
+                    instant = yes
+                }
+                light_bm_aa_chassis = {
+                    defense = 0.05
+                    entrenchment = 0.05
+                    air_attack = 0.15
+                    breakthrough = 0.1
+                    instant = yes
+                }
+                medium_bm_aa_chassis = {
+                    defense = 0.05
+                    entrenchment = 0.05
+                    air_attack = 0.15
+                    breakthrough = 0.1
+                    instant = yes
+                }
+                heavy_bm_aa_chassis = {
+                    defense = 0.05
+                    entrenchment = 0.05
+                    air_attack = 0.15
+                    breakthrough = 0.1
+                    instant = yes
+                }
+                light_tank_chassis = {
+                    maximum_speed = 0.1
+                    ap_attack = 0.15
+                    soft_attack = 0.15
+                    hard_attack = 0.15
+                    build_cost_ic = -0.1
+                    instant = yes
+                }
+                heavy_tank_chassis = {
+                    reliability = -0.05
+                    breakthrough = 0.15
+                    build_cost_ic = -0.1
+                    armor_value = 0.15
+                    soft_attack = 0.15
+                    hard_attack = 0.15
+                    instant = yes
+                }
+                train_equipment = {
+                    build_cost_ic = -0.1
+                    instant = yes
+                }
+                motorized_equipment = {
+                    reliability = 0.1
+                    build_cost_ic = -0.1
+                    instant = yes
+                }
+                apc_equipment = {
+                    reliability = 0.1
+                    build_cost_ic = -0.1
+                    instant = yes
+                }
+                ifv_equipment = {
+                    reliability = 0.1
+                    build_cost_ic = -0.1
+                    instant = yes
+                }
+            }
+            research_bonus = {
+            }
+        }
+    }
+    ####
+    industrial_concern = {
+        ALF_technology_left_behind = {
+            #picture = unknown
+            allowed = {
+                tag = ALF
+            }
+            available = {
+                NOT = {
+                    has_country_flag = ALF_technology_left_behind_removed_flag
+                }
+            }
+            visible = {
+                NOT = {
+                    has_country_flag = ALF_technology_left_behind_removed_flag
+                }
+            }
+            allowed_to_remove = {
+                always = no
+            }
+            modifier = {
+                research_speed_factor = -0.5
+            }
+        }
+        ##弥补技术断层
+        ALF_technology_left_behind_1 = {
+            #picture = unknown
+            allowed = {
+                tag = ALF
+            }
+            available = {
+                NOT = {
+                    has_country_flag = ALF_technology_left_behind_1_removed_flag
+                }
+            }
+            visible = {
+                has_country_flag = ALF_technology_left_behind_removed_flag
+                NOT = {
+                    has_country_flag = ALF_technology_left_behind_1_removed_flag
+                }
+            }
+            allowed_to_remove = {
+                always = no
+            }
+            modifier = {
+                research_speed_factor = -0.2
+            }
+        }
+    }
 }

@@ -40,3 +40,115 @@ TRI_politic_allies_achievement = {
 		}
 	}
 }
+
+
+#############流亡者的成就######################
+ALF_ending_of_a_long_march_achievement = {
+	possible = {
+		custom_override_tooltip = {
+			tooltip = is_playing_ALF_tt
+			OR = {
+				tag = A47
+				tag = ALF
+			}
+		}
+		difficulty > 1
+        game_rules_allow_achievements = yes
+	}
+
+	happened = {
+		custom_override_tooltip = {
+			tooltip = ALF_ending_of_a_long_march_achievement_tt
+			tag = ALF
+			date > 2019.1.1
+		}
+	}
+}
+
+ALF_rasing_the_flag_achievement = {
+	possible = {
+		custom_override_tooltip = {
+			tooltip = is_playing_ALF_tt
+			OR = {
+				tag = A47
+				tag = ALF
+			}
+		}
+		difficulty > 1
+        game_rules_allow_achievements = yes
+	}
+
+	happened = {
+		custom_override_tooltip = {
+			tooltip = ALF_rasing_the_flag_achievement_tt
+			tag = ALF
+			has_country_flag = ALF_ending_of_a_long_march_achievement_flag
+		}
+	}
+}
+
+ALF_knock_down_the_giant_achievement = {
+	possible = {
+		custom_override_tooltip = {
+			tooltip = is_playing_ALF_tt
+			OR = {
+				tag = A47
+				tag = ALF
+			}
+		}
+		difficulty > 1
+        game_rules_allow_achievements = yes
+	}
+
+	happened = {
+		custom_override_tooltip = {
+			tooltip = ALF_knock_down_the_giant_achievement_tt
+			tag = ALF
+			has_country_flag = ALF_knock_down_the_giant_achievement_flag
+		}
+	}
+}
+
+ALF_go_home_achievement = {
+	possible = {
+		custom_override_tooltip = {
+			tooltip = is_playing_ALF_tt
+			OR = {
+				tag = A47
+				tag = ALF
+			}
+		}
+		difficulty > 1
+        game_rules_allow_achievements = yes
+	}
+
+	happened = {
+		custom_override_tooltip = {
+			tooltip = ALF_go_home_achievement_tt
+			tag = ALF
+			has_country_flag = ALF_go_home_achievement_flag
+		}
+	}
+}
+
+ALF_win_the_final_battle_achievement = {
+	possible = {
+		custom_override_tooltip = {
+			tooltip = is_playing_ALF_tt
+			OR = {
+				tag = A47
+				tag = ALF
+			}
+		}
+		difficulty > 1
+        game_rules_allow_achievements = yes
+	}
+
+	happened = {
+		custom_override_tooltip = {
+			tooltip = ALF_win_the_final_battle_achievement_tt
+			tag = ALF
+			has_country_flag = ALF_win_the_final_battle_achievement_flag
+		}
+	}
+}

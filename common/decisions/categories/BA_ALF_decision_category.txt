@@ -5,6 +5,7 @@ ALF_military_reform_decision_category = {
 	}
 	visible = {
 		original_tag = ALF
+		has_completed_focus = ALF_new_beginning
 	}
 	scripted_gui = ALF_military_reform_decision_ui_progressbar_sg
 	visible_when_empty = yes
@@ -38,9 +39,12 @@ ALF_new_capital_decision_category = {
 	visible = {
 		original_tag = ALF
 		has_completed_focus = ALF_rebuild_the_market_center
+		NOT = {
+			has_country_flag = ALF_new_capital_complete_flag
+		}
 	}
 	scripted_gui = ALF_new_capital_decision_ui_progressbar_sg
-	visible_when_empty = yes
+	#visible_when_empty = yes
 	priority = 8800
 }
 
@@ -58,4 +62,53 @@ ALF_war_plan_protect_wing_category = {
 	priority = 9999
 }
 
+##反凯撒行动
+ALF_anti_kaiser_operation_category = {
+	icon = generic_research
+	allowed = {
+		tag = ALF
+	}
+	visible = {
+		has_completed_focus = ALF_infiltrate_kaiser
+		NOT = {
+			has_global_flag = EPW_ENDS_global_flag
+		}
+	}
+	#scripted_gui = ALF_military_reform_decision_ui_progressbar_sg
+	visible_when_empty = yes
+	priority = 9999
+}
 
+##加百列行动
+ALF_Gabriel_operation_category = {
+	icon = generic_research
+	allowed = {
+		tag = ALF
+	}
+	visible = {
+		has_completed_focus = ALF_toward_the_last_object
+		NOT = {
+			has_country_flag = ALF_Gabriel_operation_success
+		}
+	}
+	#scripted_gui = ALF_military_reform_decision_ui_progressbar_sg
+	visible_when_empty = yes
+	priority = 9999
+}
+
+##乌列尔行动
+ALF_Uriel_operation_category = {
+	icon = generic_research
+	allowed = {
+		tag = ALF
+	}
+	visible = {
+		has_completed_focus = ALF_duty_calls_always
+		NOT = {
+			has_country_flag = ALF_Uriel_operation_success
+		}
+	}
+	#scripted_gui = ALF_military_reform_decision_ui_progressbar_sg
+	visible_when_empty = yes
+	priority = 9999
+}

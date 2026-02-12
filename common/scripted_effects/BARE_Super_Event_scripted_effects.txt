@@ -1,5 +1,3 @@
-
-
 #超事件2
 BARE_SuperEvent_2_fire_super_event = {
 	hidden_effect = {
@@ -15,124 +13,179 @@ BARE_SuperEvent_2_fire_super_event = {
 			max = 59
 			integer = yes
 		}
-		set_variable = { BARE_SuperEvent_2_var = BARE_SuperEvent_2_temp_var }
+		set_variable = {
+			BARE_SuperEvent_2_var = BARE_SuperEvent_2_temp_var
+		}
 	}
 }
 
-
 BARE_SuperEvent_1_effect_1 = {
 	every_country = {
-		limit = { is_ai = no }
-		set_temp_variable = { BARE_SuperEvent_1_temp_var = token:BARE_SuperEvent_1_SECOND_EDEN_TREATY }
-		set_variable = { BARE_SuperEvent_1_var = BARE_SuperEvent_1_temp_var }
-
+		limit = {
+			is_ai = no
+		}
+		set_temp_variable = {
+			BARE_SuperEvent_1_temp_var = token:BARE_SuperEvent_1_SECOND_EDEN_TREATY
+		}
+		set_variable = {
+			BARE_SuperEvent_1_var = BARE_SuperEvent_1_temp_var
+		}
 		hidden_effect = {
 			scoped_sound_effect = BARE_SuperEvent_Sound_SECOND_EDEN_TREATY
 			scoped_play_song = "BARE_SuperEvent_Sound_Block_1m"
 		}
-		
 	}
 }
 
 BARE_SuperEvent_2_effect_1 = {
 	every_country = {
-		limit = { is_ai = no }
-		set_temp_variable = { BARE_SuperEvent_2_temp_var = token:BARE_SuperEvent_2_EDEN_TREATY_NORMAL }
+		limit = {
+			is_ai = no
+		}
+		set_temp_variable = {
+			BARE_SuperEvent_2_temp_var = token:BARE_SuperEvent_2_EDEN_TREATY_NORMAL
+		}
 		BARE_SuperEvent_2_fire_super_event = yes
 	}
 }
 
 BARE_SuperEvent_2_effect_2 = {
 	every_country = {
-		limit = { is_ai = no }
-		set_temp_variable = { BARE_SuperEvent_2_temp_var = token:BARE_SuperEvent_2_EDEN_TREATY_TRINITY_HOME }
+		limit = {
+			is_ai = no
+		}
+		set_temp_variable = {
+			BARE_SuperEvent_2_temp_var = token:BARE_SuperEvent_2_EDEN_TREATY_TRINITY_HOME
+		}
 		BARE_SuperEvent_2_fire_super_event = yes
 	}
 }
 
 BARE_SuperEvent_2_effect_3 = {
 	every_country = {
-		limit = { is_ai = no }
-		set_temp_variable = { BARE_SuperEvent_2_temp_var = token:BARE_SuperEvent_2_DOUBLE_TWELVE_COUP }
+		limit = {
+			is_ai = no
+		}
+		set_temp_variable = {
+			BARE_SuperEvent_2_temp_var = token:BARE_SuperEvent_2_DOUBLE_TWELVE_COUP
+		}
 		BARE_SuperEvent_2_fire_super_event = yes
 	}
 }
 
 BARE_SuperEvent_2_effect_4 = {
 	every_country = {
-		limit = { is_ai = no }
-		set_temp_variable = { BARE_SuperEvent_2_temp_var = token:BARE_SuperEvent_2_RED_WINTER_CIVIL_WAR }
+		limit = {
+			is_ai = no
+		}
+		set_temp_variable = {
+			BARE_SuperEvent_2_temp_var = token:BARE_SuperEvent_2_RED_WINTER_CIVIL_WAR
+		}
 		BARE_SuperEvent_2_fire_super_event = yes
 	}
 }
 
 BARE_SuperEvent_2_effect_5 = {
 	every_country = {
-		limit = { is_ai = no }
-		set_temp_variable = { BARE_SuperEvent_2_temp_var = token:BARE_SuperEvent_2_CAESAR_COUP_FAILED }
+		limit = {
+			is_ai = no
+		}
+		set_temp_variable = {
+			BARE_SuperEvent_2_temp_var = token:BARE_SuperEvent_2_CAESAR_COUP_FAILED
+		}
 		BARE_SuperEvent_2_fire_super_event = yes
 	}
 }
 
 BARE_SuperEvent_2_effect_6 = {
 	every_country = {
-		limit = { is_ai = no }
-		set_temp_variable = { BARE_SuperEvent_2_temp_var = token:BARE_SuperEvent_2_MIKA_COUP_ARI }
+		limit = {
+			is_ai = no
+		}
+		set_temp_variable = {
+			BARE_SuperEvent_2_temp_var = token:BARE_SuperEvent_2_MIKA_COUP_ARI
+		}
 		BARE_SuperEvent_2_fire_super_event = yes
 		hidden_effect = {
 			scoped_sound_effect = BARE_SuperEvent_Sound_MIKA_COUP_ARI
 			scoped_play_song = "BARE_SuperEvent_Sound_Block_1m"
 		}
-		
 	}
 }
 
 BARE_SuperEvent_2_effect_7 = {
 	every_country = {
-		limit = { is_ai = no }
-		set_temp_variable = { BARE_SuperEvent_2_temp_var = token:BARE_SuperEvent_2_EDEN_TREATY_STRIKE }
+		limit = {
+			is_ai = no
+		}
+		set_temp_variable = {
+			BARE_SuperEvent_2_temp_var = token:BARE_SuperEvent_2_EDEN_TREATY_STRIKE
+		}
 		BARE_SuperEvent_2_fire_super_event = yes
 		hidden_effect = {
 			scoped_sound_effect = BARE_SuperEvent_Sound_EDEN_TREATY_STRIKE
 			scoped_play_song = "BARE_SuperEvent_Sound_Block_1m"
 		}
 	}
-		
 }
 
 BARE_SuperEvent_2_effect_8 = {
 	every_country = {
-		limit = { is_ai = no }
-		set_temp_variable = { BARE_SuperEvent_2_temp_var = token:BARE_SuperEvent_2_HELP_HOSHINO }
+		limit = {
+			is_ai = no
+		}
+		set_temp_variable = {
+			BARE_SuperEvent_2_temp_var = token:BARE_SuperEvent_2_HELP_HOSHINO
+		}
 		BARE_SuperEvent_2_fire_super_event = yes
 		hidden_effect = {
 			scoped_sound_effect = BARE_SuperEvent_Sound_HELP_HOSHINO
 			scoped_play_song = "BARE_SuperEvent_Sound_Block_1m"
 		}
-		
-		
 	}
 }
 
 BARE_SuperEvent_2_effect_9 = {
 	every_country = {
-		limit = { is_ai = no }
-		set_temp_variable = { BARE_SuperEvent_2_temp_var = token:BARE_SuperEvent_2_EDEN_TREATY_START }
+		limit = {
+			is_ai = no
+		}
+		set_temp_variable = {
+			BARE_SuperEvent_2_temp_var = token:BARE_SuperEvent_2_EDEN_TREATY_START
+		}
 		BARE_SuperEvent_2_fire_super_event = yes
 		# hidden_effect = {
 		# 	scoped_sound_effect = BARE_SuperEvent_Sound_HELP_HOSHINO
 		# 	scoped_play_song = "BARE_SuperEvent_Sound_Block_1m"
 		# }
-		
-		
 	}
 }
 
 BARE_SuperEvent_2_effect_10 = {
 	every_country = {
-		limit = { is_ai = no }
-		set_temp_variable = { BARE_SuperEvent_2_temp_var = token:BARE_SuperEvent_2_TRINITY_CRISIS }
+		limit = {
+			is_ai = no
+		}
+		set_temp_variable = {
+			BARE_SuperEvent_2_temp_var = token:BARE_SuperEvent_2_TRINITY_CRISIS
+		}
 		BARE_SuperEvent_2_fire_super_event = yes
+	}
+}
+
+BARE_SuperEvent_2_effect_11 = {
+	if = {
+		limit = {
+			is_ai = no
+		}
+		set_temp_variable = {
+			BARE_SuperEvent_2_temp_var = token:BARE_SuperEvent_2_enterprise_war
+		}
+		BARE_SuperEvent_2_fire_super_event = yes
+		hidden_effect = {
+			scoped_sound_effect = BARE_SuperEvent_Sound_enterprise_war
+			scoped_play_song = "BARE_SuperEvent_Sound_Block_2m"
+		}
 	}
 }
 
@@ -141,7 +194,6 @@ BARE_SuperEvent_2_effect_10 = {
 ### CLASSIC SUPER EVENT ###
 ###########################
 ###########################
-
 BSE_Fire_Super_Event_index_1 = {
 	set_variable = {
 		barexp_super_event_index = 1
@@ -199,12 +251,35 @@ BSE_Fire_Super_Event_index_7 = {
 	set_variable = {
 		barexp_super_event_index = 7
 	}
-	#scoped_play_song = "BSP_The_Battle_on_Ice_Short"
+	hidden_effect = {
+		scoped_sound_effect = BARE_SuperEvent_Sound_2ND_LIBERATION_WAR
+		scoped_play_song = "BARE_SuperEvent_Sound_Block_2m"
+	}
 }
 
 BSE_Fire_Super_Event_index_8 = {
 	set_variable = {
 		barexp_super_event_index = 8
+	}
+	hidden_effect = {
+		scoped_sound_effect = BARE_SuperEvent_Sound_GEH_TRI_Total_War
+		scoped_play_song = "BARE_SuperEvent_Sound_Block_2m"
+	}
+}
+
+BSE_Fire_Super_Event_index_9 = {
+	set_variable = {
+		barexp_super_event_index = 9
+	}
+	hidden_effect = {
+		scoped_sound_effect = BARE_SuperEvent_Sound_Eden_Treaty_wins_piano_motion
+		scoped_play_song = "BARE_SuperEvent_Sound_Block_2m"
+	}
+}
+
+BSE_Fire_Super_Event_index_10 = {
+	set_variable = {
+		barexp_super_event_index = 10
 	}
 	hidden_effect = {
 		scoped_sound_effect = BARE_SuperEvent_Sound_GEH_TRI_Total_War

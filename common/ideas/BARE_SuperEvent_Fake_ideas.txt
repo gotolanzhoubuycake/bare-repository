@@ -59,6 +59,10 @@ ideas = {
 		BARE_SuperEvent_2_TRINITY_CRISIS_A = {}
 		BARE_SuperEvent_2_TRINITY_CRISIS_D = {}
 		BARE_SuperEvent_2_TRINITY_CRISIS_M = {}
+		BARE_SuperEvent_2_enterprise_war = {}
+		BARE_SuperEvent_2_enterprise_war_A = {}
+		BARE_SuperEvent_2_enterprise_war_D = {}
+		BARE_SuperEvent_2_enterprise_war_M = {}
 	}
 }
 

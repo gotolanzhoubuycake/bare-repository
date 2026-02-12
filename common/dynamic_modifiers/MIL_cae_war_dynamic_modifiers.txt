@@ -1,0 +1,28 @@
+# 千年与凯撒战争相关动态修饰符
+
+# 与凯撒的战争 - 千年侧
+# 基础效果：核心领土攻防+5%，单位HP+5%，防御战争对稳定度加成+20%
+# 可通过决议追加效果：生活消费品系数、战争支持度等
+MIL_fight_against_cae = {
+    icon = "MIL_fight_against_cae"
+    enable = { always = yes }
+
+    # 基础效果
+    army_core_attack_factor = 0.05
+    army_core_defence_factor = 0.05
+    army_strength_factor = 0.05
+    defensive_war_stability_factor = 0.2
+
+    # 动态追加效果（通过变量控制，由决议修改）
+    consumer_goods_factor = global.MIL_cae_war_consumer_goods
+    war_support_factor = global.MIL_cae_war_war_support
+}
+
+# 凯撒的经济状况 相关机制
+CAE_economic_status = {
+    army_attack_factor = global.MIL_cae_war_cae_army_attack_factor
+    army_defence_factor = global.MIL_cae_war_cae_army_defence_factor
+    army_org_factor = global.MIL_cae_war_cae_army_org_factor
+    army_org_regain = global.MIL_cae_war_cae_army_org_regain
+    air_mission_efficiency = global.MIL_cae_war_cae_air_mission_efficiency
+}

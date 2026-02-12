@@ -1,0 +1,22 @@
+air_wings = {   
+
+    141 = {
+        heavy_uav_equipment_2 = {
+            owner = "FSC" 
+            amount = 100
+            
+        }
+
+       heavy_uav_equipment_2 = {
+            owner = "FSC" 
+            amount = 50
+            
+        }
+
+        small_uav_recon_equipment_2 = {
+            owner = "FSC" 
+            amount = 50
+            
+        }
+    }
+}

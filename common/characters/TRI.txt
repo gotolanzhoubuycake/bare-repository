@@ -1,23 +1,22 @@
-
-characters={
-    ###圣三一TRI 开始###
-    TRI_seia ={ #茶话会 - 百合园圣娅
-		name=TRI_seia_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_TRI_seia
-				small=GFX_portrait_TRI_seia_small
-			}	
+characters = {
+	###圣三一TRI 开始###
+	TRI_seia = {
+		#茶话会 - 百合园圣娅
+		name = TRI_seia_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_TRI_seia
+				small = GFX_portrait_TRI_seia_small
+			}
 		}
-
 		country_leader = {
 			ideology = LBM_TRI_Seia_type
 			desc = "TRI_seia_description"
-			traits = { }
+			traits = {
+			}
 			expire = "9999.1.1.1"
 			id = -1
 		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = TRI_seia_pa
@@ -40,19 +39,26 @@ characters={
 				obscure_prophet
 			}
 			#菲利乌斯派支持度+20%
-       		#随机给予预言
+			#随机给予预言
 			on_add = {
-				set_temp_variable = { association = token:TRI_parliament_association_1 }
-				set_temp_variable = { loyalty_change = 0.2 }
+				set_temp_variable = {
+					association = token:TRI_parliament_association_1
+				}
+				set_temp_variable = {
+					loyalty_change = 0.2
+				}
 				TRI_parliament_loyalty_change = yes
 				ROOT = {
 					set_country_flag = TRI_seia_prophecy
 				}
-				
 			}
 			on_remove = {
-				set_temp_variable = { association = token:TRI_parliament_association_1 }
-				set_temp_variable = { loyalty_change = -0.2 }
+				set_temp_variable = {
+					association = token:TRI_parliament_association_1
+				}
+				set_temp_variable = {
+					loyalty_change = -0.2
+				}
 				TRI_parliament_loyalty_change = yes
 				ROOT = {
 					clr_country_flag = TRI_seia_prophecy
@@ -60,9 +66,9 @@ characters={
 			}
 			cost = 50
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
-        }
+		}
 		advisor = {
 			slot = army_chief
 			idea_token = TRI_seia_ac
@@ -85,11 +91,10 @@ characters={
 				deja_vu
 			}
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
-        }
-
-        # corps_commander = {
+		}
+		# corps_commander = {
 		# 	traits = {trait_cautious infantry_officer inflexible_strategist
 		# 	}
 		# 	skill = 3
@@ -98,33 +103,31 @@ characters={
 		# 	planning_skill = 4
 		# 	logistics_skill = 1
 		# }
-
 	}
-
-    TRI_nagisa = { #茶话会 - 桐藤渚
-		name=TRI_nagisa_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_TRI_nagisa
-				small=GFX_portrait_TRI_nagisa_small
-			}	
+	TRI_nagisa = {
+		#茶话会 - 桐藤渚
+		name = TRI_nagisa_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_TRI_nagisa
+				small = GFX_portrait_TRI_nagisa_small
+			}
 		}
-
-        country_leader = {
+		country_leader = {
 			ideology = PGM_TRI_Nagisa_type
 			desc = "TRI_nagisa_description"
-			traits = { TRI_nagisa_Mild_leader }
+			traits = {
+				TRI_nagisa_Mild_leader
+			}
 			expire = "9999.1.1.1"
 			id = -1
 		}
-
 		advisor = {
 			slot = army_chief
 			idea_token = TRI_nagisa_ac
 			allowed = {
 				original_tag = TRI
 			}
-			
 			available = {
 				custom_override_tooltip = {
 					tooltip = TRI_goverment_is_normal
@@ -134,8 +137,6 @@ characters={
 				}
 			}
 			visible = {
-			
-				
 			}
 			traits = {
 				art_of_artillery
@@ -152,13 +153,15 @@ characters={
 			}
 			cost = 150
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
-        field_marshal = {
-			traits = { bearer_of_artillery brilliant_strategist }
+		field_marshal = {
+			traits = {
+				bearer_of_artillery
+				brilliant_strategist
+			}
 			visible = {
-
 			}
 			skill = 3
 			attack_skill = 3
@@ -166,43 +169,42 @@ characters={
 			planning_skill = 3
 			logistics_skill = 2
 		}
-
 	}
-	TRI_missing_nagisa = { #茶话会 - 桐藤渚(失踪)
-		name=TRI_nagisa_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_TRI_missing_nagisa
-				small=GFX_portrait_TRI_nagisa_small
-			}	
+	TRI_missing_nagisa = {
+		#茶话会 - 桐藤渚(失踪)
+		name = TRI_nagisa_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_TRI_missing_nagisa
+				small = GFX_portrait_TRI_nagisa_small
+			}
 		}
-
-        country_leader = {
+		country_leader = {
 			ideology = PGM_TRI_Nagisa_type
-			traits = { missing_leader }
+			traits = {
+				missing_leader
+			}
 			expire = "9999.1.1.1"
 			id = -1
 		}
-
 	}
-
-    TRI_mika ={ #茶话会 - 圣园未花
-		name=TRI_mika_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_TRI_mika
-				small=GFX_portrait_TRI_mika_small
-			}	
+	TRI_mika = {
+		#茶话会 - 圣园未花
+		name = TRI_mika_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_TRI_mika
+				small = GFX_portrait_TRI_mika_small
+			}
 		}
-
 		country_leader = {
 			ideology = ELM_TRI_Mika_type
 			desc = "TRI_mika_description"
-			traits = { }
+			traits = {
+			}
 			expire = "9999.1.1.1"
 			id = -1
 		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = TRI_mika_pa
@@ -218,9 +220,10 @@ characters={
 				}
 			}
 			visible = {
-
 				hidden_trigger = {
-					NOT = { has_country_flag = TRI_mika_arrested }
+					NOT = {
+						has_country_flag = TRI_mika_arrested
+					}
 				}
 			}
 			traits = {
@@ -228,21 +231,28 @@ characters={
 			}
 			#帕特尔派支持度+20%
 			on_add = {
-				set_temp_variable = { association = token:TRI_parliament_association_0 }
-				set_temp_variable = { loyalty_change = 0.2 }
+				set_temp_variable = {
+					association = token:TRI_parliament_association_0
+				}
+				set_temp_variable = {
+					loyalty_change = 0.2
+				}
 				TRI_parliament_loyalty_change = yes
 			}
 			on_remove = {
-				set_temp_variable = { association = token:TRI_parliament_association_0 }
-				set_temp_variable = { loyalty_change = -0.2 }
+				set_temp_variable = {
+					association = token:TRI_parliament_association_0
+				}
+				set_temp_variable = {
+					loyalty_change = -0.2
+				}
 				TRI_parliament_loyalty_change = yes
 			}
 			cost = 150
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
-        }
-
+		}
 		advisor = {
 			slot = army_chief
 			idea_token = TRI_mika_ac
@@ -259,7 +269,9 @@ characters={
 			}
 			visible = {
 				hidden_trigger = {
-					NOT = { has_country_flag = TRI_mika_arrested }
+					NOT = {
+						has_country_flag = TRI_mika_arrested
+					}
 				}
 			}
 			traits = {
@@ -287,17 +299,20 @@ characters={
 			}
 			cost = 150
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
-        }
-
-        field_marshal = {
-			traits = { trait_reckless war_hero fortress_buster infantry_officer }
+		}
+		field_marshal = {
+			traits = {
+				trait_reckless
+				war_hero
+				fortress_buster
+				infantry_officer
+			}
 			visible = {
-				NOT = { has_country_flag = TRI_mika_arrested }
-				
-				
-				
+				NOT = {
+					has_country_flag = TRI_mika_arrested
+				}
 			}
 			skill = 3
 			attack_skill = 4
@@ -305,18 +320,15 @@ characters={
 			planning_skill = 1
 			logistics_skill = 2
 		}
-
 	}
-
-    TRI_shimiko ={ 
-		name=TRI_shimiko_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_TRI_shimiko
-				small=GFX_portrait_TRI_shimiko_small
-			}	
+	TRI_shimiko = {
+		name = TRI_shimiko_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_TRI_shimiko
+				small = GFX_portrait_TRI_shimiko_small
+			}
 		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = TRI_shimiko_pa
@@ -331,7 +343,9 @@ characters={
 					}
 				}
 				if = {
-					limit = { has_country_flag = TRI_paranoia_system_active }
+					limit = {
+						has_country_flag = TRI_paranoia_system_active
+					}
 					custom_override_tooltip = {
 						tooltip = TRI_character_is_free
 						TRI_shimiko = {
@@ -341,17 +355,17 @@ characters={
 						}
 					}
 				}
-			} 
+			}
 			traits = {
 				butler_of_great_library
 			}
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
-        }
-
-        corps_commander = {
-			traits = {infantry_officer
+		}
+		corps_commander = {
+			traits = {
+				infantry_officer
 			}
 			skill = 2
 			attack_skill = 1
@@ -359,18 +373,15 @@ characters={
 			planning_skill = 3
 			logistics_skill = 3
 		}
-
 	}
- 
-    TRI_ui ={ 
-		name=TRI_ui_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_TRI_ui
-				small=GFX_portrait_TRI_ui_small
-			}	
+	TRI_ui = {
+		name = TRI_ui_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_TRI_ui
+				small = GFX_portrait_TRI_ui_small
+			}
 		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = TRI_ui_pa
@@ -385,7 +396,9 @@ characters={
 					}
 				}
 				if = {
-					limit = { has_country_flag = TRI_paranoia_system_active }
+					limit = {
+						has_country_flag = TRI_paranoia_system_active
+					}
 					custom_override_tooltip = {
 						tooltip = TRI_character_is_free
 						TRI_ui = {
@@ -395,25 +408,29 @@ characters={
 						}
 					}
 				}
-			} 
+			}
 			traits = {
 				master_of_great_library
 			}
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
-        }
-        scientist = {
-            traits = {  }
-            skills = {
-                specialization_ba_tech = 4
-            }
-        }
-        corps_commander = {
-			traits = {}
+		}
+		scientist = {
+			traits = {
+			}
+			skills = {
+				specialization_ba_tech = 4
+			}
+		}
+		corps_commander = {
+			traits = {
+			}
 			visible = {
 				TRI_ui = {
-					NOT = { has_character_flag = TRI_character_arrested }
+					NOT = {
+						has_character_flag = TRI_character_arrested
+					}
 				}
 			}
 			skill = 1
@@ -422,19 +439,16 @@ characters={
 			planning_skill = 1
 			logistics_skill = 1
 		}
-
 	}
-
-    TRI_suzumi ={ 
-		name=TRI_suzumi_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_TRI_suzumi
-				small=GFX_portrait_TRI_suzumi_small
-			}	
+	TRI_suzumi = {
+		name = TRI_suzumi_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_TRI_suzumi
+				small = GFX_portrait_TRI_suzumi_small
+			}
 		}
-
-        advisor = {
+		advisor = {
 			slot = high_command
 			idea_token = TRI_suzumi_ac
 			allowed = {
@@ -448,7 +462,9 @@ characters={
 					}
 				}
 				if = {
-					limit = { has_country_flag = TRI_paranoia_system_active }
+					limit = {
+						has_country_flag = TRI_paranoia_system_active
+					}
 					custom_override_tooltip = {
 						tooltip = TRI_character_is_free
 						TRI_suzumi = {
@@ -464,10 +480,9 @@ characters={
 			}
 			cost = 150
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = TRI_suzumi_pa
@@ -482,7 +497,9 @@ characters={
 					}
 				}
 				if = {
-					limit = { has_country_flag = TRI_paranoia_system_active }
+					limit = {
+						has_country_flag = TRI_paranoia_system_active
+					}
 					custom_override_tooltip = {
 						tooltip = TRI_character_is_free
 						TRI_suzumi = {
@@ -492,30 +509,42 @@ characters={
 						}
 					}
 				}
-			} 
+			}
 			traits = {
 				white_flash_of_trinity
 			}
 			on_add = {
-				set_temp_variable = { target_parliament = token:BA_TRI_house_seat }
-				set_temp_variable = { loyalty_change = 0.05 }
+				set_temp_variable = {
+					target_parliament = token:BA_TRI_house_seat
+				}
+				set_temp_variable = {
+					loyalty_change = 0.05
+				}
 				TRI_parliament_loyalty_change_parliament = yes
 			}
 			on_remove = {
-				set_temp_variable = { target_parliament = token:BA_TRI_house_seat }
-				set_temp_variable = { loyalty_change = -0.05 }
+				set_temp_variable = {
+					target_parliament = token:BA_TRI_house_seat
+				}
+				set_temp_variable = {
+					loyalty_change = -0.05
+				}
 				TRI_parliament_loyalty_change_parliament = yes
 			}
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
-        }
-
-        corps_commander = {
-			traits = { infantry_officer trait_engineer }
+		}
+		corps_commander = {
+			traits = {
+				infantry_officer
+				trait_engineer
+			}
 			visible = {
 				TRI_suzumi = {
-					NOT = { has_character_flag = TRI_character_arrested }
+					NOT = {
+						has_character_flag = TRI_character_arrested
+					}
 				}
 			}
 			skill = 2
@@ -524,19 +553,16 @@ characters={
 			planning_skill = 1
 			logistics_skill = 2
 		}
-
 	}
-
-    TRI_reisa ={ 
-		name=TRI_reisa_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_TRI_reisa
-				small=GFX_portrait_TRI_reisa_small
-			}	
+	TRI_reisa = {
+		name = TRI_reisa_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_TRI_reisa
+				small = GFX_portrait_TRI_reisa_small
+			}
 		}
-
-        advisor = {
+		advisor = {
 			slot = political_advisor
 			idea_token = TRI_reisa_pa
 			allowed = {
@@ -550,7 +576,9 @@ characters={
 					}
 				}
 				if = {
-					limit = { has_country_flag = TRI_paranoia_system_active }
+					limit = {
+						has_country_flag = TRI_paranoia_system_active
+					}
 					custom_override_tooltip = {
 						tooltip = TRI_character_is_free
 						TRI_reisa = {
@@ -566,15 +594,19 @@ characters={
 			}
 			cost = 150
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
-
-        corps_commander = {
-			traits = { trait_engineer infantry_officer }
+		corps_commander = {
+			traits = {
+				trait_engineer
+				infantry_officer
+			}
 			visible = {
 				TRI_reisa = {
-					NOT = { has_character_flag = TRI_character_arrested }
+					NOT = {
+						has_character_flag = TRI_character_arrested
+					}
 				}
 			}
 			skill = 1
@@ -583,18 +615,15 @@ characters={
 			planning_skill = 2
 			logistics_skill = 1
 		}
-
 	}
-
-    TRI_hifumi ={ 
-		name=TRI_hifumi_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_TRI_hifumi
-				small=GFX_portrait_TRI_hifumi_small
-			}	
+	TRI_hifumi = {
+		name = TRI_hifumi_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_TRI_hifumi
+				small = GFX_portrait_TRI_hifumi_small
+			}
 		}
-
 		# advisor = {
 		# 	slot = political_advisor
 		# 	idea_token = TRI_hifumi_pa
@@ -610,13 +639,22 @@ characters={
 		# 	ai_will_do = {
 		# 		factor = 1.000
 		# 	}
-        # }
-
-        corps_commander = {
-			traits = { armor_officer politically_connected }
+		# }
+		corps_commander = {
+			traits = {
+				armor_officer
+				politically_connected
+			}
 			visible = {
-				TRI_hifumi = {
-					NOT = { has_character_flag = TRI_character_arrested }
+				if = {
+					limit = {
+						tag = TRI
+					}
+					TRI_hifumi = {
+						NOT = {
+							has_character_flag = TRI_character_arrested
+						}
+					}
 				}
 			}
 			skill = 2
@@ -625,19 +663,16 @@ characters={
 			planning_skill = 1
 			logistics_skill = 1
 		}
-
 	}
-
-    TRI_azusa ={ 
-		name=TRI_azusa_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_TRI_azusa
-				small=GFX_portrait_TRI_azusa_small
-			}	
+	TRI_azusa = {
+		name = TRI_azusa_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_TRI_azusa
+				small = GFX_portrait_TRI_azusa_small
+			}
 		}
-
-        # advisor = {
+		# advisor = {
 		# 	slot = high_command
 		# 	idea_token = TRI_azusa_pc
 		# 	allowed = {
@@ -654,12 +689,23 @@ characters={
 		# 		factor = 1.000
 		# 	}
 		# }
-
-        corps_commander = {
-			traits = { infantry_officer guerilla_fighter camouflage_expert adaptable }
+		corps_commander = {
+			traits = {
+				infantry_officer
+				guerilla_fighter
+				camouflage_expert
+				adaptable
+			}
 			visible = {
-				TRI_azusa = {
-					NOT = { has_character_flag = TRI_character_arrested }
+				if = {
+					limit = {
+						tag = TRI
+					}
+					TRI_azusa = {
+						NOT = {
+							has_character_flag = TRI_character_arrested
+						}
+					}
 				}
 			}
 			skill = 3
@@ -668,30 +714,39 @@ characters={
 			planning_skill = 2
 			logistics_skill = 3
 		}
-
 	}
-
-    TRI_hanako ={ 
-		name=TRI_hanako_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_TRI_hanako
-				small=GFX_portrait_TRI_hanako_small
-			}	
+	TRI_hanako = {
+		name = TRI_hanako_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_TRI_hanako
+				small = GFX_portrait_TRI_hanako_small
+			}
 		}
-
-        country_leader = {
+		country_leader = {
 			ideology = PGM_TRI_Nagisa_type
-			traits = { h_loved_sage }
+			traits = {
+				h_loved_sage
+			}
 			expire = "9999.1.1.1"
 			id = -1
 		}
-
-        corps_commander = {
-			traits = { infantry_officer career_officer politically_connected }
+		corps_commander = {
+			traits = {
+				infantry_officer
+				career_officer
+				politically_connected
+			}
 			visible = {
-				TRI_hanako = {
-					NOT = { has_character_flag = TRI_character_arrested }
+				if = {
+					limit = {
+						tag = TRI
+					}
+					TRI_hanako = {
+						NOT = {
+							has_character_flag = TRI_character_arrested
+						}
+					}
 				}
 			}
 			skill = 2
@@ -700,18 +755,15 @@ characters={
 			planning_skill = 4
 			logistics_skill = 2
 		}
-
 	}
-
-    TRI_koharu ={ 
-		name=TRI_koharu_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_TRI_koharu
-				small=GFX_portrait_TRI_koharu_small
-			}	
+	TRI_koharu = {
+		name = TRI_koharu_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_TRI_koharu
+				small = GFX_portrait_TRI_koharu_small
+			}
 		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = TRI_koharu_pa
@@ -733,7 +785,9 @@ characters={
 					}
 				}
 				if = {
-					limit = { has_country_flag = TRI_paranoia_system_active }
+					limit = {
+						has_country_flag = TRI_paranoia_system_active
+					}
 					custom_override_tooltip = {
 						tooltip = TRI_character_is_free
 						TRI_koharu = {
@@ -749,25 +803,42 @@ characters={
 			}
 			#正义委支持率+10%
 			on_add = {
-				set_temp_variable = { association = token:TRI_parliament_association_3 }
-				set_temp_variable = { loyalty_change = 0.1 }
+				set_temp_variable = {
+					association = token:TRI_parliament_association_3
+				}
+				set_temp_variable = {
+					loyalty_change = 0.1
+				}
 				TRI_parliament_loyalty_change = yes
 			}
 			on_remove = {
-				set_temp_variable = { association = token:TRI_parliament_association_3 }
-				set_temp_variable = { loyalty_change = -0.1 }
+				set_temp_variable = {
+					association = token:TRI_parliament_association_3
+				}
+				set_temp_variable = {
+					loyalty_change = -0.1
+				}
 				TRI_parliament_loyalty_change = yes
 			}
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
-        }
-
-        corps_commander = {
-			traits = { politically_connected infantry_officer }
+		}
+		corps_commander = {
+			traits = {
+				politically_connected
+				infantry_officer
+			}
 			visible = {
-				TRI_koharu = {
-					NOT = { has_character_flag = TRI_character_arrested }
+				if = {
+					limit = {
+						tag = TRI
+					}
+					TRI_koharu = {
+						NOT = {
+							has_character_flag = TRI_character_arrested
+						}
+					}
 				}
 			}
 			skill = 2
@@ -776,18 +847,15 @@ characters={
 			planning_skill = 1
 			logistics_skill = 2
 		}
-
 	}
-
-    TRI_mine ={ 
-		name=TRI_mine_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_TRI_mine
-				small=GFX_portrait_TRI_mine_small
-			}	
+	TRI_mine = {
+		name = TRI_mine_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_TRI_mine
+				small = GFX_portrait_TRI_mine_small
+			}
 		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = TRI_mine_pa
@@ -806,7 +874,9 @@ characters={
 					}
 				}
 				if = {
-					limit = { has_country_flag = TRI_paranoia_system_active }
+					limit = {
+						has_country_flag = TRI_paranoia_system_active
+					}
 					custom_override_tooltip = {
 						tooltip = TRI_character_is_free
 						TRI_mine = {
@@ -822,24 +892,39 @@ characters={
 			}
 			#救护骑士团支持度+15%
 			on_add = {
-				set_temp_variable = { association = token:TRI_parliament_association_5 }
-				set_temp_variable = { loyalty_change = 0.15 }
+				set_temp_variable = {
+					association = token:TRI_parliament_association_5
+				}
+				set_temp_variable = {
+					loyalty_change = 0.15
+				}
 				TRI_parliament_loyalty_change = yes
 			}
 			on_remove = {
-				set_temp_variable = { association = token:TRI_parliament_association_5 }
-				set_temp_variable = { loyalty_change = -0.15 }
+				set_temp_variable = {
+					association = token:TRI_parliament_association_5
+				}
+				set_temp_variable = {
+					loyalty_change = -0.15
+				}
 				TRI_parliament_loyalty_change = yes
 			}
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
-        }
-
-        field_marshal = {
-			traits = { armor_officer trait_cautious }
+		}
+		field_marshal = {
+			traits = {
+				armor_officer
+				trait_cautious
+			}
 			visible = {
-				has_country_flag = TRI_mine_available
+				if = {
+					limit = {
+						tag = TRI
+					}
+					has_country_flag = TRI_mine_available
+				}
 			}
 			skill = 3
 			attack_skill = 2
@@ -847,18 +932,15 @@ characters={
 			planning_skill = 4
 			logistics_skill = 1
 		}
-
 	}
-
-    TRI_hanae ={ 
-		name=TRI_hanae_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_TRI_hanae
-				small=GFX_portrait_TRI_hanae_small
-			}	
+	TRI_hanae = {
+		name = TRI_hanae_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_TRI_hanae
+				small = GFX_portrait_TRI_hanae_small
+			}
 		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = TRI_hanae_pa
@@ -873,7 +955,9 @@ characters={
 					}
 				}
 				if = {
-					limit = { has_country_flag = TRI_paranoia_system_active }
+					limit = {
+						has_country_flag = TRI_paranoia_system_active
+					}
 					custom_override_tooltip = {
 						tooltip = TRI_character_is_free
 						TRI_hanae = {
@@ -883,20 +967,28 @@ characters={
 						}
 					}
 				}
-			} 
+			}
 			traits = {
 				energetic_nurse
 			}
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
-        }
-
-        corps_commander = {
-			traits = { infantry_officer }
+		}
+		corps_commander = {
+			traits = {
+				infantry_officer
+			}
 			visible = {
-				TRI_hanae = {
-					NOT = { has_character_flag = TRI_character_arrested }
+				if = {
+					limit = {
+						tag = TRI
+					}
+					TRI_hanae = {
+						NOT = {
+							has_character_flag = TRI_character_arrested
+						}
+					}
 				}
 			}
 			skill = 2
@@ -905,18 +997,15 @@ characters={
 			planning_skill = 1
 			logistics_skill = 2
 		}
-
 	}
-
-    TRI_serina ={ 
-		name=TRI_serina_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_TRI_serina
-				small=GFX_portrait_TRI_serina_small
-			}	
+	TRI_serina = {
+		name = TRI_serina_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_TRI_serina
+				small = GFX_portrait_TRI_serina_small
+			}
 		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = TRI_serina_pa
@@ -938,7 +1027,9 @@ characters={
 					}
 				}
 				if = {
-					limit = { has_country_flag = TRI_paranoia_system_active }
+					limit = {
+						has_country_flag = TRI_paranoia_system_active
+					}
 					custom_override_tooltip = {
 						tooltip = TRI_character_is_free
 						TRI_serina = {
@@ -953,15 +1044,24 @@ characters={
 				sweet_nurse
 			}
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
-        }
-
-        corps_commander = {
-			traits = { infantry_officer camouflage_expert }
+		}
+		corps_commander = {
+			traits = {
+				infantry_officer
+				camouflage_expert
+			}
 			visible = {
-				TRI_serina = {
-					NOT = { has_character_flag = TRI_character_arrested }
+				if = {
+					limit = {
+						tag = TRI
+					}
+					TRI_serina = {
+						NOT = {
+							has_character_flag = TRI_character_arrested
+						}
+					}
 				}
 			}
 			skill = 2
@@ -970,25 +1070,22 @@ characters={
 			planning_skill = 2
 			logistics_skill = 3
 		}
-
 	}
-
-    TRI_tsurugi = { #剑先鹤城 - 正义委
-		name=TRI_tsurugi_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_TRI_tsurugi
-				small=GFX_portrait_TRI_tsurugi_small
-			}	
+	TRI_tsurugi = {
+		#剑先鹤城 - 正义委
+		name = TRI_tsurugi_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_TRI_tsurugi
+				small = GFX_portrait_TRI_tsurugi_small
+			}
 		}
-		
-        advisor = {
+		advisor = {
 			slot = high_command
 			idea_token = TRI_tsurugi_hc
 			allowed = {
 				original_tag = TRI
 			}
-			
 			available = {
 				custom_override_tooltip = {
 					tooltip = TRI_goverment_is_normal
@@ -997,7 +1094,9 @@ characters={
 					}
 				}
 				if = {
-					limit = { has_country_flag = TRI_paranoia_system_active }
+					limit = {
+						has_country_flag = TRI_paranoia_system_active
+					}
 					custom_override_tooltip = {
 						tooltip = TRI_character_is_free
 						TRI_tsurugi = {
@@ -1010,25 +1109,23 @@ characters={
 			}
 			visible = {
 				NOT = {
-					has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
+					has_character_flag = ARI_BeiBangJia					#检测角色是否有被绑架标志
 				}
-				
 			}
 			traits = {
 				screaming_death
 			}
 			cost = 150
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
-        advisor = {
+		advisor = {
 			slot = army_chief
 			idea_token = TRI_tsurugi_ac
 			allowed = {
 				original_tag = TRI
 			}
-			
 			available = {
 				custom_override_tooltip = {
 					tooltip = {
@@ -1044,7 +1141,9 @@ characters={
 					}
 				}
 				if = {
-					limit = { has_country_flag = TRI_paranoia_system_active }
+					limit = {
+						has_country_flag = TRI_paranoia_system_active
+					}
 					custom_override_tooltip = {
 						tooltip = TRI_character_is_free
 						TRI_tsurugi = {
@@ -1057,7 +1156,7 @@ characters={
 			}
 			visible = {
 				NOT = {
-					has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
+					has_character_flag = ARI_BeiBangJia					#检测角色是否有被绑架标志
 				}
 				NOT = {
 					has_completed_focus = TRI_teaparty_leading
@@ -1068,18 +1167,23 @@ characters={
 			}
 			cost = 150
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
-
-        field_marshal = {
-			traits = { trait_cautious career_officer war_hero harsh_leader }
+		field_marshal = {
+			traits = {
+				trait_cautious
+				career_officer
+				war_hero
+				harsh_leader
+			}
 			visible = {
 				NOT = {
-					has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
+					has_character_flag = ARI_BeiBangJia					#检测角色是否有被绑架标志
 				}
-				NOT = { has_character_flag = TRI_character_arrested }
-				
+				NOT = {
+					has_character_flag = TRI_character_arrested
+				}
 			}
 			skill = 3
 			attack_skill = 5
@@ -1087,20 +1191,17 @@ characters={
 			planning_skill = 1
 			logistics_skill = 2
 		}
-
 	}
-
-    TRI_hasumi = { #羽川莲见 - 正义委
-		name=TRI_hasumi_name 
+	TRI_hasumi = {
+		#羽川莲见 - 正义委
+		name = TRI_hasumi_name
 		portraits = {
 			civilian = {
 				large = GFX_portrait_TRI_hasumi
 				small = GFX_portrait_TRI_hasumi_small
-			}	
+			}
 		}
-
-        advisor = {
-			
+		advisor = {
 			slot = high_command
 			idea_token = TRI_hasumi_hc
 			allowed = {
@@ -1121,7 +1222,9 @@ characters={
 					}
 				}
 				if = {
-					limit = { has_country_flag = TRI_paranoia_system_active }
+					limit = {
+						has_country_flag = TRI_paranoia_system_active
+					}
 					custom_override_tooltip = {
 						tooltip = TRI_character_is_free
 						TRI_hasumi = {
@@ -1134,7 +1237,7 @@ characters={
 			}
 			visible = {
 				NOT = {
-					has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
+					has_character_flag = ARI_BeiBangJia					#检测角色是否有被绑架标志
 				}
 			}
 			traits = {
@@ -1142,7 +1245,7 @@ characters={
 			}
 			cost = 150
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
 		country_leader = {
@@ -1150,14 +1253,18 @@ characters={
 			expire = "9999.1.1.1"
 			id = -1
 		}
-
-        field_marshal = {
-			traits = { trait_cautious infantry_officer }
+		field_marshal = {
+			traits = {
+				trait_cautious
+				infantry_officer
+			}
 			visible = {
 				NOT = {
-					has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
+					has_character_flag = ARI_BeiBangJia					#检测角色是否有被绑架标志
 				}
-				NOT = { has_character_flag = TRI_character_arrested }
+				NOT = {
+					has_character_flag = TRI_character_arrested
+				}
 			}
 			skill = 2
 			attack_skill = 3
@@ -1165,20 +1272,17 @@ characters={
 			planning_skill = 1
 			logistics_skill = 3
 		}
-
 	}
-
-    TRI_mashiro = { #静山真白 - 正义委
+	TRI_mashiro = {
+		#静山真白 - 正义委
 		name = TRI_mashiro_name
 		portraits = {
 			civilian = {
 				large = GFX_portrait_TRI_mashiro
 				small = GFX_portrait_TRI_mashiro_small
-			}	
+			}
 		}
-
-        advisor = {
-			
+		advisor = {
 			slot = high_command
 			idea_token = TRI_mashiro_hc
 			allowed = {
@@ -1192,7 +1296,9 @@ characters={
 					}
 				}
 				if = {
-					limit = { has_country_flag = TRI_paranoia_system_active }
+					limit = {
+						has_country_flag = TRI_paranoia_system_active
+					}
 					custom_override_tooltip = {
 						tooltip = TRI_character_is_free
 						TRI_mashiro = {
@@ -1205,7 +1311,7 @@ characters={
 			}
 			visible = {
 				NOT = {
-					has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
+					has_character_flag = ARI_BeiBangJia					#检测角色是否有被绑架标志
 				}
 			}
 			traits = {
@@ -1213,17 +1319,21 @@ characters={
 			}
 			cost = 150
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
-
-        corps_commander = {
-			traits = { infantry_officer commando }
+		corps_commander = {
+			traits = {
+				infantry_officer
+				commando
+			}
 			visible = {
 				NOT = {
-					has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
+					has_character_flag = ARI_BeiBangJia					#检测角色是否有被绑架标志
 				}
-				NOT = { has_character_flag = TRI_character_arrested }
+				NOT = {
+					has_character_flag = TRI_character_arrested
+				}
 			}
 			skill = 2
 			attack_skill = 4
@@ -1231,27 +1341,26 @@ characters={
 			planning_skill = 2
 			logistics_skill = 1
 		}
-
 	}
-
-    TRI_ichika = { #仲正一花 - 正义委
+	TRI_ichika = {
+		#仲正一花 - 正义委
 		name = TRI_ichika_name
 		portraits = {
 			civilian = {
 				large = GFX_portrait_TRI_ichika
 				small = GFX_portrait_TRI_ichika_small
-			}	
+			}
 		}
-
 		####彩蛋：一花线
 		country_leader = {
 			ideology = no_ideology_type
-			traits = { TRI_Ichika_rules_trait }
+			traits = {
+				TRI_Ichika_rules_trait
+			}
 			expire = "9999.1.1.1"
 			id = -1
 		}
-
-        advisor = {
+		advisor = {
 			slot = high_command
 			idea_token = TRI_ichika_hc
 			allowed = {
@@ -1265,7 +1374,9 @@ characters={
 					}
 				}
 				if = {
-					limit = { has_country_flag = TRI_paranoia_system_active }
+					limit = {
+						has_country_flag = TRI_paranoia_system_active
+					}
 					custom_override_tooltip = {
 						tooltip = TRI_character_is_free
 						TRI_ichika = {
@@ -1278,19 +1389,18 @@ characters={
 			}
 			visible = {
 				NOT = {
-					has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
+					has_character_flag = ARI_BeiBangJia					#检测角色是否有被绑架标志
 				}
-						
 			}
 			traits = {
 				restraint_arbiter
 			}
 			cost = 150
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
-        advisor = {
+		advisor = {
 			slot = theorist
 			idea_token = TRI_ichika_th
 			allowed = {
@@ -1304,7 +1414,9 @@ characters={
 					}
 				}
 				if = {
-					limit = { has_country_flag = TRI_paranoia_system_active }
+					limit = {
+						has_country_flag = TRI_paranoia_system_active
+					}
 					custom_override_tooltip = {
 						tooltip = TRI_character_is_free
 						TRI_ichika = {
@@ -1317,7 +1429,7 @@ characters={
 			}
 			visible = {
 				NOT = {
-					has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
+					has_character_flag = ARI_BeiBangJia					#检测角色是否有被绑架标志
 				}
 			}
 			traits = {
@@ -1325,18 +1437,21 @@ characters={
 			}
 			cost = 150
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
-
-        corps_commander = {
-			traits = { infantry_officer skilled_staffer }
+		corps_commander = {
+			traits = {
+				infantry_officer
+				skilled_staffer
+			}
 			visible = {
 				NOT = {
-					has_character_flag = ARI_BeiBangJia #检测角色是否有被绑架标志
+					has_character_flag = ARI_BeiBangJia					#检测角色是否有被绑架标志
 				}
-				NOT = { has_character_flag = TRI_character_arrested }
-				
+				NOT = {
+					has_character_flag = TRI_character_arrested
+				}
 			}
 			skill = 3
 			attack_skill = 3
@@ -1344,19 +1459,17 @@ characters={
 			planning_skill = 4
 			logistics_skill = 4
 		}
-
 	}
-
-    TRI_natsu ={ #夏
-		name=TRI_natsu_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_TRI_natsu
-				small=GFX_portrait_TRI_natsu_small
-			}	
+	TRI_natsu = {
+		#夏
+		name = TRI_natsu_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_TRI_natsu
+				small = GFX_portrait_TRI_natsu_small
+			}
 		}
-
-        advisor = {
+		advisor = {
 			slot = political_advisor
 			idea_token = TRI_natsu_pa
 			allowed = {
@@ -1370,7 +1483,9 @@ characters={
 					}
 				}
 				if = {
-					limit = { has_country_flag = TRI_paranoia_system_active }
+					limit = {
+						has_country_flag = TRI_paranoia_system_active
+					}
 					custom_override_tooltip = {
 						tooltip = TRI_character_is_free
 						TRI_natsu = {
@@ -1386,10 +1501,10 @@ characters={
 			}
 			cost = 150
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
-        advisor = {
+		advisor = {
 			slot = theorist
 			idea_token = TRI_natsu_th
 			allowed = {
@@ -1403,7 +1518,9 @@ characters={
 					}
 				}
 				if = {
-					limit = { has_country_flag = TRI_paranoia_system_active }
+					limit = {
+						has_country_flag = TRI_paranoia_system_active
+					}
 					custom_override_tooltip = {
 						tooltip = TRI_character_is_free
 						TRI_natsu = {
@@ -1429,15 +1546,18 @@ characters={
 			}
 			cost = 150
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
-
-        corps_commander = {
-			traits = { infantry_officer }
+		corps_commander = {
+			traits = {
+				infantry_officer
+			}
 			visible = {
 				TRI_natsu = {
-					NOT = { has_character_flag = TRI_character_arrested }
+					NOT = {
+						has_character_flag = TRI_character_arrested
+					}
 				}
 			}
 			skill = 2
@@ -1446,18 +1566,15 @@ characters={
 			planning_skill = 4
 			logistics_skill = 2
 		}
-
 	}
-
-    TRI_airi ={ 
-		name=TRI_airi_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_TRI_airi
-				small=GFX_portrait_TRI_airi_small
-			}	
+	TRI_airi = {
+		name = TRI_airi_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_TRI_airi
+				small = GFX_portrait_TRI_airi_small
+			}
 		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = TRI_airi_pa
@@ -1472,7 +1589,9 @@ characters={
 					}
 				}
 				if = {
-					limit = { has_country_flag = TRI_paranoia_system_active }
+					limit = {
+						has_country_flag = TRI_paranoia_system_active
+					}
 					custom_override_tooltip = {
 						tooltip = TRI_character_is_free
 						TRI_airi = {
@@ -1482,20 +1601,23 @@ characters={
 						}
 					}
 				}
-			} 
+			}
 			traits = {
 				mint_icecream
 			}
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
-        }
-
-        corps_commander = {
-			traits = { infantry_officer }
+		}
+		corps_commander = {
+			traits = {
+				infantry_officer
+			}
 			visible = {
 				TRI_airi = {
-					NOT = { has_character_flag = TRI_character_arrested }
+					NOT = {
+						has_character_flag = TRI_character_arrested
+					}
 				}
 			}
 			skill = 2
@@ -1504,18 +1626,15 @@ characters={
 			planning_skill = 1
 			logistics_skill = 2
 		}
-
 	}
-
-    TRI_yoshimi ={ 
-		name=TRI_yoshimi_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_TRI_yoshimi
-				small=GFX_portrait_TRI_yoshimi_small
-			}	
+	TRI_yoshimi = {
+		name = TRI_yoshimi_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_TRI_yoshimi
+				small = GFX_portrait_TRI_yoshimi_small
+			}
 		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = TRI_yoshimi_pa
@@ -1530,7 +1649,9 @@ characters={
 					}
 				}
 				if = {
-					limit = { has_country_flag = TRI_paranoia_system_active }
+					limit = {
+						has_country_flag = TRI_paranoia_system_active
+					}
 					custom_override_tooltip = {
 						tooltip = TRI_character_is_free
 						TRI_yoshimi = {
@@ -1540,20 +1661,23 @@ characters={
 						}
 					}
 				}
-			} 
+			}
 			traits = {
 				rare_sweet_hunter
 			}
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
-        }
-
-        corps_commander = {
-			traits = { infantry_officer }
+		}
+		corps_commander = {
+			traits = {
+				infantry_officer
+			}
 			visible = {
 				TRI_yoshimi = {
-					NOT = { has_character_flag = TRI_character_arrested }
+					NOT = {
+						has_character_flag = TRI_character_arrested
+					}
 				}
 			}
 			skill = 2
@@ -1562,18 +1686,15 @@ characters={
 			planning_skill = 2
 			logistics_skill = 1
 		}
-
 	}
-
-    TRI_kazusa ={ 
-		name=TRI_kazusa_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_TRI_kazusa
-				small=GFX_portrait_TRI_kazusa_small
-			}	
+	TRI_kazusa = {
+		name = TRI_kazusa_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_TRI_kazusa
+				small = GFX_portrait_TRI_kazusa_small
+			}
 		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = TRI_kazusa_pa
@@ -1588,7 +1709,9 @@ characters={
 					}
 				}
 				if = {
-					limit = { has_country_flag = TRI_paranoia_system_active }
+					limit = {
+						has_country_flag = TRI_paranoia_system_active
+					}
 					custom_override_tooltip = {
 						tooltip = TRI_character_is_free
 						TRI_kazusa = {
@@ -1598,20 +1721,23 @@ characters={
 						}
 					}
 				}
-			} 
+			}
 			traits = {
 				legend_of_kathy_paruge
 			}
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
-        }
-
-        corps_commander = {
-			traits = { infantry_officer }
+		}
+		corps_commander = {
+			traits = {
+				infantry_officer
+			}
 			visible = {
 				TRI_kazusa = {
-					NOT = { has_character_flag = TRI_character_arrested }
+					NOT = {
+						has_character_flag = TRI_character_arrested
+					}
 				}
 			}
 			skill = 2
@@ -1620,19 +1746,16 @@ characters={
 			planning_skill = 3
 			logistics_skill = 2
 		}
-
 	}
-
-    TRI_hinata ={ 
-		name=TRI_hinata_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_TRI_hinata
-				small=GFX_portrait_TRI_hinata_small
-			}	
+	TRI_hinata = {
+		name = TRI_hinata_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_TRI_hinata
+				small = GFX_portrait_TRI_hinata_small
+			}
 		}
-
-        advisor = {
+		advisor = {
 			slot = high_command
 			idea_token = TRI_hinata_hc
 			allowed = {
@@ -1647,7 +1770,9 @@ characters={
 					}
 				}
 				if = {
-					limit = { has_country_flag = TRI_paranoia_system_active }
+					limit = {
+						has_country_flag = TRI_paranoia_system_active
+					}
 					custom_override_tooltip = {
 						tooltip = TRI_character_is_free
 						TRI_hinata = {
@@ -1663,16 +1788,24 @@ characters={
 			}
 			cost = 150
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
-
-        corps_commander = {
-			traits = { bearer_of_artillery }
+		corps_commander = {
+			traits = {
+				bearer_of_artillery
+			}
 			visible = {
-				has_country_flag = TRI_sisterhood_engage_in_politic
-				TRI_hinata = {
-					NOT = { has_character_flag = TRI_character_arrested }
+				if = {
+					limit = {
+						tag = TRI
+					}
+					has_country_flag = TRI_sisterhood_engage_in_politic
+					TRI_hinata = {
+						NOT = {
+							has_character_flag = TRI_character_arrested
+						}
+					}
 				}
 			}
 			skill = 2
@@ -1681,18 +1814,15 @@ characters={
 			planning_skill = 1
 			logistics_skill = 2
 		}
-
 	}
-
-    TRI_mari ={ 
-		name=TRI_mari_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_TRI_mari
-				small=GFX_portrait_TRI_mari_small
-			}	
+	TRI_mari = {
+		name = TRI_mari_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_TRI_mari
+				small = GFX_portrait_TRI_mari_small
+			}
 		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = TRI_mari_pa
@@ -1714,7 +1844,9 @@ characters={
 					}
 				}
 				if = {
-					limit = { has_country_flag = TRI_paranoia_system_active }
+					limit = {
+						has_country_flag = TRI_paranoia_system_active
+					}
 					custom_override_tooltip = {
 						tooltip = TRI_character_is_free
 						TRI_mari = {
@@ -1730,27 +1862,44 @@ characters={
 			}
 			#修女会支持度+5%，所有社团支持度+5%
 			on_add = {
-				set_temp_variable = { association = token:TRI_parliament_association_4 }
-				set_temp_variable = { loyalty_change = 0.05 }
+				set_temp_variable = {
+					association = token:TRI_parliament_association_4
+				}
+				set_temp_variable = {
+					loyalty_change = 0.05
+				}
 				TRI_parliament_loyalty_change = yes
 				TRI_parliament_all_loyalty_change = yes
 			}
 			on_remove = {
-				set_temp_variable = { association = token:TRI_parliament_association_4 }
-				set_temp_variable = { loyalty_change = -0.05 }
+				set_temp_variable = {
+					association = token:TRI_parliament_association_4
+				}
+				set_temp_variable = {
+					loyalty_change = -0.05
+				}
 				TRI_parliament_loyalty_change = yes
 				TRI_parliament_all_loyalty_change = yes
 			}
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
-        }
-
-        corps_commander = {
-			traits = { infantry_officer skilled_staffer }
+		}
+		corps_commander = {
+			traits = {
+				infantry_officer
+				skilled_staffer
+			}
 			visible = {
-				TRI_mari = {
-					NOT = { has_character_flag = TRI_character_arrested }
+				if = {
+					limit = {
+						tag = TRI
+					}
+					TRI_mari = {
+						NOT = {
+							has_character_flag = TRI_character_arrested
+						}
+					}
 				}
 			}
 			skill = 2
@@ -1759,19 +1908,17 @@ characters={
 			planning_skill = 2
 			logistics_skill = 3
 		}
-
 	}
-
-    TRI_sakurako ={ #樱子
-		name=TRI_sakurako_name 
-		portraits={
-			civilian={
-				large=GFX_portrait_TRI_sakurako
-				small=GFX_portrait_TRI_sakurako_small
-			}	
+	TRI_sakurako = {
+		#樱子
+		name = TRI_sakurako_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_TRI_sakurako
+				small = GFX_portrait_TRI_sakurako_small
+			}
 		}
-
-        advisor = {
+		advisor = {
 			slot = army_chief
 			idea_token = TRI_sakurako_ac
 			allowed = {
@@ -1786,7 +1933,9 @@ characters={
 					}
 				}
 				if = {
-					limit = { has_country_flag = TRI_paranoia_system_active }
+					limit = {
+						has_country_flag = TRI_paranoia_system_active
+					}
 					custom_override_tooltip = {
 						tooltip = TRI_character_is_free
 						TRI_sakurako = {
@@ -1802,11 +1951,10 @@ characters={
 			}
 			cost = 150
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
-
-        advisor = {
+		advisor = {
 			slot = high_command
 			idea_token = TRI_sakurako_hc
 			allowed = {
@@ -1821,7 +1969,9 @@ characters={
 					}
 				}
 				if = {
-					limit = { has_country_flag = TRI_paranoia_system_active }
+					limit = {
+						has_country_flag = TRI_paranoia_system_active
+					}
 					custom_override_tooltip = {
 						tooltip = TRI_character_is_free
 						TRI_sakurako = {
@@ -1867,7 +2017,7 @@ characters={
 			}
 			cost = 150
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
 		}
 		advisor = {
@@ -1885,7 +2035,9 @@ characters={
 					}
 				}
 				if = {
-					limit = { has_country_flag = TRI_paranoia_system_active }
+					limit = {
+						has_country_flag = TRI_paranoia_system_active
+					}
 					custom_override_tooltip = {
 						tooltip = TRI_character_is_free
 						TRI_sakurako = {
@@ -1895,33 +2047,49 @@ characters={
 						}
 					}
 				}
-			} 
+			}
 			traits = {
 				devout_secret_keeper
 			}
 			#修女会支持度+20%
 			on_add = {
-				set_temp_variable = { association = token:TRI_parliament_association_4 }
-				set_temp_variable = { loyalty_change = 0.2 }
+				set_temp_variable = {
+					association = token:TRI_parliament_association_4
+				}
+				set_temp_variable = {
+					loyalty_change = 0.2
+				}
 				TRI_parliament_loyalty_change = yes
 			}
 			on_remove = {
-				set_temp_variable = { association = token:TRI_parliament_association_4 }
-				set_temp_variable = { loyalty_change = -0.2 }
+				set_temp_variable = {
+					association = token:TRI_parliament_association_4
+				}
+				set_temp_variable = {
+					loyalty_change = -0.2
+				}
 				TRI_parliament_loyalty_change = yes
 			}
 			ai_will_do = {
-				factor = 1.000
+				factor = 1
 			}
-        }
-
-        field_marshal = {
-			traits = {infantry_officer politically_connected
+		}
+		field_marshal = {
+			traits = {
+				infantry_officer
+				politically_connected
 			}
 			visible = {
-				has_country_flag = TRI_sisterhood_engage_in_politic
-				TRI_sakurako = {
-					NOT = { has_character_flag = TRI_character_arrested }
+				if = {
+					limit = {
+						tag = TRI
+					}
+					has_country_flag = TRI_sisterhood_engage_in_politic
+					TRI_sakurako = {
+						NOT = {
+							has_character_flag = TRI_character_arrested
+						}
+					}
 				}
 			}
 			skill = 3
@@ -1930,26 +2098,23 @@ characters={
 			planning_skill = 5
 			logistics_skill = 4
 		}
-
 	}
 	TRI_commission_of_air_ground = {
-		name=TRI_commission_of_air_ground_name 
-		portraits={
-			civilian={
-				small=GFX_portrait_TRI_commission_of_air_ground_small
-			}	
+		name = TRI_commission_of_air_ground_name
+		portraits = {
+			civilian = {
+				small = GFX_portrait_TRI_commission_of_air_ground_small
+			}
 		}
 	}
 	TRI_ui2 = {
-        portraits = {
-            army = {
-			    large=GFX_portrait_TRI_ui
-			    small=GFX_portrait_TRI_ui_small
-            }
-        }
-    }
-
-
+		portraits = {
+			army = {
+				large = GFX_portrait_TRI_ui
+				small = GFX_portrait_TRI_ui_small
+			}
+		}
+	}
 	TRI_air_force_idea_a = {
 		name = TRI_air_force_idea_a_name
 		portraits = {
@@ -1957,7 +2122,6 @@ characters={
 				small = GFX_idea_TRI_temp_idea
 			}
 		}
-
 		advisor = {
 			slot = air_chief
 			idea_token = TRI_air_force_idea_a

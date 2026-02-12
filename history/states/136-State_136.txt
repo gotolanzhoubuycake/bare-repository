@@ -7,6 +7,7 @@ state={
 	resources = {
 		resources_rm = 10
 		resources_mm = 8
+		resources_el = 72
 	}
 	history={
 		owner = ARI

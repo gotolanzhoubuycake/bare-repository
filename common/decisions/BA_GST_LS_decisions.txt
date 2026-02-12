@@ -1189,6 +1189,9 @@ GST_LS_XC_DEBUFF_category = {
 				has_dynamic_modifier = {
 					modifier = Eden_treaty_War_dead_battle_GEH
 				}
+				check_variable = {
+					Eden_treaty_War_dead_battle_land_reinforce_rate < 0
+				}
 			}
 		}
 		fire_only_once = yes

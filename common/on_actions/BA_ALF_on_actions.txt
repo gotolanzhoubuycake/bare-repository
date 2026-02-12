@@ -1,0 +1,46 @@
+on_actions = {
+	on_declare_war = {
+		effect = {
+			##阿里乌斯解放战争
+			##夫人的宣战效果放在任务里##
+			if = {
+				limit = {
+					tag = ALF
+					FROM = {
+						tag = ARI
+					}
+					ALF = {
+						has_wargoal_against = {
+							target = ARI
+							type = ALF_2nd_civilwar_goal
+						}
+					}
+				}
+				ALF = {
+					country_event = {
+						id = ALF.34
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					tag = ALF
+					FROM = {
+						tag = TRA
+					}
+					ALF = {
+						has_wargoal_against = {
+							target = TRA
+							type = ALF_revenge_target_wargoal
+						}
+					}
+				}
+				ALF = {
+					country_event = {
+						id = ALF.63
+					}
+				}
+			}
+		}
+	}
+}

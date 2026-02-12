@@ -17,4 +17,9 @@
  BPW_ARI_wins_GEH_in_Total_War_FLAVOR: "人世之恶，即便地狱之炎也无法比拟…"
  BPW_ARI_wins_TRI_in_Total_War_FLAVOR: "…主啊、主啊，祢为何离弃于我？！"
  ###
+
+ ###
+ BPW_EDEN_IRON_PACT_WAR_DESC: "这场§Y声势浩大的光复之战§!，以§C[winning_country.GetFlag]伊甸条约§!彻底击溃了§R[losing_country.GetFlag]钢铁协定§!作为其§G写入历史的终局§!。"
+ BPW_EDEN_IRON_PACT_WAR_FLAVOR: "穿过血与火的考验，唯有义人的壮举立于人间。"
+
  BARE_PEACE_POPUP_CLOSE: "尘埃落定…"

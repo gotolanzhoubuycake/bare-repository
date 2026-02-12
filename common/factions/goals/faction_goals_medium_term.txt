@@ -1,0 +1,289 @@
+#category = short_term medium_term or long_term
+# ROOT is faction leader, FROM is faction member who opens UI and views goals, completed/cancel/complete_effect do not have FROM scopes
+
+
+######################################################################
+
+###  ##   ##  ### ###  ##  #  #      ## ###  ###  ##  ### ### ###  ##  
+#   #  # #  #  #   #  #  # ## #     #   #  # #   #  #  #  #    #  #  # 
+##  #### #     #   #  #  # # ##      #  ###  ##  #     #  ##   #  #    
+#   #  # #  #  #   #  #  # #  #       # #    #   #  #  #  #    #  #  # 
+#   #  #  ##   #  ###  ##  #  #     ##  #    ###  ##  ### #   ###  ##  
+
+######################################################################
+
+
+
+
+
+
+
+
+faction_goal_a_large_faction = {
+	name = a_large_faction_goal_name
+	description = a_large_faction_goal_desc
+	category = medium_term
+	group = FOCUS_FILTER_POLITICAL_CHARACTER
+	visible = {
+		num_faction_members > 4
+	}
+	completed = {
+		num_faction_members > 9
+	}
+	complete_effect = {
+		add_faction_power_projection = 200
+		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = THE_FACTION_LEADER
+		add_faction_initiative = 1
+	}
+	ai_will_do = {
+		base = 1
+	}
+}
+
+
+
+
+faction_goal_industrial_expansion = {
+	name = industrial_expansion_goal_name
+	description = industrial_expansion_goal_desc
+	category = medium_term
+	group = FOCUS_FILTER_INDUSTRY
+	visible = {
+		count_in_collection = {
+			collection = {
+				input = game:scope
+				operators = { faction_members }
+				name = FACTION_NAME
+			}
+			buildings = { industrial_complex }
+			size > 49
+		}
+	}
+	completed = {
+		count_in_collection = {
+			collection = {
+				input = game:scope
+				operators = { faction_members }
+				name = FACTION_NAME
+			}
+			buildings = { industrial_complex }
+			size > 149
+		}
+	}
+	complete_effect = {
+		add_faction_power_projection = 200
+		custom_effect_tooltip = generic_skip_one_line_tt
+		every_faction_member = {
+			tooltip = AT_LEAST_50_CIVS
+			visible_when_empty = yes 
+			limit = {
+				num_of_civilian_factories > 49
+			}
+			add_tech_bonus = {
+				name = industrial_expansion_tech_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+		}
+	}
+	ai_will_do = {
+		base = 1
+		modifier = {
+			add = 1 # If already big it's easy to grow
+			is_major = yes
+		}
+		modifier = {
+			add = 1 # If already big it's easy to grow
+			is_major = yes
+		}
+		modifier = {
+			add = 1 # Prioritize more earlier on - more pay-off
+			date < 1938.1.1
+		}
+	}
+}
+
+
+faction_goal_industrial_research = {
+	name = industrial_research_goal_name
+	description = industrial_research_goal_desc
+	category = medium_term
+	group = FOCUS_FILTER_RESEARCH
+	visible = {
+		any_allied_country = {
+			NOT = { has_tech = construction4 }
+		}
+	}
+	completed = {
+		ROOT = {
+			has_tech = construction4
+		}
+		all_allied_country = {
+			has_tech = construction4
+		}
+
+		collection_size = {
+				input = {
+					input = game:scope
+					operators =  { 
+						faction_members 
+					}
+				}
+				value > 4
+			}
+	}
+	complete_effect = {
+		add_faction_power_projection = 200
+		custom_effect_tooltip = generic_skip_one_line_tt
+		every_faction_member = {
+			tooltip = INFLUENCE_ABOVE_30_PERCENT
+			visible_when_empty = yes 
+			limit = {
+				faction_influence_ratio > 0.3
+			}
+			add_faction_initiative = 1
+		}
+	}
+	ai_will_do = {
+		base = 1
+		modifier = {
+			add = 1 # Prio for smaller factions (Easier to get everyone up then )
+			collection_size = {
+				input = {
+					input = game:scope
+					operators =  { 
+						faction_members 
+					}
+				}
+				value < 5
+			}
+		}
+		modifier = {
+			add = 1 # Prioritize during build up, but not too early
+			date > 1938.1.1
+			date < 1941.1.1
+		}
+	}
+}
+
+faction_goal_a_military_base = {
+	name = a_military_base_goal_name
+	description = a_military_base_goal_desc
+	category = medium_term
+	group = FOCUS_FILTER_INDUSTRY
+	visible = {
+		count_in_collection = {
+			collection = {
+				input = game:scope
+				operators = { faction_members }
+				name = FACTION_NAME
+			}
+			buildings = { arms_factory }
+			size > 49
+		}
+	}
+	completed = {
+		count_in_collection = {
+			collection = {
+				input = game:scope
+				operators = { faction_members }
+				name = FACTION_NAME
+			}
+			buildings = { arms_factory }
+			size > 149
+		}
+	}
+	complete_effect = {
+		add_faction_power_projection = 200
+		custom_effect_tooltip = generic_skip_one_line_tt
+		every_faction_member = {
+			tooltip = AT_LEAST_50_MILS
+			visible_when_empty = yes 
+			limit = {
+				num_of_military_factories > 49
+			}
+			add_tech_bonus = {
+				name = a_military_base_tech_bonus
+				bonus = 0.5
+				uses = 2
+				category = excavation_tech
+			}
+		}
+	}
+	ai_will_do = {
+		base = 0
+		modifier = {
+			add = 1
+			date > 1938.1.1
+		}
+		modifier = {
+			add = 1
+			is_major = yes
+		}
+	}
+}
+
+### War Waging
+
+faction_goal_aggressive_defense = {
+	name = aggressive_defense_goal_name
+	description = aggressive_defense_goal_desc
+	group = FOCUS_FILTER_WAR_SUPPORT
+	category = medium_term
+	visible = {
+		FROM = { has_defensive_war = yes }
+	}
+	completed = {
+		any_allied_country = {
+			has_defensive_war = yes
+		}
+		collection_size = {
+			input = {
+				input = game:scope
+				operators = {
+					faction_members
+					limit = {
+						any_enemy_country = {
+							has_offensive_war_with = ROOT
+							casualties_inflicted_by = {
+							    opponent = PREV
+							    thousands > 250
+							}
+						}
+					}
+				}
+				name = COLLECTION_CASUALTIES_INFLICTED_BY_FACTION_MEMBERS
+			}
+			value > 0
+		}
+	}
+	complete_effect = {
+		add_faction_power_projection = 100
+		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = ALL_FACTION_MEMBERS_INFLICTED_250K_CASUALTIES
+		every_faction_member = {
+			limit = {
+				any_enemy_country = {
+					has_offensive_war_with = ROOT
+					casualties_inflicted_by = {
+					    opponent = PREV
+					    thousands > 250
+					}
+				}
+			}
+			add_faction_initiative = 1
+		}
+		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = ALL_FACTION_MEMBERS
+		every_faction_member = {
+			army_experience = 50
+		}
+	}
+	ai_will_do = {
+		base = 1
+	}
+}
+
+

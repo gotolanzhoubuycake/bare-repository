@@ -60,6 +60,8 @@ set_technology = {
 
 	#空军（无人机）
 	recon_drone = 1
+	recon_drone_MK2 = 1
+	heavy_fighting_drone_MK2 = 1
 
 	#装甲车辆（坦克）
 	light_tank_MK1 = 1
@@ -101,4 +103,18 @@ set_popularities = {
 	no_ideology = 100
 }
 
+add_equipment_to_stockpile = {
+    type = small_uav_recon_equipment_2
+    amount = 200
+    producer = FSC
+}
+
+add_equipment_to_stockpile = {
+    type = heavy_uav_equipment_2
+    amount = 400
+    producer = FSC
+}
+
 recruit_character = FSC_Sorami_Nagitsuba
+
+##

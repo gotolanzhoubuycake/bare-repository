@@ -1,0 +1,20 @@
+GEH_LOY_COSMETIC = {
+	color = rgb { 178 34 34 }
+	color_ui = rgb { 178 34 34 }
+}
+GEH_GOV_COSMETIC = {
+	color = rgb { 178 34 34 }
+	color_ui = rgb { 178 34 34 }
+}
+GEH_BAD_COSMETIC = {
+	color = rgb { 112 128 144 }
+	color_ui = rgb { 112 128 144 }
+}
+TRT_GOV_COSMETIC = {
+	color = rgb { 255 250 205 }
+	color_ui = rgb { 255 250 205 }
+}
+TRT_BAD_COSMETIC = {
+	color = rgb { 82 105 93 }
+	color_ui = rgb { 82 105 93 }
+}

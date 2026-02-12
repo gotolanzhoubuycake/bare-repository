@@ -101,6 +101,11 @@ spriteTypes = {
         textureFile = "gfx/interface/SuperEvent/SuperEvent_2/SuperEventPictures/trinity_crisis.dds"
     }
 
+    spriteType = {
+        name = "GFX_BARE_SuperEvent_2_enterprise_war"
+        textureFile = "gfx/interface/SuperEvent/SuperEvent_2/SuperEventPictures/enterprise_war.dds"
+    }
+
     #突然死亡结局
     spriteType = {
         name = "GFX_BARE_sudden_death_event_1"
@@ -169,5 +174,15 @@ spriteTypes = {
         pause_on_loop = 3
         
         allwaystransparent = yes
+    }
+
+    spriteType = {
+        name = "GFX_BAREXP_SE_img_9"
+        texturefile = "gfx/interface/SuperEvent/Classic_SuperEvent/BAREXP_SE_img_9.dds"
+    }
+
+    spriteType = {
+        name = "GFX_BAREXP_SE_img_10"
+        texturefile = "gfx/interface/SuperEvent/Classic_SuperEvent/BAREXP_SE_img_10.dds"
     }
 }

@@ -4,4 +4,4 @@
  BARE_RULE_story_settings_ALF_DEFAULT_TEXT: "£GFX_decrease_texticon §R不启用§!（默认）"
  BARE_RULE_story_settings_ALF_DEFAULT_DESC: "§Y流亡者的故事从未开始过。§!\n------------\n£GFX_trigger_yes §G可以获得成就§!"
  BARE_RULE_story_settings_ALF_SELECTED_TEXT: "£GFX_increase_texticon §G启用§!"
- BARE_RULE_story_settings_ALF_SELECTED_DESC: "§R未完成的内容！§!\n选择§Y黑市§!来开启属于§Y流亡者§!的传奇冒险。\n§4注意：这是一条非原作路线§!\n------------\n£GFX_trigger_yes §G可以获得成就§!"
+ BARE_RULE_story_settings_ALF_SELECTED_DESC: "§R未完成的内容！§!\n§Y仅限单人游玩，请勿在游玩其它势力时开启§!\n\n选择§Y黑市§!来开启属于§Y流亡者§!的传奇冒险。\n§4注意：这是一条非原作路线§!\n------------\n£GFX_trigger_yes §G可以获得成就§!"

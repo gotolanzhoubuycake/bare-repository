@@ -41,6 +41,20 @@ defined_text = {
 		}
 		localization_key = BPW_ARI_wins_TRI_in_Total_War_DESC
 	}
+
+	text = {
+		trigger = {
+			#has_global_flag = EDEN_IRON_PACT_WAR_scenario_global_flag
+			event_target:winning_country = {
+				tag = ALF
+				has_country_flag = ALF_EDEN_IRON_PACT_WAR_success
+			}
+			event_target:losing_country = {
+				tag = TRA
+			}
+		}
+		localization_key = BPW_EDEN_IRON_PACT_WAR_DESC
+	}
 	
 	text = {
 	    localization_key = BPW_DEFAULT_WAR_DESC
@@ -85,6 +99,20 @@ defined_text = {
 			}
 		}
 		localization_key = BPW_ARI_wins_TRI_in_Total_War_FLAVOR
+	}
+
+	text = {
+		trigger = {
+			#has_global_flag = EDEN_IRON_PACT_WAR_scenario_global_flag
+			event_target:winning_country = {
+				tag = ALF
+				has_country_flag = ALF_EDEN_IRON_PACT_WAR_success
+			}
+			event_target:losing_country = {
+				tag = TRA
+			}
+		}
+		localization_key = BPW_EDEN_IRON_PACT_WAR_FLAVOR
 	}
 	##默认##
 	text = {

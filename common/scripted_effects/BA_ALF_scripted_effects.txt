@@ -14,6 +14,15 @@ ALF_initialize_livability_system_effect = {
 				value = THIS.id
 			}
 		}
+		every_state = {
+			limit = {
+				is_core_of = ARI
+			}
+			add_to_array = {
+				array = global.ALF_Arius_state
+				value = THIS.id
+			}
+		}
 	}
 	##初始化战略储备所需数值##
 	ALF = {
@@ -39,7 +48,7 @@ ALF_calculate_livability_effect = {
 			}
 			##敏感数值，需要在不断验证##
 			add_to_temp_variable = {
-				ALF.Livability_state_var = -0.6
+				ALF.Livability_state_var = -0.45
 			}
 		}
 	}
@@ -186,10 +195,6 @@ ALF_use_livability_10_pts = {
 #############
 ALF_initialize_military_reform_system_effect = {
 	ALF = {
-		##为TAG增加变量
-		add_dynamic_modifier = {
-			modifier = ALF_military_reform_dynamic_modifier
-		}
 		set_variable = {
 			ALF_mrd_progressbar_var = 0
 		}
@@ -226,6 +231,7 @@ ALF_initialize_military_reform_system_effect = {
 }
 
 ALF_calc_military_reform_system_effect = {
+	custom_effect_tooltip = ALF_calc_military_reform_system_effect_tt
 	ALF = {
 		##增加改革点数
 		add_to_variable = {
@@ -235,18 +241,25 @@ ALF_calc_military_reform_system_effect = {
 		clamp_variable = {
 			var = ALF_mrd_progressbar_var
 			min = 0
-			max = 100
+			max = 1
 		}
 		if = {
 			limit = {
 				check_variable = {
-					ALF_mrd_progressbar_var = 100
+					ALF_mrd_progressbar_var = 1
 				}
 			}
 			ALF_gain_1_mrd_pts = yes
 			set_variable = {
 				ALF_mrd_progressbar_var = 0
 			}
+		}
+		##把显示变成整数帧##
+		set_variable = {
+			ALF_mrd_progressbar_show_var = ALF_mrd_progressbar_var
+		}
+		multiply_variable = {
+			ALF_mrd_progressbar_show_var = 100
 		}
 	}
 	ALF_calc_mrd_progress_situation_effect = yes
@@ -281,10 +294,27 @@ ALF_calc_mrd_progress_situation_effect = {
 	}
 }
 
+ALF_improve_military_reform_int_10 = {
+	custom_effect_tooltip = ALF_improve_military_reform_int_10_tt
+	add_to_variable = {
+		ALF_military_reform_dynamic_modifier_var = 0.1
+	}
+	force_update_dynamic_modifier = yes
+}
+
 ALF_gain_1_mrd_pts = {
 	ALF = {
 		add_to_variable = {
 			ALF_mrd_pts = 1
+		}
+	}
+}
+
+ALF_use_1_mrd_pts = {
+	custom_effect_tooltip = ALF_use_1_mrd_pts_tt
+	ALF = {
+		add_to_variable = {
+			ALF_mrd_pts = -1
 		}
 	}
 }
@@ -299,6 +329,1095 @@ ALF_capital_progressbargain_5_effect = {
 			var = ALF_capital_progressbar_var
 			min = 0
 			max = 100
+		}
+	}
+}
+
+##统计力量
+ALF_EPW_calculate_power_score = {
+	hidden_effect = {
+		set_variable = {
+			EPW_power_score_from_army = deployed_army_manpower_k
+		}
+		set_variable = {
+			EPW_power_score_from_air = deployed_airforce_manpower_k
+		}
+		every_subject_country = {
+			add_to_variable = {
+				PREV.EPW_power_score_from_army = deployed_army_manpower_k
+			}
+			add_to_variable = {
+				PREV.EPW_power_score_from_air = deployed_airforce_manpower_k
+			}
+		}
+		multiply_variable = {
+			EPW_power_score_from_army = 3
+		}
+		multiply_variable = {
+			EPW_power_score_from_air = 2
+		}
+		set_variable = {
+			EPW_power_score_from_factories = num_of_military_factories
+		}
+		multiply_variable = {
+			EPW_power_score_from_factories = 2
+		}
+		add_to_variable = {
+			EPW_power_score_from_factories = num_of_civilian_factories
+		}
+		set_variable = {
+			EPW_power_score_from_technologies = num_researched_technologies
+		}
+		multiply_variable = {
+			num_researched_technologies = 2
+		}
+		set_variable = {
+			EPW_power_score = EPW_power_score_from_army
+		}
+		add_to_variable = {
+			EPW_power_score = EPW_power_score_from_air
+		}
+		add_to_variable = {
+			EPW_power_score = EPW_power_score_from_factories
+		}
+		add_to_variable = {
+			EPW_power_score = EPW_power_score_from_technologies
+		}
+	}
+}
+
+ALF_UOP_calculate_power_score = {
+	hidden_effect = {
+		set_variable = {
+			UOP_power_score_from_army = deployed_army_manpower_k
+		}
+		set_variable = {
+			UOP_power_score_from_air = deployed_airforce_manpower_k
+		}
+		every_allied_country = {
+			add_to_variable = {
+				PREV.UOP_power_score_from_army = deployed_army_manpower_k
+			}
+			add_to_variable = {
+				PREV.UOP_power_score_from_air = deployed_airforce_manpower_k
+			}
+		}
+		multiply_variable = {
+			UOP_power_score_from_army = 3
+		}
+		multiply_variable = {
+			UOP_power_score_from_air = 2
+		}
+		set_variable = {
+			UOP_power_score_from_factories = num_of_military_factories
+		}
+		multiply_variable = {
+			UOP_power_score_from_factories = 2
+		}
+		add_to_variable = {
+			UOP_power_score_from_factories = num_of_civilian_factories
+		}
+		set_variable = {
+			UOP_power_score_from_technologies = num_researched_technologies
+		}
+		multiply_variable = {
+			num_researched_technologies = 2
+		}
+		set_variable = {
+			UOP_power_score = UOP_power_score_from_army
+		}
+		add_to_variable = {
+			UOP_power_score = UOP_power_score_from_air
+		}
+		add_to_variable = {
+			UOP_power_score = UOP_power_score_from_factories
+		}
+		add_to_variable = {
+			UOP_power_score = UOP_power_score_from_technologies
+		}
+	}
+}
+
+ALF_reduce_technology_left_behind_effect = {
+	if = {
+		limit = {
+			has_idea = ALF_technology_left_behind
+		}
+		swap_ideas = {
+			remove_idea = ALF_technology_left_behind
+			add_idea = ALF_technology_left_behind_1
+		}
+		set_country_flag = ALF_technology_left_behind_removed_flag
+	}
+	else_if = {
+		limit = {
+			has_idea = ALF_technology_left_behind_1
+		}
+		remove_ideas = ALF_technology_left_behind_1
+		set_country_flag = ALF_technology_left_behind_1_removed_flag
+	}
+	else = {
+	}
+}
+
+###伊甸失败导致圣三一政变####
+ALF_failure_impact_of_eden_treaty_TRI_stage_0 = {
+	##设置非军事区
+	115 = {
+		set_demilitarized_zone = yes
+	}
+	368 = {
+		set_demilitarized_zone = yes
+	}
+	125 = {
+		set_demilitarized_zone = yes
+	}
+	687 = {
+		set_demilitarized_zone = yes
+	}
+	128 = {
+		set_demilitarized_zone = yes
+	}
+	129 = {
+		set_demilitarized_zone = yes
+	}
+	685 = {
+		set_demilitarized_zone = yes
+	}
+	123 = {
+		set_demilitarized_zone = yes
+	}
+	689 = {
+		set_demilitarized_zone = yes
+	}
+	##触发下一阶段
+	country_event = {
+		id = ALF.47
+		days = 15
+	}
+}
+
+ALF_failure_impact_of_eden_treaty_TRI_stage_1 = {
+	##炸强硬派
+	create_dynamic_country = {
+		original_tag = TRI
+		set_country_flag = bad_TRI_flag
+		set_cosmetic_tag = TRT_BAD_COSMETIC
+		set_politics = {
+			ruling_party = Authoritarian_ideology
+			elections_allowed = no
+		}
+		set_political_party = {
+			ideology = Authoritarian_ideology
+			popularity = 100
+		}
+		##分配地块##
+		transfer_state = 118
+		##触发下一阶段
+		country_event = {
+			id = ALF.48
+			days = 5
+		}
+	}
+	create_dynamic_country = {
+		original_tag = TRI
+		copy_tag = TRI
+		set_country_flag = resistant_TRI_flag
+		set_politics = {
+			ruling_party = Progressivism_ideology
+			elections_allowed = no
+		}
+		set_political_party = {
+			ideology = Progressivism_ideology
+			popularity = 100
+		}
+		set_cosmetic_tag = TRT_GOV_COSMETIC
+		transfer_state = 140
+		transfer_state = 683
+		transfer_state = 529
+	}
+	TRI = {
+		transfer_units_fraction = {
+			target = TRT
+			size = 0.1
+			keep_unit_leaders_trigger = {
+				always = yes
+			}
+		}
+		##分配角色##
+	}
+	TRT = {
+		TRT_redirect_character = yes
+		BARE_RULE_story_settings_ALF_SELECTED_manpower_initialize_effect = yes
+	}
+	TRA = {
+		add_ideas = ALF_TRA_BUFF
+		add_command_power = 100
+		annex_country = {
+			target = TRI
+			transfer_troops = yes
+		}
+		set_autonomy = {
+			target = A01
+			autonomous_state = autonomy_bare_trusteeship_area
+			end_wars = yes
+			end_civil_wars = yes
+		}
+		set_autonomy = {
+			target = A02
+			autonomous_state = autonomy_bare_trusteeship_area
+			end_wars = yes
+			end_civil_wars = yes
+		}
+		set_autonomy = {
+			target = A04
+			autonomous_state = autonomy_bare_trusteeship_area
+			end_wars = yes
+			end_civil_wars = yes
+		}
+		set_autonomy = {
+			target = A05
+			autonomous_state = autonomy_bare_trusteeship_area
+			end_wars = yes
+			end_civil_wars = yes
+		}
+		news_event = {
+			id = ALF_news_event.5
+		}
+		BARE_RULE_story_settings_ALF_SELECTED_manpower_initialize_effect = yes
+		TRA_redirect_character = yes
+	}
+}
+
+ALF_failure_impact_of_eden_treaty_TRI_stage_2 = {
+	##爆混乱区
+	115 = {
+		transfer_state_to = TRR
+	}
+	368 = {
+		transfer_state_to = TRR
+	}
+	125 = {
+		transfer_state_to = TRR
+	}
+	687 = {
+		transfer_state_to = TRR
+	}
+	128 = {
+		transfer_state_to = TRR
+	}
+	129 = {
+		transfer_state_to = TRR
+	}
+	685 = {
+		transfer_state_to = TRR
+	}
+	123 = {
+		transfer_state_to = TRR
+	}
+	689 = {
+		transfer_state_to = TRR
+	}
+	TRR = {
+		BARE_RULE_story_settings_ALF_SELECTED_manpower_initialize_effect = yes
+	}
+	##犁庭扫穴##
+	TRA = {
+		declare_war_on = {
+			target = TRR
+			type = annex_everything
+		}
+	}
+	TRA = {
+		##触发下一阶段
+		country_event = {
+			id = ALF.49
+			days = 7
+		}
+	}
+}
+
+ALF_failure_impact_of_eden_treaty_TRI_stage_3 = {
+	##生成一个抵抗区
+	##TRT
+	TRT = {
+		add_command_power = 100
+	}
+}
+
+###伊甸失败导致格赫娜政变####
+ALF_failure_impact_of_eden_treaty_GEH_stage_0 = {
+	create_dynamic_country = {
+		original_tag = GEH
+		set_country_flag = loyality_GEH_flag
+		set_cosmetic_tag = GEH_LOY_COSMETIC
+		set_politics = {
+			ruling_party = Liberalism_ideology
+			elections_allowed = no
+		}
+		set_political_party = {
+			ideology = Liberalism_ideology
+			popularity = 100
+		}
+		transfer_state = 305
+	}
+	create_dynamic_country = {
+		original_tag = GEH
+		set_country_flag = resistants_GEH_flag
+		set_cosmetic_tag = GEH_GOV_COSMETIC
+		transfer_state = 141
+		transfer_state = 650
+	}
+	GEH = {
+		transfer_units_fraction = {
+			target = GER
+			size = 0.1
+			keep_unit_leaders_trigger = {
+				always = yes
+			}
+		}
+	}
+	GER = {
+		BARE_RULE_story_settings_ALF_SELECTED_manpower_initialize_effect = yes
+		GER_redirect_character = yes
+	}
+	GEL = {
+		annex_country = {
+			target = GEH
+			transfer_troops = yes
+		}
+		BARE_RULE_story_settings_ALF_SELECTED_manpower_initialize_effect = yes
+	}
+	GEL = {
+		start_civil_war = {
+			ideology = Authoritarian_ideology
+			size = 0.8
+			capital = 305
+			set_country_flag = bad_GEH_flag
+			set_cosmetic_tag = GEH_BAD_COSMETIC
+		}
+	}
+	GEA = {
+		add_command_power = 100
+		GEA_redirect_character = yes
+		BARE_RULE_story_settings_ALF_SELECTED_manpower_initialize_effect = yes
+		add_ideas = ALF_GEA_BUFF
+	}
+	news_event = {
+		id = ALF_news_event.6
+	}
+}
+
+ALF_failure_impact_of_eden_treaty_GEH_stage_1 = {
+	GEA = {
+		set_autonomy = {
+			target = A06
+			autonomous_state = autonomy_bare_trusteeship_area
+			end_wars = yes
+			end_civil_wars = yes
+		}
+		set_autonomy = {
+			target = A08
+			autonomous_state = autonomy_bare_trusteeship_area
+			end_wars = yes
+			end_civil_wars = yes
+		}
+		set_autonomy = {
+			target = A09
+			autonomous_state = autonomy_bare_trusteeship_area
+			end_wars = yes
+			end_civil_wars = yes
+		}
+		set_autonomy = {
+			target = A11
+			autonomous_state = autonomy_bare_trusteeship_area
+			end_wars = yes
+			end_civil_wars = yes
+		}
+	}
+	ALF = {
+		country_event = {
+			id = ALF.53
+			days = 10
+		}
+	}
+}
+
+TRT_redirect_character = {
+	every_character = {
+		limit = {
+			has_character_flag = TRI_character_arrested
+		}
+		clr_character_flag = yes
+	}
+	every_possible_country = {
+		limit = {
+			has_character = TRI_hifumi
+		}
+		random_character = {
+			limit = {
+				is_character = TRI_hifumi
+			}
+			set_nationality = TRT
+		}
+	}
+	every_possible_country = {
+		limit = {
+			has_character = TRI_azusa
+		}
+		random_character = {
+			limit = {
+				is_character = TRI_azusa
+			}
+			set_nationality = TRT
+		}
+	}
+	every_possible_country = {
+		limit = {
+			has_character = TRI_hanako
+		}
+		random_character = {
+			limit = {
+				is_character = TRI_hanako
+			}
+			set_nationality = TRT
+		}
+	}
+	promote_character = TRI_hanako
+	every_possible_country = {
+		limit = {
+			has_character = TRI_koharu
+		}
+		random_character = {
+			limit = {
+				is_character = TRI_koharu
+			}
+			set_nationality = TRT
+		}
+	}
+	every_possible_country = {
+		limit = {
+			has_character = TRI_mine
+		}
+		random_character = {
+			limit = {
+				is_character = TRI_mine
+			}
+			set_nationality = TRT
+		}
+	}
+	every_possible_country = {
+		limit = {
+			has_character = TRI_hanae
+		}
+		random_character = {
+			limit = {
+				is_character = TRI_hanae
+			}
+			set_nationality = TRT
+		}
+	}
+	every_possible_country = {
+		limit = {
+			has_character = TRI_serina
+		}
+		random_character = {
+			limit = {
+				is_character = TRI_serina
+			}
+			set_nationality = TRT
+		}
+	}
+	every_possible_country = {
+		limit = {
+			has_character = TRI_mari
+		}
+		random_character = {
+			limit = {
+				is_character = TRI_mari
+			}
+			set_nationality = TRT
+		}
+	}
+	every_possible_country = {
+		limit = {
+			has_character = TRI_sakurako
+		}
+		random_character = {
+			limit = {
+				is_character = TRI_sakurako
+			}
+			set_nationality = TRT
+		}
+	}
+	every_possible_country = {
+		limit = {
+			has_character = TRI_hinata
+		}
+		random_character = {
+			limit = {
+				is_character = TRI_hinata
+			}
+			set_nationality = TRT
+		}
+	}
+}
+
+TRA_redirect_character = {
+	every_character = {
+		limit = {
+			has_character_flag = TRI_character_arrested
+		}
+		clr_character_flag = yes
+	}
+	every_possible_country = {
+		limit = {
+			has_character = TRI_tsurugi
+		}
+		random_character = {
+			limit = {
+				is_character = TRI_tsurugi
+			}
+			set_nationality = TRA
+		}
+	}
+	every_possible_country = {
+		limit = {
+			has_character = TRI_hasumi
+		}
+		random_character = {
+			limit = {
+				is_character = TRI_hasumi
+			}
+			set_nationality = TRA
+		}
+	}
+	every_possible_country = {
+		limit = {
+			has_character = TRI_mashiro
+		}
+		random_character = {
+			limit = {
+				is_character = TRI_mashiro
+			}
+			set_nationality = TRA
+		}
+	}
+	every_possible_country = {
+		limit = {
+			has_character = TRI_ichika
+		}
+		random_character = {
+			limit = {
+				is_character = TRI_ichika
+			}
+			set_nationality = TRA
+		}
+	}
+}
+
+GER_redirect_character = {
+	every_possible_country = {
+		limit = {
+			has_character = GEH_makoto
+		}
+		random_character = {
+			limit = {
+				is_character = GEH_makoto
+			}
+			set_nationality = GER
+		}
+	}
+	promote_character = GEH_makoto
+	every_possible_country = {
+		limit = {
+			has_character = GEH_hina
+		}
+		random_character = {
+			limit = {
+				is_character = GEH_hina
+			}
+			set_nationality = GER
+		}
+	}
+	every_possible_country = {
+		limit = {
+			has_character = GEH_ako
+		}
+		random_character = {
+			limit = {
+				is_character = GEH_ako
+			}
+			set_nationality = GER
+		}
+	}
+	every_possible_country = {
+		limit = {
+			has_character = GEH_iori
+		}
+		random_character = {
+			limit = {
+				is_character = GEH_iori
+			}
+			set_nationality = GER
+		}
+	}
+	every_possible_country = {
+		limit = {
+			has_character = GEH_chinatsu
+		}
+		random_character = {
+			limit = {
+				is_character = GEH_chinatsu
+			}
+			set_nationality = GER
+		}
+	}
+	every_possible_country = {
+		limit = {
+			has_character = GEH_iroha
+		}
+		random_character = {
+			limit = {
+				is_character = GEH_iroha
+			}
+			set_nationality = GER
+		}
+	}
+}
+
+GEA_redirect_character = {
+	every_possible_country = {
+		limit = {
+			has_character = GEH_satsuki
+		}
+		random_character = {
+			limit = {
+				is_character = GEH_satsuki
+			}
+			set_nationality = GEA
+		}
+	}
+	every_possible_country = {
+		limit = {
+			has_character = GEH_aru
+		}
+		random_character = {
+			limit = {
+				is_character = GEH_aru
+			}
+			set_nationality = GEA
+		}
+	}
+	every_possible_country = {
+		limit = {
+			has_character = GEH_mutsuki
+		}
+		random_character = {
+			limit = {
+				is_character = GEH_mutsuki
+			}
+			set_nationality = GEA
+		}
+	}
+	every_possible_country = {
+		limit = {
+			has_character = GEH_kayoko
+		}
+		random_character = {
+			limit = {
+				is_character = GEH_kayoko
+			}
+			set_nationality = GEA
+		}
+	}
+	every_possible_country = {
+		limit = {
+			has_character = GEH_haruka
+		}
+		random_character = {
+			limit = {
+				is_character = GEH_haruka
+			}
+			set_nationality = GEA
+		}
+	}
+	every_possible_country = {
+		limit = {
+			has_character = GEH_izumi
+		}
+		random_character = {
+			limit = {
+				is_character = GEH_izumi
+			}
+			set_nationality = GEA
+		}
+	}
+	every_possible_country = {
+		limit = {
+			has_character = GEH_junko
+		}
+		random_character = {
+			limit = {
+				is_character = GEH_junko
+			}
+			set_nationality = GEA
+		}
+	}
+	every_possible_country = {
+		limit = {
+			has_character = GEH_akari
+		}
+		random_character = {
+			limit = {
+				is_character = GEH_akari
+			}
+			set_nationality = GEA
+		}
+	}
+	every_possible_country = {
+		limit = {
+			has_character = GEH_haruna
+		}
+		random_character = {
+			limit = {
+				is_character = GEH_haruna
+			}
+			set_nationality = GEA
+		}
+	}
+}
+
+ALF_end_2nd_liberation_war_effect = {
+	GER = {
+		annex_country = {
+			target = GEA
+			transfer_troops = no
+		}
+		set_autonomy = {
+			target = A06
+			autonomous_state = autonomy_bare_trusteeship_area
+			end_wars = yes
+			end_civil_wars = yes
+		}
+		set_autonomy = {
+			target = A08
+			autonomous_state = autonomy_bare_trusteeship_area
+			end_wars = yes
+			end_civil_wars = yes
+		}
+		set_autonomy = {
+			target = A09
+			autonomous_state = autonomy_bare_trusteeship_area
+			end_wars = yes
+			end_civil_wars = yes
+		}
+		set_autonomy = {
+			target = A11
+			autonomous_state = autonomy_bare_trusteeship_area
+			end_wars = yes
+			end_civil_wars = yes
+		}
+	}
+	TRT = {
+		annex_country = {
+			target = TRA
+			transfer_troops = no
+		}
+		annex_country = {
+			target = TRI
+			transfer_troops = yes
+		}
+		set_autonomy = {
+			target = A01
+			autonomous_state = autonomy_bare_trusteeship_area
+			end_wars = yes
+			end_civil_wars = yes
+		}
+		set_autonomy = {
+			target = A02
+			autonomous_state = autonomy_bare_trusteeship_area
+			end_wars = yes
+			end_civil_wars = yes
+		}
+		set_autonomy = {
+			target = A04
+			autonomous_state = autonomy_bare_trusteeship_area
+			end_wars = yes
+			end_civil_wars = yes
+		}
+		set_autonomy = {
+			target = A05
+			autonomous_state = autonomy_bare_trusteeship_area
+			end_wars = yes
+			end_civil_wars = yes
+		}
+	}
+	###最后把所有人踹出战争##
+	every_possible_country = {
+		limit = {
+			OR = {
+				tag = GEA
+				tag = TRA
+				is_subject_of = GEA
+				is_subject_of = TRA
+			}
+		}
+		every_possible_country = {
+			limit = {
+				OR = {
+					tag = ALF
+					is_ally_with = ALF
+				}
+			}
+			white_peace = PREV
+		}
+	}
+}
+
+initialize_UOP_states_array_effect = {
+	hidden_effect = {
+		##旅者行动
+		684 = {
+			add_to_array = {
+				array = global.ALF_Traveller_state_array
+				value = THIS.id
+			}
+		}
+		683 = {
+			add_to_array = {
+				array = global.ALF_Traveller_state_array
+				value = THIS.id
+			}
+		}
+		140 = {
+			add_to_array = {
+				array = global.ALF_Traveller_state_array
+				value = THIS.id
+			}
+		}
+		529 = {
+			add_to_array = {
+				array = global.ALF_Traveller_state_array
+				value = THIS.id
+			}
+		}
+		120 = {
+			add_to_array = {
+				array = global.ALF_Traveller_state_array
+				value = THIS.id
+			}
+		}
+		349 = {
+			add_to_array = {
+				array = global.ALF_Traveller_state_array
+				value = THIS.id
+			}
+		}
+		348 = {
+			add_to_array = {
+				array = global.ALF_Traveller_state_array
+				value = THIS.id
+			}
+		}
+		135 = {
+			add_to_array = {
+				array = global.ALF_Traveller_state_array
+				value = THIS.id
+			}
+		}
+		373 = {
+			add_to_array = {
+				array = global.ALF_Traveller_state_array
+				value = THIS.id
+			}
+		}
+		134 = {
+			add_to_array = {
+				array = global.ALF_Traveller_state_array
+				value = THIS.id
+			}
+		}
+		130 = {
+			add_to_array = {
+				array = global.ALF_Traveller_state_array
+				value = THIS.id
+			}
+		}
+		504 = {
+			add_to_array = {
+				array = global.ALF_Traveller_state_array
+				value = THIS.id
+			}
+		}
+		133 = {
+			add_to_array = {
+				array = global.ALF_Traveller_state_array
+				value = THIS.id
+			}
+		}
+		131 = {
+			add_to_array = {
+				array = global.ALF_Traveller_state_array
+				value = THIS.id
+			}
+		}
+		649 = {
+			add_to_array = {
+				array = global.ALF_Traveller_state_array
+				value = THIS.id
+			}
+		}
+		128 = {
+			add_to_array = {
+				array = global.ALF_Traveller_state_array
+				value = THIS.id
+			}
+		}
+		129 = {
+			add_to_array = {
+				array = global.ALF_Traveller_state_array
+				value = THIS.id
+			}
+		}
+		685 = {
+			add_to_array = {
+				array = global.ALF_Traveller_state_array
+				value = THIS.id
+			}
+		}
+		127 = {
+			add_to_array = {
+				array = global.ALF_Traveller_state_array
+				value = THIS.id
+			}
+		}
+
+		693 = {
+			add_to_array = {
+				array = global.ALF_Eden_state_array
+				value = THIS.id
+			}
+		}
+		367 = {
+			add_to_array = {
+				array = global.ALF_Eden_state_array
+				value = THIS.id
+			}
+		}
+		687 = {
+			add_to_array = {
+				array = global.ALF_Eden_state_array
+				value = THIS.id
+			}
+		}
+		116 = {
+			add_to_array = {
+				array = global.ALF_Eden_state_array
+				value = THIS.id
+			}
+		}
+		125 = {
+			add_to_array = {
+				array = global.ALF_Eden_state_array
+				value = THIS.id
+			}
+		}
+		115 = {
+			add_to_array = {
+				array = global.ALF_Eden_state_array
+				value = THIS.id
+			}
+		}
+		691 = {
+			add_to_array = {
+				array = global.ALF_Eden_state_array
+				value = THIS.id
+			}
+		}
+		118 = {
+			add_to_array = {
+				array = global.ALF_Eden_state_array
+				value = THIS.id
+			}
+		}
+		114 = {
+			add_to_array = {
+				array = global.ALF_Eden_state_array
+				value = THIS.id
+			}
+		}
+		368 = {
+			add_to_array = {
+				array = global.ALF_Eden_state_array
+				value = THIS.id
+			}
+		}
+		366 = {
+			add_to_array = {
+				array = global.ALF_Eden_state_array
+				value = THIS.id
+			}
+		}
+		124 = {
+			add_to_array = {
+				array = global.ALF_Eden_state_array
+				value = THIS.id
+			}
+		}
+		692 = {
+			add_to_array = {
+				array = global.ALF_Eden_state_array
+				value = THIS.id
+			}
+		}
+		688 = {
+			add_to_array = {
+				array = global.ALF_Eden_state_array
+				value = THIS.id
+			}
+		}
+		122 = {
+			add_to_array = {
+				array = global.ALF_Eden_state_array
+				value = THIS.id
+			}
+		}
+		121 = {
+			add_to_array = {
+				array = global.ALF_Eden_state_array
+				value = THIS.id
+			}
+		}
+		689 = {
+			add_to_array = {
+				array = global.ALF_Eden_state_array
+				value = THIS.id
+			}
+		}
+		113 = {
+			add_to_array = {
+				array = global.ALF_Eden_state_array
+				value = THIS.id
+			}
+		}
+		365 = {
+			add_to_array = {
+				array = global.ALF_Eden_state_array
+				value = THIS.id
+			}
+		}
+		690 = {
+			add_to_array = {
+				array = global.ALF_Eden_state_array
+				value = THIS.id
+			}
+		}
+		123 = {
+			add_to_array = {
+				array = global.ALF_Eden_state_array
+				value = THIS.id
+			}
 		}
 	}
 }

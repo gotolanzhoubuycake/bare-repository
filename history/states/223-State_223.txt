@@ -6,11 +6,13 @@ state={
 	}
 	resources={
 		resources_ec = 10
+		resources_el = 18
 	}
 	history = {
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 2
+			arms_factory = 3
 		}
 		owner = A47
 		add_core_of=A47

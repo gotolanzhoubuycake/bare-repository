@@ -177,3 +177,5 @@
  #OCCUPATION_STATE_OCCUPATION_INFO_NO_RESISTANCE: "There is no resistance in the state"
  non_core_controller: "无核心的控制者"
  non_core_controller_desc: "这个地区被无核心的势力控制"
+ independent_rule: "独立治理"
+ princely_subjugation: "降服土邦"

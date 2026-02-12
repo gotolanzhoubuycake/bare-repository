@@ -1,0 +1,40 @@
+	spriteTypes = { 
+		
+		SpriteType = {
+			name = "GFX_endgame_closing_screen_menu_bg"
+			texturefile = "gfx/interface/endgame_closing_screen/BAREXP_endgame_closing_screen_menu.dds"			
+		}
+
+		SpriteType = {
+			name = "GFX_BAREXP_ENDGAME_CLOSING_SCREEN_COUNTRY_POSTER_SUCCESS_TRI"
+			texturefile = "gfx/interface/endgame_closing_screen/BAREXP_ENDGAME_CLOSING_SCREEN_COUNTRY_POSTER_SUCCESS_TRI.dds"			
+		}
+
+		SpriteType = {
+			name = "GFX_BAREXP_ENDGAME_CLOSING_SCREEN_COUNTRY_POSTER_SUCCESS_ALF"
+			texturefile = "gfx/interface/endgame_closing_screen/BAREXP_ENDGAME_CLOSING_SCREEN_COUNTRY_POSTER_SUCCESS_ALF.dds"			
+		}
+
+		SpriteType = {
+			name = "GFX_BAREXP_ENDGAME_CLOSING_SCREEN_COUNTRY_POSTER_BAD_SUCCESS_ALF"
+			texturefile = "gfx/interface/endgame_closing_screen/BAREXP_ENDGAME_CLOSING_SCREEN_COUNTRY_POSTER_BAD_SUCCESS_ALF.dds"			
+		}
+
+		spriteType = {
+			name = "GFX_BAREXP_ending_button_ready_button"
+			texturefile = "gfx/interface/endgame_closing_screen/BAREXP_ending_button_ready.dds"
+			animation = {
+				animationmaskfile = "gfx/interface/play_button_mask.dds"
+				animationtexturefile = "gfx/interface/unitcontrol/execute_btn_texture3.dds"
+				animationrotation = -90			# -90 clockwise 90 counterclockwise (by default)
+				animationlooping = yes			# yes or no ;)
+				animationtime = 2				# in seconds
+				animationdelay = 0.2			# in seconds
+				animationblendmode = "add"		# add, multiply, overlay
+				animationtype = "scrolling"		# scrolling, rotating, pulsing
+				animationrotationoffset = { x = 0 y = 0 }
+				animationtexturescale = { x = 1 y = 1 }
+			}
+			legacy_lazy_load = no
+		}
+	}

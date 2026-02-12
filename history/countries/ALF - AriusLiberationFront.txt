@@ -9,6 +9,8 @@ starting_train_buffer = 0.5
 set_technology = {
 	# test_unit_tech = 1
 	# test_temp_tech = 1
+	##骑兵
+	bare_cavalry_tech = 1
 	#突破
 	T1_opaz = 1
 	T2_opaz = 1
@@ -39,9 +41,11 @@ set_technology = {
 	Heavy_industry_T1 = 1
 	Infrastructure_construction_T1 = 1
 	Train_T1 = 1
+	Communications_radar_T1 = 1
 	#坦克
 	medium_tank_MK1 = 1
 	civilian_car_equipment_T1 = 1
+	Armored_Vehicles_T1 = 1
 	Infantry_fighting_vehicle_T1 = 1
 	Infantry_fighting_vehicle_ART_T1 = 1
 	Infantry_fighting_vehicle_AT_T1 = 1
@@ -63,8 +67,7 @@ set_technology = {
 	troop_training_T3 = 1
 	infantry_weapons_upgrade_suppressive_weapon_T1 = 1
 	infantry_weapons_upgrade_suppressive_weapon_T2 = 1
-	##骑兵
-	bare_cavalry_tech = 1
+	
 }
 
 set_variable = {
@@ -102,10 +105,10 @@ set_variable = {
 	ALF_defeated_political_power_factor = -0.1
 }
 set_variable = {
-	ALF_defeated_industrial_capacity_factory = -0.2
+	ALF_defeated_industrial_capacity_factory = -0.1
 }
 set_variable = {
-	ALF_production_speed_buildings_factor = -0.5
+	ALF_production_speed_buildings_factor = -0.4
 }
 
 add_dynamic_modifier = {
@@ -120,6 +123,23 @@ add_dynamic_modifier = {
 	modifier = ALF_defeated_in_civil_war
 }
 
+##阿里乌斯解放阵线效果
+set_variable = {
+	ALF_party_Egalitarianism_ideology_drift_var = 0.4
+}
+set_variable = {
+	ALF_party_Progressivism_ideology_drift_var = 0.3
+}
+set_variable = {
+	ALF_party_Authoritarian_ideology_drift_var = 0.2
+}
+set_variable = {
+	ALF_party_Liberalism_ideology_drift_var = 0.2
+}
+set_variable = {
+	ALF_party_Mysticism_ideology_drift_var = 0.1
+}
+
 add_ideas = {
 	BARE_Combat_Readiness_Start_Idea
 	BARE_Global_Unacknowledged_College_Autonomous_Region
@@ -128,6 +148,8 @@ add_ideas = {
 	##
 	ALF_partisan_army
 	ALF_technology_left_behind
+	##
+	ALF_shadow_follows
 }
 
 set_politics = {
@@ -158,4 +180,8 @@ recruit_character = ALF_Kabahara_Miyoko
 recruit_character = ALF_Nadao_Terumi
 recruit_character = ALF_Kometani_Touna
 recruit_character = ALF_Araki_Mika
+recruit_character = ALF_gehenna_perfect_team_staff
+recruit_character = ALF_gehenna_Pandemonium_staff
+recruit_character = ALF_redwinter_guards_staff
+recruit_character = ALF_redwinter_workers_staff
 ###

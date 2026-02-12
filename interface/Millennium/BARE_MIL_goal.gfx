@@ -1,0 +1,586 @@
+spriteTypes = {
+		spriteType = {
+		name = "GFX_goal_MIL_unexpected_discovery"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_unexpected_discovery.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_suspicious_club"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_suspicious_club.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_search_unkown_money"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_search_unkown_money.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Inflammatory_speech"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Inflammatory_speech.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_not_allows_collected"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_not_allows_collected.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_black_hand"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_black_hand.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_from_kaiser"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_from_kaiser.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_CC_search"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_CC_search.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_fuck_kaiser"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_fuck_kaiser.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Tense_situation"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Tense_situation.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_protect_mil"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_protect_mil.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_protect_land"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_protect_land.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_everwhever_machine"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_everwhever_machine.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_unexpected_killer"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_unexpected_killer.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_all_kown_land"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_all_kown_land.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Cooperate"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Cooperate.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_fuck_Enemy"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_fuck_Enemy.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_use_advantage"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_use_advantage.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_scared_company"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_scared_company.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_use_cannon"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_use_cannon.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_no_money_to_kaiser"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_no_money_to_kaiser.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_attack_and_conversation"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_attack_and_conversation.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_MIL_end_attack"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_MIL_end_attack.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_we_need_money"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_we_need_money.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_find_money"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_find_money.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Abnormal_money"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Abnormal_money.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Abnormal_money"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Abnormal_money.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Abnormal_money"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Abnormal_money.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Abnormal_money"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Abnormal_money.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Abnormal_money"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Abnormal_money.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Interrupted_clues"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Interrupted_clues.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_no_debt"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_no_debt.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_big_view"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_big_view.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_veritas_dream"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_veritas_dream.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Imaginary_number_plan"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Imaginary_number_plan.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_difficult_development_task"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_difficult_development_task.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_more_coffee"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_more_coffee.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_software_and_hardware"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_software_and_hardware.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_efforts_of_the_Engineering_department"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_efforts_of_the_Engineering_department.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_best_internet"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_best_internet.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_i_think_it_can"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_i_think_it_can.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_outlook_of_the_Engineering_Department"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_outlook_of_the_Engineering_Department.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_it_ugly"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_it_ugly.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_but_useful"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_but_useful.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Seminar_order"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Seminar_order.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_our_product_is_best"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_our_product_is_best.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_New_incentive_plan"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_New_incentive_plan.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_money_is_fire"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_money_is_fire.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_old_school_redevelopment"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_old_school_redevelopment.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Ruin_clearance_plan"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Ruin_clearance_plan.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Let_go_all_out"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Let_go_all_out.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Unexpected_surprise"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Unexpected_surprise.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_it_not_normal"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_it_not_normal.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_we_need_Strong_fight"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_we_need_Strong_fight.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_we_have_achieved_initial_success"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_we_have_achieved_initial_success.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_new_development_plan"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_new_development_plan.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_new_progress_possible"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_new_progress_possible.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Promote_mobile_construction_technology"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Promote_mobile_construction_technology.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_high_quantity_low_cost"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_high_quantity_low_cost.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Technology_guarantees_quality"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Technology_guarantees_quality.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Upgrade_Imaginary_numbers"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Upgrade_Imaginary_numbers.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_the_second_mil_tower"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_the_second_mil_tower.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Expand_Eridu"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Expand_Eridu.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Clear_more_debris_areas"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Clear_more_debris_areas.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Clear_more_debris_areas"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Clear_more_debris_areas.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Tower_mid-term_Project"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Tower_mid-term_Project.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_more_research_equipment"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_more_research_equipment.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_better_Experimental_environment"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_better_Experimental_environment.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_nearly_completed_tower"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_nearly_completed_tower.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_mil_wisdom"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_mil_wisdom.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_clean_not_destory"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_clean_not_destory.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_throw_old_can_get_new"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_throw_old_can_get_new.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Prepare_grand_festival"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Prepare_grand_festival.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_yuuka_unhappy"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_yuuka_unhappy.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_make_more_money"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_make_more_money.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_reduce_cost"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_reduce_cost.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_need_help"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_need_help.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_reduce_cost"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_reduce_cost.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_build_grand_festival_work"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_build_grand_festival_work.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_opposition_hidden_in_the_dark"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_opposition_hidden_in_the_dark.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_The_power_of_Technology"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_The_power_of_Technology.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_noas_Strive"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_noas_Strive.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_The_construction_work_is_in_full_swing"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_The_construction_work_is_in_full_swing.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_MIL_The_Increasingly_refined_preparations"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_MIL_The_Increasingly_refined_preparations.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_The_eve_of_the_grand_festival"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_The_eve_of_the_grand_festival.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_The_beginning_of_the_carnival"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_The_beginning_of_the_carnival.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_The_success_of_the_grand_festival"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_The_success_of_the_grand_festival.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Hidden_Dreams"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Hidden_Dreams.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Reports_that_have_not_yet_been_submitted"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Reports_that_have_not_yet_been_submitted.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_The_relationship_with_the_GSC"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_The_relationship_with_the_GSC.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_The_adult"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_The_adult.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Contact_with_schale"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Contact_with_schale.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_invite_sensei"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_invite_sensei.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_our_forever_sensei"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_our_forever_sensei.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Cant_without_GSC	"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Cant_without_GSC	.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_help_GSC"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_help_GSC.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Funds_voluntarily_surrendered"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Funds_voluntarily_surrendered.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Provide_IT_Support_to_Valkyrie"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Provide_IT_Support_to_Valkyrie.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_A_proposal_to_the_administrator"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_A_proposal_to_the_administrator.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_The_communication_with_Valkyrie"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_The_communication_with_Valkyrie.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_The_communication_with_other_colleges"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_The_communication_with_other_colleges.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_The_two_sides_of_the_Treaty_of_Eden"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_The_two_sides_of_the_Treaty_of_Eden.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_The_trade_agreement_with_Trinity"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_The_trade_agreement_with_Trinity.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_The_Swiss_rolls_that_are_the_favorite_of_the_big_shots_at_tea_parties"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_The_Swiss_rolls_that_are_the_favorite_of_the_big_shots_at_tea_parties.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Lets_have_an_afternoon_tea_together"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Lets_have_an_afternoon_tea_together.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Military_exchanges_with_Geh"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Military_exchanges_with_Geh.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_The_Hall_of_Ten_Thousand_Demons_is_still_the_Discipline_Inspection_Committee"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_The_Hall_of_Ten_Thousand_Demons_is_still_the_Discipline_Inspection_Committee.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_A_strangely_styled_cooperative_communication"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_A_strangely_styled_cooperative_communication.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_A_broader_perspective"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_A_broader_perspective.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Hot_spring_treatment_in_red_winter"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Hot_spring_treatment_in_red_winter.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Unexpected_pudding"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Unexpected_pudding.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Expansion_of_the_Polar_Routes"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Expansion_of_the_Polar_Routes.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_The_Gourmet_Banquet_of_the_Shanhai_Classic"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_The_Gourmet_Banquet_of_the_Shanhai_Classic.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_The_Important_Figures_of_Xuanlongmen"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_The_Important_Figures_of_Xuanlongmen.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Cooperation_and_winning_together_is_the_right_path"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Cooperation_and_winning_together_is_the_right_path.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_The_Transportation_Training_Course_of_Hailand"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_The_Transportation_Training_Course_of_Hailand.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_The_High_Speed_Railway_Acceleration_Experiment"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_The_High_Speed_Railway_Acceleration_Experiment.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_More_better_and_faster_railways"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_More_better_and_faster_railways.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Security_Committee_Defense_Reform_Plan"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Security_Committee_Defense_Reform_Plan.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Integrate_C_and_C"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Integrate_C_and_C.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_noa_Concept"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_noa_Concept.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_The_three_rules_of_Yuuka"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_The_three_rules_of_Yuuka.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Special_Forces_Training_Program"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Special_Forces_Training_Program.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Special_Forces_Exoskeleton_Development"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Special_Forces_Exoskeleton_Development.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Special_Forces_Hell_Training"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Special_Forces_Hell_Training.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Special_Forces_Hell_Training_Unique"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Special_Forces_Hell_Training_Unique.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Mechanical_Built_High_Wall"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Mechanical_Built_High_Wall.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Operating_System_Upgrade"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Operating_System_Upgrade.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Card_Drawing_Time"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Card_Drawing_Time.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Automaton_Operation_Training"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Automaton_Operation_Training.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Stronger_Firepower_Better_Protection"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Stronger_Firepower_Better_Protection.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Millennium_Steel_Wall"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Millennium_Steel_Wall.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Reorganize_the_Security_Department"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Reorganize_the_Security_Department.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Guard_the_Sky_of_a_Millennium"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Guard_the_Sky_of_a_Millennium.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Practical_Drone_Development"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Practical_Drone_Development.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Silent_Hunter"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Silent_Hunter.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Small_Scale_Air_Tactics"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Small_Scale_Air_Tactics.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Eagle_Strike_Exercise"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Eagle_Strike_Exercise.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Soaring_Sky_Eagle"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Soaring_Sky_Eagle.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Invisible_Defense_Line"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Invisible_Defense_Line.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Information_Security"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Information_Security.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Millennium_Student_Information_System"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Millennium_Student_Information_System.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Networked_Weapons"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Networked_Weapons.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Networked_Weapons_Necessary"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Networked_Weapons_Necessary.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Impenetrable_Defense_Line"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Impenetrable_Defense_Line.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_Millennium_Stability_Guardian"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Millennium_Stability_Guardian.dds"
+	}
+}

@@ -32,6 +32,10 @@ spriteTypes = {
 		name = "GFX_idea_ecolaws_mil_all_for_research"
 		texturefile = "gfx/interface/ideas/law_and_manpower/ecolaws_mil_all_for_research.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_ecolaws_ALF_command_economic"
+		texturefile = "gfx/interface/ideas/law_and_manpower/ecolaws_war_economy.dds"
+	}
 	#
 	spriteType = {
 		name = "GFX_idea_tralaws_closed_economy"
@@ -52,6 +56,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_tralaws_free_trade"
 		texturefile = "gfx/interface/ideas/law_and_manpower/tralaws_free_trade.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ALF_Special_trade"
+		texturefile = "gfx/interface/ideas/law_and_manpower/tralaws_normal_trade.dds"
 	}
 	#
 	spriteType = {

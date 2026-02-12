@@ -11,6 +11,17 @@ scripted_gui = {
 			not = {
 				has_country_flag = BA_show_welcome_splash
 			}
+			##进入黑市时不弹介绍##
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = BARE_RULE_story_settings_ALF
+						option = BARE_RULE_story_settings_ALF_SELECTED
+					}
+				}
+				tag = ALF
+			}
+			is_ai = no
 		}
 
 		effects = {
@@ -29,7 +40,6 @@ scripted_gui = {
 				}
 			}
 
-
 			
 			BARE_openingWelcome_type_button_3_click = {
 				set_variable = {
@@ -42,6 +52,12 @@ scripted_gui = {
 					BARE_opening_welcome_type = 3 
 				}
 			}
+
+			BARE_openingWelcome_type_button_5_click = {
+				set_variable = {
+					BARE_opening_welcome_type = 4 
+				}
+			}
 		}
 
 		triggers = {
@@ -51,6 +67,8 @@ scripted_gui = {
 					tag = ARI
 					tag = GEH
 					tag = TRI
+					tag = ALF
+					tag = MIL
 				}
                 is_ai = no
 			}
@@ -148,6 +166,29 @@ scripted_gui = {
 		
 		}
 	}
+
+	BARE_welcome_splash_text_5 = {
+		context_type = player_context
+		window_name = "BARE_welcome_splash_text_5_container"
+		parent_window_name = "BA_welcome_splash_container" 
+		dirty = BARE_opening_welcome_type
+		ai_enabled = {
+			always = no
+		}
+
+		visible = {
+			check_variable = {
+				BARE_opening_welcome_type = 4
+			}
+		}
+
+		triggers = {
+
+		
+		}
+	}
+
+	
 
 }
 

@@ -1,0 +1,36 @@
+MIL_award_debug_decisions = {
+	priority = 1001
+	allowed = {
+		original_tag = MIL
+	}
+	visible = {
+		is_debug = yes
+	}
+}
+MIL_award_imaginary_number_network_decisions = {
+	priority = 100
+	allowed = {
+		original_tag = MIL
+	}
+	visible = {
+		is_debug = yes
+	}
+}
+MIL_award_engineer_department_decisions = {
+	priority = 101
+	allowed = {
+		original_tag = MIL
+	}
+	visible = {
+		is_debug = yes
+	}
+}
+MIL_award_game_development_decisions = {
+	priority = 102
+	allowed = {
+		original_tag = MIL
+	}
+	visible = {
+		is_debug = yes
+	}
+}

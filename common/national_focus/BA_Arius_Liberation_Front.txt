@@ -1,1839 +1,4375 @@
 ####阿里乌斯解放阵线####
 ####主线国策####
 focus_tree = {
-	id = ALF_Common_Focus
-	country = {
-		factor = 0
-		modifier = {
-			add = 10
-			tag = ALF
-		}
-	}
-	continuous_focus_position = {
-		x = 50
-		y = 3000
-	}
-	default = no
-	##第一阶段
-	focus = {
-		#一场伟大的逃亡
-		id = ALF_a_great_march
-		icon = GFX_goal_unknown
-		cost = 53
-		x = 4
-		y = 1
-		available = {
-			always = no
-		}
-		completion_reward = {
-			add_political_power = 50
-		}
-	}
-	focus = {
-		#故园
-		id = ALF_memory_of_old_home
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_a_great_march
-		prerequisite = {
-			focus = ALF_a_great_march
-		}
-		cost = 3
-		x = -2
-		y = 1
-		completion_reward = {
-			country_event = {
-				id = ALF.3
-			}
-			add_war_support = 0.05
-		}
-	}
-	focus = {
-		#收敛旧物
-		id = ALF_recovery_old_stuff
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_memory_of_old_home
-		prerequisite = {
-			focus = ALF_memory_of_old_home
-		}
-		cost = 3
-		x = 0
-		y = 1
-		completion_reward = {
-			ALF_improve_livability_10_pts = yes
-			add_equipment_to_stockpile = {
-				type = motorized_equipment
-				amount = 10
-				producer = ALF
-			}
-		}
-	}
-	focus = {
-		#新家
-		id = ALF_settled_in_new_home
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_a_great_march
-		prerequisite = {
-			focus = ALF_a_great_march
-		}
-		cost = 3
-		x = 2
-		y = 1
-		completion_reward = {
-			country_event = {
-				id = ALF.2
-			}
-			add_stability = 0.05
-		}
-	}
-	focus = {
-		#播下新种
-		id = ALF_begin_new_journey
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_settled_in_new_home
-		prerequisite = {
-			focus = ALF_settled_in_new_home
-		}
-		cost = 3
-		x = 0
-		y = 1
-		completion_reward = {
-			ALF_medium_improve_livability_modifier_effect = yes
-			199 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-	focus = {
-		#站稳脚跟
-		id = ALF_stand_our_ground
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_recovery_old_stuff
-		prerequisite = {
-			focus = ALF_recovery_old_stuff
-		}
-		prerequisite = {
-			focus = ALF_begin_new_journey
-		}
-		cost = 4
-		x = 2
-		y = 1
-		completion_reward = {
-			country_event = {
-				id = ALF.10
-			}
-			activate_advisor = ALF_The_Leader_political_advisor
-		}
-	}
-	focus = {
-		#阴影……
-		id = ALF_threat_is_coming
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_stand_our_ground
-		prerequisite = {
-			focus = ALF_stand_our_ground
-		}
-		allow_branch = {
-			##拥有标签：我们遭到了袭击
-			has_country_flag = ALF_phrase_1_step_2_flag
-		}
-		cost = 3
-		x = 0
-		y = 1
-		completion_reward = {
-			country_event = {
-				id = ALF.13
-				days = 2
-			}
-		}
-	}
-	focus = {
-		#组建自警团
-		id = ALF_establish_law_enforement_team
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_threat_is_coming
-		prerequisite = {
-			focus = ALF_threat_is_coming
-		}
-		cost = 3
-		x = -3
-		y = 1
-		completion_reward = {
-			custom_effect_tooltip = ALF_establish_law_enforement_team_focus_tt
-			country_event = {
-				id = ALF.17
-			}
-			hidden_effect = {
-				load_oob = "ALF_oob_militias"
-			}
-		}
-	}
-	focus = {
-		#启用废弃库存
-		id = ALF_Enable_abandoned_inventory
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_threat_is_coming
-		prerequisite = {
-			focus = ALF_threat_is_coming
-		}
-		cost = 3
-		x = -1
-		y = 1
-		completion_reward = {
-			add_war_support = 0.05
-			unlock_decision_tooltip = ALF_Livability_for_infantry_equipment
-			unlock_decision_tooltip = ALF_Livability_for_artillery_equipment
-			unlock_decision_tooltip = ALF_Livability_for_support_equipment
-		}
-	}
-	focus = {
-		#重组邮政系统
-		id = ALF_Reorganize_the_postal_system
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_threat_is_coming
-		prerequisite = {
-			focus = ALF_threat_is_coming
-		}
-		cost = 3
-		x = 1
-		y = 1
-		completion_reward = {
-			##解锁重组邮政系统决议##
-			unlock_decision_tooltip = restore_state_mail_system_targeted_decision
-			custom_effect_tooltip = ALF_Reorganize_the_postal_system_tt
-		}
-	}
-	focus = {
-		#进行社区摸排
-		id = ALF_Conduct_community_surveys
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_threat_is_coming
-		prerequisite = {
-			focus = ALF_threat_is_coming
-		}
-		cost = 3
-		x = 3
-		y = 1
-		completion_reward = {
-			##创建情报部门##
-			if = {
-				limit = {
-					has_intelligence_agency = yes
-				}
-				upgrade_intelligence_agency = upgrade_form_department
-			}
-			else = {
-				create_intelligence_agency = {
-					name = "特别勤务处"
-					icon = GFX_intelligence_agency_logo_generic_2
-				}
-			}
-		}
-	}
-	focus = {
-		#作战计划：庇护之羽
-		id = ALF_operation_protect_wing
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_threat_is_coming
-		prerequisite = {
-			focus = ALF_threat_is_coming
-		}
-		cost = 2
-		x = 0
-		y = 2
-		available = {
-			has_country_flag = ALF_we_were_attacked_flag
-		}
-		completion_reward = {
-			country_event = {
-				id = ALF.12
-			}
-			unlock_decision_tooltip = {
-				decision = ALF_war_with_HTG_decision
-				show_effect_tooltip = yes
-			}
-			unlock_decision_tooltip = {
-				decision = ALF_war_with_COS_decision
-				show_effect_tooltip = yes
-			}
-		}
-	}
-	focus = {
-		#目标：金钗盗贼团
-		id = ALF_target_HTG
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_operation_protect_wing
-		prerequisite = {
-			focus = ALF_operation_protect_wing
-		}
-		available = {
-			HTG = {
-				exists = no
-			}
-		}
-		cost = 4
-		x = -2
-		y = 1
-		completion_reward = {
-			custom_effect_tooltip = ALF_gain_core_of_the_state_tt
-			every_owned_state = {
-				limit = {
-					is_core_of = HTG
-				}
-				add_core_of = ALF
-				remove_core_of = HTG
-			}
-		}
-	}
-	focus = {
-		#目标：圣徒升天会
-		id = ALF_target_COS
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_operation_protect_wing
-		prerequisite = {
-			focus = ALF_operation_protect_wing
-		}
-		available = {
-			COS = {
-				exists = no
-			}
-		}
-		cost = 4
-		x = 2
-		y = 1
-		completion_reward = {
-			custom_effect_tooltip = ALF_gain_core_of_the_state_tt
-			every_owned_state = {
-				limit = {
-					is_core_of = COS
-				}
-				add_core_of = ALF
-				remove_core_of = COS
-			}
-		}
-	}
-	focus = {
-		#噤声行动
-		id = ALF_target_AVG
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_operation_protect_wing
-		prerequisite = {
-			focus = ALF_operation_protect_wing
-		}
-		cost = 2
-		x = 0
-		y = 2
-		available = {
-			has_country_flag = ALF_operation_protect_wing_has_completed_flag
-		}
-		completion_reward = {
-			country_event = {
-				id = ALF.14
-			}
-			unlock_decision_tooltip = {
-				decision = ALF_war_with_AVG_decision
-				show_effect_tooltip = yes
-			}
-		}
-	}
-	focus = {
-		#升起旗帜
-		id = ALF_Raise_the_flag
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_target_AVG
-		prerequisite = {
-			focus = ALF_target_AVG
-		}
-		cost = 4
-		x = 0
-		y = 1
-		available = {
-			AVG = {
-				exists = no
-			}
-		}
-		completion_reward = {
-			custom_effect_tooltip = ALF_gain_core_of_the_state_tt
-			every_owned_state = {
-				limit = {
-					is_core_of = AVG
-				}
-				add_core_of = ALF
-				remove_core_of = AVG
-			}
-			country_event = {
-				id = ALF.16
-			}
-		}
-	}
-	###################################
-	#第二阶段#######
-	###################################
-	##流亡者政治线
-	focus = {
-		#长路漫漫
-		id = ALF_a_long_way_to_go
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 15
-		y = 1
-		available = {
-		}
-		completion_reward = {
-		}
-	}
-	######政治线左侧
-	focus = {
-		##内战的教训
-		id = ALF_lesson_from_civil_war
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_a_long_way_to_go
-		prerequisite = {
-			focus = ALF_a_long_way_to_go
-		}
-		cost = 4
-		x = -4
-		y = 1
-		available = {
-		}
-		completion_reward = {
-			add_political_power = 150
-		}
-	}
-	focus = {
-		##稳定人心
-		id = ALF_stable_the_thoughts
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_lesson_from_civil_war
-		prerequisite = {
-			focus = ALF_lesson_from_civil_war
-		}
-		cost = 4
-		x = 0
-		y = 1
-		available = {
+    id = ALF_Common_Focus
+    country = {
+        factor = 0
+        modifier = {
+            add = 10
+            tag = ALF
+        }
+    }
+    continuous_focus_position = {
+        x = 50
+        y = 3000
+    }
+    default = no
+    ##第一阶段
+    focus = {
+        #一场伟大的逃亡
+        id = ALF_a_great_march
+        icon = GFX_goal_ALF_a_great_march
+        cost = 53
+        x = 7
+        y = 1
+        available = {
+            always = no
+        }
+        completion_reward = {
+            add_political_power = 50
+        }
+    }
+    focus = {
+        #故园
+        id = ALF_memory_of_old_home
+        icon = GFX_goal_ALF_memory_of_old_home
+        relative_position_id = ALF_a_great_march
+        prerequisite = {
+            focus = ALF_a_great_march
+        }
+        cost = 5
+        x = -2
+        y = 1
+        completion_reward = {
+            country_event = {
+                id = ALF.3
+            }
+            add_war_support = 0.05
+        }
+    }
+    focus = {
+        #收敛旧物
+        id = ALF_recovery_old_stuff
+        icon = GFX_goal_ALF_recovery_old_stuff
+        relative_position_id = ALF_memory_of_old_home
+        prerequisite = {
+            focus = ALF_memory_of_old_home
+        }
+        cost = 5
+        x = 0
+        y = 1
+        completion_reward = {
+            ALF_improve_livability_10_pts = yes
+            add_equipment_to_stockpile = {
+                type = motorized_equipment
+                amount = 10
+                producer = ALF
+            }
+        }
+    }
+    focus = {
+        #新家
+        id = ALF_settled_in_new_home
+        icon = GFX_goal_ALF_settled_in_new_home
+        relative_position_id = ALF_a_great_march
+        prerequisite = {
+            focus = ALF_a_great_march
+        }
+        cost = 5
+        x = 2
+        y = 1
+        completion_reward = {
+            country_event = {
+                id = ALF.2
+            }
+            add_stability = 0.05
+        }
+    }
+    focus = {
+        #播下新种
+        id = ALF_begin_new_journey
+        icon = GFX_goal_ALF_begin_new_journey
+        relative_position_id = ALF_settled_in_new_home
+        prerequisite = {
+            focus = ALF_settled_in_new_home
+        }
+        cost = 5
+        x = 0
+        y = 1
+        completion_reward = {
+            ALF_medium_improve_livability_modifier_effect = yes
+            199 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+    focus = {
+        #站稳脚跟
+        id = ALF_stand_our_ground
+        icon = GFX_goal_ALF_stand_our_ground
+        relative_position_id = ALF_recovery_old_stuff
+        prerequisite = {
+            focus = ALF_recovery_old_stuff
+        }
+        prerequisite = {
+            focus = ALF_begin_new_journey
+        }
+        cost = 5
+        x = 2
+        y = 1
+        completion_reward = {
+            country_event = {
+                id = ALF.10
+            }
+            activate_advisor = ALF_The_Leader_political_advisor
+        }
+    }
+    focus = {
+        #阴影……
+        id = ALF_threat_is_coming
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_stand_our_ground
+        prerequisite = {
+            focus = ALF_stand_our_ground
+        }
+        allow_branch = {
+            ##拥有标签：我们遭到了袭击
+            has_country_flag = ALF_phrase_1_step_2_flag
+        }
+        cost = 3
+        x = 0
+        y = 1
+        completion_reward = {
+            country_event = {
+                id = ALF.13
+                days = 2
+            }
+        }
+    }
+    focus = {
+        #组建自警团
+        id = ALF_establish_law_enforement_team
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_threat_is_coming
+        prerequisite = {
+            focus = ALF_threat_is_coming
+        }
+        cost = 3
+        x = -3
+        y = 1
+        completion_reward = {
+            custom_effect_tooltip = ALF_establish_law_enforement_team_focus_tt
+            country_event = {
+                id = ALF.17
+            }
+            hidden_effect = {
+                load_oob = "ALF_oob_militias"
+            }
+        }
+    }
+    focus = {
+        #启用废弃库存
+        id = ALF_Enable_abandoned_inventory
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_threat_is_coming
+        prerequisite = {
+            focus = ALF_threat_is_coming
+        }
+        cost = 3
+        x = -1
+        y = 1
+        completion_reward = {
+            add_war_support = 0.05
+            unlock_decision_tooltip = ALF_Livability_for_infantry_equipment
+            unlock_decision_tooltip = ALF_Livability_for_artillery_equipment
+            unlock_decision_tooltip = ALF_Livability_for_support_equipment
+        }
+    }
+    focus = {
+        #重组邮政系统
+        id = ALF_Reorganize_the_postal_system
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_threat_is_coming
+        prerequisite = {
+            focus = ALF_threat_is_coming
+        }
+        cost = 3
+        x = 1
+        y = 1
+        completion_reward = {
+            ##解锁重组邮政系统决议##
+            unlock_decision_tooltip = restore_state_mail_system_targeted_decision
+            custom_effect_tooltip = ALF_Reorganize_the_postal_system_tt
+        }
+    }
+    focus = {
+        #进行社区摸排
+        id = ALF_Conduct_community_surveys
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_threat_is_coming
+        prerequisite = {
+            focus = ALF_threat_is_coming
+        }
+        cost = 3
+        x = 3
+        y = 1
+        completion_reward = {
+            ##创建情报部门##
+            if = {
+                limit = {
+                    has_intelligence_agency = yes
+                }
+                upgrade_intelligence_agency = upgrade_form_department
+            }
+            else = {
+                create_intelligence_agency = {
+                    name = "特别勤务处"
+                    icon = GFX_intelligence_agency_logo_generic_2
+                }
+            }
+        }
+    }
+    focus = {
+        #作战计划：庇护之羽
+        id = ALF_operation_protect_wing
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_threat_is_coming
+        prerequisite = {
+            focus = ALF_threat_is_coming
+        }
+        cost = 2
+        x = 0
+        y = 2
+        available = {
+            has_country_flag = ALF_we_were_attacked_flag
+        }
+        completion_reward = {
+            country_event = {
+                id = ALF.12
+            }
+            unlock_decision_tooltip = {
+                decision = ALF_war_with_HTG_decision
+                show_effect_tooltip = yes
+            }
+            unlock_decision_tooltip = {
+                decision = ALF_war_with_COS_decision
+                show_effect_tooltip = yes
+            }
+        }
+    }
+    focus = {
+        #目标：金钗盗贼团
+        id = ALF_target_HTG
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_operation_protect_wing
+        prerequisite = {
+            focus = ALF_operation_protect_wing
+        }
+        available = {
+            HTG = {
+                exists = no
+            }
+        }
+        cost = 4
+        x = -2
+        y = 1
+        completion_reward = {
+            custom_effect_tooltip = ALF_gain_core_of_the_state_tt
+            every_owned_state = {
+                limit = {
+                    is_core_of = HTG
+                }
+                add_core_of = ALF
+                remove_core_of = HTG
+            }
+        }
+    }
+    focus = {
+        #目标：圣徒升天会
+        id = ALF_target_COS
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_operation_protect_wing
+        prerequisite = {
+            focus = ALF_operation_protect_wing
+        }
+        available = {
+            COS = {
+                exists = no
+            }
+        }
+        cost = 4
+        x = 2
+        y = 1
+        completion_reward = {
+            custom_effect_tooltip = ALF_gain_core_of_the_state_tt
+            every_owned_state = {
+                limit = {
+                    is_core_of = COS
+                }
+                add_core_of = ALF
+                remove_core_of = COS
+            }
+        }
+    }
+    focus = {
+        #噤声行动
+        id = ALF_target_AVG
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_operation_protect_wing
+        prerequisite = {
+            focus = ALF_operation_protect_wing
+        }
+        cost = 2
+        x = 0
+        y = 2
+        available = {
+            has_country_flag = ALF_operation_protect_wing_has_completed_flag
+        }
+        completion_reward = {
+            country_event = {
+                id = ALF.14
+            }
+            unlock_decision_tooltip = {
+                decision = ALF_war_with_AVG_decision
+                show_effect_tooltip = yes
+            }
+        }
+    }
+    focus = {
+        #升起旗帜
+        id = ALF_Raise_the_flag
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_target_AVG
+        prerequisite = {
+            focus = ALF_target_AVG
+        }
+        cost = 5
+        x = 0
+        y = 1
+        available = {
+            AVG = {
+                exists = no
+            }
+        }
+        completion_reward = {
+            custom_effect_tooltip = ALF_gain_core_of_the_state_tt
+            every_owned_state = {
+                limit = {
+                    is_core_of = AVG
+                }
+                add_core_of = ALF
+                remove_core_of = AVG
+            }
+            country_event = {
+                id = ALF.16
+            }
+        }
+    }
+    ###################################
+    #第二阶段#######
+    ###################################
+    ##流亡者政治线
+    focus = {
+        #长路漫漫
+        id = ALF_a_long_way_to_go
+        icon = GFX_goal_unknown
+        cost = 5
+        x = 18
+        y = 1
+        available = {
+        }
+        allow_branch = {
+            ##拥有标签：第二阶段
+            has_country_flag = ALF_phrase_2_flag
+        }
+        completion_reward = {
+            custom_effect_tooltip = ALF_a_long_way_to_go_tt
+        }
+    }
+    ######政治线左侧
+    focus = {
+        ##内战的教训
+        id = ALF_lesson_from_civil_war
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_a_long_way_to_go
+        prerequisite = {
+            focus = ALF_a_long_way_to_go
+        }
+        cost = 5
+        x = -4
+        y = 1
+        available = {
+        }
+        bypass = {
+            NOT = {
+                has_dynamic_modifier = {
+                    modifier = ALF_defeated_in_civil_war
+                }
+            }
+        }
+        completion_reward = {
+            add_political_power = 150
+        }
+    }
+    focus = {
+        ##稳定人心
+        id = ALF_stable_the_thoughts
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_lesson_from_civil_war
+        prerequisite = {
+            focus = ALF_lesson_from_civil_war
+        }
+        cost = 5
+        x = 0
+        y = 1
+        available = {
 
-		}
-		completion_reward = {
-			custom_effect_tooltip = ALF_stable_the_thoughts_tt
-			add_to_variable = {
-				ALF_defeated_political_power_factor = 0.05
-			}
-			unlock_decision_tooltip = ALF_Livability_for_stability
-			unlock_decision_tooltip = ALF_Livability_for_war_support
-			force_update_dynamic_modifier = yes
-		}
-	}
-	focus = {
-		##反对投降主义
-		id = ALF_against_capitulationism
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_stable_the_thoughts
-		prerequisite = {
-			focus = ALF_stable_the_thoughts
-		}
-		cost = 4
-		x = -1
-		y = 1
-		available = {
-		}
-		completion_reward = {
-			custom_effect_tooltip = ALF_against_capitulationism_tt
-			add_to_variable = {
-				ALF_defeated_stability_factor_var = 0.1
-			}
-			force_update_dynamic_modifier = yes
-		}
-	}
-	focus = {
-		##疏导改良主义
-		id = ALF_diversionary_reformism
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_stable_the_thoughts
-		prerequisite = {
-			focus = ALF_stable_the_thoughts
-		}
-		cost = 4
-		x = 1
-		y = 1
-		available = {
-		}
-		completion_reward = {
-			custom_effect_tooltip = ALF_diversionary_reformism_tt
-			add_to_variable = {
-				ALF_defeated_war_support_factor = 0.1
-			}
-			force_update_dynamic_modifier = yes
-		}
-	}
-	focus = {
-		##阿里乌斯临时学园
-		id = ALF_rebuild_arius_school
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_stable_the_thoughts
-		prerequisite = {
-			focus = ALF_against_capitulationism
-			focus = ALF_diversionary_reformism
-		}
-		available = {
-			if = {
-				limit = {
-					is_ai = no
-				}
-				has_livability_10pts = yes
-			}
-		}
-		cancel_if_invalid = no
-		cost = 4
-		x = 0
-		y = 2
-		completion_reward = {
-			ALF_use_livability_10_pts = yes
-			add_research_slot = 1
-			swap_ideas = {
-				remove_idea = ALF_technology_left_behind
-				add_idea = ALF_technology_left_behind_1
-			}
-		}
-	}
-	focus = {
-		##公开辩论
-		id = ALF_public_debate
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_rebuild_arius_school
-		prerequisite = {
-			focus = ALF_against_capitulationism
-		}
-		cost = 4
-		x = -1
-		y = 1
-		available = {
-		}
-		completion_reward = {
-			add_political_power = 50
-			custom_effect_tooltip = ALF_public_debate_tt
-			add_to_variable = {
-				ALF_defeated_army_morale_factor = 0.1
-			}
-			add_to_variable = {
-				ALF_production_speed_buildings_factor = 0.1
-			}
-			force_update_dynamic_modifier = yes
-		}
-	}
-	focus = {
-		##共同认知
-		id = ALF_create_shared_cognition
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_rebuild_arius_school
-		prerequisite = {
-			focus = ALF_diversionary_reformism
-		}
-		cost = 4
-		x = 1
-		y = 1
-		available = {
-		}
-		completion_reward = {
-			custom_effect_tooltip = ALF_create_shared_cognition_tt
-			add_to_variable = {
-				ALF_defeated_war_support_factor = 0.1
-			}
-			add_to_variable = {
-				ALF_defeated_army_morale_factor = 0.1
-			}
-			custom_effect_tooltip = ALF_unlock_political_advisor_tt
-			show_ideas_tooltip = ALF_Yoshizawa_Yayoi_political_advisor
-			force_update_dynamic_modifier = yes
-		}
-	}
-	focus = {
-		##我们能做到
-		id = ALF_we_can_achieve_the_goal
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_rebuild_arius_school
-		prerequisite = {
-			focus = ALF_public_debate
-		}
-		prerequisite = {
-			focus = ALF_create_shared_cognition
-		}
-		cost = 4
-		x = 0
-		y = 2
-		available = {
-		}
-		completion_reward = {
-			custom_effect_tooltip = ALF_we_can_achieve_the_goal_tt
-			add_to_variable = {
-				ALF_production_speed_buildings_factor = 0.3
-			}
-			add_to_variable = {
-				ALF_defeated_industrial_capacity_factory = 0.1
-			}
-			add_to_variable = {
-				ALF_defeated_stability_factor_var = 0.1
-			}
-			force_update_dynamic_modifier = yes
-		}
-	}
-	##政治线中央
-	focus = {
-		#敲定经济计划
-		id = ALF_confirm_economic_plan
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_a_long_way_to_go
-		prerequisite = {
-			focus = ALF_a_long_way_to_go
-		}
-		cost = 4
-		x = 0
-		y = 1
-		available = {
-		}
-		completion_reward = {
-			ALF_medium_improve_livability_modifier_effect = yes
-			add_ideas = ecolaws_ALF_command_economic
-			add_tech_bonus = {
-				bonus = 0.5
-				uses = 2
-				category = industry
-			}
-			custom_effect_tooltip = ALF_unlock_political_advisor_tt
-			show_ideas_tooltip = ALF_Toueshi_Dzuru_political_advisor
-		}
-	}
-	focus = {
-		#输送工业之血
-		id = ALF_oil_is_industry_blood
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_confirm_economic_plan
-		prerequisite = {
-			focus = ALF_confirm_economic_plan
-		}
-		cost = 4
-		x = 0
-		y = 1
-		available = {
-		}
-		completion_reward = {
-			custom_effect_tooltip = ALF_oil_is_industry_blood_tt
-			ALF_small_decrease_livability_modifier_effect = yes
-			add_resource = {
-				type = resources_fe
-				amount = 4
-				state = 199
-				show_state_in_tooltip = yes
-			}
-			country_event = {
-				id = ALF.18
-			}
-		}
-	}
-	focus = {
-		#修复废弃武器制造所
-		id = ALF_repair_the_weapon_factory
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_oil_is_industry_blood
-		prerequisite = {
-			focus = ALF_oil_is_industry_blood
-		}
-		cost = 4
-		x = 0
-		y = 1
-		available = {
-			198 = {
-				is_owned_and_controlled_by = ALF
-			}
-			if = {
-				limit = {
-					is_ai = no
-				}
-				has_livability_5pts = yes
-			}
-		}
-		cancel_if_invalid = no
-		completion_reward = {
-			ALF_use_livability_5_pts = yes
-			unlock_decision_tooltip = ALF_Livability_for_arms_factory
-			198 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			set_province_name = {
-				id = 11015
-				name = VICTORY_POINTS_11015_ALF
-			}
-		}
-	}
-	focus = {
-		#掌握机床技术
-		id = ALF_master_machine_tool_technology
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_repair_the_weapon_factory
-		prerequisite = {
-			focus = ALF_oil_is_industry_blood
-		}
-		cost = 4
-		x = -1
-		y = 1
-		available = {
-			201 = {
-				is_owned_and_controlled_by = ALF
-			}
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 0.5
-				uses = 2
-				category = electronics
-			}
-			201 = {
-				#add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = land_facility
-					level = 1
-					instant_build = yes
-					province = 8653
-				}
-			}
-		}
-	}
-	focus = {
-		#基础设施复兴
-		id = ALF_infrastructure_plan
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_repair_the_weapon_factory
-		prerequisite = {
-			focus = ALF_oil_is_industry_blood
-		}
-		cost = 4
-		x = 1
-		y = 1
-		available = {
-		}
-		completion_reward = {
-			unlock_decision_tooltip = ALF_Livability_for_infrastructure
-			199 = {
-				set_building_level = {
-					type = infrastructure
-					level = 5
-					instant_build = yes
-				}
-			}
-		}
-	}
-	focus = {
-		#启动资源计划
-		id = ALF_resource_produce
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_repair_the_weapon_factory
-		prerequisite = {
-			focus = ALF_master_machine_tool_technology
-		}
-		prerequisite = {
-			focus = ALF_infrastructure_plan
-		}
-		cost = 4
-		x = 0
-		y = 2
-		available = {
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 0.75
-				uses = 2
-				category = excavation_tech
-			}
-			random_owned_state = {
-				limit = {
-					is_owned_and_controlled_by = ALF
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = rare_metal_processing_plant
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				limit = {
-					is_owned_and_controlled_by = ALF
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = electronic_component_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				limit = {
-					is_owned_and_controlled_by = ALF
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = opatz_synthesis_center
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-	######政治右侧
-	focus = {
-		##强化贸易收入
-		id = ALF_focus_trade
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_a_long_way_to_go
-		prerequisite = {
-			focus = ALF_a_long_way_to_go
-		}
-		cost = 4
-		x = 4
-		y = 1
-		available = {
-		}
-		completion_reward = {
-			add_ideas = ALF_Special_trade
-			ALF_medium_improve_livability_modifier_effect = yes
-			custom_effect_tooltip = ALF_unlock_political_advisor_tt
-			show_ideas_tooltip = ALF_Norimatsu_Miru_political_advisor
-		}
-	}
-	focus = {
-		##扩大消费品生产
-		id = ALF_expand_goods_production
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_focus_trade
-		prerequisite = {
-			focus = ALF_focus_trade
-		}
-		cost = 4
-		x = 0
-		y = 1
-		available = {
-		}
-		completion_reward = {
-			custom_effect_tooltip = ALF_expand_goods_production_tt
-			add_to_variable = {
-				ALF_party_stability_factor_var = 0.1
-			}
-			force_update_dynamic_modifier = yes
-		}
-	}
-	focus = {
-		##改造旧学生会建筑
-		id = ALF_rebuild_the_market_center
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_expand_goods_production
-		prerequisite = {
-			focus = ALF_expand_goods_production
-		}
-		cost = 4
-		x = 0
-		y = 1
-		available = {
-			if = {
-				limit = {
-					is_ai = no
-				}
-				has_livability_5pts = yes
-			}
-			197 = {
-				is_owned_and_controlled_by = ALF
-			}
-			has_country_flag = has_win_war_with_kaiser_flag
-		}
-		cancel_if_invalid = no
-		completion_reward = {
-			set_province_name = {
-				id = 3978
-				name = VICTORY_POINTS_3978_ALF
-			}
-			197 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			unlock_decision_category_tooltip = ALF_new_capital_decision_category
-			activate_mission = ALF_new_capital_decision_construction_mission
-		}
-	}
-	focus = {
-		##扩大住房数量
-		id = ALF_build_more_house
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_rebuild_the_market_center
-		prerequisite = {
-			focus = ALF_expand_goods_production
-		}
-		cost = 4
-		x = -1
-		y = 1
-		available = {
-			if = {
-				limit = {
-					is_ai = no
-				}
-				has_livability_10pts = yes
-			}
-		}
-		cancel_if_invalid = no
-		completion_reward = {
-			ALF_use_livability_10_pts = yes
-			random_owned_state = {
-				limit = {
-					is_owned_and_controlled_by = ALF
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = construction_center
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				limit = {
-					is_owned_and_controlled_by = ALF
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = construction_center
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				limit = {
-					is_owned_and_controlled_by = ALF
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = construction_center
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-	focus = {
-		##回收运动
-		id = ALF_recovery_movement
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_rebuild_the_market_center
-		prerequisite = {
-			focus = ALF_expand_goods_production
-		}
-		cost = 4
-		x = 1
-		y = 1
-		available = {
-		}
-		completion_reward = {
-			custom_effect_tooltip = ALF_recovery_movement_tt
-			add_to_variable = {
-				ALF_production_lack_of_resource_penalty_factor_var = -0.1
-			}
-			force_update_dynamic_modifier = yes
-		}
-	}
-	focus = {
-		##城市改造方案
-		id = ALF_rebuild_city_operation
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_rebuild_the_market_center
-		prerequisite = {
-			focus = ALF_build_more_house
-		}
-		prerequisite = {
-			focus = ALF_recovery_movement
-		}
-		cost = 4
-		x = 0
-		y = 2
-		available = {
-		}
-		completion_reward = {
-			unlock_decision_tooltip = ALF_Livability_for_city_loadout
-			custom_effect_tooltip = ALF_rebuild_city_operation_tt
-			add_to_variable = {
-				ALF_cic_construction_boost_factor_var = 0.1
-			}
-			force_update_dynamic_modifier = yes
-		}
-	}
-	focus = {
-		##解决用电问题
-		id = ALF_solve_electric_problem
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_expand_goods_production
-		prerequisite = {
-			focus = ALF_expand_goods_production
-			focus = ALF_oil_is_industry_blood
-		}
-		available = {
-			has_completed_focus = ALF_change_outfit
-		}
-		cost = 4
-		x = -2
-		y = 1
-		available = {
-		}
-		completion_reward = {
-			CEN = {
-				country_event = {
-					id = ALF.19
-				}
-			}
-			custom_effect_tooltip = ALF_solve_electric_problem_tt
-			unlock_decision_tooltip = restore_state_electric_system_targeted_decision
-			if = {
-				limit = {
-					NOT = {
-						has_tech = Power_Development_T1
-					}
-				}
-				set_technology = {
-					Power_Development_T1 = 1
-				}
-			}
-		}
-	}
-	focus = {
-		##修复水电站
-		id = ALF_rebuild_the_hydropower_station
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_solve_electric_problem
-		prerequisite = {
-			focus = ALF_solve_electric_problem
-		}
-		cost = 4
-		x = 0
-		y = 2
-		available = {
-			if = {
-				limit = {
-					is_ai = no
-				}
-				has_livability_5pts = yes
-			}
-			200 = {
-				is_owned_and_controlled_by = ALF
-			}
-		}
-		cancel_if_invalid = no
-		completion_reward = {
-			ALF_use_livability_5_pts = yes
-			if = {
-				limit = {
-					NOT = {
-						has_tech = Ecological_power_generation_T1
-					}
-				}
-				set_technology = {
-					Ecological_power_generation_T1 = 1
-				}
-			}
-			200 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = biological_power_station
-					level = 1
-					instant_build = yes
-				}
-			}
-			set_province_name = {
-				id = 7299
-				name = VICTORY_POINTS_7299_ALF
-			}
-		}
-	}
-	focus = {
-		##蓄势待发
-		id = ALF_be_ready_for_action
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_rebuild_the_hydropower_station
-		prerequisite = {
-			focus = ALF_resource_produce
-			focus = ALF_rebuild_city_operation
-		}
-		cost = 4
-		x = 0
-		y = 1
-		available = {
-		}
-		completion_reward = {
-			custom_effect_tooltip = ALF_be_ready_for_action_tt
-			add_to_variable = {
-				ALF_war_support_factor_var = 0.1
-			}
-		}
-	}
-	##收尾
-	focus = {
-		##人口普查
-		id = ALF_residential_census
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_be_ready_for_action
-		prerequisite = {
-			focus = ALF_we_can_achieve_the_goal
-			focus = ALF_be_ready_for_action
-		}
-		cost = 4
-		x = -3
-		y = 1
-		available = {
-		}
-		completion_reward = {
-			add_ideas = ALF_population_investigate
-		}
-	}
-	focus = {
-		##命运在召唤
-		id = ALF_fate_calls
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_residential_census
-		prerequisite = {
-			focus = ALF_residential_census
-		}
-		cost = 4
-		x = 0
-		y = 1
-		available = {
-		}
-		completion_reward = {
-		}
-	}
-	########流亡者外交线#######
-	focus = {
-		##改头换面
-		id = ALF_change_outfit
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 27
-		y = 1
-		available = {
-		}
-		completion_reward = {
-			set_cosmetic_tag = ALF_PMC_Company
-			create_faction = ALF_Faction
-		}
-	}
-	focus = {
-		##接触红冬
-		id = ALF_contact_redwinter
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_change_outfit
-		prerequisite = {
-			focus = ALF_change_outfit
-		}
-		mutually_exclusive = {
-			focus = ALF_contact_gehenna
-		}
-		cost = 4
-		x = -4
-		y = 1
-		available = {
-		}
-		completion_reward = {
-		}
-	}
-	focus = {
-		##接触格黑娜
-		id = ALF_contact_gehenna
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_change_outfit
-		prerequisite = {
-			focus = ALF_change_outfit
-		}
-		mutually_exclusive = {
-			focus = ALF_contact_redwinter
-		}
-		cost = 4
-		x = -2
-		y = 1
-		available = {
-		}
-		completion_reward = {
-		}
-	}
-	focus = {
-		##技术交流
-		id = ALF_technology_exchange
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_contact_gehenna
-		prerequisite = {
-			focus = ALF_contact_redwinter
-			focus = ALF_contact_gehenna
-		}
-		cost = 4
-		x = -1
-		y = 1
-		available = {
-		}
-		completion_reward = {
-		}
-	}
-	focus = {
-		##改革作战参谋部
-		id = ALF_reform_staff_department
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_technology_exchange
-		prerequisite = {
-			focus = ALF_technology_exchange
-		}
-		cost = 4
-		x = 0
-		y = 1
-		available = {
-		}
-		completion_reward = {
-		}
-	}
-	focus = {
-		##接触阿拜多斯
-		id = ALF_abydos_problem
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_change_outfit
-		prerequisite = {
-			focus = ALF_change_outfit
-		}
-		cost = 4
-		x = 0
-		y = 2
-		available = {
-		}
-		completion_reward = {
-		}
-	}
-	focus = {
-		##与阿拜多斯贸易
-		id = ALF_abydos_trade
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_abydos_problem
-		prerequisite = {
-			focus = ALF_abydos_problem
-		}
-		cost = 4
-		x = -1
-		y = 1
-		available = {
-		}
-		completion_reward = {
-		}
-	}
-	focus = {
-		##支持阿拜多斯
-		id = ALF_support_abydos
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_abydos_problem
-		prerequisite = {
-			focus = ALF_abydos_problem
-		}
-		cost = 4
-		x = 1
-		y = 1
-		available = {
-		}
-		completion_reward = {
-		}
-	}
-	focus = {
-		##共同战争
-		id = ALF_together_for_victory
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_support_abydos
-		prerequisite = {
-			focus = ALF_support_abydos
-		}
-		prerequisite = {
-			focus = ALF_abydos_trade
-		}
-		cost = 4
-		x = -1
-		y = 1
-		available = {
-		}
-		completion_reward = {
-		}
-	}
-	focus = {
-		##西街问题
-		id = ALF_destroy_wsg
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_change_outfit
-		prerequisite = {
-			focus = ALF_change_outfit
-		}
-		cost = 4
-		x = 3
-		y = 1
-		available = {
-		}
-		completion_reward = {
-		}
-	}
-	focus = {
-		##渗透敌人
-		id = ALF_infiltrate_enemy
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_destroy_wsg
-		prerequisite = {
-			focus = ALF_destroy_wsg
-		}
-		cost = 4
-		x = -1
-		y = 1
-		available = {
-		}
-		completion_reward = {
-		}
-	}
-	focus = {
-		##攻击训练
-		id = ALF_assault_trainning
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_destroy_wsg
-		prerequisite = {
-			focus = ALF_destroy_wsg
-		}
-		cost = 4
-		x = 1
-		y = 1
-		available = {
-		}
-		completion_reward = {
-		}
-	}
-	focus = {
-		##支援飞行员们
-		id = ALF_support_the_pilots
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_destroy_wsg
-		prerequisite = {
-			focus = ALF_infiltrate_enemy
-		}
-		prerequisite = {
-			focus = ALF_assault_trainning
-		}
-		cost = 4
-		x = 0
-		y = 2
-		available = {
-		}
-		completion_reward = {
-			
-		}
-	}
-	focus = {
-		##枕戈待旦
-		id = ALF_ready_for_battle
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_assault_trainning
-		prerequisite = {
-			focus = ALF_assault_trainning
-		}
-		cost = 4
-		x = 1
-		y = 1
-		available = {
-		}
-		completion_reward = {
-		}
-	}
-	focus = {
-		##终结西街暴力团
-		id = ALF_end_wsg
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_ready_for_battle
-		prerequisite = {
-			focus = ALF_ready_for_battle
-		}
-		prerequisite = {
-			focus = ALF_support_the_pilots
-		}
-		cost = 4
-		x = -1
-		y = 1
-		available = {
-		}
-		completion_reward = {
-		}
-	}
-	focus = {
-		##渗透敌人
-		id = ALF_infiltrate_kaiser
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_change_outfit
-		prerequisite = {
-			focus = ALF_change_outfit
-		}
-		cost = 4
-		x = 5
-		y = 1
-		available = {
-		}
-		completion_reward = {
-		}
-	}
-	########流亡者军事线#######
-	focus = {
-		##新的开始
-		id = ALF_new_beginning
-		icon = GFX_goal_unknown
-		cost = 4
-		x = 44
-		y = 1
-		available = {
-		}
-		completion_reward = {
-		}
-	}
-	focus = {
-		##联合技术研究所
-		id = ALF_united_research_facility
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_new_beginning
-		prerequisite = {
-			focus = ALF_new_beginning
-		}
-		cost = 4
-		x = -1
-		y = 1
-		available = {
-		}
-		completion_reward = {
-		}
-	}
-	###军事线左左
-	focus = {
-		##建立空军
-		id = ALF_establish_air_force
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_united_research_facility
-		prerequisite = {
-			focus = ALF_united_research_facility
-		}
-		cost = 4
-		x = -5
-		y = 1
-		available = {
-		}
-		completion_reward = {
-		}
-	}
-	focus = {
-		##独立空军
-		id = ALF_an_independent_air_foce
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_establish_air_force
-		prerequisite = {
-			focus = ALF_establish_air_force
-		}
-		mutually_exclusive = {
-			focus = ALF_mission_air_foce
-		}
-		cost = 4
-		x = -1
-		y = 1
-		available = {
-		}
-		completion_reward = {
-		}
-	}
-	focus = {
-		##任务空军
-		id = ALF_mission_air_foce
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_establish_air_force
-		prerequisite = {
-			focus = ALF_establish_air_force
-		}
-		mutually_exclusive = {
-			focus = ALF_an_independent_air_foce
-		}
-		cost = 4
-		x = 1
-		y = 1
-		available = {
-		}
-		completion_reward = {
-		}
-	}
-	focus = {
-		##空中霸权
-		id = ALF_air_superiority
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_an_independent_air_foce
-		prerequisite = {
-			focus = ALF_an_independent_air_foce
-		}
-		cost = 4
-		x = -1
-		y = 1
-		available = {
-		}
-		completion_reward = {
-		}
-	}
-	focus = {
-		##JTAC
-		id = ALF_JTAC_support
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_an_independent_air_foce
-		prerequisite = {
-			focus = ALF_an_independent_air_foce
-			focus = ALF_mission_air_foce
-		}
-		cost = 4
-		x = 1
-		y = 1
-		available = {
-		}
-		completion_reward = {
-		}
-	}
-	focus = {
-		##任务效率
-		id = ALF_mission_effecience
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_an_independent_air_foce
-		prerequisite = {
-			focus = ALF_mission_air_foce
-		}
-		cost = 4
-		x = 3
-		y = 1
-		available = {
-		}
-		completion_reward = {
-		}
-	}
-	focus = {
-		##遮天蔽日
-		id = ALF_above_sky
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_JTAC_support
-		prerequisite = {
-			focus = ALF_JTAC_support
-		}
-		cost = 4
-		x = 0
-		y = 1
-		available = {
-		}
-		completion_reward = {
-		}
-	}
-	#####军事左中
-	focus = {
-		##直升机技术
-		id = ALF_helicopter
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_united_research_facility
-		prerequisite = {
-			focus = ALF_united_research_facility
-		}
-		cost = 4
-		x = -1
-		y = 1
-		available = {
-		}
-		completion_reward = {
-		}
-	}
-	focus = {
-		##空中突击战术
-		id = ALF_air_assault_tactics
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_helicopter
-		prerequisite = {
-			focus = ALF_helicopter
-		}
-		cost = 4
-		x = 0
-		y = 1
-		available = {
-		}
-		completion_reward = {
-		}
-	}
-	focus = {
-		##攻击直升机
-		id = ALF_attack_helicopter
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_air_assault_tactics
-		prerequisite = {
-			focus = ALF_air_assault_tactics
-		}
-		cost = 4
-		x = 0
-		y = 1
-		available = {
-		}
-		completion_reward = {
-		}
-	}
-	focus = {
-		##炮艇
-		id = ALF_air_gunship
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_air_assault_tactics
-		prerequisite = {
-			focus = ALF_air_assault_tactics
-		}
-		cost = 4
-		x = 2
-		y = 1
-		available = {
-		}
-		completion_reward = {
-		}
-	}
-	focus = {
-		##联合火力系统
-		id = ALF_integrated_firepower_system
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_attack_helicopter
-		prerequisite = {
-			focus = ALF_attack_helicopter
-			focus = ALF_air_gunship
-		}
-		cost = 4
-		x = 0
-		y = 1
-		available = {
-		}
-		completion_reward = {
-		}
-	}
-	##军事右
-	focus = {
-		##过往教训
-		id = ALF_lessons_from_previous_battle
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_new_beginning
-		prerequisite = {
-			focus = ALF_new_beginning
-		}
-		cost = 4
-		x = 1
-		y = 1
-		available = {
-		}
-		completion_reward = {
-		}
-	}
-	##职业化训练
-	focus = {
-		id = ALF_professional_trainning
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_lessons_from_previous_battle
-		prerequisite = {
-			focus = ALF_lessons_from_previous_battle
-		}
-		cost = 4
-		x = 1
-		y = 1
-		available = {
-		}
-		completion_reward = {
-		}
-	}
-	##磨砺利刃
-	focus = {
-		id = ALF_sharp_the_blade
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_lessons_from_previous_battle
-		prerequisite = {
-			focus = ALF_lessons_from_previous_battle
-		}
-		cost = 4
-		x = 3
-		y = 1
-		available = {
-		}
-		completion_reward = {
-		}
-	}
-	##士官学院
-	focus = {
-		id = ALF_establish_officer_school
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_sharp_the_blade
-		prerequisite = {
-			focus = ALF_sharp_the_blade
-		}
-		cost = 4
-		x = 1
-		y = 1
-		available = {
-		}
-		completion_reward = {
-		}
-	}
-	##装甲矛头
-	focus = {
-		id = ALF_armor_spearhead
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_professional_trainning
-		prerequisite = {
-			focus = ALF_professional_trainning
-		}
-		cost = 4
-		x = -1
-		y = 1
-		available = {
-		}
-		completion_reward = {
-		}
-	}
-	##现代化作战
-	focus = {
-		id = ALF_moden_combat
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_professional_trainning
-		prerequisite = {
-			focus = ALF_professional_trainning
-			focus = ALF_sharp_the_blade
-		}
-		cost = 4
-		x = 1
-		y = 1
-		available = {
-		}
-		completion_reward = {
-		}
-	}
-	##狂野而迅捷
-	focus = {
-		id = ALF_focus_speed
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_moden_combat
-		prerequisite = {
-			focus = ALF_professional_trainning
-		}
-		prerequisite = {
-			focus = ALF_moden_combat
-		}
-		mutually_exclusive = {
-			focus = ALF_elegant_combat
-		}
-		cost = 4
-		x = -1
-		y = 1
-		available = {
-		}
-		completion_reward = {
-		}
-	}
-	##压倒性火力
-	focus = {
-		id = ALF_overwhelming_firepower
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_focus_speed
-		prerequisite = {
-			focus = ALF_focus_speed
-			focus = ALF_elegant_combat
-		}
-		mutually_exclusive = {
-			focus = ALF_strategic_roadmap
-		}
-		cost = 4
-		x = 0
-		y = 1
-		available = {
-		}
-		completion_reward = {
-		}
-	}
-	##精准且优雅
-	focus = {
-		id = ALF_elegant_combat
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_moden_combat
-		prerequisite = {
-			focus = ALF_moden_combat
-		}
-		prerequisite = {
-			focus = ALF_sharp_the_blade
-		}
-		mutually_exclusive = {
-			focus = ALF_focus_speed
-		}
-		cost = 4
-		x = 1
-		y = 1
-		available = {
-		}
-		completion_reward = {
-		}
-	}
-	##战役路线
-	focus = {
-		id = ALF_strategic_roadmap
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_elegant_combat
-		prerequisite = {
-			focus = ALF_elegant_combat
-			focus = ALF_focus_speed
-		}
-		mutually_exclusive = {
-			focus = ALF_overwhelming_firepower
-		}
-		cost = 4
-		x = 0
-		y = 1
-		available = {
-		}
-		completion_reward = {
-		}
-	}
-	##
-	focus = {
-		id = ALF_estabilish_Arius_armed_force
-		icon = GFX_goal_unknown
-		relative_position_id = ALF_integrated_firepower_system
-		prerequisite = {
-			focus = ALF_integrated_firepower_system
-		}
-		prerequisite = {
-			focus = ALF_above_sky
-		}
-		prerequisite = {
-			focus = ALF_overwhelming_firepower
-			focus = ALF_strategic_roadmap
-		}
-		cost = 4
-		x = 2
-		y = 1
-		available = {
-		}
-		completion_reward = {
-		}
-	}
-	###奔赴荣耀
-	focus = {
-		id = ALF_way_for_glory
-		icon = GFX_focus_ARI_open_the_curtain
-		cost = 0.5
-		x = 40
-		y = 10
-		available = {
-		}
-		completion_reward = {
-		}
-	}
+        }
+        bypass = {
+            NOT = {
+                has_dynamic_modifier = {
+                    modifier = ALF_defeated_in_civil_war
+                }
+            }
+        }
+        completion_reward = {
+            custom_effect_tooltip = ALF_stable_the_thoughts_tt
+            add_to_variable = {
+                ALF_defeated_political_power_factor = 0.05
+            }
+            unlock_decision_tooltip = ALF_Livability_for_stability
+            unlock_decision_tooltip = ALF_Livability_for_war_support
+            force_update_dynamic_modifier = yes
+        }
+    }
+    focus = {
+        ##反对投降主义
+        id = ALF_against_capitulationism
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_stable_the_thoughts
+        prerequisite = {
+            focus = ALF_stable_the_thoughts
+        }
+        cost = 5
+        x = -1
+        y = 1
+        available = {
+        }
+        bypass = {
+            NOT = {
+                has_dynamic_modifier = {
+                    modifier = ALF_defeated_in_civil_war
+                }
+            }
+        }
+        completion_reward = {
+            custom_effect_tooltip = ALF_against_capitulationism_tt
+            add_to_variable = {
+                ALF_defeated_stability_factor_var = 0.1
+            }
+            force_update_dynamic_modifier = yes
+        }
+    }
+    focus = {
+        ##疏导改良主义
+        id = ALF_diversionary_reformism
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_stable_the_thoughts
+        prerequisite = {
+            focus = ALF_stable_the_thoughts
+        }
+        cost = 5
+        x = 1
+        y = 1
+        available = {
+        }
+        bypass = {
+            NOT = {
+                has_dynamic_modifier = {
+                    modifier = ALF_defeated_in_civil_war
+                }
+            }
+        }
+        completion_reward = {
+            custom_effect_tooltip = ALF_diversionary_reformism_tt
+            add_to_variable = {
+                ALF_defeated_war_support_factor = 0.1
+            }
+            force_update_dynamic_modifier = yes
+        }
+    }
+    focus = {
+        ##阿里乌斯临时学园
+        id = ALF_rebuild_arius_school
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_stable_the_thoughts
+        prerequisite = {
+            focus = ALF_against_capitulationism
+            focus = ALF_diversionary_reformism
+        }
+        available = {
+            if = {
+                limit = {
+                    is_ai = no
+                }
+                has_livability_10pts = yes
+            }
+        }
+        cancel_if_invalid = no
+        continue_if_invalid = yes
+        cost = 5
+        x = 0
+        y = 2
+        completion_reward = {
+            ALF_use_livability_10_pts = yes
+            add_research_slot = 1
+            ALF_reduce_technology_left_behind_effect = yes
+        }
+    }
+    focus = {
+        ##公开辩论
+        id = ALF_public_debate
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_rebuild_arius_school
+        prerequisite = {
+            focus = ALF_against_capitulationism
+        }
+        cost = 5
+        x = -1
+        y = 1
+        available = {
+        }
+        bypass = {
+            NOT = {
+                has_dynamic_modifier = {
+                    modifier = ALF_defeated_in_civil_war
+                }
+            }
+        }
+        completion_reward = {
+            add_political_power = 50
+            custom_effect_tooltip = ALF_public_debate_tt
+            add_to_variable = {
+                ALF_defeated_army_morale_factor = 0.1
+            }
+            add_to_variable = {
+                ALF_production_speed_buildings_factor = 0.2
+            }
+            force_update_dynamic_modifier = yes
+        }
+    }
+    focus = {
+        ##共同认知
+        id = ALF_create_shared_cognition
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_rebuild_arius_school
+        prerequisite = {
+            focus = ALF_diversionary_reformism
+        }
+        cost = 5
+        x = 1
+        y = 1
+        available = {
+        }
+        bypass = {
+            NOT = {
+                has_dynamic_modifier = {
+                    modifier = ALF_defeated_in_civil_war
+                }
+            }
+        }
+        completion_reward = {
+            custom_effect_tooltip = ALF_create_shared_cognition_tt
+            add_to_variable = {
+                ALF_defeated_war_support_factor = 0.1
+            }
+            add_to_variable = {
+                ALF_defeated_army_morale_factor = 0.1
+            }
+            custom_effect_tooltip = ALF_unlock_political_advisor_tt
+            show_ideas_tooltip = ALF_Yoshizawa_Yayoi_political_advisor
+            force_update_dynamic_modifier = yes
+        }
+    }
+    focus = {
+        ##我们能做到
+        id = ALF_we_can_achieve_the_goal
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_rebuild_arius_school
+        prerequisite = {
+            focus = ALF_public_debate
+        }
+        prerequisite = {
+            focus = ALF_create_shared_cognition
+        }
+        cost = 5
+        x = 0
+        y = 2
+        available = {
+        }
+        completion_reward = {
+            custom_effect_tooltip = ALF_we_can_achieve_the_goal_tt
+            add_to_variable = {
+                ALF_party_stability_factor_var = 0.1
+            }
+            force_update_dynamic_modifier = yes
+        }
+    }
+    ##政治线中央
+    focus = {
+        #敲定经济计划
+        id = ALF_confirm_economic_plan
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_a_long_way_to_go
+        prerequisite = {
+            focus = ALF_a_long_way_to_go
+        }
+        cost = 5
+        x = 0
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            ALF_medium_improve_livability_modifier_effect = yes
+            add_ideas = ecolaws_ALF_command_economic
+            add_tech_bonus = {
+                bonus = 0.5
+                uses = 2
+                category = industry
+            }
+            custom_effect_tooltip = ALF_unlock_political_advisor_tt
+            show_ideas_tooltip = ALF_Toueshi_Dzuru_political_advisor
+        }
+    }
+    focus = {
+        #输送工业之血
+        id = ALF_oil_is_industry_blood
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_confirm_economic_plan
+        prerequisite = {
+            focus = ALF_confirm_economic_plan
+        }
+        cost = 5
+        x = 0
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            custom_effect_tooltip = ALF_oil_is_industry_blood_tt
+            ALF_small_decrease_livability_modifier_effect = yes
+            add_resource = {
+                type = resources_fe
+                amount = 4
+                state = 199
+                show_state_in_tooltip = yes
+            }
+            country_event = {
+                id = ALF.18
+            }
+        }
+    }
+    focus = {
+        #修复废弃武器制造所
+        id = ALF_repair_the_weapon_factory
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_oil_is_industry_blood
+        prerequisite = {
+            focus = ALF_oil_is_industry_blood
+        }
+        cost = 5
+        x = 0
+        y = 1
+        available = {
+            198 = {
+                is_owned_and_controlled_by = ALF
+            }
+            if = {
+                limit = {
+                    is_ai = no
+                }
+                has_livability_5pts = yes
+            }
+        }
+        cancel_if_invalid = no
+        continue_if_invalid = yes
+        completion_reward = {
+            ALF_use_livability_5_pts = yes
+            unlock_decision_tooltip = ALF_Livability_for_arms_factory
+            198 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            set_province_name = {
+                id = 11015
+                name = VICTORY_POINTS_11015_ALF
+            }
+        }
+    }
+    focus = {
+        #掌握机床技术
+        id = ALF_master_machine_tool_technology
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_repair_the_weapon_factory
+        prerequisite = {
+            focus = ALF_oil_is_industry_blood
+        }
+        cost = 5
+        x = -1
+        y = 1
+        available = {
+            201 = {
+                is_owned_and_controlled_by = ALF
+            }
+        }
+        completion_reward = {
+            add_tech_bonus = {
+                bonus = 0.5
+                uses = 2
+                category = electronics
+            }
+            201 = {
+                #add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = land_facility
+                    level = 1
+                    instant_build = yes
+                    province = 8653
+                }
+            }
+        }
+    }
+    focus = {
+        #基础设施复兴
+        id = ALF_infrastructure_plan
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_repair_the_weapon_factory
+        prerequisite = {
+            focus = ALF_oil_is_industry_blood
+        }
+        cost = 5
+        x = 1
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            unlock_decision_tooltip = ALF_Livability_for_infrastructure
+            199 = {
+                set_building_level = {
+                    type = infrastructure
+                    level = 5
+                    instant_build = yes
+                }
+            }
+        }
+    }
+    focus = {
+        #启动资源计划
+        id = ALF_resource_produce
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_repair_the_weapon_factory
+        prerequisite = {
+            focus = ALF_master_machine_tool_technology
+        }
+        prerequisite = {
+            focus = ALF_infrastructure_plan
+        }
+        cost = 5
+        x = 0
+        y = 2
+        available = {
+        }
+        completion_reward = {
+            add_tech_bonus = {
+                bonus = 0.75
+                uses = 2
+                category = excavation_tech
+            }
+            random_owned_state = {
+                limit = {
+                    is_owned_and_controlled_by = ALF
+                }
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = rare_metal_processing_plant
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            random_owned_state = {
+                limit = {
+                    is_owned_and_controlled_by = ALF
+                }
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = electronic_component_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            random_owned_state = {
+                limit = {
+                    is_owned_and_controlled_by = ALF
+                }
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = opatz_synthesis_center
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+    ######政治右侧
+    focus = {
+        ##强化贸易收入
+        id = ALF_focus_trade
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_a_long_way_to_go
+        prerequisite = {
+            focus = ALF_a_long_way_to_go
+        }
+        cost = 5
+        x = 4
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            add_ideas = ALF_Special_trade
+            ALF_medium_improve_livability_modifier_effect = yes
+            custom_effect_tooltip = ALF_unlock_political_advisor_tt
+            show_ideas_tooltip = ALF_Norimatsu_Miru_political_advisor
+        }
+    }
+    focus = {
+        ##扩大消费品生产
+        id = ALF_expand_goods_production
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_focus_trade
+        prerequisite = {
+            focus = ALF_focus_trade
+        }
+        cost = 5
+        x = 0
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            custom_effect_tooltip = ALF_expand_goods_production_tt
+            add_to_variable = {
+                ALF_party_stability_factor_var = 0.1
+            }
+            force_update_dynamic_modifier = yes
+            unlock_decision_tooltip = ALF_Livability_for_industrial_complex
+        }
+    }
+    focus = {
+        ##改造旧学生会建筑
+        id = ALF_rebuild_the_market_center
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_expand_goods_production
+        prerequisite = {
+            focus = ALF_expand_goods_production
+        }
+        cost = 5
+        x = 0
+        y = 1
+        available = {
+            if = {
+                limit = {
+                    is_ai = no
+                }
+                has_livability_5pts = yes
+            }
+            197 = {
+                is_owned_and_controlled_by = ALF
+            }
+            #has_country_flag = has_win_war_with_kaiser_flag
+        }
+        cancel_if_invalid = no
+        continue_if_invalid = yes
+        completion_reward = {
+            ALF_use_livability_5_pts = yes
+            set_province_name = {
+                id = 3978
+                name = VICTORY_POINTS_3978_ALF
+            }
+            197 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            unlock_decision_category_tooltip = ALF_new_capital_decision_category
+            activate_mission = ALF_new_capital_decision_construction_mission
+        }
+    }
+    focus = {
+        ##扩大住房数量
+        id = ALF_build_more_house
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_rebuild_the_market_center
+        prerequisite = {
+            focus = ALF_expand_goods_production
+        }
+        cost = 5
+        x = -1
+        y = 1
+        available = {
+            if = {
+                limit = {
+                    is_ai = no
+                }
+                has_livability_10pts = yes
+            }
+        }
+        cancel_if_invalid = no
+        continue_if_invalid = yes
+        completion_reward = {
+            ALF_use_livability_10_pts = yes
+            random_owned_state = {
+                limit = {
+                    is_owned_and_controlled_by = ALF
+                }
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = construction_center
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            random_owned_state = {
+                limit = {
+                    is_owned_and_controlled_by = ALF
+                }
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = construction_center
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            random_owned_state = {
+                limit = {
+                    is_owned_and_controlled_by = ALF
+                }
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = construction_center
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+    focus = {
+        ##回收运动
+        id = ALF_recovery_movement
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_rebuild_the_market_center
+        prerequisite = {
+            focus = ALF_expand_goods_production
+        }
+        cost = 5
+        x = 1
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            custom_effect_tooltip = ALF_recovery_movement_tt
+            add_to_variable = {
+                ALF_production_lack_of_resource_penalty_factor_var = -0.1
+            }
+            force_update_dynamic_modifier = yes
+        }
+    }
+    focus = {
+        ##城市改造方案
+        id = ALF_rebuild_city_operation
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_rebuild_the_market_center
+        prerequisite = {
+            focus = ALF_build_more_house
+        }
+        prerequisite = {
+            focus = ALF_recovery_movement
+        }
+        cost = 5
+        x = 0
+        y = 2
+        available = {
+        }
+        completion_reward = {
+            unlock_decision_tooltip = ALF_Livability_for_city_loadout
+            custom_effect_tooltip = ALF_rebuild_city_operation_tt
+            add_to_variable = {
+                ALF_cic_construction_boost_factor_var = 0.1
+            }
+            force_update_dynamic_modifier = yes
+        }
+    }
+    focus = {
+        ##解决用电问题
+        id = ALF_solve_electric_problem
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_expand_goods_production
+        prerequisite = {
+            focus = ALF_expand_goods_production
+            focus = ALF_oil_is_industry_blood
+        }
+        available = {
+            has_completed_focus = ALF_change_outfit
+        }
+        cost = 5
+        x = -2
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            CEN = {
+                country_event = {
+                    id = ALF.19
+                }
+            }
+            custom_effect_tooltip = ALF_solve_electric_problem_tt
+            unlock_decision_tooltip = restore_state_electric_system_targeted_decision
+            if = {
+                limit = {
+                    NOT = {
+                        has_tech = Power_Development_T1
+                    }
+                }
+                set_technology = {
+                    Power_Development_T1 = 1
+                }
+            }
+        }
+    }
+    focus = {
+        ##修复水电站
+        id = ALF_rebuild_the_hydropower_station
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_solve_electric_problem
+        prerequisite = {
+            focus = ALF_solve_electric_problem
+        }
+        cost = 5
+        x = 0
+        y = 2
+        available = {
+            if = {
+                limit = {
+                    is_ai = no
+                }
+                has_livability_5pts = yes
+            }
+            200 = {
+                is_owned_and_controlled_by = ALF
+            }
+        }
+        cancel_if_invalid = no
+        continue_if_invalid = yes
+        completion_reward = {
+            ALF_use_livability_5_pts = yes
+            if = {
+                limit = {
+                    NOT = {
+                        has_tech = Ecological_power_generation_T1
+                    }
+                }
+                set_technology = {
+                    Ecological_power_generation_T1 = 1
+                }
+            }
+            200 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = biological_power_station
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            set_province_name = {
+                id = 7299
+                name = VICTORY_POINTS_7299_ALF
+            }
+            ALF_medium_improve_livability_modifier_effect = yes
+        }
+    }
+    focus = {
+        ##蓄势待发
+        id = ALF_be_ready_for_action
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_rebuild_the_hydropower_station
+        prerequisite = {
+            focus = ALF_resource_produce
+            focus = ALF_rebuild_city_operation
+        }
+        cost = 5
+        x = 0
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            custom_effect_tooltip = ALF_be_ready_for_action_tt
+            add_to_variable = {
+                ALF_war_support_factor_var = 0.1
+            }
+        }
+    }
+    ##收尾
+    focus = {
+        ##人口普查
+        id = ALF_residential_census
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_be_ready_for_action
+        prerequisite = {
+            focus = ALF_we_can_achieve_the_goal
+            focus = ALF_be_ready_for_action
+        }
+        cost = 5
+        x = -3
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            add_ideas = ALF_population_investigate
+        }
+    }
+    ########流亡者外交线#######
+    focus = {
+        ##改头换面
+        id = ALF_change_outfit
+        icon = GFX_goal_unknown
+        cost = 4
+        x = 30
+        y = 1
+        available = {
+        }
+        allow_branch = {
+            ##拥有标签：第二阶段
+            has_country_flag = ALF_phrase_2_flag
+        }
+        completion_reward = {
+            set_cosmetic_tag = ALF_PMC_Company
+            create_faction = ALF_Faction
+        }
+    }
+    focus = {
+        ##接触红冬
+        id = ALF_contact_redwinter
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_change_outfit
+        prerequisite = {
+            focus = ALF_change_outfit
+        }
+        mutually_exclusive = {
+            focus = ALF_contact_gehenna
+        }
+        cost = 4
+        x = -4
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            army_experience = 50
+            country_event = {
+                id = ALF.23
+            }
+        }
+    }
+    focus = {
+        ##接触格黑娜
+        id = ALF_contact_gehenna
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_change_outfit
+        prerequisite = {
+            focus = ALF_change_outfit
+        }
+        mutually_exclusive = {
+            focus = ALF_contact_redwinter
+        }
+        cost = 4
+        x = -2
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            army_experience = 50
+            country_event = {
+                id = ALF.26
+            }
+        }
+    }
+    focus = {
+        ##技术交流
+        id = ALF_technology_exchange
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_contact_gehenna
+        prerequisite = {
+            focus = ALF_contact_redwinter
+            focus = ALF_contact_gehenna
+        }
+        cost = 4
+        x = -1
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            ALF_reduce_technology_left_behind_effect = yes
+        }
+    }
+    focus = {
+        ##改革作战参谋部
+        id = ALF_reform_staff_department
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_technology_exchange
+        prerequisite = {
+            focus = ALF_technology_exchange
+        }
+        cost = 4
+        x = 0
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            custom_effect_tooltip = ALF_reform_staff_department_tt_tt
+            ##红冬学生会
+            if = {
+                limit = {
+                    has_country_flag = ALF_redwinter_guards_staff_event_flag
+                }
+                custom_effect_tooltip = ALF_reform_staff_department_tt
+                show_unit_leaders_tooltip = ALF_redwinter_guards_staff
+                show_ideas_tooltip = ALF_redwinter_guards_staff_theorist
+                ##
+                set_country_flag = ALF_redwinter_guards_staff_flag
+            }
+            ##红冬劳务局
+            if = {
+                limit = {
+                    has_country_flag = ALF_redwinter_workers_staff_event_flag
+                }
+                custom_effect_tooltip = ALF_reform_staff_department_tt
+                show_unit_leaders_tooltip = ALF_redwinter_workers_staff
+                show_ideas_tooltip = ALF_redwinter_workers_staff_theorist
+                ##
+                set_country_flag = ALF_redwinter_workers_staff_flag
+            }
+            ##万魔殿
+            if = {
+                limit = {
+                    has_country_flag = ALF_gehenna_Pandemonium_staff_event_flag
+                }
+                custom_effect_tooltip = ALF_reform_staff_department_tt
+                show_unit_leaders_tooltip = ALF_gehenna_Pandemonium_staff
+                show_ideas_tooltip = ALF_gehenna_Pandemonium_staff_theorist
+                ##
+                set_country_flag = ALF_gehenna_Pandemonium_staff_flag
+            }
+            ##风纪委员会
+            if = {
+                limit = {
+                    has_country_flag = ALF_gehenna_perfect_team_staff_event_flag
+                }
+                custom_effect_tooltip = ALF_reform_staff_department_tt
+                show_unit_leaders_tooltip = ALF_gehenna_perfect_team_staff
+                show_ideas_tooltip = ALF_gehenna_perfect_team_staff_theorist
+                ##
+                set_country_flag = ALF_gehenna_perfect_team_staff_flag
+            }
+        }
+    }
+    focus = {
+        ##接触阿拜多斯
+        id = ALF_abydos_problem
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_change_outfit
+        prerequisite = {
+            focus = ALF_change_outfit
+        }
+        cost = 4
+        x = 0
+        y = 2
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = ALF_abydos_problem_tt
+                always = no
+            }
+        }
+        completion_reward = {
+        }
+    }
+    focus = {
+        ##与阿拜多斯贸易
+        id = ALF_abydos_trade
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_abydos_problem
+        prerequisite = {
+            focus = ALF_abydos_problem
+        }
+        cost = 4
+        x = -1
+        y = 1
+        available = {
+        }
+        completion_reward = {
+        }
+    }
+    focus = {
+        ##支持阿拜多斯
+        id = ALF_support_abydos
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_abydos_problem
+        prerequisite = {
+            focus = ALF_abydos_problem
+        }
+        cost = 4
+        x = 1
+        y = 1
+        available = {
+        }
+        completion_reward = {
+        }
+    }
+    focus = {
+        ##共同战争
+        id = ALF_together_for_victory
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_support_abydos
+        prerequisite = {
+            focus = ALF_support_abydos
+        }
+        prerequisite = {
+            focus = ALF_abydos_trade
+        }
+        cost = 4
+        x = -1
+        y = 1
+        available = {
+        }
+        completion_reward = {
+        }
+    }
+    focus = {
+        ##西街问题
+        id = ALF_destroy_wsg
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_change_outfit
+        prerequisite = {
+            focus = ALF_change_outfit
+        }
+        cost = 4
+        x = 3
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            custom_effect_tooltip = ALF_destroy_wsg_tt
+            if = {
+                limit = {
+                    NOT = {
+                        has_tech = recon_drone
+                    }
+                }
+                set_technology = {
+                    recon_drone = 1
+                }
+            }
+            add_equipment_to_stockpile = {
+                type = small_uav_recon_airframe
+                amount = 50
+                producer = ALF
+            }
+            200 = {
+                add_building_construction = {
+                    type = air_base
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+    focus = {
+        ##渗透敌人
+        id = ALF_infiltrate_enemy
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_destroy_wsg
+        prerequisite = {
+            focus = ALF_destroy_wsg
+        }
+        cost = 4
+        x = -1
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            add_collaboration = {
+                target = WSG
+                value = 0.3
+            }
+        }
+    }
+    focus = {
+        ##攻击训练
+        id = ALF_assault_trainning
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_destroy_wsg
+        prerequisite = {
+            focus = ALF_destroy_wsg
+        }
+        cost = 4
+        x = 1
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            add_ideas = ALF_combat_trainning
+        }
+    }
+    focus = {
+        ##支援飞行员们
+        id = ALF_support_the_pilots
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_destroy_wsg
+        prerequisite = {
+            focus = ALF_infiltrate_enemy
+        }
+        prerequisite = {
+            focus = ALF_assault_trainning
+        }
+        cost = 4
+        x = 0
+        y = 2
+        available = {
+        }
+        completion_reward = {
+            custom_effect_tooltip = ALF_support_the_pilots_tt
+            country_event = {
+                id = ALF.22
+            }
+        }
+    }
+    focus = {
+        ##枕戈待旦
+        id = ALF_ready_for_battle
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_assault_trainning
+        prerequisite = {
+            focus = ALF_assault_trainning
+        }
+        cost = 4
+        x = 1
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            add_war_support = 0.1
+            unlock_decision_tooltip = ALF_Livability_for_manpower
+            custom_effect_tooltip = ALF_ready_for_battle_tt
+            add_to_variable = {
+                ALF_AMF_max_dig_in_factor_var = 0.1
+            }
+            add_to_variable = {
+                ALF_AMF_dig_in_speed_factor_var = 0.1
+            }
+        }
+    }
+    focus = {
+        ##终结西街暴力团
+        id = ALF_end_wsg
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_ready_for_battle
+        prerequisite = {
+            focus = ALF_ready_for_battle
+        }
+        prerequisite = {
+            focus = ALF_support_the_pilots
+        }
+        cost = 4
+        x = -1
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            add_political_power = 50
+            add_command_power = 100
+            create_wargoal = {
+                target = WSG
+                type = ALF_pacify_target_wargoal
+            }
+            unlock_decision_tooltip = integrate_WSG_targeted_decision
+        }
+    }
+    focus = {
+        ##反凯撒秘密行动
+        id = ALF_infiltrate_kaiser
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_change_outfit
+        prerequisite = {
+            focus = ALF_change_outfit
+        }
+        cost = 4
+        x = 5
+        y = 1
+        available = {
+            WSG = {
+                exists = no
+            }
+        }
+        completion_reward = {
+            add_political_power = 25
+            country_event = {
+                id = ALF.32
+            }
+            hidden_effect = {
+                ALF = {
+                    ALF_EPW_calculate_power_score = yes
+                }
+                CAE = {
+                    ALF_EPW_calculate_power_score = yes
+                }
+                A47 = {
+                    ALF_EPW_calculate_power_score = yes
+                }
+            }
+        }
+    }
+    ########流亡者军事线#######
+    focus = {
+        ##新的开始
+        id = ALF_new_beginning
+        icon = GFX_goal_unknown
+        cost = 4
+        x = 47
+        y = 1
+        available = {
+        }
+        allow_branch = {
+            ##拥有标签：第二阶段
+            has_country_flag = ALF_phrase_2_flag
+        }
+        completion_reward = {
+            unlock_decision_category_tooltip = ALF_military_reform_decision_category
+            activate_mission = ALF_mrd_count_down_mission
+            ALF_initialize_military_reform_system_effect = yes
+            ALF_improve_military_reform_int_10 = yes
+        }
+    }
+    focus = {
+        ##联合技术研究所
+        id = ALF_united_research_facility
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_new_beginning
+        prerequisite = {
+            focus = ALF_new_beginning
+        }
+        cost = 4
+        x = -1
+        y = 1
+        available = {
+            has_completed_focus = ALF_support_the_pilots
+        }
+        completion_reward = {
+            add_research_slot = 1
+            if = {
+                limit = {
+                    197 = {
+                        is_owned_and_controlled_by = ROOT
+                    }
+                }
+                197 = {
+                    add_building_construction = {
+                        type = air_facility
+                        level = 1
+                        instant_build = yes
+                        province = 3971
+                    }
+                }
+            }
+        }
+    }
+    ###军事线左左
+    focus = {
+        ##建立空军
+        id = ALF_establish_air_force
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_united_research_facility
+        prerequisite = {
+            focus = ALF_united_research_facility
+        }
+        cost = 4
+        x = -5
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            air_experience = 100
+            add_tech_bonus = {
+                bonus = 0.5
+                uses = 1
+                category = uav
+            }
+            add_doctrine_cost_reduction = {
+                cost_reduction = 0.5
+                uses = 1
+                category = air_doctrine
+            }
+        }
+    }
+    focus = {
+        ##独立空军
+        id = ALF_an_independent_air_foce
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_establish_air_force
+        prerequisite = {
+            focus = ALF_establish_air_force
+        }
+        mutually_exclusive = {
+            focus = ALF_mission_air_foce
+        }
+        cost = 4
+        x = -1
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            add_tech_bonus = {
+                bonus = 0.5
+                uses = 1
+                category = fight_uav
+            }
+            custom_effect_tooltip = ALF_an_independent_air_foce_tt
+            add_to_variable = {
+                mrd_air_force_progress = 1
+            }
+            add_to_variable = {
+                ALF_AMF_air_superiority_efficiency_var = 0.1
+            }
+            add_to_variable = {
+                ALF_AMF_air_interception_detect_factor_var = 0.1
+            }
+            force_update_dynamic_modifier = yes
+        }
+    }
+    focus = {
+        ##任务空军
+        id = ALF_mission_air_foce
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_establish_air_force
+        prerequisite = {
+            focus = ALF_establish_air_force
+        }
+        mutually_exclusive = {
+            focus = ALF_an_independent_air_foce
+        }
+        cost = 4
+        x = 1
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            add_tech_bonus = {
+                bonus = 0.5
+                uses = 1
+                category = cas_uav
+            }
+            custom_effect_tooltip = ALF_mission_air_foce_tt
+            add_to_variable = {
+                mrd_air_force_progress = 1
+            }
+            add_to_variable = {
+                ALF_AMF_air_cas_efficiency_var = 0.1
+            }
+            add_to_variable = {
+                ALF_AMF_air_mission_efficiency_var = 0.1
+            }
+            force_update_dynamic_modifier = yes
+        }
+    }
+    focus = {
+        ##空中霸权
+        id = ALF_air_superiority
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_an_independent_air_foce
+        prerequisite = {
+            focus = ALF_an_independent_air_foce
+        }
+        cost = 4
+        x = -1
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            add_tech_bonus = {
+                bonus = 0.5
+                uses = 1
+                category = uav_upgrade
+            }
+            custom_effect_tooltip = ALF_air_superiority_tt
+            add_to_variable = {
+                mrd_air_force_progress = 1
+            }
+            add_to_variable = {
+                ALF_AMF_air_superiority_bonus_in_combat_var = 0.1
+            }
+            force_update_dynamic_modifier = yes
+        }
+    }
+    focus = {
+        ##JTAC
+        id = ALF_JTAC_support
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_an_independent_air_foce
+        prerequisite = {
+            focus = ALF_an_independent_air_foce
+            focus = ALF_mission_air_foce
+        }
+        cost = 4
+        x = 1
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            add_doctrine_cost_reduction = {
+                cost_reduction = 0.5
+                uses = 1
+                category = air_doctrine
+            }
+            custom_effect_tooltip = ALF_unlock_air_chief_tt
+            show_ideas_tooltip = ALF_Shibasaki_Ichika_air_chief
+        }
+    }
+    focus = {
+        ##任务效率
+        id = ALF_mission_effecience
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_an_independent_air_foce
+        prerequisite = {
+            focus = ALF_mission_air_foce
+        }
+        cost = 4
+        x = 3
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            add_tech_bonus = {
+                bonus = 0.5
+                uses = 1
+                category = uav_upgrade
+            }
+            custom_effect_tooltip = ALF_mission_effecience_tt
+            add_to_variable = {
+                mrd_air_force_progress = 1
+            }
+            add_to_variable = {
+                ALF_AMF_air_range_factor_var = 0.1
+            }
+            force_update_dynamic_modifier = yes
+        }
+    }
+    focus = {
+        ##遮天蔽日
+        id = ALF_above_sky
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_JTAC_support
+        prerequisite = {
+            focus = ALF_JTAC_support
+        }
+        cost = 4
+        x = 0
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            custom_effect_tooltip = ALF_above_sky_tt
+            add_to_variable = {
+                mrd_air_force_progress = 1
+            }
+            random_owned_state = {
+                limit = {
+                    is_owned_and_controlled_by = ALF
+                }
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            random_owned_state = {
+                limit = {
+                    is_owned_and_controlled_by = ALF
+                }
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            add_ideas = ALF_cover_the_sky
+        }
+    }
+    #####军事左中
+    focus = {
+        ##直升机技术
+        id = ALF_helicopter
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_united_research_facility
+        prerequisite = {
+            focus = ALF_united_research_facility
+        }
+        cost = 4
+        x = -1
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            if = {
+                limit = {
+                    NOT = {
+                        has_tech = Civilian_helicopter_T1
+                    }
+                }
+                set_technology = {
+                    Civilian_helicopter_T1 = 1
+                }
+            }
+            add_tech_bonus = {
+                bonus = 0.5
+                uses = 1
+                category = helicopter
+            }
+        }
+    }
+    focus = {
+        ##空中突击战术
+        id = ALF_air_assault_tactics
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_helicopter
+        prerequisite = {
+            focus = ALF_helicopter
+        }
+        cost = 4
+        x = 0
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            custom_effect_tooltip = ALF_air_assault_tactics_tt
+            hidden_effect = {
+                load_oob = "ALF_helichopters"
+            }
+        }
+    }
+    focus = {
+        ##攻击直升机
+        id = ALF_attack_helicopter
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_air_assault_tactics
+        prerequisite = {
+            focus = ALF_air_assault_tactics
+        }
+        cost = 4
+        x = 0
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            add_tech_bonus = {
+                bonus = 0.5
+                uses = 1
+                category = helicopter
+            }
+            add_tech_bonus = {
+                bonus = 0.5
+                uses = 1
+                category = helicopter_upgrade
+            }
+        }
+    }
+    focus = {
+        ##炮艇
+        id = ALF_air_gunship
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_air_assault_tactics
+        prerequisite = {
+            focus = ALF_air_assault_tactics
+        }
+        cost = 4
+        x = 2
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            add_tech_bonus = {
+                bonus = 0.5
+                uses = 1
+                category = cas_uav
+            }
+        }
+    }
+    focus = {
+        ##联合火力系统
+        id = ALF_integrated_firepower_system
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_attack_helicopter
+        prerequisite = {
+            focus = ALF_attack_helicopter
+            focus = ALF_air_gunship
+        }
+        cost = 4
+        x = 0
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            air_experience = 25
+            army_experience = 25
+            unlock_decision_tooltip = ALF_mrd_artillery_improve_decision
+        }
+    }
+    ##军事右
+    focus = {
+        ##过往教训
+        id = ALF_lessons_from_previous_battle
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_new_beginning
+        prerequisite = {
+            focus = ALF_new_beginning
+        }
+        cost = 4
+        x = 1
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            remove_ideas = ALF_partisan_army
+            add_timed_idea = {
+                idea = ALF_solving_partisan_army_1
+                days = 365
+            }
+            ALF_improve_military_reform_int_10 = yes
+        }
+    }
+    ##职业化训练
+    focus = {
+        id = ALF_professional_trainning
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_lessons_from_previous_battle
+        prerequisite = {
+            focus = ALF_lessons_from_previous_battle
+        }
+        cost = 4
+        x = 1
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            army_experience = 100
+            unlock_decision_tooltip = ALF_mrd_trainning_improve_decision
+        }
+    }
+    ##磨砺利刃
+    focus = {
+        id = ALF_sharp_the_blade
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_lessons_from_previous_battle
+        prerequisite = {
+            focus = ALF_lessons_from_previous_battle
+        }
+        cost = 4
+        x = 3
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            set_technology = {
+                Arius_1 = 1
+            }
+            country_event = {
+                id = ALF.29
+            }
+        }
+    }
+    ##士官学院
+    focus = {
+        id = ALF_establish_officer_school
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_sharp_the_blade
+        prerequisite = {
+            focus = ALF_sharp_the_blade
+        }
+        cost = 4
+        x = 1
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            custom_effect_tooltip = ALF_establish_officer_school_tt
+            add_to_variable = {
+                mrd_officer_progress = 1
+            }
+            add_to_variable = {
+                ALF_terrain_trait_xp_gain_factor_var = 0.05
+            }
+            add_to_variable = {
+                ALF_experience_gain_factor_var = 0.05
+            }
+            force_update_dynamic_modifier = yes
+            unlock_decision_tooltip = ALF_mrd_officer_improve_decision
+        }
+    }
+    ##装甲矛头
+    focus = {
+        id = ALF_armor_spearhead
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_professional_trainning
+        prerequisite = {
+            focus = ALF_professional_trainning
+        }
+        cost = 4
+        x = -1
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            custom_effect_tooltip = ALF_mrd_armor_improve_tt
+            add_to_variable = {
+                mrd_armor_progress = 1
+            }
+            add_to_variable = {
+                ALF_AMF_army_armor_attack_factor_var = 0.05
+            }
+            add_to_variable = {
+                ALF_AMF_army_armor_defence_factor_var = 0.05
+            }
+            force_update_dynamic_modifier = yes
+            unlock_decision_tooltip = ALF_mrd_armor_improve_decision
+        }
+    }
+    ##现代化作战
+    focus = {
+        id = ALF_moden_combat
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_professional_trainning
+        prerequisite = {
+            focus = ALF_professional_trainning
+            focus = ALF_sharp_the_blade
+        }
+        cost = 4
+        x = 1
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            add_tech_bonus = {
+                bonus = 0.5
+                uses = 2
+                category = infantry_weapons
+            }
+            custom_effect_tooltip = ALF_moden_combat_tt
+            add_to_variable = {
+                ALF_land_reinforce_rate_var = 0.02
+            }
+            add_to_variable = {
+                ALF_no_supply_grace_var = 48
+            }
+            force_update_dynamic_modifier = yes
+            unlock_decision_tooltip = ALF_mrd_modernize_improve_decision
+            unlock_decision_tooltip = ALF_Livability_for_mrd_speed_decision
+            custom_effect_tooltip = ALF_unlock_theorist_tt
+            show_ideas_tooltip = ALF_Morishita_Kaho_theorist
+        }
+    }
+    ##狂野而迅捷
+    focus = {
+        id = ALF_focus_speed
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_moden_combat
+        prerequisite = {
+            focus = ALF_professional_trainning
+        }
+        prerequisite = {
+            focus = ALF_moden_combat
+        }
+        mutually_exclusive = {
+            focus = ALF_elegant_combat
+        }
+        cost = 4
+        x = -1
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            army_experience = 25
+            add_doctrine_cost_reduction = {
+                cost_reduction = 0.5
+                uses = 2
+                category = cat_mobile_warfare
+            }
+        }
+    }
+    ##压倒性火力
+    focus = {
+        id = ALF_overwhelming_firepower
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_focus_speed
+        prerequisite = {
+            focus = ALF_focus_speed
+            focus = ALF_elegant_combat
+        }
+        mutually_exclusive = {
+            focus = ALF_strategic_roadmap
+        }
+        cost = 4
+        x = 0
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            army_experience = 25
+            add_doctrine_cost_reduction = {
+                cost_reduction = 0.5
+                uses = 2
+                category = cat_superior_firepower
+            }
+            custom_effect_tooltip = ALF_unlock_high_command_tt
+            show_ideas_tooltip = ALF_ALF_Saegusa_Yuwa_high_command
+        }
+    }
+    ##精准且优雅
+    focus = {
+        id = ALF_elegant_combat
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_moden_combat
+        prerequisite = {
+            focus = ALF_moden_combat
+        }
+        prerequisite = {
+            focus = ALF_sharp_the_blade
+        }
+        mutually_exclusive = {
+            focus = ALF_focus_speed
+        }
+        cost = 4
+        x = 1
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            army_experience = 25
+            add_doctrine_cost_reduction = {
+                cost_reduction = 0.5
+                uses = 2
+                category = cat_grand_battle_plan
+            }
+        }
+    }
+    ##战役路线
+    focus = {
+        id = ALF_strategic_roadmap
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_elegant_combat
+        prerequisite = {
+            focus = ALF_elegant_combat
+            focus = ALF_focus_speed
+        }
+        mutually_exclusive = {
+            focus = ALF_overwhelming_firepower
+        }
+        cost = 4
+        x = 0
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            army_experience = 25
+            add_doctrine_cost_reduction = {
+                cost_reduction = 0.5
+                uses = 2
+                category = cat_mass_assault
+            }
+            custom_effect_tooltip = ALF_unlock_high_command_tt
+            show_ideas_tooltip = ALF_Washino_Yuei_high_command
+        }
+    }
+    ##
+    focus = {
+        id = ALF_estabilish_Arius_armed_force
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_integrated_firepower_system
+        prerequisite = {
+            focus = ALF_integrated_firepower_system
+        }
+        prerequisite = {
+            focus = ALF_above_sky
+        }
+        prerequisite = {
+            focus = ALF_overwhelming_firepower
+            focus = ALF_strategic_roadmap
+        }
+        cost = 4
+        x = 2
+        y = 1
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = ALF_estabilish_Arius_armed_force_trigger_tt
+                check_variable = {
+                    mrd_total_progress > 20
+                }
+            }
+        }
+        completion_reward = {
+            custom_effect_tooltip = ALF_estabilish_Arius_armed_force_tt
+            add_to_variable = {
+                ALF_AMF_breakthrough_factor_var = 0.1
+            }
+            add_to_variable = {
+                ALF_AMF_army_attack_factor_var = 0.1
+            }
+            add_to_variable = {
+                ALF_AMF_army_defence_factor_var = 0.1
+            }
+        }
+    }
+    ######公司战争#######
+    focus = {
+        ##命运在召唤
+        id = ALF_fate_calls
+        icon = GFX_goal_unknown
+        cost = 4
+        x = 28
+        y = 11
+        allow_branch = {
+            has_global_flag = the_enterprise_war_begins
+        }
+        available = {
+            has_global_flag = the_enterprise_war_begins
+        }
+        completion_reward = {
+            custom_effect_tooltip = ALF_fate_calls_tt
+        }
+    }
+    focus = {
+        id = ALF_target_DCA
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_fate_calls
+        prerequisite = {
+            focus = ALF_fate_calls
+        }
+        cost = 2
+        x = -3
+        y = 1
+        available = {
+        }
+        bypass = {
+            OR = {
+                has_war_with = KHG
+                KHG = {
+                    exists = no
+                }
+            }
+        }
+        completion_reward = {
+            unlock_decision_tooltip = ALF_war_with_DCA_decision
+        }
+    }
+    focus = {
+        id = ALF_integrate_DCA
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_target_DCA
+        prerequisite = {
+            focus = ALF_target_DCA
+        }
+        cost = 4
+        x = 0
+        y = 2
+        available = {
+            DCA = {
+                exists = no
+            }
+        }
+        completion_reward = {
+            every_owned_state = {
+                limit = {
+                    is_core_of = DCA
+                }
+                add_core_of = ALF
+                remove_core_of = DCA
+            }
+        }
+    }
+    focus = {
+        id = ALF_target_KHG
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_fate_calls
+        prerequisite = {
+            focus = ALF_fate_calls
+        }
+        cost = 2
+        x = 3
+        y = 1
+        available = {
+        }
+        bypass = {
+            OR = {
+                has_war_with = KHG
+                KHG = {
+                    exists = no
+                }
+            }
+        }
+        completion_reward = {
+            unlock_decision_tooltip = ALF_war_with_KHG_decision
+        }
+    }
+    focus = {
+        id = ALF_integrate_KHG
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_target_KHG
+        prerequisite = {
+            focus = ALF_target_KHG
+        }
+        cost = 4
+        x = 0
+        y = 2
+        available = {
+            KHG = {
+                exists = no
+            }
+        }
+        completion_reward = {
+            every_owned_state = {
+                limit = {
+                    is_core_of = KHG
+                }
+                add_core_of = ALF
+                remove_core_of = KHG
+            }
+        }
+    }
+    focus = {
+        id = ALF_optimize_factory_output
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_fate_calls
+        prerequisite = {
+            focus = ALF_fate_calls
+        }
+        cost = 1
+        x = -1
+        y = 1
+        available = {
+        }
+        bypass = {
+            A47 = {
+                exists = no
+            }
+        }
+        completion_reward = {
+            add_timed_idea = {
+                idea = ALF_industrial_mobilization
+                days = 185
+            }
+        }
+    }
+    focus = {
+        id = ALF_extra_armed_force
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_fate_calls
+        prerequisite = {
+            focus = ALF_fate_calls
+        }
+        cost = 1
+        x = 1
+        y = 1
+        available = {
+        }
+        bypass = {
+            A47 = {
+                exists = no
+            }
+        }
+        completion_reward = {
+            add_timed_idea = {
+                idea = ALF_manpower_mobilization
+                days = 185
+            }
+        }
+    }
+    focus = {
+        id = ALF_warno
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_optimize_factory_output
+        prerequisite = {
+            focus = ALF_optimize_factory_output
+        }
+        prerequisite = {
+            focus = ALF_extra_armed_force
+        }
+        cost = 2
+        x = 1
+        y = 1
+        available = {
+        }
+        bypass = {
+            A47 = {
+                exists = no
+            }
+        }
+        completion_reward = {
+            add_war_support = 0.1
+            add_political_power = 50
+            add_command_power = 100
+            ALF_improve_livability_5_pts = yes
+        }
+    }
+    focus = {
+        id = ALF_target_blackmarket
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_warno
+        prerequisite = {
+            focus = ALF_warno
+        }
+        cost = 2
+        x = 0
+        y = 1
+        available = {
+        }
+        bypass = {
+            OR = {
+                has_war_with = A47
+                A47 = {
+                    exists = no
+                }
+            }
+        }
+        completion_reward = {
+            unlock_decision_tooltip = ALF_war_with_blackmarket_decision
+        }
+    }
+    #####公司战争-凯撒####
+    focus = {
+        id = ALF_difficult_situation
+        icon = GFX_focus_ARI_open_the_curtain
+        relative_position_id = ALF_target_blackmarket
+        cost = 1
+        x = 0
+        y = 1
+        prerequisite = {
+            focus = ALF_target_blackmarket
+        }
+        available = {
+            NOT = {
+                has_global_flag = EPW_ENDS_global_flag
+            }
+        }
+        bypass = {
+            has_global_flag = EPW_ENDS_global_flag
+        }
+        allow_branch = {
+            has_country_flag = ALF_EPW_STAGE2_flag
+        }
+        completion_reward = {
+            add_political_power = 25
+            add_command_power = 50
+        }
+    }
+    ##扩大空军
+    focus = {
+        id = ALF_enlarge_air_force
+        icon = GFX_focus_ARI_open_the_curtain
+        relative_position_id = ALF_difficult_situation
+        cost = 3
+        x = -2
+        y = 1
+        prerequisite = {
+            focus = ALF_difficult_situation
+        }
+        available = {
+            NOT = {
+                has_global_flag = EPW_ENDS_global_flag
+            }
+        }
+        bypass = {
+            has_global_flag = EPW_ENDS_global_flag
+        }
+        completion_reward = {
+            if = {
+                limit = {
+                    NOT = {
+                        has_tech = heavy_fighting_drone
+                    }
+                }
+                set_technology = {
+                    heavy_fighting_drone = 1
+                }
+            }
+            if = {
+                limit = {
+                    NOT = {
+                        has_tech = heavy_fighting_drone
+                    }
+                }
+                set_technology = {
+                    heavy_fighting_drone = 1
+                }
+            }
+            add_equipment_to_stockpile = {
+                type = heavy_uav_equipment_1
+                amount = 100
+                producer = ALF
+            }
+            add_equipment_to_stockpile = {
+                type = heavy_uav_cas_equipment_1
+                amount = 100
+                producer = ALF
+            }
+        }
+    }
+    ##对空高度警戒
+    focus = {
+        id = ALF_air_alert
+        icon = GFX_focus_ARI_open_the_curtain
+        relative_position_id = ALF_enlarge_air_force
+        cost = 2
+        x = 0
+        y = 2
+        prerequisite = {
+            focus = ALF_enlarge_air_force
+        }
+        available = {
+            NOT = {
+                has_global_flag = EPW_ENDS_global_flag
+            }
+        }
+        bypass = {
+            has_global_flag = EPW_ENDS_global_flag
+        }
+        completion_reward = {
+            ##得给雷达科技##
+            random_owned_state = {
+                limit = {
+                    is_owned_and_controlled_by = ALF
+                }
+                add_building_construction = {
+                    type = radar_station
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            random_owned_state = {
+                limit = {
+                    is_owned_and_controlled_by = ALF
+                }
+                add_building_construction = {
+                    type = radar_station
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            random_owned_state = {
+                limit = {
+                    is_owned_and_controlled_by = ALF
+                }
+                add_building_construction = {
+                    type = radar_station
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+    ##整合黑市领土
+    focus = {
+        id = ALF_integrate_black_market_cores
+        icon = GFX_focus_ARI_open_the_curtain
+        relative_position_id = ALF_difficult_situation
+        cost = 3
+        x = 0
+        y = 1
+        prerequisite = {
+            focus = ALF_difficult_situation
+        }
+        available = {
+            NOT = {
+                has_global_flag = EPW_ENDS_global_flag
+            }
+        }
+        bypass = {
+            has_global_flag = EPW_ENDS_global_flag
+        }
+        completion_reward = {
+            every_owned_state = {
+                limit = {
+                    is_core_of = A47
+                    NOT = {
+                        is_core_of = ALF
+                    }
+                }
+                add_core_of = ALF
+            }
+            every_owned_state = {
+                limit = {
+                    is_core_of = BMT
+                }
+                add_core_of = ALF
+                remove_core_of = BMT
+            }
+            every_owned_state = {
+                limit = {
+                    is_core_of = BMR
+                }
+                add_core_of = ALF
+                remove_core_of = BMR
+            }
+            every_owned_state = {
+                limit = {
+                    is_core_of = BMG
+                }
+                add_core_of = ALF
+                remove_core_of = BMG
+            }
+        }
+    }
+    ##恢复生产
+    focus = {
+        id = ALF_restore_new_area_production
+        icon = GFX_focus_ARI_open_the_curtain
+        relative_position_id = ALF_integrate_black_market_cores
+        cost = 2
+        x = -1
+        y = 1
+        prerequisite = {
+            focus = ALF_integrate_black_market_cores
+        }
+        available = {
+            NOT = {
+                has_global_flag = EPW_ENDS_global_flag
+            }
+        }
+        bypass = {
+            has_global_flag = EPW_ENDS_global_flag
+        }
+        completion_reward = {
+            if = {
+                limit = {
+                    223 = {
+                        is_owned_and_controlled_by = ALF
+                    }
+                }
+                223 = {
+                    add_extra_state_shared_building_slots = 2
+                    add_building_construction = {
+                        type = heavy_arms_factory
+                        level = 2
+                        instant_build = yes
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    221 = {
+                        is_owned_and_controlled_by = ALF
+                    }
+                }
+                221 = {
+                    add_extra_state_shared_building_slots = 1
+                    add_building_construction = {
+                        type = heavy_arms_factory
+                        level = 1
+                        instant_build = yes
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    195 = {
+                        is_owned_and_controlled_by = ALF
+                    }
+                }
+                195 = {
+                    add_extra_state_shared_building_slots = 2
+                    add_building_construction = {
+                        type = arms_factory
+                        level = 2
+                        instant_build = yes
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    222 = {
+                        is_owned_and_controlled_by = ALF
+                    }
+                }
+                222 = {
+                    add_extra_state_shared_building_slots = 2
+                    add_building_construction = {
+                        type = industrial_complex
+                        level = 2
+                        instant_build = yes
+                    }
+                }
+            }
+        }
+    }
+    ##动员政治
+    focus = {
+        id = ALF_politic_mobilization
+        icon = GFX_focus_ARI_open_the_curtain
+        relative_position_id = ALF_integrate_black_market_cores
+        cost = 2
+        x = 1
+        y = 1
+        prerequisite = {
+            focus = ALF_integrate_black_market_cores
+        }
+        available = {
+            NOT = {
+                has_global_flag = EPW_ENDS_global_flag
+            }
+        }
+        bypass = {
+            has_global_flag = EPW_ENDS_global_flag
+        }
+        completion_reward = {
+            add_timed_idea = {
+                idea = ALF_we_can_do_this_idea
+                days = 270
+            }
+        }
+    }
+    ##众志成城
+    focus = {
+        id = ALF_united_as_one
+        icon = GFX_focus_ARI_open_the_curtain
+        relative_position_id = ALF_politic_mobilization
+        cost = 2
+        x = -1
+        y = 1
+        prerequisite = {
+            focus = ALF_politic_mobilization
+        }
+        prerequisite = {
+            focus = ALF_restore_new_area_production
+        }
+        available = {
+            NOT = {
+                has_global_flag = EPW_ENDS_global_flag
+            }
+        }
+        bypass = {
+            has_global_flag = EPW_ENDS_global_flag
+        }
+        completion_reward = {
+            add_timed_idea = {
+                idea = ALF_united_as_on_idea
+                days = 270
+            }
+        }
+    }
+    ##对敌战术分析
+    focus = {
+        id = ALF_enemy_tactic_analysis
+        icon = GFX_focus_ARI_open_the_curtain
+        relative_position_id = ALF_difficult_situation
+        cost = 3
+        x = 2
+        y = 1
+        prerequisite = {
+            focus = ALF_difficult_situation
+        }
+        available = {
+            NOT = {
+                has_global_flag = EPW_ENDS_global_flag
+            }
+        }
+        bypass = {
+            has_global_flag = EPW_ENDS_global_flag
+        }
+        completion_reward = {
+            army_experience = 75
+            air_experience = 75
+        }
+    }
+    ##猛击软肋
+    focus = {
+        id = ALF_strike_at_weakness
+        icon = GFX_focus_ARI_open_the_curtain
+        relative_position_id = ALF_enemy_tactic_analysis
+        cost = 2
+        x = 0
+        y = 2
+        prerequisite = {
+            focus = ALF_enemy_tactic_analysis
+        }
+        available = {
+            NOT = {
+                has_global_flag = EPW_ENDS_global_flag
+            }
+        }
+        bypass = {
+            has_global_flag = EPW_ENDS_global_flag
+        }
+        completion_reward = {
+            CAP = {
+                add_timed_idea = {
+                    idea = ALF_hit_on_weakness
+                    days = 180
+                }
+            }
+            CAH = {
+                add_timed_idea = {
+                    idea = ALF_hit_on_weakness
+                    days = 180
+                }
+            }
+            CAB = {
+                add_timed_idea = {
+                    idea = ALF_hit_on_weakness
+                    days = 180
+                }
+            }
+            CAO = {
+                add_timed_idea = {
+                    idea = ALF_hit_on_weakness
+                    days = 180
+                }
+            }
+        }
+    }
+    ##米迦勒行动
+    focus = {
+        id = ALF_operation_michael
+        icon = GFX_focus_ARI_open_the_curtain
+        relative_position_id = ALF_united_as_one
+        cost = 2
+        x = 0
+        y = 1
+        prerequisite = {
+            focus = ALF_united_as_one
+        }
+        prerequisite = {
+            focus = ALF_air_alert
+        }
+        prerequisite = {
+            focus = ALF_strike_at_weakness
+        }
+        available = {
+            NOT = {
+                has_global_flag = EPW_ENDS_global_flag
+            }
+        }
+        bypass = {
+            has_global_flag = EPW_ENDS_global_flag
+        }
+        completion_reward = {
+            unlock_decision_tooltip = ALF_operation_michael_decision
+        }
+    }
+    ##冲滩国策##
+    focus = {
+        ##梦想升腾
+        id = ALF_dream_approaching
+        icon = GFX_goal_unknown
+        cost = 4
+        x = 38
+        y = 11
+        allow_branch = {
+            has_global_flag = EPW_ENDS_global_flag
+        }
+        available = {
+            always = no
+        }
+        completion_reward = {
+            add_stability = 0.1
+        }
+    }
+    focus = {
+        ##昨日之师
+        id = ALF_stand_up_from_defeat
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_dream_approaching
+        prerequisite = {
+            focus = ALF_dream_approaching
+        }
+        cost = 1
+        x = -3
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            remove_dynamic_modifier = {
+                modifier = ALF_defeated_in_civil_war
+            }
+        }
+    }
+    focus = {
+        ##决不辜负
+        id = ALF_not_again
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_stand_up_from_defeat
+        prerequisite = {
+            focus = ALF_stand_up_from_defeat
+        }
+        prerequisite = {
+            focus = ALF_judge_the_evil
+        }
+        cost = 1
+        x = 0
+        y = 4
+        available = {
+        }
+        completion_reward = {
+            add_war_support = 0.1
+            custom_effect_tooltip = ALF_not_again_tt
+            set_variable = {
+                ALF_party_Mysticism_ideology_drift_var = 0
+            }
+            force_update_dynamic_modifier = yes
+        }
+    }
+    focus = {
+        ##今日之事
+        id = ALF_call_of_duty
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_dream_approaching
+        prerequisite = {
+            focus = ALF_dream_approaching
+        }
+        cost = 1
+        x = 3
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            random_owned_state = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            custom_effect_tooltip = ALF_unlock_political_advisor_tt
+            show_ideas_tooltip = ALF_Shigeki_Niki_political_advisor
+        }
+    }
+    focus = {
+        ##寄往未来的书信
+        id = ALF_focus_future
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_call_of_duty
+        prerequisite = {
+            focus = ALF_call_of_duty
+        }
+        prerequisite = {
+            focus = ALF_our_stage_on_world
+        }
+        cost = 1
+        x = 0
+        y = 4
+        available = {
+        }
+        completion_reward = {
+            country_event = {
+                id = ALF.40
+            }
+        }
+    }
+    focus = {
+        ##维持工作民主
+        id = ALF_maintain_work_method
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_dream_approaching
+        prerequisite = {
+            focus = ALF_dream_approaching
+        }
+        cost = 2
+        x = 0
+        y = 2
+        available = {
+        }
+        completion_reward = {
+            add_political_power = 50
+            custom_effect_tooltip = ALF_maintain_work_method_tt
+            set_variable = {
+                ALF_party_Authoritarian_ideology_drift_var = 0
+            }
+            force_update_dynamic_modifier = yes
+        }
+    }
+    focus = {
+        ##历史如何看待我们
+        id = ALF_history_on_us
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_maintain_work_method
+        prerequisite = {
+            focus = ALF_maintain_work_method
+        }
+        cost = 1
+        x = -2
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            country_event = {
+                id = ALF.38
+            }
+        }
+    }
+    focus = {
+        ##暴君必得恶果
+        id = ALF_judge_the_evil
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_history_on_us
+        prerequisite = {
+            focus = ALF_history_on_us
+        }
+        cost = 1
+        x = 0
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            add_timed_idea = {
+                idea = ALF_day_of_judgement
+                days = 270
+            }
+        }
+    }
+    focus = {
+        ##薪酬公平
+        id = ALF_salary_balance
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_maintain_work_method
+        prerequisite = {
+            focus = ALF_maintain_work_method
+        }
+        cost = 2
+        x = 0
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            custom_effect_tooltip = ALF_salary_balance_tt
+            add_to_variable = {
+                ALF_party_non_core_manpower_var = 0.1
+            }
+            add_to_variable = {
+                ALF_party_resistance_target_var = -0.1
+            }
+            force_update_dynamic_modifier = yes
+        }
+    }
+    focus = {
+        ##稳定货币
+        id = ALF_stablize_current
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_salary_balance
+        prerequisite = {
+            focus = ALF_salary_balance
+        }
+        cost = 2
+        x = 0
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            custom_effect_tooltip = ALF_stablize_current_tt
+            add_to_variable = {
+                ALF_cic_construction_boost_factor_var = 0.1
+            }
+            force_update_dynamic_modifier = yes
+        }
+    }
+    focus = {
+        ##社会保障系统
+        id = ALF_Social_Security_System
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_stablize_current
+        prerequisite = {
+            focus = ALF_stablize_current
+        }
+        cost = 2
+        x = 0
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            custom_effect_tooltip = ALF_Social_Security_System_tt
+            add_to_variable = {
+                ALF_monthly_population_var = 0.1
+            }
+            set_variable = {
+                ALF_party_Progressivism_ideology_drift_var = 0.1
+            }
+            set_variable = {
+                ALF_party_Liberalism_ideology_drift_var = 0
+            }
+            force_update_dynamic_modifier = yes
+        }
+    }
+    focus = {
+        ##我们如何看待历史
+        id = ALF_us_on_history
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_maintain_work_method
+        prerequisite = {
+            focus = ALF_maintain_work_method
+        }
+        cost = 1
+        x = 2
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            country_event = {
+                id = ALF.37
+            }
+        }
+    }
+    focus = {
+        ##我们应有的一席之地
+        id = ALF_our_stage_on_world
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_us_on_history
+        prerequisite = {
+            focus = ALF_us_on_history
+        }
+        cost = 1
+        x = 0
+        y = 1
+        available = {
+        }
+        completion_reward = {
+            add_political_power = 100
+            drop_cosmetic_tag = yes
+            set_cosmetic_tag = ALF_Liberation_Front_cosmetic_tag
+        }
+    }
+    focus = {
+        ##测绘地下墓穴
+        id = ALF_mapping_the_tunnel
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_Social_Security_System
+        prerequisite = {
+            focus = ALF_not_again
+        }
+        prerequisite = {
+            focus = ALF_focus_future
+        }
+        prerequisite = {
+            focus = ALF_Social_Security_System
+        }
+        cost = 1
+        x = 0
+        y = 1
+        available = {
+        }
+        select_effect = {
+            country_event = {
+                id = ALF.39
+                days = 2
+            }
+        }
+        cancelable = no
+        completion_reward = {
+            custom_effect_tooltip = ALF_mapping_the_tunnel_tt
+            mark_focus_tree_layout_dirty = yes
+        }
+    }
+    focus = {
+        ##向最后的目标前进
+        id = ALF_toward_the_last_object
+        icon = GFX_focus_AFG_against_kabul
+        relative_position_id = ALF_mapping_the_tunnel
+        prerequisite = {
+            focus = ALF_mapping_the_tunnel
+        }
+        allow_branch = {
+            has_completed_focus = ALF_mapping_the_tunnel
+        }
+        cost = 1
+        x = 0
+        y = 1
+        available = {
+            NOT = {
+                has_country_flag = ALF_GBO_begins_flag
+            }
+        }
+        bypass = {
+            has_country_flag = ALF_GBO_begins_flag
+        }
+        cancel_trigger = {
+            has_country_flag = ALF_GBO_begins_flag
+        }
+        cancelable = no
+        cancel_if_invalid = yes
+        will_lead_to_war_with = ARI
+        completion_reward = {
+            create_wargoal = {
+                target = ARI
+                type = ALF_2nd_civilwar_goal
+            }
+            custom_effect_tooltip = ALF_toward_the_last_object_tt
+        }
+    }
+    focus = {
+        ##针对性后勤设计
+        id = ALF_customized_the_supplyline
+        icon = GFX_focus_generic_reinforcing_the_supply_network
+        relative_position_id = ALF_toward_the_last_object
+        prerequisite = {
+            focus = ALF_toward_the_last_object
+        }
+        cost = 1
+        x = -2
+        y = 1
+        bypass = {
+            ARI = {
+                exists = no
+            }
+        }
+        available = {
+            has_war_with = ARI
+        }
+        completion_reward = {
+            add_timed_idea = {
+                idea = ALF_customized_the_supplyline
+                days = 90
+            }
+            unlock_decision_tooltip = ALF_GBO_neutralise_ARI_gov_decision
+        }
+    }
+    focus = {
+        ##强袭作战
+        id = ALF_storm_the_frontline
+        icon = GFX_focus_generic_combined_arms
+        relative_position_id = ALF_toward_the_last_object
+        prerequisite = {
+            focus = ALF_toward_the_last_object
+        }
+        cost = 1
+        x = 2
+        y = 1
+        bypass = {
+            ARI = {
+                exists = no
+            }
+        }
+        available = {
+            has_war_with = ARI
+        }
+        completion_reward = {
+            add_timed_idea = {
+                idea = ALF_speed_and_breakthrough
+                days = 90
+            }
+        }
+    }
+    focus = {
+        ##联络游击队
+        id = ALF_contact_the_resistants
+        icon = GFX_focus_ARG_no_gods_no_masters
+        relative_position_id = ALF_toward_the_last_object
+        prerequisite = {
+            focus = ALF_toward_the_last_object
+        }
+        cost = 1
+        x = 0
+        y = 1
+        bypass = {
+            ARI = {
+                exists = no
+            }
+        }
+        available = {
+            has_war_with = ARI
+        }
+        completion_reward = {
+            custom_effect_tooltip = ALF_contact_the_resistants_tt
+            hidden_effect = {
+                load_oob = "ALF_oob_partisans"
+            }
+            country_event = {
+                id = ALF.43
+            }
+            ARI = {
+                country_event = {
+                    id = ALF.43
+                }
+            }
+            unlock_decision_tooltip = ALF_GBO_cooperate_government_decision
+        }
+    }
+    focus = {
+        ##吹响号角
+        id = ALF_Sound_the_bugle
+        icon = GFX_focus_ARG_defense_and_democracy
+        relative_position_id = ALF_contact_the_resistants
+        prerequisite = {
+            focus = ALF_contact_the_resistants
+        }
+        cost = 1
+        x = 0
+        y = 1
+        bypass = {
+            ARI = {
+                exists = no
+            }
+        }
+        available = {
+            has_war_with = ARI
+        }
+        completion_reward = {
+            add_command_power = 50
+            unlock_decision_tooltip = ALF_GBO_assault_decision
+        }
+    }
+    ###重建阿里乌斯###
+    focus = {
+        ##长路归乡
+        id = ALF_a_long_way_back_home
+        icon = GFX_goal_unknown
+        cost = 521.5
+        x = 10
+        y = 11
+        bypass = {
+        }
+        available = {
+            always = no
+        }
+        allow_branch = {
+            has_country_flag = ALF_Gabriel_operation_success
+        }
+        completion_reward = {
+            add_ideas = ALF_recover_from_civil_war
+            add_ideas = ALF_peace_sickness
+            every_state = {
+                limit = {
+                    is_core_of = ARI
+                    is_owned_and_controlled_by = ALF
+                }
+                add_dynamic_modifier = {
+                    modifier = ALF_ruins_of_civil_war_dynamic_modifier
+                }
+            }
+        }
+    }
+    focus = {
+        ##审判过去之罪恶
+        id = ALF_judge_the_yesterdays_evil
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_a_long_way_back_home
+        prerequisite = {
+            focus = ALF_a_long_way_back_home
+        }
+        cost = 3
+        x = -4
+        y = 1
+        bypass = {
+        }
+        available = {
+        }
+        completion_reward = {
+            country_event = {
+                id = ALF.55
+            }
+        }
+    }
+    focus = {
+        ##修订学院宪章##
+        id = ALF_Amend_the_Constitution
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_judge_the_yesterdays_evil
+        prerequisite = {
+            focus = ALF_judge_the_yesterdays_evil
+        }
+        cost = 3
+        x = 0
+        y = 1
+        bypass = {
+        }
+        available = {
+        }
+        completion_reward = {
+            add_political_power = 50
+            add_ideas = ALF_new_constitution
+            country_event = {
+                id = ALF.64
+            }
+        }
+    }
+    focus = {
+        ##沿用旧制
+        id = ALF_the_old_ways
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_Amend_the_Constitution
+        prerequisite = {
+            focus = ALF_Amend_the_Constitution
+        }
+        mutually_exclusive = {
+            focus = ALF_the_new_dawn
+        }
+        cost = 3
+        x = -1
+        y = 1
+        bypass = {
+        }
+        available = {
+            has_country_flag = ALF_support_the_old_ways_flag
+        }
+        completion_reward = {
+            add_ideas = ALF_atsuko_idea
+            remove_ideas = ALF_new_constitution
+            add_timed_idea = {
+                idea = ALF_new_constitution_1
+                days = 180
+            }
+        }
+    }
+    focus = {
+        ##打破陈规
+        id = ALF_the_new_dawn
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_Amend_the_Constitution
+        prerequisite = {
+            focus = ALF_Amend_the_Constitution
+        }
+        mutually_exclusive = {
+            focus = ALF_the_old_ways
+        }
+        cost = 3
+        x = 1
+        y = 1
+        bypass = {
+        }
+        available = {
+            has_country_flag = ALF_support_the_new_dawn_flag
+        }
+        completion_reward = {
+            add_ideas = ALF_root_out_old_story
+            remove_ideas = ALF_new_constitution
+            add_timed_idea = {
+                idea = ALF_new_constitution_1
+                days = 240
+            }
+        }
+    }
+    focus = {
+        ##重塑认知
+        id = ALF_Reshape_cognition
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_Amend_the_Constitution
+        prerequisite = {
+            focus = ALF_the_old_ways
+            focus = ALF_the_new_dawn
+        }
+        cost = 3
+        x = 0
+        y = 2
+        bypass = {
+        }
+        available = {
+        }
+        completion_reward = {
+            custom_effect_tooltip = ALF_Reshape_cognition_tt
+            add_to_variable = {
+                ALF_party_popularity_stability_factor_var = 0.2
+            }
+            add_to_variable = {
+                ALF_max_command_power_var = 20
+            }
+        }
+    }
+    focus = {
+        ##再教育运动
+        id = ALF_re_educate_movement
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_judge_the_yesterdays_evil
+        prerequisite = {
+            focus = ALF_judge_the_yesterdays_evil
+        }
+        cost = 3
+        x = -3
+        y = 1
+        bypass = {
+        }
+        available = {
+        }
+        completion_reward = {
+            custom_effect_tooltip = ALF_re_educate_movement_tt
+            every_possible_country = {
+                limit = {
+                    has_character = ARI_hiyori
+                }
+                random_character = {
+                    limit = {
+                        is_character = ARI_hiyori
+                    }
+                    remove_advisor_role = {
+                        character = ARI_hiyori
+                        slot = political_advisor
+                    }
+                    add_advisor_role = {
+                        character = ARI_hiyori
+                        #activate = yes
+                        advisor = {
+                            slot = high_command
+                            cost = 50
+                            idea_token = ARI_hiyori_high_command
+                            traits = {
+                                master_of_massive_bombing
+                            }
+                        }
+                        #activate_advisor = ARI_hiyuri_pa
+                    }
+                    set_nationality = ALF
+                }
+            }
+            set_portraits = {
+                character = ARI_hiyori
+                army = {
+                    small = "GFX_portrait_ALF_hiyuri_small"
+                }
+            }
+        }
+    }
+    focus = {
+        ##接纳彷徨者
+        id = ALF_Embrace_the_wanderers
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_re_educate_movement
+        prerequisite = {
+            focus = ALF_re_educate_movement
+        }
+        cost = 3
+        x = 0
+        y = 2
+        bypass = {
+        }
+        available = {
+        }
+        completion_reward = {
+            custom_effect_tooltip = ALF_Embrace_the_wanderers_tt
+            ##核心化土地##
+            every_owned_state = {
+                limit = {
+                    is_core_of = ARI
+                }
+                remove_core_of = ARI
+                add_core_of = ALF
+            }
+            every_owned_state = {
+                limit = {
+                    is_core_of = ARR
+                }
+                remove_core_of = ARR
+                add_core_of = ALF
+            }
+        }
+    }
+    #中线
+    focus = {
+        ##清扫今日之废墟
+        id = ALF_clear_todays_rubbles
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_a_long_way_back_home
+        prerequisite = {
+            focus = ALF_a_long_way_back_home
+        }
+        cost = 3
+        x = 0
+        y = 1
+        bypass = {
+        }
+        available = {
+        }
+        completion_reward = {
+            country_event = {
+                id = ALF.54
+            }
+            add_timed_idea = {
+                idea = ALF_clear_rubbles
+                days = 180
+            }
+        }
+    }
+    focus = {
+        ##启动救济计划
+        id = ALF_Implement_relief_plan
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_clear_todays_rubbles
+        prerequisite = {
+            focus = ALF_clear_todays_rubbles
+        }
+        cost = 3
+        x = 0
+        y = 1
+        bypass = {
+        }
+        available = {
+        }
+        completion_reward = {
+            add_political_power = 50
+            unlock_decision_tooltip = Implement_relief_plan_targeted_decision
+        }
+    }
+    focus = {
+        ##重建特鲁教堂
+        id = ALF_rebuild_the_chruch
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_Implement_relief_plan
+        prerequisite = {
+            focus = ALF_Implement_relief_plan
+        }
+        cost = 3
+        x = -1
+        y = 1
+        bypass = {
+        }
+        available = {
+        }
+        completion_reward = {
+            136 = {
+                set_building_level = {
+                    type = infrastructure
+                    level = 5
+                    instant_build = yes
+                }
+            }
+        }
+    }
+    focus = {
+        ##重建旧校舍
+        id = ALF_rebuild_the_old_school
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_Implement_relief_plan
+        prerequisite = {
+            focus = ALF_Implement_relief_plan
+        }
+        cost = 3
+        x = 1
+        y = 1
+        bypass = {
+        }
+        available = {
+        }
+        completion_reward = {
+            138 = {
+                set_building_level = {
+                    type = infrastructure
+                    level = 5
+                    instant_build = yes
+                }
+            }
+        }
+    }
+    focus = {
+        ##工作秩序
+        id = ALF_Restore_the_employment_environment
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_Implement_relief_plan
+        prerequisite = {
+            focus = ALF_rebuild_the_chruch
+        }
+        prerequisite = {
+            focus = ALF_rebuild_the_old_school
+        }
+        cost = 3
+        x = 0
+        y = 2
+        bypass = {
+        }
+        available = {
+        }
+        completion_reward = {
+            ##开启阿里乌斯建设工程
+            add_stability = 0.05
+            unlock_decision_tooltip = ALF_Livability_for_arius_city_loadout
+        }
+    }
+    focus = {
+        ##重新点亮阿里乌斯
+        id = ALF_enlighten_the_arius
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_Restore_the_employment_environment
+        prerequisite = {
+            focus = ALF_Restore_the_employment_environment
+        }
+        prerequisite = {
+            focus = ALF_Embrace_the_wanderers
+        }
+        prerequisite = {
+            focus = ALF_Reshape_cognition
+        }
+        cost = 3
+        x = -4
+        y = 1
+        bypass = {
+        }
+        available = {
+        }
+        completion_reward = {
+            remove_ideas = ALF_recover_from_civil_war
+            add_ideas = ALF_flag_waves
+        }
+    }
+    #右线
+    focus = {
+        ##筹划将来之阶梯
+        id = ALF_construct_tomorrows_stair
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_a_long_way_back_home
+        prerequisite = {
+            focus = ALF_a_long_way_back_home
+        }
+        cost = 3
+        x = 3
+        y = 1
+        bypass = {
+        }
+        available = {
+            has_global_flag = TRI_coup_complete_flag
+        }
+        completion_reward = {
+            country_event = {
+                id = ALF.56
+            }
+            add_ideas = ALF_new_diplomacy_posture
+        }
+    }
+    focus = {
+        ##派出特使
+        id = ALF_send_the_envoys
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_construct_tomorrows_stair
+        prerequisite = {
+            focus = ALF_construct_tomorrows_stair
+        }
+        cost = 3
+        x = 0
+        y = 1
+        bypass = {
+        }
+        available = {
+        }
+        completion_reward = {
+            country_event = {
+                id = ALF.58
+            }
+            every_possible_country = {
+                limit = {
+                    has_character = TRI_azusa
+                }
+                random_character = {
+                    limit = {
+                        is_character = TRI_azusa
+                    }
+                    set_nationality = ALF
+                }
+            }
+        }
+    }
+    focus = {
+        ##边界救难
+        id = ALF_open_the_border
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_send_the_envoys
+        prerequisite = {
+            focus = ALF_send_the_envoys
+        }
+        cost = 3
+        x = 0
+        y = 1
+        bypass = {
+        }
+        available = {
+        }
+        completion_reward = {
+            custom_effect_tooltip = ALF_open_the_border_tt
+            139 = {
+                add_manpower = 2000
+            }
+            530 = {
+                add_manpower = 1000
+            }
+        }
+    }
+    focus = {
+        ##赋予我们的使命
+        id = ALF_duty_calls_always
+        icon = GFX_goal_unknown
+        relative_position_id = ALF_open_the_border
+        prerequisite = {
+            focus = ALF_open_the_border
+        }
+        cost = 3
+        x = 0
+        y = 1
+        bypass = {
+        }
+        available = {
+        }
+        completion_reward = {
+            remove_ideas = ALF_peace_sickness
+            country_event = {
+                id = ALF.57
+            }
+            unlock_decision_category_tooltip = ALF_Uriel_operation_category
+            #unlock_decision_tooltip = ALF_UOP_infiltrate_target_decision
+            set_global_flag = EDEN_IRON_PACT_WAR_scenario_global_flag
+        }
+    }
+    ###最终决战
+    focus = {
+        ##第三次伊甸条约谈判
+        id = ALF_3rd_eden_pact_treaty
+        icon = GFX_focus_ARI_open_the_curtain
+        cost = 0.5
+        x = 19
+        y = 11
+        available = {
+            always = no
+        }
+        allow_branch = {
+            has_country_flag = ALF_ready_for_2nd_liberation_war_flag
+        }
+        completion_reward = {
+            news_event = {
+                id = ALF_news_event.11
+                days = 2
+            }
+        }
+    }
+    focus = {
+        ##一群失败者……
+        id = ALF_those_failured
+        icon = GFX_focus_ARI_open_the_curtain
+        cost = 1
+        x = -1
+        y = 1
+        relative_position_id = ALF_3rd_eden_pact_treaty
+        prerequisite = {
+            focus = ALF_3rd_eden_pact_treaty
+        }
+        completion_reward = {
+            country_event = {
+                id = ALF.59
+            }
+        }
+    }
+    focus = {
+        ##一群背弃者……
+        id = ALF_those_betrayed
+        icon = GFX_focus_ARI_open_the_curtain
+        cost = 1
+        x = 1
+        y = 1
+        relative_position_id = ALF_3rd_eden_pact_treaty
+        prerequisite = {
+            focus = ALF_3rd_eden_pact_treaty
+        }
+        completion_reward = {
+            country_event = {
+                id = ALF.60
+            }
+        }
+    }
+    focus = {
+        ##以及一个最绝望的同盟……
+        id = ALF_a_Desperate_Alliance
+        icon = GFX_focus_ARI_open_the_curtain
+        cost = 1
+        x = 0
+        y = 2
+        relative_position_id = ALF_3rd_eden_pact_treaty
+        prerequisite = {
+            focus = ALF_those_failured
+        }
+        prerequisite = {
+            focus = ALF_those_betrayed
+        }
+        completion_reward = {
+            country_event = {
+                id = ALF.61
+            }
+        }
+    }
+    focus = {
+        ##风纪委员
+        id = ALF_appeal_to_the_Discipline_Committee_Member
+        icon = GFX_focus_ARI_open_the_curtain
+        cost = 2
+        x = -2
+        y = 1
+        relative_position_id = ALF_a_Desperate_Alliance
+        prerequisite = {
+            focus = ALF_a_Desperate_Alliance
+        }
+        completion_reward = {
+            custom_effect_tooltip = ALF_and_ALLIES_BUFF_TT
+            add_ideas = ALF_stand_up_the_committee
+            hidden_effect = {
+                GER = {
+                    add_ideas = ALF_stand_up_the_committee
+                }
+                TRT = {
+                    add_ideas = ALF_stand_up_the_committee
+                }
+            }
+        }
+    }
+    focus = {
+        ##布道者
+        id = ALF_appeal_to_the_sisters
+        icon = GFX_focus_ARI_open_the_curtain
+        cost = 2
+        x = 0
+        y = 1
+        relative_position_id = ALF_a_Desperate_Alliance
+        prerequisite = {
+            focus = ALF_a_Desperate_Alliance
+        }
+        completion_reward = {
+            custom_effect_tooltip = ALF_and_ALLIES_BUFF_TT
+            add_ideas = ALF_they_shall_no_pass
+            hidden_effect = {
+                GER = {
+                    add_ideas = ALF_they_shall_no_pass
+                }
+                TRT = {
+                    add_ideas = ALF_they_shall_no_pass
+                }
+            }
+        }
+    }
+    focus = {
+        ##学生
+        id = ALF_appeal_to_the_students
+        icon = GFX_focus_ARI_open_the_curtain
+        cost = 2
+        x = 2
+        y = 1
+        relative_position_id = ALF_a_Desperate_Alliance
+        prerequisite = {
+            focus = ALF_a_Desperate_Alliance
+        }
+        completion_reward = {
+            custom_effect_tooltip = ALF_and_ALLIES_BUFF_TT
+            add_ideas = ALF_the_final_war
+            hidden_effect = {
+                GER = {
+                    add_ideas = ALF_the_final_war
+                }
+                TRT = {
+                    add_ideas = ALF_the_final_war
+                }
+            }
+        }
+    }
+    focus = {
+        ##条约同盟
+        id = ALF_eden_alliance
+        icon = GFX_focus_ARI_open_the_curtain
+        cost = 3
+        x = 0
+        y = 1
+        relative_position_id = ALF_appeal_to_the_sisters
+        prerequisite = {
+            focus = ALF_appeal_to_the_Discipline_Committee_Member
+        }
+        prerequisite = {
+            focus = ALF_appeal_to_the_sisters
+        }
+        prerequisite = {
+            focus = ALF_appeal_to_the_students
+        }
+        completion_reward = {
+            set_faction_name = ALF_EDEN_FACTION
+            ALF = {
+                add_to_faction = TRT
+                add_to_faction = GER
+            }
+            news_event = {
+                id = ALF_news_event.7
+            }
+            hidden_effect = {
+                country_event = {
+                    id = ALF.62
+                    days = 7
+                }
+            }
+        }
+    }
+    focus = {
+        ##准备第二次解放战争
+        id = ALF_prepared_for_2nd_liberation_war
+        icon = GFX_focus_ARI_open_the_curtain
+        cost = 3
+        x = 0
+        y = 1
+        relative_position_id = ALF_eden_alliance
+        prerequisite = {
+            focus = ALF_eden_alliance
+        }
+        completion_reward = {
+            custom_effect_tooltip = ALF_and_ALLIES_BUFF_TT
+            add_ideas = ALF_the_battle_with_no_step_back
+            hidden_effect = {
+                GER = {
+                    add_ideas = ALF_the_battle_with_no_step_back
+                }
+                TRT = {
+                    add_ideas = ALF_the_battle_with_no_step_back
+                }
+            }
+        }
+    }
+    focus = {
+        ##奔赴荣耀
+        id = ALF_way_for_glory
+        icon = GFX_focus_ARI_open_the_curtain
+        cost = 3
+        x = 0
+        y = 1
+        relative_position_id = ALF_prepared_for_2nd_liberation_war
+        prerequisite = {
+            focus = ALF_prepared_for_2nd_liberation_war
+        }
+        completion_reward = {
+            custom_effect_tooltip = ALF_way_for_glory_tt
+            #set_cosmetic_tag = ALF_ARIUS_SCHOOL
+            hidden_effect = {
+                ROOT = {
+                    create_wargoal = {
+                        target = TRA
+                        type = ALF_revenge_target_wargoal
+                    }
+                }
+            }
+        }
+    }
+    ###战时国策树###
+    focus = {
+        ##光复战争
+        id = ALF_2nd_liberation_war
+        icon = GFX_focus_ARI_open_the_curtain
+        cost = 3
+        x = 0
+        y = 1
+        relative_position_id = ALF_way_for_glory
+        prerequisite = {
+            focus = ALF_way_for_glory
+        }
+        available = {
+            always = no
+        }
+        allow_branch = {
+            has_global_flag = ALF_THE_2ND_LIBERATION_WAR_BEGINS_NOW_GLOBAL_FLAG
+        }
+        completion_reward = {
+            add_command_power = 100
+        }
+    }
+
+    focus = {
+        ##旅者行动
+        id = ALF_traveller_operation
+        icon = GFX_focus_ARI_open_the_curtain
+        cost = 2
+        x = -3
+        y = 1
+        relative_position_id = ALF_2nd_liberation_war
+        prerequisite = {
+            focus = ALF_2nd_liberation_war
+        }
+        completion_reward = {
+            unlock_decision_tooltip = {
+                decision = ALF_UOP_begin_Traveller_operation_decision
+                show_effect_tooltip = yes
+                #show_modifiers = yes
+            }
+        }
+    }
+    focus = {
+        ##乐园行动
+        id = ALF_eden_operation
+        icon = GFX_focus_ARI_open_the_curtain
+        cost = 2
+        x = 0
+        y = 2
+        relative_position_id = ALF_traveller_operation
+        prerequisite = {
+            focus = ALF_traveller_operation
+        }
+        completion_reward = {
+            unlock_decision_tooltip = {
+                decision = ALF_UOP_begin_Eden_operation_decision
+                show_effect_tooltip = yes
+                #show_modifiers = yes
+            }
+        }
+    }
+    focus = {
+        ##三班倒
+        id = ALF_full_work_schedule
+        icon = GFX_focus_ARI_open_the_curtain
+        cost = 2
+        x = -1
+        y = 1
+        relative_position_id = ALF_2nd_liberation_war
+        prerequisite = {
+            focus = ALF_2nd_liberation_war
+        }
+        completion_reward = {
+            add_ideas = ALF_full_work_schedule_idea
+        }
+    }
+    focus = {
+        ##寻求协助
+        id = ALF_ask_for_support
+        icon = GFX_focus_ARI_open_the_curtain
+        cost = 2
+        x = 1
+        y = 1
+        relative_position_id = ALF_2nd_liberation_war
+        prerequisite = {
+            focus = ALF_2nd_liberation_war
+        }
+        completion_reward = {
+            custom_effect_tooltip = ALF_ask_for_support_tt
+            hidden_effect = {
+                every_possible_country = {
+                    limit = {
+                        OR = {
+                            tag = ABY
+                            is_ally_with = ABY
+                        }
+                    }
+                    add_ideas = ALF_volunteers_from_farway
+                }
+                every_possible_country = {
+                    limit = {
+                        OR = {
+                            tag = RWT
+                            is_ally_with = RWT
+                        }
+                    }
+                    add_ideas = ALF_volunteers_from_farway
+                }
+                every_possible_country = {
+                    limit = {
+                        OR = {
+                            tag = MIL
+                            is_ally_with = MIL
+                        }
+                    }
+                    add_ideas = ALF_volunteers_from_farway
+                }
+                every_possible_country = {
+                    limit = {
+                        OR = {
+                            tag = SHA
+                            is_ally_with = SHA
+                        }
+                    }
+                    add_ideas = ALF_volunteers_from_farway
+                }
+                every_possible_country = {
+                    limit = {
+                        OR = {
+                            tag = HYA
+                            is_ally_with = HYA
+                        }
+                    }
+                    add_ideas = ALF_volunteers_from_farway
+                }
+            }
+        }
+    }
+    focus = {
+        ##停止重建
+        id = ALF_stop_rebuild_plan
+        icon = GFX_focus_ARI_open_the_curtain
+        cost = 3
+        x = 0
+        y = 2
+        relative_position_id = ALF_2nd_liberation_war
+        prerequisite = {
+            focus = ALF_full_work_schedule
+        }
+        prerequisite = {
+            focus = ALF_ask_for_support
+        }
+        completion_reward = {
+            add_ideas = ALF_cancel_rebuild_plan_idea
+        }
+    }
+    focus = {
+        ##总体战
+        id = ALF_total_war
+        icon = GFX_focus_ARI_open_the_curtain
+        cost = 3
+        x = 0
+        y = 1
+        relative_position_id = ALF_stop_rebuild_plan
+        prerequisite = {
+            focus = ALF_stop_rebuild_plan
+        }
+        completion_reward = {
+            add_ideas = ecolaws_ALF_total_war_economic
+        }
+    }
+    focus = {
+        ##牧羊人
+        id = ALF_shepherd
+        icon = GFX_focus_ARI_open_the_curtain
+        cost = 2
+        x = 3
+        y = 1
+        relative_position_id = ALF_2nd_liberation_war
+        prerequisite = {
+            focus = ALF_2nd_liberation_war
+        }
+        completion_reward = {
+            unlock_decision_tooltip = {
+                decision = ALF_UOP_shepherd_operation_decision
+                show_effect_tooltip = yes
+                #show_modifiers = yes
+            }
+        }
+    }
+    focus = {
+        ##传道者行动
+        id = ALF_peacher
+        icon = GFX_focus_ARI_open_the_curtain
+        cost = 2
+        x = 1
+        y = 1
+        relative_position_id = ALF_shepherd
+        prerequisite = {
+            focus = ALF_shepherd
+        }
+        completion_reward = {
+            unlock_decision_tooltip = {
+                decision = ALF_UOP_peacher_operation_decision
+                show_effect_tooltip = yes
+                #show_modifiers = yes
+            }
+        }
+    }
+    focus = {
+        ##另辟蹊径
+        id = ALF_another_way
+        icon = GFX_focus_ARI_open_the_curtain
+        cost = 2
+        x = 0
+        y = 2
+        relative_position_id = ALF_shepherd
+        prerequisite = {
+            focus = ALF_shepherd
+        }
+        completion_reward = {
+            unlock_decision_tooltip = {
+                decision = ALF_UOP_geh_operation_decision
+                show_effect_tooltip = yes
+                show_modifiers = yes
+            }
+        }
+    }
+    focus = {
+        ##最终机会
+        id = ALF_final_chance
+        icon = GFX_focus_ARI_open_the_curtain
+        cost = 2
+        x = 0
+        y = 1
+        relative_position_id = ALF_total_war
+        prerequisite = {
+            focus = ALF_total_war
+        }
+        available = {
+            has_war = yes
+            TRT = {
+                has_capitulated = yes
+            }
+            GER = {
+                has_capitulated = yes
+            }
+        }
+        completion_reward = {
+            custom_effect_tooltip = ALF_final_chance_tt
+            add_timed_idea = {
+                idea = ALF_Unlimited_bombing
+                days = 30
+            }
+            set_global_flag = ALF_FINAL_CHANCE_USED_GLOBAL_FLAG
+            BSE_Fire_Super_Event_index_10 = yes
+        }
+    }
+    #######结算#######
+    focus = {
+        ##如日方升
+        id = ALF_like_the_rising_sun
+        icon = GFX_focus_ARI_open_the_curtain
+        cost = 3
+        x = 2
+        y = 1
+        available = {
+            always = no
+        }
+        allow_branch = {
+            has_country_flag = ALF_2ND_LIBERATION_WAR_SUCCESS_FLAG
+        }
+        completion_reward = {
+        }
+    }
+    focus = {
+        ##登上世界舞台
+        id = ALF_visit_schale
+        icon = GFX_focus_ARI_open_the_curtain
+        cost = 3
+        relative_position_id = ALF_like_the_rising_sun
+        prerequisite = {
+            focus = ALF_like_the_rising_sun
+        }
+        x = 0
+        y = 1
+        completion_reward = {
+            add_political_power = 100
+        }
+    }
+    focus = {
+        ##美丽新世界
+        id = ALF_bright_new_world
+        icon = GFX_focus_ARI_open_the_curtain
+        cost = 2
+        relative_position_id = ALF_visit_schale
+        prerequisite = {
+            focus = ALF_visit_schale
+        }
+        x = 0
+        y = 1
+        completion_reward = {
+            custom_effect_tooltip = ALF_bright_new_world_tt
+            country_event = {
+                id = ALF.66
+            }
+        }
+    }
 }

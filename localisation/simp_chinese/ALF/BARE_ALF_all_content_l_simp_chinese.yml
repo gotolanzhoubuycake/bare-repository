@@ -1,29 +1,65 @@
 ﻿l_simp_chinese:
+ BARE_SuperEvent_Song_for_the_Beyond: "再会之歌"
+ BARE_SuperEvent_Sound_lap_time: "LAP TIME"
 ####################
 ##变身名字
 ####################
  ALF_PMC_Company: "哨兵防务"
  ALF_PMC_Company_DEF: "哨兵防务"
  ALF_PMC_Company_ADJ: "哨兵防务"
+
+ ALF_Liberation_Front_cosmetic_tag: "阿里乌斯解放阵线"
+ ALF_Liberation_Front_cosmetic_tag_DEF: "阿里乌斯解放阵线"
+ ALF_Liberation_Front_cosmetic_tag_ADJ: "阿里乌斯解放阵线"
+ 
+ ALF_SchoolName_Cosmetic: "阿里乌斯分校"
+ ALF_SchoolName_Cosmetic_DEF: "阿里乌斯分校"
+ ALF_SchoolName_Cosmetic_ADJ: "阿里乌斯分校"
+
+ TRT_GOV_COSMETIC: "圣三一临时委员会"
+ TRT_GOV_COSMETIC_DEF: "圣三一临时委员会"
+ TRT_GOV_COSMETIC_ADJ: "圣三一临时委员会"
+
+ GEH_GOV_COSMETIC: "格黑娜自由同盟"
+ GEH_GOV_COSMETIC_DEF: "格黑娜自由同盟"
+ GEH_GOV_COSMETIC_ADJ: "格黑娜自由同盟"
+
  ALF_Faction: "联合解放阵线"
+ TRA_GEA_Axis: "钢铁协定"
+ ALF_EDEN_FACTION: "伊甸条约"
+
+ ALF_ARIUS_SCHOOL: "阿里乌斯分校"
+ 
+ CAH_ALF_subject: "高新开发区"  
+
 ####################
 ##国策！！！
 ####################
- ALF_Common_Focus: "流亡者国策树：站稳脚跟"
+ ALF_Common_Focus: "流亡者国策树"
  ALF_a_great_march: "一场伟大的逃亡"
+ ALF_a_great_march_desc: "自阿里乌斯陷入内战起，至今已十年有余。然而，漫长的内战，以出人意料的方式结尾：“夫人”攫取了阿里乌斯的王冠，把它化为寂静的牢笼。\n\n流亡者只是内战中的一个不起眼的输家而已，但幸运的是，它的故事尚未结束，在“领袖”的带领下，这支队伍跌跌撞撞地前行，最终在黑市地带找到了落脚之地。\n\n对这支伤痕累累，但从未放弃的队伍而言，光复家园依然还是一件遥遥无期的幻梦，但假以时日，鹿死谁手也未曾可知……"
  ALF_memory_of_old_home: "故园"
+ ALF_memory_of_old_home_desc: "卧龙跃马终黄土，人事音书漫寂寥。"
  ALF_recovery_old_stuff: "收敛旧物"
+ ALF_recovery_old_stuff_desc: "有一些辎重在逃亡中得以保存。它们中的多数已经在经年累月的使用中变成了废铁，但仍有一些物资能够派上用场。"
  ALF_settled_in_new_home: "新家"
+ ALF_settled_in_new_home_desc: "也许这不是旅程的终点，但没人能拒绝一处阳光下的休憩之地。"
  ALF_begin_new_journey: "播下种子"
+ ALF_begin_new_journey_desc: "流亡者只是失败了，但从来没有被打倒。我们从不畏惧于一砖一瓦重建我们的家园，更有勇气重新出发。"
  ALF_stand_our_ground: "立足之地"
+ ALF_stand_our_ground_desc: "阳光下的新家园。\n\n——“领袖”给流亡者们的承诺，如今已达成一半。在这片新土地上，流亡者终于有了一个可以称之为家的地方。新的希望将在这里生根发芽，并终有一天会成为新的参天巨木：等到那一天，流亡者们将骑着骏马重新踏足故乡的土地。"
  ALF_threat_is_coming: "挥之不去……"
+ ALF_threat_is_coming_desc: "“夫人”的阴影似乎从未离开这支队伍的上空。但现在，敌人已经重新出现，并虎视眈眈。不论这些人来自何方，怀揣何种意图，流亡者都必须对此报以最大的警惕。"
  ALF_operation_protect_wing: "「庇护之羽」行动"
  ALF_operation_protect_wing_desc: "流亡者遭遇了一场无耻且残暴的袭击。它要么是夫人策划的，要么就是与夫人有关。考验流亡者新家园的时刻到了，在这片名为黑市的无法地带中，流亡者只有一条路可走：要么胜利，要么毁灭。"
  ALF_establish_law_enforement_team: "武装警备团"
+ ALF_establish_law_enforement_team_desc: "在黑市地带居住的学生——或者前学生，似乎不在少数。她们中的大多数都承受着被帮派或者犯罪份子骚扰着的生活。如果流亡者想在本地征召一直保卫家园的队伍，那这些学生就是最合适的人员。"
  ALF_establish_law_enforement_team_focus_tt: "组建6个由§Y民兵§!组成的作战部队。"
 
  ALF_Enable_abandoned_inventory: "重启废弃库存"
+ ALF_Enable_abandoned_inventory_desc: "流亡者在本地找到了许多已经废弃的仓库。储存其中的物资都状况不佳，但若是精心维护修复，也能重新派上用场。"
  ALF_Reorganize_the_postal_system: "恢复邮政系统"
+ ALF_Reorganize_the_postal_system_desc: "邮局——或者所有类似的公共设施，是一个政权存在的证明。如果能重新恢复这些遭到废弃的公共服务，整个社区就能更加紧密地联结在一起，并提高流亡者的建设效率。"
  ALF_Conduct_community_surveys: "进行社区侦察"
  ALF_Conduct_community_surveys_desc: "现在的一大问题是，流亡者缺乏对这片地区的了解。现如今，袭击者藏在暗处，而流亡者却被迫处于明处。显然，流亡者必须了解这片区域的地形、居民、帮派，以及其他一切，才能在这片区域立足。\n\n这就意味着，组建一支精干的侦察队伍是当务之急——幸运的是，流亡者们了解阿里乌斯学园的情报部门是如何运作的，尽管条件简陋，但她们可以复制出一个精巧但五脏俱全的微缩情报部，并以此为起点执行侦察任务。"
  ALF_Intelligence_Agency: "特别勤务处"
@@ -33,11 +69,15 @@
  ALF_target_COS_desc: "§Y圣徒升天会§!是由圣徒会建立的古老修女社团，但现在，它的组织已经腐败堕落。不过，该区域的居民仍然相信升天会可以庇护他们，我们可以利用这一点整合该区域。"
  ALF_gain_core_of_the_state_tt: "将§Y占领地区§!整合至流亡者的控制之中。"
  ALF_target_AVG: "「利非订权杖」行动"
+ ALF_target_AVG_desc: "没有背叛小到可以原谅。袭击流亡者的，是一群曾经的阿里乌斯学生。既然她们已经放弃了自己的理想与荣耀，那流亡者也不介意进行一次“门户清理”。"
  ALF_operation_protect_wing_has_completed_flag: "「庇护之羽」行动：§G已完成§!"
  ALF_Raise_the_flag: "升起旗帜"
+ ALF_Raise_the_flag_desc: "旗帜只是一件平凡的物件，但却寄托着希望与梦想。流亡者在旧学生会的精英们手中夺得了一面历史可以追溯到内战之前的旧校旗。对流亡者来说，它象征着流亡者的过去，也昭示着她们的未来，更重要的是，在这面旗帜之下，她们终于可以再一次称呼自己为“阿里乌斯”。"
 
  ALF_a_long_way_to_go: "长路漫漫"
+ ALF_a_long_way_to_go_tt: "§C开始新的征程。§!"
  ALF_lesson_from_civil_war: "内战的教训"
+ ALF_lesson_from_civil_war_desc: "显然，内战的失败是一次极为惨痛的教训。但我们不能仅仅向失败学习失败，这种失败情绪对我们的发展毫无益处。因此，我们必须试着直面这一惨败，这不仅是指对军事失败的反思，亦要求着流亡者们从政治的失败中吸取教训。"
  ALF_stable_the_thoughts: "稳定人心"
  ALF_stable_the_thoughts_desc: "流亡者已经从最危险的时刻挺了过来，但未来的挑战依然还在前方等待。我们必须塑造一个团结的政治环境，以应对接下来会发生的各种意外之事。"
  ALF_stable_the_thoughts_tt: "§Y苦涩的失败§!追加效果：\n政治点数：§G+5%§!"
@@ -51,12 +91,12 @@
  ALF_rebuild_arius_school_desc: "显然，我们不能因为“正处在复杂状况中”，就彻底忽视教育工作的重要性。流亡者要想赢得战场上的胜利，就必须投入资源重新展开教学事务，恢复科研工作的秩序。这一决定不仅在当下极为重要，也同样具备不可忽视的长远利益。"
  ALF_public_debate: "公开辩论"
  ALF_public_debate_desc: "不论如何，观点顽固的成员总是存在的。但现在，随着大多数人开始理解“投降主义”为什么是错误的，彻底击垮这些观点的机会也正逐渐降临。我们必须要让这样的观点深入人心：即在战术上重视对手的同时，还要学会在战略上藐视对手。"
- ALF_public_debate_tt: "§Y苦涩的失败§!追加效果：\n陆军连组织度恢复速率：§G+10%§!\n建造速度：§G+30%§!"
+ ALF_public_debate_tt: "§Y苦涩的失败§!追加效果：\n陆军连组织度恢复速率：§G+10%§!\n建造速度：§G+20%§!"
  ALF_create_shared_cognition: "塑造共同认知"
  ALF_create_shared_cognition_desc: "返回故乡的必要性已经无需再谈，抛弃了家园这一共同认知的流亡者，也绝无可能在外面世界的竞争中取得优势。我们是阿里乌斯的学生，这既是不可改变的事实，也是我们团结共赴难关的必然基础。"
  ALF_create_shared_cognition_tt: "§Y苦涩的失败§!追加效果：\n战争支持度：§G+10%§!\n陆军连组织度恢复速率：§G+10%§!"
  ALF_we_can_achieve_the_goal: "我们能做到！"
- ALF_we_can_achieve_the_goal_tt: "§Y苦涩的失败§!追加效果：\n稳定度：§G+10%§!\n建造速度：§G+30%§!\n工厂产出：§G+10%§!"
+ ALF_we_can_achieve_the_goal_tt: "§Y阿里乌斯解放阵线§!追加效果：\n稳定度：§G+10%§!"
  ALF_confirm_economic_plan: "敲定经济计划"
  ALF_oil_is_industry_blood: "输送工业之血"
  ALF_oil_is_industry_blood_desc: "流亡者的工业机器，需要珍贵的燃料才能开动起来，幸运的是，这种珍贵的宝物近在眼前。根据附近曾经从事石油工作的居民提供的消息，就在青蓝丘这片湿地之中，就有一座废弃的油田存在。"
@@ -86,38 +126,52 @@
  ALF_be_ready_for_action: "蓄势待发"
  ALF_be_ready_for_action_tt: "§Y阿里乌斯解放阵线§!追加效果：\n战争支持度：§G+10%§!" 
  ALF_residential_census: "进行居民人口普查"
- ALF_fate_calls: "§Y命运在召唤……§!"
- ALF_fate_calls_desc: "流亡者已经平息了内部的争论，并且在新的土地上建立了新的阿里乌斯学园。现在，流亡者终于有机会考虑她们一直挂念着的事业，以及她们的终极目标。而在那之前，所有归乡之路上的障碍都必须被摆平……"
  
  ALF_change_outfit: "改头换面"
  ALF_contact_redwinter: "接触红冬联邦学园"
  ALF_contact_gehenna: "接触格黑娜学园"
  ALF_technology_exchange: "秘密技术交流"
- ALF_reform_staff_department: "改革作战参谋部"
+ ALF_reform_staff_department: "邀请军事参谋"
+ ALF_reform_staff_department_tt_tt: "根据§Y流亡者所做的选择§!，一支具有§C理论家特质§!的§Y军官团§!将§G作为将领可用§!。"
+ ALF_reform_staff_department_tt: "解锁角色："
  ALF_abydos_problem: "接触阿拜多斯高等中学"
+ ALF_abydos_problem_tt: "§R未完成，敬请期待§!"
  ALF_abydos_trade: "互通有无"
  ALF_support_abydos: "提供军事支持"
  ALF_together_for_victory: "共同防卫协定"
  ALF_destroy_wsg: "西街问题"
+ ALF_destroy_wsg_desc: "西街暴力团一直是黑市地带一个臭名昭著的帮派势力。它受到凯撒集团的资助，并为了它的主子们在基沃托斯的利益而惹是生非——不过，它的存在对我们来说是一个机会。西街暴力团控制的物流中心意义巨大，占领它将极大程度地改善流亡者的经济能力。"
+ ALF_destroy_wsg_tt: "§G创建§!一支用于执行该计划的§Y空中侦察§!部队"
  ALF_infiltrate_enemy: "渗透暴力团控制区"
  ALF_assault_trainning: "强化突击训练"
  ALF_support_the_pilots: "邀请自由飞行员加入"
+ ALF_support_the_pilots_desc: "根据我们的调查，自由天空飞行组织是一支来自红冬的志愿航空飞行队。这段时间，她们一支在与受到凯撒控制的各种土匪势力作战。我们先前已经与她们进行了短暂的接触，显而易见，邀请她们将有助于我们共同的事业。"
+ ALF_support_the_pilots_tt: "§Y我们的事业并不孤独。§!"
  ALF_ready_for_battle: "枕戈待旦"
+ ALF_ready_for_battle_tt: "§Y阿里乌斯武装力量§!追加效果：\n堑壕速度：§G+10%§!\n堑壕上限：§G+10%§!" 
  ALF_end_wsg: "行动：空想构造"
  ALF_infiltrate_kaiser: "反凯撒秘密行动"
+ ALF_infiltrate_kaiser_desc: "我们从西街暴力团缴获的文件与物资表明，存在一个由凯撒集团策划，针对着流亡者——乃至整个黑市的阴谋。另外，我们还发现，“夫人”亦与凯撒集团存在某种联系。对流亡者而言，这意味着一场正在逼近，且无从避免的战争。因此，必须对这一威胁抢先做出反应。"
+ the_enterprise_war_begins: "§Y公司战争§!：§R箭在弦上§!"
 
  ALF_new_beginning: "新的开始"
  ALF_new_beginning_desc: "对流亡者而言，重新为自己找到一席之地的任务已经完成。但对于阿里乌斯而言，则使命远未抵达终点。正如领袖所指出的那样，如“夫人”这样的独裁份子绝不会永远保持安分。而在那一天来临之前，流亡者必须建立一支能打能胜的军队。\n\n§Y记住§!：§R毋胜则亡§!"
  ALF_united_research_facility: "成立联合技术研究所"
  ALF_establish_air_force: "空军方案"
  ALF_an_independent_air_foce: "建设独立空军"
+ ALF_an_independent_air_foce_tt: "空军任务能力等级：§G+1§!\n§Y阿里乌斯武装力量§!追加效果：\n夺取制空权任务效率：§G+10%§!\n拦截任务探测：§G+10%§!" 
  ALF_mission_air_foce: "建设任务式空军"
+ ALF_mission_air_foce_tt: "空军任务能力等级：§G+1§!\n§Y阿里乌斯武装力量§!追加效果：\n密接支援任务效率：§G+10%§!\n空军任务效率：§G+10%§!"
  ALF_air_superiority: "确保空中霸权"
+ ALF_air_superiority_tt: "空军任务能力等级：§G+1§!\n§Y阿里乌斯武装力量§!追加效果：\n战斗中空优加成：§G+10%§!"
  ALF_JTAC_support: "JTAC训练"
- ALF_mission_effecience: "确保任务效率"
+ ALF_mission_effecience: "确保任务能力"
+ ALF_mission_effecience_tt: "空军任务能力等级：§G+1§!\n§Y阿里乌斯武装力量§!追加效果：\n空军航程：§G+10%§!"
  ALF_above_sky: "遮天蔽日"
+ ALF_above_sky_tt: "空军任务能力等级：§G+1§!"
  ALF_helicopter: "重视直升机技术"
  ALF_air_assault_tactics: "组建空中突击部队"
+ ALF_air_assault_tactics_tt: "在§Y青蓝丘§!创建两支§C空中突击团§!"
  ALF_attack_helicopter: "开发攻击直升机"
  ALF_air_gunship: "开发空中炮艇"
  ALF_integrated_firepower_system: "建设联合火力系统"
@@ -125,19 +179,153 @@
  ALF_professional_trainning: "职业化训练"
  ALF_sharp_the_blade: "磨砺突击利刃"
  ALF_establish_officer_school: "强化士官培训"
+ ALF_establish_officer_school_tt: "§Y士官培训制度等级§!：§G+1§!\n§Y阿里乌斯武装力量§!追加效果：\n指挥官经验增长：§G+5%§!\n地形特质增长速度：§G+5%§!" 
  ALF_armor_spearhead: "装甲矛头"
  ALF_moden_combat: "现代化作战"
+ ALF_moden_combat_tt: "§Y理论发展程度§!：§G+1§!\n§Y阿里乌斯武装力量§!追加效果：\n增援率：§G+2%§!\n携行补给：§G+48.0§! 小时" 
  ALF_focus_speed: "狂野而迅捷"
  ALF_overwhelming_firepower: "压倒性火力"
  ALF_elegant_combat: "精准且优雅"
  ALF_strategic_roadmap: "战役路线"
  ALF_estabilish_Arius_armed_force: "重建阿里乌斯学园武装力量"
- ALF_way_for_glory: "§Y奔赴荣耀§!"
+ ALF_estabilish_Arius_armed_force_trigger_tt: "需要§Y军事改革总体进度§!达到：§G现代化§!"
+ ALF_estabilish_Arius_armed_force_tt: "§Y阿里乌斯武装力量§!追加效果：\n陆军连攻击：§G+10%§!\n陆军连防御：§G+10%§!\n突破：§G+10%§!" 
+
+ ALF_fate_calls: "§Y命运在召唤……§!"
+ ALF_fate_calls_desc: "树欲静而风不止，从内战到逃亡，再到建立起这片新家园，流亡者的漫长前路中从不缺乏考验。\n\n随着各项工作的顺利展开，流亡者已有信心保卫自己所创造的一切。这场战争将是一个有力的证明：任何胆敢将战火加诸其上的宵小之辈，必将为此等恶行§R做出回答！§!"
+ #ALF_fate_calls_desc: "流亡者已经平息了内部的争论，并且在新的土地上建立了新的阿里乌斯学园。现在，流亡者终于有机会考虑她们一直挂念着的事业，以及她们的终极目标。而在那之前，所有归乡之路上的障碍都必须被摆平……"
+ ALF_fate_calls_tt: "§C命运§!教会了流亡者一件事：§R毋胜则亡！§!\n\n\n\n\n £ALF_infiltrate_kaiser_pic \n\n\n\n\n§R让我们开始吧……§!"
+ ALF_target_DCA: "§Y弥撒行动§!"
+ ALF_integrate_DCA: "整合收债人协会区域"
+ ALF_target_KHG: "§Y圣咏行动§!"
+ ALF_integrate_KHG: "整合咔哒头盔团区域"
+ ALF_optimize_factory_output: "启动工业动员"
+ ALF_extra_armed_force: "呼叫预备役"
+ ALF_warno: "预先号令"
+ ALF_integrate_DCA: "整合收债人协会区域"
+ ALF_target_blackmarket: "§Y格里高利行动§!"
+ ALF_difficult_situation: "状况复杂"
+ ALF_enlarge_air_force: "扩大空军"
+ ALF_air_alert: "空中警戒"
+ ALF_integrate_black_market_cores: "整合黑市领土"
+ ALF_restore_new_area_production: "优先恢复生产"
+ ALF_politic_mobilization: "思想动员"
+ ALF_united_as_one: "众志成城"
+ ALF_enemy_tactic_analysis: "对敌战术分析"
+ ALF_strike_at_weakness: "猛击软肋"
+ ALF_operation_michael: "§Y米迦勒行动§!"
+ EPW_ENDS_global_flag: "§Y公司战争§!§R已结束§!"
+ 
+ ALF_dream_approaching: "梦想升扬"
+ ALF_stand_up_from_defeat: "昨日之师"
+ ALF_not_again: "决不再来"
+ ALF_not_again_desc: "流亡者发誓，决不让内战中的失败再度降临。这意味着两件事：\n\n第一、我们要同夫人和她的爪牙做坚决的斗争，要对这些人进行彻底的改造，决不能有心慈手软\n\n第二、我们也要同这种所谓的“神秘主义”思想做斗争。阿里乌斯由具体的人构成，而这些人组成的群体才是阿里乌斯的创造者。\n\n毫无疑问，我们不能容许夫人的暴行再演，更不能走夫人的老路。只有这样，阿里乌斯才能就旧日的桎梏中解放，并重新崛起。"
+ ALF_not_again_tt: "§Y阿里乌斯解放阵线§!追加效果：\n不再受到§Y神秘哲学§!的认同率影响。" 
+ ALF_call_of_duty: "今日之事"
+ ALF_focus_future: "致夏莱"
+ ALF_maintain_work_method: "维持工作民主"
+ ALF_maintain_work_method_desc: "随着工作的推进，以及胜利的不断到来，我们队伍中的一言堂现象有愈演愈烈的趋势，并且已经开始影响各个方面。\n\n我们必须承认，流亡者能从恶劣的境况中存活下来，并取得如今的辉煌成就，与高度的纪律性和卓绝的执行力不无关系——但这不是说，我们中只有某几个人的声音才有意义。\n\n随着胜利的到来，我们有机会重新整肃这方面的风气。一方面，必须制止某些干部过于越界的言行；另一方面，我们也必须和逐渐兴起的盲从风气做斗争。只有这样，我们才能在激烈的竞争中不断锐意进取。" 
+ ALF_maintain_work_method_tt: "§Y阿里乌斯解放阵线§!追加效果：\n不再受到§Y专制哲学§!的认同率影响。" 
+ ALF_history_on_us: "历史眼中的我们"
+ ALF_judge_the_evil: "暴君必尝恶果"
+ ALF_salary_balance: "薪酬公平"
+ ALF_salary_balance_tt: "§Y阿里乌斯解放阵线§!追加效果：\n非核心战备值：§G+10%§!\n抵抗目标：§G-10%§!" 
+ ALF_stablize_current: "稳定化货币"
+ ALF_stablize_current_tt: "§Y阿里乌斯解放阵线§!追加效果：\n市场建设加成系数：§G+10%§!" 
+ ALF_Social_Security_System: "落实社会保障"
+ ALF_Social_Security_System_tt: "§Y阿里乌斯解放阵线§!追加效果：\n每月发展度增长：§G+10%§!\n大幅降低§Y进步哲学§!的影响力。\n不再受到§Y开明哲学§!的认同率影响。"
+ ALF_us_on_history: "我们眼中的历史"
+ ALF_our_stage_on_world: "阿里乌斯应有之地"
+ ALF_our_stage_on_world_desc: "阿里乌斯所应得的一切，不仅仅包括稳定的生活环境、美好的校园，以及充足的生活。这个名字本身，还应当在基沃托斯拥有一席之地。\n\n然而，由于对过去历史的掩饰和遮盖，整个基沃托斯都已经忘却了阿里乌斯的存在。这一事实应当得到纠正。"
+ ALF_mapping_the_tunnel: "测绘地下墓穴"
+ ALF_mapping_the_tunnel_tt: "拉开§Y阿里乌斯解放战争§!的序幕\n§G解锁§!§C新的国策§!：§Y加百列行动§!"
+ ALF_toward_the_last_object: "§Y加百列行动§!"
+ ALF_toward_the_last_object_desc: "那一刻终于到了。在如此久的等待、煎熬，与磨难之后，流亡者，将来的阿里乌斯解放者们，终于完成了一切准备。\n\n如今，力量的对比已经完全逆转。流亡者已整装待发，而“夫人”只能瑟缩在她那地下墓穴之后的堡垒中。这一次，悬而未决的“内战”将真正地画上句号，而邪恶的力量，终将被解放者们从这片饱受磨难的土地上彻底驱散。\n\n“领袖”已下达指令，而这场战争也只有唯一的目标：\n§Y完成流亡者的未竟之事！§!"
+ ALF_toward_the_last_object_tt: " \n\n\n\n\n\n£ALF_toward_the_last_object_pic \n\n\n\n\n§R汝以此兴，必以此亡！§!"
+ ALF_GBO_begins_flag: "§Y阿里乌斯解放战争§!已经§C开始§!"
+ ALF_customized_the_supplyline: "针对性后勤设计"
+ ALF_storm_the_frontline: "强袭作战"
+ ALF_contact_the_resistants: "联络游击队"
+ ALF_contact_the_resistants_tt: "在§Y地下墓穴§!获得§G4§!个§Y游击队单位§!\n与此同时，§Y阿里乌斯内部的抵抗者§!将发起一场§R内战§!。\n§Y注意：§!这群反抗者§R无法坚持太久§!,必须§C尽快支援她们§!"
+ ALF_Sound_the_bugle: "吹响号角"
+
+ ALF_a_long_way_back_home: "长路归乡"
+ ALF_judge_the_yesterdays_evil: "审判过去之罪恶"
+ ALF_Amend_the_Constitution: "修订学园宪章"
+ ALF_the_old_ways: "取于旧制"
+ ALF_support_the_old_ways_flag: "§Y会议§!:§G已支持§!§C皇室立宪观点§!"
+ ALF_the_new_dawn: "另起炉灶"
+ ALF_support_the_new_dawn_flag: "§Y会议§!:§G已支持§!§C修改宪法观点§!"
+ ALF_Reshape_cognition: "重塑认知"
+ ALF_Reshape_cognition_tt: "§Y阿里乌斯解放阵线§!追加效果：\n党派认同率对稳定度修正：§G+20%§!\n最高指挥点数提高：§G+20§!。" 
+ ALF_re_educate_movement: "再教育运动"
+ ALF_re_educate_movement_tt: "扶植一位来自§Y旧阿里乌斯的榜样§!将有助于§G继续削减§!§R夫人的残留影响§!。"
+ ALF_Embrace_the_wanderers: "接纳彷徨者"
+ ALF_Embrace_the_wanderers_tt: "§Y夫人与她谎言§!的§C最终消亡§!将成为§G大势所趋§!。"
+ ALF_clear_todays_rubbles: "清扫今日之废墟"
+ ALF_Implement_relief_plan: "启动救济计划"
+ ALF_rebuild_the_chruch: "重建特鲁大教堂"
+ ALF_rebuild_the_old_school: "重建旧校舍本馆"
+ ALF_Restore_the_employment_environment: "恢复就业环境"
+ ALF_enlighten_the_arius: "重新点亮阿里乌斯"
+ ALF_construct_tomorrows_stair: "筹划将来之阶梯"
+ TRI_coup_complete_flag: "§Y伊甸条约：§!§R恶果尽显§!"
+ ALF_storm_eye: "风暴眼"
+ ALF_open_the_border: "边界救难"
+ ALF_open_the_border_tt: "部分§Y流亡难民§!将被我们§G接收§!"
+ ALF_duty_calls_always: "使命在肩"
+ ALF_send_the_envoys: "派出特使"
+
+ ALF_3rd_eden_pact_treaty: "第三次伊甸条约谈判"
+ ALF_those_failured: "一群失败者……"
+ ALF_those_betrayed: "一群背誓者……"
+ ALF_a_Desperate_Alliance: "……以及一个最绝望的同盟"
+ ALF_appeal_to_the_Discipline_Committee_Member: "拉起沮丧的风纪委员"
+ ALF_appeal_to_the_sisters: "唤起坚定的布道者"
+ ALF_appeal_to_the_students: "请求仍未放弃的学生"
+ ALF_eden_alliance: "伊甸条约同盟"
+ ALF_prepared_for_2nd_liberation_war: "准备第二次解放战争"
+ ALF_and_ALLIES_BUFF_TT: "(§Y[ALF.GetNameWithFlag]§!及其盟友§Y[TRT.GetNameWithFlag]§!，§Y[GER.GetNameWithFlag]§!)："
+ ALF_way_for_glory: "§C奔赴荣耀§!"
+ ALF_way_for_glory_desc: "流亡者们并不知道自己是否期待过这一天。“夫人”和她的爪牙已经倒下，而阿里乌斯的旗帜冉冉升起。这似乎应该是她们这场伟大征途的终结：多年以后，勇者击败了魔王，回到了她心心念念的故乡。\n\n但是，流亡者如今已知晓，这一切并不是这样的。流亡者只是夺回了她们本来的枷锁，而新的正义，尚未得到声张。现在，野心家已经窃取了两顶王冠，并且对阿里乌斯磨刀霍霍。\n\n如果说过去教会了流亡者什么，那一定是一个道理：公理绝不退缩。现在，新的正义正在被人呼唤，命运的权杖正为新的阿里乌斯分校紧握：阿里乌斯分校已经整装待发，而她们目标也只有一个，那就是——§G完全胜利！§!"
+ ALF_way_for_glory_tt: " \n\n\n\n\n\n£ALF_way_for_glory_pic \n\n\n\n\n§Y出发，掌握你的命运！§!\n\n获得针对§Y[TRI.GetName]§!的战争目标：§Y为所爱的一切……§!§R尽情呐喊吧！§!"
+
+ ALF_2nd_liberation_war: "§Y光复战争§!"
+ ALF_traveller_operation: "§C旅者行动§!"
+ ALF_eden_operation: "§C乐园行动§!"
+ ALF_full_work_schedule: "执行三班倒制度"
+ ALF_ask_for_support: "寻求远邻协助"
+ ALF_ask_for_support_tt: "阿里乌斯分校将§Y尽一切努力寻求帮助§!——幸运的是，§G唇亡齿寒的道理并不难懂§!。"
+ ALF_stop_rebuild_plan: "暂停重建计划"
+ ALF_total_war: "批准总体战方案"
+ ALF_shepherd: "§O牧羊人行动§!"
+ ALF_peacher: "§O传道者行动§!"
+ ALF_another_way: "§O乌列尔行动§!"
+ ALF_final_chance: "§R最终机会§!"
+ ALF_final_chance_desc: "总是存在这样一个观点：即§Y历史由胜利者书写§!。\n\n§G显然，这一观点是为流亡者所反对的§!。因为在这个基础上所发展出来的哲学思想，就像是§O毒树上结出的果实§!。它瓦解了流亡者进行抵抗的正当性，也毫无疑问损害着队伍的士气、\n\n但是，如今已是生死存亡的关头。§Y对阿里乌斯分校而言§!，§R失败即一切化为乌有§!。作战司令部提出了一种方案，即将流亡者所有的炸弹库存§O一次性倾泻出去§!，对敌人的§C所有前线和后方关键目标§!实施§R地毯式打击§!，彻底摧毁敌人的阵线。\n\n尽管如此，这仍是一项需§R慎重考虑§!的决定：这毫无疑问将造成§R不可估量的连带伤害§!，也许十年，也许二十年，这一罪行的审判也终会到来……"
+ ALF_final_chance_tt: "§R不要这么做！§!"
+
+ ALF_like_the_rising_sun: "如日方升"
+ ALF_visit_schale: "登上世界舞台"
+ ALF_bright_new_world: "美丽新世界"
+ ALF_bright_new_world_tt: "§Y游戏结束§!：§G享受您的胜利吧！§!"
+
+ ALF_unplanned_war_dynamic_modifier: "未经计划的攻势"
+
 ####################
-##决议！！！
+##军事改革！！！
 ####################
+ ALF_armed_force_dynamic_modifier: "阿里乌斯武装力量"
+ ALF_armed_force_dynamic_modifier_desc: "流亡者和她的游击部队起源自阿里乌斯内战末期的反抗行动——在领袖的带领下，流亡者对“夫人”和她的军队发起了大范围的游击与破坏行动，并吸引到了许多内战时期的老兵。\n\n但不幸的是，这一系列反抗最终仍未能形成气候，走向了失败。随着学生会法统的继承者，秤亚津子为“夫人”所控制，包括流亡者在内的抵抗运动均受到了严重的打击。\n\n“领袖”敏锐地判断出了这一局面，并选择带领流亡者突入地下墓穴，逃往夫人所不能染指的阳光世界。许多抵抗者视之为逃亡主义，但这一行动无疑是明智的，到目前为止，仅有流亡者保存了完整的组织。\n\n尽管如此，这支继承了内战前阿里乌斯学园武装力量架构的微型军队，依然是一支遭遇了失败的军队。不过，她们的精神尚未倒下：许多人对她们的事业抱持着怀疑的态度，但流亡者终将证明，她们有实现理想的决心与意志。\n------------\n\n\n\n\n£ALF_armed_force_dynamic_modifier_desc_picture \n\n\n\n\n§R我们将从失败中再次升扬，直至正义之誓言得到践行……§!"
+
  ALF_military_reform_decision_category: "流亡者军事改革"
- ALF_military_reform_decision_category_desc: "流亡者的战斗力量主要由游击队、抵抗组织、前阿里乌斯正规部队，或单纯的武装民兵组成。公正地说，这些成员绝非乌合之众，她们都接受过军事训练，或拥有作战经验。\n\n但问题也在于此：这些五花八门的背景意味着流亡者的作战部队既没有统一的指导思想，也没有相同的指挥规则。让这些成员组成一个各自为战的游击队自然没有问题，但要是想组建一支真正的，能击败“夫人”和其他对手的军队，就必须根除这种混乱的游击习气。\n\n毫无疑问，这将是一个相当耗费时间的系统工程，但流亡者的剩余时间却屈指可数。时间不等人，流亡者必须尽快完成军事改革，锻造出一支百战百胜的军队。\n\n注意：流亡者的时间和资源有限，每个领域均最多改革至§G现代化（4）§!阶段。\n\n\n§Y流亡者整体军事状况：§![ALF.ALF_mrd_total_progress_sl]\n\n§Y军事理念：§!\n    --武装部队训练：[ALF.ALF_mrd_trainning_progress_sl]\n    --士官培训制度：[ALF.ALF_mrd_officer_progress_sl]\n    --现代化程度：[ALF.ALF_mrd_modernize_progress_sl]\n\n§Y军事发展：§!\n    --装甲部队能力：[ALF.ALF_mrd_armor_progress_sl]\n    --炮兵部队能力：[ALF.ALF_mrd_artillery_progress_sl]\n    --空军部队能力：[ALF.ALF_mrd_air_force_progress_sl]\n    --特种部队能力：[ALF.ALF_mrd_sf_progress_sl]\n\n§Y现有的军事改革点数：§![?ALF.ALF_mrd_pts]\n§Y每月获得的改革进度：§![?ALF.modifier@ALF_military_reform_int]%"
+ ALF_military_reform_decision_category_desc: "流亡者的§G战斗力量§!主要由§O游击队§!、§O抵抗组织§!、前§O阿里乌斯正规部队§!，或单纯的§O武装民兵§!组成。公正地说，这些成员绝非乌合之众，她们都接受过军事训练，或拥有作战经验。\n\n但问题也在于此：这些§Y五花八门的背景§!意味着流亡者的作战部队既没有统一的§R指导思想§!，也没有相同的§R指挥规则§!。让这些成员组成一个各自为战的游击队自然没有问题，但要是想组建一支真正的，能击败“夫人”和其他对手的军队，就必须§C根除这种混乱的游击习气§!。\n\n毫无疑问，这将是一个相当耗费时间的系统工程，但流亡者的剩余时间却屈指可数。时间不等人，流亡者必须尽快完成军事改革，锻造出一支百战百胜的军队。\n\n§Y注意§!：流亡者的§R时间和资源有限§!，每个领域均最多改革至§G现代化（4）§!阶段。\n\n\n§Y流亡者整体军事状况（月度统计）：§![ALF.ALF_mrd_total_progress_sl]\n\n§Y军事理念：§!\n    --武装部队训练：[ALF.ALF_mrd_trainning_progress_sl]\n    --士官培训制度：[ALF.ALF_mrd_officer_progress_sl]\n    --理论发展程度：[ALF.ALF_mrd_modernize_progress_sl]\n\n§Y军事发展：§!\n    --装甲作战能力：[ALF.ALF_mrd_armor_progress_sl]\n    --火力投送能力：[ALF.ALF_mrd_artillery_progress_sl]\n    --空军任务能力：[ALF.ALF_mrd_air_force_progress_sl]\n    --特种部队能力：[ALF.ALF_mrd_sf_progress_sl]\n\n§Y现有的军事改革点数：§![?ALF.ALF_mrd_pts]\n§Y每月获得的改革进度：§![?ALF.modifier@ALF_military_reform_int|%]"
+
+ ALF_mrd_count_down_mission: "月度统计"
+ ALF_calc_military_reform_system_effect_tt: "§Y推进改革……§!"
+
+ ALF_military_reform_int: "军事改革效率"
+ ALF_improve_military_reform_int_10_tt: "§Y阿里乌斯武装力量§!追加效果：\n军事改革效率：§G+10%§!" 
 
  ALF_mrd_title: "本轮改革进度："
  ALF_mrd_progress_tt: "当进度到达100%时，流亡者将会获得§G1§!§Y军事改革点数§!。"
@@ -152,13 +340,42 @@
  decision_cost_has_mrd_pts_blocked: "£divisions §R1§!"
  decision_cost_has_mrd_pts_tooltip: "该决议需要改革点数：§Y1§!"
 
+ ALF_use_1_mrd_pts_tt: "军事改革点数：§R-1§!"
+
+ ALF_support_sf_independent_tt: "特种部队能力等级：§G+1§!\n§Y阿里乌斯武装力量§!追加效果：\n特种攻击：§G+5%§!\n特种部队容量上限乘数：§G+10%§!" 
+ ALF_support_sf_integrate_tt: "特种部队能力等级：§G+1§!\n§Y阿里乌斯武装力量§!追加效果：\n特种攻击：§G+5%§!\n陆军夜战攻击：§G+5%§!" 
+
+ ALF_mrd_armor_improve_decision: "提升§Y装甲作战能力§!"
+ ALF_mrd_armor_improve_tt: "装甲作战能力等级：§G+1§!\n§Y阿里乌斯武装力量§!追加效果：\n装甲连攻击：§G+5%§!\n装甲连防御：§G+5%§!"
+ ALF_mrd_armor_improve_decision_trigger_tt: "§Y装甲作战能力§!未达到现代化水平"
+
+ ALF_mrd_modernize_improve_decision: "提升§Y理论发展程度§!"
+ ALF_mrd_modernize_improve_tt: "理论发展程度：§G+1§!\n§Y阿里乌斯武装力量§!追加效果：\n陆军连速度：§G+5%§!\n陆军连经验增长：§G+5%§!\n有经验的士兵损失：§G-5%§!"
+ ALF_mrd_modernize_improve_decision_trigger_tt: "§Y理论发展程度§!未达到现代化水平"
+
+ ALF_mrd_officer_improve_decision: "改善§Y士官培训制度§!"
+ ALF_mrd_officer_improve_decision_trigger_tt: "§Y士官培训制度§!未达到现代化水平"
+ ALF_mrd_officer_improve_tt: "士官培训制度等级：§G+1§!\n§Y阿里乌斯武装力量§!追加效果：\n计划速度：§G+10%§!\n计划上限加成系数：§G+10%§!"
+
+ ALF_mrd_trainning_improve_decision: "改善§Y武装部队训练§!"
+ ALF_mrd_trainning_improve_decision_trigger_tt: "§Y武装部队训练§!未达到现代化水平"
+ ALF_mrd_trainning_improve_tt: "武装部队训练等级：§G+1§!\n§Y阿里乌斯武装力量§!追加效果：\n陆军连组织度：§G+5%§!\n移动中组织度损失：§G-5%§!"
+
+ ALF_mrd_artillery_improve_decision: "改善§Y火力投送能力§!"
+ ALF_mrd_artillery_improve_decision_trigger_tt: "§Y火力投送能力§!未达到现代化水平"\
+ ALF_mrd_artillery_improve_tt: "火力投送能力等级：§G+1§!\n§Y阿里乌斯武装力量§!追加效果：\n炮兵攻击：§G+5%§!\n协同性：§G+5%§!"
+
+ ALF_Livability_for_mrd_speed_decision: "强化§Y军事改革效率§!"
+####################
+##作战计划！！！
+####################
  ALF_war_plan_protect_wing_category: "作战计划：羽翼"
  ALF_war_plan_protect_wing_category_desc: "流亡者面临一场充满了不确定的边境战争。\n\n策划了对流亡者袭击的团体可能与“夫人”有关，但到目前为止，没有任何证据支持这一点。不论如何，制造了这一切的人对流亡者抱有敌意。流亡者必须尽快做好准备，进行先发制人的打击，以防陷入被动。\n\n§Y任务：§!\n确保边境安全。\n\n§Y控制下述所有区域：§!\n[657.operation_protect_wing_sl]\n[200.operation_protect_wing_sl]\n[201.operation_protect_wing_sl]\n[198.operation_protect_wing_sl]\n\n"
 
  ALF_we_were_attacked_flag: "§R迫在眉睫的袭击§!"
 
  operation_protect_wing_sl_control_by_us: "  --[THIS.GetName]:    §G已处于我方控制下§!"
- operation_protect_wing_sl_control_by_enemy: "  --[THIS.GetName]:    §R尚未被控制§!"
+ operation_protect_wing_sl_control_by_enemy: "  --[THIS.GetName]:    §R尚未被我方控制§!"
 
  ALF_war_plan_protect_wing_trigger_mission: "占领区域"
  ALF_war_plan_protect_wing_trigger_mission_desc: "流亡者必须占领目标区域，以结束这场危机。"
@@ -176,6 +393,57 @@
  ALF_protect_wing_supply_truck_decision_desc: "为了维持补给线的畅通，流亡者需要更多的运输车辆。\n幸运的是，流亡者在废弃的养护站中发现了一些旧卡车。虽然它们已经破旧不堪，但只要经过适当的维修，这些卡车就能重新上路。"
  ALF_protect_wing_strength_frontline_decision: "对[FROM.GetName]发动大规模攻势"
  ALF_protect_wing_strength_frontline_decision_desc: "敌人无法抵挡我们，我们应当利用这个机会，一举击垮这群乌合之众。"
+
+ ALF_anti_kaiser_operation_category: "公司战争"
+ ALF_anti_kaiser_operation_category_desc: "在逐步§G扩大在黑市的影响力§!，并§R终结了§!§Y西街暴力团§!，这一§Y凯撒的关键棋子§!后，§Y流亡者§!将毫无疑问地成为§R凯撒的重要敌人§!。\n\n这意味着§C不可避免§!的，从经济到政治领域的§R全面冲突§!，或者用流亡者更熟稔的词汇来说，就是§R「战争」§!。凯撒集团会竭尽全力消灭我们，而我们也决不能把希望寄托在敌人的仁慈上。\n\n目前，凯撒集团正支持着数个在黑市中的势力，我们必须在削弱凯撒集团的同时，§Y先发制人地摧毁他们的威胁§!。\n\n§Y我们的力量：§![?ALF.EPW_power_score]\n§Y凯撒集团的力量：§![?CAE.EPW_power_score]\n§Y黑市的力量：§![?A47.EPW_power_score]\n\n§Y任务：§!\n击溃凯撒及其帮凶\n\n§Y黑市控制的目标：§!\n[223.operation_protect_wing_sl]\n[221.operation_protect_wing_sl]\n[196.operation_protect_wing_sl]\n[217.operation_protect_wing_sl]\n[222.operation_protect_wing_sl]\n[195.operation_protect_wing_sl]\n[661.operation_protect_wing_sl]\n\n§Y凯撒控制的目标：§!\n[216.operation_protect_wing_sl]\n[220.operation_protect_wing_sl]\n[214.operation_protect_wing_sl]\n[211.operation_protect_wing_sl]\n[203.operation_protect_wing_sl]\n[209.operation_protect_wing_sl]\n[210.operation_protect_wing_sl]\n\n"
+
+ ALF_EPW_Stage_1_trigger_mission: "§Y犁庭扫穴……§!"
+ ALF_EPW_counter_mission: "§R迫在眉睫的第一轮打击§!"
+ ALF_war_with_DCA_decision: "终结§Y[DCA.GetName]§!的统治"
+ ALF_war_with_KHG_decision: "终结§Y[KHG.GetName]§!的统治"
+ ALF_war_with_blackmarket_decision: "终结§Y[A47.GetName]§!的统治"
+ ALF_EPW_infiltrate_target_decision: "渗透§Y[FROM.GetName]§!"
+ ALF_EPW_crack_target_supply_CAH_decision: "破坏§Y[CAH.GetNameWithFlag]§!的后勤枢纽"
+ ALF_EPW_crack_target_supply_CAB_decision: "破坏§Y[CAB.GetNameWithFlag]§!的后勤枢纽"
+ ALF_EPW_crack_target_supply_CAP_decision: "破坏§Y[CAP.GetNameWithFlag]§!的后勤枢纽"
+ ALF_EPW_crack_target_supply_CAO_decision: "破坏§Y[CAO.GetNameWithFlag]§!的后勤枢纽"
+ ALF_EPW_infiltrate_target_flag: "§Y目标§!§G已渗透§!"
+
+ ALF_EPW_Stage_2_counter_mission: "§R凯撒干涉……§!"
+ ALF_EPW_Stage_2_timer_mission: "§R攻势结束……§!"
+ ALF_EPW_Stage_2_trigger_mission: "§Y公司战争§!"
+ ALF_operation_michael_decision: "§Y发动米迦勒行动§!"
+
+ ALF_Gabriel_operation_category: "阿里乌斯解放战争"
+ ALF_Gabriel_operation_category_desc: "对§Y阿里乌斯§!的§C解放战争§!已经箭在弦上。流亡者必须§G全力以赴§!，完成历史赋予的§Y最终使命§!。\n\n然而，§Y“夫人”§!——§C贝阿多莉切§!，这个§R臭名昭著的野心家与欺诈者§!，绝不可能§R坐以待毙§!。毫无疑问，她将§R发动最残酷的反击§!以保全自己。\n\n§Y无可避免§!，在战场上流淌的，依然可能是§C阿里乌斯同胞的血液§!。而这§R一切代价§!，都要让§R“夫人”为此彻底偿还§!。\n\n§Y任务：§!\n解放阿里乌斯\n\n§Y首要目标：§!\n[138.operation_protect_wing_sl]\n[136.operation_protect_wing_sl]\n\n§Y次要目标：§!\n[530.operation_protect_wing_sl]\n[137.operation_protect_wing_sl]\n[139.operation_protect_wing_sl]\n[532.operation_protect_wing_sl]\n[531.operation_protect_wing_sl]\n\n§Y解放万岁！§!\n"
+ ALF_GBO_trigger_mission: "§Y解放家园……§!"
+ ALF_GBO_counter_mission: "“夫人”的§R歇斯底里……§!"
+ ALF_GBO_assault_decision: "发起总攻"
+ ALF_GBO_cooperate_government_decision: "解放宣传"
+ ALF_GBO_neutralise_ARI_gov_decision: "瓦解抵抗"
+
+ ALF_Uriel_operation_category: "光复战争"
+ ALF_Uriel_operation_category_desc: "关于§Y外面的局势§!，流亡者确有一点§R从未料到§!：§O在第二次伊甸条约谈判破裂后§!，§Y圣三一§!与§Y格黑娜§!都遭到了§R野心的反噬§!。这也就意味着，它们曾经至少试图维持的文明假面，现在也不复存在。\n\n实事求是地说，§Y阿里乌斯分校§!确实在这一情况中§C意外扮演了重要的推手§!，以至于本不应该发生的事最终成为了现实。不仅§Y两所学校的命运§!已经在这场意外中§R风雨飘摇§!——§Y阿里乌斯分校§!，也毫无疑问也是这场§C无可避免之洪水§!中的一员。\n\n现在，一切都已经§R绝无回旋余地§!，这场战争既是新生的阿里乌斯分校所§G必然承担的历史使命§!，也将是新生的阿里乌斯分校所面临的§R最后一场考验§!。\n\n§Y胜利条件§!：\n终结§R出笼之兽§!，让一切§G回归正轨§!。\n\n§Y注意：§!这是一场§R仅为胜利§!的§C全面战争§!。\n\n§Y伊甸条约的力量：§![?ALF.UOP_power_score]\n§Y钢铁协定的力量：§![?TRA.UOP_power_score]\n\n§Y关键目标：§!\n[140.operation_protect_wing_sl]\n[118.operation_protect_wing_sl]\n[305.operation_protect_wing_sl]\n\n§Y主要目标：§!\n[55.operation_protect_wing_sl]\n[116.operation_protect_wing_sl]\n[124.operation_protect_wing_sl]\n[113.operation_protect_wing_sl]\n[306.operation_protect_wing_sl]\n[187.operation_protect_wing_sl]\n[184.operation_protect_wing_sl]\n\n§Y次要目标：§!\n[348.operation_protect_wing_sl]\n[135.operation_protect_wing_sl]\n[127.operation_protect_wing_sl]\n[54.operation_protect_wing_sl]\n[122.operation_protect_wing_sl]\n[107.operation_protect_wing_sl]\n[141.operation_protect_wing_sl]\n[650.operation_protect_wing_sl]\n[173.operation_protect_wing_sl]\n[230.operation_protect_wing_sl]\n[301.operation_protect_wing_sl]\n[176.operation_protect_wing_sl]\n\n"
+ ALF_UOP_infiltrate_target_decision: "获取关于§Y[FROM.GetName]的情报§!"
+
+ ALF_UOP_counter_mission: "§Y钢铁协定§!§R进军……§!"
+ ALF_UOP_trigger_mission: "§Y光复战争§!"
+ ALF_UOP_crack_target_supply_TRA_decision: "破坏§Y[TRA.GetNameWithFlag]§!的后勤枢纽"
+ ALF_UOP_crack_target_supply_GEA_decision: "破坏§Y[GEA.GetNameWithFlag]§!的后勤枢纽"
+ ALF_UOP_infiltrate_target_flag: "§Y目标§!§G已渗透§!"
+ ALF_UOP_begin_Traveller_operation_decision: "大规模攻势：§Y旅者行动§!"
+ ALF_UOP_begin_Traveller_operation_trigger_tt: "任何§Y旅者行动§!§G指定的省份§!：由§Y[TRA.GetNameWithFlag]§!控制"
+ ALF_UOP_begin_Traveller_operation_decision_tt: "\n所有§Y旅者行动§!§G指定的省份§!："
+ ALF_UOP_Traveller_operation_mission: "进行中的§Y旅者行动§!"
+ ALF_UOP_begin_Eden_operation_decision: "大规模攻势：§Y乐园行动§!"
+ ALF_UOP_begin_Eden_operation_trigger_tt: "任何§Y乐园行动§!§G指定的省份§!：由§Y[TRA.GetNameWithFlag]§!控制"
+ ALF_UOP_begin_Eden_operation_decision_tt: "\n所有§Y乐园行动§!§G指定的省份§!："
+ ALF_UOP_Eden_operation_mission: "进行中的§Y乐园行动§!" 
+ ALF_war_operation_dynamic_modifier: "攻势计划"
+ ALF_UOP_shepherd_operation_decision: "§Y牧羊人§!行动"
+ ALF_UOP_peacher_operation_decision: "§Y传道者§!行动"
+ ALF_UOP_geh_operation_decision: "大规模攻势：§Y乌列尔行动§!"
+ ALF_UOP_geh_operation_mission: "进行中的§Y乌列尔行动§!" 
 ####################
 ##新首都！！！
 ####################
@@ -196,14 +464,17 @@
 ##战略储备！！！
 ####################
  ALF_Livability_decision_category: "战略储备"
- ALF_Livability_decision_category_desc: "£market_subsidy_small_texticon §Y战略储备§!表示了流亡者为接下来的生存、发展，以及作战所§C储备的资源§!。随着流亡者控制区的增加，维持区域公共设施运转所需的战略储备也会增加；除此之外，面对不同局势所做出的抉择也会影响战略储备的数量。\n\n面对黑市中的汹涌浪潮，流亡者可以消耗战略储备来§G建立优势§!，但若战略储备不足，流亡者的行动也会§R受到限制§!。\n\n目前的战略储备：[?ALF.Livability_var|+=0..1]\n每月战略储备获取：[?modifier@ALF_Livability_int|+=0..1]\n来自规模的消耗：[?ALF.Livability_standard_var||+=0..1]"
+ ALF_Livability_decision_category_desc: "£market_subsidy_small_texticon §Y战略储备§!表示了流亡者为接下来的生存、发展，以及作战所§C储备的资源§!。随着流亡者控制区的增加，维持区域公共设施运转所需的战略储备也会增加；除此之外，面对不同局势所做出的抉择也会影响战略储备的数量。\n\n面对黑市中的汹涌浪潮，流亡者可以消耗战略储备来§G建立优势§!，但若战略储备不足，流亡者的行动也会§R受到限制§!。\n\n目前的战略储备：[?ALF.Livability_var|+=]\n每月战略储备获取：[?modifier@ALF_Livability_int|+=]\n来自规模的消耗：[?ALF.Livability_standard_var||+=]"
  
  improve_livability_decision: "£increase_texticon 增强£market_subsidy_small_texticon §Y战略储备§!获取能力"
  ALF_Livability_for_stability: "改善工作环境"
  ALF_Livability_for_war_support: "战争宣传"
+ ALF_Livability_for_manpower: "展开新一轮动员"
+ integrate_WSG_targeted_decision: "整合：§Y西街暴力团§!"
  restore_state_mail_system_targeted_decision: "（地图决议）恢复§Y[FROM.GetName]§!的邮政系统"
  ALF_Reorganize_the_postal_system_tt: "允许恢复每个受到控制的黑市区域的邮政系统。\n这将§G改善§!我们的§Y战略资源获取能力§!。"
  restore_state_electric_system_targeted_decision: "（地图决议）将§Y[FROM.GetName]§!区域接入电网"
+ Implement_relief_plan_targeted_decision: "（地图决议）在§Y[FROM.GetName]§!开展救济工作"
  
  ALF_Livability_for_infantry_equipment: "重启步兵装备库存"
  ALF_Livability_for_artillery_equipment: "重启火力武器库存"
@@ -211,8 +482,10 @@
 
  ALF_Livability_for_synthetic_refinery: "于§Y[FROM.GetName]§!区域建设§C炼油厂§!"
  ALF_Livability_for_arms_factory: "建设§C武器工厂§!"
+ ALF_Livability_for_industrial_complex: "建设§C民用工厂§!"
  ALF_Livability_for_infrastructure: "（地图决议）改善§Y[FROM.GetName]§!区域的§C基础设施§!"
  ALF_Livability_for_city_loadout: "（地图决议）改善§Y[FROM.GetName]§!区域的街道布局"
+ ALF_Livability_for_arius_city_loadout: "（地图决议）翻修§Y[FROM.GetName]§!区域的公共设施"
 
  ALF_Livability_count_down_mission: "月度统计"
  ALF_calculate_livability_state_tt: "统计£increase_texticon §Y战略资源§!……"
@@ -258,8 +531,15 @@
  decision_cost_has_livability_5pts_blocked: "£market_subsidy_small_texticon §R5§!"
  decision_cost_has_livability_5pts_tooltip: "该决议需要战略储备：§Y5§!"
 
+######其它决议
+ ALF_Eden_treaty_timer_mission: "收集关于§Y伊甸条约§!的情报……"
+
+
 #精神
  ALF_unlock_political_advisor_tt: "\n解锁§Y政治顾问§!："
+ ALF_unlock_theorist_tt: "\n解锁§Y理论家§!："
+ ALF_unlock_high_command_tt: "\n解锁§Y总司令§!："
+ ALF_unlock_air_chief_tt: "\n解锁§Y空军部长§!："
 
  ALF_Livability_dynamic_modifier: "战略储备"
  ALF_Livability_dynamic_modifier_desc: "战略储备代表着流亡者为了接下来的一切所做的准备。过多的储备它毫无意义，但将其消耗殆尽也亦非良策。"
@@ -268,11 +548,11 @@
  ALF_party_modifier: "阿里乌斯解放阵线"
  ALF_party_modifier_desc: "阿里乌斯解放阵线是一支在“领袖”的号召下组建的抵抗集团。但与其它在同期活跃的抵抗组织不同，流亡者以杰出的组织纪律，和坚定的共同理想著称。这意味着她们拥有不可动摇的最终目标，因此，尽管流亡者规模较小，但其成员却难以被分化或击垮。\n\n不过，即便目标相同，但流亡者内部却拥有多个采取了不同方法论的派系。这些派系对于如何「复兴阿里乌斯」拥有并不相同的方法和理论。目前，“领袖”为首的返乡派牢牢把握着权力。这一情况不太会改变，除非发生意料之外的事件。\n------------\n\n\n\n\n£ALF_party_modifier_desc_picture \n\n\n\n\n§Y打到完全胜利！§!"
 
- ALF_armed_force_dynamic_modifier: "阿里乌斯武装力量"
- ALF_armed_force_dynamic_modifier_desc: "流亡者和她的游击部队起源自阿里乌斯内战末期的反抗行动——在领袖的带领下，流亡者对“夫人”和她的军队发起了大范围的游击与破坏行动，并吸引到了许多内战时期的老兵。\n\n但不幸的是，这一系列反抗最终仍未能形成气候，走向了失败。随着学生会法统的继承者，秤亚津子为“夫人”所控制，包括流亡者在内的抵抗运动均受到了严重的打击。\n\n“领袖”敏锐地判断出了这一局面，并选择带领流亡者突入地下墓穴，逃往夫人所不能染指的阳光世界。许多抵抗者视之为逃亡主义，但这一行动无疑是明智的，到目前为止，仅有流亡者保存了完整的组织。\n\n尽管如此，这支继承了内战前阿里乌斯学园武装力量架构的微型军队，依然是一支遭遇了失败的军队。不过，她们的精神尚未倒下：许多人对她们的事业抱持着怀疑的态度，但流亡者终将证明，她们有实现理想的决心与意志。\n------------\n\n\n\n\n£ALF_armed_force_dynamic_modifier_desc_picture \n\n\n\n\n§R我们将从失败中再次升扬，直至正义之誓言得到践行……§!"
-
  ALF_partisan_army: "游击风气"
  ALF_partisan_army_desc: "流亡者的军队是游击作战的专家，她们擅长利用一切可利用的资源来击倒敌人。在另一方面来说，这也意味着她们缺乏正面作战的经验，尽管并非对此一窍不通，但改善这一情况仍要付出巨大努力。"
+
+ ALF_solving_partisan_army_1: "职业改革"
+ ALF_solving_partisan_army_1_desc: "流亡者决心改善常年游击导致的思维固化。幸运的是，只要投入时间与精力，这总是一个能改善的问题。"
 
  ALF_defeated_in_civil_war: "苦涩的失败"
  ALF_defeated_in_civil_war_desc: "“夫人”胜利了，逃亡到此地的，只是一群屡战屡败的输家。在这片远离故乡热土的地方，许多人都觉得，这趟惊心动魄的旅行应当就此结束——毫无疑问，从失败中重新崛起需要勇气，而这样的勇气总是绝无仅有。"
@@ -281,9 +561,13 @@
  ALF_technology_left_behind_desc: "长久的与世隔绝与残酷的内战已经占据了流亡者的全部精力。除非情况稳定下来，否则流亡者难以改善这个问题。"
  ALF_technology_left_behind_1: "弥补技术断层"
  ALF_technology_left_behind_desc: "流亡者正在致力于改善其技术研究能力，但这依然需要相当漫长的时间才能完成。"
+ LF_technology_left_behind_removed_flag: "问题已§G得到改善§!"
 
  ecolaws_ALF_command_economic: "指令经济"
  ecolaws_ALF_command_economic_desc: "生产与建设计划直接由学园管理层规划，并由行政机构负责监督执行的经济模式。优势和缺点都极为明显，可以被视为一种常态化的紧急措施。"
+
+ ecolaws_ALF_total_war_economic: "总体战"
+ ecolaws_ALF_command_economic_desc: "§R将一切投入战争的熔炉……§!"
  
  ALF_Special_trade: "重视贸易"
 
@@ -293,6 +577,55 @@
  ALF_population_investigate: "人口普查"
 
  ALF_city_loadout_optimized_dynamic_modifier: "城市布局优化"
+
+ ALF_combat_trainning: "突击训练"
+
+ ALF_cover_the_sky: "遮天蔽日"
+
+ ALF_shadow_follows: "贝阿多莉切之影"
+ ALF_shadow_follows_tt: "“夫人”的爪牙依旧在追逐着流亡者，没人知道这场围猎究竟什么时候才能结束……"
+
+ ALF_industrial_mobilization: "工业动员"
+ ALF_manpower_mobilization: "预备役动员"
+
+ ALF_we_can_do_this_idea: "共赴难关"
+ ALF_united_as_on_idea: "众志成城"
+
+ ALF_hit_on_weakness: "战术反制"
+
+ ALF_day_of_judgement: "审判之日"
+ ALF_day_of_judgement_desc: "“夫人”的§R末日§!到了。"
+
+ ALF_customized_the_supplyline: "针对性后勤设计"
+ ALF_speed_and_breakthrough: "强袭作战"
+
+ ALF_ARI_striked: "刀刺在背"
+
+ ALF_ruins_of_civil_war_dynamic_modifier: "破碎之地"
+ ALF_recover_from_civil_war: "从内战中恢复"
+
+ ALF_atsuko_idea: "秤亚津子"
+
+ ALF_flag_waves: "旗帜飘扬"
+ ALF_clear_rubbles: "重建工程"
+ ALF_root_out_old_story: "学园宪章修正案"
+ ALF_peace_sickness: "和平病"
+ ALF_new_constitution: "制宪会议"
+ ALF_new_constitution_1: "修订宪章的余波"
+ ALF_new_diplomacy_posture: "阿里乌斯外交姿态"
+ 
+ ALF_the_battle_with_no_step_back: "背水一战"
+ ALF_the_final_war: "家园，友谊，正义"
+
+ ALF_stand_up_the_committee: "起来，战斗！"
+ ALF_they_shall_no_pass: "不许通过"
+ ALF_Unlimited_bombing: "§O无限制轰炸§!"
+ ALF_volunteers_from_farway: "援助远邻"
+ ALF_full_work_schedule_idea: "全力生产"
+ ALF_cancel_rebuild_plan_idea: "暂停重建计划"
+
+ ALF_TRA_BUFF: "学园传统（圣三一）"
+ ALF_GEA_BUFF: "学园传统（格黑娜）"
 ####################
 ##领袖效果！！！
 ####################
@@ -304,12 +637,27 @@
  ALF_field_Surveyor: "实地测绘员"
  ALF_intelligence_analyst: "海关主任"
  ALF_propaganda_expert: "宣传干事"
+ ALF_RWT_theorist_idea_a_trait: "政治挂帅"
+ ALF_RWT_theorist_idea_b_trait: "基层热情"
+ ALF_armor_theorist: "合成化作战理论家"
+ ALF_strategic_roadmap_trait: "战役规划者"
+ ALF_overwhelming_firepower_trait: "火力测绘师"
+ ALF_JTAC_support_trait: "空中管制官"
+ ALF_infantry_assault_trait: "步兵突击专家"
+ ALF_logistics_designer_trait: "后勤规划师"
+ ALF_industrial_captain: "工业队长"
 
 ####################
 ##战争目标！！！
 ####################
+ ALF_revenge_target_wargoal: "§Y终结历史§!"
+ ALF_revenge_target_wargoal_name: "光复战争"
+
  ALF_pacify_target_wargoal: "恢复秩序"
  ALF_pacify_target_wargoal_name: "$ORDER$$FIRST$平定$SECOND$之战"
+
+ ALF_2nd_civilwar_goal: "第二次阿里乌斯内战"
+ ALF_2nd_civilwar_goal_name: "阿里乌斯解放战争"
 
 ####################
 ##省份！！！
@@ -471,3 +819,161 @@
  ALF.22.t: "拜访自由飞行员"
  ALF.22.desc: "在夜幕的掩护下，涂成黑色的双翼机轻轻落在了自由飞行员们控制的机场跑道上。负责接送流亡者代表的飞行员技术相当高超，在飞机落地时，桥野悦依几乎没有感受到任何的颠簸。\n\n“怎么样，波-2的性能不错吧？”在将飞机滑入机库后，飞行员扭过头，冲着这位来自南部区域的新朋友咧嘴一笑，“虽然它并不先进，但每个红冬飞行员都会驾驶它。”\n\n“你是红冬人？”这下，桥野悦依是真的有点吃惊了，那个自由飞行员的领袖，空见女士，明明看起来是一个典型的格黑娜人才对。\n\n“这不奇怪。”飞行员解释道，”你可能不知道，我们的老大，其实是格黑娜转学到红冬的学生。所以，我们的确来自许多学校——红冬、格黑娜，还有圣三一……哦！对不起。”\n\n意识到自己说了不妥的事，飞行员连忙闭上了嘴。她肯定已经知道，流亡者们是来自阿里乌斯的学生。不论如何，提及圣三一是一件相当不礼貌的事。不过，桥野悦依倒是对此没什么特别的感受。她知道流亡者中的确对圣三一的态度相当复杂，但她本人其实不怎么在乎这件事。\n\n“我早就说你不要乱讲话，不要交浅言深。在红冬还没吃够亏么？”\n\n就在这时候，另一道清脆的声音响了起来。桥野悦依扭过头，正看到穿着黑色飞行员夹克，戴着大檐帽的少女从路灯下现身。\n\n显然，这个人就是自由飞行员的领袖，空见凪翼了。于是，悦依主动走上前，朝对方伸出手：“我代表流亡者……阿里乌斯而来，很高兴见到您。”\n\n“我也很高兴见到你们。”凪翼笑了笑，做了一个请的姿势："
  ALF.22.a: "“为了我们的共同解放事业。”"
+
+ ALF.23.t: "拜访：红冬联邦学园"
+ ALF.23.desc: "在小谷图奈的带领下，流亡者们以「哨兵防务」的旗号拜访了红冬学园。\n\n不过，眼前的情况显然在她们的意料之外。在覆盖着白雪的广场上，红冬的学生们正聚集在一起，朝着她们的学生会投掷着各种各样的杂物。紧接着，她们开始焚烧起肖像画来，而在画上的，自然是她们红冬现在的领袖。\n\n“她们这是干什么呢……？政变？”\n\n东江静看了一会，感觉现在的场面有点莫名其妙。而在她的身边，她的师傅小谷图奈现在也是一副摸不着头脑的模样。\n\n但就在几人疑惑的时候，广场上却是又来了一批人。她们穿着统一的制服，和广场上这群穿着劳保套装的学生们显然又是截然不同。还没等几人看明白，这两支队伍竟然扭打了起来。紧接着，在学生会建筑里守着的卫兵也冲了出来，加入了这场混乱的派对。\n\n众人顿时目瞪口呆，但现在，她们的位置也不安全了。混乱的浪潮已经蔓延过来，抵达了众人的面前。\n\n“你们是干什么的？！”就在这时候，有人冲了过来，对着流亡者们大喝道。东江静愣了一下，旋即急中生智喊道："
+ ALF.23.a: "会长万岁！"
+ ALF.23.b: "革命万岁！"
+
+ ALF.24.t: "难以言说的旅途"
+ ALF.24.desc: "东江静的话显然起了作用。\n\n冲过来的人立刻脸色变了，朝着流亡者们就挥起拳头。但相对的是，另一批人则像是受了激励一样猛冲过来，喊着“援军到了”之类意味不明的话。\n\n总之，流亡者们现在不得不参与到这场混战中。幸运的是，凭借着出色的身手，她们接连打倒了每一个试图攻击她们的人。局势因此稳定下来，广场上很快就只有红冬学生会的卫兵还站着了。\n\n“感谢你们的帮助。”随着卫兵们向左右分开，一名看起来相当知性的红冬学生走了过来，“我是会长的秘书，佐城智惠。感谢几位客人的帮助，关于你们预约讨论的事，会长很乐意和你们谈一谈。”\n\n在佐城智惠的带领下，流亡者使团很快就见到了红冬的学生会长。众人甚至还没来得及提要求，对方就大笔一挥，给了一个相当慷慨的数字："
+ ALF.24.a: "“都是朋友，还客气什么！”"
+
+ ALF.25.t: "难以言说的旅途"
+ ALF.25.desc: "东江静的话显然起了作用。\n\n问话的人脸色放松下来，旋即宣布“新的同伴加入了这场革命”。相对的是，另外两批穿着制服的人则变了脸色，开始朝着流亡者刀枪相向。\n\n总之，流亡者们现在不得不参与到这场混战中。幸运的是，凭借着出色的身手，她们接连打倒了每一个试图攻击她们的人。局势因此稳定下来，广场上很快就只有穿着工装的革命者还站着了。\n\n“感谢你们的帮助。”随着抗议者们向左右分开，一名戴着安全头盔的学生走过来对流亡者们说道，“凪翼经常说起你们，也许我们可以给你们一些帮助。”\n\n在这位学生的带领下，流亡者使团很快就见到了红冬工务部的部长。对方似乎早就研究过流亡者的问题，直接开了一张慷慨的清单过来："
+ ALF.25.a: "“祝你们的革命战无不胜！”"
+
+ ALF.26.t: "拜访：格黑娜学园"
+ ALF.26.desc: "在小谷图奈的带领下，流亡者们以「哨兵防务」的旗号拜访了格黑娜学园。\n\n不过，她们到的可能不太是时候，因为这里如今正到处树立着巨大的金色雕像——毫无疑问是其学生会长本人的模样，两批穿着制服的学生，正在围绕着这些雕像展开激烈的交战。\n\n“我没看错吧？这看起来像是什么……表演？”\n\n东江静看了一会，发现竟然是万魔殿的卫队在和风纪委员会交战。但这又肯定算不上一场政变，因为大量的格黑娜学生，正拿着饮料和零食在附近的掩体中评头论足。\n\n显然，这里笼罩着一种难以描述的松弛感。这也让静的师傅，小谷图奈感觉到了一丝不妙。果不其然，大摇大摆跑到附近的流亡者被两方势力同时注意到了。格黑娜的学生们如今正瞩目于她们，显然是把流亡者也当成了这场“表演”的演员。\n\n“我们必须立刻行动！”东江静立刻反应过来，旋即急中生智喊道："
+ ALF.26.a: "我们是来帮忙的！"
+ ALF.26.b: "我们就是路过而已！"
+
+ ALF.27.t: "难以言说的旅途"
+ ALF.27.desc: "“是[GEH.GetLeader]找来的家伙！”\n\n东江静的话显然起了作用——尽管这作用一言难尽。风纪委员会的成员们立刻朝着她们所在的地方展开了攻击队形，但流亡者们凭借着长久的作战经验，很快就反过来压住了风纪委员会。\n\n万魔殿的成员显然注意到了这一点，她们没有放过这个机会，而是展开了反冲击作战。风纪委员会的阵线很快就溃败了，很快，万魔殿的成员们控制住了局势。但不幸的是，那些金色的雕像还是全数在交战中变成了一地瓦砾。\n\n不过，万魔殿的成员显然都不太在乎这一点。很快，[GEH.GetLeader]亲自走了过来，在大笑声中给予了流亡者们一份难以想象的慷慨礼物："
+ ALF.27.a: "“我[GEH.GetLeader]从来不亏待朋友！”"
+
+ ALF.28.t: "难以言说的旅途"
+ ALF.28.desc: "“鬼才信啊！”\n\n东江静的话显然起了作用——尽管这作用一言难尽。万魔殿的成员压根不相信这句话，转而向着流亡者们发动了攻击。不过，她们的行动显然没有风纪委员会来的有组织，很快就被作战经验更加丰富的流亡者们打退。\n\n风纪委员会注意到了这个机会，立即对万魔殿守卫的区域发起了攻击——她们显然格外在乎那些金色的雕塑，几乎是一个不落地把这些雕塑全部拆毁了。等到万魔殿的成员溃逃时，广场上已经不剩下一个完整的雕塑了。\n\n风纪委员会显然很满意于这个结果。不多时，一个风纪委员会的高级成员亲自过来，对流亡者解释道："
+ ALF.28.a: "感谢帮助，你们想要什么？"
+
+ ALF.29.t: "特种部队的未来"
+ ALF.29.desc: "流亡者们关于特种部队的任务爆发了一场争执——但说来也好笑，这场争执并非由军种矛盾挑起，反而是爆发在特种部队内部。\n\n以滩尾辉美为首的特种大队指挥官们认为，鉴于特种部队与常规部队截然不同的定位与任务，流亡者的特种部队应该被编组为一支独立部队，以便更好地承担专业化的特战任务。\n\n而在另一边，则以浦原美代子这样的实用派经验为出发点，认为特种部队应该被分散到各个合成化部队之中，承担作为战场尖刀的职责。\n\n显然，双方所说的都各自有其道理。前者的底气来源于其长久的经验和战略思维；而后者的自信则来自她们在战场上摸爬滚打得出的经验公式。不过，流亡者的资源有限，不论如何，只能支持其中一方的观点。"
+ ALF.29.a: "支持§G滩尾辉美§!的观点。"
+ ALF.29.b: "支持§G浦原美代子§!的观点。"
+
+ ALF.31.t: "懈怠"
+ ALF.31.desc: "“领袖”久违地将流亡者的队长们召集了起来。\n\n“我们必须考虑如何应对凯撒的威胁了。”领袖对着会议室中的人说道，“我们最近过的太过安逸了，这可不是好事。\n\n“可我们的建设任务还没有完成。我们还没有准备好。”\n\n有队长这么回答了领袖的问题。会议室里的众人虽然没有应和这句话，但都微微点了点头。显然大家都是支持这个观点的。现在的生活还不错，何必要节外生枝呢。\n\n“现在生活是不错。”领袖并没有否认这一点，而是说道，“但是你们没有决心保卫它——我们不去解决敌人，敌人就不会来解决我们吗？”\n\n“可是……”\n\n“我们的阿里乌斯学园难道就不美丽吗？它最后怎么样了，你们不知道吗！”领袖的声音忽地拔高起来，明明戴着面具，却是给人一种怒目圆睁的感觉，“难道你们还准备再接着逃跑吗？”\n\n“当然不……”\n\n流亡者们低下头，声音里却是一点底气都没有。大家知道“领袖”是对的，但她们可能确实没有准备好。\n\n领袖看着众人，终究还是放低了声音："
+ ALF.31.a: "“我要一份作战计划，就今天。”"
+
+ ALF.32.t: "调查报告：凯撒集团"
+ ALF.32.desc: "致“领袖”：\n\n经调查，现在情况已经明了。显然，存在一个受凯撒集团控制的庞大的利益团体，它们控制了黑市的走私、赌博以及各种非法生意，而如“西街暴力团”或“咔哒头盔团”这样的组织，只是受其控制的势力之一。\n\n尽管该团体针对我们的理由尚不明确，但可以确定的是，这一团体视我们为潜在威胁，并已经开始为可能的冲突进行准备。\n\n就目前的情况看，军事冲突已不可避免。因此，必须进行一次先发制人的攻击，在该团体的成员达成一致意见前就将其彻底铲除。否则，我们可能陷入多面围攻的不利境地。\n\n报告结束。\n特别勤务处"
+ ALF.32.a: "该来的总是会来……"
+ 
+ ALF.33.t: "边境异动"
+ ALF.33.desc: "几周以来，流亡者位于边界的哨所一直处于最高警戒状态。\n\n流亡者对黑市内各个势力的全面清扫行动如今已进入收尾阶段，随着战局逐渐明朗，位于黑市边缘的凯撒集团，也变得蠢蠢欲动起来。\n\n显然，凯撒集团不会坐视自己的势力被扫地出门。特别勤务处的情报员已经确认，凯撒集团已经开始在边界集结力量。作为应对，最高等级的战备命令也被下达到了各个边境的守备队伍。\n\n毫无疑问，凯撒集团不会放弃他们在黑市的利益和野心。现在，流亡者们警惕的可能性已经化作现实。\n\n在坦克和装甲车的掩护下，凯撒集团的步兵纵队以战斗队形越过了边界。哨兵第一时间就扑向了墙上的电话，毫不犹豫地拨通了那个唯一的号码：\n\n“红色代码！重复一遍，红色代码！”"
+ ALF.33.a: "那一天来临了。"
+ ALF_EPW_Broke_Out_tt: "§R木已成舟……§!\n解锁§Y公司战争§!国策树"
+
+ ALF.34.t: "阿里乌斯解放战争"
+ ALF.34.desc: "随着“夫人”确认到了我们的存在，这场战争已经不可避免。但同样的，这也是我们渴求已久的战争。几年以来，我们一直在回顾我们在内战中的失败，而现在，我们终于有机会一雪前耻。\n\n“夫人”寄希望于使用武力彻底消灭我们——但这并非什么值得忧虑的事，这表明这位暴君除了动用暴力，已再无别的手段。“贝阿多莉切”，这个毫无底线的野心家，如今已经被逼入角落，歇斯底里。\n\n因此，流亡者有且只有一个任务，那就是彻底终结“夫人”和她的反动政权，将解放的曙光带给这片已经沉沦已久的土地。"
+ ALF.34.a: "完成未竟之事！"
+
+ ALF.35.t: "迟来正义"
+ ALF.35.desc: "伊甸条约的签署仪式会场，圣三一和格黑娜的代表都破天荒地早早来到了现场——与她们在谈判期间的表现截然相反。而不论是圣三一的领袖，桐藤渚，还是格黑娜的学生会长，羽沼真琴，脸上都带着的凝重之色。\n\n前者，现在正深陷有关“阿里乌斯”事务的漩涡之中，不得不参与了几场充满了唇枪舌剑的闭门听证会，如今身心俱疲；而后者，正因为承诺给自己的飞艇没能到货而捶胸顿足：她现在意识到，阿里乌斯组织了一个骗局，而最大的受害者，正是她真琴自己。\n\n不过，这点异常并未引起注意。与会的嘉宾只当两位学园的最高代表舟车劳顿……就是签个约而已，还能出什么意外呢。\n\n很快，修女会的司仪走了过来，手捧着古代的经文，开始念诵起神圣的契约来。\n\n但就在这时候，古圣堂的门却被猛然推开。在克罗诺斯学员长枪短炮的簇拥下，一位戴着贝雷帽的金发学生挤开试图拦截的安保人员，大踏步地闯入会场，对着众人大声道："
+ ALF.35.a: "“还没有人问过我们阿里乌斯的意见呢！”"
+
+ ALF.36.t: "硝烟散尽"
+ ALF.36.desc: "流亡者们从战壕中探出头来。硝烟的味道依然刺鼻，但再也没有新的炮弹被发射过来。\n\n“我们胜利了。”\n\n突然，有人说道。流亡者们面面相觑，旋即意识到就在几分钟前，由凯撒发表的“终止作战宣言”的确是真的。\n\n一阵清脆的掌声在宁静却沟壑纵横的土地上响了起来，又在片刻后，转变为海潮一般的欢呼。战争的历程固然是充满艰难的，但胜利的喜悦也同样深刻。\n\n阵地上的庆祝活动，都被远方高地上的前沿指挥所看了个真切。站在指挥所里的桥野悦依放下望远镜后沉默了一会，才抓着话筒，对另一边的领袖说道：“现在，我们可以考虑那件事了。”\n\n“确实到时候了，我们的真实身份也瞒不了多久。”领袖回复道，“夫人很快就会知道我们的存在……我想大概能让她度过相当难熬的一天。”\n\n两人一齐轻笑起来——黑市的魑魅魍魉也好，凯撒集团也好，它们如今已流亡者的第一个和第二个手下败将，而“夫人”，也毫无疑问成为“第三个”……"
+ ALF.36.a: "贝阿多莉切的末日到了。"
+
+ ALF.37.t: "新家 · 其二"
+ ALF.37.desc: "领袖站在养护站的露台上，再一次看着升起的朝阳。现在，阳光已经成了流亡者们习惯的事务，也不会再有流亡者为了观看朝阳而提早起床。\n\n“新家。”\n\n领袖品味着这个词汇。对现在的流亡者来说，这里，或者那个旧日的学园，究竟哪一个是阿里乌斯已经不那么重要了。流亡者认同感并不因为土地而产生，而是来自于某种更加虚无缥缈的词汇——“集体”。\n\n阿里乌斯是一个对于集体的称谓。领袖想到，这就意味着，它的过去、它的现在，还有它的将来，都注定成为阿里乌斯的一部分。其中固然充满了遗憾且无法挽回的错误，但现在的“新家”、新的“阿里乌斯”，已经可以承载这一切内容。\n\n“现在，我们要真正解放自己。”\n\n有人在领袖身后说道。她转过身，却发现了早就悄悄站在自己身后的同伴们。\n\n除了她要兑现的剩下的半边承诺，领袖已经得到了一个新的目标。那就是在基沃托斯这片辽阔的舞台上，为阿里乌斯获得本该拥有的一席之地。"
+ ALF.37.a: "如今，晨光洒落你身。"
+
+ ALF.38.t: "故园 · 其二"
+ ALF.38.desc: "“家”的意思，其实从来不复杂。它意味着温暖的港湾，熟识的亲朋，以及能承载梦想的土壤。\n\n桥野悦依沿着养护站的扶梯旋转而上。现在，流亡者们已经不再聚集在这里，行政功能早已被搬离此地，迁移到了更加适合城市发展的地方。但作为流亡者的再兴之地，作为“领袖”兑现她的前一半承诺的地方，始终有其特殊意义。\n\n“落叶归根的地方吗……”\n\n桥野悦依想到。在流亡者的语境中，故乡，总是与“复仇”，或者更加充满了宗教意味的词汇所捆绑。那个学园早已不能承载今日阿里乌斯的概念，但却始终是一个执念。\n\n她现在得承认，领袖对于故园的执着是正确的。即便那里没有阳光，也充满了伤痕，但阿里乌斯的过去必须在那里做出彻底的了结，这样才能有勇气眺望明天。躲在外面的流亡者将始终是一群无法注视自己过去的懦夫，而懦夫，是做不成真正的事业的。\n\n“结果，反而是我更在乎过去吗？”\n\n桥野悦依摇摇头，不由得为自己的想法感到好笑。过去也好，未来也好，但她们还是活在当下的。想到这里，她推开露台的门，向着那个总是在看太阳的忧郁哲人说道："
+ ALF.38.a: "“现在，我们要真正解放自己。”"
+
+ ALF.39.t: "通道测绘报告"
+ ALF.39.desc: "致作战司令部：\n\n我部于今日抵达墓穴通道C段尽头，即撤离时所摧毁的入口。入口处依然保留原本摧毁时的样子，可以确认，“夫人”并未染指这一道路。\n\n经过评估，我部认为，道路可用轻中型工程器械完成疏通，这一工程预期将消耗一周时间，将与动态地图测绘工作同步完成。\n\n另：测绘小组在工作时收敛一具属于抵抗阵线成员的遗体。\n\n报告结束。\n东江静"
+ ALF.39.a: "愿她的灵魂得到庇护。"
+
+ ALF.40.t: "寄出书信"
+ ALF.40.desc: "流亡者的核心圈子正聚集在领袖的卧室里。\n\n她们正在研讨一件事情——无关宏大的战略，也无关细枝末节的数字。那也许只是一件小事，但对流亡者来说却有可能影响深远。\n\n实际上，她们正在计划给最近外面颇为有名的，夏莱的老师写一封信。虽然流亡者并不寄希望于那个老师会做什么，但也许会有意想不到的收获。\n\n“应该先写我们的情况吧。”小谷图奈摸了摸脑袋，慢吞吞地说道。不过，她的意见马上就被自己的徒弟反驳了：“不行。那个夏莱的老师和圣三一关系紧密。”\n\n“先把“夫人”的事写上去吧。”桥野悦依提议道，“至少这个能成为共识。”\n\n“可这就听起来就是奇幻故事了……”又有人说道，“没人会把幻想故事当真的。”\n\n“那就干脆邀请老师来？”\n\n“啧，那不是更异想天开了？”\n\n在领袖的卧室里，流亡者们少有地争执起来。领袖坐在自己的写字桌旁，一边听着同伴们的争执，一边在心里打起草稿来。\n\n实际上，对于这件事，她倒是有点自己的理解：既然是老师，就肯定没有丢下学生的道理。既然如此，那其实也未必要瞻前顾后。\n\n想到这里，领袖抬起笔，写下了信的第一句话。"
+ ALF.40.a: "“致夏莱的老师……”"
+
+ ALF.41.t: "不速之客"
+ ALF.41.desc: "夜深了。领袖坐在阳台上，望着升起的月亮。\n\n在阿里乌斯学园看不见太阳，但却微妙地能看见明月。领袖以前认识的人说，这是“神秘”的力量。但那人从来没解释过——现在也不会再有机会解释——这到底是什么意思了。\n\n“失去的太多了……”领袖叹气起来，“朋友真是奢侈品。”\n\n“嚯~你说话像小渚一样。明明是个阿里乌斯的家伙。”突然，有声音从房梁上响了起来。领袖扭过头，看到的是一个粉头发，穿着精致裙子的学生。\n\n“我可没邀请客人。”领袖回答道，这位不速之客溜进来肯定不是心血来潮，“特别是圣三一的大小姐。你这样的人来黑市做什么？”\n\n“你有资格这么说我吗？混在鸭子群里面的天鹅。”不料，对方却嬉皮笑脸地说道，“你不也流着圣三一的贵族之血吗？”\n\n领袖猛地抬起头，突然意识到对方知道的远比自己想象的多，但她还是说道：“我不会是。圣园小姐。”\n\n“欸~真是无聊哦……”听了领袖的回答，对方失望地摇摇头，但紧接着却又摆出笑容来，“不过，我有一个提案，你想听吗？”\n\n也不等领袖回答，这个不请自来的家伙，就自顾自地讲了一个故事："
+ ALF.41.a: "一个关于友情、信任，以及背叛的故事。"
+ mika_s_bet_tt: "两头下注也是一种智慧——特别是对§Y圣园未花§!这样的人来说……"
+
+ ALF.42.t: "回声"
+ ALF.42.desc: "写给我同样背叛了一切的朋友：\n\n当你看到这封信的时候，我的小小任性大概已经结束了。说实话，小渚是个疑神疑鬼的人，我也不期望能做到什么~\n\n不过，接下来的话对你有用。我在活动时接触到了一批“心思活络”的阿里乌斯学生……虽然她们大概还在动摇，不过我能知道她们在想什么。\n\n这就是你的机会。我没有什么能为你做的了，祝你好运。\n\n另：老师很关心你们的进展。所以记得保持联系哦~？"
+ ALF.42.a: "“寄出地址：夏莱”"
+ mika_s_bet_echo_tt: "§R对于一个赌徒来说，这算是个不错的结局……§!"
+
+ ALF.43.t: "揭竿而起"
+ ALF.43.desc: "很显然，一直驻守在地下墓穴附近的阿里乌斯学生早已对现状充满了不满。外面的世界让她们就像是一个蠢蠢欲动的火药桶，只待最后点燃的火星。\n\n而现在，这点火苗升起了。"
+ ALF.43.a: "迅速抢占有利位置！"
+ ALF.43.b: "这群叛徒！"
+
+ ALF.44.t: "道别"
+ ALF.44.desc: "流亡者们又一次见到了她们的盟友，飞行员出身的空见凪翼——但这一次，是送别。\n\n凯撒集团已经被赶出了黑市，而自由飞行员们的任务也因此终于宣告结束。现在，她们已经成为了整个红冬所瞩目的存在，许多的红冬学生，不管是支持她们的，还是反对她们的，都期待着她们能回来讲解一二。\n\n“我会永远记得与你们并肩作战的日子的。”桥野悦依说道，“流亡者——阿里乌斯分校，永远感谢你们伸出的援手。”\n\n“我也从你们身上学到了很多。所以，我决定返回我的学校。我在那里也许也有很多事情要做。”凪翼却反过来向流亡者们微微欠身，“你们告诉了我如何从挫折中站起来。这是我的很多革命同僚都不明白的事情。”\n\n“那的确是很不容易的事。”领袖点点头，向着凪翼伸出手，“不管怎么样，我们的事业还没有完成，你们的也没有。”\n\n“是的，所以接下来还有许多事要做。”凪翼握住领袖的手，肯定道，“但正义的事业肯定战无不胜。”\n\n在飞行员们的簇拥下，凪翼登上了接她返航的飞机。不过，在登上最后一节台阶时，她却又回头，向着流亡者们狡黠一笑：“对了，我还有一些礼物留给你们。除了我们没用完的装备，还有别的惊喜哦？”\n\n流亡者们没有搞明白她是什么意思，但凪翼的航班已经起飞。"
+ ALF.44.a: "“唔，那就先看看仓库吧……”"
+ ALF_oob_heavyarmor_tt: "两支§Y自行火炮装甲团§!将加入流亡者的序列。"
+
+ ALF.45.t: "欺诈者的穷途末路"
+ ALF.45.desc: "阿里乌斯解放战争结束了。随着解放阵线的学生们冲进旧校舍本馆，并将阿里乌斯的旧日校旗在它的顶端升起时，所有人都明白，这场战争终于接近尾声。\n\n不过，比起胜利，还有更重要的事情要做。流亡者们越过站在本馆大厅，刚刚投降，还显得手足无措的阿里乌斯学生们，开始仔细搜寻建筑各处。然而，罪魁祸首“贝阿多莉切”的身影，却始终没有出现。\n\n“公主！公主还在大教堂……”有投降的学生突然说道。她看起来情绪激动，似乎已经无法忍耐，“请你们一定要救下她……！\n\n这一重要情报被迅速传递到解放阵线司令部，很快，一支精锐队伍被组织起来，前往教堂。这条情报果然所言非虚。在那里，流亡者们见到了被绑架的公主，以及已经歇斯底里的“夫人”。\n\n“面对我最完美的作品吧！你们这些渣滓！”贝阿多莉切尖叫起来。一尊巨大的怪物出现在了众人面前——那是贝阿多莉切，或者可能是她的什么东西——\n\n“闪开！让我们来处理！你们把公主先抢下来！”\n\n就在这时候，有高喝声响起。伴随着隆隆的引擎声，流亡者的重战车突击团碾过教堂的石柱，冲进了空旷的教堂中央。\n\n于是，接下来的一切都顺理成章了："
+ ALF.45.a: "“听我口令！战车团！齐射目标——！”"
+ ALF_dead_of_the_evil_tt: "§R一个与野心家相配的丑陋结局。§!"
+
+ ALF.52.t: "伊甸条约即将签署"
+ ALF.52.desc: "一封匿名书信被递到了流亡者手中。那是一封关于伊甸条约的信件，里面详细记载了条约的谈判结果，以及具体的签署时间。\n\n然而，关于寄出信件的人，流亡者却始终百思不得其解。唯一可以称为标志的东西，就是信封上面烫金的边缘，以及圣三一的蜡封。然而，这反而更让流亡者疑窦丛生，寄来这封信的未必是圣三一的成员，就算真的是，那对方也肯定别有所求。\n\n“但我们不能放过这个机会。”领袖最终下定了决心，“派一支特使团去。既然遵循的是古老的契约，那就不能没有我们阿里乌斯的名字在上面。”\n\n不过，就算如此，流亡者们之间还是流传着怀疑的情绪：对方现在在谋划着什么更大的计划，而流亡者也只是棋盘上的一枚棋子……"
+ ALF.52.a: "话虽如此，这可连糖衣炮弹都说不上。"
+
+ ALF.53.t: "一封傲慢的感谢信"
+ ALF.53.desc: "流亡者又收到了同样的匿名书信，依然还是烫金的边缘，以及圣三一的蜡封。\n\n只不过，这封信的内容就相当耐人寻味了。写信的人除了感谢了流亡者之外，还这样写道：“虽然你们是很棒的工具，但我想你们的价值就到此为止了。”——显而易见，写信的人是如此傲慢，以至于觉得自己可以玩火自焚。\n\n也许对方确有傲慢的资本。流亡者获得的情报显示，写下这封信的人，极有可能与圣三一最近发生的权力更迭有关。不过，对方显然不觉得流亡者还能继续走下去，以至于现在就开始大放厥词了。"
+ ALF.53.a: "这群傲慢的乌合之众竟也能扳倒圣三一的茶话会吗……？"
+
+ ALF.54.t: "跨过瓦砾"
+ ALF.54.desc: "解放阵线的电报员缓慢地穿过了一片摇摇欲坠的废墟。她手里提着一卷电报线，而能否恢复学园的通讯，全看她今天的努力。\n\n如今这种情况，当然要拜夫人的统治所赐。为了压制抵抗活动，夫人竟拆毁了学园所有的无线信号基站，几年以来，除了部分拥有无线电设备的小队之外，阿里乌斯学园的多数学生一直都只能靠有线电报来互相联络。\n\n这也导致了当解放阵线攻入这里时，许多学生甚至不知道发生了什么事。她们中的多数甚至还以为是夫人的镇压队又来了，就这么茫然地看着解放阵线的战车从街道的瓦砾上碾过。\n\n“嘿——咻——”\n\n电报员奋力地把生锈的接线盒拽开，然后把新的电报线接了上去。这处电报中继点很幸运地躲开了炮击，但幸运女神似乎也就眷顾了这里。\n\n在完成了这一切后，电报员坐在了地上，望着这周围的一切。\n\n她并不担忧这周围的断壁残垣，因为新的阿里乌斯学园早晚会把这里恢复如初。但看了看四周徘徊的旧阿里乌斯学生们，她又察觉到，这些学生心中那片坍塌的瓦砾，似乎也没那么容易彻底修复……"
+ ALF.54.a: "时间能把这样的一切也抹平吗？"
+
+ ALF.55.t: "审视罪恶"
+ ALF.55.desc: "在夕阳西下时，特别巡回庭结束了工作。她们的任务并不复杂，无非就是审查那些被控犯有罪行的旧阿里乌斯学生，然后给予相应的矫正惩戒。\n\n但是，困难也是困难在这里了。显然，有相当数量的学生并不认为自己犯下了错误——或者直白点说，共识中的道德观对她们没有意义。在“夫人”的教导下，必要之恶是一种稀松平常的手段，更有甚者，已经学会倒果为因。\n\n“绑架，霸凌，哦……还得加上一条恐怖袭击。”巡回庭的副庭长抖了抖手里的档案，脸上带着叹为观止的表情，“那接下来还有什么做不出来的？杀人？我甚至怀疑这都不算底线。”\n\n“不要带着刻板的滤镜……”庭长说道，“不要用我们外面的道德来看这里。她们只是……缺乏教育。”\n\n接着，两人一齐叹气。她们其实也同情这些同胞的境遇，甚至某种程度上能理解她们的行动，但这不代表这些同胞做的就是对的。即便是她们这样的审判者，都开始使用“外面”和“里面”来区别这些有着相同血脉的同胞，那其它成员的想法，恐怕已经不难窥见了。\n\n“得找个能真正容纳和改造她们的地方……”\n\n庭长苦恼地挑动着发丝，这样的地方不是没有：作战司令部正在争执要不要成立“惩戒营”，但若出现闪失，那也许会成为另一次伤害……"
+ ALF.55.a: "是对是错，谁能说的清楚呢？"
+
+ ALF.56.t: "面对命运"
+ ALF.56.desc: "领袖正坐在旧校舍的露台上，看着朝阳升起。她已经很久没这么做了，但今天却又这么做了。\n\n在夫人倒下后，阿里乌斯奇迹般地又拥有了阳光……这就好像奇迹，但一个归根结底的担忧是，奇迹向来不是长久的。流亡者一路以来的胜利，除了努力之外，多少也称得上有幸运女神的垂青，但明天，谁能说得准明天，阿里乌斯还能不能继续幸运下去。\n\n然而，想达成领袖最后的构想，刚刚才拯救了家园的阿里乌斯，就必须再次踏上战场。如果是她熟知的那个，有着伪善面孔的圣三一，或许还有避免冲突的希望。但现在，就像历史中那次一样，阿里乌斯不可避免地将与圣三一爆发战争——并且，这还得是场非赢不可的战争。\n\n但是，这世间哪有常胜将军呢？圣三一就已经庞大到令人窒息，若是再加上虎视眈眈的格黑娜，双方的力量对比只能说难以想象。这非得是有奇迹降临才能得胜的战争，而领袖要的，却偏偏又是这样，会把整个阿里乌斯推上赌桌的战争。\n\n然而，圣三一终究还是她曾经的母校。一个人怎么能在面对故乡的灾祸时选择视而不见呢？若不能挽救它于堕落之中，那她就终究戴上了伪善而功利的面具，她的理想也就会黯然失色了。\n\n可或许也是一种强加给阿里乌斯的任性。说到底，又何必非要与巨人为敌？即便这场战争最终总是会降临，但那至少是阿里乌斯自己的选择……"
+ ALF.56.a: "珍视的一切又一次被推上天平。"
+
+ ALF.57.t: "我所追寻之物"
+ ALF.57.desc: "“就在不久之前，我站在这里向你们宣布胜利。我说，这展示了我们的团结，意志，以及共克时艰的本领。”领袖站在台上说道，“但我问你们，你们多少人还想再要一场战争？”\n\n领袖看向她的追随者们——这些过去的流亡者，现在的阿里乌斯分校学生。她们脸上带着跟随领袖的渴望，却又显露着对战争的顾虑。\n\n于是，不出所料地，台下一片寂静。\n\n“我的指挥官们说，当然。现在时局紧迫，已经没时间去做毫无意义的争论……”这并不出乎领袖的意料，所以她继续说道，“可我很纠结，这是否是我一个人的任性，我所追求的理想，究竟是属于阿里乌斯的公义，还是属于我一个人的战争。”\n\n她指了指自己面孔上总是带着的防毒面具：“就像这样，你们追随的既是一位阿里乌斯的领袖，也是一副看不见面容的面具。”\n\n“所以，「我」，而不是「领袖」，想亲自和你们交谈。”领袖抬起手，按在自己的防毒面具上。这也让台下的学生们惊呼起来，她们终于意识到接下来要发生的事了——许多人都猜测那副面具下究竟是怎么样的样貌，而今天，答案就要揭晓。\n\n出乎意料，又不出意外的是，面具下是一副再普通不过的少女面孔——既不是“夫人”所描述的那般丑陋，也不是一些流亡者想象中的美貌。那只是一张普通的面孔，还带着些沉重的疲态。\n\n“……不瞒你们说。”领袖慢慢走下讲台，“……我其实，甚至不是阿里乌斯的学生。我来自圣三一。”\n\n突如其来的双重真相让在场的学生们陷入了沉默。扑面而来的压力让领袖轻轻闭上眼，但下一秒，却有沙哑的声音打破了沉默：“您是在请求我们加入您的战争吗？”\n\n“……没错。我不否认这一点。”\n\n“有很多人会为此流血。”\n\n“是的，有很多人会为此流血。”领袖低下头，轻轻说道，“我说了，这是属于我的战争……”\n\n“不。”问话的人突然笑了起来，连带着压抑的气氛也跟着一扫而空。领袖抬头，却看见阿里乌斯的学生们轻轻将她围在了中间。\n\n“您说过，视邪恶而无为，也是不义。”她如此说道，“流亡者为了阿里乌斯而战，但它的内涵远不止如此。对正义的追寻让我们连凯撒集团都敢挑战，不是么？”\n\n“如果您是为了公义和正道而战，那么——”"
+ ALF.57.a: "“——您的战争就是我们的战争。”"
+ ALF_justice_war_tt: "§G公理战无不胜。§!"
+
+ ALF.58.t: "首次接触"
+ ALF.58.desc: "阿里乌斯分校的特使前往拜访了位于地下墓穴的出口，接触了目前硕果仅存的圣三一政权。\n\n出人意料的是，接待特使的，是一位名叫白洲梓的学生。她来自阿里乌斯，并成功转入了圣三一学籍。在帮助茶话会挫败了第一次政变后，她成为了茶话会最信任的成员之一。\n\n为了迅速建立可靠的信任关系，圣三一临时委员会提议，派遣白洲梓前往阿里乌斯分校担任特使。作为交换，圣三一请求我们接纳一部分无家可归的学生。"
+ ALF.58.a: "就这么做吧。"
+
+ ALF.59.t: "现状：圣三一"
+ ALF.59.desc: "领袖的视线落在情报部门收集而来的报告上。\n\n自圣三一建校以来，这个一路顺风的学园还从未遭遇如此严重的危机。名为团结会的势力夺取了圣三一的桂冠，并迅速向整个基沃托斯展示了它的暴戾。情报显示，这个团结会其实是「圣三一情报局」用以伪装的外壳，在圣园未花的阴谋中，她们深度参与了反政变行动，却也因此得到了不该拥有的权力。\n\n这或许揭示了她们利用流亡者干涉伊甸条约的理由。显然，这群秘密警察想要更大的权力，茶话会的外交溃败，正是她们梦寐以求的支点——她们最后也的确这么做了，尽管修女会与骑士团及时出手，使得茶话会还没有一败涂地，但情况对这群抵抗者而言依然能称得上绝望。\n\n「一个失败者的集合」，报告上最终是这么评价圣三一临时委员会的。也许现在的情况的确如此，这群圣三一体制的捍卫者遭遇了惨败，但从另一个角度来说，临时委员会的存在，也说明了另一个事实："
+ ALF.59.a: "她们是被击倒了，但还有站起来的勇气。"
+ a_spirit_for_winning_tt: "§Y我们也同样是如此走过来的。§!"
+
+ ALF.60.t: "现状：格黑娜"
+ ALF.60.desc: "对格黑娜来说，现在的一切就像是个轮回。\n\n就像一些人所知道的那样，并非所有的格黑娜学员都对雷帝的时代怀以排斥的心理。在这个充满了混乱的时代，有些人仍旧怀念着雷帝时期的强盛与秩序井然。尽管如此，没有人觉得雷帝的时代还能死灰复燃——在新兴的体系下，这样的理念都不会有生存的土壤。\n\n然而，出乎意料的事情就这么发生了。羽沼真琴与空崎日奈的离心离德招致了灾难性的后果。前者刚愎自用，明明有政治手腕，却依旧我行我素，自撅墙根；后者能力出众，却拒绝过问政治，甘心安居一隅，对体制出现的漏洞视而不见。两者本应通力合作，捍卫格黑娜来之不易的自由时光，但她们各自背弃了自己的誓言，现在也不得不面对大厦将倾的后果。\n\n但即便如此，一切仍有转机。她们曾经胜利过，未尝没有机会再胜一次。"
+ ALF.60.a: "历史是温柔的老师，总是不厌其烦地重复"
+
+ ALF.61.t: "现状：绝境同盟"
+ ALF.61.desc: "命运是可以征服的，一路走来，重建了阿里乌斯分校流亡者总是秉持这个观点。\n\n但是，这也就意味着，未来总是善变的。没人能料到明天能发生什么，就像阿里乌斯分校从来没有想过，自己要为了拯救圣三一和格黑娜的命运而战。对部分旧阿里乌斯学园的学生，乃至于一些流亡者来说，这都是难以接受，甚至无法想象的事情。\n\n口号总是很容易喊的，但是物质的现实却没那么容易更改，旧日的纷纷扰扰如今仍未有定论，自然也遑论共同奔赴未来。然而，现在已经毫无疑问到了生死存亡的关头。团结一致已经是唯一的选项，若不能放下芥蒂，一致对敌，那等待着的依然只有毁灭。\n\n幸运的是，现在的阿里乌斯分校，是一支由现实锻打的学园。只要下定决心，她们从不缺乏亲手创造未来的气魄。"
+ ALF.61.a: "时间将检验她们做出的选择。"
+
+ ALF.63.t: "光复战争"
+ ALF.63.desc: "对于阿里乌斯分校的最终考验已经降临。正如领袖所指出的那样，阿里乌斯分校不能将此等难关交予后人面对。过往的一切仇恨与迷茫，应当在这里被彻底终结。\n\n改组圣三一学园与大格黑娜学园的野心家们将希望以武力消灭正义的声音，那么阿里乌斯分校就必须告诉她们，这只是独裁者的痴心妄想。\n\n此战将决定阿里乌斯的命运，而我们也唯有全力以赴。"
+ ALF.63.a: "让我们敞开天窗说亮话吧！"
+ unlock_2nd_liberation_war_focus_tree_tt: "§G解锁§!§Y光复战争国策树§!"
+
+ ALF.64.t: "修订学园宪章"
+ ALF.64.desc: "随着我们的全面胜利，阿里乌斯分校已经完全受到了我们的控制。鉴于现在的情况，旧有的宪章已经不再合适。\n\n目前，我们主要有两个选择：要么保存部分旧有制度，建立一个以皇室血统为学园象征的温和制度；要么就干脆一步到位，彻底把漏洞百出的旧宪章替换掉。"
+ ALF.64.a: "保留部分旧有制度是有利的。"
+ ALF.64.b: "要以完全的改革作为最终目标。"
+
+ ALF.65.t: "黎明之时"
+ ALF.65.desc: "战争结束了。随着最后的抵抗者放下武器，高举双手离开了废墟，这一切已经成为了一个确定的结局。\n\n对伊甸条约的成员们来说，今日的一切都还是梦幻般的光景。在之前，她们还是遭遇了失败的一盘散沙，而现在，她们已经作为胜利者重新回到了这片自己所热爱的土地。命运总是眷顾那些敢于勇敢追随它的人——当然，按阿里乌斯分校的话说，这叫做亲手创造命运。\n\n不论如何，战争已经结束了。现在，还有许多事情等待着这群胜利者去完成……"
+ ALF.65.a: "现在，开始新的篇章。"
+
+ ALF.66.t: "踏步向前"
+ ALF.66.desc: "伊甸条约部队的方阵从和平之门广场的雕塑下踏步而过，落下雷鸣般的齐步之声。\n\n最先过去的是格黑娜学生的组成方阵，然后是圣三一学生组成的方阵，最后则是阿里乌斯分校的学生们组成的方阵。她们昂首阔步，带着胜利者的气势。在侧面的观礼台上，“领袖”正注视着她们。\n\n“我们做到了。”桥野悦依说道。她的身后还站着圣三一的代表，浦和花子，还有格黑娜的代表，枣伊吕波。两个学园名义上的最高领导们都默契地选择派出副手参与这场胜利仪式，而非亲自到来——至于说究竟是事务繁忙，无法脱身，还是说另有理由，就不得而知了。\n\n“光有我们在还真是尴尬呢，”浦和花子调侃道，“我看呐，大家还需要一点更加坦诚相见的活动才行。”\n\n她的话音刚落，周围的许多人立刻变了脸色。在她说出下一句话之前，她的朋友们就冲了过来，直接把她拖了下去。\n\n“哦……啊？”桥野悦依显然有点摸不着头脑，显然是对花子的话颇为好奇。但领袖却带着笑着摇摇头，脸上露出了高深莫测的微笑："
+ ALF.66.a: "有一说一，她还真知道是怎么回事。"
+ ALF_bare_good_end_tt: "§G尘埃落定。§!"

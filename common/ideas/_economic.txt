@@ -178,7 +178,6 @@ ideas = {
 		}
 		##指令经济
 		ecolaws_ALF_command_economic = {
-			icon = GFX_idea_ecolaws_war_economy
 			cost = 50
 			removal_cost = -1
 			cancel_if_invalid = no
@@ -202,6 +201,38 @@ ideas = {
 				research_speed_factor = 0.05
 				production_factory_max_efficiency_factor = 0.2
 				production_factory_efficiency_gain_factor = -0.1 
+			}
+		}
+		##总体战##
+		ecolaws_ALF_total_war_economic = {
+			cost = 50
+			removal_cost = -1
+			cancel_if_invalid = no
+			visible = {
+				has_war = yes
+			}
+			available = {
+				has_war = yes
+			}
+			allowed = {
+				original_tag = ALF
+			}
+			allowed_to_remove  = {
+				always = no
+			}
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_speed_industrial_complex_factor = -0.1
+				production_speed_arms_factory_factor = 0.2
+				production_speed_infrastructure_factor = -0.05
+				production_speed_air_base_factor = 0.3
+				production_speed_bunker_factor = 0.3
+				research_speed_factor = -0.1
+				industrial_capacity_factory = 0.4
+				stability_weekly = 0.01
+				war_support_weekly = 0.03
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
 			}
 		}
 		#一切为了科研

@@ -1,1 +1,2 @@
+graphical_culture = abydos_culture_gfx
 color= {0 206 209}

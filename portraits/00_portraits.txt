@@ -490,6 +490,26 @@ GEH = {#格黑娜
 				"GFX_Portrait_geh_5"
 			}
 		}
+
+		Authoritarian_ideology = {
+			male = {
+				"GFX_Portrait_geh_1"
+				"GFX_Portrait_geh_2"
+				"GFX_Portrait_geh_3"
+				"GFX_Portrait_geh_4"
+				"GFX_Portrait_geh_5"
+			}
+		}
+
+		Liberalism_ideology = {
+			male = {
+				"GFX_Portrait_geh_1"
+				"GFX_Portrait_geh_2"
+				"GFX_Portrait_geh_3"
+				"GFX_Portrait_geh_4"
+				"GFX_Portrait_geh_5"
+			}
+		}
 	}
 	operative = { #特工
 		female = {
@@ -4180,6 +4200,28 @@ TRI = {#圣三一
 
 	political = { #领导人随机
 		no_ideology = {
+			male = {
+				"GFX_Portrait_tri_1"
+				"GFX_Portrait_tri_2"
+				"GFX_Portrait_tri_3"
+				"GFX_Portrait_tri_4"
+				"GFX_Portrait_tri_5"
+				"GFX_Portrait_tri_6"
+			}
+		}
+
+		Authoritarian_ideology = {
+			male = {
+				"GFX_Portrait_tri_1"
+				"GFX_Portrait_tri_2"
+				"GFX_Portrait_tri_3"
+				"GFX_Portrait_tri_4"
+				"GFX_Portrait_tri_5"
+				"GFX_Portrait_tri_6"
+			}
+		}
+
+		Progressivism_ideology = {
 			male = {
 				"GFX_Portrait_tri_1"
 				"GFX_Portrait_tri_2"

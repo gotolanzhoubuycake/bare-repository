@@ -1,0 +1,16 @@
+BARE_ALF_GOOD_END_ENDING_SCREEN_EFFECT = {
+	set_variable = {
+		game_ends_here = 1
+	}
+	set_country_flag = GOOD_ENDING_ALF_FLAG
+	hidden_effect = {
+		scoped_play_song = BARE_SuperEvent_Song_for_the_Beyond
+	}
+}
+
+BARE_ALF_BAD_END_ENDING_SCREEN_EFFECT = {
+	set_variable = {
+		game_ends_here = 1
+	}
+	set_country_flag = BAD_ENDING_ALF_FLAG
+}

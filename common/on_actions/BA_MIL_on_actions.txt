@@ -1,0 +1,56 @@
+on_actions = {
+    # 千年-凯撒战争每周事件
+    # Wiki参考：https://hoi4.paradoxwikis.com/On_actions
+    # 用于处理每周减少凯撒经济状况的逻辑
+    on_weekly_MIL = {
+        effect = {
+            # 检查是否是千年
+            if = {
+                limit = {
+                    original_tag = MIL
+                }
+
+                # 决议1效果：每周凯撒经济状况-1
+                if = {
+                    limit = {
+                        has_country_flag = MIL_cae_eco_weekly_minus_1
+                    }
+                    subtract_from_variable = {
+                        var = global.cae_economic_situation
+                        value = 1
+                    }
+                }
+
+                # 决议2效果：每周凯撒经济状况-1.5（在-1%基础上）
+                if = {
+                    limit = {
+                        has_country_flag = MIL_cae_eco_weekly_minus_1_5
+                    }
+                    subtract_from_variable = {
+                        var = global.cae_economic_situation
+                        value = 1.5
+                    }
+                }
+            }
+        }
+    }
+
+    # 千年-凯撒战争每日事件
+    # 用于计算凯撒经济状况对战斗力的影响
+    # 参考文档：https://hoi4.paradoxwikis.com/Variables
+    # 计算公式：以100为基准，每偏离2点=1%战斗力影响
+    on_daily_CAE = {
+        effect = {
+            set_variable = { var = MIL_cae_war_temp_calc value = global.cae_economic_situation }
+            subtract_from_variable = { var = MIL_cae_war_temp_calc value = 100 }
+            divide_variable = { var = MIL_cae_war_temp_calc value = 200 }
+            # 将计算结果设置为所有战斗属性变量
+            # 这些变量在 dynamic_modifier CAE_economic_status 中被引用
+            set_variable = { var = gloabl.MIL_cae_war_cae_army_attack_factor value = MIL_cae_war_temp_calc }
+            set_variable = { var = gloabl.MIL_cae_war_cae_army_defence_factor value = MIL_cae_war_temp_calc }
+            set_variable = { var = gloabl.MIL_cae_war_cae_army_org_factor value = MIL_cae_war_temp_calc }
+            set_variable = { var = gloabl.MIL_cae_war_cae_army_org_regain value = MIL_cae_war_temp_calc }
+            set_variable = { var = gloabl.MIL_cae_war_cae_air_mission_efficiency value = MIL_cae_war_temp_calc }
+        }
+    }
+}

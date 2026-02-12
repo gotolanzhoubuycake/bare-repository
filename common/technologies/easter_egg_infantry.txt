@@ -1,36 +1,36 @@
-technologies = {
+#technologies = {
 
-	bare_cavalry_tech = {
+	#bare_cavalry_tech = {
 
-		research_cost = 1
+	#	research_cost = 1
 
-		folder = {
-			name = infantry_folder
-			position = {
-				x = -4
-				y = -1
-			}
-		}
+	#	folder = {
+	#		name = infantry_folder
+	#		position = {
+	#			x = -4
+	#			y = -1
+	#		}
+	#	}
 
 		#TODO reput it in infantry tech tree
-		allow = {
-			custom_trigger_tooltip = {
-				tooltip = bare_this_is_just_joke_tt		
+	#	allow = {
+	#		custom_trigger_tooltip = {
+	#			tooltip = bare_this_is_just_joke_tt		
 				#tag = TRI
-				always = no
-			}
-		}
+	#			always = no
+	#		}
+	#	}
 		
-		dependencies = {
-			T1_infantry_weapon = 1
-		}
+	#	dependencies = {
+	#		T1_infantry_weapon = 1
+	#	}
 
-		enable_subunits = {
-			cavalry
-		}	
+	#	enable_subunits = {
+	#		cavalry
+	#	}	
 
-		ai_will_do = {
-			factor = 1
-		}
-	}
-}
+	#	ai_will_do = {
+	#		factor = 1
+	#	}
+	#}
+#}

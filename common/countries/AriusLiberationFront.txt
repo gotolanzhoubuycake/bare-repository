@@ -1,5 +1,5 @@
 graphical_culture = arius_culture_gfx
 graphical_culture_2d = western_european_2d
 
-color = rgb { 0 204 204 }
-color_ui = rgb { 0 220 220 }
+color = rgb { 163 60 65 }
+color_ui = rgb { 173 70 75 }

@@ -1419,6 +1419,676 @@ guiTypes = {
 			}
 		}
 
+
+		containerWindowType = {
+			name = "land_doctrine_folder"
+			position = { x=0 y =47 }
+			size = { width = 100%% height = 100%% }
+			margin = { top = 13 left = 13 bottom = 24 right = 25}
+			drag_scroll = { left middle }
+			verticalScrollbar = "right_vertical_slider"
+			horizontalScrollbar = "bottom_horizontal_slider"
+			scroll_wheel_factor = 40
+
+			background = {
+				name = "Background"
+				quadTextureSprite ="GFX_tiled_window_2b_border"
+			}
+
+			containerWindowType = {
+				name = "size_filler"
+				position = { x=0 y =0 }
+				size = { width = 2100 height = 100% }
+			}
+
+			iconType = {
+				name ="great_war_doctrine_bg"
+				spriteType = "GFX_great_war_doctrine_bg"
+				position = { x=0 y =0 }
+			}
+
+			# iconType = {
+			# 	name ="sup_firepower_bg"
+			# 	spriteType = "GFX_sup_firepower_bg"
+			# 	position = { x=525 y = 380 }
+			# }
+
+			# iconType = {
+			# 	name ="grand_battleplan_bg"
+			# 	spriteType = "GFX_grand_battleplan_bg"
+			# 	position = { x=45 y =380 }
+			# }
+
+			# iconType = {
+			# 	name ="mob_warfare_bg"
+			# 	spriteType = "GFX_mob_warfare_bg"
+			# 	position = { x=1000 y =380 }
+			# }
+
+			# iconType = {
+			# 	name ="mass_assault_bg"
+			# 	spriteType = "GFX_mass_assault_bg"
+			# 	position = { x=1480 y=380 }
+			# }	
+
+			iconType = {
+				name = "highlight_grand_battle_plan"
+				spriteType = "GFX_tutorial_research_small_item_icon_glow"
+				position = { x=1245 y =291}
+				hide = yes
+				alwaystransparent = yes
+			}
+#######################################################################标题标签
+			instantTextBoxType = {
+				name = "great_war_title"
+				position = { x = 800 y = 0 }
+				textureFile = ""
+				font = "hoi_20b"
+				borderSize = {x = 0 y = 4}
+				text = "GREAT_WAR_DOCTRINE_LABEL"
+				maxWidth = 400
+				maxHeight = 122
+				format = center
+				Orientation = "UPPER_LEFT"
+			}
+
+			instantTextBoxType = {
+				name = "artillery_title"
+				position = { x = 560 y = 380 }
+				textureFile = ""
+				font = "hoi_20b"
+				borderSize = {x = 0 y = 4}
+				text = "ARTILLERY_DOCTRINE_LABEL"
+				maxWidth = 400
+				maxHeight = 122
+				format = center
+				Orientation = "UPPER_LEFT"
+			}
+
+			instantTextBoxType = {
+				name = "tanks_title"
+				position = { x = 1040 y = 380 }
+				textureFile = ""
+				font = "hoi_20b"
+				borderSize = {x = 0 y = 4}
+				text = "TANKS_DOCTRINE_LABEL"
+				maxWidth = 400
+				maxHeight = 122
+				format = center
+				Orientation = "UPPER_LEFT"
+			}
+
+			instantTextBoxType = {
+				name = "infantry_title"
+				position = { x = 80 y = 380 }
+				textureFile = ""
+				font = "hoi_20b"
+				borderSize = {x = 0 y = 4}
+				text = "INFANTRY_DOCTRINE_LABEL"
+				maxWidth = 400
+				maxHeight = 122
+				format = center
+				Orientation = "UPPER_LEFT"
+			}
+
+			instantTextBoxType = {
+				name = "machine_title"
+				position = { x = 1520 y = 380 }
+				textureFile = ""
+				font = "hoi_20b"
+				borderSize = {x = 0 y = 4}
+				text = "MACHINE_DOCTRINE_LABEL"
+				maxWidth = 400
+				maxHeight = 122
+				format = center
+				Orientation = "UPPER_LEFT"
+			}
+##############################################################
+
+
+			instantTextBoxType = {
+				name = "country_specific_title"
+				position = { x = 140 y = 90 }
+				textureFile = ""
+				font = "hoi_20b"
+				borderSize = {x = 0 y = 4}
+				text = "COUNTRY_SPECIFIC_LABEL"
+				maxWidth = 350
+				maxHeight = 122
+				format = center
+				Orientation = "UPPER_LEFT"
+			}
+
+
+			instantTextBoxType = {
+				name = "tier_subtitle1"
+				position = { x = -50 y = 610 }
+				textureFile = ""
+				font = "hoi_20b"
+				borderSize = {x = 0 y = 4}
+				text = "T1"
+				maxWidth = 150
+				maxHeight = 122
+				format = center
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "MOBILE_INFANTRY_LABEL_TT"
+			}
+
+			instantTextBoxType = {
+				name = "tier_subtitle2"
+				position = { x = -50 y = 1090 }
+				textureFile = ""
+				font = "hoi_20b"
+				borderSize = {x = 0 y = 4}
+				text = "T2"
+				maxWidth = 150
+				maxHeight = 122
+				format = center
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "MOBILE_INFANTRY_LABEL_TT"
+			}
+
+			instantTextBoxType = {
+				name = "tier_subtitle3"
+				position = { x = -50 y = 1570 }
+				textureFile = ""
+				font = "hoi_20b"
+				borderSize = {x = 0 y = 4}
+				text = "T3"
+				maxWidth = 150
+				maxHeight = 122
+				format = center
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "MOBILE_INFANTRY_LABEL_TT"
+			}
+
+
+			gridboxtype = {
+				name = "infantry_11_tree"
+				position = { x=20 y = 460 }
+				size = { width = 480 height = 1350 }
+				slotsize = { width=60 height= 60 }
+				format = "UP"
+			}
+
+			gridboxtype = {
+				name = "infantry_12_tree"
+				position = { x=20 y = 460 }
+				size = { width = 480 height = 1350 }
+				slotsize = { width=60 height= 60 }
+				format = "UP"
+			}
+
+			gridboxtype = {
+				name = "infantry_21_tree"
+				position = { x=20 y = 460 }
+				size = { width = 480 height = 1350 }
+				slotsize = { width=60 height= 60 }
+				format = "UP"
+			}
+
+			gridboxtype = {
+				name = "infantry_22_tree"
+				position = { x=20 y = 460 }
+				size = { width = 480 height = 1350 }
+				slotsize = { width=60 height= 60 }
+				format = "UP"
+			}
+
+
+			gridboxtype = {
+				name = "infantry_31_tree"
+				position = { x=20 y = 460 }
+				size = { width = 480 height = 1350 }
+				slotsize = { width=60 height= 60 }
+				format = "UP"
+			}
+
+			gridboxtype = {
+				name = "infantry_32_tree"
+				position = { x=20 y = 460 }
+				size = { width = 480 height = 1350 }
+				slotsize = { width=60 height= 60 }
+				format = "UP"
+			}
+
+
+			gridboxtype = {
+				name = "artillery_11_tree"
+				position = { x=500 y =460 }
+				size = { width = 480 height = 1350 }
+				slotsize = { width=60 height= 60 }
+				format = "UP"
+			}
+
+			gridboxtype = {
+				name = "artillery_12_tree"
+				position = { x=500 y =460 }
+				size = { width = 480 height = 1350 }
+				slotsize = { width=60 height= 60 }
+				format = "UP"
+			}
+
+			gridboxtype = {
+				name = "artillery_21_tree"
+				position = { x=500 y =460 }
+				size = { width = 480 height = 1350 }
+				slotsize = { width=60 height= 60 }
+				format = "UP"
+			}
+
+			gridboxtype = {
+				name = "artillery_22_tree"
+				position = { x=500 y =460 }
+				size = { width = 480 height = 1350 }
+				slotsize = { width=60 height= 60 }
+				format = "UP"
+			}
+
+			gridboxtype = {
+				name = "artillery_31_tree"
+				position = { x=500 y =460 }
+				size = { width = 480 height = 1350 }
+				slotsize = { width=60 height= 60 }
+				format = "UP"
+			}
+
+			gridboxtype = {
+				name = "artillery_32_tree"
+				position = { x=500 y =460 }
+				size = { width = 480 height = 1350 }
+				slotsize = { width=60 height= 60 }
+				format = "UP"
+			}
+
+			gridboxtype = {
+				name = "tank_11_tree"
+				position = { x=980 y =460 }
+				size = { width = 480 height = 1350 }
+				slotsize = { width=60 height= 60 }
+				format = "UP"
+			}
+
+			gridboxtype = {
+				name = "tank_12_tree"
+				position = { x=980 y =460 }
+				size = { width = 480 height = 1350 }
+				slotsize = { width=60 height= 60 }
+				format = "UP"
+			}
+
+			gridboxtype = {
+				name = "tank_21_tree"
+				position = { x=980 y =460 }
+				size = { width = 480 height = 1350 }
+				slotsize = { width=60 height= 60 }
+				format = "UP"
+			}
+
+			gridboxtype = {
+				name = "tank_22_tree"
+				position = { x=980 y =460 }
+				size = { width = 480 height = 1350 }
+				slotsize = { width=60 height= 60 }
+				format = "UP"
+			}
+
+			gridboxtype = {
+				name = "tank_31_tree"
+				position = { x=980 y =460 }
+				size = { width = 480 height = 1350 }
+				slotsize = { width=60 height= 60 }
+				format = "UP"
+			}
+
+			gridboxtype = {
+				name = "tank_32_tree"
+				position = { x=980 y =460 }
+				size = { width = 480 height = 1350 }
+				slotsize = { width=60 height= 60 }
+				format = "UP"
+			}
+
+			gridboxtype = {
+				name = "robot_11_tree"
+				position = { x=1460 y =460 }
+				size = { width = 480 height = 1350 }
+				slotsize = { width=60 height= 60 }
+				format = "UP"
+			}
+
+			gridboxtype = {
+				name = "robot_12_tree"
+				position = { x=1460 y =460 }
+				size = { width = 480 height = 1350 }
+				slotsize = { width=60 height= 60 }
+				format = "UP"
+			}
+
+			gridboxtype = {
+				name = "robot_21_tree"
+				position = { x=1460 y =460 }
+				size = { width = 480 height = 1350 }
+				slotsize = { width=60 height= 60 }
+				format = "UP"
+			}
+
+			gridboxtype = {
+				name = "robot_22_tree"
+				position = { x=1460 y =460 }
+				size = { width = 480 height = 1350 }
+				slotsize = { width=60 height= 60 }
+				format = "UP"
+			}
+
+			gridboxtype = {
+				name = "robot_31_tree"
+				position = { x=1460 y =460 }
+				size = { width = 480 height = 1350 }
+				slotsize = { width=60 height= 60 }
+				format = "UP"
+			}
+
+			gridboxtype = {
+				name = "robot_32_tree"
+				position = { x=1460 y =460 }
+				size = { width = 480 height = 1350 }
+				slotsize = { width=60 height= 60 }
+				format = "UP"
+			}
+
+			gridboxtype = {
+				name = "Gehenna_1_tree"
+				position = { x=20 y =140 }
+				size = { width = 480 height = 1350 }
+				slotsize = { width=60 height= 60 }
+				format = "UP"
+			}
+			gridboxtype = {
+				name = "Gehenna_2_tree"
+				position = { x=20 y =140 }
+				size = { width = 480 height = 1350 }
+				slotsize = { width=60 height= 60 }
+				format = "UP"
+			}
+
+			gridboxtype = {
+				name = "Trinity_1_tree"
+				position = { x=180 y =140 }
+				size = { width = 480 height = 1350 }
+				slotsize = { width=60 height= 60 }
+				format = "UP"
+			}
+			gridboxtype = {
+				name = "Trinity_2_tree"
+				position = { x=180 y =140 }
+				size = { width = 480 height = 1350 }
+				slotsize = { width=60 height= 60 }
+				format = "UP"
+			}
+
+			gridboxtype = {
+				name = "Arius_1_tree"
+				position = { x=340 y =140 }
+				size = { width = 480 height = 1350 }
+				slotsize = { width=60 height= 60 }
+				format = "UP"
+			}
+			gridboxtype = {
+				name = "Arius_2_tree"
+				position = { x=340 y =140 }
+				size = { width = 480 height = 1350 }
+				slotsize = { width=60 height= 60 }
+				format = "UP"
+			}
+
+			#gridboxtype = {
+				#name = "Abydos_1_tree"
+				#position = { x=500 y =140 }
+				#size = { width = 480 height = 1350 }
+				#slotsize = { width=60 height= 60 }
+				#format = "UP"
+			#}
+
+			#gridboxtype = {
+				#name = "Hyakkiyako_1_tree"
+				#position = { x=660 y =140 }
+				#size = { width = 480 height = 1350 }
+				#slotsize = { width=60 height= 60 }
+				#format = "UP"
+			#}
+
+			#gridboxtype = {
+				#name = "Shanhaijing_1_tree"
+				#position = { x=820 y =140 }
+				#size = { width = 480 height = 1350 }
+				#slotsize = { width=60 height= 60 }
+				#format = "UP"
+			#}
+
+			#gridboxtype = {
+				#name = "RedWinter_1_tree"
+				#position = { x=980 y =140 }
+				#size = { width = 480 height = 1350 }
+				#slotsize = { width=60 height= 60 }
+				#format = "UP"
+			#}
+
+			#gridboxtype = {
+				#name = "Specialresponseteam_1_tree"
+				#position = { x=1140 y =140 }
+				#size = { width = 480 height = 1350 }
+				#slotsize = { width=60 height= 60 }
+				#format = "UP"
+			#}
+
+			#gridboxtype = {
+				#name = "Valkyrie_1_tree"
+				#position = { x=1300 y =140 }
+				#size = { width = 480 height = 1350 }
+				#slotsize = { width=60 height= 60 }
+				#format = "UP"
+			#}
+
+			#gridboxtype = {
+				#name = "Millennium_1_tree"
+				#position = { x=1460 y =140 }
+				#size = { width = 480 height = 1350 }
+				#slotsize = { width=60 height= 60 }
+				#format = "UP"
+			#}
+		}
+
+		    
+
+#######################################################################################################
+		containerWindowType = {
+			name = "air_doctrine_folder"
+			position = { x=0 y=47 }
+			size = { width = 100%% height = 100%% }
+			margin = { top = 13 left = 13 bottom = 24 right = 25}
+			drag_scroll = { left middle }
+			verticalScrollbar = "right_vertical_slider"
+			horizontalScrollbar = "bottom_horizontal_slider"
+			scroll_wheel_factor = 40
+
+			background = {
+				name = "Background"
+				quadTextureSprite ="GFX_tiled_window_2b_border"
+			}
+
+			containerWindowType = {
+				name = "size_filler"
+				position = { x=0 y=0 }
+				size = { width = 1440 height = 1482 }	
+			}
+
+			# iconType = {
+			# 	name ="air_superiority_bg"
+			# 	spriteType = "GFX_strategic_destruction_bg"
+			# 	position = { x=80 y=33 }
+			# }			
+				
+			# iconType = {
+			# 	name ="battlefield_destruction_bg"
+			# 	spriteType = "GFX_battlefield_destruction_bg"
+			# 	position = { x=595 y=33 }
+			# }	
+	
+			# iconType = {
+			# 	name ="operational_destruction_bg"
+			# 	spriteType = "GFX_operational_destruction_bg"
+			# 	position = { x=1100 y=33 }
+			# }
+	
+#			iconType = {
+#				name ="strategic_destruction_bg"
+#				spriteType = "GFX_strategic_destruction_bg"
+#				position = { x=1567 y=33 }
+#			}			
+			
+			instantTextBoxType = {
+				name = "strategic_destruction_title"
+				position = { x = 80 y = 35 }
+				font = "hoi_22tech"
+				borderSize = {x = 0 y = 4}
+				text = "TITLE_STRATEGIC_DESTRUCTION"
+				maxWidth = 400
+				maxHeight = 122
+				format = center
+				Orientation = "UPPER_LEFT"
+			}
+
+			instantTextBoxType = {
+				name = "strategic_destruction_desc"
+				position = { x = 108 y = 70 }
+				font = "hoi_20b"
+				borderSize = {x = 0 y = 4}
+				text = "STRATEGIC_DESTRUCTION_DESC"
+				maxWidth = 380
+				maxHeight = 122
+				format = center
+				Orientation = "UPPER_LEFT"
+			}
+
+			instantTextBoxType = {
+				name = "battlefield_support_title"
+				position = { x = 605 y = 35 }
+				font = "hoi_22tech"
+				borderSize = {x = 0 y = 4}
+				text = "TITLE_BATTLEFIELD_SUPPORT"
+				maxWidth = 400
+				maxHeight = 122
+				format = center
+				Orientation = "UPPER_LEFT"
+			}
+
+			instantTextBoxType = {
+				name = "battlefield_support_desc"
+				position = { x = 620 y = 70 }
+				font = "hoi_20b"
+				borderSize = {x = 0 y = 4}
+				text = "BATTLEFIELD_SUPPORT_DESC"
+				maxWidth = 380
+				maxHeight = 122
+				format = center
+				Orientation = "UPPER_LEFT"
+			}
+
+			instantTextBoxType = {
+				name = "operational_integrity_title"
+				position = { x = 1105 y = 35 }
+				font = "hoi_22tech"
+				borderSize = {x = 0 y = 4}
+				text = "TITLE_OPERATIONAL_INTEGRITY"
+				maxWidth = 400
+				maxHeight = 122
+				format = center
+				Orientation = "UPPER_LEFT"
+			}
+
+			instantTextBoxType = {
+				name = "operational_integrity_desc"
+				position = { x = 1120 y = 82 }
+				font = "hoi_20b"
+				borderSize = {x = 0 y = 4}
+				text = "OPERATIONAL_INTEGRITY_DESC"
+				maxWidth = 380
+				maxHeight = 122
+				format = center
+				Orientation = "UPPER_LEFT"
+			}
+ 			
+# 			instantTextBoxType = {
+#				name = "strategic_destruction_title"
+#				position = { x = 1580 y = 35 }
+#				font = "hoi_22tech"
+#				borderSize = {x = 0 y = 4}
+#				text = "TITLE_STRATEGIC_DESTRUCTION"
+#				maxWidth = 400
+#				maxHeight = 122
+#				format = center
+#				Orientation = "UPPER_LEFT"
+#			}
+ 			
+# 			instantTextBoxType = {
+#				name = "strategic_destruction_desc"
+#				position = { x = 1592 y = 70 }
+#				font = "hoi_20b"
+#				borderSize = {x = 0 y = 4}
+#				text = "STRATEGIC_DESTRUCTION_DESC"
+#				maxWidth = 380
+#				maxHeight = 122
+#				format = center
+#				Orientation = "UPPER_LEFT"
+#			}
+
+			
+			gridboxtype = {
+				#strategic_destruction_tree Needs to be named after first tech (air_superiority)
+				name = "air_superiority_tree"
+				position = { x=80 y=172 }
+				size = { width = 427 height = 1335 }
+				slotsize = { width=60 height= 60 }
+				format = "UP"
+
+				background = {
+					name = "Background"
+					quadTextureSprite ="GFX_fullborder_tiled"
+					position = { x=0 y=-150 }					
+				}
+			}
+
+			gridboxtype = {
+				#battlefield_support_tree Needs to be named after first tech (formation_flying)
+				name = "formation_flying_tree"
+				position = { x=595 y=172 }
+				size = { width = 427 height = 1335 }
+				slotsize = { width=60 height= 60 }
+				format = "UP"
+
+				background = {
+					name = "Background"
+					quadTextureSprite ="GFX_fullborder_tiled"
+					position = { x=0 y=-150 }					
+				}
+			}
+
+			gridboxtype = {
+				#operational_integrity_tree Needs to be named after first tech (force_rotation)
+				name = "force_rotation_tree"
+				position = { x=1100 y=172 }
+				size = { width = 427 height = 1335 }
+				slotsize = { width=60 height= 60 }
+				format = "UP"
+
+				background = {
+					name = "Background"
+					quadTextureSprite ="GFX_fullborder_tiled"
+					position = { x=0 y=-150 }					
+				}
+			}
+		}
 		# containerWindowType = {
 		# 	name = "school_special_folder"
 		# 	position = { x=85 y=47 }
@@ -2710,6 +3380,49 @@ guiTypes = {
 				frame = 1
 				clicksound = ui_research_tab_industry
 			}
+
+
+			buttonType = {
+				name = "land_doctrine_folder_tab"
+				position = { x = 1100 y = 0 }
+				quadTextureSprite = "GFX_landdoctrine_tab_large"
+				frame = 1
+				clicksound = ui_doctrine_tab_land
+			}
+			instantTextBoxType = {
+				name = "army_doctrine_title"
+				text = "land_doctrine"
+				position = { x=1160 y=18}
+				font = "hoi_20bs"
+				maxWidth = 160
+				maxHeight = 20
+				format = center
+				alwaystransparent = "yes"
+			}
+			iconType = {
+				name = "highlight_land_doctrine_folder"
+				spriteType = "GFX_tutorial_research_folder_icon_glow"
+				position = { x=1032 y= 0}
+				hide = yes
+				alwaystransparent = yes
+			}		
+			buttonType = {
+				name = "air_doctrine_folder_tab"
+				position = { x = 1350 y = 0 }
+				quadTextureSprite = "GFX_airdoctrine_tab_large"
+				frame = 1
+				clicksound = ui_doctrine_tab_air
+			}
+			instantTextBoxType = {
+				name = "air_doctrine_title"
+				text = "air_doctrine"
+				position = { x=1410 y=18}
+				font = "hoi_20bs"
+				maxWidth = 160
+				maxHeight = 20
+				format = center
+				alwaystransparent = "yes"
+			}			
 			
 			# ####
 			# buttonType = {
@@ -3612,6 +4325,79 @@ guiTypes = {
 			spriteType = "GFX_design_team_icon"
 		}
 	}
+
+	containerWindowType = {
+		name = "techtree_land_doctrine_folder_item"
+		position = { x=0 y=5 }
+		size = { width = 72 height = 72 }
+		clipping = no
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_technology_unavailable_item_bg"
+		}
+
+		iconType = {
+			name = "Icon"
+			position = { x=3 y=3 }
+			spriteType = "GFX_technology_medium"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "bonus_icon"
+			position = { x=-1 y=-22 }
+			spriteType = "GFX_tech_bonus"
+		}
+		
+		instantTextBoxType = {
+			name = "bonus"
+			position = { x = -1 y = -22 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			borderSize = {x = 4 y = 4}
+			text = "lol boat"
+			maxWidth = 80
+			maxHeight = 20
+			format = center
+		}
+	}
+
+	containerWindowType = {
+		name = "techtree_air_doctrine_folder_item"
+		position = { x=0 y=5 }
+		size = { width = 72 height = 72 }
+		clipping = no
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_technology_unavailable_item_bg"			
+		}
+
+		iconType = {
+			name = "Icon"
+			position = { x=3 y=3 }
+			spriteType = "GFX_technology_medium"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "bonus_icon"
+			position = { x=-1 y=-22 }
+			spriteType = "GFX_tech_bonus"
+		}
+		
+		instantTextBoxType = {
+			name = "bonus"
+			position = { x = -1 y = -22 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			borderSize = {x = 4 y = 4}
+			text = "lol boat"
+			maxWidth = 80
+			maxHeight = 20
+			format = center
+		}
+	}
+	
 
 	containerWindowType = {
 		name = "techtree_armour_folder_item"

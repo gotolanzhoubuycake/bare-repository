@@ -4,6 +4,9 @@ state={
 	provinces={
 		1774 
 	}
+	resources = {
+		resources_el = 9
+	}
 	history = {
 		owner = TRI
 		add_core_of=TRI

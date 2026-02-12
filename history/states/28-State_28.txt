@@ -5,6 +5,7 @@ state={
 		resources_cm = 20
 		resources_ec = 20
 		resources_fe = 10
+		resources_el = 78
 	}
 	provinces={
 		1672 1875 3596 4493 5114 8854 12091 12124 12147 
