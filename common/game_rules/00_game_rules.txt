@@ -34,12 +34,12 @@ BARE_RULE_story_settings_ALF = {
 		desc = "BARE_RULE_story_settings_ALF_DEFAULT_DESC"
 		allow_achievements = yes
 	}
-	option = {
-		name = BARE_RULE_story_settings_ALF_SELECTED
-		text = "BARE_RULE_story_settings_ALF_SELECTED_TEXT"
-		desc = "BARE_RULE_story_settings_ALF_SELECTED_DESC"
-		allow_achievements = yes
-	}
+	# option = {
+	# 	name = BARE_RULE_story_settings_ALF_SELECTED
+	# 	text = "BARE_RULE_story_settings_ALF_SELECTED_TEXT"
+	# 	desc = "BARE_RULE_story_settings_ALF_SELECTED_DESC"
+	# 	allow_achievements = yes
+	# }
 }
 
 ####
