@@ -998,8 +998,8 @@ focus_tree = {
 		}
 	}
 	focus = { #巨塔中期工程
-		id = MIL_Tower_mid-term_Project
-		icon = GFX_goal_MIL_Tower_mid-term_Project
+		id = MIL_Tower_mid_term_Project
+		icon = GFX_goal_MIL_Tower_mid_term_Project
 		relative_position_id = MIL_we_need_money
 		search_filters = { FOCUS_MIL }
 		cost = 10
@@ -1022,7 +1022,7 @@ focus_tree = {
 		x = 4
 		y = 12
 		prerequisite = {
-			focus = MIL_Tower_mid-term_Project
+			focus = MIL_Tower_mid_term_Project
 		}
 	}
 	focus = { #更好，更美，更优异的实验环境
@@ -1034,7 +1034,7 @@ focus_tree = {
 		x = 6
 		y = 12
 		prerequisite = {
-			focus = MIL_Tower_mid-term_Project
+			focus = MIL_Tower_mid_term_Project
 		}
 	}
 	focus = { #接近完工的巨塔
@@ -1052,7 +1052,7 @@ focus_tree = {
 			focus = MIL_more_research_equipment
 		}
 		prerequisite = {
-			focus = MIL_Tower_mid-term_Project
+			focus = MIL_Tower_mid_term_Project
 		}
 	}
 	focus = { #属于一代千年人的智慧结晶
@@ -1163,7 +1163,7 @@ focus_tree = {
 	focus = { #我们能做到
 		id = MIL_we_can_do_it_by_ourselves
 		mutually_exclusive = { focus = MIL_need_help}
-		icon = GFX_goal_MIL_reduce_cost
+		icon = GFX_goal_MIL_we_can_do_it_by_ourselves
 		relative_position_id = MIL_Prepare_grand_festival
 		search_filters = { FOCUS_MIL }
 		cost = 10

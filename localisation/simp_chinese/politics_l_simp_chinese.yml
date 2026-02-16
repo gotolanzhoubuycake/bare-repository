@@ -167,6 +167,8 @@
  RETURN_STATES_NOT_POSSIBLE_NOT_CONTROLLED: "标红的地区不被你所控制。"
  RETURN_STATES_NOT_POSSIBLE_NOT_OWNED: "你不是他们任意领土的拥有者。"
  POLITICS_IDEA_STAT_TRADE: "£resources_to_market_icon£  $VALUE|H0%$"
+ POLITICS_IDEA_STAT_ENERGY_CONSUMPTION: "£energy_consumption_texticon£$VALUE|H0%$"
+ POLITICS_IDEA_STAT_CONSUMER_GOODS: "£consumer_goods_texticon£$VALUE|H0%$"
  POLITICS_IDEA_STAT_RECRUITABLE: "£manpower_icon£  $VALUE|=+1%$"
  IDEA_COST_COMPACT_POLITICAL_POWER: "£pol_power $VALUE|0$"
  IDEA_COST_COMPACT_ARMY_XP: "£army_experience $VALUE|0$"
