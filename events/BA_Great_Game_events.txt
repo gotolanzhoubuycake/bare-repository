@@ -4,7 +4,7 @@ news_event = {
 	id = Great_Game.1000
 	title = Great_Game.1000.t
 	desc = Great_Game.1000.d
-	#picture = GFX_TRI_events_pic
+	picture = GFX_BA_news_22
 	major = yes
 	is_triggered_only = yes
 	trigger = {
@@ -32,7 +32,7 @@ news_event = {
 	}
 	option = {
 		name = Great_Game.1000.a
-		custom_effect_tooltip = event_immediately_happened_tt
+		# custom_effect_tooltip = event_immediately_happened_tt
 		unlock_decision_category_tooltip = BA_Great_Game_decisions
 		ai_chance = {
 			base = 100
