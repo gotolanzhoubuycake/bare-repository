@@ -15,7 +15,7 @@ GEH_eden_treaty_path_tt: "§Y签署伊甸条约§!\n-----------------\n\n\n\n\n�
 
 ARI_revenge_path_tt: "§Y完成迟到的复仇§!\n-----------------\n\n\n\n\n£GFX_ARI_revenge_path_picture\n\n\n\n\n\n§R她们的土地，她们的血。§!\n\n§L世界将我等遗忘\n于是，我等将再次点起燎原烈火\n焚尽天下！§!"
 
-ARI_liberation_path_tt: "§Y归乡漫途§!\n-----------------\n\n\n\n\n£ARI_liberation_path_picture\n\n\n\n\n\n踏上流亡之路。\n\n§L故乡遥远\n就像一场彷徨大梦\n我站在高塔上眺望\n却始终不见那熟悉的影子§!\n\n§G启用§!§Y阿里乌斯解放阵线§!规则来体验这一路线。\n\n§R该剧本属于独立剧本，其世界观和剧情不基于原游戏的剧本。且不支持其他势力的游玩。§!\n\n§Y敬请期待§!"
-ARI_liberation_path_tt: "§Y归乡漫途§!\n-----------------\n\n\n\n\n£ARI_liberation_path_picture\n\n\n\n\n\n踏上流亡之路。\n\n§L故乡遥远\n就像一场彷徨大梦\n我站在高塔上眺望\n却始终不见那熟悉的影子§!\n\n§G启用§!§Y阿里乌斯解放阵线§!规则来体验这一路线。"
+ARI_liberation_path_tt: "§Y归乡漫途§!\n-----------------\n\n\n\n\n£ARI_liberation_path_picture\n\n\n\n\n\n踏上流亡之路。\n\n§L故乡遥远\n就像一场彷徨大梦\n我站在高塔上眺望\n却始终不见那熟悉的影子§!\n\n§G启用§!§Y阿里乌斯解放阵线§!规则来体验这一路线。\n\n§R该剧本属于独立剧本，其世界观和剧情不基于本游戏主要剧本以及原游戏设定。且不支持其他势力的游玩。§!\n\n§Y敬请期待§!"
+# ARI_liberation_path_tt: "§Y归乡漫途§!\n-----------------\n\n\n\n\n£ARI_liberation_path_picture\n\n\n\n\n\n踏上流亡之路。\n\n§L故乡遥远\n就像一场彷徨大梦\n我站在高塔上眺望\n却始终不见那熟悉的影子§!\n\n§G启用§!§Y阿里乌斯解放阵线§!规则来体验这一路线。"
 
 #MIL_friendship_path_tt: "§Y开启属于梦想的时代§!\n-----------------\n\n\n\n\n£GFX_MIL_friendship_path_picture\n\n\n\n\n\n友谊是魔法\n\n§L勇者不向神明祈祷\n因其知晓这样的真实之理：\n文明是人所造的光辉\n即便神明也无法完成此等杰作§!\n\n§C巴别塔从来没有存在过§!"

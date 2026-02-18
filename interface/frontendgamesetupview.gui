@@ -627,37 +627,9 @@ guiTypes = {
 		}
 
 		###背景###
-
-		containerWindowType = {
-			name = "intro_GEH"
-			position = { x = 117 y = 50}
-			size = { width = 175  height = 300 }
-			
-
-			iconType = {
-				name = "intro_background_GEH"
-				quadTextureSprite = "GFX_GEH_intro"
-				position = { x = 2  y = 2 }
-			}
-		}
-
-		containerWindowType = {
-			name = "GEH_highlight_paths"
-			position = { x = 132 y = 50}
-
-			iconType = {
-				name = "GFX_GEH_eden_treaty_path"
-				quadTextureSprite = "GFX_GEH_eden_treaty_path"
-				position = { x = 0  y = 15 }
-				pdx_tooltip = "GEH_eden_treaty_path_tt"
-				#alwaystransparent = yes
-			}
-		
-		}
-
 		containerWindowType = {
 			name = "intro_TRI"
-			position = { x = 381 y = 50}
+			position = { x = 510 y = 50}
 			size = { width = 175  height = 300 }
 
 			iconType = {
@@ -670,8 +642,8 @@ guiTypes = {
 		}
 
 		containerWindowType = {
-			name = "TRI_highlight_paths"
-			position = { x = 396 y = 50}
+			name = TRI_highlight_paths
+			position = { x = 525 y = 50}
 
 			iconType = {
 				name = "TRI_eden_treaty_path"
@@ -684,8 +656,35 @@ guiTypes = {
 		}
 
 		containerWindowType = {
+			name = "intro_GEH"
+			position = { x = 247 y = 50}
+			size = { width = 175  height = 300 }
+			
+
+			iconType = {
+				name = "intro_background_GEH"
+				quadTextureSprite = "GFX_GEH_intro"
+				position = { x = 2  y = 2 }
+			}
+		}
+
+		containerWindowType = {
+			name = GEH_highlight_paths
+			position = { x = 262 y = 50}
+
+			iconType = {
+				name = "GFX_GEH_eden_treaty_path"
+				quadTextureSprite = "GFX_GEH_eden_treaty_path"
+				position = { x = 0  y = 15 }
+				pdx_tooltip = "GEH_eden_treaty_path_tt"
+				#alwaystransparent = yes
+			}
+		
+		}
+
+		containerWindowType = {
 			name = "intro_ARI"
-			position = { x = 645 y = 50}
+			position = { x = 773 y = 50}
 			size = { width = 175  height = 300 }
 			
 
@@ -697,8 +696,8 @@ guiTypes = {
 		}
 
 		containerWindowType = {
-			name = "ARI_highlight_paths"
-			position = { x = 660 y = 50}
+			name = ARI_highlight_paths
+			position = { x = 788 y = 50}
 
 			iconType = {
 				name = "GFX_ARI_revenge_path"
@@ -713,32 +712,6 @@ guiTypes = {
 				quadTextureSprite = "GFX_ARI_liberation_path"
 				position = { x = 0  y = 50 }
 				pdx_tooltip = "ARI_liberation_path_tt"
-				#alwaystransparent = yes
-			}
-		}
-
-		containerWindowType = {
-			name = "intro_MIL"
-			position = { x = 909 y = 50}
-			size = { width = 175  height = 300 }
-			
-
-			iconType = {
-				name = "intro_background_MIL"
-				quadTextureSprite = "GFX_MIL_intro"
-				position = { x = 2  y = 2 }
-			}
-		}
-
-		containerWindowType = {
-			name = "MIL_highlight_paths"
-			position = { x = 924 y = 50}
-
-			iconType = {
-				name = "GFX_MIL_friendship_path"
-				quadTextureSprite = "GFX_MIL_friendship_path"
-				position = { x = 0  y = 15 }
-				pdx_tooltip = "MIL_friendship_path_tt"
 				#alwaystransparent = yes
 			}
 		}
@@ -778,7 +751,7 @@ guiTypes = {
 
 			gridboxType = {
 				name ="countries_grid"
-				position = { x = -280 y = 0 }
+				position = { x = -150 y = 0 }
 				size = { width = 100% height = 100% }
 				slotsize = { width = 264 height = 0 }
 				add_horizontal = yes
