@@ -44,10 +44,10 @@ BA_Common_Design_Infantry_Organization_Producter = {#通用步兵制造商
 	}
 	research_categories = { 
 		infantry_weapons 
-		cat_superior_firepower
-		cat_mobile_warfare
-		cat_grand_battle_plan
-		cat_mass_assault
+		# cat_superior_firepower
+		# cat_mobile_warfare
+		# cat_grand_battle_plan
+		# cat_mass_assault
 		mystical
 	}
 

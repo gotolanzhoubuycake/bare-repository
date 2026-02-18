@@ -2,106 +2,905 @@ BA_Great_Game_decisions = {
 	Great_Game_convert_into_civilian_factories = {
 		available = {
 			hidden_trigger = {
-				check_variable = { Great_Game_coins > 199 }
+				check_variable = { Great_Game_coins > 999 }
 			}
 		}
 		custom_cost_trigger = {
-			check_variable = { Great_Game_coins > 199 }
+			check_variable = { Great_Game_coins > 999 }
 		}
-		custom_cost_text = Great_Game_coins_200
-		days_remove = 180
-		modifier = {
-			industrial_factory_donations = 1
-		}
+		custom_cost_text = Great_Game_coins_1000
 		complete_effect = {
-			set_temp_variable = { coins = 200 }
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+			set_temp_variable = { coins = 1000 }
 			Great_Game_cost_coins = yes
 		}
 	}
 	Great_Game_convert_into_military_factories = {
 		available = {
 			hidden_trigger = {
-				check_variable = { Great_Game_coins > 199 }
+				check_variable = { Great_Game_coins > 999 }
 			}
 		}
 		custom_cost_trigger = {
-			check_variable = { Great_Game_coins > 199 }
+			check_variable = { Great_Game_coins > 999 }
 		}
-		custom_cost_text = Great_Game_coins_200
-		days_remove = 180
-		modifier = {
-			military_factory_donations = 1
-		}
+		custom_cost_text = Great_Game_coins_1000
 		complete_effect = {
-			set_temp_variable = { coins = 200 }
+			add_offsite_building = {
+				type = arms_factory
+				level = 1
+			}
+			set_temp_variable = { coins = 1000 }
 			Great_Game_cost_coins = yes
 		}
 	}
 	Great_Game_convert_into_factory_capacity = {
 		available = {
 			hidden_trigger = {
-				check_variable = { Great_Game_coins > 199 }
+				check_variable = { Great_Game_coins > 499 }
 			}
 		}
 		custom_cost_trigger = {
-			check_variable = { Great_Game_coins > 199 }
+			check_variable = { Great_Game_coins > 499 }
 		}
-		custom_cost_text = Great_Game_coins_200
+		custom_cost_text = Great_Game_coins_500
 		days_remove = 180
 		modifier = {
-			industrial_capacity_factory = 0.05
+			industrial_capacity_factory = 0.2
 		}
 		complete_effect = {
-			set_temp_variable = { coins = 200 }
+			set_temp_variable = { coins = 500 }
 			Great_Game_cost_coins = yes
 		}
 	}
-	Great_Game_convert_into_equipments = {
+	Great_Game_convert_into_production_speed_buildings_factor = {
+		available = {
+			hidden_trigger = {
+				check_variable = { Great_Game_coins > 499 }
+			}
+		}
+		custom_cost_trigger = {
+			check_variable = { Great_Game_coins > 499 }
+		}
+		custom_cost_text = Great_Game_coins_500
+		days_remove = 180
+		modifier = {
+			production_speed_buildings_factor = 0.15
+		}
+		complete_effect = {
+			set_temp_variable = { coins = 500 }
+			Great_Game_cost_coins = yes
+		}
+	}
+	Great_Game_convert_into_infantry_equipments = {
 		visible = {
 			Great_Game_can_be_ceaser_overlord = no
 		}
 		available = {
 			hidden_trigger = {
-				check_variable = { Great_Game_coins > 199 }
+				check_variable = { Great_Game_coins > 999 }
 			}
 		}
 		custom_cost_trigger = {
-			check_variable = { Great_Game_coins > 199 }
+			check_variable = { Great_Game_coins > 999 }
 		}
-		custom_cost_text = Great_Game_coins_200
+		custom_cost_text = Great_Game_coins_1000
 		days_re_enable = 90
 		complete_effect = {
-			set_temp_variable = { coins = 200 }
+			set_temp_variable = { coins = 1000 }
 			Great_Game_cost_coins = yes
 			random_list = {
 				1 = {
 					add_equipment_to_stockpile = {
 						type = infantry_equipment
-						amount = 250
+						amount = 6000
 					}
 				}
 				1 = {
 					modifier = {
 						factor = 0
 						NOT = {
-							has_tech = medium_tank_MK1
+							has_tech = mystical_infantry_weapons_T1
 						}
 					}
+					add_equipment_to_stockpile = {
+						type = special_infantry_equipment
+						amount = 4000
+					}
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						NOT = {
+							has_tech = support_equipment_T1
+						}
+					}
+					add_equipment_to_stockpile = {
+						type = support_equipment
+						amount = 1000
+					}
+				}
+				
+			}
+		}
+	}
+
+	Great_Game_convert_into_fire_support_equipments = {
+		visible = {
+			Great_Game_can_be_ceaser_overlord = no
+			has_tech = fire_support_weapons_T1
+		}
+		available = {
+			hidden_trigger = {
+				check_variable = { Great_Game_coins > 999 }
+			}
+		}
+		custom_cost_trigger = {
+			check_variable = { Great_Game_coins > 999 }
+		}
+		custom_cost_text = Great_Game_coins_1000
+		days_re_enable = 90
+		complete_effect = {
+			set_temp_variable = { coins = 1000 }
+			Great_Game_cost_coins = yes
+			random_list = {
+				1 = {
+					add_equipment_to_stockpile = {
+						type = light_fire_support_equipment
+						amount = 800
+					}
+				}
+				1 = {
+					add_equipment_to_stockpile = {
+						type = heavy_fire_support_equipment
+						amount = 800
+					}
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						NOT = {
+							has_tech = special_fire_support_weapons_T1
+						}
+					}
+					add_equipment_to_stockpile = {
+						type = special_fire_support_equipment
+						amount = 600
+					}
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						NOT = {
+							has_tech = air_defense_weapons_T1
+						}
+					}
+					add_equipment_to_stockpile = {
+						type = infantry_anti_air_equipment
+						amount = 500
+					}
+				}
+
+			}
+		}
+	}
+
+	# 轻型坦克装备兑换
+	Great_Game_convert_into_light_tank_equipments = {
+		visible = {
+			Great_Game_can_be_ceaser_overlord = no
+			has_tech = light_tank_MK1
+		}
+		available = {
+			hidden_trigger = {
+				check_variable = { Great_Game_coins > 999 }
+			}
+		}
+		custom_cost_trigger = {
+			check_variable = { Great_Game_coins > 999 }
+		}
+		custom_cost_text = Great_Game_coins_1000
+		complete_effect = {
+			set_temp_variable = { coins = 1000 }
+			Great_Game_cost_coins = yes
+			random_list = {
+				1 = {
+					add_equipment_to_stockpile = {
+						type = light_tank_chassis
+						amount = 23
+					}
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						NOT = {
+							has_tech = light_tank_artillery_MK1
+						}
+					}
+					add_equipment_to_stockpile = {
+						type = light_tank_artillery_chassis
+						amount = 23
+					}
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						NOT = {
+							has_tech = light_tank_destroyer_MK1
+						}
+					}
+					add_equipment_to_stockpile = {
+						type = light_tank_destroyer_chassis
+						amount = 23
+					}
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						NOT = {
+							has_tech = light_tank_aa_MK1
+						}
+					}
+					add_equipment_to_stockpile = {
+						type = light_tank_aa_chassis
+						amount = 23
+					}
+				}
+			}
+		}
+	}
+
+	# 中型坦克装备兑换
+	Great_Game_convert_into_medium_tank_equipments = {
+		visible = {
+			Great_Game_can_be_ceaser_overlord = no
+			has_tech = medium_tank_MK1
+		}
+		available = {
+			hidden_trigger = {
+				check_variable = { Great_Game_coins > 999 }
+			}
+		}
+		custom_cost_trigger = {
+			check_variable = { Great_Game_coins > 999 }
+		}
+		custom_cost_text = Great_Game_coins_1000
+		complete_effect = {
+			set_temp_variable = { coins = 1000 }
+			Great_Game_cost_coins = yes
+			random_list = {
+				1 = {
 					add_equipment_to_stockpile = {
 						type = medium_tank_chassis
-						amount = 12
+						amount = 18
 					}
 				}
 				1 = {
 					modifier = {
 						factor = 0
 						NOT = {
-							has_tech = light_fighting_drone
+							has_tech = medium_tank_artillery_MK1
 						}
 					}
 					add_equipment_to_stockpile = {
+						type = medium_tank_artillery_chassis
+						amount = 18
+					}
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						NOT = {
+							has_tech = medium_tank_destroyer_MK1
+						}
+					}
+					add_equipment_to_stockpile = {
+						type = medium_tank_destroyer_chassis
+						amount = 18
+					}
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						NOT = {
+							has_tech = medium_tank_aa_MK1
+						}
+					}
+					add_equipment_to_stockpile = {
+						type = medium_tank_aa_chassis
+						amount = 18
+					}
+				}
+			}
+		}
+	}
+
+	# 重型坦克装备兑换
+	Great_Game_convert_into_heavy_tank_equipments = {
+		visible = {
+			Great_Game_can_be_ceaser_overlord = no
+			has_tech = heavy_tank_MK1
+		}
+		available = {
+			hidden_trigger = {
+				check_variable = { Great_Game_coins > 999 }
+			}
+		}
+		custom_cost_trigger = {
+			check_variable = { Great_Game_coins > 999 }
+		}
+		custom_cost_text = Great_Game_coins_1000
+		complete_effect = {
+			set_temp_variable = { coins = 1000 }
+			Great_Game_cost_coins = yes
+			random_list = {
+				1 = {
+					add_equipment_to_stockpile = {
+						type = heavy_tank_chassis
+						amount = 9
+					}
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						NOT = {
+							has_tech = heavy_tank_artillery_MK1
+						}
+					}
+					add_equipment_to_stockpile = {
+						type = heavy_tank_artillery_chassis
+						amount = 9
+					}
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						NOT = {
+							has_tech = heavy_tank_destroyer_MK1
+						}
+					}
+					add_equipment_to_stockpile = {
+						type = heavy_tank_destroyer_chassis
+						amount = 9
+					}
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						NOT = {
+							has_tech = heavy_tank_aa_MK1
+						}
+					}
+					add_equipment_to_stockpile = {
+						type = heavy_tank_aa_chassis
+						amount = 9
+					}
+				}
+			}
+		}
+	}
+
+	# 轻型机甲装备兑换
+	Great_Game_convert_into_light_bm_equipments = {
+		visible = {
+			Great_Game_can_be_ceaser_overlord = no
+			has_tech = light_bm_mk1
+		}
+		available = {
+			hidden_trigger = {
+				check_variable = { Great_Game_coins > 999 }
+			}
+		}
+		custom_cost_trigger = {
+			check_variable = { Great_Game_coins > 999 }
+		}
+		custom_cost_text = Great_Game_coins_1000
+		complete_effect = {
+			set_temp_variable = { coins = 1000 }
+			Great_Game_cost_coins = yes
+			random_list = {
+				1 = {
+					add_equipment_to_stockpile = {
+						type = light_bm_chassis
+						amount = 21
+					}
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						NOT = {
+							has_tech = light_bm_artillery_MK1
+						}
+					}
+					add_equipment_to_stockpile = {
+						type = light_bm_artillery_chassis
+						amount = 21
+					}
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						NOT = {
+							has_tech = light_bm_destroyer_MK1
+						}
+					}
+					add_equipment_to_stockpile = {
+						type = light_bm_destroyer_chassis
+						amount = 21
+					}
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						NOT = {
+							has_tech = light_bm_aa_MK1
+						}
+					}
+					add_equipment_to_stockpile = {
+						type = light_bm_aa_chassis
+						amount = 21
+					}
+				}
+			}
+		}
+	}
+
+	# 中型机甲装备兑换
+	Great_Game_convert_into_medium_bm_equipments = {
+		visible = {
+			Great_Game_can_be_ceaser_overlord = no
+			has_tech = medium_bm_mk1
+		}
+		available = {
+			hidden_trigger = {
+				check_variable = { Great_Game_coins > 999 }
+			}
+		}
+		custom_cost_trigger = {
+			check_variable = { Great_Game_coins > 999 }
+		}
+		custom_cost_text = Great_Game_coins_1000
+		complete_effect = {
+			set_temp_variable = { coins = 1000 }
+			Great_Game_cost_coins = yes
+			random_list = {
+				1 = {
+					add_equipment_to_stockpile = {
+						type = medium_bm_chassis
+						amount = 18
+					}
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						NOT = {
+							has_tech = medium_bm_artillery_MK1
+						}
+					}
+					add_equipment_to_stockpile = {
+						type = medium_bm_artillery_chassis
+						amount = 18
+					}
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						NOT = {
+							has_tech = medium_bm_destroyer_MK1
+						}
+					}
+					add_equipment_to_stockpile = {
+						type = medium_bm_destroyer_chassis
+						amount = 18
+					}
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						NOT = {
+							has_tech = medium_bm_aa_MK1
+						}
+					}
+					add_equipment_to_stockpile = {
+						type = medium_bm_aa_chassis
+						amount = 18
+					}
+				}
+			}
+		}
+	}
+
+	# 重型机甲装备兑换
+	Great_Game_convert_into_heavy_bm_equipments = {
+		visible = {
+			Great_Game_can_be_ceaser_overlord = no
+			has_tech = heavy_bm_mk1
+		}
+		available = {
+			hidden_trigger = {
+				check_variable = { Great_Game_coins > 999 }
+			}
+		}
+		custom_cost_trigger = {
+			check_variable = { Great_Game_coins > 999 }
+		}
+		custom_cost_text = Great_Game_coins_1000
+		complete_effect = {
+			set_temp_variable = { coins = 1000 }
+			Great_Game_cost_coins = yes
+			random_list = {
+				1 = {
+					add_equipment_to_stockpile = {
+						type = heavy_bm_chassis
+						amount = 9
+					}
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						NOT = {
+							has_tech = heavy_bm_artillery_MK1
+						}
+					}
+					add_equipment_to_stockpile = {
+						type = heavy_bm_artillery_chassis
+						amount = 9
+					}
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						NOT = {
+							has_tech = heavy_bm_destroyer_MK1
+						}
+					}
+					add_equipment_to_stockpile = {
+						type = heavy_bm_destroyer_chassis
+						amount = 9
+					}
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						NOT = {
+							has_tech = heavy_bm_aa_MK1
+						}
+					}
+					add_equipment_to_stockpile = {
+						type = heavy_bm_aa_chassis
+						amount = 9
+					}
+				}
+			}
+		}
+	}
+
+	# 小型战斗无人机兑换
+	Great_Game_convert_into_small_uav_equipments = {
+		visible = {
+			Great_Game_can_be_ceaser_overlord = no
+			has_tech = light_fighting_drone
+		}
+		available = {
+			hidden_trigger = {
+				check_variable = { Great_Game_coins > 999 }
+			}
+		}
+		custom_cost_trigger = {
+			check_variable = { Great_Game_coins > 999 }
+		}
+		custom_cost_text = Great_Game_coins_1000
+		complete_effect = {
+			set_temp_variable = { coins = 1000 }
+			Great_Game_cost_coins = yes
+			random_list = {
+				1 = {
+					add_equipment_to_stockpile = {
 						type = small_uav_airframe
-						amount = 12
+						amount = 75
+					}
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						NOT = {
+							has_tech = light_attack_drone
+						}
+					}
+					add_equipment_to_stockpile = {
+						type = small_uav_cas_airframe
+						amount = 75
+					}
+				}
+			}
+		}
+	}
+
+	# 中型战斗无人机兑换
+	Great_Game_convert_into_medium_uav_equipments = {
+		visible = {
+			Great_Game_can_be_ceaser_overlord = no
+			has_tech = fighting_drone
+		}
+		available = {
+			hidden_trigger = {
+				check_variable = { Great_Game_coins > 999 }
+			}
+		}
+		custom_cost_trigger = {
+			check_variable = { Great_Game_coins > 999 }
+		}
+		custom_cost_text = Great_Game_coins_1000
+		complete_effect = {
+			set_temp_variable = { coins = 1000 }
+			Great_Game_cost_coins = yes
+			random_list = {
+				1 = {
+					add_equipment_to_stockpile = {
+						type = medium_uav_airframe
+						amount = 30
+					}
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						NOT = {
+							has_tech = attack_drone
+						}
+					}
+					add_equipment_to_stockpile = {
+						type = medium_uav_cas_airframe
+						amount = 30
+					}
+				}
+			}
+		}
+	}
+
+	# 重型战斗无人机兑换
+	Great_Game_convert_into_heavy_uav_equipments = {
+		visible = {
+			Great_Game_can_be_ceaser_overlord = no
+			has_tech = heavy_fighting_drone
+		}
+		available = {
+			hidden_trigger = {
+				check_variable = { Great_Game_coins > 999 }
+			}
+		}
+		custom_cost_trigger = {
+			check_variable = { Great_Game_coins > 999 }
+		}
+		custom_cost_text = Great_Game_coins_1000
+		complete_effect = {
+			set_temp_variable = { coins = 1000 }
+			Great_Game_cost_coins = yes
+			random_list = {
+				1 = {
+					add_equipment_to_stockpile = {
+						type = heavy_uav_airframe
+						amount = 22
+					}
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						NOT = {
+							has_tech = heavy_attack_drone
+						}
+					}
+					add_equipment_to_stockpile = {
+						type = heavy_uav_cas_airframe
+						amount = 22
+					}
+				}
+			}
+		}
+	}
+
+	# 支援无人机兑换
+	Great_Game_convert_into_support_uav_equipments = {
+		visible = {
+			Great_Game_can_be_ceaser_overlord = no
+			has_tech = recon_drone
+		}
+		available = {
+			hidden_trigger = {
+				check_variable = { Great_Game_coins > 999 }
+			}
+		}
+		custom_cost_trigger = {
+			check_variable = { Great_Game_coins > 999 }
+		}
+		custom_cost_text = Great_Game_coins_1000
+		complete_effect = {
+			set_temp_variable = { coins = 1000 }
+			Great_Game_cost_coins = yes
+			random_list = {
+				1 = {
+					add_equipment_to_stockpile = {
+						type = small_uav_recon_equipment
+						amount = 82
+					}
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						NOT = {
+							has_tech = transport_drone
+						}
+					}
+					add_equipment_to_stockpile = {
+						type = transport_plane_equipment
+						amount = 18
+					}
+				}
+			}
+		}
+	}
+
+	# 轮式步兵战车兑换
+	Great_Game_convert_into_apc_equipments = {
+		visible = {
+			Great_Game_can_be_ceaser_overlord = no
+			has_tech = Armored_Vehicles_T1
+		}
+		available = {
+			hidden_trigger = {
+				check_variable = { Great_Game_coins > 999 }
+			}
+		}
+		custom_cost_trigger = {
+			check_variable = { Great_Game_coins > 999 }
+		}
+		custom_cost_text = Great_Game_coins_1000
+		complete_effect = {
+			set_temp_variable = { coins = 1000 }
+			Great_Game_cost_coins = yes
+			random_list = {
+				1 = {
+					add_equipment_to_stockpile = {
+						type = apc_equipment
+						amount = 36
+					}
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						NOT = {
+							has_tech = Armored_Vehicles_ART_T1
+						}
+					}
+					add_equipment_to_stockpile = {
+						type = apc_artillery_equipment
+						amount = 36
+					}
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						NOT = {
+							has_tech = Armored_Vehicles_AT_T1
+						}
+					}
+					add_equipment_to_stockpile = {
+						type = apc_at_equipment
+						amount = 36
+					}
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						NOT = {
+							has_tech = Armored_Vehicles_AA_T1
+						}
+					}
+					add_equipment_to_stockpile = {
+						type = apc_aa_equipment
+						amount = 36
+					}
+				}
+			}
+		}
+	}
+
+	# 步兵战车兑换
+	Great_Game_convert_into_ifv_equipments = {
+		visible = {
+			Great_Game_can_be_ceaser_overlord = no
+			has_tech = Infantry_fighting_vehicle_T1
+		}
+		available = {
+			hidden_trigger = {
+				check_variable = { Great_Game_coins > 999 }
+			}
+		}
+		custom_cost_trigger = {
+			check_variable = { Great_Game_coins > 999 }
+		}
+		custom_cost_text = Great_Game_coins_1000
+		complete_effect = {
+			set_temp_variable = { coins = 1000 }
+			Great_Game_cost_coins = yes
+			random_list = {
+				1 = {
+					add_equipment_to_stockpile = {
+						type = ifv_equipment
+						amount = 30
+					}
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						NOT = {
+							has_tech = Infantry_fighting_vehicle_ART_T1
+						}
+					}
+					add_equipment_to_stockpile = {
+						type = ifv_artillery_equipment
+						amount = 30
+					}
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						NOT = {
+							has_tech = Infantry_fighting_vehicle_AT_T1
+						}
+					}
+					add_equipment_to_stockpile = {
+						type = ifv_at_equipment
+						amount = 30
+					}
+				}
+				1 = {
+					modifier = {
+						factor = 0
+						NOT = {
+							has_tech = Infantry_fighting_vehicle_AA_T1
+						}
+					}
+					add_equipment_to_stockpile = {
+						type = ifv_aa_equipment
+						amount = 30
+					}
+				}
+			}
+		}
+	}
+
+	# 直升机兑换
+	Great_Game_convert_into_helicopter_equipments = {
+		visible = {
+			Great_Game_can_be_ceaser_overlord = no
+			has_tech = Civilian_helicopter_T1
+		}
+		available = {
+			hidden_trigger = {
+				check_variable = { Great_Game_coins > 999 }
+			}
+		}
+		custom_cost_trigger = {
+			check_variable = { Great_Game_coins > 999 }
+		}
+		custom_cost_text = Great_Game_coins_1000
+		complete_effect = {
+			set_temp_variable = { coins = 1000 }
+			Great_Game_cost_coins = yes
+			random_list = {
+				1 = {
+					add_equipment_to_stockpile = {
+						type = helicopter_equipment
+						amount = 13
+					}
+				}
+				1 = {
+					add_equipment_to_stockpile = {
+						type = attack_helicopter_equipment
+						amount = 13
 					}
 				}
 			}
@@ -113,6 +912,12 @@ BA_Great_Game_decisions = {
 			Great_Game_is_involved = no
 			Great_Game_can_be_college_overlord = yes
 			NOT = { has_country_flag = Great_Game_invade_cd }
+			NOT ={
+				is_in_array = {
+					array = global.Great_Game_cannot_invade
+					value = THIS
+				}
+			}
 		}
 		available = {
 			FROM.OVERLORD = {
@@ -120,6 +925,25 @@ BA_Great_Game_decisions = {
 				Great_Game_is_involved = no
 			}
 		}
+
+		cancel_trigger = {
+			hidden_trigger = {
+				or = {
+					is_in_array = {
+						array = global.Great_Game_cannot_invade
+						value = THIS
+					}
+					FROM.OVERLORD = {
+						is_in_array = {
+							array = global.Great_Game_cannot_invade
+							value = THIS
+						}
+					}
+				
+				}
+			}
+		}
+
 		target_trigger = {
 			FROM = {
 				NOT = {
@@ -136,8 +960,11 @@ BA_Great_Game_decisions = {
 				}
 				Great_Game_can_be_trusteeship_area = yes
 			}
+			FROM.OVERLORD = {
+				Great_Game_can_be_overlord = yes
+			}
 			NOT = {
-				is_in_array = { Great_Game_cannot_invade = FROM.OVERLORD }
+				is_in_array = { global.Great_Game_cannot_invade = FROM.OVERLORD }
 			}
 		}
 		cancel_if_not_visible = no
@@ -213,6 +1040,7 @@ BA_Great_Game_decisions = {
 						}
 					}
 					country_event = Great_Game.1
+					activate_mission = Great_Game_preper_defence_decision
 				}
 			}
 			
@@ -256,6 +1084,12 @@ BA_Great_Game_decisions = {
 			Great_Game_is_involved = no
 			original_tag = CEN
 			NOT = { has_country_flag = Great_Game_invade_cd }
+			NOT ={
+				is_in_array = {
+					array = global.Great_Game_cannot_invade
+					value = THIS
+				}
+			}
 		}
 		available = {
 			FROM.OVERLORD = {
@@ -263,6 +1097,25 @@ BA_Great_Game_decisions = {
 				Great_Game_is_involved = no
 			}
 		}
+
+		cancel_trigger = {
+			hidden_trigger = {
+				or = {
+					is_in_array = {
+						array = global.Great_Game_cannot_invade
+						value = THIS
+					}
+					FROM.OVERLORD = {
+						is_in_array = {
+							array = global.Great_Game_cannot_invade
+							value = THIS
+						}
+					}
+				
+				}
+			}
+		}
+
 		target_trigger = {
 			FROM = {
 				Great_Game_can_be_CEN_overlord = no
@@ -280,8 +1133,11 @@ BA_Great_Game_decisions = {
 				}
 				Great_Game_can_be_trusteeship_area = yes
 			}
+			FROM.OVERLORD = {
+				Great_Game_can_be_overlord = yes
+			}
 			NOT = {
-				is_in_array = { Great_Game_cannot_invade = FROM.OVERLORD }
+				is_in_array = { global.Great_Game_cannot_invade = FROM.OVERLORD }
 			}
 		}
 		cancel_if_not_visible = no
@@ -351,6 +1207,7 @@ BA_Great_Game_decisions = {
 						relation = military_access
 						active = no
 					}
+					activate_mission = Great_Game_preper_defence_decision
 					country_event = Great_Game.1
 				}
 			}
@@ -379,6 +1236,12 @@ BA_Great_Game_decisions = {
 			Great_Game_is_involved = no
 			Great_Game_can_be_ceaser_overlord = yes
 			NOT = { has_country_flag = Great_Game_invade_cd }
+			NOT ={
+				is_in_array = {
+					array = global.Great_Game_cannot_invade
+					value = THIS
+				}
+			}
 		}
 		available = {
 			FROM.OVERLORD = {
@@ -386,6 +1249,25 @@ BA_Great_Game_decisions = {
 				Great_Game_is_involved = no
 			}
 		}
+
+		cancel_trigger = {
+			hidden_trigger = {
+				or = {
+					is_in_array = {
+						array = global.Great_Game_cannot_invade
+						value = THIS
+					}
+					FROM.OVERLORD = {
+						is_in_array = {
+							array = global.Great_Game_cannot_invade
+							value = THIS
+						}
+					}
+				
+				}
+			}
+		}
+
 		target_trigger = {
 			FROM = {
 				NOT = {
@@ -405,8 +1287,11 @@ BA_Great_Game_decisions = {
 				}
 				Great_Game_can_be_trusteeship_area = yes
 			}
+			FROM.OVERLORD = {
+				Great_Game_can_be_overlord = yes
+			}
 			NOT = {
-				is_in_array = { Great_Game_cannot_invade = FROM.OVERLORD }
+				is_in_array = { global.Great_Game_cannot_invade = FROM.OVERLORD }
 			}
 		}
 		cancel_if_not_visible = no
@@ -484,6 +1369,7 @@ BA_Great_Game_decisions = {
 							}
 						}
 					}
+					activate_mission = Great_Game_preper_defence_decision
 					country_event = Great_Game.1
 				}
 			}
@@ -506,6 +1392,15 @@ BA_Great_Game_decisions = {
 				Great_Game_can_be_overlord = yes
 				Great_Game_is_involved = no
 				has_war = no
+				Not = {
+					is_in_array = {
+						array = global.Great_Game_cannot_invade
+						value = THIS
+					}
+					#额外加上
+					tag = SRT
+					tag = VAL
+				}
 			}
 		}
 		visible = {
@@ -532,10 +1427,14 @@ BA_Great_Game_decisions = {
 			}
 		}
 		complete_effect = {
-			set_temp_variable = { leader = ROOT }
-			set_temp_variable = { ally = FROM }
-			set_temp_variable = { enemy = var:Great_Game_enemy }
-			Great_Game_invite_to_ally = yes
+			FROM = {
+				country_event = Great_Game.2
+			}
+			
+			# set_temp_variable = { leader = ROOT }
+			# set_temp_variable = { ally = FROM }
+			# set_temp_variable = { enemy = var:Great_Game_enemy }
+			# Great_Game_invite_to_ally = yes
 		}
 	}
 	college_exercise_ongoing_attacker = {
@@ -696,6 +1595,32 @@ BA_Great_Game_decisions = {
 			clr_country_flag = Great_Game_invade_cd
 		}
 	}
+
+
+	Great_Game_preper_defence_decision = {
+		activation = {
+			always = no
+		}
+		is_good = no
+		days_mission_timeout = 30
+		
+		available = {
+			or = {
+				is_in_array = {
+					array = global.Great_Game_cannot_invade
+					value = THIS
+				}
+
+				check_variable = {
+					Great_Game_invader = 0
+				}
+			}
+		}
+		timeout_effect = {
+			
+		}
+
+	}
 }
 BA_integrate_trusteeship_decisions = {
 	BA_integrate_trusteeship = {
@@ -766,6 +1691,36 @@ BA_Great_Game_decisions_debug = {
 			set_variable = { Great_Game_record_faction^Great_Game_record_count = 2 }
 			set_variable = { Great_Game_record_date^Great_Game_record_count = global.date }
 			Great_Game_add_record = yes
+		}
+	}
+
+	test_cancel_tri = {
+		complete_effect = {
+			TRI = {
+				
+				Great_Game_total_cease_fire = yes
+			}
+		}
+	}
+	test_cancel_geh = {
+		complete_effect = {
+			GEH = {
+				Great_Game_total_cease_fire = yes
+			}
+		}
+	}
+	test_restart_tri = {
+		complete_effect = {
+			TRI = {
+				Great_Game_lift_total_cease_fire = yes
+			}
+		}
+	}
+	test_restart_geh = {
+		complete_effect = {
+			GEH = {
+				Great_Game_lift_total_cease_fire = yes
+			}
 		}
 	}
 	clr_flag = {

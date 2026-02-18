@@ -33,7 +33,7 @@ The_millennium_special_forces_modifier = {
 
 # 承平日久的安保部
 MIL_security_department_of_long_peace = {
-    icon = "MIL_security_department_of_long_peace"
+    icon = "GFX_idea_MIL_security_department_of_long_peace"
     
     army_attack_factor = MIL_security_department_army_attack
     army_defence_factor = MIL_security_department_army_defence
