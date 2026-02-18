@@ -6,5 +6,20 @@ bookmarks = {
 		date = 2099.1.1.12
 		picture = "GFX_select_date_1939"
 		default_country = "TRI"
+
+		"TRI"={
+			history = "TRI_GATHERING_STORM_DESC"
+			ideology = no_ideology
+			ideas = {
+				TRI_eden_treaty_step_0_modifier_Text_idea
+				TRI_tea_party_artillery_1
+				TRI_special_services_investigations_text_idea
+			}
+			focuses = {
+				TRI_calling_for_convention
+				TRI_choosing_pact_place
+				TRI_examination_for_training_club
+			}
+		}
 	}
 }

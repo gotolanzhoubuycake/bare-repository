@@ -1,0 +1,23 @@
+spriteTypes = {
+	frameAnimatedSpriteType = {
+		name = "GFX_mastery_progress_bar_animated_baland"
+		texturefile = "gfx/interface/doctrines/UI/mastery_progress_bar_strip_land.dds"
+		noOfFrames = 24
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 24
+		looping = yes
+		pause_on_loop = 0.0
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_mastery_progress_bar_animated_baair"
+		texturefile = "gfx/interface/doctrines/UI/mastery_progress_bar_strip_air.dds"
+		noOfFrames = 24
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 24
+		looping = yes
+		pause_on_loop = 0.0
+	}
+}
+

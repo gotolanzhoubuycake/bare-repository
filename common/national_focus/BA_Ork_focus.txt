@@ -225,7 +225,6 @@ focus_tree = {
 		id = A43_ork_beat
 		icon = GFX_goal_unknown
 		prerequisite = { focus = A43_ork_more_zaku }
-        mutually_exclusive = { focus = A43_ork_motor }
 		x = 0
 		y = 1
 		relative_position_id = A43_ork_more_zaku
@@ -241,7 +240,7 @@ focus_tree = {
 		id = A43_ork_motor
 		icon = GFX_goal_unknown
 		prerequisite = { focus = A43_ork_renown }
-        mutually_exclusive = { focus = A43_ork_mork }
+        mutually_exclusive = { focus = A43_ork_more_zaku }
 		x = 1
 		y = 1
 		relative_position_id = A43_ork_renown
@@ -257,7 +256,6 @@ focus_tree = {
 		id = A43_ork_yoroshiku
 		icon = GFX_goal_unknown
 		prerequisite = { focus = A43_ork_motor }
-        mutually_exclusive = { focus = A43_ork_mork }
 		x = 0
 		y = 1
 		relative_position_id = A43_ork_motor

@@ -14,7 +14,7 @@
  ALF_ending_of_a_long_march_achievement_DESC: "§L阿里乌斯，我的家\n我生于此，死于此\n爱与怒各占一半\n我恨你，我的家\n\n——远方歌谣§!"
 
  ALF_rasing_the_flag_achievement_NAME: "旗帜升起"
- ALF_rasing_the_flag_achievement_tt: "作为§Y[ALF.GetFlag]流亡者§!，§G找回§!§C丢失的旧校旗§!。"
+ ALF_rasing_the_flag_achievement_tt: "作为§Y[ALF.GetFlag]流亡者§!，§G找回§!§Y丢失的旧校旗§!。"
  ALF_rasing_the_flag_achievement_DESC: "§L“我以为再也不会找回这面旗帜了……简直像做梦一样。”\n\n——领袖§!"
 
  ALF_knock_down_the_giant_achievement_NAME: "击倒巨人"
@@ -28,3 +28,7 @@
  ALF_win_the_final_battle_achievement_NAME: "跨越和平之门"
  ALF_win_the_final_battle_achievement_tt: "作为§Y[ALF.GetFlag]阿里乌斯分校§!和§G伊甸条约§!，击溃§O钢铁协定§!和它那§R不切实际的野心§!。"
  ALF_win_the_final_battle_achievement_DESC: "§L乐观的人选择无视命运，悲观的人最终接受命运，勇敢的人奋起征服命运。\n\n你们的胜利证明了一件事：预言也只过是关于可能性的惊鸿一瞥而已。\n做得好。\n\n——老师§!"
+
+ ALF_rebuild_arm_force_achievement_NAME: "剑在我手"
+ ALF_rebuild_arm_force_achievement_tt: "作为§Y[ALF.GetFlag]流亡者§!，§G重建§!阿里乌斯武装力量§!。"
+ ALF_rebuild_arm_force_achievement_DESC: "§L力量，可铸就和平\n而今吾手执锐，问天下几人君子，几人英雄？§!"

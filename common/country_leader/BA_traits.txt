@@ -1,3 +1,6 @@
+##land_doctrine_cost_factor = -0.25
+##这句话已经死了，用下面这句
+##baland_doctrine_cost_factor = -0.25
 @tier1 = 15
 leader_traits = {
 	#模板
@@ -280,7 +283,7 @@ leader_traits = {
 	#训导主任
 	director_of_training = {
 		random = no
-		land_doctrine_cost_factor = -0.25
+		baland_doctrine_cost_factor = -0.25
 		training_time_factor = -0.1
 		army_org_factor = 0.15
 	}
@@ -295,7 +298,7 @@ leader_traits = {
 	#战争艺术
 	natsu_art_of_war = {
 		random = no
-		land_doctrine_cost_factor = -0.1
+		baland_doctrine_cost_factor = -0.1
 		custom_modifier_tooltip = natsu_art_of_war_tt
 	}
 	#薄荷冰淇淋
@@ -599,12 +602,12 @@ leader_traits = {
 	}
 	GEH_theorist_idea_b_trait = {
 		random = no
-		land_doctrine_cost_factor = -0.2
+		baland_doctrine_cost_factor = -0.2
 		experience_gain_army_unit_factor = 0.15
 	}
 	GEH_theorist_idea_c_trait = {
 		random = no
-		land_doctrine_cost_factor = -0.2
+		baland_doctrine_cost_factor = -0.2
 		air_doctrine_cost_factor = -0.2
 		air_cas_efficiency = 0.05
 		army_attack_factor = 0.03
@@ -1292,7 +1295,10 @@ leader_traits = {
 	##分析员
 	ALF_intelligence_analyst = {
 		random = no
-		decryption = 1
+		resistance_growth = -0.05
+		civilian_intel_to_others = -10
+		army_intel_to_others = -10
+		decryption_power = 1
 		operative_slot = 1
 		agency_upgrade_time = -0.2
 	}
@@ -1312,7 +1318,7 @@ leader_traits = {
 	##合成化理论家
 	ALF_armor_theorist = {
 		random = no
-		land_doctrine_cost_factor = -0.1
+		baland_doctrine_cost_factor = -0.1
 		equipment_bonus = {
 			armor = {
 				max_strength = 0.1
@@ -1359,13 +1365,13 @@ leader_traits = {
 	ALF_RWT_theorist_idea_a_trait = {
 		random = no
 		political_power_factor = 0.1
-		land_doctrine_cost_factor = -0.2
+		baland_doctrine_cost_factor = -0.2
 		experience_gain_army_unit_factor = 0.15
 	}
 	##红冬劳工部参谋
 	ALF_RWT_theorist_idea_b_trait = {
 		random = no
-		land_doctrine_cost_factor = -0.2
+		baland_doctrine_cost_factor = -0.2
 		weekly_manpower = 750
 	}
 	#企业特质

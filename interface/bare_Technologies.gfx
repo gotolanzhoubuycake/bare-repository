@@ -1299,6 +1299,10 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_assault_vehicle_dummy_upgrade_medium"
+		texturefile = "gfx/interface/technologies/sp_armored_engineer.dds"
+	}
+	SpriteType = {
 		name = "GFX_assault_vehicle_attack_upgrade1_medium"
 		texturefile = "gfx/interface/technologies/armor/assault_vehicle_attack_upgrade1.dds"
 	}
@@ -2379,5 +2383,16 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_bd_medical_medium"
 		texturefile = "gfx/interface/technologies/bd_tech/bd_medical.dds"
+	}
+
+	##列车炮##
+	SpriteType = {
+		name = "GFX_railway_gun_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/generic_railway_gun.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_railway_gun_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/FRA_railway_gun.dds"
 	}
 }

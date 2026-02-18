@@ -1,0 +1,40 @@
+ALF_faction_template = {
+	name = ALF_faction_template_name
+	# name = defensive_democratic_faction
+	#manifest = ALF_faction_template_manifest
+	manifest = ALF_faction_manifest_special
+	can_leader_join_other_factions = no
+	# color = { 179 183 235 } # this should default to faction leader's color
+	icon = GFX_faction_logo_generic_9
+	visible = {
+		always = no # Fallback template, should not be selectable 
+		#tag = ALF
+	}
+	available = {
+		tag = ALF
+	}
+
+	goals = {
+		ALF_faction_goal_stand_the_ground
+		ALF_faction_goal_secure_the_area
+		ALF_faction_goal_unlock_military	
+		ALF_faction_goal_spy_master
+		#
+		ALF_faction_goal_unlock_research
+		ALF_faction_industrial_expansion
+		ALF_faction_ensure_power_supply
+		
+		#
+		ALF_faction_knock_out_kaiser
+		ALF_faction_goal_back_to_home
+	}
+
+	default_rules = {
+		war_declaration_rule_faction_leader_only
+		change_leader_rule_never
+		call_to_war_rule_faction_leader_only
+		##
+		ALF_goals_controls_by_script_only
+	}
+	
+}

@@ -1,0 +1,10 @@
+ALF_owned_core_states = {
+	input = game:scope
+	operators = {
+		owned_states
+		limit = {
+			is_core_of = ALF
+		}
+	}
+	name = COLLECTION_ALF_OWNED_CORE_STATES
+}

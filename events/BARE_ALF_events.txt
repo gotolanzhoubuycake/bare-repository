@@ -90,6 +90,9 @@ country_event = {
 		complete_national_focus = ALF_a_great_march
 		ALF_initialize_livability_system_effect = yes
 		activate_mission = ALF_Livability_count_down_mission
+
+		##
+		create_faction_from_template = ALF_faction_template
 	}
 }
 
@@ -253,6 +256,9 @@ country_event = {
 		ALF_improve_livability_2_pts = yes
 		add_stability = 0.1
 		add_war_support = 0.1
+
+		##
+		set_country_flag = ALF_final_wave_of_people_flag
 	}
 }
 
@@ -378,6 +384,7 @@ country_event = {
 		}
 		##
 		set_country_flag = ALF_ending_of_a_long_march_achievement_flag
+		set_country_flag = ALF_faction_goal_secure_the_area_flag
 	}
 }
 
@@ -801,6 +808,7 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			set_country_flag = ALF_knock_down_the_giant_achievement_flag
+			set_country_flag = ALF_faction_knock_out_kaiser_goal_flag
 		}
 	}
 	option = {
@@ -1027,6 +1035,8 @@ country_event = {
 		mark_focus_tree_layout_dirty = yes
 		##
 		set_country_flag = ALF_go_home_achievement_flag
+		##
+		set_country_flag = ALF_faction_goal_back_to_home_complete_flag
 	}
 }
 

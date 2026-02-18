@@ -1,676 +1,694 @@
 Hipper_test_decisions_categories = {
-	Change_portrait_for_cool_nagisa = {
-		visible = {
-			original_tag = TRI
-			is_debug = yes
-		}
-		available = {
-			is_ai = no
-			TRI = {
-				has_country_leader = {
-					character = TRI_nagisa
-					ruling_only = yes
-				}
-			}
-		}
-		complete_effect = {
-			set_portraits = {
-				character = TRI_nagisa
-				civilian = {
-					large = "GFX_BARE_Portrait_TRI_nagisa_cool"
-				}
-			}
-			add_trait = {
-				character = TRI_nagisa
-				ideology = PGM_TRI_Nagisa_type
-				trait = TRI_nagisa_a_cool_victory
-			}
-		}
-	}
-	Change_portrait_for_cool_makoto = {
-		visible = {
-			original_tag = GEH
-			is_debug = yes
-		}
-		available = {
-			is_ai = no
-			GEH = {
-				has_country_leader = {
-					character = GEH_makoto
-					ruling_only = yes
-				}
-			}
-		}
-		complete_effect = {
-			set_portraits = {
-				character = GEH_makoto
-				civilian = {
-					large = "GFX_BARE_Portrait_GEH_makoto_cool"
-				}
-			}
-			add_trait = {
-				character = GEH_makoto
-				ideology = no_ideology_type
-				trait = GEH_makoto_a_cool_victory
-			}
-		}
-	}
-	###
-	Alf_for_glory_decision = {
-		visible = {
-			is_debug = yes
-		}
-		available = {
-			is_ai = no
-			tag = ALF
-		}
-		complete_effect = {
-			set_portraits = {
-				character = ALF_The_Leader
-				civilian = {
-					large = "GFX_BARE_Portrait_ALF_the_leader_no_mask"
-					small = "GFX_BARE_Portrait_ALF_the_leader_no_mask_small"
-				}
-			}
-			add_country_leader_trait = ALF_justice_prevails
-		}
-	}
-	###FIRE ECW WAR###
-	###启动古圣堂之战##
-	Fire_ECW_WAR_HIPPER = {
-		visible = {
-			is_debug = yes
-		}
-		available = {
-			is_ai = no
-		}
-		complete_effect = {
-			ARI = {
-				set_variable = {
-					ARI_ZhunBeiDu = 50
-				}
-				country_event = {
-					id = Eden_pact.200
-				}
-			}
-		}
-	}
-	Eden_cathedral_war_support_dynamic_modifier_test = {
-		priority = 1000
-		visible = {
-			is_debug = yes
-		}
-		available = {
-			is_ai = no
-		}
-		complete_effect = {
-			initialize_ECW_effect = yes
-		}
-	}
-	ECW_clamp_value_test = {
-		priority = 1000
-		visible = {
-			is_debug = yes
-		}
-		available = {
-			is_ai = no
-		}
-		complete_effect = {
-			ECW_clamp_all_vars_effect = yes
-			force_update_dynamic_modifier = yes
-		}
-	}
-	ECW_initialize_ECW_states_effect_test = {
-		priority = 1000
-		visible = {
-			is_debug = yes
-		}
-		available = {
-			is_ai = no
-		}
-		complete_effect = {
-			initialize_ECW_states_effect = yes
-		}
-	}
-	hide_and_show_superevent_test_decision = {
-		visible = {
-			is_debug = yes
-		}
-		available = {
-			is_ai = no
-		}
-		complete_effect = {
-			if = {
-				limit = {
-					has_global_flag = show_se_test_decision_flag
-				}
-				clr_global_flag = show_se_test_decision_flag
-			}
-			else = {
-				set_global_flag = show_se_test_decision_flag
-			}
-		}
-	}
-	####发射超事件的测试器####
-	Fire_super_event_hipp = {
-		visible = {
-			is_debug = yes
-			has_global_flag = show_se_test_decision_flag
-		}
-		available = {
-			is_ai = no
-		}
-		complete_effect = {
-			BARE_SuperEvent_2_fire_super_event = yes
-		}
-	}
-	Fire_super_type1_event1_hipp = {
-		visible = {
-			is_debug = yes
-			has_global_flag = show_se_test_decision_flag
-		}
-		available = {
-			is_ai = no
-		}
-		complete_effect = {
-			BARE_SuperEvent_1_effect_1 = yes
-		}
-	}
-	Fire_super_type2_event1_hipp = {
-		visible = {
-			is_debug = yes
-			has_global_flag = show_se_test_decision_flag
-		}
-		available = {
-			is_ai = no
-		}
-		complete_effect = {
-			BARE_SuperEvent_2_effect_1 = yes
-		}
-	}
-	Fire_super_type2_event2_hipp = {
-		visible = {
-			is_debug = yes
-			has_global_flag = show_se_test_decision_flag
-		}
-		available = {
-			is_ai = no
-		}
-		complete_effect = {
-			BARE_SuperEvent_2_effect_2 = yes
-		}
-	}
-	Fire_super_type2_event3_hipp = {
-		visible = {
-			is_debug = yes
-			has_global_flag = show_se_test_decision_flag
-		}
-		available = {
-			is_ai = no
-		}
-		complete_effect = {
-			BARE_SuperEvent_2_effect_3 = yes
-		}
-	}
-	Fire_super_type2_event4_hipp = {
-		visible = {
-			is_debug = yes
-			has_global_flag = show_se_test_decision_flag
-		}
-		available = {
-			is_ai = no
-		}
-		complete_effect = {
-			BARE_SuperEvent_2_effect_4 = yes
-		}
-	}
-	Fire_super_type2_event5_hipp = {
-		visible = {
-			is_debug = yes
-			has_global_flag = show_se_test_decision_flag
-		}
-		available = {
-			is_ai = no
-		}
-		complete_effect = {
-			BARE_SuperEvent_2_effect_5 = yes
-		}
-	}
-	Fire_super_type2_event6_hipp = {
-		visible = {
-			is_debug = yes
-			has_global_flag = show_se_test_decision_flag
-		}
-		available = {
-			is_ai = no
-		}
-		complete_effect = {
-			BARE_SuperEvent_2_effect_6 = yes
-		}
-	}
-	Fire_super_type2_event7_hipp = {
-		visible = {
-			is_debug = yes
-			has_global_flag = show_se_test_decision_flag
-		}
-		available = {
-			is_ai = no
-		}
-		complete_effect = {
-			BARE_SuperEvent_2_effect_7 = yes
-		}
-	}
-	Fire_super_type2_event8_hipp = {
-		visible = {
-			is_debug = yes
-			has_global_flag = show_se_test_decision_flag
-		}
-		available = {
-			is_ai = no
-		}
-		complete_effect = {
-			BARE_SuperEvent_2_effect_8 = yes
-		}
-	}
-	Fire_super_type2_event9_hipp = {
-		visible = {
-			is_debug = yes
-			has_global_flag = show_se_test_decision_flag
-		}
-		available = {
-			is_ai = no
-		}
-		complete_effect = {
-			BARE_SuperEvent_2_effect_9 = yes
-		}
-	}
-	Fire_super_type2_event10_hipp = {
-		visible = {
-			is_debug = yes
-			has_global_flag = show_se_test_decision_flag
-		}
-		available = {
-			is_ai = no
-		}
-		complete_effect = {
-			BARE_SuperEvent_2_effect_10 = yes
-		}
-	}
-	Fire_super_type2_event11_hipp = {
-		visible = {
-			is_debug = yes
-			has_global_flag = show_se_test_decision_flag
-		}
-		available = {
-			is_ai = no
-		}
-		complete_effect = {
-			BARE_SuperEvent_2_effect_11 = yes
-		}
-	}
-	#################
-	#################
-	BAREXP_show_superevent1_gui = {
-		visible = {
-			is_debug = yes
-			has_global_flag = show_se_test_decision_flag
-		}
-		available = {
-			is_ai = no
-		}
-		complete_effect = {
-			BSE_Fire_Super_Event_index_1 = yes
-		}
-	}
-	BAREXP_show_superevent2_gui = {
-		visible = {
-			is_debug = yes
-			has_global_flag = show_se_test_decision_flag
-		}
-		available = {
-			is_ai = no
-		}
-		complete_effect = {
-			BSE_Fire_Super_Event_index_2 = yes
-		}
-	}
-	BAREXP_show_superevent3_gui = {
-		visible = {
-			is_debug = yes
-			has_global_flag = show_se_test_decision_flag
-		}
-		available = {
-			is_ai = no
-		}
-		complete_effect = {
-			BSE_Fire_Super_Event_index_3 = yes
-		}
-	}
-	BAREXP_show_superevent4_gui = {
-		visible = {
-			is_debug = yes
-			has_global_flag = show_se_test_decision_flag
-		}
-		available = {
-			is_ai = no
-		}
-		complete_effect = {
-			BSE_Fire_Super_Event_index_4 = yes
-		}
-	}
-	BAREXP_show_superevent5_gui = {
-		visible = {
-			is_debug = yes
-			has_global_flag = show_se_test_decision_flag
-		}
-		available = {
-			is_ai = no
-		}
-		complete_effect = {
-			BSE_Fire_Super_Event_index_5 = yes
-		}
-	}
-	BAREXP_show_superevent6_gui = {
-		visible = {
-			is_debug = yes
-			has_global_flag = show_se_test_decision_flag
-		}
-		available = {
-			is_ai = no
-		}
-		complete_effect = {
-			BSE_Fire_Super_Event_index_6 = yes
-		}
-	}
-	BAREXP_show_superevent7_gui = {
-		visible = {
-			is_debug = yes
-			has_global_flag = show_se_test_decision_flag
-		}
-		available = {
-			is_ai = no
-		}
-		complete_effect = {
-			BSE_Fire_Super_Event_index_7 = yes
-		}
-	}
-	BAREXP_show_superevent8_gui = {
-		visible = {
-			is_debug = yes
-			has_global_flag = show_se_test_decision_flag
-		}
-		available = {
-			is_ai = no
-		}
-		complete_effect = {
-			BSE_Fire_Super_Event_index_8 = yes
-		}
-	}
-	BAREXP_show_superevent9_gui = {
-		visible = {
-			is_debug = yes
-			has_global_flag = show_se_test_decision_flag
-		}
-		available = {
-			is_ai = no
-		}
-		complete_effect = {
-			BSE_Fire_Super_Event_index_9 = yes
-		}
-	}
-	BAREXP_show_superevent10_gui = {
-		visible = {
-			is_debug = yes
-			has_global_flag = show_se_test_decision_flag
-		}
-		available = {
-			is_ai = no
-		}
-		complete_effect = {
-			BSE_Fire_Super_Event_index_10 = yes
-		}
-	}
-	###查看结算警告###
-	check_war_end_flavor_hipp = {
-		visible = {
-			is_debug = yes
-		}
-		available = {
-			is_ai = no
-		}
-		complete_effect = {
-			ALF_WINS_EDEN_IRON_PACT_WAR_PEACE_EVENT_POPUP_EFFECT = yes
-			set_global_flag = EDEN_IRON_PACT_WAR_scenario_global_flag
-		}
-	}
-	initializ_ALF_hipp = {
-		visible = {
-			is_debug = yes
-		}
-		available = {
-			is_ai = no
-		}
-		complete_effect = {
-			A47 = {
-				change_tag_from = ROOT
-			}
-			BARE_RULE_story_settings_ALF_SELECTED_effect = yes
-		}
-	}
-	show_ALF_phrase_1_all_focus_tree_decision = {
-		visible = {
-			is_debug = yes
-			tag = ALF
-		}
-		available = {
-			is_ai = no
-		}
-		complete_effect = {
-			set_country_flag = ALF_phrase_1_step_2_flag
-			mark_focus_tree_layout_dirty = yes
-		}
-	}
-	show_ALF_phrase_2_all_focus_tree_decision = {
-		visible = {
-			is_debug = yes
-			tag = ALF
-		}
-		available = {
-			is_ai = no
-		}
-		complete_effect = {
-			set_country_flag = ALF_phrase_2_flag
-			set_global_flag = the_enterprise_war_begins
-			set_country_flag = ALF_EPW_STAGE2_flag
-			set_global_flag = EPW_ENDS_global_flag
-			set_country_flag = ALF_ready_for_2nd_liberation_war_flag
-			set_country_flag = ALF_Gabriel_operation_success
-			set_global_flag = ALF_THE_2ND_LIBERATION_WAR_BEGINS_NOW_GLOBAL_FLAG
-			mark_focus_tree_layout_dirty = yes
-		}
-	}
-	active_kaiser_mission_decision = {
-		visible = {
-			is_debug = yes
-			tag = ALF
-		}
-		available = {
-			is_ai = no
-		}
-		complete_effect = {
-			activate_mission = ALF_EPW_Stage_2_trigger_mission
-			activate_mission = ALF_EPW_Stage_2_timer_mission
-		}
-	}
-	initialize_TRI_eden_failure = {
-		visible = {
-			is_debug = yes
-		}
-		available = {
-			is_ai = no
-		}
-		complete_effect = {
-			ALF_failure_impact_of_eden_treaty_TRI_stage_1 = yes
-			ALF_failure_impact_of_eden_treaty_TRI_stage_2 = yes
-			ALF_failure_impact_of_eden_treaty_TRI_stage_3 = yes
-		}
-	}
-	initialize_2nd_liberation_war = {
-		visible = {
-			is_debug = yes
-		}
-		available = {
-			is_ai = no
-		}
-		complete_effect = {
-			TRA = {
-				create_faction = TRA_GEA_Axis
-				add_to_faction = GEA
-			}
-			ALF = {
-				add_to_faction = TRT
-				add_to_faction = GER
-			}
-		}
-	}
-	peace_test_2nd_liberation_war_decision = {
-		visible = {
-			is_debug = yes
-		}
-		available = {
-			is_ai = no
-		}
-		complete_effect = {
-			every_possible_country = {
-				limit = {
-					OR = {
-						tag = GEA
-						is_subject_of = GEA
-					}
-				}
-				every_possible_country = {
-					limit = {
-						OR = {
-							tag = ALF
-							is_ally_with = ALF
-						}
-					}
-					white_peace = PREV
-				}
-			}
-			GER = {
-				annex_country = {
-					target = GEA
-					transfer_troops = no
-				}
-				set_autonomy = {
-					target = A06
-					autonomous_state = autonomy_bare_trusteeship_area
-					end_wars = yes
-					end_civil_wars = yes
-				}
-				set_autonomy = {
-					target = A08
-					autonomous_state = autonomy_bare_trusteeship_area
-					end_wars = yes
-					end_civil_wars = yes
-				}
-				set_autonomy = {
-					target = A09
-					autonomous_state = autonomy_bare_trusteeship_area
-					end_wars = yes
-					end_civil_wars = yes
-				}
-				set_autonomy = {
-					target = A11
-					autonomous_state = autonomy_bare_trusteeship_area
-					end_wars = yes
-					end_civil_wars = yes
-				}
-			}
-			every_possible_country = {
-				limit = {
-					OR = {
-						tag = TRA
-						is_subject_of = TRA
-					}
-				}
-				every_possible_country = {
-					limit = {
-						OR = {
-							tag = ALF
-							is_ally_with = ALF
-						}
-					}
-					white_peace = PREV
-				}
-			}
-			TRT = {
-				annex_country = {
-					target = TRA
-					transfer_troops = no
-				}
-				annex_country = {
-					target = TRI
-					transfer_troops = yes
-				}
-				set_autonomy = {
-					target = A01
-					autonomous_state = autonomy_bare_trusteeship_area
-					end_wars = yes
-					end_civil_wars = yes
-				}
-				set_autonomy = {
-					target = A02
-					autonomous_state = autonomy_bare_trusteeship_area
-					end_wars = yes
-					end_civil_wars = yes
-				}
-				set_autonomy = {
-					target = A04
-					autonomous_state = autonomy_bare_trusteeship_area
-					end_wars = yes
-					end_civil_wars = yes
-				}
-				set_autonomy = {
-					target = A05
-					autonomous_state = autonomy_bare_trusteeship_area
-					end_wars = yes
-					end_civil_wars = yes
-				}
-			}
-		}
-	}
+    Change_portrait_for_cool_nagisa = {
+        visible = {
+            original_tag = TRI
+            is_debug = yes
+        }
+        available = {
+            is_ai = no
+            TRI = {
+                has_country_leader = {
+                    character = TRI_nagisa
+                    ruling_only = yes
+                }
+            }
+        }
+        complete_effect = {
+            set_portraits = {
+                character = TRI_nagisa
+                civilian = {
+                    large = "GFX_BARE_Portrait_TRI_nagisa_cool"
+                }
+            }
+            add_trait = {
+                character = TRI_nagisa
+                ideology = PGM_TRI_Nagisa_type
+                trait = TRI_nagisa_a_cool_victory
+            }
+        }
+    }
+    Change_portrait_for_cool_makoto = {
+        visible = {
+            original_tag = GEH
+            is_debug = yes
+        }
+        available = {
+            is_ai = no
+            GEH = {
+                has_country_leader = {
+                    character = GEH_makoto
+                    ruling_only = yes
+                }
+            }
+        }
+        complete_effect = {
+            set_portraits = {
+                character = GEH_makoto
+                civilian = {
+                    large = "GFX_BARE_Portrait_GEH_makoto_cool"
+                }
+            }
+            add_trait = {
+                character = GEH_makoto
+                ideology = no_ideology_type
+                trait = GEH_makoto_a_cool_victory
+            }
+        }
+    }
+    ###
+    Alf_for_glory_decision = {
+        visible = {
+            is_debug = yes
+        }
+        available = {
+            is_ai = no
+            tag = ALF
+        }
+        complete_effect = {
+            set_portraits = {
+                character = ALF_The_Leader
+                civilian = {
+                    large = "GFX_BARE_Portrait_ALF_the_leader_no_mask"
+                    small = "GFX_BARE_Portrait_ALF_the_leader_no_mask_small"
+                }
+            }
+            add_country_leader_trait = ALF_justice_prevails
+        }
+    }
+    ###FIRE ECW WAR###
+    ###启动古圣堂之战##
+    Fire_ECW_WAR_HIPPER = {
+        visible = {
+            is_debug = yes
+        }
+        available = {
+            is_ai = no
+        }
+        complete_effect = {
+            ARI = {
+                set_variable = {
+                    ARI_ZhunBeiDu = 50
+                }
+                country_event = {
+                    id = Eden_pact.200
+                }
+            }
+        }
+    }
+    Eden_cathedral_war_support_dynamic_modifier_test = {
+        priority = 1000
+        visible = {
+            is_debug = yes
+        }
+        available = {
+            is_ai = no
+        }
+        complete_effect = {
+            initialize_ECW_effect = yes
+        }
+    }
+    ECW_clamp_value_test = {
+        priority = 1000
+        visible = {
+            is_debug = yes
+        }
+        available = {
+            is_ai = no
+        }
+        complete_effect = {
+            ECW_clamp_all_vars_effect = yes
+            force_update_dynamic_modifier = yes
+        }
+    }
+    ECW_initialize_ECW_states_effect_test = {
+        priority = 1000
+        visible = {
+            is_debug = yes
+        }
+        available = {
+            is_ai = no
+        }
+        complete_effect = {
+            initialize_ECW_states_effect = yes
+        }
+    }
+    hide_and_show_superevent_test_decision = {
+        visible = {
+            is_debug = yes
+        }
+        available = {
+            is_ai = no
+        }
+        complete_effect = {
+            if = {
+                limit = {
+                    has_global_flag = show_se_test_decision_flag
+                }
+                clr_global_flag = show_se_test_decision_flag
+            }
+            else = {
+                set_global_flag = show_se_test_decision_flag
+            }
+        }
+    }
+    ####发射超事件的测试器####
+    Fire_super_event_hipp = {
+        visible = {
+            is_debug = yes
+            has_global_flag = show_se_test_decision_flag
+        }
+        available = {
+            is_ai = no
+        }
+        complete_effect = {
+            BARE_SuperEvent_2_fire_super_event = yes
+        }
+    }
+    Fire_super_type1_event1_hipp = {
+        visible = {
+            is_debug = yes
+            has_global_flag = show_se_test_decision_flag
+        }
+        available = {
+            is_ai = no
+        }
+        complete_effect = {
+            BARE_SuperEvent_1_effect_1 = yes
+        }
+    }
+    Fire_super_type2_event1_hipp = {
+        visible = {
+            is_debug = yes
+            has_global_flag = show_se_test_decision_flag
+        }
+        available = {
+            is_ai = no
+        }
+        complete_effect = {
+            BARE_SuperEvent_2_effect_1 = yes
+        }
+    }
+    Fire_super_type2_event2_hipp = {
+        visible = {
+            is_debug = yes
+            has_global_flag = show_se_test_decision_flag
+        }
+        available = {
+            is_ai = no
+        }
+        complete_effect = {
+            BARE_SuperEvent_2_effect_2 = yes
+        }
+    }
+    Fire_super_type2_event3_hipp = {
+        visible = {
+            is_debug = yes
+            has_global_flag = show_se_test_decision_flag
+        }
+        available = {
+            is_ai = no
+        }
+        complete_effect = {
+            BARE_SuperEvent_2_effect_3 = yes
+        }
+    }
+    Fire_super_type2_event4_hipp = {
+        visible = {
+            is_debug = yes
+            has_global_flag = show_se_test_decision_flag
+        }
+        available = {
+            is_ai = no
+        }
+        complete_effect = {
+            BARE_SuperEvent_2_effect_4 = yes
+        }
+    }
+    Fire_super_type2_event5_hipp = {
+        visible = {
+            is_debug = yes
+            has_global_flag = show_se_test_decision_flag
+        }
+        available = {
+            is_ai = no
+        }
+        complete_effect = {
+            BARE_SuperEvent_2_effect_5 = yes
+        }
+    }
+    Fire_super_type2_event6_hipp = {
+        visible = {
+            is_debug = yes
+            has_global_flag = show_se_test_decision_flag
+        }
+        available = {
+            is_ai = no
+        }
+        complete_effect = {
+            BARE_SuperEvent_2_effect_6 = yes
+        }
+    }
+    Fire_super_type2_event7_hipp = {
+        visible = {
+            is_debug = yes
+            has_global_flag = show_se_test_decision_flag
+        }
+        available = {
+            is_ai = no
+        }
+        complete_effect = {
+            BARE_SuperEvent_2_effect_7 = yes
+        }
+    }
+    Fire_super_type2_event8_hipp = {
+        visible = {
+            is_debug = yes
+            has_global_flag = show_se_test_decision_flag
+        }
+        available = {
+            is_ai = no
+        }
+        complete_effect = {
+            BARE_SuperEvent_2_effect_8 = yes
+        }
+    }
+    Fire_super_type2_event9_hipp = {
+        visible = {
+            is_debug = yes
+            has_global_flag = show_se_test_decision_flag
+        }
+        available = {
+            is_ai = no
+        }
+        complete_effect = {
+            BARE_SuperEvent_2_effect_9 = yes
+        }
+    }
+    Fire_super_type2_event10_hipp = {
+        visible = {
+            is_debug = yes
+            has_global_flag = show_se_test_decision_flag
+        }
+        available = {
+            is_ai = no
+        }
+        complete_effect = {
+            BARE_SuperEvent_2_effect_10 = yes
+        }
+    }
+    Fire_super_type2_event11_hipp = {
+        visible = {
+            is_debug = yes
+            has_global_flag = show_se_test_decision_flag
+        }
+        available = {
+            is_ai = no
+        }
+        complete_effect = {
+            BARE_SuperEvent_2_effect_11 = yes
+        }
+    }
+    #################
+    #################
+    BAREXP_show_superevent1_gui = {
+        visible = {
+            is_debug = yes
+            has_global_flag = show_se_test_decision_flag
+        }
+        available = {
+            is_ai = no
+        }
+        complete_effect = {
+            BSE_Fire_Super_Event_index_1 = yes
+        }
+    }
+    BAREXP_show_superevent2_gui = {
+        visible = {
+            is_debug = yes
+            has_global_flag = show_se_test_decision_flag
+        }
+        available = {
+            is_ai = no
+        }
+        complete_effect = {
+            BSE_Fire_Super_Event_index_2 = yes
+        }
+    }
+    BAREXP_show_superevent3_gui = {
+        visible = {
+            is_debug = yes
+            has_global_flag = show_se_test_decision_flag
+        }
+        available = {
+            is_ai = no
+        }
+        complete_effect = {
+            BSE_Fire_Super_Event_index_3 = yes
+        }
+    }
+    BAREXP_show_superevent4_gui = {
+        visible = {
+            is_debug = yes
+            has_global_flag = show_se_test_decision_flag
+        }
+        available = {
+            is_ai = no
+        }
+        complete_effect = {
+            BSE_Fire_Super_Event_index_4 = yes
+        }
+    }
+    BAREXP_show_superevent5_gui = {
+        visible = {
+            is_debug = yes
+            has_global_flag = show_se_test_decision_flag
+        }
+        available = {
+            is_ai = no
+        }
+        complete_effect = {
+            BSE_Fire_Super_Event_index_5 = yes
+        }
+    }
+    BAREXP_show_superevent6_gui = {
+        visible = {
+            is_debug = yes
+            has_global_flag = show_se_test_decision_flag
+        }
+        available = {
+            is_ai = no
+        }
+        complete_effect = {
+            BSE_Fire_Super_Event_index_6 = yes
+        }
+    }
+    BAREXP_show_superevent7_gui = {
+        visible = {
+            is_debug = yes
+            has_global_flag = show_se_test_decision_flag
+        }
+        available = {
+            is_ai = no
+        }
+        complete_effect = {
+            BSE_Fire_Super_Event_index_7 = yes
+        }
+    }
+    BAREXP_show_superevent8_gui = {
+        visible = {
+            is_debug = yes
+            has_global_flag = show_se_test_decision_flag
+        }
+        available = {
+            is_ai = no
+        }
+        complete_effect = {
+            BSE_Fire_Super_Event_index_8 = yes
+        }
+    }
+    BAREXP_show_superevent9_gui = {
+        visible = {
+            is_debug = yes
+            has_global_flag = show_se_test_decision_flag
+        }
+        available = {
+            is_ai = no
+        }
+        complete_effect = {
+            BSE_Fire_Super_Event_index_9 = yes
+        }
+    }
+    BAREXP_show_superevent10_gui = {
+        visible = {
+            is_debug = yes
+            has_global_flag = show_se_test_decision_flag
+        }
+        available = {
+            is_ai = no
+        }
+        complete_effect = {
+            BSE_Fire_Super_Event_index_10 = yes
+        }
+    }
+    ###查看结算警告###
+    check_war_end_flavor_hipp = {
+        visible = {
+            is_debug = yes
+        }
+        available = {
+            is_ai = no
+        }
+        complete_effect = {
+            CEN = {
+                TEST_BARE_PEACE_EVENT_POPUP_DEFAULT_FOR_CAPITULATION = yes
+            }
+            TEST_BARE_PEACE_EVENT_POPUP_DEFAULT_FOR_CAPITULATION = yes
+            #set_global_flag = EDEN_IRON_PACT_WAR_scenario_global_flag
+        }
+    }
+    initializ_ALF_hipp = {
+        visible = {
+            is_debug = yes
+        }
+        available = {
+            is_ai = no
+        }
+        complete_effect = {
+            A47 = {
+                change_tag_from = ROOT
+            }
+            BARE_RULE_story_settings_ALF_SELECTED_effect = yes
+        }
+    }
+    show_ALF_phrase_1_all_focus_tree_decision = {
+        visible = {
+            is_debug = yes
+            tag = ALF
+        }
+        available = {
+            is_ai = no
+        }
+        complete_effect = {
+            set_country_flag = ALF_phrase_1_step_2_flag
+            mark_focus_tree_layout_dirty = yes
+        }
+    }
+    show_ALF_phrase_2_all_focus_tree_decision = {
+        visible = {
+            is_debug = yes
+            tag = ALF
+        }
+        available = {
+            is_ai = no
+        }
+        complete_effect = {
+            set_country_flag = ALF_phrase_2_flag
+            set_global_flag = the_enterprise_war_begins
+            set_country_flag = ALF_EPW_STAGE2_flag
+            set_global_flag = EPW_ENDS_global_flag
+            set_country_flag = ALF_ready_for_2nd_liberation_war_flag
+            set_country_flag = ALF_Gabriel_operation_success
+            set_global_flag = ALF_THE_2ND_LIBERATION_WAR_BEGINS_NOW_GLOBAL_FLAG
+            mark_focus_tree_layout_dirty = yes
+        }
+    }
+    active_kaiser_mission_decision = {
+        visible = {
+            is_debug = yes
+            tag = ALF
+        }
+        available = {
+            is_ai = no
+        }
+        complete_effect = {
+            activate_mission = ALF_EPW_Stage_2_trigger_mission
+            activate_mission = ALF_EPW_Stage_2_timer_mission
+        }
+    }
+    initialize_TRI_eden_failure = {
+        visible = {
+            is_debug = yes
+        }
+        available = {
+            is_ai = no
+        }
+        complete_effect = {
+            ALF_failure_impact_of_eden_treaty_TRI_stage_1 = yes
+            ALF_failure_impact_of_eden_treaty_TRI_stage_2 = yes
+            ALF_failure_impact_of_eden_treaty_TRI_stage_3 = yes
+        }
+    }
+    initialize_2nd_liberation_war = {
+        visible = {
+            is_debug = yes
+        }
+        available = {
+            is_ai = no
+        }
+        complete_effect = {
+            TRA = {
+                create_faction = TRA_GEA_Axis
+                add_to_faction = GEA
+            }
+            ALF = {
+                add_to_faction = TRT
+                add_to_faction = GER
+            }
+        }
+    }
+    peace_test_2nd_liberation_war_decision = {
+        visible = {
+            is_debug = yes
+        }
+        available = {
+            is_ai = no
+        }
+        complete_effect = {
+            every_possible_country = {
+                limit = {
+                    OR = {
+                        tag = GEA
+                        is_subject_of = GEA
+                    }
+                }
+                every_possible_country = {
+                    limit = {
+                        OR = {
+                            tag = ALF
+                            is_ally_with = ALF
+                        }
+                    }
+                    white_peace = PREV
+                }
+            }
+            GER = {
+                annex_country = {
+                    target = GEA
+                    transfer_troops = no
+                }
+                set_autonomy = {
+                    target = A06
+                    autonomous_state = autonomy_bare_trusteeship_area
+                    end_wars = yes
+                    end_civil_wars = yes
+                }
+                set_autonomy = {
+                    target = A08
+                    autonomous_state = autonomy_bare_trusteeship_area
+                    end_wars = yes
+                    end_civil_wars = yes
+                }
+                set_autonomy = {
+                    target = A09
+                    autonomous_state = autonomy_bare_trusteeship_area
+                    end_wars = yes
+                    end_civil_wars = yes
+                }
+                set_autonomy = {
+                    target = A11
+                    autonomous_state = autonomy_bare_trusteeship_area
+                    end_wars = yes
+                    end_civil_wars = yes
+                }
+            }
+            every_possible_country = {
+                limit = {
+                    OR = {
+                        tag = TRA
+                        is_subject_of = TRA
+                    }
+                }
+                every_possible_country = {
+                    limit = {
+                        OR = {
+                            tag = ALF
+                            is_ally_with = ALF
+                        }
+                    }
+                    white_peace = PREV
+                }
+            }
+            TRT = {
+                annex_country = {
+                    target = TRA
+                    transfer_troops = no
+                }
+                annex_country = {
+                    target = TRI
+                    transfer_troops = yes
+                }
+                set_autonomy = {
+                    target = A01
+                    autonomous_state = autonomy_bare_trusteeship_area
+                    end_wars = yes
+                    end_civil_wars = yes
+                }
+                set_autonomy = {
+                    target = A02
+                    autonomous_state = autonomy_bare_trusteeship_area
+                    end_wars = yes
+                    end_civil_wars = yes
+                }
+                set_autonomy = {
+                    target = A04
+                    autonomous_state = autonomy_bare_trusteeship_area
+                    end_wars = yes
+                    end_civil_wars = yes
+                }
+                set_autonomy = {
+                    target = A05
+                    autonomous_state = autonomy_bare_trusteeship_area
+                    end_wars = yes
+                    end_civil_wars = yes
+                }
+            }
+        }
+    }
 
-	BAREXP_endgame_closing_screen_gui = {
-		visible = {
-			always = yes
-		}
-		complete_effect = {
-		    BARE_ALF_GOOD_END_ENDING_SCREEN_EFFECT = yes
-		}
-	}
+    BAREXP_endgame_closing_screen_gui = {
+        visible = {
+            always = yes
+        }
+        complete_effect = {
+            BARE_ALF_GOOD_END_ENDING_SCREEN_EFFECT = yes
+        }
+    }
 
-	BAREXP_endgame_closing_screen_ALF_BAD_END = {
-		visible = {
-			always = yes
-		}
-		complete_effect = {
-		    BARE_ALF_BAD_END_ENDING_SCREEN_EFFECT = yes
-		}
-	}
+    BAREXP_endgame_closing_screen_ALF_BAD_END = {
+        visible = {
+            always = yes
+        }
+        complete_effect = {
+            BARE_ALF_BAD_END_ENDING_SCREEN_EFFECT = yes
+        }
+    }
+    ##阵营目标完成提示
+    check_faction_goal_complete_popup_hipp = {
+        visible = {
+            is_debug = yes
+        }
+        available = {
+            is_ai = no
+        }
+        complete_effect = {
+            set_variable = {
+                faction_goal_type_index = 1
+            }
+            BARE_FIRE_FACTION_GOAL_COMPLETE_POPUP_EFFECT = yes
+        }
+    }
 }
 
 CEN_Operation_Uranus_categories = {
-	Uranus_Test_open_gui = {
-		visible = {
-			original_tag = CEN
-			is_debug = yes
-		}
-		available = {
-			is_ai = no
-		}
-		complete_effect = {
-		}
-	}
+    Uranus_Test_open_gui = {
+        visible = {
+            original_tag = CEN
+            is_debug = yes
+        }
+        available = {
+            is_ai = no
+        }
+        complete_effect = {
+        }
+    }
 }

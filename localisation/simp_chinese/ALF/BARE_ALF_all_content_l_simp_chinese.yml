@@ -33,6 +33,57 @@
  CAH_ALF_subject: "高新开发区"  
 
 ####################
+##阵营相关
+####################
+ ALF_faction_template_name: "阿里乌斯解放阵线"
+ ALF_faction_manifest_special: "旗帜飘扬"
+ ALF_faction_manifest_special_desc: "命运只是另一座可以征服的山峰——正义的事业终将升扬，而暴君必尝恶果。"
+
+ ALF_faction_goal_stand_the_ground_name: "站稳脚跟"
+ ALF_faction_goal_stand_the_ground_desc: "幸运的是，逃亡的窗口尚未关闭。流亡者必须做好接收更多居民的准备——这也意味着许多两难抉择。\n\n§R但不论如何，流亡者必须坚守阵地。§!"
+ ALF_final_wave_of_people_flag: "§C最后的人潮§!：§G已抵达§!"
+
+ ALF_faction_goal_secure_the_area_name: "确保周边安全"
+ ALF_faction_goal_secure_the_area_desc: "安全是发展的必要前提。流亡者必须利用这个短暂的机遇窗口，迅速稳固周边的地区。\n\n§G微渺但重要的胜利。§!"
+ ALF_faction_goal_secure_the_area_flag: "§C利非汀权杖行动§!：§G已完成§!"
+
+ ALF_faction_goal_spy_master_name: "扩大特别勤务处"
+ ALF_faction_goal_spy_master_desc: "情报工作是流亡者能先人一步的基本前提。必须扩大情报部门的规模，以便更好地了解周边环境，并为未来的行动做好准备。\n\n§R无所遁形……§!"
+
+ ALF_faction_goal_unlock_military_name: "重建作战参谋部"
+ ALF_faction_goal_unlock_military_desc: "阿里乌斯学园曾经的作战参谋部在内战中遭到严重破坏，其长久以来的组织体系已经荡然无存。为了应对接下来的战斗，重建它将是一个极为重要的短期事务。\n\n§R群龙无首的军队只会是乌合之众。§!"
+
+ ALF_faction_goal_unlock_research_name: "组建联合研究所"
+ ALF_faction_goal_unlock_research_desc: "和自由飞行员的合作也许是一个机遇：她们拥有先进的航空技术和经验，通过合作，流亡者们在航空技术上的空白也许能迎头赶上。\n\n§G钢铁的伊卡洛斯不惧烈阳。§!"
+
+ ALF_faction_industrial_expansion_name: "工业扩张计划"
+ ALF_faction_industrial_expansion_desc: "思想的批判远不及物质的批判。我们必须确保拥有足够的工业产能，才能在接下来的决战中有一战之力。"
+
+ ALF_faction_ensure_power_supply_name: "完成用电覆盖"
+ ALF_faction_ensure_power_supply_desc: "电力供应始终是我们需要关注的核心问题。确保全域供电是我们对于所有人的重要承诺。"
+
+ ALF_faction_knock_out_kaiser_name: "击退凯撒集团"
+ ALF_faction_knock_out_kaiser_desc: "凯撒集团一直在秘密支持黑市地带的各种暴力社团。必须以强而有力的行动，斩断这只幕后黑手。"
+ ALF_faction_knock_out_kaiser_goal_flag: "在§Y公司战争§!中取得§G胜利§!"
+
+ ALF_faction_goal_back_to_home_name: "完成未竟之事"
+ ALF_faction_goal_back_to_home_desc: "失败是一次考验，却从来不是终局。贝阿多莉切将会明白，阿里乌斯永远都不会屈服于野心家的阴谋诡计。而复仇的烈火，会将她彻底焚尽为灰。\n\n§R我们向来说到做到。§!"
+ ALF_faction_goal_back_to_home_complete_flag: "§G贝阿多莉切的统治已遭终结§!"
+
+ COLLECTION_ALF_OWNED_CORE_STATES: "§C[ALF.GetNameWithFlag]§!控制的核心省份数量"
+
+####################
+##制造所
+####################
+ ALF_Infantry_Organization_Producter: "中央武器制造所"
+ ALF_artillary_Organization_Producter: "河口火炮铸造局"
+ ALF_truck_Organization_Producter: "号角机械制造厂"
+ ALF_tank_Organization_Producter: "红松石坦克设计局"
+ ALF_mecha_Organization_Producter: "联合战斗框架设计局"
+ ALF_plane_Organization_Producter: "雷神航空动力研究所"
+ ALF_helicopter_Organization_Producter: "北风旋翼研究院"
+ ALF_Gehenna_Volcano_support_equipment_organization: "希莱诺制造集团"
+####################
 ##国策！！！
 ####################
  ALF_Common_Focus: "流亡者国策树"
@@ -75,6 +126,7 @@
  ALF_Raise_the_flag_desc: "旗帜只是一件平凡的物件，但却寄托着希望与梦想。流亡者在旧学生会的精英们手中夺得了一面历史可以追溯到内战之前的旧校旗。对流亡者来说，它象征着流亡者的过去，也昭示着她们的未来，更重要的是，在这面旗帜之下，她们终于可以再一次称呼自己为“阿里乌斯”。"
 
  ALF_a_long_way_to_go: "长路漫漫"
+ ALF_a_long_way_to_go_desc: "漫长征程的第一块基石已经打下，随着旧学生会的堕落者倒下，流亡者已接管了这些重要的战略资源。为了达成最后的目标，流亡者应当尝试把现有的资源整合在一起。\n\n这将会是一个漫长的过程——但即便如此，流亡者也必须抓紧时间，尽快完成重点资源的整合。"
  ALF_a_long_way_to_go_tt: "§C开始新的征程。§!"
  ALF_lesson_from_civil_war: "内战的教训"
  ALF_lesson_from_civil_war_desc: "显然，内战的失败是一次极为惨痛的教训。但我们不能仅仅向失败学习失败，这种失败情绪对我们的发展毫无益处。因此，我们必须试着直面这一惨败，这不仅是指对军事失败的反思，亦要求着流亡者们从政治的失败中吸取教训。"
@@ -96,22 +148,27 @@
  ALF_create_shared_cognition_desc: "返回故乡的必要性已经无需再谈，抛弃了家园这一共同认知的流亡者，也绝无可能在外面世界的竞争中取得优势。我们是阿里乌斯的学生，这既是不可改变的事实，也是我们团结共赴难关的必然基础。"
  ALF_create_shared_cognition_tt: "§Y苦涩的失败§!追加效果：\n战争支持度：§G+10%§!\n陆军连组织度恢复速率：§G+10%§!"
  ALF_we_can_achieve_the_goal: "我们能做到！"
+ ALF_we_can_achieve_the_goal_desc: "“我们能做到！”——这不仅是一句口号，还是对流亡者、我们，所拥有的这股坚韧精神的集中总结。\n\n在见证了新的希望后，我们已经重新振作起来。问题和困难依然还需要亲手解决，但现在，我们可以鼓起勇气，朝着相同的愿景并肩前进。"
  ALF_we_can_achieve_the_goal_tt: "§Y阿里乌斯解放阵线§!追加效果：\n稳定度：§G+10%§!"
  ALF_confirm_economic_plan: "敲定经济计划"
+ ALF_confirm_economic_plan_desc: "经济计划的制定，时常会让一部分流亡者想起曾经在阿里乌斯学园的经济部门工作的往事。\n\n和当年的工作一样，对于经济的规划，不能仅仅依靠经验。单纯的一厢情愿并不能带来成功，只有进行广泛的数据收集，并使用专业的统计和数学工具，才能制定出合理的方案。\n\n这就要求流亡者重新建立一个经济指令部门。在参考各方意见后，领袖认为，管理专业出身，拥有工程技术背景的“东江静”将是最佳人选。"
  ALF_oil_is_industry_blood: "输送工业之血"
  ALF_oil_is_industry_blood_desc: "流亡者的工业机器，需要珍贵的燃料才能开动起来，幸运的是，这种珍贵的宝物近在眼前。根据附近曾经从事石油工作的居民提供的消息，就在青蓝丘这片湿地之中，就有一座废弃的油田存在。"
  ALF_oil_is_industry_blood_tt: "§G启动石油管道维护工程§!"
  ALF_repair_the_weapon_factory: "复原武器制造所"
+ ALF_repair_the_weapon_factory_desc: "在对黑帮势力的清缴中，流亡者们发现了一处地下武器制造所。它的地面设施均已遭到废弃，但其中的生产厂房和相关设备仍然完好无损。\n\n在相当长的一段时间内，黑市的土制武器都是由该制造所仍在运转的地下工厂供应的。技术专家认为，在完成必要的修复工作后，整个制造所将重新具备为流亡者的部队持续供应武器的能力。"
  ALF_master_machine_tool_technology: "掌握机床技术"
+ ALF_master_machine_tool_technology_desc: "在对「圣徒升天会」的产业进行清点后，我们发现，这些教徒掌握着一处拥有全套机床设备的工厂。\n\n我们的技术专家认为，这里的设备曾经甚至一度处于领先水平。遗憾的是，工厂长期处于疏于管理的状态。其设备普遍需要进行全面检修，以及升级汰换。\n\n流亡者已经发起了一项整修项目，对这些设备进行修复升级，并从中学习其技术原理。只要完成这一项目，流亡者的工业生产能力将会得到极大提升。"
  ALF_infrastructure_plan: "复兴基础设施"
+ ALF_infrastructure_plan_desc: "在沦为黑市地带之前，这里也曾经拥有繁华的商业区。尽管如今大多数市政工程都已经遭到废弃，但其设计本身经受了时间的考验。\n\n流亡者计划重新启用这些市政工程，对相关的基础设施和管网进行全面检修。这将消耗一部分重要的战略储备，但对流亡者而言，恢复城市的完整运转意义深远。"
  ALF_resource_produce: "自给自足"
  ALF_focus_trade: "重视外部贸易"
- ALF_focus_trade_desc: "对外交流，从外界获得必要的战略资源和各类技术对流亡者而言至关重要。同时，允许人员流通也能为流亡者的发展带来助力。不过，流亡者必须要注意潜在的金融稳定和防卫安全问题，因此，组建一个海关部门至关重要。"
+ ALF_focus_trade_desc: "对外交流，从外界获得必要的战略资源和各类技术对流亡者而言至关重要。同时，允许人员流通也能为流亡者的发展带来助力。\n\n不过，流亡者必须要注意潜在的金融稳定和防卫安全问题，因此，组建一个海关部门至关重要。"
  ALF_expand_goods_production: "扩大消费品生产"
  ALF_expand_goods_production_desc: "维持流亡者控制区域的稳定，即意味着要满足其治理下的居民的需求。利用新开辟的贸易路线，流亡者可以尝试扩大消费品的生产规模，以确保居民的日常需求能够得到基本满足。"
  ALF_expand_goods_production_tt: "§Y阿里乌斯解放阵线§!追加效果：\n稳定度：§G+10%§!"
  ALF_rebuild_the_market_center: "改造旧学生会建筑"
- ALF_rebuild_the_market_center_tt: "显然，黑市休闲中心——或者说，赌场——作为前学生会叛徒的象征，不能被继续保留下去。流亡者将实施一项改造工程，将这些学生会建筑恢复为其本来的样子。改造完毕后的学生会建筑，将作为流亡者行政中心重新投入使用。"
+ ALF_rebuild_the_market_center_desc: "在被流亡者夺回之前，堕落的旧阿里乌斯学生会精英们占据着这些历史悠久的建筑，并将其转化为了堕落的象征：赌场。\n\n显然，这些背叛的象征，不能被允许继续保留下去。流亡者将实施一项改造工程，将这些学生会建筑恢复为其本来的样子。改造完毕后的学生会建筑，将作为流亡者行政中心重新投入使用。"
  has_win_war_with_kaiser_flag: "在§Y公司战争§!中取得§G胜利§!"
  ALF_build_more_house: "满足住房需求"
  ALF_recovery_movement: "鼓励回收运动"
@@ -120,14 +177,16 @@
  ALF_rebuild_city_operation: "城市改造计划"
  ALF_rebuild_city_operation_tt: "§Y阿里乌斯解放阵线§!追加效果：\n市场建设加成系数：§G+10%§!" 
  ALF_solve_electric_problem: "解决用电问题"
- ALF_solve_electric_problem_desc: "没有电力就不可能达成现代生活，这是毫无疑问的事实。但是，流亡者没有能力完全实现电力自给自足，所以，我们必须寻求一些额外的帮助。"
+ ALF_solve_electric_problem_desc: "没有电力就不可能达成现代生活，这是毫无疑问的事实。但是，电力系统的检修与重建需要消耗资源与时间。\n\n对我们来说，接入联邦电网将是最为快捷的解决方案。考虑到这其中意味着的可观政治和经济影响力，我们认为相关提案应该很快就会得到通过。"
  ALF_solve_electric_problem_tt: "§G预期不会受到拒绝§!\n一旦获得§C供电许可§!，以下计划将§G可用§!："
  ALF_rebuild_the_hydropower_station: "完成废弃水电站工程"
+ ALF_rebuild_the_hydropower_station_desc: "通过联邦电网，我们解决了市民的基本用电需求。但流亡者逐步扩大的工业生产规模，以及各种特殊项目，需要更庞大且稳定的能源供给。\n\n考虑到我们目前的处境，重新整修被「金钗盗贼帮」当做据点的废弃水电站也许是一个最为经济的方案。不过，流亡者缺少对如此规模的工厂的建设经验。因此可以预想到，相关工程会消耗大量的战略储备。"
  ALF_be_ready_for_action: "蓄势待发"
  ALF_be_ready_for_action_tt: "§Y阿里乌斯解放阵线§!追加效果：\n战争支持度：§G+10%§!" 
  ALF_residential_census: "进行居民人口普查"
  
  ALF_change_outfit: "改头换面"
+ ALF_change_outfit_desc: "「庇护之羽」行动的胜利也表明，黑市地带的这些所谓的“地头蛇”并非是不败金身。尽管如此，流亡者也必须认识到，这片被称为“黑市”的土地并不友好。\n\n毫无疑问，“阿里乌斯学园”这个名讳既容易招致敌意，亦有可能引来夫人的爪牙。因此，流亡者必须采用一个更加“低调且灵活”的身份进行活动，以便应对各种情况。"
  ALF_contact_redwinter: "接触红冬联邦学园"
  ALF_contact_gehenna: "接触格黑娜学园"
  ALF_technology_exchange: "秘密技术交流"
@@ -140,18 +199,22 @@
  ALF_support_abydos: "提供军事支持"
  ALF_together_for_victory: "共同防卫协定"
  ALF_destroy_wsg: "西街问题"
- ALF_destroy_wsg_desc: "西街暴力团一直是黑市地带一个臭名昭著的帮派势力。它受到凯撒集团的资助，并为了它的主子们在基沃托斯的利益而惹是生非——不过，它的存在对我们来说是一个机会。西街暴力团控制的物流中心意义巨大，占领它将极大程度地改善流亡者的经济能力。"
+ ALF_destroy_wsg_desc: "西街暴力团一直是黑市地带一个臭名昭著的帮派势力，它受到凯撒集团的资助，尽管纪律不佳，但却装备精良，一心为了凯撒主子的利益而惹是生非。\n\n不过，它的存在对流亡者来说是一个机会。西街暴力团控制的物流中心意义巨大，占领它将极大程度地改善流亡者的经济能力。"
  ALF_destroy_wsg_tt: "§G创建§!一支用于执行该计划的§Y空中侦察§!部队"
  ALF_infiltrate_enemy: "渗透暴力团控制区"
+ ALF_infiltrate_enemy_desc: "对西街的调查显示，在当地生活的居民，早已对暴力团的蛮横行动颇有怨言，并围绕着社区形成了一些小规模的抵抗组织。\n\n特勤部门正在尝试接触这些成员，若一切顺利，流亡者应该很容易借此获得本地学生与居民的支持。"
  ALF_assault_trainning: "强化突击训练"
+ ALF_assault_trainning_desc: "西街地区曾经是繁华的商贸区域，不仅人口密集，并且还有许多具备战略意义的物流与仓储枢纽。\n\n在这些区域展开军事行动可能会相当复杂，流亡者必须对突击部队进行专门的训练，以确保她们能够胜任这一任务。"
  ALF_support_the_pilots: "邀请自由飞行员加入"
- ALF_support_the_pilots_desc: "根据我们的调查，自由天空飞行组织是一支来自红冬的志愿航空飞行队。这段时间，她们一支在与受到凯撒控制的各种土匪势力作战。我们先前已经与她们进行了短暂的接触，显而易见，邀请她们将有助于我们共同的事业。"
+ ALF_support_the_pilots_desc: "根据我们的调查，自由天空飞行组织实际上是一支来自红冬的志愿航空飞行队。这段时间，她们一支在与受到凯撒控制的各种土匪势力作战。\n\n我们先前已经与她们进行了短暂的接触，显而易见，邀请她们将有助于我们共同的事业。"
  ALF_support_the_pilots_tt: "§Y我们的事业并不孤独。§!"
  ALF_ready_for_battle: "枕戈待旦"
+ ALF_ready_for_battle_desc: "在经过详细研判之后，“领袖”和她的参谋们已经敲定了最终的攻略计划。为了确保作战计划顺利进行，流亡者们需要对作战计划的细节进行最终演练。"
  ALF_ready_for_battle_tt: "§Y阿里乌斯武装力量§!追加效果：\n堑壕速度：§G+10%§!\n堑壕上限：§G+10%§!" 
  ALF_end_wsg: "行动：空想构造"
+ ALF_end_wsg_desc: "尽管受到凯撒集团的支持，但西街暴力团依然只是一群只懂得暴力的乌合之众。因此，整个行动的核心，是迅速夺取各个关键据点，快准狠地瓦解这些暴力团伙。\n\n当然，凯撒集团肯定不会对此坐视不管：不论他们是否干涉这场冲突，流亡者都应该做好额外的准备。"
  ALF_infiltrate_kaiser: "反凯撒秘密行动"
- ALF_infiltrate_kaiser_desc: "我们从西街暴力团缴获的文件与物资表明，存在一个由凯撒集团策划，针对着流亡者——乃至整个黑市的阴谋。另外，我们还发现，“夫人”亦与凯撒集团存在某种联系。对流亡者而言，这意味着一场正在逼近，且无从避免的战争。因此，必须对这一威胁抢先做出反应。"
+ ALF_infiltrate_kaiser_desc: "我们从西街暴力团缴获的文件与物资表明，存在一个由凯撒集团策划，针对着流亡者——乃至整个黑市的阴谋。\n\n另外，我们还发现，“夫人”亦与凯撒集团存在某种联系。对流亡者而言，这意味着一场正在逼近，且无从避免的战争。因此，必须对这一威胁抢先做出反应。"
  the_enterprise_war_begins: "§Y公司战争§!：§R箭在弦上§!"
 
  ALF_new_beginning: "新的开始"
@@ -762,7 +825,7 @@
 #  alf_now_we_stands_tt: "§G我们站稳了脚跟。§!"
 
 ###站稳脚跟
- ALF.10.t: "站稳脚跟"
+ ALF.10.t: "我所见之物"
  ALF.10.desc: "领袖站在养护站的露台上，看着在营地里忙碌的流亡者们。\n\n营地里现在多了许多从四面八方聚拢来的人们，其中有些是跟着领袖一起冒险至今的老战友，有些是从其它地方投奔而来的前阿里乌斯学生，甚至也有些只是来寻求秩序与庇护的流民。虽说嘈杂不堪，但可以算得上生机勃勃。\n\n如果当时放弃了会怎么样？\n\n领袖思考着这个问题。过去经历的一切都像是梦中的泡沫，但落在身上的温暖阳光却在一次又一次地提醒着领袖，眼前的一切皆是真实。流亡者在这片土地上站稳了脚跟，并且准备再一次追逐那项伟大的事业。\n\n“——解放。”\n\n领袖不由得念出了这个词汇来。但流亡者的生活并不容易，夫人的爪牙也从未停歇，追逐这个理想注定意味着巨大的牺牲，但她还没做好把一切推上赌桌的准备。"
  ALF.10.a: "唯能奉献一切……"
 

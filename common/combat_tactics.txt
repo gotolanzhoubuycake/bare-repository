@@ -255,7 +255,7 @@ tactic_ambush = { #counters shock
 	
 	base =  { factor = 4 }
 	picture = ambush
-	countered_by = tactic_breakthrough
+	countered_by = tactic_tank_23
 	
 	attacker = -0.25
 }
@@ -1729,4 +1729,126 @@ tactic_Arius = {
 	attacker_movement_speed = 0.2	
 	attacker = 0.25
 	defender = 0.1
+}
+
+
+#####ADDED FOR DOCTRINE##
+tactic_artillery_delay = {
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = no
+		#OR = {
+		#	has_trait = trickster
+		#	has_trait = defensive_doctrine
+		#	has_trait = infantry_leader
+		#	skill > 2
+		#}
+	}
+	
+	active = no
+	
+	base =  {
+		factor = 4
+	}
+	picture = delay
+	
+	attacker_movement_speed = -0.25
+	attacker = -0.2
+	defender = 0.10
+}
+
+tactic_armor_assault = {
+
+	is_attacker = yes
+	trigger = { # combined scope for both country and combatant
+		is_attacker = yes
+		phase = no
+        hardness > 0.2
+	}
+	
+	active = no
+
+	base =  {
+		factor = 4
+	}
+	
+	picture = tactic_relentless_assault
+	countered_by = tactic_armor_backhand_blow
+	combat_width = 0.25
+	attacker_movement_speed = 0.2
+	attacker = 0.1
+}
+
+tactic_armor_breakthrough = {
+
+	is_attacker = yes
+	trigger = { # combined scope for both country and combatant
+		is_attacker = yes
+		hardness > 0.3
+		phase = no
+	}
+	
+	active = no
+
+	base =  { 
+		factor = 2
+		modifier = {
+			add = 4
+			OR = {
+				has_trait = panzer_expert
+				has_trait = combined_arms_expert
+			}
+		}
+	}
+	
+	picture = blitz
+	countered_by = tactic_armor_backhand_blow
+	combat_width = 0.5	
+	attacker_movement_speed = 0.1
+	attacker = 0.1
+}
+
+tactic_armor_backhand_blow = { #counters breakthrough
+	is_attacker = no
+	trigger = {
+		is_attacker = no
+		phase = no
+		OR = {
+			skill > 4
+			AND = {
+				has_trait = defensive_doctrine
+				skill > 2
+			}
+		}
+	}
+	
+	active = no
+	
+	base =  { factor = 4 }
+	picture = backhand_blow
+	
+	attacker_movement_speed = -0.3
+	attacker = -0.2
+	defender = 0.25
+}
+
+tactic_infantry_quick_digin = {
+
+	is_attacker = no
+	trigger = { # combined scope for both country and combatant
+		is_attacker = no
+		phase = no
+	}
+	
+	active = no
+
+	base =  {
+		factor = 4
+	}
+	
+	picture = delay
+	combat_width = -0.25
+	attacker_movement_speed = -0.1
+	attacker = -0.1
 }

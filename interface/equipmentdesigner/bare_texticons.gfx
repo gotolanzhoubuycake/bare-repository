@@ -1,0 +1,27 @@
+spriteTypes = {
+	#### unit texticons
+	spriteType = {
+		name = "GFX_unit_category_attack_heil_icon_small"
+		texturefile = "gfx/texticons/unit_air_attack_unit_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_unit_category_bm_icon_small"
+		texturefile = "gfx/texticons/unit_medium_bm_unit_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_unit_category_mech_at_icon_small"
+		texturefile = "gfx/texticons/unit_ifv_at_unit_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_unit_category_mech_icon_small"
+		texturefile = "gfx/texticons/unit_ifv_unit_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+}

@@ -232,7 +232,7 @@ guiTypes = {
 
                     positionType = {
                         name = "faction_name_position" #position y will be - half the height to keep it centered
-                        position = { x = 60 y = 15  }
+                        position = { x = 35 y = 15  }
                     }
 
                     instantTextboxType = {
@@ -242,7 +242,7 @@ guiTypes = {
                         maxWidth = 138
                         maxHeight = 40
                         fixedsize = yes
-                        format = left
+                        format = center
                         alwaystransparent = yes
                     }
                 }

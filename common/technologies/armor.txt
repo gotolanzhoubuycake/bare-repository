@@ -1856,6 +1856,46 @@ technologies = {
 		}
 	}
 
+	####
+	assault_vehicle_dummy_upgrade = {
+		research_cost = 0.5
+		folder = {
+			name = armour_folder
+			position = { x = 29 y = -3 }
+		}
+		
+		category_assist_vehicles = {
+			reliability = 0.01
+		}
+
+		on_research_complete = {
+			#custom_effect_tooltip = assault_vehicle_attack_upgrade1_tt
+		}
+		path = { 
+			leads_to_tech = assault_vehicle_attack_upgrade1
+		}
+		path = { 
+			leads_to_tech = assault_vehicle_defence_upgrade1
+		}
+		path = { 
+			leads_to_tech = assault_vehicle_engine_upgrade1
+		}
+		
+		categories = {
+			armor
+			tank
+			bm
+			armor_upgrade
+		}
+		dependencies = {
+			T1_assult_vehicle  = 1
+		}
+
+		show_effect_as_desc = yes
+
+		ai_will_do = { factor = 1 }
+	}
+
 	assault_vehicle_attack_upgrade1 = {
 		research_cost = 1.5
 		folder = {

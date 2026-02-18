@@ -38,6 +38,7 @@
  CANT_TAKE_IDEAS: "§R目前你不能指派部长或变更法案§!\n§H无法指定法案/企业/顾问：§!"
  POLITICS_IDEA_COST: "消耗（£pol_power ）：$VALUE|-0$"
  POLITICS_IDEA_COST_COMPACT: "$VALUE|0$"
+ POLITICS_IDEA_ONLY_DISABLED: "£trigger_no"
  DECISION_COST_COMPACT: "£pol_power $VALUE|0$"
  POLITICS_IDEA_NOT_AVAILABLE_ICON: "£trigger_no $VALUE$"
  POLITICS_IDEA_REMOVE_COST: "解雇消耗（£pol_power ）：$VALUE|0$"

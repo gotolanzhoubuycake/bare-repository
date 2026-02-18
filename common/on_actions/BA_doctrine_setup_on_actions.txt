@@ -1,0 +1,10 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			TRI = {
+				set_grand_doctrine = trinity_superior_firepower
+				set_sub_doctrine = SD_TSHA
+			}
+		}
+	}
+}

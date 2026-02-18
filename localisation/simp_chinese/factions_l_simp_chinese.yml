@@ -219,6 +219,12 @@
  peace_conference_rules_applicability: ""
  dismissal_rules: "谁可以被从阵营中移除？"
  change_leader_rules: "我们的领导者何时可以更换？"
+ goals_only_faction_leader: "阵营领袖决定目标"
+ FACTION_GOAL_RULE_TT: "§H阵营规则§!规定了谁可以添加§H目标§!："
+ faction_set_goal_rules: "目标设定"
+ faction_goal_rules: "阵营目标在什么情况下可以更改？"
+ faction_goal_rules_applicability: "§g激活后，只有满足以下条件方可更改或设立阵营目标：§!"
+ ALF_goals_controls_by_script_only: "仅能通过事件更换目标"
  #SEA faction goals
  ## Manifest Progress
  low_progress: "低进展"
