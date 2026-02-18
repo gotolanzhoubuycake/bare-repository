@@ -264,7 +264,7 @@ objectTypes = {
 
 	pdxmesh = {
 		name = "mirage3_mesh"
-		file = "gfx\models\units\planes\Mirage3\mirage3.mesh"
+		file = "gfx/models/units/planes/Mirage3/mirage3.mesh"
 
 		animation = { id = "idle" type = "fighter_default_idle_animation" }
 		animation = { id = "aileron_roll" type = "aileron_roll_animation" }

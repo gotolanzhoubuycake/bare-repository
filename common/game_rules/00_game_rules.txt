@@ -24,6 +24,24 @@
 ##注意了，这不是路线选择，而是剧本选择器，决定了游戏刚开局的局势
 ##注意了，category和name的token要一样，你也不想遇到奇怪的报错吧
 ##TODO：图标修改
+
+BARE_RULE_start_Great_Game = {
+	name = BARE_RULE_start_Great_Game
+	group = "BARE_RULE_GROUP_STORY_SETTINGS_GROUP"
+	icon = "GFX_wargoals"
+	default = {
+		name = BARE_RULE_start_Great_Game_DEFAULT
+		text = "BARE_RULE_start_Great_Game_DEFAULT_TEXT"
+		desc = "BARE_RULE_start_Great_Game_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = BARE_RULE_start_Great_Game_DISABLE
+		text = "BARE_RULE_start_Great_Game_DISABLE_TEXT"
+		desc = "BARE_RULE_start_Great_Game_DISABLE_DESC"
+		allow_achievements = yes
+	}
+}
 BARE_RULE_story_settings_ALF = {
 	name = BARE_RULE_story_settings_ALF
 	group = "BARE_RULE_GROUP_STORY_SETTINGS_GROUP"

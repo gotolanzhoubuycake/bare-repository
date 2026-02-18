@@ -1,0 +1,203 @@
+spriteTypes = {
+	### AIR DOCTRINES #############
+	SpriteType = {
+		name = "GFX_air_offense_medium"
+		texturefile = "gfx/interface/technologies/air_offense.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_air_skirmish_medium"
+		texturefile = "gfx/interface/technologies/air_skirmish.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_air_superiority_medium"
+		texturefile = "gfx/interface/technologies/air_superiority.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_battlefield_support_medium"
+		texturefile = "gfx/interface/technologies/battlefield_support.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_carousel_bombing_medium"
+		texturefile = "gfx/interface/technologies/carousel_bombing.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_cas_veteran_initiative_medium"
+		texturefile = "gfx/interface/technologies/cas_veteran_initiative.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_combat_unit_destruction_medium"
+		texturefile = "gfx/interface/technologies/combat_unit_destruction.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_day_bombing_medium"
+		texturefile = "gfx/interface/technologies/day_bombing.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_direct_ground_support_medium"
+		texturefile = "gfx/interface/technologies/direct_ground_support.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_dispersed_fighting_medium"
+		texturefile = "gfx/interface/technologies/dispersed_fighting.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_dive_bombing_medium"
+		texturefile = "gfx/interface/technologies/dive_bombing.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_dogfighting_experience_medium"
+		texturefile = "gfx/interface/technologies/dogfighting_experience.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_fighter_ace_initiative_medium"
+		texturefile = "gfx/interface/technologies/fighter_ace_initiative.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_fighter_baiting_medium"
+		texturefile = "gfx/interface/technologies/fighter_baiting.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_fighter_sweeps_medium"
+		texturefile = "gfx/interface/technologies/fighter_sweeps.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_fighter_veteran_initiative_medium"
+		texturefile = "gfx/interface/technologies/fighter_veteran_initiative.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_flying_fortress_medium"
+		texturefile = "gfx/interface/technologies/flying_fortress.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_force_rotation_medium"
+		texturefile = "gfx/interface/technologies/force_rotation.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_formation_fighting_medium"
+		texturefile = "gfx/interface/technologies/formation_fighting.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_formation_flying_medium"
+		texturefile = "gfx/interface/technologies/formation_flying.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_forward_interception_medium"
+		texturefile = "gfx/interface/technologies/forward_interception.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_ground_support_integration_medium"
+		texturefile = "gfx/interface/technologies/ground_support_integration.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_high_level_bombing_medium"
+		texturefile = "gfx/interface/technologies/high_level_bombing.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_home_defence_medium"
+		texturefile = "gfx/interface/technologies/home_defence.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_hunt_and_destroy_medium"
+		texturefile = "gfx/interface/technologies/hunt_and_destroy.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_infiltration_bombing_medium"
+		texturefile = "gfx/interface/technologies/infiltration_bombing.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_infrastructure_destruction_medium"
+		texturefile = "gfx/interface/technologies/infrastructure_destruction.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_keypoint_bombing_medium"
+		texturefile = "gfx/interface/technologies/keypoint_bombing.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_logistical_bombing_medium"
+		texturefile = "gfx/interface/technologies/logistical_bombing.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_low_echelon_support_medium"
+		texturefile = "gfx/interface/technologies/low_echelon_support.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_mass_destruction_medium"
+		texturefile = "gfx/interface/technologies/mass_destruction.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_massed_bomber_formations_medium"
+		texturefile = "gfx/interface/technologies/massed_bomber_formations.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_multialtitude_flying_medium"
+		texturefile = "gfx/interface/technologies/multialtitude_flying.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_night_bombing_medium"
+		texturefile = "gfx/interface/technologies/night_bombing.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_offensive_formations_medium"
+		texturefile = "gfx/interface/technologies/offensive_formations.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_operational_destruction_medium"
+		texturefile = "gfx/interface/technologies/operational_destruction.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_scout_plane_direct_tactics_medium"
+		texturefile = "gfx/interface/technologies/naval_strike_tactics.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_scout_plane_new_tactics_medium"
+		texturefile = "gfx/interface/technologies/naval_strike_torpedo_tactics.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_scout_plane_new_tactics_oi_medium"
+		texturefile = "gfx/interface/technologies/naval_strike_torpedo_tactics.dds"
+		alwaystransparent = yes
+	}
+	SpriteType = {
+		name = "GFX_strategic_destruction_medium"
+		texturefile = "gfx/interface/technologies/strategic_destruction.dds"
+		alwaystransparent = yes
+	}
+}

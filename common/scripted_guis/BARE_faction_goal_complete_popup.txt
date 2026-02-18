@@ -1,0 +1,26 @@
+scripted_gui = {
+	BARE_faction_goal_complete_popup_window = {
+		window_name = "BARE_faction_goal_complete_popup_window"
+		context_type = player_context
+		#parent_window_token = top_bar
+		dirty = faction_goal_complete_popup_dirty # Please trigger the dirty var when manually triggering the popup.
+		properties = {
+			flag_1 = {
+				image = "[ROOT.GetFlag]"
+			}
+			flag_2 = {
+				image = "[ROOT.GetFlag]"
+			}
+		}
+		visible = {
+			is_ai = no
+			has_country_flag = show_faction_goal_complete_popup_alert
+		}
+		effects = {
+			close_button_click = {
+				clr_faction_goal_complete_popup_effect = yes
+				add_to_variable = { faction_goal_complete_popup_dirty = 1 }
+			}
+		}
+	}
+}

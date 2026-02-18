@@ -499,6 +499,13 @@ Cathedral_war_ARI_defeated = {
 		GEH = {
 			dismantle_faction = yes
 		}
+		###解除圣三一和格黑娜的全面免战###
+		TRI = {
+			Great_Game_lift_total_cease_fire = yes
+		}
+		GEH = {
+			Great_Game_lift_total_cease_fire = yes
+		}
 		###移出所有因古圣堂之战而出现的动态修正并自动营救所有学生###
 		# for_each_scope_loop = { #没有动态修正了
 		# 	array = global.GST_JS_ZBH

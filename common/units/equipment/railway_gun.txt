@@ -1,7 +1,7 @@
 equipments = {
 
 	railway_gun_equipment = {
-		year = 1934
+		year = 2018
 
 		is_archetype = yes
 		picture = archetype_artillery_equipment		
@@ -25,7 +25,7 @@ equipments = {
 	}
 
 	railway_gun_equipment_1 = {
-		year = 1934
+		year = 2019
 
 		archetype = railway_gun_equipment
 		priority = 50
@@ -41,7 +41,7 @@ equipments = {
 	}
 
 	railway_gun_equipment_2 = {
-		year = 1934
+		year = 2024
 
 		archetype = railway_gun_equipment
 		parent = railway_gun_equipment_1

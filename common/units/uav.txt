@@ -1,82 +1,118 @@
 sub_units = {
-	small_uav = { #!小型无人战斗机
+###重新命名并启用了轰炸机的标签为中型和重型攻击机
+###不然学说用不了
+	small_uav = {
+		#!小型无人战斗机
 		sprite = light_plane
 		priority = 5
 		active = yes
-		type = fighter #!空军
-		need = { small_uav_airframe = 1 }
-		categories = { category_fighter }
+		type = fighter		#!空军
+		need = {
+			small_uav_airframe = 1
+		}
+		categories = {
+			category_fighter
+		}
 		land_air_wing_size = 100
 	}
-
-	small_uav_cas = { #!小型无人攻击机
+	small_uav_cas = {
+		#!小型无人攻击机
 		sprite = light_plane
-		priority =2
+		priority = 2
 		active = yes
-		type = cas #!攻击机
-		need = { small_uav_cas_airframe = 1 }
-		categories = {category_cas }
+		type = cas		#!攻击机
+		need = {
+			small_uav_cas_airframe = 1
+		}
+		categories = {
+			category_fighter
+			category_cas
+		}
 		land_air_wing_size = 100
 	}
-
-	small_uav_recon = { #!小型无人侦察机
+	small_uav_recon = {
+		#!小型无人侦察机
 		sprite = light_plane
 		priority = 1
 		active = yes
-		type = scout_plane #!侦察机
-		need = { small_uav_recon_airframe = 1 }
-		categories = { category_scout_plane }
-		land_air_wing_size =100
+		type = scout_plane		#!侦察机
+		need = {
+			small_uav_recon_airframe = 1
+		}
+		categories = {
+			category_scout_plane
+		}
+		land_air_wing_size = 100
 	}
-
-
-	medium_uav = { #!中型无人战斗机
+	medium_uav = {
+		#!中型无人战斗机
 		sprite = light_plane
 		priority = 5
 		active = yes
-		type = fighter #!空军
-		need = { medium_uav_airframe = 1 }
-		categories = { category_fighter }
+		type = fighter		#!空军
+		need = {
+			medium_uav_airframe = 1
+		}
+		categories = {
+			category_fighter
+		}
 		land_air_wing_size = 100
 	}
-
-	medium_uav_cas = { #!中型无人攻击机
+	medium_uav_cas = {
+		#!中型无人攻击机
 		sprite = light_plane
-		priority =2
+		priority = 2
 		active = yes
-		type = cas #!攻击机
-		need = { medium_uav_cas_airframe = 1 }
-		categories = {category_cas }
+		type = cas		#!攻击机
+		need = {
+			medium_uav_cas_airframe = 1
+		}
+		categories = {
+			category_cas
+			category_fighter
+			category_tac_bomber
+		}
 		land_air_wing_size = 100
 	}
-
-	heavy_uav = { #!重型无人战斗机
+	heavy_uav = {
+		#!重型无人战斗机
 		sprite = light_plane
 		priority = 5
 		active = yes
-		type = fighter #!空军
-		need = {heavy_uav_airframe = 1 }
-		categories = { category_fighter }
+		type = fighter		#!空军
+		need = {
+			heavy_uav_airframe = 1
+		}
+		categories = {
+			category_heavy_fighter
+		}
 		land_air_wing_size = 25
 	}
-
-	heavy_uav_cas = { #!重型无人攻击机
+	heavy_uav_cas = {
+		#!重型无人攻击机
 		sprite = light_plane
-		priority =2
+		priority = 2
 		active = yes
-		type = cas #!攻击机
-		need = { heavy_uav_cas_airframe = 1 }
-		categories = {category_cas }
+		type = cas		#!攻击机
+		need = {
+			heavy_uav_cas_airframe = 1
+		}
+		categories = {
+			category_cas
+			category_heavy_fighter
+			category_strat_bomber
+		}
 		land_air_wing_size = 25
 	}
-
-
-	transport_plane = { #!无人战斗机
+	transport_plane = {
+		#!无人战斗机
 		sprite = heavy_plane
 		priority = 6
 		active = yes
-		type = air_transport #!航空运输机
-		need = { transport_plane_equipment = 1 }
+		type = air_transport		#!航空运输机
+		need = {
+			transport_plane_equipment = 1
+		}
 		land_air_wing_size = 25
 	}
 }

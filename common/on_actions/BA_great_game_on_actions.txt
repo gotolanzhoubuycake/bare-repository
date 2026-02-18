@@ -1,12 +1,21 @@
 on_actions = {
 	on_startup = {
 		effect = {
-			# CEN = {
-			# 	news_event = {
-			# 		id = Great_Game.1000
-			# 		months = 18
-			# 	}
-			# }
+			CEN = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = BARE_RULE_start_Great_Game
+							option = BARE_RULE_start_Great_Game_DEFAULT
+						}
+					}
+					news_event = {
+						id = Great_Game.1000
+						months = 24
+					}
+				}
+				
+			}
 		}
 	}
 	on_monthly = {

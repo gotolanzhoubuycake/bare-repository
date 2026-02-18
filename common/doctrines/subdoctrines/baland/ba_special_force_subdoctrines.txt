@@ -1,0 +1,490 @@
+sf_subdoctrine_paratroopers = {
+	##空突强化
+	##trinity super heavy artillery
+	##TSHA
+	track = track_sf
+	name = SD_sf_subdoctrine_paratroopers_NAME
+	description = SD_sf_subdoctrine_paratroopers_DESC
+	icon = GFX_special_forces_paratroopers_medium
+	xp_cost = 100
+	xp_type = army
+	available = {
+		always = yes
+	}
+	visible = {
+		always = yes
+	}
+	ai_will_do = {
+		base = 1
+	}
+	# EFFECTS
+	enable_tactic = tactic_infantry_21
+	intel_network_gain_factor = 0.1
+	special_forces_cap_flat = 10
+	#operation_risk = -0.2
+	transport_plane = {
+		air_defence = 0.2
+	}
+	category_paratroopers = {
+		max_organisation = 5
+		default_morale = 0.05
+	}
+	effect = {
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 2
+			category = helicopter
+			name = SUBDOCTRINE_MOBILE_INFANTRY
+		}
+	}
+	recon = {
+		battalion_mult = {
+			category = category_paratroopers
+			soft_attack = 0.05
+			defense = 0.1
+		}
+		battalion_mult = {
+			category = category_paratroopers
+			soft_attack = 0.05
+			defense = 0.1
+		}
+		recon = 0.15
+	}
+	helicopter_recon = {
+		battalion_mult = {
+			category = category_paratroopers
+			soft_attack = 0.05
+			defense = 0.1
+		}
+		battalion_mult = {
+			category = category_paratroopers
+			soft_attack = 0.05
+			defense = 0.1
+		}
+		recon = 0.15
+	}
+	rewards = {
+		rapid_deploy_trainning = {
+			operation_cost = -0.1
+			operation_outcome = 0.1
+			air_assest_unit = {
+				max_organisation = 5
+				supply_consumption = -0.02
+			}
+			air_attack_unit = {
+				max_organisation = 5
+				supply_consumption = -0.02
+			}
+			category_paratroopers = {
+				reliability = 0.05
+			}
+		}
+		flying_support_center = {
+			#4
+			effect = {
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 2
+					category = helicopter
+					name = SUBDOCTRINE_MOBILE_INFANTRY
+				}
+			}
+			signal_company = {
+				battalion_mult = {
+					category = category_paratroopers
+					defense = 0.15
+				}
+			}
+			field_hospital = {
+				battalion_mult = {
+					category = category_paratroopers
+					default_morale = 0.15
+				}
+			}
+			helicopter_logistics_company = {
+				battalion_mult = {
+					category = category_paratroopers
+					max_strength = 5
+					add = yes
+				}
+			}
+		}
+		keystone_tactics = {
+			#3
+			enable_tactic = tactic_infantry_quick_digin
+			dig_in_speed_factor = 0.1
+			air_assest_unit = {
+				soft_attack = 0.2
+				hard_attack = 0.1
+				breakthrough = 0.15
+			}
+			air_attack_unit = {
+				soft_attack = 0.2
+				hard_attack = 0.1
+				breakthrough = 0.15
+			}
+		}
+		low_altitude_attack = {
+			#2
+			intel_from_combat_factor = 0.15
+			category_paratroopers = {
+				initiative = 0.02
+			}
+			air_assest_unit = {
+				max_organisation = 5
+				max_strength = 0.05
+			}
+			air_attack_unit = {
+				max_organisation = 5
+				max_strength = 0.05
+			}
+		}
+		hell_divers = {
+			#5
+			air_assest_unit = {
+				hills = {
+					attack = 0.1
+					movement = 0.05
+				}
+				jungle = {
+					attack = 0.1
+					movement = 0.05
+				}
+				urban = {
+					attack = 0.1
+					movement = 0.05
+				}
+				river = {
+					attack = 0.1
+					movement = 0.05
+				}
+			}
+			air_attack_unit = {
+				hills = {
+					attack = 0.1
+					movement = 0.05
+				}
+				jungle = {
+					attack = 0.1
+					movement = 0.05
+				}
+				urban = {
+					attack = 0.1
+					movement = 0.05
+				}
+				river = {
+					attack = 0.1
+					movement = 0.05
+				}
+			}
+		}
+	}
+}
+
+sf_subdoctrine_commandos = {
+	##SF强化
+	##trinity super heavy artillery
+	##TSHA
+	track = track_sf
+	name = SD_sf_subdoctrine_commandos_NAME
+	description = SD_sf_subdoctrine_commandos_DESC
+	icon = GFX_rangers_guerilla_doctrine_medium
+	xp_cost = 100
+	xp_type = army
+	available = {
+		always = yes
+	}
+	visible = {
+		always = yes
+	}
+	ai_will_do = {
+		base = 1
+	}
+	# EFFECTS
+	enable_tactic = tactic_infantry_21
+	category_special_forces = {
+		supply_consumption = -0.02
+		max_organisation = 5
+		soft_attack = 0.05
+	}
+	intel_network_gain_factor = 0.1
+	#operation_risk = -0.2
+	transport_plane = {
+		air_range = 0.2
+	}
+	effect = {
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 2
+			category = infantry_weapons
+			name = SUBDOCTRINE_MOBILE_INFANTRY
+		}
+	}
+	recon = {
+		battalion_mult = {
+			category = category_special_forces
+			max_strength = 0.02
+			breakthrough = 0.1
+		}
+		recon = 0.15
+	}
+	fire_support_team_su_la = {
+		battalion_mult = {
+			category = category_special_forces
+			soft_attack = 0.1
+		}
+	}
+	fire_support_team_su_ha = {
+		battalion_mult = {
+			category = category_special_forces
+			ap_attack = 0.1
+			hard_attack = 0.1
+		}
+	}
+	rewards = {
+		elite_combat_trainning = {
+			operation_outcome = 0.1
+			commando_trait_chance_factor = 0.5
+			category_special_forces = {
+				max_organisation = 5
+				default_morale = 0.05
+			}
+		}
+		operation_base_support = {
+			#4
+			acclimatization_cold_climate_gain_factor = 0.15
+			acclimatization_hot_climate_gain_factor = 0.15
+			category_special_forces = {
+				max_organisation = 5
+				default_morale = 0.05
+			}
+			effect = {
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 2
+					category = support_all
+					name = SUBDOCTRINE_IRREGULARS
+				}
+			}
+		}
+		accurate_operation_plan = {
+			#3
+			special_forces_cap = 0.25
+			#command_abilities_cost_factor = -0.2
+			signal_company = {
+				battalion_mult = {
+					category = category_special_forces
+					soft_attack = 0.1
+					defense = 0.1
+				}
+			}
+			infantry_sf = {
+				combat_width = -0.2
+			}
+		}
+		lead_the_way = {
+			#2
+			intel_from_combat_factor = 0.15
+			special_forces_no_supply_grace = 48
+			special_forces_out_of_supply_factor = -0.3
+			infantry_sf = {
+				initiative = 0.02
+				max_organisation = 5
+				max_strength = 0.05
+			}
+		}
+		supper_commandos = {
+			#5
+			special_forces_cap = 0.25
+			infantry_sf = {
+				hills = {
+					attack = 0.1
+					defence = 0.1
+					movement = 0.05
+				}
+				mountain = {
+					attack = 0.1
+					defence = 0.1
+					movement = 0.1
+				}
+				jungle = {
+					attack = 0.1
+					defence = 0.1
+					movement = 0.05
+				}
+				urban = {
+					attack = 0.1
+					defence = 0.1
+					movement = 0.05
+				}
+				river = {
+					attack = 0.1
+					defence = 0.1
+					movement = 0.05
+				}
+			}
+		}
+	}
+}
+
+##突击部队##
+sf_subdoctrine_storm_troops = {
+	##SF强化
+	##trinity super heavy artillery
+	##TSHA
+	track = track_sf
+	name = SD_sf_subdoctrine_storm_troops_NAME
+	description = SD_sf_subdoctrine_storm_troops_DESC
+	icon = GFX_paras_keystone_1_medium
+	xp_cost = 100
+	xp_type = army
+	available = {
+		always = yes
+	}
+	visible = {
+		always = yes
+	}
+	ai_will_do = {
+		base = 1
+	}
+	# EFFECTS
+	enable_tactic = tactic_infantry_21
+	category_special_forces = {
+		supply_consumption = -0.02
+		max_organisation = 5
+		soft_attack = 0.05
+	}
+	intel_network_gain_factor = 0.1
+	special_forces_cap_flat = 10
+	transport_plane = {
+		air_range = 0.2
+	}
+	effect = {
+		set_technology = {
+			bare_rangers_support_tech = 1
+		}
+	}
+	rangers_support = {
+		jungle = {
+			attack = 0.05
+			defence = 0.05
+			movement = 0.05
+		}
+		forest = {
+			attack = 0.05
+			defence = 0.05
+			movement = 0.05
+		}
+	}
+	rewards = {
+		storm_troops = {
+			##突击部队##
+			operation_outcome = 0.1
+			commando_trait_chance_factor = 0.5
+			special_forces_cap_flat = 5
+			category_all_infantry = {
+				max_organisation = 5
+				default_morale = 0.05
+			}
+		}
+		operation_fire_support = {
+			##火力基地##
+			acclimatization_cold_climate_gain_factor = 0.1
+			acclimatization_hot_climate_gain_factor = 0.1
+			fire_support_team_su_la = {
+				battalion_mult = {
+					category = category_special_forces
+					soft_attack = 0.1
+				}
+			}
+			fire_support_team_su_ha = {
+				battalion_mult = {
+					category = category_special_forces
+					ap_attack = 0.1
+					hard_attack = 0.1
+				}
+			}
+			category_special_forces = {
+				max_organisation = 5
+				default_morale = 0.05
+			}
+		}
+		recon_contact_tactic = {
+			##侦察接触
+			#command_abilities_cost_factor = -0.2
+			intel_from_combat_factor = 0.1
+			recon = {
+				battalion_mult = {
+					category = category_special_forces
+					max_strength = 0.02
+					breakthrough = 0.1
+				}
+				recon = 0.15
+			}
+			rangers_support = {
+				battalion_mult = {
+					category = category_line_artillery
+					soft_attack = 0.2
+				}
+			}
+			signal_company = {
+				battalion_mult = {
+					category = category_special_forces
+					defense = 0.1
+				}
+				battalion_mult = {
+					category = category_line_artillery
+					defense = 0.1
+				}
+			}
+			infantry_sf = {
+				combat_width = -0.2
+			}
+		}
+	    veteran_backbone = {
+			#2
+			special_forces_out_of_supply_factor = -0.5
+			special_forces_cap = 0.5
+			category_all_infantry = {
+				default_morale = 0.1
+				supply_consumption = -0.02
+			}
+			infantry_sf = {
+				initiative = 0.02
+				max_organisation = 5
+				max_strength = 0.05
+			}
+		}
+		arius_advance_trainning = {
+			#5
+			special_forces_cap_flat = 10
+			infantry_sf = {
+				hills = {
+					attack = 0.1
+					defence = 0.1
+					movement = 0.05
+				}
+				mountain = {
+					attack = 0.1
+					defence = 0.1
+					movement = 0.1
+				}
+				jungle = {
+					attack = 0.1
+					defence = 0.1
+					movement = 0.05
+				}
+				urban = {
+					attack = 0.1
+					defence = 0.1
+					movement = 0.05
+				}
+				river = {
+					attack = 0.1
+					defence = 0.1
+					movement = 0.05
+				}
+			}
+		}
+	}
+}

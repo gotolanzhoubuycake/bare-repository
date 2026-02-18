@@ -824,6 +824,178 @@ focus_tree = {
         }
 	}
 
+    #和平将至
+    focus = {
+		id = GEH_peace_at_hand
+        icon = GFX_goal_GEH_peace_at_hand
+	    relative_position_id = GEH_Imminent
+        cost = 4
+        x = 0
+        y = 1
+        prerequisite = {  focus = GEH_Imminent }
+        prerequisite = {  focus = GEH_Necessary_Patience }
+        prerequisite = {  focus = GEH_Material_preparation }
+        search_filters = { FOCUS_FILTER_POLITICAL }
+
+        bypass = {
+            # hidden_trigger = {
+            #      has_global_flag =  BA_2st_eden_pact_end
+            # }
+        }
+
+        completion_reward = {
+            add_ideas = GEH_ideas_peace_at_hand
+        }
+        ai_will_do = {
+            factor = 3
+        }
+	}
+
+    #抚镇骚乱
+    focus = {
+		id = GEH_Suppressing_riots
+        icon = GFX_goal_GEH_Suppressing_riots
+	    relative_position_id =  GEH_Restarting_talks
+        cost = 4
+        x = 0
+        y = 1
+        prerequisite = {  focus =  GEH_Restarting_talks }
+        search_filters = { FOCUS_FILTER_POLITICAL }
+
+
+        available = {
+            has_completed_focus = GEH_Internal_publicity
+        }
+
+        
+        allow_branch = {
+            has_global_flag = BA_2st_eden_pact_begin
+        }
+
+
+        bypass = {
+            hidden_trigger = {
+                 has_global_flag =  BA_2st_eden_pact_end
+            }
+        }
+
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = GEH_ideas_conference_support_2 
+                add_idea = GEH_ideas_conference_support_3 
+            }
+        }
+        ai_will_do = {
+            factor = 3
+        }
+	}
+
+    #对内宣传
+    focus = {
+		id = GEH_Internal_publicity
+        icon = GFX_goal_GEH_Internal_publicity
+	    relative_position_id = GEH_Restarting_talks
+        cost = 4
+        x = 2
+        y = 1
+        prerequisite = {  focus = GEH_Restarting_talks }
+        search_filters = { FOCUS_FILTER_POLITICAL }
+
+        
+        allow_branch = {
+            has_global_flag = BA_2st_eden_pact_begin
+        }
+
+        bypass = {
+            hidden_trigger = {
+                has_global_flag =  BA_2st_eden_pact_end
+            }
+        }
+
+        
+
+
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = GEH_ideas_conference_support_1 
+                add_idea = GEH_ideas_conference_support_2 
+            }
+        }
+        ai_will_do = {
+            factor = 3
+        }
+	}
+
+    #物质筹备
+    focus = {
+		id = GEH_Material_preparation
+        icon = GFX_goal_GEH_Material_preparation
+	    relative_position_id =  GEH_Internal_publicity
+        cost = 4
+        x = 0
+        y = 1
+        prerequisite = {  focus =  GEH_Internal_publicity }
+        search_filters = { FOCUS_FILTER_POLITICAL }
+
+        bypass = {
+            hidden_trigger = {
+                 has_global_flag =  BA_2st_eden_pact_end
+            }
+        }
+
+        available = {
+            has_completed_focus = GEH_Negotiation_with_Trinity
+        }
+
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = GEH_ideas_prepare_for_conference_2
+                add_idea =  GEH_ideas_prepare_for_conference_3
+            }
+        }
+        ai_will_do = {
+            factor = 3
+        }
+	}
+
+    #声援茶会
+    focus = {
+		id = GEH_Support_allies
+        icon = GFX_goal_GEH_Support_allies
+	    relative_position_id = GEH_Negotiation_with_Trinity
+        cost = 4
+        x = 0
+        y = 1
+        prerequisite = {  focus = GEH_Negotiation_with_Trinity }
+        search_filters = { FOCUS_FILTER_POLITICAL }
+
+        bypass = {
+            hidden_trigger = {
+                 has_global_flag =  BA_2st_eden_pact_end
+            }
+        }
+
+        completion_reward = {
+            unlock_decision_tooltip = Eden_GEH_treaty_publicity
+            TRI = {
+                country_event = GEH_dip_events.1
+            }
+            custom_effect_tooltip = if_they_accept_tt
+            effect_tooltip = {
+                GEH = {
+                    add_ideas = GEH_dip_support_to_trinity
+                }
+                TRI = {
+                    add_ideas = TRI_gehenna_dip_support
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 3
+        }
+	}
+
+    
     #打击越境不良
     focus = {
 		id = GEH_Fighting_crime
@@ -941,175 +1113,6 @@ focus_tree = {
         }
 	}
 
-    #和平将至
-    focus = {
-		id = GEH_peace_at_hand
-        icon = GFX_goal_GEH_peace_at_hand
-	    relative_position_id = GEH_Imminent
-        cost = 4
-        x = 0
-        y = 1
-        prerequisite = {  focus = GEH_Imminent }
-        prerequisite = {  focus = GEH_Necessary_Patience }
-        prerequisite = {  focus = GEH_Material_preparation }
-        search_filters = { FOCUS_FILTER_POLITICAL }
-
-        bypass = {
-            # hidden_trigger = {
-            #      has_global_flag =  BA_2st_eden_pact_end
-            # }
-        }
-
-        completion_reward = {
-            add_ideas = GEH_ideas_peace_at_hand
-        }
-        ai_will_do = {
-            factor = 3
-        }
-	}
-
-    #抚镇骚乱
-    focus = {
-		id = GEH_Suppressing_riots
-        icon = GFX_goal_GEH_Suppressing_riots
-	    relative_position_id =  GEH_Restarting_talks
-        cost = 4
-        x = 0
-        y = 1
-        prerequisite = {  focus =  GEH_Restarting_talks }
-        search_filters = { FOCUS_FILTER_POLITICAL }
-
-
-        available = {
-            has_completed_focus = GEH_Internal_publicity
-        }
-
-        
-        allow_branch = {
-            has_global_flag = BA_2st_eden_pact_begin
-        }
-
-
-        bypass = {
-            hidden_trigger = {
-                 has_global_flag =  BA_2st_eden_pact_end
-            }
-        }
-
-        completion_reward = {
-            swap_ideas = {
-                remove_idea = GEH_ideas_conference_support_2 
-                add_idea = GEH_ideas_conference_support_3 
-            }
-        }
-        ai_will_do = {
-            factor = 3
-        }
-	}
-
-    #物质筹备
-    focus = {
-		id = GEH_Material_preparation
-        icon = GFX_goal_GEH_Material_preparation
-	    relative_position_id =  GEH_Internal_publicity
-        cost = 4
-        x = 0
-        y = 1
-        prerequisite = {  focus =  GEH_Internal_publicity }
-        search_filters = { FOCUS_FILTER_POLITICAL }
-
-        bypass = {
-            hidden_trigger = {
-                 has_global_flag =  BA_2st_eden_pact_end
-            }
-        }
-
-        available = {
-            has_completed_focus = GEH_Negotiation_with_Trinity
-        }
-
-        completion_reward = {
-            swap_ideas = {
-                remove_idea = GEH_ideas_prepare_for_conference_2
-                add_idea =  GEH_ideas_prepare_for_conference_3
-            }
-        }
-        ai_will_do = {
-            factor = 3
-        }
-	}
-    #对内宣传
-    focus = {
-		id = GEH_Internal_publicity
-        icon = GFX_goal_GEH_Internal_publicity
-	    relative_position_id = GEH_Restarting_talks
-        cost = 4
-        x = 2
-        y = 1
-        prerequisite = {  focus = GEH_Restarting_talks }
-        search_filters = { FOCUS_FILTER_POLITICAL }
-
-        
-        allow_branch = {
-            has_global_flag = BA_2st_eden_pact_begin
-        }
-
-        bypass = {
-            hidden_trigger = {
-                has_global_flag =  BA_2st_eden_pact_end
-            }
-        }
-
-        
-
-
-        completion_reward = {
-            swap_ideas = {
-                remove_idea = GEH_ideas_conference_support_1 
-                add_idea = GEH_ideas_conference_support_2 
-            }
-        }
-        ai_will_do = {
-            factor = 3
-        }
-	}
-
-    #声援茶会
-    focus = {
-		id = GEH_Support_allies
-        icon = GFX_goal_GEH_Support_allies
-	    relative_position_id = GEH_Negotiation_with_Trinity
-        cost = 4
-        x = 0
-        y = 1
-        prerequisite = {  focus = GEH_Negotiation_with_Trinity }
-        search_filters = { FOCUS_FILTER_POLITICAL }
-
-        bypass = {
-            hidden_trigger = {
-                 has_global_flag =  BA_2st_eden_pact_end
-            }
-        }
-
-        completion_reward = {
-            unlock_decision_tooltip = Eden_GEH_treaty_publicity
-            TRI = {
-                country_event = GEH_dip_events.1
-            }
-            custom_effect_tooltip = if_they_accept_tt
-            effect_tooltip = {
-                GEH = {
-                    add_ideas = GEH_dip_support_to_trinity
-                }
-                TRI = {
-                    add_ideas = TRI_gehenna_dip_support
-                }
-            }
-        }
-        ai_will_do = {
-            factor = 3
-        }
-	}
     #诏令各行
     focus = {
 		id = GEH_Command_lines
@@ -1443,7 +1446,7 @@ focus_tree = {
             custom_effect_tooltip = GEH_United_front_tooltip
             add_command_power = -5
             add_equipment_to_stockpile = {
-                type = infantry_equipment
+                type = infantry_weapons
                 amount = -100
             }
             hidden_effect = {

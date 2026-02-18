@@ -9,7 +9,7 @@ on_actions = {
 						option = BARE_RULE_story_settings_ALF_SELECTED
 					}
 				}
-				random_country = {
+				A47 = {
 					BARE_RULE_story_settings_ALF_SELECTED_effect = yes
 					ALF = {
 						set_variable = {
