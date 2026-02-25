@@ -19,5 +19,8 @@ sami_2d
 prime_student_council_gfx
 trinity_culture_gfx
 gehenna_culture_gfx
-arius_culture_gfx
 abydos_culture_gfx
+
+####Arius Culture and its variations
+arius_culture_gfx
+ALF_culture_gfx
