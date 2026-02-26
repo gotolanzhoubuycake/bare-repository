@@ -269,13 +269,35 @@ CAE_economic_status: "凯撒经济状况"
 CAE_economic_status_desc: "作为一家追求利润的巨型企业，凯撒集团的经济状况将直接影响着其在战争中的战斗力。经济状况越好，凯撒集团的部队就越强大；反之，经济状况恶化将导致凯撒集团的战斗力大幅下降，并最终让他们不得不承认失败。\n\n当前效果基于经济状况偏离基准值（100）的程度：每偏离2点=1%战斗力影响。"
 MIL_boycott_CAE_products: "号召停用凯撒商品"
 
+MIL_reorganized_security_department_dynamic: "新建部门的混乱"
+MIL_reorganized_security_department_tt: "获得修正：§H新建部门的混乱§!，持续§Y180天§!，其效果为：\n战备值：§R-50.00%§!"
+steel_torrent_modifier: "钢铁洪流"
+steel_torrent_modifier_desc: "千年的钢铁力量势不可挡。"
+steel_torrent_modifier_2: "钢铁洪流"
+steel_torrent_modifier_2_desc: "千年的钢铁力量势不可挡。"
+MIL_Card_Drawing_Time_tt: "修正民族精神 §H钢铁洪流§! 追加效果：\n自动机/机甲 防御：§G+5.00%§!\n自动机/机甲 可靠性：§G+5.00%§!"
 
+steel_torrent_modifier: "钢铁洪流"
+steel_torrent_modifier_desc: "千年的钢铁力量势不可挡。"
+steel_torrent_modifier_os: "钢铁洪流"
+steel_torrent_modifier_os_desc: "千年的钢铁力量势不可挡。"
+steel_torrent_modifier_card: "钢铁洪流"
+steel_torrent_modifier_card_desc: "千年的钢铁力量势不可挡。"
+steel_torrent_modifier_os_card: "钢铁洪流"
+steel_torrent_modifier_os_card_desc: "千年的钢铁力量势不可挡。"
+steel_torrent_modifier_firepower: "钢铁洪流"
+steel_torrent_modifier_firepower_desc: "千年的钢铁力量势不可挡。"
+steel_torrent_modifier_final: "钢铁洪流"
+steel_torrent_modifier_final_desc: "千年的钢铁力量势不可挡。"
 
-
-
-
-
-
+MIL_Mechanical_Built_High_Wall_tt: "获得民族精神 §H钢铁洪流§!"
+MIL_OS_Upgrade_tt: "民族精神 §H钢铁洪流§! 追加效果：\n自动机/机甲 地形惩罚：§G-5.00%§!\n自动机/机甲 速度：§G+5.00%§!"
+MIL_Card_Drawing_Time_tt: "民族精神 §H钢铁洪流§! 追加效果：\n自动机/机甲 防御：§G+5.00%§!\n自动机/机甲 可靠性：§G+5.00%§!"
+MIL_Better_Firepower_tt: "民族精神 §H钢铁洪流§! 追加效果：\n自动机/机甲 攻击：§G+5.00%§!\n自动机/机甲 突破：§G+10.00%§!\n自动机/机甲 造价：§R+5.00%§!"
+MIL_Millennium_Iron_Wall_tt: "民族精神 §H钢铁洪流§! 追加效果：\n自动机/机甲 生产花费：§G-20.00%§!"
+steel_torrent_os_upgrade_tech: "操作系统升级"
+MIL_Secretary_Help_tt: "民族精神 §H新建部门的混乱§! 追加效果：\n战备修正：§G+15.00%§!\n持续时间：§G-60天§!"
+MIL_The_three_rules_of_Yuuka_tt: "民族精神 §H新建部门的混乱§! 追加效果：\n战备修正：§G+15.00%§!\n持续时间：§G-60天§!"
 
 #运动会相关精神
 BARE_MIL_sport_Student_Support_Modifier: "晄轮大祭-学生支持度修正"

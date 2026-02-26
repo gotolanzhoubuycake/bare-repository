@@ -1723,9 +1723,14 @@ focus_tree = {
 			# create_unit = ... # 解锁编制“千年特战生”
 			set_technology  = { individual_special_operations_mech_equipment_tech = 1 }
 			
-			# 获得民族精神“重组安保部” (整备度-50%, 持续180天)
-			# 这里我们添加动态修正，并设定一个计时器变量或使用 timed idea
-			add_dynamic_modifier = { modifier = MIL_reorganized_security_department_dynamic days = 180 }
+			custom_effect_tooltip = MIL_reorganized_security_department_tt
+	        set_variable = { MIL_reorg_combat_readiness_bonus = 0 }
+			hidden_effect = {
+				add_timed_idea = {
+					idea = MIL_reorganized_security_department
+					days = 180
+				}
+			}
 		}
 	}
 	focus = { #书记官的设想
@@ -1739,10 +1744,23 @@ focus_tree = {
 		prerequisite = {
 			focus = MIL_Integrate_C_and_C
 		}
-		#bypass = { NOT = { has_idea = 重组安保部 } }
+		available = {
+			has_idea = MIL_reorganized_security_department
+		}
+		bypass = {
+			NOT = { has_idea = MIL_reorganized_security_department }
+		}
 		completion_reward = {
 			army_experience = 50
-			#民族精神重组安保部追加效果
+			custom_effect_tooltip = MIL_Secretary_Help_tt
+			hidden_effect = {
+				add_to_variable = { MIL_reorg_combat_readiness_bonus = 0.15 }
+				modify_timed_idea = {
+					idea = MIL_reorganized_security_department
+					days = -60
+				}
+				force_update_dynamic_modifier = yes
+			}
 		}
 	}
 	focus = { #Yuuka的约法三章
@@ -1756,10 +1774,23 @@ focus_tree = {
 		prerequisite = {
 			focus = MIL_Integrate_C_and_C
 		}
-		#bypass = { NOT = { has_idea = 重组安保部 } }
+		available = {
+			has_idea = MIL_reorganized_security_department
+		}
+		bypass = {
+			NOT = { has_idea = MIL_reorganized_security_department }
+		}
 		completion_reward = {
 			army_experience = 50
-			#民族精神重组安保部追加效果
+			custom_effect_tooltip = MIL_The_three_rules_of_Yuuka_tt
+			hidden_effect = {
+				add_to_variable = { MIL_reorg_combat_readiness_bonus = 0.15 }
+				modify_timed_idea = {
+					idea = MIL_reorganized_security_department
+					days = -60
+				}
+				force_update_dynamic_modifier = yes
+			}
 		}
 	}
 	focus = { #特战生训练计划
@@ -1905,8 +1936,9 @@ focus_tree = {
 			add_to_variable = { MIL_security_department_army_defence = 0.05 }
 			add_to_variable = { MIL_security_department_planning_speed = 0.05 }
 			add_to_variable = { MIL_security_department_planning_factor = 0.05 }
-			add_ideas = steel_torrent_modifier
+			hidden_effect = {	add_ideas = steel_torrent_modifier }
 
+        	custom_effect_tooltip = MIL_Mechanical_Built_High_Wall_tt
 			effect_tooltip = {
 				swap_ideas = {
 					remove_idea = MIL_security_department_tooltip_2
@@ -1928,7 +1960,18 @@ focus_tree = {
 			focus = MIL_Mechanical_Built_High_Wall
 		}
 		completion_reward = {
-			#民族精神“钢铁洪流”追加效果
+			set_country_flag = MIL_os_upgrade_done
+			custom_effect_tooltip = MIL_OS_Upgrade_tt
+			hidden_effect = {
+				set_technology = { steel_torrent_os_upgrade_tech = 1 }
+				if = {
+					limit = { has_country_flag = MIL_card_drawing_done }
+					swap_ideas = { remove_idea = steel_torrent_modifier_card add_idea = steel_torrent_modifier_os_card }
+				}
+				else = {
+					swap_ideas = { remove_idea = steel_torrent_modifier add_idea = steel_torrent_modifier_os }
+				}
+			}
 		}
 	}
 	focus = { #抽卡时间到
@@ -1943,7 +1986,17 @@ focus_tree = {
 			focus = MIL_Mechanical_Built_High_Wall
 		}
 		completion_reward = {
-			#民族精神“钢铁洪流”追加效果
+			set_country_flag = MIL_card_drawing_done
+			custom_effect_tooltip = MIL_Card_Drawing_Time_tt
+			hidden_effect = {
+				if = {
+					limit = { has_country_flag = MIL_os_upgrade_done }
+					swap_ideas = { remove_idea = steel_torrent_modifier_os add_idea = steel_torrent_modifier_os_card }
+				}
+				else = {
+					swap_ideas = { remove_idea = steel_torrent_modifier add_idea = steel_torrent_modifier_card }
+				}
+			}
 		}
 	}
 	focus = { #自动机操作训练
@@ -1983,7 +2036,10 @@ focus_tree = {
 			focus = MIL_Card_Drawing_Time
 		}
 		completion_reward = {
-			#民族精神“钢铁洪流”追加效果
+			custom_effect_tooltip = MIL_Better_Firepower_tt
+			hidden_effect = {
+				swap_ideas = { remove_idea = steel_torrent_modifier_os_card add_idea = steel_torrent_modifier_firepower }
+			}
 		}
 	}
 	focus = { #千年的钢铁长城
@@ -2001,7 +2057,10 @@ focus_tree = {
 			focus = MIL_Automaton_Operation_Training
 		}
 		completion_reward = {
-			#民族精神“钢铁洪流”追加效果
+			custom_effect_tooltip = MIL_Millennium_Iron_Wall_tt
+			hidden_effect = {
+				swap_ideas = { remove_idea = steel_torrent_modifier_firepower add_idea = steel_torrent_modifier_final }
+			}
 		}
 	}
 	focus = { #重组安保部
