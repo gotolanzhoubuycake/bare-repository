@@ -508,7 +508,147 @@ ideas = {
 			}
 		}
 
+    
+        MIL_cyber_defense = {
+            allowed = { always = no }
+            picture = GFX_idea_MIL_cyber_defense
+            modifier = {
+                encryption = 1
+                decryption_speed = 0.10
+            }
+        }
+
+        # +信息安全大于天
+        MIL_cyber_defense_2 = {
+            allowed = { always = no }
+            picture = GFX_idea_MIL_cyber_defense
+            modifier = {
+                encryption = 1
+                decryption_speed = 0.10
+                civilian_intel_to_others = -30
+                army_intel_to_others = -30
+                navy_intel_to_others = -30
+                airforce_intel_to_others = -30
+            }
+        }
+
+        # +网络中的武器（没先点信息安全）
+        MIL_cyber_defense_3 = {
+            allowed = { always = no }
+            picture = GFX_idea_MIL_cyber_defense
+            modifier = {
+                encryption = 1
+                decryption_speed = 0.10
+                civilian_intel_factor = 0.10
+                army_intel_factor = 0.10
+                airforce_intel_factor = 0.10
+                planning_speed = 0.05
+            }
+        }
+
+        # +信息安全 +网络武器
+        MIL_cyber_defense_4 = {
+            allowed = { always = no }
+            picture = GFX_idea_MIL_cyber_defense
+            modifier = {
+                encryption = 1
+                decryption_speed = 0.10
+                civilian_intel_to_others = -40
+                army_intel_to_others = -40
+                navy_intel_to_others = -30
+                airforce_intel_to_others = -30
+                civilian_intel_factor = 0.10
+                army_intel_factor = 0.10
+                airforce_intel_factor = 0.10
+                planning_speed = 0.05
+            }
+        }
+
+        # +信息安全 +学生信息系统
+        MIL_cyber_defense_5 = {
+            allowed = { always = no }
+            picture = GFX_idea_MIL_cyber_defense
+            modifier = {
+                encryption = 1
+                decryption_speed = 0.10
+                civilian_intel_to_others = -40
+                army_intel_to_others = -40
+                navy_intel_to_others = -30
+                airforce_intel_to_others = -30
+                counter_intelligence = 1.0
+            }
+        }
+
+        # +信息安全 +学生信息系统 +网络武器
+        MIL_cyber_defense_6 = {
+            allowed = { always = no }
+            picture = GFX_idea_MIL_cyber_defense
+            modifier = {
+                encryption = 1
+                decryption_speed = 0.10
+                civilian_intel_to_others = -40
+                army_intel_to_others = -40
+                navy_intel_to_others = -30
+                airforce_intel_to_others = -30
+                civilian_intel_factor = 0.10
+                army_intel_factor = 0.10
+                airforce_intel_factor = 0.10
+                counter_intelligence = 1.0
+                planning_speed = 0.05
+            }
+        }
+
+        # 最终版（坚不可摧）
+        MIL_cyber_defense_final = {
+            allowed = { always = no }
+            picture = GFX_idea_MIL_cyber_defense
+            modifier = {
+                encryption = 1
+                decryption_speed = 0.10
+                civilian_intel_to_others = -45
+                army_intel_to_others = -45
+                navy_intel_to_others = -35
+                airforce_intel_to_others = -35
+                civilian_intel_factor = 0.10
+                army_intel_factor = 0.10
+                airforce_intel_factor = 0.10
+                counter_intelligence = 1.0
+                planning_speed = 0.10
+                air_detection = 0.10
+                air_mission_efficiency = 0.05
+            }
+        }
+
+
+
+
+        MIL_box_weapon_success_idea = {
+            allowed = { always = no }
+            picture = GFX_idea_MIL_box_weapon
+
+            modifier = {
+                civilian_intel_to_others = 0.10
+                army_intel_to_others = 0.10
+                navy_intel_to_others = 0.10
+                airforce_intel_to_others = 0.10
+            }
+        }
+
+        MIL_box_weapon_great_success_idea = {
+            allowed = { always = no }
+            picture = GFX_idea_MIL_box_weapon
+
+            modifier = {
+                civilian_intel_to_others = 0.40
+                army_intel_to_others = 0.40
+                navy_intel_to_others = 0.40
+                airforce_intel_to_others = 0.40
+            }
+        }
+
+
+
+        
     }
+
 }
-
-

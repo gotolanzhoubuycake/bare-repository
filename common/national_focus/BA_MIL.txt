@@ -1697,13 +1697,12 @@ focus_tree = {
 		y = 0
 		available = {
 			# 前置要求：财政危机已经缓解
-			# has_idea = TRI_financial_crisis_solved 
 		}
 		completion_reward = {
 			army_experience = 30
 			air_experience = 30
 			# unlocking_decisions = MIL_security_reform_decisions # 解锁决议
-			# country_event = { id = mil_reform.1 } # 触发事件“改革的方向”
+			country_event = { id = MIL_reform.1 }
 		}
 	}
 	focus = { #整合C&C
@@ -1716,13 +1715,24 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = MIL_Security_Committee_Defense_Reform_Plan }
 		available = {
-			# 研讨会选择了倾向C&C的改革方向
-			# has_country_flag = MIL_reform_direction_cc 
+			OR = {
+				has_country_flag = MIL_reform_direction_cc
+				has_completed_focus = MIL_Millennium_Steel_Wall
+			}
 		}
 		completion_reward = {
 			# create_unit = ... # 解锁编制“千年特战生”
 			set_technology  = { individual_special_operations_mech_equipment_tech = 1 }
-			
+			division_template = {
+                name = "千年特战生"
+                division_names_group = MIL_SPE_01
+                regiments = {
+                    MIL_Individual_Special_Operations_Mech = { x = 0 y = 0 }
+                    MIL_Individual_Special_Operations_Mech = { x = 0 y = 1 }
+                    MIL_Individual_Special_Operations_Mech = { x = 1 y = 0 }
+                    MIL_Individual_Special_Operations_Mech = { x = 1 y = 1 }
+                }
+            }
 			custom_effect_tooltip = MIL_reorganized_security_department_tt
 	        set_variable = { MIL_reorg_combat_readiness_bonus = 0 }
 			hidden_effect = {
@@ -1930,6 +1940,12 @@ focus_tree = {
 		y = 1
 		prerequisite = {
 			focus = MIL_Security_Committee_Defense_Reform_Plan
+		}
+		available = {
+			OR = {
+				has_country_flag = MIL_reform_direction_mech
+				has_completed_focus = MIL_Special_Forces_Hell_Training_Unique
+			}
 		}
 		completion_reward = {
 			add_to_variable = { MIL_security_department_army_attack = 0.05 }
@@ -2204,9 +2220,11 @@ focus_tree = {
 			focus = MIL_Reorganize_the_Security_Department
 		}
 		completion_reward = {
-			#获得民族精神“千年网络防线”
+			add_ideas = MIL_cyber_defense
+			custom_effect_tooltip = MIL_Invisible_Defense_Line_tt
 		}
 	}
+
 	focus = { #信息安全大于天
 		id = MIL_Information_Security
 		icon = GFX_goal_MIL_Information_Security
@@ -2219,21 +2237,20 @@ focus_tree = {
 			focus = MIL_Invisible_Defense_Line
 		}
 		completion_reward = {
-			#民族精神“千年网络防线”追加效果
+			set_country_flag = MIL_info_security_done
+			custom_effect_tooltip = MIL_Information_Security_tt
+			hidden_effect = {
+				if = {
+					limit = { has_country_flag = MIL_network_weapon_done }
+					swap_ideas = { remove_idea = MIL_cyber_defense_3 add_idea = MIL_cyber_defense_4 }
+				}
+				else = {
+					swap_ideas = { remove_idea = MIL_cyber_defense add_idea = MIL_cyber_defense_2 }
+				}
+			}
 		}
 	}
-	focus = { #千年学生信息系统
-		id = MIL_Millennium_Student_Information_System
-		icon = GFX_goal_MIL_Millennium_Student_Information_System
-		relative_position_id = MIL_Security_Committee_Defense_Reform_Plan
-		search_filters = { FOCUS_MIL }
-		cost = 3
-		x = 9
-		y = 4
-		prerequisite = {
-			focus = MIL_Information_Security
-		}
-	}
+
 	focus = { #网络中的武器
 		id = MIL_Networked_Weapons
 		icon = GFX_goal_MIL_Networked_Weapons
@@ -2245,7 +2262,47 @@ focus_tree = {
 		prerequisite = {
 			focus = MIL_Invisible_Defense_Line
 		}
+		completion_reward = {
+			set_country_flag = MIL_network_weapon_done
+			custom_effect_tooltip = MIL_Networked_Weapons_tt
+			hidden_effect = {
+				if = {
+					limit = { has_country_flag = MIL_info_security_done }
+					swap_ideas = { remove_idea = MIL_cyber_defense_2 add_idea = MIL_cyber_defense_4 }
+				}
+				else = {
+					swap_ideas = { remove_idea = MIL_cyber_defense add_idea = MIL_cyber_defense_3 }
+				}
+			}
+		}
 	}
+
+	focus = { #千年学生信息系统
+		id = MIL_Millennium_Student_Information_System
+		icon = GFX_goal_MIL_Millennium_Student_Information_System
+		relative_position_id = MIL_Security_Committee_Defense_Reform_Plan
+		search_filters = { FOCUS_MIL }
+		cost = 3
+		x = 9
+		y = 4
+		prerequisite = {
+			focus = MIL_Information_Security
+		}
+		completion_reward = {
+			set_country_flag = MIL_student_info_done
+			custom_effect_tooltip = MIL_Student_Info_tt
+			hidden_effect = {
+				if = {
+					limit = { has_country_flag = MIL_network_weapon_done }
+					swap_ideas = { remove_idea = MIL_cyber_defense_4 add_idea = MIL_cyber_defense_6 }
+				}
+				else = {
+					swap_ideas = { remove_idea = MIL_cyber_defense_2 add_idea = MIL_cyber_defense_5 }
+				}
+			}
+		}
+	}
+
 	focus = { #可以不用但是不能没有
 		id = MIL_Networked_Weapons_Necessary
 		icon = GFX_goal_MIL_Networked_Weapons_Necessary
@@ -2258,9 +2315,11 @@ focus_tree = {
 			focus = MIL_Networked_Weapons
 		}
 		completion_reward = {
-			#解锁间谍行动“盒武器，启动！”
+			custom_effect_tooltip = MIL_Networked_Weapons_Necessary_tt
+			# 解锁间谍行动"盒武器，启动！" 后续单独处理
 		}
 	}
+
 	focus = { #坚不可摧的防线
 		id = MIL_Impenetrable_Defense_Line
 		icon = GFX_goal_MIL_Impenetrable_Defense_Line
@@ -2276,9 +2335,13 @@ focus_tree = {
 			focus = MIL_Millennium_Student_Information_System
 		}
 		completion_reward = {
-			#民族精神“千年网络防线”追加效果
+			custom_effect_tooltip = MIL_Impenetrable_Defense_Line_tt
+			hidden_effect = {
+				swap_ideas = { remove_idea = MIL_cyber_defense_6 add_idea = MIL_cyber_defense_final }
+			}
 		}
 	}
+
 	focus = { #千年安定的守护者
 		id = MIL_Millennium_Stability_Guardian
 		icon = GFX_goal_MIL_Millennium_Stability_Guardian

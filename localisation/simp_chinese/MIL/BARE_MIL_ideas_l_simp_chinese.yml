@@ -301,3 +301,43 @@ MIL_The_three_rules_of_Yuuka_tt: "民族精神 §H新建部门的混乱§! 追�
 
 #运动会相关精神
 BARE_MIL_sport_Student_Support_Modifier: "晄轮大祭-学生支持度修正"
+
+MIL_reform_1_t: "改革的方向"
+MIL_reform_1_desc: "研讨会需要决定安保部防卫改革的优先方向。是优先整合C&C建立精锐特战部队，还是优先发展自动机技术建立机械化部队？"
+MIL_reform_1_a: "优先整合C&C"
+MIL_reform_1_b: "优先发展自动机"
+MIL_reform_direction_cc_tt: "研讨会将优先整合C&C，建立精锐特战部队。"
+MIL_reform_direction_mech_tt: "研讨会将优先发展自动机技术，建立机械化部队。"
+
+
+
+MIL_cyber_defense: "千年网络防线"
+MIL_cyber_defense_desc: "千年的网络防御体系保护着学院的信息安全。"
+MIL_cyber_defense_2: "千年网络防线"
+MIL_cyber_defense_2_desc: "千年的网络防御体系保护着学院的信息安全。"
+MIL_cyber_defense_3: "千年网络防线"
+MIL_cyber_defense_3_desc: "千年的网络防御体系保护着学院的信息安全。"
+MIL_cyber_defense_4: "千年网络防线"
+MIL_cyber_defense_4_desc: "千年的网络防御体系保护着学院的信息安全。"
+MIL_cyber_defense_5: "千年网络防线"
+MIL_cyber_defense_5_desc: "千年的网络防御体系保护着学院的信息安全。"
+MIL_cyber_defense_6: "千年网络防线"
+MIL_cyber_defense_6_desc: "千年的网络防御体系保护着学院的信息安全。"
+MIL_cyber_defense_final: "千年网络防线"
+MIL_cyber_defense_final_desc: "千年的网络防御体系保护着学院的信息安全。"
+MIL_Invisible_Defense_Line_tt: "获得民族精神 §H千年网络防线§!，其效果为：\n加密等级：§G+1§!\n破译速率：§G+10%§!"
+MIL_Information_Security_tt: "民族精神 §H千年网络防线§! 追加效果：\n对千年全部情报获取：§G-30.00%§!"
+MIL_Networked_Weapons_tt: "民族精神 §H千年网络防线§! 追加效果：\n民政情报获取：§G+10.00%§!\n陆军情报获取：§G+10.00%§!\n空军情报获取：§G+10.00%§!\n计划速度：§G+5.00%§!"
+MIL_Student_Info_tt: "民族精神 §H千年网络防线§! 追加效果：\n对千年民政情报获取：§G-10.00%§!\n对千年军事情报获取：§G-10.00%§!\n反间谍：§G+1.0§!"
+MIL_Networked_Weapons_Necessary_tt: "解锁间谍行动 §H盒武器，启动！§!"
+MIL_Impenetrable_Defense_Line_tt: "民族精神 §H千年网络防线§! 追加效果：\n对千年全部情报获取：§G-5.00%§!\n计划速度：§G+5.00%§!\n对空探测：§G+10.00%§!\n空军任务效率：§G+5.00%§!"
+
+
+MIL_operation_box_weapon: "盒武器，启动！"
+MIL_operation_box_weapon_desc: "利用真理部的黑客技术对目标国家发动网络攻击，获取其情报信息。"
+MIL_box_weapon_success_targeted: "网络渗透"
+MIL_box_weapon_great_success_targeted: "严重网络渗透"
+MIL_Information_Security_tt: "民族精神 §H千年网络防线§! 追加效果：\n泄露给他国的全部情报：§G-30.00%§!"
+MIL_Student_Info_tt: "民族精神 §H千年网络防线§! 追加效果：\n泄露给他国的民政情报：§G-10.00%§!\n泄露给他国的军事情报：§G-10.00%§!\n反间谍：§G+1.0§!"
+MIL_Impenetrable_Defense_Line_tt: "民族精神 §H千年网络防线§! 追加效果：\n泄露给他国的全部情报：§G-5.00%§!\n计划速度：§G+5.00%§!\n对空探测：§G+10.00%§!\n空军任务效率：§G+5.00%§!"
+MIL_box_weapon_phase_1: "发动网络攻击"
