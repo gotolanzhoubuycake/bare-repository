@@ -1,0 +1,207 @@
+BARE_MIL_Sport_Init_effect = {
+	set_global_flag = BARE_MIL_Sport_prepare_flag
+
+	set_variable = {
+		BARE_MIL_sport_Month_Time_Var = 10 #剩余月数
+	}
+	set_variable = {
+		BARE_MIL_sport_Fee_All_Var = 40 #本月最大经费
+	}
+	set_variable = { #本月已有经费
+		BARE_MIL_sport_Fee_Have_Var = BARE_MIL_sport_Fee_All_Var
+	}
+	set_variable = { #额外经费
+		BARE_MIL_sport_Fee_Extra_Var = 0
+	}
+
+	set_variable = { #每月消耗
+		BARE_MIL_sport_Fee_Month_Cost_Var = 0
+	}
+	set_variable = { #当前安保等级
+		BARE_MIL_sport_Security_Have_Var = 1
+	}
+
+	set_variable = { #最大安保等级
+		BARE_MIL_sport_Security_Max_Var = 5
+	}
+
+	set_variable = { #当前科技等级
+		BARE_MIL_sport_Tech_Have_Var = 2
+	}
+
+	set_variable = { #最大科技等级
+		BARE_MIL_sport_Tech_Max_Var = 5
+	}
+
+	set_variable = { #学生支持度
+		BARE_MIL_sport_Student_Support_Var = 50
+	}
+
+	set_variable = { #准备综合评分
+		BARE_MIL_sport_Score_Var = 0
+	}
+
+	set_variable = { #场地准备程度
+		BARE_MIL_sport_Building_Score_Var = 1
+	}
+}
+
+
+BARE_MIL_Sport_Student_Support_Var_Chance_effect = {
+	
+
+
+	set_temp_variable = {
+		BARE_MIL_sport_Student_Support_Var_Chance_Temp_Var = BARE_MIL_sport_Student_Support_Var
+	}
+	set_temp_variable = {
+		BARE_MIL_sport_Student_Support_Var_Chance_Level_Temp_Var = 0
+	}
+	if = {
+		limit = {
+			check_variable = {
+				BARE_MIL_sport_Student_Support_Var_Chance_Temp_Var > 90
+			}
+		}
+		set_temp_variable = {
+			BARE_MIL_sport_Student_Support_Var_Chance_Level_Temp_Var = 5
+		}
+	}else_if = {
+		limit = {
+			check_variable = {
+				BARE_MIL_sport_Student_Support_Var_Chance_Temp_Var > 80
+			}
+		}
+		set_temp_variable = {
+			BARE_MIL_sport_Student_Support_Var_Chance_Level_Temp_Var = 4
+		}
+	}else_if = {
+		limit = {
+			check_variable = {
+				BARE_MIL_sport_Student_Support_Var_Chance_Temp_Var > 70
+			}
+		}
+		set_temp_variable = {
+			BARE_MIL_sport_Student_Support_Var_Chance_Level_Temp_Var = 3
+		}
+	}else_if = {
+		limit = {
+			check_variable = {
+				BARE_MIL_sport_Student_Support_Var_Chance_Temp_Var > 60
+			}
+		}
+		set_temp_variable = {
+			BARE_MIL_sport_Student_Support_Var_Chance_Level_Temp_Var = 2
+		}
+	}else_if = {
+		limit = {
+			check_variable = {
+				BARE_MIL_sport_Student_Support_Var_Chance_Temp_Var > 50
+			}
+		}
+		set_temp_variable = {
+			BARE_MIL_sport_Student_Support_Var_Chance_Level_Temp_Var = 1
+		}
+	}else_if = {
+		limit = {
+			check_variable = {
+				BARE_MIL_sport_Student_Support_Var_Chance_Temp_Var < 10
+			}
+		}
+		set_temp_variable = {
+			BARE_MIL_sport_Student_Support_Var_Chance_Level_Temp_Var = -5
+		}
+	}else_if = {
+		limit = {
+			check_variable = {
+				BARE_MIL_sport_Student_Support_Var_Chance_Temp_Var < 20
+			}
+		}
+		set_temp_variable = {
+			BARE_MIL_sport_Student_Support_Var_Chance_Level_Temp_Var = -4
+		}
+	}else_if = {
+		limit = {
+			check_variable = {
+				BARE_MIL_sport_Student_Support_Var_Chance_Temp_Var < 30
+			}
+		}
+		set_temp_variable = {
+			BARE_MIL_sport_Student_Support_Var_Chance_Level_Temp_Var = -3
+		}
+	}else_if = {
+		limit = {
+			check_variable = {
+				BARE_MIL_sport_Student_Support_Var_Chance_Temp_Var < 40
+			}
+		}
+		set_temp_variable = {
+			BARE_MIL_sport_Student_Support_Var_Chance_Level_Temp_Var = -2
+		}
+	}else_if = {
+		limit = {
+			check_variable = {
+				BARE_MIL_sport_Student_Support_Var_Chance_Temp_Var < 49
+			}
+		}
+		set_temp_variable = {
+			BARE_MIL_sport_Student_Support_Var_Chance_Level_Temp_Var = -1
+		}
+	}
+
+
+
+	set_variable = {
+		BARE_MIL_sport_Student_Support_Modifier_stability_factor_var = 0.02
+	}
+	multiply_variable = {
+		BARE_MIL_sport_Student_Support_Modifier_stability_factor_var = BARE_MIL_sport_Student_Support_Var_Chance_Level_Temp_Var
+	}
+
+	set_variable = {
+		BARE_MIL_sport_Student_Support_Modifier_research_speed_factor_var = 0.02
+	}
+	multiply_variable = {
+		BARE_MIL_sport_Student_Support_Modifier_research_speed_factor_var = BARE_MIL_sport_Student_Support_Var_Chance_Level_Temp_Var
+	}
+
+	set_variable = {
+		BARE_MIL_sport_Student_Support_Modifier_production_speed_buildings_factor_var = 0.03
+	}
+	multiply_variable = {
+		BARE_MIL_sport_Student_Support_Modifier_production_speed_buildings_factor_var = BARE_MIL_sport_Student_Support_Var_Chance_Level_Temp_Var
+	}
+
+	set_variable = {
+		BARE_MIL_sport_Student_Support_Modifier_industrial_capacity_factory_var = 0.01
+	}
+	multiply_variable = {
+		BARE_MIL_sport_Student_Support_Modifier_industrial_capacity_factory_var = BARE_MIL_sport_Student_Support_Var_Chance_Level_Temp_Var
+	}
+
+	force_update_dynamic_modifier = yes
+
+}
+
+BARE_MIL_Sport_Tech_Var_Chance_effect = {
+	set_variable = {
+		BARE_MIL_sport_Tech_Modifier_stability_factor_var = 0.01
+	}
+	multiply_variable = {
+		BARE_MIL_sport_Tech_Modifier_stability_factor_var = BARE_MIL_sport_Tech_Have_Var
+	}
+
+	set_variable = {
+		BARE_MIL_sport_Tech_Modifier_research_speed_factor_var = 0.01
+	}
+	multiply_variable = {
+		BARE_MIL_sport_Tech_Modifier_research_speed_factor_var = BARE_MIL_sport_Tech_Have_Var
+	}
+
+	set_variable = {
+		BARE_MIL_sport_Tech_Modifier_production_speed_buildings_factor_var = 0.01
+	}
+	multiply_variable = {
+		BARE_MIL_sport_Tech_Modifier_production_speed_buildings_factor_var = BARE_MIL_sport_Tech_Have_Var
+	}
+}

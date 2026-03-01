@@ -136,7 +136,7 @@ add_ideas = {
 	millaws_battlefield_mission
 	MIL_place_of_pursuing_truth  
 	MIL_overly_advanced_aircraft  
-	MIL_shadow_of_financial_crisis
+	# MIL_shadow_of_financial_crisis
 }
 
 337 = {

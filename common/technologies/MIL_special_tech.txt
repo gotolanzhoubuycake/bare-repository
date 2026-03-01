@@ -14,5 +14,44 @@ technologies = {
             always = no
         }
     }        
-    
+    steel_torrent_os_upgrade_tech = {
+        enable_equipments = { }
+        
+        category_bm = {
+            forest = {
+                attack = 0.05
+                movement = 0.05
+            }
+            hills = {
+                attack = 0.05
+            }
+            mountain = {
+                attack = 0.05
+            }
+            jungle = {
+                attack = 0.05
+                movement = 0.05
+            }
+            marsh = {
+                attack = 0.05
+                movement = 0.05
+            }
+            urban = {
+                attack = 0.05
+                defence = 0.05
+            }
+            river = {
+                attack = 0.05
+                movement = 0.05
+            }
+            amphibious = {
+                attack = 0.05
+            }
+        }
+
+        path = { }
+        on_research_complete = { }
+        allow = { always = no }
+        allow_branch = { always = no }
+    }
 }

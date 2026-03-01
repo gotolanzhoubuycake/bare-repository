@@ -1,4 +1,6 @@
 add_namespace = MIL_event
+add_namespace = MIL_sport_event
+add_namespace = MIL_reform
 country_event = {
     id = MIL_event.1
     title = MIL_event.1.t
@@ -284,5 +286,53 @@ country_event = {
                 type = annex_everything
             }
         }
+    }
+}
+
+
+
+country_event = {
+    id = MIL_sport_event.1
+    title = MIL_sport_event.1.t
+    desc = MIL_sport_event.1.d
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+
+
+    option = {
+		name = MIL_sport_event.1.a
+		BARE_MIL_Sport_Init_effect = yes
+
+		ai_chance = {
+			base = 1
+		}
+    }
+
+}
+
+
+country_event = {
+    id = MIL_reform.1
+    title = MIL_reform_1_t
+    desc = MIL_reform_1_desc
+
+    is_triggered_only = yes
+    fire_only_once = yes
+
+    option = {
+        name = MIL_reform_1_a
+        set_country_flag = MIL_reform_direction_cc
+        custom_effect_tooltip = MIL_reform_direction_cc_tt
+        ai_chance = { base = 1 }
+    }
+
+    option = {
+        name = MIL_reform_1_b
+        set_country_flag = MIL_reform_direction_mech
+        custom_effect_tooltip = MIL_reform_direction_mech_tt
+        ai_chance = { base = 1 }
     }
 }

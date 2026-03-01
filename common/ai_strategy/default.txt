@@ -184,22 +184,10 @@ bba_air_prod_1 = {
 
 	ai_strategy = {
 		type = equipment_production_factor
-		id = medium_uav_airframe
-		value = 5
-	}
-
-	ai_strategy = {
-		type = unit_ratio
-		id = medium_uav_airframe
-		value = 5
-	}
-
-	ai_strategy = {
-		type = equipment_production_factor
 		id = cas
 		value = 10
 	}
-
+	
 	ai_strategy = {
 		type = equipment_production_min_factories
 		id = cas
@@ -207,15 +195,39 @@ bba_air_prod_1 = {
 	}
 
 	ai_strategy = {
+		type = unit_ratio
+		id = tactical_bomber
+		value = 5
+	}
+
+	ai_strategy = {
 		type = equipment_production_factor
-		id = heavy_uav_airframe
-		value = 1
+		id = tactical_bomber
+		value = 5
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = tactical_bomber
+		value = 0
 	}
 
 	ai_strategy = {
 		type = unit_ratio
-		id =  heavy_uav_airframe
+		id =  heavy_fighter
 		value = 1
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = heavy_fighter
+		value = 1
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = heavy_fighter
+		value = 0
 	}
 }
 

@@ -1,0 +1,545 @@
+############################################
+#######   #######   #     #   #######   ######    #####    #######
+#         #         ##    #   #         #     #     #      #       
+#  ####   #         # #   #   #         ######      #      #       
+#     #   #######   #  #  #   #######   #   #       #      #       
+#     #   #         #   # #   #         #    #      #      #       
+#     #   #         #    ##   #         #     #     #      #       
+#######   #######   #     #   #######   #      #  #####    #######
+##老机动
+generic_tradition_mobile_warfare = {
+	folder = baland
+	name = GD_generic_tradition_mobile_warfare_NAME
+    description = GD_generic_tradition_mobile_warfare_DESC
+    icon = GFX_doctrine_mobile_warfare_medium
+    available = {
+        always = yes
+    }
+
+    xp_cost = 100
+    xp_type = army
+
+    ai_will_do = {
+        base = 1
+
+        modifier = {
+            factor = 0
+            is_major = no
+        }
+    }
+
+    tracks = {
+        armor
+        operations
+    }
+
+    # EFFECTS
+	planning_speed = 0.20
+	army_speed_factor = 0.10
+	enable_tactic = tactic_armor_assault
+	
+
+    milestones = {
+        {
+            #Armor
+	        additional_brigade_column_size = 1
+            enable_tactic = tactic_armor_breakthrough
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = armor_milestone_var
+                        }
+                    }
+                    set_variable = { armor_milestone_var = 1 }
+                }
+                else = {
+                    add_to_variable = { armor_milestone_var = 1 }
+                }
+            }
+        }
+        {
+            #Operations
+	        planning_speed = 0.2
+            enable_tactic = tactic_armor_backhand_blow
+
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = operations_milestone_var
+                        }
+                    }
+                    set_variable = { operations_milestone_var = 1 }
+                }
+                else = {
+                    add_to_variable = { operations_milestone_var = 1 }
+                }
+            }
+        }
+    }
+}
+
+##老优火
+generic_tradition_superior_firepower = {
+	folder = baland
+	name = GD_generic_tradition_superior_firepower_NAME
+	description = GD_generic_tradition_superior_firepower_DESC
+	icon = GFX_doctrine_superior_firepower_medium
+	available = {
+		always = yes
+	}
+	xp_cost = 100
+	xp_type = army
+	ai_will_do = {
+		base = 1
+		modifier = {
+			factor = 0
+			is_major = no
+		}
+	}
+	tracks = {
+		combat_support
+		operations
+	}
+	# EFFECTS
+	enable_tactic = tactic_artillery_11
+	#enable_subunits = {
+	#	royal_artillery_support_company_units
+	#}
+	category_line_artillery = {
+		soft_attack = 0.1
+	}
+	category_support_artillery = {
+		soft_attack = 0.05
+	}
+	milestones = {
+		{
+			#Artillery/Support
+			additional_brigade_column_size = 1
+			category_support_battalions = {
+				max_organisation = 10
+			}
+			planning_decay_rate_factor = -0.1
+			enable_tactic = tactic_artillery_21
+			effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_variable = support_milestone_var
+						}
+					}
+					set_variable = {
+						support_milestone_var = 1
+					}
+				}
+				else = {
+					add_to_variable = {
+						support_milestone_var = 1
+					}
+				}
+			}
+		}
+		{
+			#Operations
+			enable_tactic = tactic_tactical_withdrawal
+			category_army = {
+				default_morale = 0.4
+			}
+			planning_decay_rate_factor = -0.1
+			effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_variable = operations_milestone_var
+						}
+					}
+					set_variable = {
+						operations_milestone_var = 1
+					}
+				}
+				else = {
+					add_to_variable = {
+						operations_milestone_var = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+##老人海##
+generic_tradition_mass_assault = {
+    folder = baland
+
+    name = GD_generic_tradition_mass_assault_NAME
+    description = GD_generic_tradition_mass_assault_DESC
+    icon = GFX_doctrine_mass_assault_medium
+    available = {
+        always = yes
+    }
+
+    xp_cost = 100
+    xp_type = army
+
+    ai_will_do = {
+        base = 1
+    }
+
+    tracks = {
+        infantry
+        operations
+    }
+
+    # EFFECTS
+    no_supply_grace = 48
+    out_of_supply_factor = -0.10
+    enable_tactic = tactic_infantry_13
+    
+
+    milestones = {
+        {
+            #Infantry
+            enable_tactic = tactic_infantry_21
+            additional_brigade_column_size = 1
+
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = infantry_milestone_var
+                        }
+                    }
+                    set_variable = { infantry_milestone_var = 1 }
+                }
+                else = {
+                    add_to_variable = { infantry_milestone_var = 1 }
+                }
+            }
+        }
+        {
+            #Operations
+            enable_tactic = tactic_infantry_23
+            weekly_casualties_war_support = 0.001
+            minimum_training_level = -0.05
+            dig_in_speed_factor = 0.05
+
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = operations_milestone_var
+                        }
+                    }
+                    set_variable = { operations_milestone_var = 1 }
+                }
+                else = {
+                    add_to_variable = { operations_milestone_var = 1 }
+                }
+            }
+        }
+    }
+}
+
+##特种部队
+generic_tradition_special_force = {
+    folder = baland
+
+    name = GD_generic_tradition_special_force_NAME
+    description = GD_generic_tradition_special_force_DESC
+    icon = GFX_tech_special_forces_medium
+    available = {
+        always = yes
+    }
+
+    xp_cost = 100
+    xp_type = army
+
+    ai_will_do = {
+        base = 1
+    }
+
+    tracks = {
+        track_sf
+        operations
+    }
+
+    # EFFECTS
+    no_supply_grace = 24
+    out_of_supply_factor = -0.1
+	#operation_infiltrate_cost = -0.2
+
+	##
+	crypto_strength = 1
+	decryption_power = 1
+	intel_from_operatives_factor = 0.1
+
+    enable_tactic = tactic_infantry_11
+    
+
+    milestones = {
+        {
+            #track_sf
+            enable_tactic = tactic_infantry_22
+            additional_brigade_column_size = 1
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = infantry_milestone_var
+                        }
+                    }
+                    set_variable = { infantry_milestone_var = 1 }
+                }
+                else = {
+                    add_to_variable = { infantry_milestone_var = 1 }
+                }
+            }
+        }
+        {
+            #Operations
+            enable_tactic = tactic_infantry_33
+            weekly_casualties_war_support = 0.001
+            minimum_training_level = -0.05
+            dig_in_speed_factor = 0.05
+
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = operations_milestone_var
+                        }
+                    }
+                    set_variable = { operations_milestone_var = 1 }
+                }
+                else = {
+                    add_to_variable = { operations_milestone_var = 1 }
+                }
+            }
+        }
+    }
+}
+
+#############################################
+trinity_superior_firepower = {
+	folder = baland
+	name = GD_TRINITY_SUPERIOR_FIREPOWER_NAME
+	description = GD_TRINITY_SUPERIOR_FIREPOWER_DESC
+	icon = GFX_doctrine_superior_firepower_medium
+	available = {
+		original_tag = TRI
+	}
+	visible = {
+		original_tag = TRI
+	}
+	xp_cost = 100
+	xp_type = army
+	ai_will_do = {
+		base = 1
+		modifier = {
+			factor = 0
+			is_major = no
+		}
+	}
+	tracks = {
+		infantry
+		combat_support
+		operations
+	}
+	# EFFECTS
+	enable_tactic = tactic_Trinity
+	#enable_subunits = {
+	#	royal_artillery_support_company_units
+	#}
+	category_line_artillery = {
+		soft_attack = 0.1
+	}
+	category_support_artillery = {
+		soft_attack = 0.05
+	}
+	milestones = {
+		{
+			#Infantry
+			enable_tactic = tactic_artillery_delay
+			supply_consumption_factor = -0.1
+			effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_variable = infantry_milestone_var
+						}
+					}
+					set_variable = {
+						infantry_milestone_var = 1
+					}
+				}
+				else = {
+					add_to_variable = {
+						infantry_milestone_var = 1
+					}
+				}
+			}
+		}
+		{
+			#Artillery/Support
+			additional_brigade_column_size = 1
+			category_support_battalions = {
+				max_organisation = 10
+			}
+			planning_decay_rate_factor = -0.1
+			enable_tactic = tactic_artillery_22
+			effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_variable = support_milestone_var
+						}
+					}
+					set_variable = {
+						support_milestone_var = 1
+					}
+				}
+				else = {
+					add_to_variable = {
+						support_milestone_var = 1
+					}
+				}
+			}
+		}
+		{
+			#Operations
+			enable_tactic = tactic_tactical_withdrawal
+			category_army = {
+				default_morale = 0.4
+			}
+			planning_decay_rate_factor = -0.1
+			effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_variable = operations_milestone_var
+						}
+					}
+					set_variable = {
+						operations_milestone_var = 1
+					}
+				}
+				else = {
+					add_to_variable = {
+						operations_milestone_var = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+#############################################
+liberation_front_grand_doctrines = {
+	folder = baland
+	name = GD_liberation_front_grand_doctrines_NAME
+	description = GD_liberation_front_grand_doctrines_DESC
+	icon = GFX_mountaineers_combat_3_medium
+	available = {
+		original_tag = ALF
+	}
+	visible = {
+		original_tag = ALF
+	}
+	xp_cost = 100
+	xp_type = army
+	ai_will_do = {
+		base = 1
+		modifier = {
+			factor = 0
+			is_major = no
+		}
+	}
+	tracks = {
+		track_sf
+		combat_support
+		operations
+	}
+	# EFFECTS
+	enable_tactic = tactic_infantry_11
+	#enable_subunits = {
+	#	royal_artillery_support_company_units
+	#}
+	category_line_artillery = {
+		soft_attack = 0.1
+	}
+	category_support_artillery = {
+		soft_attack = 0.05
+	}
+	milestones = {
+		{
+            #track_sf
+            enable_tactic = tactic_infantry_22
+            additional_brigade_column_size = 1
+            effect = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = infantry_milestone_var
+                        }
+                    }
+                    set_variable = { infantry_milestone_var = 1 }
+                }
+                else = {
+                    add_to_variable = { infantry_milestone_var = 1 }
+                }
+            }
+        }
+		{
+			#Artillery/Support
+			additional_brigade_column_size = 1
+			category_support_battalions = {
+				max_organisation = 10
+			}
+			planning_decay_rate_factor = -0.1
+			enable_tactic = tactic_artillery_22
+			effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_variable = support_milestone_var
+						}
+					}
+					set_variable = {
+						support_milestone_var = 1
+					}
+				}
+				else = {
+					add_to_variable = {
+						support_milestone_var = 1
+					}
+				}
+			}
+		}
+		{
+			#Operations
+			enable_tactic = tactic_tactical_withdrawal
+			category_army = {
+				default_morale = 0.4
+			}
+			planning_decay_rate_factor = -0.1
+			effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_variable = operations_milestone_var
+						}
+					}
+					set_variable = {
+						operations_milestone_var = 1
+					}
+				}
+				else = {
+					add_to_variable = {
+						operations_milestone_var = 1
+					}
+				}
+			}
+		}
+	}
+}

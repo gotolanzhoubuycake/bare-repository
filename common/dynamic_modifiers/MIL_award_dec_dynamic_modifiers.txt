@@ -33,13 +33,13 @@ The_millennium_special_forces_modifier = {
 
 # 承平日久的安保部
 MIL_security_department_of_long_peace = {
-    icon = "MIL_security_department_of_long_peace"
+    icon = "GFX_idea_MIL_security_department_of_long_peace"
     
     army_attack_factor = MIL_security_department_army_attack
     army_defence_factor = MIL_security_department_army_defence
     army_org_factor = MIL_security_department_army_org
     planning_speed = MIL_security_department_planning_speed
-    planning_factor = MIL_security_department_planning_factor
+    max_planning_factor = MIL_security_department_planning_factor
     land_doctrine_cost_factor = MIL_security_department_land_doctrine_cost
     air_doctrine_cost_factor = MIL_security_department_air_doctrine_cost
     army_chief_cost_factor = MIL_security_department_army_chief_cost
@@ -48,18 +48,7 @@ MIL_security_department_of_long_peace = {
 }
 
 
-# 钢铁洪流
-MIL_steel_torrent = {
-    icon = GFX_idea_MIL_steel_torrent
-    enable = { always = yes }
-    
-    # Automaton/Mech modifiers
-    army_armor_speed_factor = MIL_var_steel_torrent_speed
-    army_armor_defence_factor = MIL_var_steel_torrent_defense
-    army_armor_breakthrough_factor = MIL_var_steel_torrent_breakthrough
-    army_armor_attack_factor = MIL_var_steel_torrent_attack
-    # Cost/Reliability handled via static idea or tech bonus
-}
+
 
 # 千年天空的守护者
 MIL_guardian_of_millennium_sky = {
@@ -82,4 +71,51 @@ MIL_soaring_eagle = {
     air_mission_efficiency = 0.05
     air_agility_factor = 0.05
     # Production cost handled via static idea
+}
+
+
+BARE_MIL_sport_Student_Support_Modifier = {
+    icon = GFX_idea_BARE_MIL_sport_Student_Support_Modifier 
+    enable = { always = yes }
+
+
+    stability_factor =  BARE_MIL_sport_Student_Support_Modifier_stability_factor_var
+    research_speed_factor =  BARE_MIL_sport_Student_Support_Modifier_research_speed_factor_var
+    production_speed_buildings_factor =  BARE_MIL_sport_Student_Support_Modifier_production_speed_buildings_factor_var
+    industrial_capacity_factory =  BARE_MIL_sport_Student_Support_Modifier_industrial_capacity_factory_var
+    
+}
+
+
+
+BARE_MIL_sport_Tech_Modifier = {
+    icon = GFX_idea_BARE_MIL_sport_Tech_Modifier 
+    enable = { always = yes }
+
+
+    stability_factor =  BARE_MIL_sport_Tech_Modifier_stability_factor_var
+    research_speed_factor =  BARE_MIL_sport_Tech_Modifier_research_speed_factor_var
+    production_speed_buildings_factor =  BARE_MIL_sport_Tech_Modifier_production_speed_buildings_factor_var
+    
+}
+
+
+MIL_reorganized_security_department_dynamic = {
+    icon = GFX_idea_MIL_reorganized_security_department
+    enable = { always = yes }
+    remove_trigger = {
+        NOT = { has_variable = MIL_reorg_conscription_penalty }
+    }
+
+    conscription = MIL_reorg_conscription_penalty
+}
+MIL_reorg_bonus_dynamic = {
+    enable = {
+        has_idea = MIL_reorganized_security_department
+    }
+    remove_trigger = {
+        NOT = { has_idea = MIL_reorganized_security_department }
+    }
+
+    combat_readiness_factor = MIL_reorg_combat_readiness_bonus
 }

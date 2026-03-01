@@ -212,7 +212,7 @@ ideas = {
             modifier = {
                 political_power_factor = 0.2
                 line_change_production_efficiency_factor = 0.2
-                encryption = 1
+                crypto_strength = 1
             }
         }
         ##修订宪章

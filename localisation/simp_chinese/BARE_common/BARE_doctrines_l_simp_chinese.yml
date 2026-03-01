@@ -1,0 +1,63 @@
+﻿l_simp_chinese:
+
+ GD_generic_tradition_mobile_warfare_NAME: "机动战略"
+ GD_generic_tradition_mobile_warfare_DESC: "速度是战略进攻中最重要的一环。机动战略强调利用坦克与机械化兵力快速突破敌人防御薄弱的地带，攻击敌人的补给中心。\n\n机动战略重视对于装甲力量的具体运用，在作战中，采取机动战略的部队通常会集中使用装甲力量及各种机械化单位，直接对敌人缺乏筑垒的区域进行突破，夺取防线的战略要点，使敌人顾此失彼。\n\n§O「装甲，前进！」§!\n\n§Y子学说槽位：§!\n装甲：§G+1§!\n作战：§G+1§!"
+
+ GD_generic_tradition_superior_firepower_NAME: "火力战略"
+ GD_generic_tradition_superior_firepower_DESC: "子弹廉价，在战场上，火力往往决定胜负。火力战略强调利用强大的火力支援来削弱敌军的战斗力，从而为步兵和装甲部队创造有利的进攻条件。\n\n这种战略思维注重炮兵和支援武器的有效运用。通过大规模火力覆盖和精确的火力支援，掌握着更多火炮的一方可以在战斗开始前，就削弱敌人进攻或防守的力量。\n\n§O「这是一个数学问题。」§!\n\n§Y子学说槽位：§!\n炮兵与战斗支援槽位：§G+1§!\n作战：§G+1§!"
+
+ GD_generic_tradition_mass_assault_NAME: "人海战略"
+ GD_generic_tradition_mass_assault_DESC: "士兵才是部署在战场上最不可忽略的基石。人海战略依赖大量的步兵部队消耗敌人的战斗力，并最终压制敌军。\n\n这种战略强调快速动员和部署大量步兵部队，以压倒性的数量优势来占据战场主动权。随着技术进步，以及单兵装备的加强，这种传统的战略设想也同样获得了新的诠释空间。\n\n§O「重剑无锋。」§!\n\n§Y子学说槽位：§!\n步兵：§G+1§!\n作战：§G+1§!"
+
+ GD_generic_tradition_special_force_NAME: "非对称战略"
+ GD_generic_tradition_special_force_DESC: "并非所有战争都在战场上的硝烟中进行。非对称战略要求战略规划师使用小规模但精锐的特种部队完成任务，取得战略上的优势。\n\n毫无疑问，这是一种技术致胜论支持下的思想。特种部队的行动需要无人机、精准火炮以及长程导弹的支持，也需要精确信息、网络战技术，以及当地情报网络的支撑，通过多维度的倾力协同达成目标。\n\n§O「精准如外科手术。」§!\n\n§Y子学说槽位：§!\n特种部队：§G+1§!\n作战：§G+1§!"
+
+ GD_TRINITY_SUPERIOR_FIREPOWER_NAME: "圣三一军事传统"
+ GD_TRINITY_SUPERIOR_FIREPOWER_DESC: "圣三一的武装力量以其长久的军事传统著称，其地面部队以各种火炮为核心，依赖压倒性火力直接摧毁当面之敌。\n\n现在，圣三一亦在积极探索新的作战模式。将各式自行火炮与信息化前观系统整合进作战系统，被视作圣三一的现代化军事蓝图的重要构想。\n\n§O「精准、专业，优雅。」§!\n\n§Y子学说槽位：§!\n步兵：§G+1§!\n炮兵与战斗支援：§G+1§!\n作战：§G+1§!\n\n§Y次要学说§!：\n现代化炮兵：§G可用§!"
+
+ GD_liberation_front_grand_doctrines_NAME: "阿里乌斯武装力量"
+ GD_liberation_front_grand_doctrines_DESC: "流亡者的军事结构继承自内战中的阿里乌斯学园。尽管在内战中遭受重大损失，但大量的精锐人员与资料仍得以保留至今。\n\n流亡者以内战时锻炼出来的大量精锐步兵为骨干，通过各种火炮的支持执行各种奇袭作战。着眼于对现代技术的引进与追赶，流亡者计划创造一支精锐，并且具备一定规模的现代化武装力量。\n\n§O「永不言败……」§!\n\n§Y子学说槽位：§!\n特种部队：§G+1§!\n炮兵与战斗支援：§G+1§!\n作战：§G+1§!\n\n§Y次要学说§!：\n特种突袭团：§G可用§!"
+#####轨道####
+ DOCTRINE_TRACK_SF: "特种部队"
+
+#####子学说#####
+ SUBDOCTRINE_SIEGE_ARTILLERY_BADESC: "攻坚火力学说是一种极为独特的方案，是炮兵主义的极致表现。通过向战场部署各类重炮，任何所谓的“坚固工事”与“筑垒地带”都将如纸屋一样被轰为齑粉。\n\n需要指出的是，这并非一种灵活的战术。作为打击核心的列车炮只能沿铁路进行机动，这也就意味着，任何对铁路线的威胁都将成为头等大事。对一场需要动用如此重炮的浩大远征而言，如何保卫漫长的补给线将成为主要话题。\n\n§R「忏悔将是汝等能做的最后之事。」§!"
+
+ SD_trinity_super_heavy_artillery_NAME: "现代化炮兵"
+ SD_trinity_super_heavy_artillery_DESC: "现代化炮兵战术是一种以自行火炮和数字化系统为中心的炮兵运用学说，通过将先进的火控系统与高机动性的自行火炮相结合，炮兵及其它支援火力能够在战场上迅速部署并实施精准打击。\n\n这种战术强调信息化作战和快速反应能力，使得炮兵部队能够在动态变化的战场环境中保持优势。除此之外，现代化炮兵战术还极为重视电子信息领域的攻防作战。炮兵可以利用电子战等方式伪装自己的位置和意图，从而获得出其不意的打击效果。\n\n§R「发现、决策、摧毁。」§!"
+ SD_TSHA_artillery_command_network: "信息化炮兵指挥网络"
+ SD_TSHA_position_camouflage_tactics: "先进伪装阵地"
+ SD_TSHA_precision_strike: "精确射击"
+ SD_TSHA_modern_artillery_deployment: "战略机动"
+ SD_TSHA_massive_destruction: "同时着弹炮击"
+
+ SD_sf_subdoctrine_paratroopers_NAME: "空中突击"
+ SD_sf_subdoctrine_paratroopers_DESC: "空中突击战术是以乘坐直升机的精锐步兵，以及各种旋翼攻击飞行器为核心，实施突进作战的战术。利用直升飞机快速机动的优势，空中突击部队可以快速抢占包括补给中心在内的战略要点，或直接攻击敌后重要设施。\n\n尽管速度惊人，并且被视作特种作战的基石，但空中突击部队经常需要攻击各种在战线后方的关键要地。因此，这种战术需要各种航空支援力量的紧密配合才能成功。\n\n§R「舍我其谁！」§!"
+ sf_subdoctrine_paratroopers_rapid_deploy_trainning: "紧急部署训练"
+ sf_subdoctrine_paratroopers_flying_support_center: "快速支援网络"
+ sf_subdoctrine_paratroopers_keystone_tactics: "夺取并坚守"
+ sf_subdoctrine_paratroopers_low_altitude_attack: "低空突防战术"
+ sf_subdoctrine_paratroopers_hell_divers: "跃向地狱"
+
+ SD_sf_subdoctrine_commandos_NAME: "特战致胜"
+ SD_sf_subdoctrine_commandos_DESC: "特种作战是一种近年来才在基沃托斯受到关注的作战方式。不同于传统的非对称战斗，特种战术要求专门训练一支进行特殊作战的突击部队，来直接完成影响战略胜负的任务。\n\n需要明确的是，特种作战并不单纯意味着派出一队精锐来进行作战。在具体的战术规划中，它依赖对任务流程的先期规划，需要准确情报的支持，各军种的配合，以及对任务目标和任务现场的反复模拟。任何意料之外的情况都有可能导致作战的失利。\n\n§R「勇者必胜。」§!"
+ sf_subdoctrine_commandos_elite_combat_trainning: "特种作战训练"
+ sf_subdoctrine_commandos_operation_base_support: "行动基地支持"
+ sf_subdoctrine_commandos_accurate_operation_plan: "目标场所模拟"
+ sf_subdoctrine_commandos_lead_the_way: "英勇前锋"
+ sf_subdoctrine_commandos_supper_commandos: "全领域突击部队"
+
+ SD_sf_subdoctrine_storm_troops_NAME: "特种突袭团"
+ SD_sf_subdoctrine_storm_troops_DESC: "特种突袭团是一种被分散到各个部队，承担关键任务的兵种，她们不仅担任突破的矛头，还扮演着轴承的角色。其成员选拔自各个军种的精锐，可以执行任何类型的战场任务。\n\n作为需要参与正面战场的单位，突袭团的总规模往往比普通的特种部队大得多。因此，只有那些拥有大量骨干与老兵的部队才能成立这样的军种。某种程度上，这表明相关部队已经受过战火的锤炼。而在基沃托斯，拥有这样条件的学园绝不多见。\n\n§R「百炼成钢。」§!"
+ sf_subdoctrine_storm_troops_storm_troops: "风暴突击队"
+ sf_subdoctrine_storm_troops_operation_fire_support: "火力支援基地"
+ sf_subdoctrine_storm_troops_recon_contact_tactic: "冷接触战术"
+ sf_subdoctrine_storm_troops_veteran_backbone: "老兵骨干"
+ sf_subdoctrine_storm_troops_arius_advance_trainning: "阿里乌斯式特训"
+
+#######战术#####
+tactic_artillery_delay: "弹幕迟滞"
+tactic_armor_assault: "直接突破"
+tactic_armor_breakthrough: "集中突破"
+tactic_armor_backhand_blow: "机动预备队"
+tactic_infantry_quick_digin: "速凝工事"

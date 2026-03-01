@@ -1,3 +1,12 @@
 MIL_cae_war_decision_category = {
 
 }
+
+MIL_Sport_decision_test_category = {
+	MIL_Sport_Start_decision = {
+		complete_effect = {
+			country_event = MIL_sport_event.1
+		}
+	}
+
+}

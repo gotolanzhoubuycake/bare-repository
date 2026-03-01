@@ -359,8 +359,296 @@ ideas = {
 
 
 
+        # 基础版（机械筑起的高墙）
+        steel_torrent_modifier = {
+            allowed = { always = no }
+            picture = GFX_idea_steel_torrent
+            modifier = { }
+        }
 
+        # 只完成操作系统升级
+        steel_torrent_modifier_os = {
+            allowed = { always = no }
+            picture = GFX_idea_steel_torrent
+            equipment_bonus = {
+                MIL_Individual_Special_Operations_Mech_equipment = {
+                    maximum_speed = 0.05
+                    instant = yes
+                }
+                light_bm_chassis = { maximum_speed = 0.05 instant = yes }
+                medium_bm_chassis = { maximum_speed = 0.05 instant = yes }
+                heavy_bm_chassis = { maximum_speed = 0.05 instant = yes }
+                light_bm_destroyer_chassis = { maximum_speed = 0.05 instant = yes }
+                medium_bm_destroyer_chassis = { maximum_speed = 0.05 instant = yes }
+                heavy_bm_destroyer_chassis = { maximum_speed = 0.05 instant = yes }
+                light_bm_artillery_chassis = { maximum_speed = 0.05 instant = yes }
+                medium_bm_artillery_chassis = { maximum_speed = 0.05 instant = yes }
+                heavy_bm_artillery_chassis = { maximum_speed = 0.05 instant = yes }
+                light_bm_aa_chassis = { maximum_speed = 0.05 instant = yes }
+                medium_bm_aa_chassis = { maximum_speed = 0.05 instant = yes }
+                heavy_bm_aa_chassis = { maximum_speed = 0.05 instant = yes }
+            }
+        }
+
+        # 只完成抽卡时间到
+        steel_torrent_modifier_card = {
+            allowed = { always = no }
+            picture = GFX_idea_steel_torrent
+            equipment_bonus = {
+                MIL_Individual_Special_Operations_Mech_equipment = {
+                    defense = 0.05
+                    reliability = 0.05
+                    instant = yes
+                }
+                light_bm_chassis = { defense = 0.05 reliability = 0.05 instant = yes }
+                medium_bm_chassis = { defense = 0.05 reliability = 0.05 instant = yes }
+                heavy_bm_chassis = { defense = 0.05 reliability = 0.05 instant = yes }
+                light_bm_destroyer_chassis = { defense = 0.05 reliability = 0.05 instant = yes }
+                medium_bm_destroyer_chassis = { defense = 0.05 reliability = 0.05 instant = yes }
+                heavy_bm_destroyer_chassis = { defense = 0.05 reliability = 0.05 instant = yes }
+                light_bm_artillery_chassis = { defense = 0.05 reliability = 0.05 instant = yes }
+                medium_bm_artillery_chassis = { defense = 0.05 reliability = 0.05 instant = yes }
+                heavy_bm_artillery_chassis = { defense = 0.05 reliability = 0.05 instant = yes }
+                light_bm_aa_chassis = { defense = 0.05 reliability = 0.05 instant = yes }
+                medium_bm_aa_chassis = { defense = 0.05 reliability = 0.05 instant = yes }
+                heavy_bm_aa_chassis = { defense = 0.05 reliability = 0.05 instant = yes }
+            }
+        }
+
+        # 两个都完成
+        steel_torrent_modifier_os_card = {
+            allowed = { always = no }
+            picture = GFX_idea_steel_torrent
+            equipment_bonus = {
+                MIL_Individual_Special_Operations_Mech_equipment = {
+                    maximum_speed = 0.05
+                    defense = 0.05
+                    reliability = 0.05
+                    instant = yes
+                }
+                light_bm_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 instant = yes }
+                medium_bm_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 instant = yes }
+                heavy_bm_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 instant = yes }
+                light_bm_destroyer_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 instant = yes }
+                medium_bm_destroyer_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 instant = yes }
+                heavy_bm_destroyer_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 instant = yes }
+                light_bm_artillery_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 instant = yes }
+                medium_bm_artillery_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 instant = yes }
+                heavy_bm_artillery_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 instant = yes }
+                light_bm_aa_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 instant = yes }
+                medium_bm_aa_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 instant = yes }
+                heavy_bm_aa_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 instant = yes }
+            }
+        }
+
+        # 更强火力（在os_card基础上追加）
+        steel_torrent_modifier_firepower = {
+            allowed = { always = no }
+            picture = GFX_idea_steel_torrent
+            equipment_bonus = {
+                MIL_Individual_Special_Operations_Mech_equipment = {
+                    maximum_speed = 0.05
+                    defense = 0.05
+                    reliability = 0.05
+                    soft_attack = 0.05
+                    breakthrough = 0.10
+                    build_cost_ic = 0.05
+                    instant = yes
+                }
+                light_bm_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = 0.05 instant = yes }
+                medium_bm_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = 0.05 instant = yes }
+                heavy_bm_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = 0.05 instant = yes }
+                light_bm_destroyer_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = 0.05 instant = yes }
+                medium_bm_destroyer_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = 0.05 instant = yes }
+                heavy_bm_destroyer_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = 0.05 instant = yes }
+                light_bm_artillery_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = 0.05 instant = yes }
+                medium_bm_artillery_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = 0.05 instant = yes }
+                heavy_bm_artillery_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = 0.05 instant = yes }
+                light_bm_aa_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = 0.05 instant = yes }
+                medium_bm_aa_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = 0.05 instant = yes }
+                heavy_bm_aa_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = 0.05 instant = yes }
+            }
+        }
+
+        # 千年的钢铁长城（最终版）
+        steel_torrent_modifier_final = {
+            allowed = { always = no }
+            picture = GFX_idea_steel_torrent
+            equipment_bonus = {
+                MIL_Individual_Special_Operations_Mech_equipment = {
+                    maximum_speed = 0.05
+                    defense = 0.05
+                    reliability = 0.05
+                    soft_attack = 0.05
+                    breakthrough = 0.10
+                    build_cost_ic = -0.15
+                    instant = yes
+                }
+                light_bm_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = -0.15 instant = yes }
+                medium_bm_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = -0.15 instant = yes }
+                heavy_bm_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = -0.15 instant = yes }
+                light_bm_destroyer_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = -0.15 instant = yes }
+                medium_bm_destroyer_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = -0.15 instant = yes }
+                heavy_bm_destroyer_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = -0.15 instant = yes }
+                light_bm_artillery_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = -0.15 instant = yes }
+                medium_bm_artillery_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = -0.15 instant = yes }
+                heavy_bm_artillery_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = -0.15 instant = yes }
+                light_bm_aa_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = -0.15 instant = yes }
+                medium_bm_aa_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = -0.15 instant = yes }
+                heavy_bm_aa_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = -0.15 instant = yes }
+            }
+        }
+
+		MIL_reorganized_security_department = {
+			allowed = { always = no }
+			picture = GFX_idea_MIL_reorganized_security_department
+
+			modifier = {
+				combat_readiness_factor = -0.50
+			}
+		}
+
+    
+        MIL_cyber_defense = {
+            allowed = { always = no }
+            picture = GFX_idea_MIL_cyber_defense
+            modifier = {
+                encryption = 1
+                decryption_speed = 0.10
+            }
+        }
+
+        # +信息安全大于天
+        MIL_cyber_defense_2 = {
+            allowed = { always = no }
+            picture = GFX_idea_MIL_cyber_defense
+            modifier = {
+                encryption = 1
+                decryption_speed = 0.10
+                civilian_intel_to_others = -30
+                army_intel_to_others = -30
+                navy_intel_to_others = -30
+                airforce_intel_to_others = -30
+            }
+        }
+
+        # +网络中的武器（没先点信息安全）
+        MIL_cyber_defense_3 = {
+            allowed = { always = no }
+            picture = GFX_idea_MIL_cyber_defense
+            modifier = {
+                encryption = 1
+                decryption_speed = 0.10
+                civilian_intel_factor = 0.10
+                army_intel_factor = 0.10
+                airforce_intel_factor = 0.10
+                planning_speed = 0.05
+            }
+        }
+
+        # +信息安全 +网络武器
+        MIL_cyber_defense_4 = {
+            allowed = { always = no }
+            picture = GFX_idea_MIL_cyber_defense
+            modifier = {
+                encryption = 1
+                decryption_speed = 0.10
+                civilian_intel_to_others = -40
+                army_intel_to_others = -40
+                navy_intel_to_others = -30
+                airforce_intel_to_others = -30
+                civilian_intel_factor = 0.10
+                army_intel_factor = 0.10
+                airforce_intel_factor = 0.10
+                planning_speed = 0.05
+            }
+        }
+
+        # +信息安全 +学生信息系统
+        MIL_cyber_defense_5 = {
+            allowed = { always = no }
+            picture = GFX_idea_MIL_cyber_defense
+            modifier = {
+                encryption = 1
+                decryption_speed = 0.10
+                civilian_intel_to_others = -40
+                army_intel_to_others = -40
+                navy_intel_to_others = -30
+                airforce_intel_to_others = -30
+                counter_intelligence = 1.0
+            }
+        }
+
+        # +信息安全 +学生信息系统 +网络武器
+        MIL_cyber_defense_6 = {
+            allowed = { always = no }
+            picture = GFX_idea_MIL_cyber_defense
+            modifier = {
+                encryption = 1
+                decryption_speed = 0.10
+                civilian_intel_to_others = -40
+                army_intel_to_others = -40
+                navy_intel_to_others = -30
+                airforce_intel_to_others = -30
+                civilian_intel_factor = 0.10
+                army_intel_factor = 0.10
+                airforce_intel_factor = 0.10
+                counter_intelligence = 1.0
+                planning_speed = 0.05
+            }
+        }
+
+        # 最终版（坚不可摧）
+        MIL_cyber_defense_final = {
+            allowed = { always = no }
+            picture = GFX_idea_MIL_cyber_defense
+            modifier = {
+                encryption = 1
+                decryption_speed = 0.10
+                civilian_intel_to_others = -45
+                army_intel_to_others = -45
+                navy_intel_to_others = -35
+                airforce_intel_to_others = -35
+                civilian_intel_factor = 0.10
+                army_intel_factor = 0.10
+                airforce_intel_factor = 0.10
+                counter_intelligence = 1.0
+                planning_speed = 0.10
+                air_detection = 0.10
+                air_mission_efficiency = 0.05
+            }
+        }
+
+
+
+
+        MIL_box_weapon_success_idea = {
+            allowed = { always = no }
+            picture = GFX_idea_MIL_box_weapon
+
+            modifier = {
+                civilian_intel_to_others = 0.10
+                army_intel_to_others = 0.10
+                navy_intel_to_others = 0.10
+                airforce_intel_to_others = 0.10
+            }
+        }
+
+        MIL_box_weapon_great_success_idea = {
+            allowed = { always = no }
+            picture = GFX_idea_MIL_box_weapon
+
+            modifier = {
+                civilian_intel_to_others = 0.40
+                army_intel_to_others = 0.40
+                navy_intel_to_others = 0.40
+                airforce_intel_to_others = 0.40
+            }
+        }
+
+
+
+        
     }
+
 }
-
-

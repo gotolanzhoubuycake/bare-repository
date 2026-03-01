@@ -19,6 +19,7 @@ sub_units = {
 			category_light_infantry
 			category_all_infantry
 			category_assist_heil
+			category_paratroopers
 			category_army
 		}
 		
@@ -96,6 +97,7 @@ sub_units = {
 		categories = {
 			category_army
 			category_attack_heil
+			category_paratroopers
 		}
 		
 		combat_width = 3

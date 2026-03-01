@@ -1,0 +1,13 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_faction_goal_rules"
+        texturefile = "gfx/interface/factions/rule_icons/rule_groups/faction_goal_rules.dds"
+    }
+
+
+    ##ALF Special##
+    spriteType = {
+        name = "GFX_ALF_goals_controls_by_script_only"
+        texturefile = "gfx/interface/ideas/idea_gre_aete.dds"
+    }
+}

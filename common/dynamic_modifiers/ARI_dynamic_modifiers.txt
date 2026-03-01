@@ -136,7 +136,7 @@ ARI_nihilism = {
 	ARI_materials_monthly_modifier = ARI_nihilism_ARI_materials_monthly_modifier
 	non_puppet_opnion = -1000
 
-	custom_effect_tooltip = ARI_nihilism_cant_market_tooltip
+	custom_modifier_tooltip = ARI_nihilism_cant_market_tooltip
 }
 #复仇之焰
 ARI_flame_of_revenge = {
@@ -286,7 +286,7 @@ Eden_treaty_War_blood_march = {
 	army_defence_factor = Eden_treaty_War_blood_march_army_defence_factor
 
 		
-	custom_effect_tooltip = Eden_treaty_War_blood_march_tt
+	custom_modifier_tooltip = Eden_treaty_War_blood_march_tt
 	remove_trigger = { 
 		or = {
 			has_completed_focus = ARI_the_final_step
