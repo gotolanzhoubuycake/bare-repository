@@ -497,6 +497,22 @@ Great_Game_invade_failed = {
 	custom_effect_tooltip = Great_Game_invade_failed_tt
 	Great_Game_get_coins = yes
 	hidden_effect = {
+		#盟友退战
+		every_other_country = {
+			limit = {
+				has_war_together_with = ROOT
+				Great_Game_is_involved = yes
+			}
+			every_enemy_country = {
+				limit = { Great_Game_is_involved = yes }
+				white_peace = PREV
+			}
+		}
+		clear_array = Great_Game_temp_allies
+		every_enemy_country = {
+			limit = { Great_Game_is_involved = yes }
+			white_peace = ROOT
+		}
 		var:Great_Game_invade_target_overlord = {
 			#增加连胜
 			add_to_variable = { Great_Game_consecutive_wins = 1 }
@@ -538,22 +554,7 @@ Great_Game_invade_failed = {
 		set_variable = { Great_Game_record_faction^Great_Game_record_count = 1 }
 		set_variable = { Great_Game_record_date^Great_Game_record_count = global.date }
 		Great_Game_add_record = yes
-		#盟友退战
-		every_other_country = {
-			limit = {
-				has_war_together_with = ROOT
-				Great_Game_is_involved = yes
-			}
-			every_enemy_country = {
-				limit = { Great_Game_is_involved = yes }
-				white_peace = PREV
-			}
-		}
-		clear_array = Great_Game_temp_allies
-		every_enemy_country = {
-			limit = { Great_Game_is_involved = yes }
-			white_peace = ROOT
-		}
+
 		clr_country_flag = involved_in_Great_Game_as_attacker
 		clr_country_flag = involved_in_Great_Game_as_ally_leader
 		clear_variable = Great_Game_invader

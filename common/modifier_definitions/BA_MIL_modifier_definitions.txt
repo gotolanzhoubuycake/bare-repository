@@ -1,0 +1,6 @@
+MIL_sport_student_support_monthly = {
+	color_type = good
+	value_type = number
+	precision = 1
+	category = country
+}

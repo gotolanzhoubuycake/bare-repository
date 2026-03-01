@@ -75,7 +75,6 @@ MIL_soaring_eagle = {
 
 
 BARE_MIL_sport_Student_Support_Modifier = {
-    icon = GFX_idea_BARE_MIL_sport_Student_Support_Modifier 
     enable = { always = yes }
 
 
@@ -89,13 +88,23 @@ BARE_MIL_sport_Student_Support_Modifier = {
 
 
 BARE_MIL_sport_Tech_Modifier = {
-    icon = GFX_idea_BARE_MIL_sport_Tech_Modifier 
     enable = { always = yes }
 
 
     stability_factor =  BARE_MIL_sport_Tech_Modifier_stability_factor_var
     research_speed_factor =  BARE_MIL_sport_Tech_Modifier_research_speed_factor_var
     production_speed_buildings_factor =  BARE_MIL_sport_Tech_Modifier_production_speed_buildings_factor_var
+    MIL_sport_student_support_monthly =  BARE_MIL_sport_Tech_Modifier_MIL_sport_student_support_monthly_var
+}
+
+
+BARE_MIL_sport_Prepare_Modifier = {
+    icon = GFX_idea_BARE_MIL_sport_Prepare_Modifier 
+    enable = { always = yes }
+
+    MIL_sport_student_support_monthly = -3
+    stability_factor =  BARE_MIL_sport_Prepare_Modifier_stability_factor_var
+    consumer_goods_factor = BARE_MIL_sport_Prepare_Modifier_consumer_goods_factor
     
 }
 

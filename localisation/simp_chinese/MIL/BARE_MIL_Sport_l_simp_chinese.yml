@@ -1,19 +1,32 @@
 ﻿l_simp_chinese:
-BARE_MIL_sport_GUI_Detail_Text: "§b“晄轮大祭”是基沃托斯最为重要的活动之一，而这一届的”晄轮大祭“将由千年科技学园举办，这不仅是我们千年科技学园风采的大好机会，更是扫清财政危机的阴霾的机会。\n\n但是”晄轮大祭“的准备工作将会消耗我们的大量资源，同时其准备工作的效果将会直接决定运动会的举办结果。而财政危机的余波尚未消散，我们的资源必须精打细算，同时在千年内部，有一部分学生学生因为不擅长运动而反对举办”晄轮大祭“，他们可能会采取破坏性的行动来表达意见。\n\n合理分配资源，开源节流，同时保证安保工作，将会是成功举办”晄轮大祭“的关键。千年科技学园将尽可能为其提供支持。§!"
+BARE_MIL_sport_GUI_Detail_Text: "§b“晄轮大祭”是基沃托斯最为重要的活动之一，而这一届的”晄轮大祭“将由千年科技学园举办，这不仅是我们千年科技学园风采的大好机会，更是扫清财政危机的阴霾的机会。\n\n但是”晄轮大祭“的准备工作将会消耗我们的大量资源，同时其准备工作的效果将会直接决定运动会的举办结果。而财政危机的余波尚未消散，我们的资源必须精打细算，同时在千年内部，有一部分学生学生因为不擅长运动而反对举办”晄轮大祭“，他们可能会采取破坏性的行动来表达意见。\n\n合理分配资源，开源节流，同时保证安保工作，将会是成功举办”晄轮大祭“的关键。学园将尽可能为其提供支持。§!"
 
 BARE_MIL_sport_GUI_Time_Text: "距离“晄轮大祭”举办剩余[?BARE_MIL_sport_Month_Time_Var]个自然月"
 BARE_MIL_sport_GUI_Top_Text: "“晄轮大祭”筹办工作数据统计"
-BARE_MIL_sport_GUI_Bottom_Text: "千年信息管理系统“有理数”"
+BARE_MIL_sport_GUI_Bottom_Text: "千年信息管理系统“虚数”"
 BARE_MIL_sport_GUI_Info_Text_1_1: "每月经费:"
+BARE_MIL_sport_GUI_Info_Text_1_1_tooltip: "为了办好这次活动，千年准备了大量预算来筹办此次活动，每个月我们都能获得经费来进行各项行动，同时收回上个月没有使用的经费。当然，如果资源的消耗超出预期，我们也可以选择和优香软磨硬泡来获取额外的每月预算，但这会加重学园的财政负担，并且如果将资源过度投入到活动中，这势必会挤占平时科研的资源，进而降低学生对大运动会的支持率。\n§R注意，你每月只能调整一次每月经费§!"
 BARE_MIL_sport_GUI_Info_Text_1_2: "[?BARE_MIL_sport_Fee_Have_Var]/[?BARE_MIL_sport_Fee_All_Var]"
 BARE_MIL_sport_GUI_Info_Text_1_3: "额外获得:[?BARE_MIL_sport_Fee_Extra_Var]/每月消耗:[?BARE_MIL_sport_Fee_Month_Cost_Var]"
 
 BARE_MIL_sport_GUI_Info_Text_2_1: "安保等级:"
+BARE_MIL_sport_GUI_Info_Text_2_1_tooltip: "对于这种大型活动，必须有适当的安保措施，特别是学园里可能随机生成暴走咖啡机，混水摸鱼的不良学生，试图激烈发表观点的选手等奇怪的东西时。提升安保等级，将有助于减少破坏事件发生的几率以及导致的后果。\n然而，安保措施是要花钱的，而且是很多很多钱。让活动没有东西值得被破坏的显然不是安保措施的初衷，如果缺乏资源，贸然提升安保等级并不是明智之举。\n§R注意，你每月只能调整一次安保等级§!"
 BARE_MIL_sport_GUI_Info_Text_2_2: "[?BARE_MIL_sport_Security_Have_Var]/[?BARE_MIL_sport_Security_Max_Var]"
 BARE_MIL_sport_GUI_Info_Text_3_1: "科技等级:"
+BARE_MIL_sport_GUI_Info_Text_3_1_tooltip: "相对于老牌学园，我们的最大优势便是我们的科技，在运动会中大量使用高科技产品不仅可以提升我们的准备程度，也能为我们赢得学生的支持。并且对于科技产品的运用也能反哺我们的科研发展。\n但还是要注意，这些举措是要花很多钱的，并且效果可能并没有这么显著。如果我们的资源不足，将资源用于具体的方案相对来说会更加有效。\n§R注意，你每月只能调整一次科技等级§!"
 BARE_MIL_sport_GUI_Info_Text_3_2: "[?BARE_MIL_sport_Tech_Have_Var]/[?BARE_MIL_sport_Tech_Max_Var]"
 
 BARE_MIL_sport_GUI_Info_Text_4_1: "学生支持度:[?BARE_MIL_sport_Student_Support_Var]%"
 
 BARE_MIL_sport_GUI_Info_Text_5_1: "准备综合评分:[?BARE_MIL_sport_Score_Var]"
 BARE_MIL_sport_GUI_Info_Text_6_1: "场地准备程度:"
+
+
+
+
+##############################################
+#变量和修正相关
+MIL_sport_student_support_monthly: "学生支持度每月变化"
+BARE_MIL_sport_Student_Support_Modifier: "晄轮大祭-学生支持度"
+BARE_MIL_sport_Tech_Modifier: "晄轮大祭-科研投入"
+BARE_MIL_sport_Prepare_Modifier: "筹备晄轮大祭"

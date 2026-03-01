@@ -82,6 +82,7 @@ guiTypes = {
 		iconType = { #文本背景1
 			name ="MIL_sport_GUI_Info_BG_1_1"
 			spriteType = "GFX_MIL_sport_GUI_Info_BG_1"
+			pdx_tooltip = "BARE_MIL_sport_GUI_Info_Text_1_1_tooltip"
 			position = { x=25	 y=355 }
 		}
 
@@ -131,7 +132,8 @@ guiTypes = {
 		}
 
 		buttonType = {
-			name = "MIL_sport_GUI_Info_Add_1"
+			name = "
+			"
 			position = { x = 238 y = 356}
 			quadTextureSprite ="GFX_MIL_sport_GUI_Info_Add_Button" 
 		}
@@ -166,6 +168,7 @@ guiTypes = {
 
 		iconType = { #文本背景1
 			name ="MIL_sport_GUI_Info_BG_2_1"
+			pdx_tooltip = "BARE_MIL_sport_GUI_Info_Text_2_1_tooltip"
 			spriteType = "GFX_MIL_sport_GUI_Info_BG_1"
 			position = { x=25	 y=400 }
 		}
@@ -231,6 +234,7 @@ guiTypes = {
 
 		iconType = { #文本背景1
 			name ="MIL_sport_GUI_Info_BG_3_1"
+			pdx_tooltip = "BARE_MIL_sport_GUI_Info_Text_3_1_tooltip"
 			spriteType = "GFX_MIL_sport_GUI_Info_BG_1"
 			position = { x=25	 y=445 }
 		}
