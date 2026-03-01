@@ -113,6 +113,6 @@ spriteTypes = {
 		size = { x = 259 y = 20 }
 		effectFile = "gfx//FX//progress.lua"
 		horizontal = yes
-		steps = 1000
+		steps = 100
 	}
 }

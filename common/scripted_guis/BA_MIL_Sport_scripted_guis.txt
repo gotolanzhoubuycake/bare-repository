@@ -6,14 +6,84 @@ scripted_gui = {
 			
 		}
 		effects = {
-			
+			MIL_sport_GUI_Info_Add_2_click = {
+				add_to_variable = {
+					BARE_MIL_sport_Security_Have_Var = 1
+				}
+				set_country_flag = BARE_MIL_sport_Security_Have_Change
+				add_to_variable = {
+					BARE_MIL_sport_Fee_Month_Cost_Var = 1
+				}
+			}
+			MIL_sport_GUI_Info_Sub_2_click = {
+				add_to_variable = {
+					BARE_MIL_sport_Security_Have_Var = -1
+				}
+				add_to_variable = {
+					BARE_MIL_sport_Fee_Month_Cost_Var = -1
+				}
+				set_country_flag = BARE_MIL_sport_Security_Have_Change
+			}
+			MIL_sport_GUI_Info_Add_3_click = {
+				add_to_variable = {
+					BARE_MIL_sport_Tech_Have_Var = 1
+				}
+				add_to_variable = {
+					BARE_MIL_sport_Fee_Month_Cost_Var = 2
+				}
+				set_country_flag = BARE_MIL_sport_Tech_Have_Change
+				BARE_MIL_Sport_Tech_Var_Chance_effect = yes
+			}
+			MIL_sport_GUI_Info_Sub_3_click = {
+				add_to_variable = {
+					BARE_MIL_sport_Tech_Have_Var = -1
+				}
+				add_to_variable = {
+					BARE_MIL_sport_Fee_Month_Cost_Var = -2
+				}
+				set_country_flag = BARE_MIL_sport_Tech_Have_Change
+				BARE_MIL_Sport_Tech_Var_Chance_effect = yes
+			}
 		}
 
 		triggers = {
-
+			MIL_sport_GUI_Info_Add_2_click_enabled = {
+				check_variable = {
+					BARE_MIL_sport_Security_Have_Var < BARE_MIL_sport_Security_Max_Var
+				}
+				not = {
+					has_country_flag = BARE_MIL_sport_Security_Have_Change
+				}
+			}
+			MIL_sport_GUI_Info_Sub_2_click_enabled = {
+				check_variable = {
+					BARE_MIL_sport_Security_Have_Var > 1
+				}
+				not = {
+					has_country_flag = BARE_MIL_sport_Security_Have_Change
+				}
+			}
+			MIL_sport_GUI_Info_Add_3_click_enabled = {
+				check_variable = {
+					BARE_MIL_sport_Tech_Have_Var < BARE_MIL_sport_Tech_Max_Var
+				}
+				not = {
+					has_country_flag = BARE_MIL_sport_Tech_Have_Change
+				}
+			}
+			MIL_sport_GUI_Info_Sub_3_click_enabled = {
+				check_variable = {
+					BARE_MIL_sport_Tech_Have_Var > 1
+				}
+				not = {
+					has_country_flag = BARE_MIL_sport_Tech_Have_Change
+				}
+			}
 		}
 		properties = {
-			
+			MIL_sport_GUI_Info_Progress_4 = {
+				frame = var:BARE_MIL_sport_Student_Support_Var
+			}
 		}
 			
 		
