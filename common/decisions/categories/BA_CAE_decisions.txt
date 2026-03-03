@@ -1,0 +1,25 @@
+# 凯撒对千年战争 经济相关决策组
+CAE_war_propaganda_category = {
+    icon = generic_political_discourse
+
+    visible = {
+        original_tag = CAE
+        has_country_flag = CAE_MIL_war_started
+    }
+
+    visible_when_empty = yes
+    priority = 1100
+}
+
+
+# 凯撒对千年战争 招募相关决策组
+CAE_war_produce_category = {
+    visible = {
+        original_tag = CAE
+        has_country_flag = FUCK_COMPLETE
+        has_country_flag = CC_COMPLETE
+        # is_ai = yes # 测试的时候关闭
+    }
+    visible_when_empty = yes
+    priority = 1000
+}

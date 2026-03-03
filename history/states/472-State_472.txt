@@ -5,7 +5,7 @@ state={
 		2514 4585 6097 6679 6984 7229 7601 8022 12166 12171 12172 12173
 	}
 	history = {
-		owner = A07
+		owner = MIL
 		add_core_of=A07
 		add_core_of=MIL
 		victory_points = {6679 5}

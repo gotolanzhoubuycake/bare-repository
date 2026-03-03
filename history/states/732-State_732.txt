@@ -5,7 +5,7 @@ state={
 		979 4567 5169 6327 8647 9529 12135 12169 
 	}
 	history = {
-		owner = A07
+		owner = MIL
 		add_core_of=A07
 		add_core_of=MIL
     }

@@ -1,0 +1,34 @@
+# 凯撒(CAE)事件
+add_namespace = CAE_event
+
+# 新闻事件：被迫劳作的市民们
+# 由决策"征用占领区资源进行生产"第一次完成时触发
+news_event = {
+    id = CAE_forced_labor.1
+    title = CAE_forced_labor.1.t
+    desc = CAE_forced_labor.1.d
+
+    fire_only_once = yes
+
+    major = yes
+    picture = GFX_news_generic_political
+
+    # 14天后自动关闭
+    days_timeout = 14
+}
+
+# 新闻事件：搜捕游击队
+# 由决策"从占领区合法征收资产充实公司财务"第一次完成时触发
+news_event = {
+    id = CAE_hunt_guerrilla.1
+    title = CAE_hunt_guerrilla.1.t
+    desc = CAE_hunt_guerrilla.1.d
+
+    fire_only_once = yes
+
+    major = yes
+    picture = GFX_news_generic_political
+
+    # 14天后自动关闭
+    days_timeout = 14
+}

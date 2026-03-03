@@ -1,0 +1,568 @@
+# 凯撒宣战事件 凯撒兵力部署
+
+division_template = {
+    name = "凯撒突袭部队"
+
+    regiments = {
+        infantry_sf = { x = 0 y = 0 }
+        infantry_sf = { x = 0 y = 1 }
+        infantry_sf = { x = 0 y = 2 }
+        infantry_sf = { x = 0 y = 3 }
+        infantry_sf = { x = 0 y = 4 }
+        infantry_sf = { x = 1 y = 0 }
+        infantry_sf = { x = 1 y = 1 }
+        infantry_sf = { x = 1 y = 2 }
+        infantry_sf = { x = 1 y = 3 }
+        infantry_sf = { x = 1 y = 4 }
+        infantry_sf = { x = 2 y = 0 }
+        infantry_sf = { x = 2 y = 1 }
+        infantry_sf = { x = 2 y = 2 }
+        infantry_sf = { x = 2 y = 3 }
+        infantry_sf = { x = 2 y = 4 }
+        infantry_sf = { x = 3 y = 0 }
+        infantry_sf = { x = 3 y = 1 }
+    }
+    support = {
+        recon = { x = 0 y = 0 }
+    }
+}
+
+division_template = {
+    name = "凯撒攻击部队"
+    regiments = {
+        infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+    }
+    support = {
+        recon = { x = 0 y = 0 }
+    }
+}
+
+# 招募佣兵用模板：6步兵+6自动机
+division_template = {
+    name = "凯撒杂牌佣兵师"
+    regiments = {
+        infantry_am = { x = 0 y = 0 }
+        infantry_am = { x = 0 y = 1 }
+        infantry_am = { x = 0 y = 2 }
+        infantry_am = { x = 0 y = 3 }
+        infantry_am = { x = 0 y = 4 }
+        infantry_am = { x = 1 y = 0 }
+        infantry = { x = 2 y = 0 }
+        infantry = { x = 2 y = 1 }
+        infantry = { x = 2 y = 2 }
+        infantry = { x = 2 y = 3 }
+        infantry = { x = 2 y = 4 }
+        infantry = { x = 3 y = 0 }
+    }
+}
+# 普通佣兵
+division_template = {
+    name = "凯撒普通佣兵1型师"
+    regiments = {
+        # 9步兵
+        infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 0 y = 2 }
+        infantry = { x = 0 y = 3 }
+        infantry = { x = 0 y = 4 }
+        infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+        infantry = { x = 1 y = 2 }
+        infantry = { x = 1 y = 3 }
+        fire_support_team_la = { x = 2 y = 0 } # 1压制火力支援班
+        fire_support_team_ha = { x = 2 y = 1 } # 1反装甲火力支援班
+        fire_support_team_aa = { x = 2 y = 2 } # 1防空火力支援班
+    }
+    support = {
+        recon = { x = 0 y = 0 }
+        engineer = { x = 0 y = 1 }
+
+    }
+}
+
+division_template = {
+    name = "凯撒普通佣兵2型师"
+    regiments = {
+        # 9自动机
+        infantry_am = { x = 0 y = 0 }
+        infantry_am = { x = 0 y = 1 }
+        infantry_am = { x = 0 y = 2 }
+        infantry_am = { x = 0 y = 3 }
+        infantry_am = { x = 0 y = 4 }
+        infantry_am = { x = 1 y = 0 }
+        infantry_am = { x = 1 y = 1 }
+        infantry_am = { x = 1 y = 2 }
+        infantry_am = { x = 1 y = 3 }
+        fire_support_team_la = { x = 2 y = 0 } # 1压制火力支援班
+        fire_support_team_ha = { x = 2 y = 1 } # 1反装甲火力支援班
+        fire_support_team_aa = { x = 2 y = 2 } # 1防空火力支援班
+    }
+    support = {
+        recon = { x = 0 y = 0 }
+        engineer = { x = 0 y = 1 }
+
+    }
+}
+# 精锐佣兵
+division_template = {
+    name = "凯撒精锐佣兵1型师"
+    regiments = {
+        # 10步兵
+        infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 0 y = 2 }
+        infantry = { x = 0 y = 3 }
+        infantry = { x = 0 y = 4 }
+        infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+        infantry = { x = 1 y = 2 }
+        infantry = { x = 1 y = 3 }
+        infantry = { x = 1 y = 4 }
+        # 4压制火力支援班
+        fire_support_team_la = { x = 2 y = 0 }
+        fire_support_team_la = { x = 2 y = 1 }
+        fire_support_team_la = { x = 2 y = 2 }
+        fire_support_team_la = { x = 2 y = 3 }
+        # 3反装甲火力支援班
+        fire_support_team_ha = { x = 2 y = 4 }
+        fire_support_team_ha = { x = 3 y = 0 }
+        fire_support_team_ha = { x = 3 y = 1 }
+        # 2防空火力支援班
+        fire_support_team_aa = { x = 3 y = 2 }
+        fire_support_team_aa = { x = 3 y = 3 }
+    }
+    support = {
+        # 轻型坦克侦察营
+        mbt_recon = { x = 0 y = 0 }
+        # 工兵
+        engineer = { x = 0 y = 1 }
+        # 后勤支援营
+        logistics_company = { x = 0 y = 2 }
+        # 野战医院
+        field_hospital = { x = 0 y = 3 }
+        # 通信连
+        signal_company = { x = 0 y = 4 }
+    }
+}
+
+division_template = {
+    name = "凯撒精锐佣兵2型师"
+    regiments = {
+        # 10自动机
+        infantry_am = { x = 0 y = 0 }
+        infantry_am = { x = 0 y = 1 }
+        infantry_am = { x = 0 y = 2 }
+        infantry_am = { x = 0 y = 3 }
+        infantry_am = { x = 0 y = 4 }
+        infantry_am = { x = 1 y = 0 }
+        infantry_am = { x = 1 y = 1 }
+        infantry_am = { x = 1 y = 2 }
+        infantry_am = { x = 1 y = 3 }
+        infantry_am = { x = 1 y = 4 }
+        # 4压制火力支援班
+        fire_support_team_la = { x = 2 y = 0 }
+        fire_support_team_la = { x = 2 y = 1 }
+        fire_support_team_la = { x = 2 y = 2 }
+        fire_support_team_la = { x = 2 y = 3 }
+        # 3反装甲火力支援班
+        fire_support_team_ha = { x = 2 y = 4 }
+        fire_support_team_ha = { x = 3 y = 0 }
+        fire_support_team_ha = { x = 3 y = 1 }
+        # 2防空火力支援班
+        fire_support_team_aa = { x = 3 y = 2 }
+        fire_support_team_aa = { x = 3 y = 3 }
+    }
+    support = {
+        # 轻型坦克侦察营
+        mbt_recon = { x = 0 y = 0 }
+        # 工兵
+        engineer = { x = 0 y = 1 }
+        # 后勤支援营
+        logistics_company = { x = 0 y = 2 }
+        # 野战医院
+        field_hospital = { x = 0 y = 3 }
+        # 通信连
+        signal_company = { x = 0 y = 4 }
+    }
+}
+
+# 轻装甲部队
+division_template = {
+    name = "凯撒轻型装甲师"
+    regiments = {
+        # 5轻坦
+        light_armor = { x = 0 y = 0 }
+        light_armor = { x = 0 y = 1 }
+        light_armor = { x = 0 y = 2 }
+        light_armor = { x = 0 y = 3 }
+        light_armor = { x = 0 y = 4 }
+        # 5摩托化
+        motorized = { x = 1 y = 0 }
+        motorized = { x = 1 y = 1 }
+        motorized = { x = 1 y = 2 }
+        motorized = { x = 1 y = 3 }
+        motorized = { x = 1 y = 4 }
+    }
+    support = {
+        # 轻型坦克侦察营
+        mbt_recon = { x = 0 y = 0 }
+        # 工兵
+        engineer = { x = 0 y = 1 }
+        # 维修连
+        maintenance_company = { x = 0 y = 2 }
+
+    }
+}
+# 主战装甲部队
+division_template = {
+    name = "凯撒主战装甲师"
+    regiments = {
+        # 6中坦
+        medium_armor = { x = 0 y = 0 }
+        medium_armor = { x = 0 y = 1 }
+        medium_armor = { x = 0 y = 2 }
+        medium_armor = { x = 0 y = 3 }
+        medium_armor = { x = 0 y = 4 }
+        medium_armor = { x = 1 y = 0 }
+        # 2中自行火炮
+        medium_sp_artillery_brigade = { x = 1 y = 1 }
+        medium_sp_artillery_brigade = { x = 1 y = 2 }
+        # 2中自行防空
+        medium_sp_anti_air_brigade = { x = 1 y = 3 }
+        medium_sp_anti_air_brigade = { x = 1 y = 4 }
+        # 8机械化
+        ifv_unit = { x = 2 y = 0 }
+        ifv_unit = { x = 2 y = 1 }
+        ifv_unit = { x = 2 y = 2 }
+        ifv_unit = { x = 2 y = 3 }
+        ifv_unit = { x = 3 y = 0 }
+        ifv_unit = { x = 3 y = 1 }
+        ifv_unit = { x = 3 y = 2 }
+        ifv_unit = { x = 3 y = 3 }
+    }
+    support = {
+        # 直升机侦察营
+        helicopter_recon = { x = 0 y = 0 }
+        # 工兵
+        engineer = { x = 0 y = 1 }
+        # 维修连
+        maintenance_company = { x = 0 y = 2 }
+        # 后勤连
+        logistics_company = { x = 0 y = 3 }
+        # 野战医院
+        field_hospital = { x = 0 y = 4 }
+    }
+}
+
+# 重装甲支援部队
+division_template = {
+    name = "凯撒重型装甲支援师"
+    regiments = {
+        # 5重坦
+        heavy_armor = { x = 0 y = 0 }
+        heavy_armor = { x = 0 y = 1 }
+        heavy_armor = { x = 0 y = 2 }
+        heavy_armor = { x = 0 y = 3 }
+        heavy_armor = { x = 0 y = 4 }
+        # 5重自反
+        heavy_tank_destroyer_brigade = { x = 1 y = 0 }
+        heavy_tank_destroyer_brigade = { x = 1 y = 1 }
+        heavy_tank_destroyer_brigade = { x = 1 y = 2 }
+        heavy_tank_destroyer_brigade = { x = 1 y = 3 }
+        heavy_tank_destroyer_brigade = { x = 1 y = 4 }
+        # 2重自防
+        heavy_sp_anti_air_brigade = { x = 2 y = 0 }
+        heavy_sp_anti_air_brigade = { x = 2 y = 1 }
+        # 10空突
+        air_assest_unit = { x = 3 y = 0 }
+        air_assest_unit = { x = 3 y = 1 }
+        air_assest_unit = { x = 3 y = 2 }
+        air_assest_unit = { x = 3 y = 3 }
+        air_assest_unit = { x = 3 y = 4 }
+        air_assest_unit = { x = 4 y = 0 }
+        air_assest_unit = { x = 4 y = 1 }
+        air_assest_unit = { x = 4 y = 2 }
+        air_assest_unit = { x = 4 y = 3 }
+        air_assest_unit = { x = 4 y = 4 }
+    }
+    support = {
+        # 直升机侦察营
+        helicopter_recon = { x = 0 y = 0 }
+        # 工兵
+        engineer = { x = 0 y = 1 }
+        # 维修连
+        maintenance_company = { x = 0 y = 2 }
+        # 后勤连
+        logistics_company = { x = 0 y = 3 }
+        # 野战医院
+        field_hospital = { x = 0 y = 4 }
+    }
+}
+
+
+units = {
+    division = {
+        name = "凯撒第1突袭部队"
+        location = 908
+        division_template = "凯撒突袭部队" #这个师用的编制的名字
+        start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+        start_equipment_factor = 1 #初始装备 0-1
+        start_manpower_factor = 1 #初始人力 0-1
+    }
+    division = {
+        name = "凯撒第2突袭部队"
+        location = 5020
+        division_template = "凯撒突袭部队" #这个师用的编制的名字
+        start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+        start_equipment_factor = 1 #初始装备 0-1
+        start_manpower_factor = 1 #初始人力 0-1
+    }
+    division = {
+        name = "凯撒第3突袭部队"
+        location = 3064
+        division_template = "凯撒突袭部队" #这个师用的编制的名字
+        start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+        start_equipment_factor = 1 #初始装备 0-1
+        start_manpower_factor = 1 #初始人力 0-1
+    }
+    division = {
+        name = "凯撒第4突袭部队"
+        location = 3927
+        division_template = "凯撒突袭部队" #这个师用的编制的名字
+        start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+        start_equipment_factor = 1 #初始装备 0-1
+        start_manpower_factor = 1 #初始人力 0-1
+    }
+
+    # 填线师
+    # 千年西路 5661,11757,3041,11774,11814,7168,856
+    division = {
+        name = "凯撒攻击部队"
+        location = 5661
+        division_template = "凯撒攻击部队" #这个师用的编制的名字
+        start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+        start_equipment_factor = 1 #初始装备 0-1
+        start_manpower_factor = 1 #初始人力 0-1
+    }
+    division = {
+        name = "凯撒攻击部队"
+        location = 11757
+        division_template = "凯撒攻击部队" #这个师用的编制的名字
+        start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+        start_equipment_factor = 1 #初始装备 0-1
+        start_manpower_factor = 1 #初始人力 0-1
+    }
+    division = {
+        name = "凯撒攻击部队"
+        location = 3041
+        division_template = "凯撒攻击部队" #这个师用的编制的名字
+        start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+        start_equipment_factor = 1 #初始装备 0-1
+        start_manpower_factor = 1 #初始人力 0-1
+    }
+    division = {
+        name = "凯撒攻击部队"
+        location = 11774
+        division_template = "凯撒攻击部队" #这个师用的编制的名字
+        start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+        start_equipment_factor = 1 #初始装备 0-1
+        start_manpower_factor = 1 #初始人力 0-1
+    }
+    division = {
+        name = "凯撒攻击部队"
+        location = 11814
+        division_template = "凯撒攻击部队" #这个师用的编制的名字
+        start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+        start_equipment_factor = 1 #初始装备 0-1
+        start_manpower_factor = 1 #初始人力 0-1
+    }
+    division = {
+        name = "凯撒攻击部队"
+        location = 7168
+        division_template = "凯撒攻击部队" #这个师用的编制的名字
+        start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+        start_equipment_factor = 1 #初始装备 0-1
+        start_manpower_factor = 1 #初始人力 0-1
+    }
+    division = {
+        name = "凯撒攻击部队"
+        location = 856
+        division_template = "凯撒攻击部队" #这个师用的编制的名字
+        start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+        start_equipment_factor = 1 #初始装备 0-1
+        start_manpower_factor = 1 #初始人力 0-1
+    }
+    # 尤里卡广场北 71,3708,3641
+    division = {
+        name = "凯撒攻击部队"
+        location = 71
+        division_template = "凯撒攻击部队" #这个师用的编制的名字
+        start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+        start_equipment_factor = 1 #初始装备 0-1
+        start_manpower_factor = 1 #初始人力 0-1
+    }
+    division = {
+        name = "凯撒攻击部队"
+        location = 3708
+        division_template = "凯撒攻击部队" #这个师用的编制的名字
+        start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+        start_equipment_factor = 1 #初始装备 0-1
+        start_manpower_factor = 1 #初始人力 0-1
+    }
+    division = {
+        name = "凯撒攻击部队"
+        location = 3641
+        division_template = "凯撒攻击部队" #这个师用的编制的名字
+        start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+        start_equipment_factor = 1 #初始装备 0-1
+        start_manpower_factor = 1 #初始人力 0-1
+    }
+    # 千年学生公园 7551,2214
+    division = {
+        name = "凯撒攻击部队"
+        location = 7551
+        division_template = "凯撒攻击部队" #这个师用的编制的名字
+        start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+        start_equipment_factor = 1 #初始装备 0-1
+        start_manpower_factor = 1 #初始人力 0-1
+    }
+    division = {
+        name = "凯撒攻击部队"
+        location = 2214
+        division_template = "凯撒攻击部队" #这个师用的编制的名字
+        start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+        start_equipment_factor = 1 #初始装备 0-1
+        start_manpower_factor = 1 #初始人力 0-1
+    }
+    # 尤里卡广场南 4339,8582
+    division = {
+        name = "凯撒攻击部队"
+        location = 4339
+        division_template = "凯撒攻击部队" #这个师用的编制的名字
+        start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+        start_equipment_factor = 1 #初始装备 0-1
+        start_manpower_factor = 1 #初始人力 0-1
+    }
+    division = {
+        name = "凯撒攻击部队"
+        location = 8582
+        division_template = "凯撒攻击部队" #这个师用的编制的名字
+        start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+        start_equipment_factor = 1 #初始装备 0-1
+        start_manpower_factor = 1 #初始人力 0-1
+    }
+    # 千年南路 1601,12048,5884,12071,8419,12092
+    division = {
+        name = "凯撒攻击部队"
+        location = 1601
+        division_template = "凯撒攻击部队" #这个师用的编制的名字
+        start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+        start_equipment_factor = 1 #初始装备 0-1
+        start_manpower_factor = 1 #初始人力 0-1
+    }
+    division = {
+        name = "凯撒攻击部队"
+        location = 12048
+        division_template = "凯撒攻击部队" #这个师用的编制的名字
+        start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+        start_equipment_factor = 1 #初始装备 0-1
+        start_manpower_factor = 1 #初始人力 0-1
+    }
+    division = {
+        name = "凯撒攻击部队"
+        location = 5884
+        division_template = "凯撒攻击部队" #这个师用的编制的名字
+        start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+        start_equipment_factor = 1 #初始装备 0-1
+        start_manpower_factor = 1 #初始人力 0-1
+    }
+    division = {
+        name = "凯撒攻击部队"
+        location = 12071
+        division_template = "凯撒攻击部队" #这个师用的编制的名字
+        start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+        start_equipment_factor = 1 #初始装备 0-1
+        start_manpower_factor = 1 #初始人力 0-1
+    }
+    division = {
+        name = "凯撒攻击部队"
+        location = 8419
+        division_template = "凯撒攻击部队" #这个师用的编制的名字
+        start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+        start_equipment_factor = 1 #初始装备 0-1
+        start_manpower_factor = 1 #初始人力 0-1
+    }
+    division = {
+        name = "凯撒攻击部队"
+        location = 12092
+        division_template = "凯撒攻击部队" #这个师用的编制的名字
+        start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+        start_equipment_factor = 1 #初始装备 0-1
+        start_manpower_factor = 1 #初始人力 0-1
+    }
+    # 科展路 8647
+    division = {
+        name = "凯撒攻击部队"
+        location = 8647
+        division_template = "凯撒攻击部队" #这个师用的编制的名字
+        start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+        start_equipment_factor = 1 #初始装备 0-1
+        start_manpower_factor = 1 #初始人力 0-1
+    }
+    # 马尔斯大道
+    division = {
+        name = "凯撒攻击部队"
+        location = 2514
+        division_template = "凯撒攻击部队" #这个师用的编制的名字
+        start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+        start_equipment_factor = 1 #初始装备 0-1
+        start_manpower_factor = 1 #初始人力 0-1
+    }
+    division = {
+        name = "凯撒攻击部队"
+        location = 6097
+        division_template = "凯撒攻击部队" #这个师用的编制的名字
+        start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+        start_equipment_factor = 1 #初始装备 0-1
+        start_manpower_factor = 1 #初始人力 0-1
+    }
+    division = {
+        name = "凯撒攻击部队"
+        location = 12172
+        division_template = "凯撒攻击部队" #这个师用的编制的名字
+        start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+        start_equipment_factor = 1 #初始装备 0-1
+        start_manpower_factor = 1 #初始人力 0-1
+    }
+    # 科技港东区 1827,7576,3333
+    division = {
+        name = "凯撒攻击部队"
+        location = 1827
+        division_template = "凯撒攻击部队" #这个师用的编制的名字
+        start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+        start_equipment_factor = 1 #初始装备 0-1
+        start_manpower_factor = 1 #初始人力 0-1
+    }
+    division = {
+        name = "凯撒攻击部队"
+        location = 7576
+        division_template = "凯撒攻击部队" #这个师用的编制的名字
+        start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+        start_equipment_factor = 1 #初始装备 0-1
+        start_manpower_factor = 1 #初始人力 0-1
+    }
+    division = {
+        name = "凯撒攻击部队"
+        location = 3333
+        division_template = "凯撒攻击部队" #这个师用的编制的名字
+        start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+        start_equipment_factor = 1 #初始装备 0-1
+        start_manpower_factor = 1 #初始人力 0-1
+    }
+
+}
+
