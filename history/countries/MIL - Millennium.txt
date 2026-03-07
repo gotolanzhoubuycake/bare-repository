@@ -135,9 +135,8 @@ add_ideas = {
 	BARE_Global_College_Autonomous_Region
 	millaws_battlefield_mission
 	MIL_place_of_pursuing_truth  
-	MIL_security_department_of_long_peace  
 	MIL_overly_advanced_aircraft  
-	MIL_shadow_of_financial_crisis
+	# MIL_shadow_of_financial_crisis
 }
 
 337 = {
@@ -145,6 +144,40 @@ add_ideas = {
 		modifier = test_manpower_modifier
 	}
 }
+#承平日久的安保部门
+set_variable = { MIL_security_department_army_attack = -0.2 }
+set_variable = { MIL_security_department_army_defence = -0.2 }
+set_variable = { MIL_security_department_army_org = -0.1 }
+set_variable = { MIL_security_department_planning_speed = -0.2 }
+set_variable = { MIL_security_department_planning_factor = -0.2 }
+set_variable = { MIL_security_department_land_doctrine_cost = 0.35 }
+set_variable = { MIL_security_department_air_doctrine_cost = 0.35 }
+set_variable = { MIL_security_department_army_chief_cost = 0.33 }
+set_variable = { MIL_security_department_air_chief_cost = 0.33 }
+set_variable = { MIL_security_department_high_command_cost = 0.33 }
+add_dynamic_modifier = { modifier = MIL_security_department_of_long_peace }
+
+
+
+#钢铁洪流
+
+set_variable = { MIL_steel_torrent_armor_factor = 0 }
+set_variable = { MIL_steel_torrent_breakthrough_factor = 0 }
+set_variable = { MIL_steel_torrent_reliability_factor = 0 }
+set_variable = { MIL_steel_torrent_production_cost = 0 } 
+set_variable = { MIL_steel_torrent_movement = 0 }
+set_variable = { MIL_steel_torrent_attack = 0 } 
+set_variable = { MIL_steel_torrent_defense = 0 }
+
+# 千年天空的守护者
+set_variable = { MIL_sky_guardian_mission_efficiency = 0 }
+set_variable = { MIL_sky_guardian_weather_penalty = 0 } 
+set_variable = { MIL_sky_guardian_night_penalty = 0 }   
+set_variable = { MIL_sky_guardian_xp_gain = 0 }
+set_variable = { MIL_sky_guardian_ace_chance = 0 }
+set_variable = { MIL_sky_guardian_accident_factor = 0 } 
+set_variable = { MIL_sky_guardian_production_cost = 0 }
+set_variable = { MIL_sky_guardian_agility = 0 }
 
 recruit_character = MIL_rio
 recruit_character = MIL_yuuka

@@ -44,7 +44,6 @@ news_event = {
             original_tag = TRI
         }
         set_temp_variable = { target = GEH }
-        Great_Game_add_cannot_invade = yes
 
 		ai_chance = {
 			base = 100
@@ -57,7 +56,6 @@ news_event = {
             original_tag = GEH
         }
         set_temp_variable = { target = TRI }
-        Great_Game_add_cannot_invade = yes
 
 		ai_chance = {
 			base = 100
@@ -220,6 +218,15 @@ country_event = {
     #picture =
 
     immediate = {
+        hidden_effect = {
+            #圣三一和格黑娜终止所有演习
+            TRI = {
+                Great_Game_total_cease_fire = yes
+            }
+            GEH = {
+                Great_Game_total_cease_fire = yes
+            }
+        }
     }
 
     option = {

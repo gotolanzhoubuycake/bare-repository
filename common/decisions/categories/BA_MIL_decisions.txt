@@ -9,12 +9,39 @@ MIL_bop_decision_category = {
     priority = 1098
 }
 
+MIL_Sport_decision_category = {
+    icon = generic_research
+
+
+    visible = {
+        original_tag = MIL
+        has_global_flag = BARE_MIL_Sport_prepare_flag
+    }
+    scripted_gui = BARE_MIL_sport_GUI_SG
+    visible_when_empty = yes
+    priority = 1098
+}
+
+MIL_Sport_decision_test_category = {
+    icon = generic_research
+
+
+    visible = {
+        original_tag = MIL
+        is_debug = yes
+    }
+    priority = 1098
+}
+
 # 与凯撒的冲突决议组 -- 千年侧
 MIL_cae_war_decision_category = {
     icon = generic_research
 
     visible = {
         original_tag = MIL
+        has_completed_focus = MIL_protect_mil
     }
+
+    visible_when_empty = yes
     priority = 1099 # 位置待调整
 }

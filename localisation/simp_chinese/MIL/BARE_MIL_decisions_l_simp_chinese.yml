@@ -71,6 +71,47 @@
  MIL_award_game_development_debug: "改进游戏机制设计"
  MIL_award_game_department_new_invention: "千年游戏大赏"
 
- MIL_CAE_economic_situation: "凯撒经济状况"
+ MIL_CAE_economic_situation: "凯撒经济状况："
  MIL_cae_war_decision_category: "凯撒冲突决议组"
- MIL_cae_war_decision_category_desc: "凯撒冲突决议组"
+ MIL_Sport_decision_category: "大运动会"
+# MIL_cae_war_decision_category_desc: "通过一系列决议打击凯撒的经济状况，为与凯撒的战争做好准备。"
+ MIL_cae_war_decision_category_desc: "凯撒集团对于统治基沃托斯的野心毫不掩饰，而最终，他们将肮脏的手伸到了我们的头上，对于这种肮脏卑劣之徒，唯有彻底的失败才能让他们认清现实。\n作为一个向钱看的巨型企业，凯撒集团的经济状况直接决定了他们的实力，如果我们的自治区土地被占领，或者说我们遭受了损失，凯撒集团的声势将会大涨，他们的股价将进一步提高，投资也会变得更多，进而增强他们的实力。反之，如果我们可以守住我们的土地并将战火燃至他们，或是他们遭受了重大损失，他们的声势将会下降，并让他们遭受严重的经济损失，最终削弱其战争潜力，同时，迫使他们维持大量部队，争取外部支持并发起各项行动也可以直接打击他们的经济状况。\n一旦凯撒集团遭受了重大损失，他们将别无选择，只能接受失败。"
+
+ # 决议1：号召停用凯撒商品
+ MIL_boycott_CAE_products: "号召停用凯撒商品"
+ MIL_boycott_CAE_products_desc: "我们的学园正在和敌人开战，但我们的学生却还在用敌人的商品？我们将号召学生们用其他产品来取代凯撒的商品，虽然这势必会增加成本，但我们不能再资敌了。"
+ MIL_boycott_CAE_products_tt: "民族精神$MIL_fight_against_cae$追加效果：生活消费品系数+10%，战争支持度+5%\n每周凯撒经济状况-1%"
+
+ # 决议2：全面禁用凯撒商品
+ MIL_ban_all_CAE_products: "全面禁用凯撒商品"
+ MIL_ban_all_CAE_products_desc: "“别让罪恶的章鱼图标出现在千年学园”，我们将下令全面禁止使用凯撒的商品，并免费提供我们的商品来取而代之，尽管这会提升我们的财政压力，但失去我们这个大市场，凯撒的日子也不会好过。"
+ MIL_ban_all_CAE_products_tt: "民族精神$MIL_fight_against_cae$追加效果：生活消费品系数+10%，战争支持度+5%\n每周凯撒经济状况-1.5%"
+
+ # 决议3：对凯撒实施网络攻击
+ MIL_cyber_attack_CAE: "对凯撒实施网络攻击"
+ MIL_cyber_attack_CAE_desc: "众所周知，贝里塔斯拥有全基沃托斯最为强大的网络攻防能力，她们会很乐意听到她们有了茫茫多的靶机来进行攻击的。"
+ MIL_cyber_attack_CAE_tt: "凯撒经济状况-5%"
+ MIL_cyber_attack_CAE_first_tt: "凯撒经济状况-5%\n凯撒获得临时民族精神$CAE_network_paralysis$（45天）!"
+
+ # 决议4：释放对千年有利的谈判消息
+ MIL_release_negotiation_info: "释放对千年有利的谈判消息"
+ MIL_release_negotiation_info_desc: "对于凯撒集团这种巨型企业，一点风吹草动都将影响他们的股价，将对我们有利的谈判信息经过一点公关加工，辅以我们的媒体宣传，凯撒的公关将会焦头烂额起来。"
+ MIL_release_negotiation_info_tt: "凯撒经济状况-5%"
+
+ # 决议5：寻求联邦学生会的支持
+ MIL_seek_CEN_support: "寻求联邦学生会的支持"
+ MIL_seek_CEN_support_desc: "凯撒集团在联邦学生会有着强大的影响力，因此在这种明确的侵略行为中，联邦学生会选择视而不见......\n但我们也有！以基沃托斯最为强大的学园之一向联邦学生会发出号召，我们能让一部分人唤起学生会真正的职责，进而给凯撒集团带来大麻烦。"
+ MIL_seek_CEN_support_tt: "凯撒经济状况-10%\n触发事件"
+
+ # 决议6：寻求其他学院的支持
+ MIL_seek_TRI_support: "寻求圣三一的支持"
+ MIL_seek_TRI_support_desc: "茶会一直在监视着凯撒集团的各项违法行为，和茶会的交涉可以将她们拉入我们的阵营，进而影响凯撒在圣三一的定位。"
+ MIL_seek_GEH_support: "寻求格黑娜的支持"
+ MIL_seek_GEH_support_desc: "万魔殿一直对于凯撒和她们的产业竞争很不爽，她们很愿意给凯撒集团添点堵。"
+ MIL_seek_SHA_support: "寻求山海经的支持"
+ MIL_seek_SHA_support_desc: "玄龙门一直在严密监视着凯撒对山海经的影响，而玄武商会也十分反感凯撒的恶意竞争行为，消除凯撒在山海经的影响符合她们的利益。"
+ MIL_seek_HYA_support: "寻求百鬼夜行的支持"
+ MIL_seek_HYA_support_desc: "阴阳部和节日庆典委员会仍然对“度假村大逃杀”记忆犹新，她们肯定不会愿意凯撒再这么肆意妄为。"
+ MIL_seek_RWT_support: "寻求赤冬的支持"
+ MIL_seek_RWT_support_desc: "作为奉行集体主义的冰霜之地，赤冬本来就对肆意妄为，铺张浪费的凯撒没啥好感，更何况基沃托斯的头号刺头-工务部对凯撒集团这种布尔乔亚更是深恶痛绝了，她们会支持我们的。"
+ MIL_seek_academy_support_tt: "凯撒经济状况-5%"

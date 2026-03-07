@@ -4,7 +4,7 @@ news_event = {
 	id = Great_Game.1000
 	title = Great_Game.1000.t
 	desc = Great_Game.1000.d
-	#picture = GFX_TRI_events_pic
+	picture = GFX_BA_news_22
 	major = yes
 	is_triggered_only = yes
 	trigger = {
@@ -32,7 +32,7 @@ news_event = {
 	}
 	option = {
 		name = Great_Game.1000.a
-		custom_effect_tooltip = event_immediately_happened_tt
+		# custom_effect_tooltip = event_immediately_happened_tt
 		unlock_decision_category_tooltip = BA_Great_Game_decisions
 		ai_chance = {
 			base = 100
@@ -49,6 +49,63 @@ country_event = {
 	#picture =
 	option = {
 		name = Great_Game.1.a
+
+	}
+}
+
+
+country_event = {
+	id = Great_Game.2
+	title = Great_Game.2.t
+	desc = Great_Game.2.d
+	timeout_days = 1
+	is_triggered_only = yes
+	#picture =
+	option = {
+		name = Great_Game.2.a
+		FROM = {
+			country_event = Great_Game.3
+		}
+	}
+	option = {
+		name = Great_Game.2.b
+		FROM = {
+			country_event = Great_Game.4
+		}
+	}
+}
+
+country_event = {
+	id = Great_Game.3
+	title = Great_Game.3.t
+	desc = Great_Game.3.d
+	timeout_days = 1
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_temp_variable = { leader = ROOT }
+			set_temp_variable = { ally = FROM }
+			set_temp_variable = { enemy = var:Great_Game_enemy }
+			Great_Game_invite_to_ally = yes
+		}
+	}
+	#picture =
+	option = {
+		name = Great_Game.3.a
+
+	}
+}
+
+country_event = {
+	id = Great_Game.4
+	title = Great_Game.4.t
+	desc = Great_Game.4.d
+	timeout_days = 1
+	is_triggered_only = yes
+	#picture =
+	option = {
+		name = Great_Game.4.a
 
 	}
 }

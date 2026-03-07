@@ -41,7 +41,31 @@ on_actions = {
 				}
 				every_country = {
 					BARE_Combat_Readiness_count_Country = yes
+					#如果处于和平，自动归还省份
+					if = {
+						limit = {
+							has_war = no
+						}
+						every_owned_state = {
+							limit = {
+								not = {
+									is_controlled_by = PREV
+								}
+							}
+							set_state_controller_to = PREV
+						}
+					}
 				}
+				329 = {
+					set_demilitarized_zone = yes
+				}
+				
+				
+				
+
+
+
+
 			}
 		}
 	}

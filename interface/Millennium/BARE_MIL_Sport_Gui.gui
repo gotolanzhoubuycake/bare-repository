@@ -1,0 +1,417 @@
+guiTypes = {
+	containerWindowType = { #
+		name = "BARE_MIL_sport_GUI"
+		position = {x = 0 y =0}
+		size = { width = 100% height = 720 }
+
+
+		iconType = { #背景
+			name ="MIL_sport_GUI_BG"
+			spriteType = "GFX_MIL_sport_GUI_BG"
+			position = { x=0	 y=0 }
+		}
+
+		iconType = { #对话背景
+			name ="MIL_sport_GUI_Detail_BG"
+			spriteType = "GFX_MIL_sport_GUI_Detail_BG"
+			position = { x=25	 y=77 }
+		}
+
+
+		instantTextboxType = { #介绍文本
+			name = "MIL_sport_GUI_Detail_Text"
+			position = { x = 37 y = 91  }
+			textureFile = ""
+			font = "LXGW_975_12"
+			borderSize = {x = 0 y = 0}
+			text = "BARE_MIL_sport_GUI_Detail_Text"
+			maxWidth = 405
+			maxHeight = 214
+			format = left
+			alwaystransparent = yes
+		}
+
+
+		instantTextboxType = { #介绍文本
+			name = "MIL_sport_GUI_Time_Text"
+			position = { x = 140 y = 311  }
+			textureFile = ""
+			font = "LXGW_975_12"
+			borderSize = {x = 0 y = 0}
+			text = "BARE_MIL_sport_GUI_Time_Text"
+			maxWidth = 200
+			maxHeight = 200
+			format = center
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = { #介绍文本
+			name = "MIL_sport_GUI_Top_Text"
+			position = { x = 49 y = 18  }
+			textureFile = ""
+			font = "LXGW_975_16"
+			borderSize = {x = 0 y = 0}
+			text = "BARE_MIL_sport_GUI_Top_Text"
+			maxWidth = 400
+			maxHeight = 200
+			format = center
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = { #介绍文本
+			name = "MIL_sport_GUI_Bottom_Text"
+			position = { x = 47 y = 667  }
+			textureFile = ""
+			font = "LXGW_975_16"
+			borderSize = {x = 0 y = 0}
+			text = "BARE_MIL_sport_GUI_Bottom_Text"
+			maxWidth = 400
+			maxHeight = 200
+			format = center
+			alwaystransparent = yes
+		}
+
+
+		#第一行
+		iconType = { #分隔线
+			name ="MIL_sport_GUI_Info_line_0"
+			spriteType = "GFX_MIL_sport_GUI_Info_Line"
+			position = { x=25	 y=343 }
+		}
+
+		iconType = { #文本背景1
+			name ="MIL_sport_GUI_Info_BG_1_1"
+			spriteType = "GFX_MIL_sport_GUI_Info_BG_1"
+			pdx_tooltip = "BARE_MIL_sport_GUI_Info_Text_1_1_tooltip"
+			position = { x=25	 y=355 }
+		}
+
+		iconType = { #图标
+			name ="MIL_sport_GUI_Info_Icon_1"
+			spriteType = "GFX_MIL_sport_GUI_Info_Icon_1"
+			position = { x=28	 y=353 }
+		}
+
+		instantTextboxType = { #介绍文本
+			name = "MIL_sport_GUI_Info_Text_1_1"
+			position = { x = 54 y = 362  }
+			textureFile = ""
+			font = "LXGW_975_12"
+			borderSize = {x = 0 y = 0}
+			text = "BARE_MIL_sport_GUI_Info_Text_1_1"
+			maxWidth = 66
+			maxHeight = 16
+			format = center
+			alwaystransparent = yes
+		}
+
+		buttonType = {
+			name = "MIL_sport_GUI_Info_Sub_1"
+			position = { x = 139 y = 356}
+			quadTextureSprite ="GFX_MIL_sport_GUI_Info_Sub_Button" 
+		}
+
+		iconType = { #分隔线
+			name ="MIL_sport_GUI_Info_BG_1_2"
+			spriteType = "GFX_MIL_sport_GUI_Info_BG_2"
+			position = { x=170	 y=356 }
+		}
+
+
+		instantTextboxType = { #介绍文本
+			name = "MIL_sport_GUI_Info_Text_1_2"
+			position = { x = 150 y = 360  }
+			textureFile = ""
+			font = "LXGW_975_12"
+			borderSize = {x = 0 y = 0}
+			text = "BARE_MIL_sport_GUI_Info_Text_1_2"
+			maxWidth = 115
+			maxHeight = 26
+			format = center
+			alwaystransparent = yes
+		}
+
+		buttonType = {
+			name = "
+			"
+			position = { x = 238 y = 356}
+			quadTextureSprite ="GFX_MIL_sport_GUI_Info_Add_Button" 
+		}
+
+		iconType = { #背景
+			name ="MIL_sport_GUI_Info_BG_1_3"
+			spriteType = "GFX_MIL_sport_GUI_Info_BG_3"
+			position = { x=270	 y=356 }
+		}
+
+		instantTextboxType = { #介绍文本
+			name = "MIL_sport_GUI_Info_Text_1_3"
+			position = { x = 285 y = 363  }
+			textureFile = ""
+			font = "LXGW_975_12"
+			borderSize = {x = 0 y = 0}
+			text = "BARE_MIL_sport_GUI_Info_Text_1_3"
+			maxWidth = 149
+			maxHeight = 16
+			format = center
+			alwaystransparent = yes
+		}
+
+		iconType = { #分隔线
+			name ="MIL_sport_GUI_Info_line_1"
+			spriteType = "GFX_MIL_sport_GUI_Info_Line"
+			position = { x=25	 y=390 }
+		}
+
+
+		#第二行
+
+		iconType = { #文本背景1
+			name ="MIL_sport_GUI_Info_BG_2_1"
+			pdx_tooltip = "BARE_MIL_sport_GUI_Info_Text_2_1_tooltip"
+			spriteType = "GFX_MIL_sport_GUI_Info_BG_1"
+			position = { x=25	 y=400 }
+		}
+
+		iconType = { #图标
+			name ="MIL_sport_GUI_Info_Icon_2"
+			spriteType = "GFX_MIL_sport_GUI_Info_Icon_2"
+			position = { x=32	 y=402 }
+		}
+
+		instantTextboxType = { #介绍文本
+			name = "MIL_sport_GUI_Info_Text_2_1"
+			position = { x = 54 y = 405  }
+			textureFile = ""
+			font = "LXGW_975_12"
+			borderSize = {x = 0 y = 0}
+			text = "BARE_MIL_sport_GUI_Info_Text_2_1"
+			maxWidth = 66
+			maxHeight = 16
+			format = center
+			alwaystransparent = yes
+		}
+
+		buttonType = {
+			name = "MIL_sport_GUI_Info_Sub_2"
+			position = { x = 139 y = 401}
+			quadTextureSprite ="GFX_MIL_sport_GUI_Info_Sub_Button" 
+		}
+
+		iconType = { #背景
+			name ="MIL_sport_GUI_Info_BG_2_2"
+			spriteType = "GFX_MIL_sport_GUI_Info_BG_2"
+			position = { x=170	 y=400 }
+		}
+
+
+		instantTextboxType = { #介绍文本
+			name = "MIL_sport_GUI_Info_Text_2_2"
+			position = { x = 150 y = 405  }
+			textureFile = ""
+			font = "LXGW_975_12"
+			borderSize = {x = 0 y = 0}
+			text = "BARE_MIL_sport_GUI_Info_Text_2_2"
+			maxWidth = 115
+			maxHeight = 26
+			format = center
+			alwaystransparent = yes
+		}
+
+		buttonType = {
+			name = "MIL_sport_GUI_Info_Add_2"
+			position = { x = 238 y = 401}
+			quadTextureSprite ="GFX_MIL_sport_GUI_Info_Add_Button" 
+		}
+
+		iconType = { #分隔线
+			name ="MIL_sport_GUI_Info_line_2"
+			spriteType = "GFX_MIL_sport_GUI_Info_Line"
+			position = { x=25	 y=435 }
+		}
+
+		#第三行
+
+		iconType = { #文本背景1
+			name ="MIL_sport_GUI_Info_BG_3_1"
+			pdx_tooltip = "BARE_MIL_sport_GUI_Info_Text_3_1_tooltip"
+			spriteType = "GFX_MIL_sport_GUI_Info_BG_1"
+			position = { x=25	 y=445 }
+		}
+
+		iconType = { #图标
+			name ="MIL_sport_GUI_Info_Icon_3"
+			spriteType = "GFX_MIL_sport_GUI_Info_Icon_3"
+			position = { x=30	 y=449 }
+		}
+
+		instantTextboxType = { #介绍文本
+			name = "MIL_sport_GUI_Info_Text_3_1"
+			position = { x = 54 y = 450  }
+			textureFile = ""
+			font = "LXGW_975_12"
+			borderSize = {x = 0 y = 0}
+			text = "BARE_MIL_sport_GUI_Info_Text_3_1"
+			maxWidth = 66
+			maxHeight = 16
+			format = center
+			alwaystransparent = yes
+		}
+
+		buttonType = {
+			name = "MIL_sport_GUI_Info_Sub_3"
+			position = { x = 139 y = 446}
+			quadTextureSprite ="GFX_MIL_sport_GUI_Info_Sub_Button" 
+		}
+
+		iconType = { #背景
+			name ="MIL_sport_GUI_Info_BG_3_2"
+			spriteType = "GFX_MIL_sport_GUI_Info_BG_2"
+			position = { x=170	 y=446 }
+		}
+
+
+		instantTextboxType = { #介绍文本
+			name = "MIL_sport_GUI_Info_Text_3_2"
+			position = { x = 150 y = 450  }
+			textureFile = ""
+			font = "LXGW_975_12"
+			borderSize = {x = 0 y = 0}
+			text = "BARE_MIL_sport_GUI_Info_Text_3_2"
+			maxWidth = 115
+			maxHeight = 26
+			format = center
+			alwaystransparent = yes
+		}
+
+		buttonType = {
+			name = "MIL_sport_GUI_Info_Add_3"
+			position = { x = 238 y = 446}
+			quadTextureSprite ="GFX_MIL_sport_GUI_Info_Add_Button" 
+		}
+
+		iconType = { #分隔线
+			name ="MIL_sport_GUI_Info_line_3"
+			spriteType = "GFX_MIL_sport_GUI_Info_Line"
+			position = { x=25	 y=478 }
+		}
+
+
+		#第四行
+
+		iconType = { #文本背景1
+			name ="MIL_sport_GUI_Info_BG_4_1"
+			spriteType = "GFX_MIL_sport_GUI_Info_BG_4"
+			position = { x=25	 y=487 }
+		}
+
+		iconType = { #图标
+			name ="MIL_sport_GUI_Info_Icon_4"
+			spriteType = "GFX_MIL_sport_GUI_Info_Icon_4"
+			position = { x=32	 y=487 }
+		}
+
+		instantTextboxType = { #介绍文本
+			name = "MIL_sport_GUI_Info_Text_4_1"
+			position = { x = 54 y = 492  }
+			textureFile = ""
+			font = "LXGW_975_12"
+			borderSize = {x = 0 y = 0}
+			text = "BARE_MIL_sport_GUI_Info_Text_4_1"
+			maxWidth = 99
+			maxHeight = 16
+			format = center
+			alwaystransparent = yes
+		}
+
+
+		iconType = { #进度条
+			name ="MIL_sport_GUI_Info_Progress_4"
+			spriteType = "GFX_MIL_sport_GUI_Info_Progress"
+			position = { x=171	 y=488 }
+		}
+
+
+		iconType = { #分隔线
+			name ="MIL_sport_GUI_Info_line_4"
+			spriteType = "GFX_MIL_sport_GUI_Info_Line"
+			position = { x=25	 y=519 }
+		}
+
+
+		#第五行
+
+		iconType = { #文本背景1
+			name ="MIL_sport_GUI_Info_BG_5_1"
+			spriteType = "GFX_MIL_sport_GUI_Info_BG_5"
+			position = { x=25	 y=528 }
+		}
+
+		iconType = { #图标
+			name ="MIL_sport_GUI_Info_Icon_5"
+			spriteType = "GFX_MIL_sport_GUI_Info_Icon_5"
+			position = { x=32	 y=530 }
+		}
+
+		instantTextboxType = { #介绍文本
+			name = "MIL_sport_GUI_Info_Text_5_1"
+			position = { x = 54 y = 533  }
+			textureFile = ""
+			font = "LXGW_975_12"
+			borderSize = {x = 0 y = 0}
+			text = "BARE_MIL_sport_GUI_Info_Text_5_1"
+			maxWidth = 100
+			maxHeight = 16
+			format = center
+			alwaystransparent = yes
+		}
+
+
+		iconType = { #分隔线
+			name ="MIL_sport_GUI_Info_line_5"
+			spriteType = "GFX_MIL_sport_GUI_Info_Line"
+			position = { x=25	 y=561 }
+		}
+
+		#第六行
+
+
+		iconType = { #文本背景1
+			name ="MIL_sport_GUI_Info_BG_6_1"
+			spriteType = "GFX_MIL_sport_GUI_Info_BG_5"
+			position = { x=25	 y=571 }
+		}
+
+		iconType = { #图标
+			name ="MIL_sport_GUI_Info_Icon_6"
+			spriteType = "GFX_MIL_sport_GUI_Info_Icon_6"
+			position = { x=32	 y=574 }
+		}
+
+		instantTextboxType = { #介绍文本
+			name = "MIL_sport_GUI_Info_Text_6_1"
+			position = { x =54 y = 577  }
+			textureFile = ""
+			font = "LXGW_975_12"
+			borderSize = {x = 0 y = 0}
+			text = "BARE_MIL_sport_GUI_Info_Text_6_1"
+			maxWidth = 100
+			maxHeight = 16
+			format = center
+			alwaystransparent = yes
+		}
+
+
+		iconType = { #图标
+			name ="MIL_sport_GUI_Info_Start_Line"
+			spriteType = "GFX_MIL_sport_GUI_Info_Start_Line"
+			position = { x=148	 y=576 }
+		}
+
+		iconType = { #分隔线
+			name ="MIL_sport_GUI_Info_line_6"
+			spriteType = "GFX_MIL_sport_GUI_Info_Line"
+			position = { x=25	 y=605 }
+		}
+	}
+}

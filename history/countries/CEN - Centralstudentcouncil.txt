@@ -137,7 +137,7 @@ set_popularities = {
 	no_ideology = 100
 }
 
-create_faction = gsc_faction
+create_faction_from_template = faction_template_gsc
 add_to_faction = VAL
 add_to_faction = SRT
 add_to_faction = SCH

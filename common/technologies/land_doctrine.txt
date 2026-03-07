@@ -2,8 +2,8 @@ technologies = {
 ################################################################火炮一级
     artillery_11 = {
 		xp_research_type = army
-		xp_unlock_cost = 100
-		#xp_research_bonus = 1
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
 		path = {
 			leads_to_tech = artillery_13
@@ -17,20 +17,20 @@ technologies = {
 			 soft_attack = 0.05
 		}
 	    category_self_propelled_artillery = {
-             soft_attack = 0.05
+            soft_attack = 0.05
 		}
         enable_tactic = tactic_artillery_11
-		doctrine = yes
-		research_cost = 4.5
+		research_cost = 1
 		categories = {
 			land_doctrine
 			cat_superior_firepower
 		}
-		# dependencies = {
-		# 	pre_assault_bombardment = 1
-		# }
+		dependencies = {
+			T1_infantry_weapon = 1
+			T1_production = 1
+		}
 		ai_will_do = {
-			factor = 20 
+			factor = 20
 			modifier = {
 				not = {
 					has_army_experience > 100
@@ -48,13 +48,14 @@ technologies = {
 	}
 	artillery_13 = {
 		xp_research_type = army
-		xp_unlock_cost = 70
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
 		path = {
 			leads_to_tech = artillery_15
 			research_cost_coeff = 1
 		}
-		category_self_propelled_artillery = { 
+		category_self_propelled_artillery = {
 			soft_attack = 0.10
 		}
 		signal_company = {
@@ -63,14 +64,13 @@ technologies = {
 				defense = 0.10
 			}
 		}
-		doctrine = yes
-		research_cost = 4.5
+		research_cost = 1
 		categories = {
 			land_doctrine
 			cat_superior_firepower
 		}
 		ai_will_do = {
-			factor = 25 
+			factor = 25
 			modifier = {
 				not = {
 					has_army_experience > 90
@@ -88,21 +88,21 @@ technologies = {
 	}
 	artillery_14 = {
 		xp_research_type = army
-		xp_unlock_cost = 30
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
 		path = {
 			leads_to_tech = artillery_15
 			research_cost_coeff = 1
 		}
 		enable_tactic = tactic_artillery_12
-		doctrine = yes
-		research_cost = 4.5
+		research_cost = 1
 		categories = {
 			land_doctrine
 			cat_superior_firepower
 		}
 		ai_will_do = {
-			factor = 25 
+			factor = 25
 			modifier = {
 				not = {
 					has_army_experience > 90
@@ -120,14 +120,14 @@ technologies = {
 	}
 	artillery_15 = {
 		xp_research_type = army
-		xp_unlock_cost = 100
-		#xp_research_bonus = 1
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 		category_recon = {
 			recon = 0.5
 		}
 		category_army = {
 			hard_attack = 0.05
-		}	
+		}
 		recon = {
 			battalion_mult = {
 				category = category_anti_air
@@ -138,14 +138,13 @@ technologies = {
 			air_attack = 0.1
 		}
 		enable_tactic = tactic_artillery_13
-		doctrine = yes
-		research_cost = 4.5
+		research_cost = 1
 		categories = {
 			land_doctrine
 			cat_superior_firepower
 		}
 		ai_will_do = {
-			factor = 30 
+			factor = 30
 			modifier = {
 				not = {
 					has_army_experience > 120
@@ -165,8 +164,8 @@ technologies = {
 
     infantry_11 = {
 		xp_research_type = army
-		xp_unlock_cost = 100
-		#xp_research_bonus = 1
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
 		path = {
 			leads_to_tech = infantry_13
@@ -182,17 +181,17 @@ technologies = {
 		}
 		minimum_training_level = -0.1
 		enable_tactic = tactic_infantry_11
-		doctrine = yes
-		research_cost = 4.5
+		research_cost = 1
 		categories = {
 			land_doctrine
 			cat_mass_assault
 		}
-		# dependencies = {
-		# 	pre_assault_bombardment = 1
-		# }
+		dependencies = {
+			T1_infantry_weapon = 1
+			T1_mobile_vehicle = 1
+		}
 		ai_will_do = {
-			factor = 20 
+			factor = 20
 			modifier = {
 				not = {
 					has_army_experience > 100
@@ -210,7 +209,8 @@ technologies = {
 	}
 	infantry_13 = {
 		xp_research_type = army
-		xp_unlock_cost = 70
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
 		path = {
 			leads_to_tech = infantry_15
@@ -221,8 +221,7 @@ technologies = {
 			max_organisation = 5
 			defense = 0.05
 		}
-		doctrine = yes
-		research_cost = 4.5
+		research_cost = 1
 		categories = {
 			land_doctrine
 			cat_mass_assault
@@ -231,7 +230,7 @@ technologies = {
 		# 	pre_assault_bombardment = 1
 		# }
 		ai_will_do = {
-			factor = 25 
+			factor = 25
 			modifier = {
 				not = {
 					has_army_experience > 90
@@ -249,21 +248,21 @@ technologies = {
 	}
 	infantry_14 = {
 		xp_research_type = army
-		xp_unlock_cost = 30
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
 		path = {
 			leads_to_tech = infantry_15
 			research_cost_coeff = 1
 		}
 		enable_tactic = tactic_infantry_12
-		doctrine = yes
-		research_cost = 4.5
+		research_cost = 1
 		categories = {
 			land_doctrine
 			cat_mass_assault
 		}
 		ai_will_do = {
-			factor = 25 
+			factor = 25
 			modifier = {
 				not = {
 					has_army_experience > 90
@@ -281,9 +280,9 @@ technologies = {
 	}
 	infantry_15 = {
 		xp_research_type = army
-		xp_unlock_cost = 100
-		#xp_research_bonus = 1
-		
+		xp_research_bonus = 10
+		xp_boost_cost = 100
+
 		category_all_infantry = {
 			defense = 0.10
 			max_organisation = 10
@@ -295,14 +294,13 @@ technologies = {
 		#Land Units take less attrition
 		attrition = -0.1 #take 10% less attrition losses
 		out_of_supply_factor = -0.10
-		doctrine = yes
-		research_cost = 4.5
+		research_cost = 1
 		categories = {
 			land_doctrine
 			cat_mass_assault
 		}
 		ai_will_do = {
-			factor = 30 
+			factor = 30
 			modifier = {
 				not = {
 					has_army_experience > 120
@@ -322,8 +320,8 @@ technologies = {
 ##########################################################################装甲一级
     tank_11 = {
 		xp_research_type = army
-		xp_unlock_cost = 100
-		#xp_research_bonus = 1
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
 		path = {
 			leads_to_tech = tank_13
@@ -336,24 +334,24 @@ technologies = {
 		category_all_armor = {
 			breakthrough = 0.20
 		}
-		
+
 		category_mech = {
 			max_organisation = 2
 			breakthrough = 0.20
 		}
 		planning_speed = 0.3
         enable_tactic = tactic_tank_11
-		doctrine = yes
-		research_cost = 4.5
+		research_cost = 1
 		categories = {
 			land_doctrine
 			cat_mobile_warfare
 		}
-		# dependencies = {
-		# 	pre_assault_bombardment = 1
-		# }
+		dependencies = {
+			T1_assult_vehicle = 1
+			T1_production = 1
+		}
 		ai_will_do = {
-			factor = 20 
+			factor = 20
 			modifier = {
 				not = {
 					has_army_experience > 100
@@ -371,7 +369,8 @@ technologies = {
 	}
 	tank_13 = {
 		xp_research_type = army
-		xp_unlock_cost = 70
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
 		path = {
 			leads_to_tech = tank_15
@@ -387,8 +386,7 @@ technologies = {
 		category_all_armor = {
 			maximum_speed = 0.1
 		}
-		doctrine = yes
-		research_cost = 4.5
+		research_cost = 1
 		categories = {
 			land_doctrine
 			cat_mobile_warfare
@@ -397,7 +395,7 @@ technologies = {
 		# 	pre_assault_bombardment = 1
 		# }
 		ai_will_do = {
-			factor = 25 
+			factor = 25
 			modifier = {
 				not = {
 					has_army_experience > 90
@@ -415,7 +413,8 @@ technologies = {
 	}
 	tank_14 = {
 		xp_research_type = army
-		xp_unlock_cost = 30
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
 		path = {
 			leads_to_tech = tank_15
@@ -423,14 +422,13 @@ technologies = {
 		}
 
 		enable_tactic = tactic_tank_12
-		doctrine = yes
-		research_cost = 4.5
+		research_cost = 1
 		categories = {
 			land_doctrine
 			cat_mobile_warfare
 		}
 		ai_will_do = {
-			factor = 25 
+			factor = 25
 			modifier = {
 				not = {
 					has_army_experience > 90
@@ -448,27 +446,26 @@ technologies = {
 	}
 	tank_15 = {
 		xp_research_type = army
-		xp_unlock_cost = 100
-		#xp_research_bonus = 1
-		
+		xp_research_bonus = 10
+		xp_boost_cost = 100
+
 		category_tanks = {
 			max_organisation = 3
 			breakthrough = 0.20
-		}		
+		}
 		recon = {
 			maximum_speed = 0.1
 		}
 		army_speed_factor = 0.10
 		org_loss_when_moving = -0.1
 		enable_tactic = tactic_tank_13
-		doctrine = yes
-		research_cost = 4.5
+		research_cost = 1
 		categories = {
 			land_doctrine
 			cat_mobile_warfare
 		}
 		ai_will_do = {
-			factor = 30 
+			factor = 30
 			modifier = {
 				not = {
 					has_army_experience > 120
@@ -488,8 +485,8 @@ technologies = {
 ###############################################################机器人一级
     robot_11 = {
 		xp_research_type = army
-		xp_unlock_cost = 100
-		#xp_research_bonus = 1
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
 		path = {
 			leads_to_tech = robot_13
@@ -507,17 +504,17 @@ technologies = {
 		dig_in_speed_factor = 0.25
 		weekly_casualties_war_support = 0.001
 		enable_tactic = tactic_robot_11
-		doctrine = yes
-		research_cost = 4.5
+		research_cost = 1
 		categories = {
 			land_doctrine
 			cat_grand_battle_plan
 		}
-		# dependencies = {
-		# 	pre_assault_bombardment = 1
-		# }
+		dependencies = {
+			T1_assult_vehicle = 1
+			T1_electronic = 1
+		}
 		ai_will_do = {
-			factor = 20 
+			factor = 20
 			modifier = {
 				not = {
 					has_army_experience > 100
@@ -535,21 +532,21 @@ technologies = {
 	}
 	robot_14 = {
 		xp_research_type = army
-		xp_unlock_cost = 30
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
 		path = {
 			leads_to_tech = robot_15
 			research_cost_coeff = 1
 		}
 		enable_tactic = tactic_robot_12
-		doctrine = yes
-		research_cost = 4.5
+		research_cost = 1
 		categories = {
 			land_doctrine
 			cat_grand_battle_plan
 		}
 		ai_will_do = {
-			factor = 25 
+			factor = 25
 			modifier = {
 				not = {
 					has_army_experience > 90
@@ -567,7 +564,8 @@ technologies = {
 	}
 	robot_13 = {
 		xp_research_type = army
-		xp_unlock_cost = 70
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
 		path = {
 			leads_to_tech = robot_15
@@ -580,8 +578,7 @@ technologies = {
 		land_reinforce_rate = 0.02
 		max_planning = 0.1
 		command_power_gain = 0.25
-		doctrine = yes
-		research_cost = 4.5
+		research_cost = 1
 		categories = {
 			land_doctrine
 			cat_grand_battle_plan
@@ -590,7 +587,7 @@ technologies = {
 		# 	pre_assault_bombardment = 1
 		# }
 		ai_will_do = {
-			factor = 25 
+			factor = 25
 			modifier = {
 				not = {
 					has_army_experience > 90
@@ -608,8 +605,8 @@ technologies = {
 	}
 	robot_15 = {
 		xp_research_type = army
-		xp_unlock_cost = 100
-		#xp_research_bonus = 1
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 		category_army = {
 			breakthrough = 0.10
 			soft_attack = 0.05
@@ -619,14 +616,13 @@ technologies = {
 		command_power_gain = 0.25
 		max_planning = 0.1
 		enable_tactic = tactic_robot_13
-		doctrine = yes
-		research_cost = 4.5
+		research_cost = 1
 		categories = {
 			land_doctrine
 			cat_grand_battle_plan
 		}
 		ai_will_do = {
-			factor = 30 
+			factor = 30
 			modifier = {
 				not = {
 					has_army_experience > 120
@@ -645,8 +641,8 @@ technologies = {
 ################################################################火炮二级
     artillery_21 = {
 		xp_research_type = army
-		xp_unlock_cost = 100
-		#xp_research_bonus = 1
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
 		path = {
 			leads_to_tech = artillery_23
@@ -664,15 +660,15 @@ technologies = {
 			soft_attack = 0.25
 		}
 		enable_tactic = tactic_artillery_21
-		doctrine = yes
-		research_cost = 4.5
+		research_cost = 1.25
 		categories = {
 			land_doctrine
 			cat_superior_firepower
 		}
-		# dependencies = {
-		# 	pre_assault_bombardment = 1
-		# }
+		dependencies = {
+			T3_infantry_weapon = 1
+			T3_production = 1
+		}
 		allow = {
 			OR = {
 				AND = {
@@ -702,7 +698,7 @@ technologies = {
 			}
 		}
 		ai_will_do = {
-			factor = 22 
+			factor = 22
 			modifier = {
 				not = {
 					has_army_experience > 100
@@ -720,7 +716,8 @@ technologies = {
 	}
 	artillery_23 = {
 		xp_research_type = army
-		xp_unlock_cost = 70
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
 		path = {
 			leads_to_tech = artillery_25
@@ -730,13 +727,12 @@ technologies = {
 			default_morale = 0.2
 			soft_attack = 0.10
 		}
-		category_artillery = { 
+		category_artillery = {
 			soft_attack = 0.05
 			hard_attack = 0.05
 		}
 
-		doctrine = yes
-		research_cost = 4.5
+		research_cost = 1.25
 		categories = {
 			land_doctrine
 			cat_superior_firepower
@@ -745,7 +741,7 @@ technologies = {
 		# 	pre_assault_bombardment = 1
 		# }
 		ai_will_do = {
-			factor = 27 
+			factor = 27
 			modifier = {
 				not = {
 					has_army_experience > 90
@@ -763,21 +759,21 @@ technologies = {
 	}
 	artillery_24 = {
 		xp_research_type = army
-		xp_unlock_cost = 30
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
 		path = {
 			leads_to_tech = artillery_25
 			research_cost_coeff = 1
 		}
 		enable_tactic = tactic_artillery_22
-		doctrine = yes
-		research_cost = 4.5
+		research_cost = 1.25
 		categories = {
 			land_doctrine
 			cat_superior_firepower
 		}
 		ai_will_do = {
-			factor = 27 
+			factor = 27
 			modifier = {
 				not = {
 					has_army_experience > 90
@@ -795,8 +791,8 @@ technologies = {
 	}
 	artillery_25 = {
 		xp_research_type = army
-		xp_unlock_cost = 100
-		#xp_research_bonus = 1
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
 		category_support_battalions = {
 			max_organisation = 10
@@ -807,14 +803,13 @@ technologies = {
 		}
 		enable_tactic = tactic_artillery_23
 		army_bonus_air_superiority_factor = 0.10
-		doctrine = yes
-		research_cost = 4.5
+		research_cost = 1.25
 		categories = {
 			land_doctrine
 			cat_superior_firepower
 		}
 		ai_will_do = {
-			factor = 32 
+			factor = 32
 			modifier = {
 				not = {
 					has_army_experience > 120
@@ -834,8 +829,8 @@ technologies = {
 
     infantry_21 = {
 		xp_research_type = army
-		xp_unlock_cost = 100
-		#xp_research_bonus = 1
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
 		path = {
 			leads_to_tech = infantry_23
@@ -852,15 +847,15 @@ technologies = {
 		out_of_supply_factor = -0.10
 		no_supply_grace = 48 # more hours before supply penalty changes
 		enable_tactic = tactic_infantry_21
-		doctrine = yes
-		research_cost = 4.5
+		research_cost = 1.25
 		categories = {
 			land_doctrine
 			cat_mass_assault
 		}
-		# dependencies = {
-		# 	pre_assault_bombardment = 1
-		# }
+		dependencies = {
+			T3_infantry_weapon = 1
+			T3_mobile_vehicle = 1
+		}
 		allow = {
 			OR = {
 				AND = {
@@ -890,7 +885,7 @@ technologies = {
 			}
 		}
 		ai_will_do = {
-			factor = 22 
+			factor = 22
 			modifier = {
 				not = {
 					has_army_experience > 100
@@ -908,7 +903,8 @@ technologies = {
 	}
 	infantry_23 = {
 		xp_research_type = army
-		xp_unlock_cost = 70
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
 		path = {
 			leads_to_tech = infantry_25
@@ -919,8 +915,7 @@ technologies = {
 			default_morale = 0.05
 		}
 		attrition = -0.2
-		doctrine = yes
-		research_cost = 4.5
+		research_cost = 1.25
 		categories = {
 			land_doctrine
 			cat_mass_assault
@@ -929,7 +924,7 @@ technologies = {
 		# 	pre_assault_bombardment = 1
 		# }
 		ai_will_do = {
-			factor = 27 
+			factor = 27
 			modifier = {
 				not = {
 					has_army_experience > 90
@@ -947,21 +942,21 @@ technologies = {
 	}
 	infantry_24 = {
 		xp_research_type = army
-		xp_unlock_cost = 30
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
 		path = {
 			leads_to_tech = infantry_25
 			research_cost_coeff = 1
 		}
 		enable_tactic = tactic_infantry_22
-		doctrine = yes
-		research_cost = 4.5
+		research_cost = 1.25
 		categories = {
 			land_doctrine
 			cat_mass_assault
 		}
 		ai_will_do = {
-			factor = 27 
+			factor = 27
 			modifier = {
 				not = {
 					has_army_experience > 90
@@ -979,8 +974,8 @@ technologies = {
 	}
 	infantry_25 = {
 		xp_research_type = army
-		xp_unlock_cost = 100
-		#xp_research_bonus = 1
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
 		category_all_infantry = {
 			max_organisation = 15
@@ -991,16 +986,15 @@ technologies = {
 			default_morale = 0.1
 		}
 		enable_tactic = tactic_infantry_23
-		resistance_growth_on_our_occupied_states = 0.25 
-		resistance_damage_to_garrison_on_our_occupied_states = 0.1 #10% more partisan effects 
-		doctrine = yes
-		research_cost = 4.5
+		resistance_growth_on_our_occupied_states = 0.25
+		resistance_damage_to_garrison_on_our_occupied_states = 0.1 #10% more partisan effects
+		research_cost = 1.25
 		categories = {
 			land_doctrine
 			cat_mass_assault
 		}
 		ai_will_do = {
-			factor = 32 
+			factor = 32
 			modifier = {
 				not = {
 					has_army_experience > 120
@@ -1020,8 +1014,8 @@ technologies = {
 ##########################################################################装甲二级
     tank_21 = {
 		xp_research_type = army
-		xp_unlock_cost = 100
-		#xp_research_bonus = 1
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
 		path = {
 			leads_to_tech = tank_23
@@ -1043,15 +1037,15 @@ technologies = {
 			default_morale = 0.2
 		}
 		enable_tactic = tactic_tank_21
-		doctrine = yes
-		research_cost = 4.5
+		research_cost = 1.25
 		categories = {
 			land_doctrine
 			cat_mobile_warfare
 		}
-		# dependencies = {
-		# 	pre_assault_bombardment = 1
-		# }
+		dependencies = {
+			T3_assult_vehicle = 1
+			T3_production = 1
+		}
 		allow = {
 			OR = {
 				AND = {
@@ -1081,7 +1075,7 @@ technologies = {
 			}
 		}
 		ai_will_do = {
-			factor = 22 
+			factor = 22
 			modifier = {
 				not = {
 					has_army_experience > 100
@@ -1099,7 +1093,8 @@ technologies = {
 	}
 	tank_23 = {
 		xp_research_type = army
-		xp_unlock_cost = 70
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
 		path = {
 			leads_to_tech = tank_25
@@ -1113,15 +1108,14 @@ technologies = {
 			breakthrough = 0.20
 		}
 		category_self_propelled_artillery = {
-            soft_attack = 0.05	
+            soft_attack = 0.05
 		}
 		recon = {
 			maximum_speed = 0.1
 		}
 		planning_speed = 0.2
 		org_loss_when_moving = -0.1
-		doctrine = yes
-		research_cost = 4.5
+		research_cost = 1.25
 		categories = {
 			land_doctrine
 			cat_mobile_warfare
@@ -1130,7 +1124,7 @@ technologies = {
 		# 	pre_assault_bombardment = 1
 		# }
 		ai_will_do = {
-			factor = 27 
+			factor = 27
 			modifier = {
 				not = {
 					has_army_experience > 90
@@ -1148,21 +1142,21 @@ technologies = {
 	}
 	tank_24 = {
 		xp_research_type = army
-		xp_unlock_cost = 30
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
 		path = {
 			leads_to_tech = tank_25
 			research_cost_coeff = 1
 		}
 		enable_tactic = tactic_tank_22
-		doctrine = yes
-		research_cost = 4.5
+		research_cost = 1.25
 		categories = {
 			land_doctrine
 			cat_mobile_warfare
 		}
 		ai_will_do = {
-			factor = 27 
+			factor = 27
 			modifier = {
 				not = {
 					has_army_experience > 90
@@ -1180,8 +1174,8 @@ technologies = {
 	}
 	tank_25 = {
 		xp_research_type = army
-		xp_unlock_cost = 100
-		#xp_research_bonus = 1
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 		category_tanks = {
 			max_organisation = 3
 			breakthrough = 0.20
@@ -1193,14 +1187,13 @@ technologies = {
 		army_speed_factor = 0.10
 		planning_speed = 0.2
 		enable_tactic = tactic_tank_23
-		doctrine = yes
-		research_cost = 4.5
+		research_cost = 1.25
 		categories = {
 			land_doctrine
 			cat_mobile_warfare
 		}
 		ai_will_do = {
-			factor = 32 
+			factor = 32
 			modifier = {
 				not = {
 					has_army_experience > 120
@@ -1220,8 +1213,8 @@ technologies = {
 ###############################################################机器人二级
     robot_21 = {
 		xp_research_type = army
-		xp_unlock_cost = 100
-		#xp_research_bonus = 1
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
 		path = {
 			leads_to_tech = robot_23
@@ -1243,15 +1236,15 @@ technologies = {
 		max_planning = 0.1
 		out_of_supply_factor = -0.10
 		enable_tactic = tactic_robot_21
-		doctrine = yes
-		research_cost = 4.5
+		research_cost = 1.25
 		categories = {
 			land_doctrine
 			cat_grand_battle_plan
 		}
-		# dependencies = {
-		# 	pre_assault_bombardment = 1
-		# }
+		dependencies = {
+			T3_assult_vehicle = 1
+			T3_electronic = 1
+		}
 		allow = {
 			OR = {
 				AND = {
@@ -1281,7 +1274,7 @@ technologies = {
 			}
 		}
 		ai_will_do = {
-			factor = 22 
+			factor = 22
 			modifier = {
 				not = {
 					has_army_experience > 100
@@ -1299,7 +1292,8 @@ technologies = {
 	}
 	robot_23 = {
 		xp_research_type = army
-		xp_unlock_cost = 70
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
 		path = {
 			leads_to_tech = robot_25
@@ -1312,8 +1306,7 @@ technologies = {
             soft_attack = 0.2
 		}
 		coordination_bonus = 0.05
-		doctrine = yes
-		research_cost = 4.5
+		research_cost = 1.25
 		categories = {
 			land_doctrine
 			cat_grand_battle_plan
@@ -1322,7 +1315,7 @@ technologies = {
 		# 	pre_assault_bombardment = 1
 		# }
 		ai_will_do = {
-			factor = 27 
+			factor = 27
 			modifier = {
 				not = {
 					has_army_experience > 90
@@ -1340,21 +1333,21 @@ technologies = {
 	}
 	robot_24 = {
 		xp_research_type = army
-		xp_unlock_cost = 30
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
 		path = {
 			leads_to_tech = robot_25
 			research_cost_coeff = 1
 		}
 		enable_tactic = tactic_robot_22
-		doctrine = yes
-		research_cost = 4.5
+		research_cost = 1.25
 		categories = {
 			land_doctrine
 			cat_grand_battle_plan
 		}
 		ai_will_do = {
-			factor = 27 
+			factor = 27
 			modifier = {
 				not = {
 					has_army_experience > 90
@@ -1372,18 +1365,18 @@ technologies = {
 	}
 	robot_25 = {
 		xp_research_type = army
-		xp_unlock_cost = 100
-		#xp_research_bonus = 1
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
-		category_recon = { 
-			recon = 1 
-		} 
+		category_recon = {
+			recon = 1
+		}
 		category_support_battalions = {
             maximum_speed = 1
 		}
 		category_bm = {
 			soft_attack = 0.1
-		}	
+		}
 		category_tank_destroyers = {
 			hard_attack = 0.1
 		}
@@ -1393,14 +1386,13 @@ technologies = {
 		supply_consumption_factor = -0.10
 		land_night_attack = 0.25
 		enable_tactic = tactic_robot_23
-		doctrine = yes
-		research_cost = 4.5
+		research_cost = 1.25
 		categories = {
 			land_doctrine
 			cat_grand_battle_plan
 		}
 		ai_will_do = {
-			factor = 32 
+			factor = 32
 			modifier = {
 				not = {
 					has_army_experience > 120
@@ -1419,8 +1411,8 @@ technologies = {
 ################################################################火炮三级
     artillery_31 = {
 		xp_research_type = army
-		xp_unlock_cost = 100
-		#xp_research_bonus = 1
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
 		path = {
 			leads_to_tech = artillery_33
@@ -1444,45 +1436,17 @@ technologies = {
 			}
 		}
 		enable_tactic = tactic_artillery_31
-		doctrine = yes
-		research_cost = 4.5
+		research_cost = 1.5
 		categories = {
 			land_doctrine
 			cat_superior_firepower
 		}
-		# dependencies = {
-		# 	pre_assault_bombardment = 1
-		# }
-		allow = {
-			OR = {
-				AND = {
-					has_tech = artillery_25
-				    has_tech = infantry_25
-				}
-				AND = {
-				    has_tech = artillery_25
-				    has_tech = tank_25
-			    }
-				AND =  {
-				    has_tech = artillery_25
-				    has_tech = robot_25
-			    }
-				AND =  {
-				    has_tech = infantry_25
-                    has_tech = tank_25
-			    }
-				AND = {
-				    has_tech = infantry_25
-				    has_tech = robot_25
-			    }
-				AND = {
-				    has_tech = robot_25
-				    has_tech = tank_25
-			    }
-			}
+		dependencies = {
+			T5_infantry_weapon = 1
+			T5_production = 1
 		}
 		ai_will_do = {
-			factor = 24 
+			factor = 24
 			modifier = {
 				not = {
 					has_army_experience > 100
@@ -1500,13 +1464,14 @@ technologies = {
 	}
 	artillery_33 = {
 		xp_research_type = army
-		xp_unlock_cost = 70
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
 		path = {
 			leads_to_tech = artillery_35
 			research_cost_coeff = 1
 		}
-		category_self_propelled_artillery = { 
+		category_self_propelled_artillery = {
 			soft_attack = 0.05
 			hard_attack = 0.05
 			breakthrough = 0.20
@@ -1515,14 +1480,13 @@ technologies = {
 			recon = 0.5
 		}
 		army_bonus_air_superiority_factor = 0.15
-		doctrine = yes
-		research_cost = 4.5
+		research_cost = 1.5
 		categories = {
 			land_doctrine
 			cat_superior_firepower
 		}
 		ai_will_do = {
-			factor = 29 
+			factor = 29
 			modifier = {
 				not = {
 					has_army_experience > 90
@@ -1543,21 +1507,21 @@ technologies = {
 	}
 	artillery_34 = {
 		xp_research_type = army
-		xp_unlock_cost = 30
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
 		path = {
 			leads_to_tech = artillery_35
 			research_cost_coeff = 1
 		}
 		enable_tactic = tactic_artillery_32
-		doctrine = yes
-		research_cost = 4.5
+		research_cost = 1.5
 		categories = {
 			land_doctrine
 			cat_superior_firepower
 		}
 		ai_will_do = {
-			factor = 29 
+			factor = 29
 			modifier = {
 				not = {
 					has_army_experience > 90
@@ -1575,26 +1539,25 @@ technologies = {
 	}
 	artillery_35 = {
 		xp_research_type = army
-		xp_unlock_cost = 100
-		#xp_research_bonus = 1
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
 		category_front_line = {
 			 soft_attack = 0.15
 			 max_organisation = 5
 		}
-		category_self_propelled_artillery = { 
+		category_self_propelled_artillery = {
 			hard_attack = 0.10
 			max_organisation = 10
 		}
 		enable_tactic = tactic_artillery_33
-		doctrine = yes
-		research_cost = 4.5
+		research_cost = 1.5
 		categories = {
 			land_doctrine
 			cat_superior_firepower
 		}
 		ai_will_do = {
-			factor = 34 
+			factor = 34
 			modifier = {
 				not = {
 					has_army_experience > 120
@@ -1614,8 +1577,8 @@ technologies = {
 
     infantry_31 = {
 		xp_research_type = army
-		xp_unlock_cost = 100
-		#xp_research_bonus = 1
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
 		path = {
 			leads_to_tech = infantry_33
@@ -1632,45 +1595,17 @@ technologies = {
 			max_organisation = 10
 		}
 		enable_tactic = tactic_artillery_23
-		doctrine = yes
-		research_cost = 4.5
+		research_cost = 1.5
 		categories = {
 			land_doctrine
 			cat_mass_assault
 		}
-		# dependencies = {
-		# 	pre_assault_bombardment = 1
-		# }
-		allow = {
-			OR = {
-				AND = {
-					has_tech = artillery_25
-				    has_tech = infantry_25
-				}
-				AND = {
-				    has_tech = artillery_25
-				    has_tech = tank_25
-			    }
-				AND =  {
-				    has_tech = artillery_25
-				    has_tech = robot_25
-			    }
-				AND =  {
-				    has_tech = infantry_25
-                    has_tech = tank_25
-			    }
-				AND = {
-				    has_tech = infantry_25
-				    has_tech = robot_25
-			    }
-				AND = {
-				    has_tech = robot_25
-				    has_tech = tank_25
-			    }
-			}
+		dependencies = {
+			T5_infantry_weapon = 1
+			T5_mobile_vehicle = 1
 		}
 		ai_will_do = {
-			factor = 24 
+			factor = 24
 			modifier = {
 				not = {
 					has_army_experience > 100
@@ -1688,7 +1623,8 @@ technologies = {
 	}
 	infantry_33 = {
 		xp_research_type = army
-		xp_unlock_cost = 70
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
 		path = {
 			leads_to_tech = infantry_35
@@ -1701,8 +1637,7 @@ technologies = {
 		}
 		resistance_damage_to_garrison_on_our_occupied_states = 0.1
 		out_of_supply_factor = -0.20
-		doctrine = yes
-		research_cost = 4.5
+		research_cost = 1.5
 		categories = {
 			land_doctrine
 			cat_mass_assault
@@ -1711,7 +1646,7 @@ technologies = {
 		# 	pre_assault_bombardment = 1
 		# }
 		ai_will_do = {
-			factor = 29 
+			factor = 29
 			modifier = {
 				not = {
 					has_army_experience > 90
@@ -1729,21 +1664,21 @@ technologies = {
 	}
 	infantry_34 = {
 		xp_research_type = army
-		xp_unlock_cost = 30
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
 		path = {
 			leads_to_tech = infantry_35
 			research_cost_coeff = 1
 		}
 		enable_tactic = tactic_infantry_32
-		doctrine = yes
-		research_cost = 4.5
+		research_cost = 1.5
 		categories = {
 			land_doctrine
 			cat_mass_assault
 		}
 		ai_will_do = {
-			factor = 29 
+			factor = 29
 			modifier = {
 				not = {
 					has_army_experience > 90
@@ -1761,8 +1696,8 @@ technologies = {
 	}
 	infantry_35 = {
 		xp_research_type = army
-		xp_unlock_cost = 100
-		#xp_research_bonus = 1
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
 		infantry = {
 			combat_width = -0.3
@@ -1777,14 +1712,13 @@ technologies = {
 			maximum_speed = 0.5
 		}
 		enable_tactic = tactic_infantry_33
-		doctrine = yes
-		research_cost = 4.5
+		research_cost = 1.5
 		categories = {
 			land_doctrine
 			cat_mass_assault
 		}
 		ai_will_do = {
-			factor = 34 
+			factor = 34
 			modifier = {
 				not = {
 					has_army_experience > 120
@@ -1804,8 +1738,8 @@ technologies = {
 ##########################################################################装甲三级
     tank_31 = {
 		xp_research_type = army
-		xp_unlock_cost = 100
-		#xp_research_bonus = 1
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
 		path = {
 			leads_to_tech = tank_33
@@ -1817,51 +1751,23 @@ technologies = {
 		}
 		category_self_propelled_artillery = {
 			soft_attack = 0.10
-            maximum_speed = 0.1	
+            maximum_speed = 0.1
 		}
 		category_tanks = {
 			max_organisation = 5
 		}
 		enable_tactic = tactic_tank_31
-		doctrine = yes
-		research_cost = 4.5
+		research_cost = 1.5
 		categories = {
 			land_doctrine
 			cat_mobile_warfare
 		}
-		# dependencies = {
-		# 	pre_assault_bombardment = 1
-		# }
-		allow = {
-			OR = {
-				AND = {
-					has_tech = artillery_25
-				    has_tech = infantry_25
-				}
-				AND = {
-				    has_tech = artillery_25
-				    has_tech = tank_25
-			    }
-				AND =  {
-				    has_tech = artillery_25
-				    has_tech = robot_25
-			    }
-				AND =  {
-				    has_tech = infantry_25
-                    has_tech = tank_25
-			    }
-				AND = {
-				    has_tech = infantry_25
-				    has_tech = robot_25
-			    }
-				AND = {
-				    has_tech = robot_25
-				    has_tech = tank_25
-			    }
-			}
+		dependencies = {
+			T5_assult_vehicle = 1
+			T5_production = 1
 		}
 		ai_will_do = {
-			factor = 24 
+			factor = 24
 			modifier = {
 				not = {
 					has_army_experience > 100
@@ -1879,7 +1785,8 @@ technologies = {
 	}
 	tank_33 = {
 		xp_research_type = army
-		xp_unlock_cost = 70
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
 		path = {
 			leads_to_tech = tank_35
@@ -1896,9 +1803,8 @@ technologies = {
 		category_all_armor = {
 			default_morale = 0.1
 		}
-		
-		doctrine = yes
-		research_cost = 4.5
+
+		research_cost = 1.5
 		categories = {
 			land_doctrine
 			cat_mobile_warfare
@@ -1907,7 +1813,7 @@ technologies = {
 		# 	pre_assault_bombardment = 1
 		# }
 		ai_will_do = {
-			factor = 29 
+			factor = 29
 			modifier = {
 				not = {
 					has_army_experience > 90
@@ -1925,21 +1831,21 @@ technologies = {
 	}
 	tank_34 = {
 		xp_research_type = army
-		xp_unlock_cost = 30
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
 		path = {
 			leads_to_tech = tank_35
 			research_cost_coeff = 1
 		}
 		enable_tactic = tactic_tank_32
-		doctrine = yes
-		research_cost = 4.5
+		research_cost = 1.5
 		categories = {
 			land_doctrine
 			cat_mobile_warfare
 		}
 		ai_will_do = {
-			factor = 29 
+			factor = 29
 			modifier = {
 				not = {
 					has_army_experience > 90
@@ -1957,8 +1863,8 @@ technologies = {
 	}
 	tank_35 = {
 		xp_research_type = army
-		xp_unlock_cost = 100
-		#xp_research_bonus = 1
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 		category_all_armor = {
 			max_organisation = 5
 			breakthrough = 0.20
@@ -1970,14 +1876,13 @@ technologies = {
 			max_organisation = 10
 		}
 		enable_tactic = tactic_tank_33
-		doctrine = yes
-		research_cost = 4.5
+		research_cost = 1.5
 		categories = {
 			land_doctrine
 			cat_mobile_warfare
 		}
 		ai_will_do = {
-			factor = 34 
+			factor = 34
 			modifier = {
 				not = {
 					has_army_experience > 120
@@ -1997,8 +1902,8 @@ technologies = {
 ###############################################################机器人三级
     robot_31 = {
 		xp_research_type = army
-		xp_unlock_cost = 100
-		#xp_research_bonus = 1
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
 		path = {
 			leads_to_tech = robot_33
@@ -2011,50 +1916,22 @@ technologies = {
 		category_bm = {
 			max_organisation = 5
 			soft_attack = 0.05
-		}	
+		}
 		land_reinforce_rate = 0.01
 		minimum_training_level = -0.5
 		weekly_casualties_war_support = 0.001
 		enable_tactic = tactic_robot_31
-		doctrine = yes
-		research_cost = 4.5
+		research_cost = 1.5
 		categories = {
 			land_doctrine
 			cat_grand_battle_plan
 		}
-		# dependencies = {
-		# 	pre_assault_bombardment = 1
-		# }
-		allow = {
-			OR = {
-				AND = {
-					has_tech = artillery_25
-				    has_tech = infantry_25
-				}
-				AND = {
-				    has_tech = artillery_25
-				    has_tech = tank_25
-			    }
-				AND =  {
-				    has_tech = artillery_25
-				    has_tech = robot_25
-			    }
-				AND =  {
-				    has_tech = infantry_25
-                    has_tech = tank_25
-			    }
-				AND = {
-				    has_tech = infantry_25
-				    has_tech = robot_25
-			    }
-				AND = {
-				    has_tech = robot_25
-				    has_tech = tank_25
-			    }
-			}
+		dependencies = {
+			T5_assult_vehicle = 1
+			T5_electronic = 1
 		}
 		ai_will_do = {
-			factor = 24 
+			factor = 24
 			modifier = {
 				not = {
 					has_army_experience > 100
@@ -2072,7 +1949,8 @@ technologies = {
 	}
 	robot_33 = {
 		xp_research_type = army
-		xp_unlock_cost = 70
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
 		path = {
 			leads_to_tech = robot_35
@@ -2083,14 +1961,13 @@ technologies = {
 			max_organisation = 5
 			soft_attack = 0.05
 			maximum_speed = 0.1
-		}	
+		}
 		category_attack_heil = {
             soft_attack = 0.25
 			hard_attack = 0.25
 		}
-	
-		doctrine = yes
-		research_cost = 4.5
+
+		research_cost = 1.5
 		categories = {
 			land_doctrine
 			cat_grand_battle_plan
@@ -2099,7 +1976,7 @@ technologies = {
 		# 	pre_assault_bombardment = 1
 		# }
 		ai_will_do = {
-			factor = 29 
+			factor = 29
 			modifier = {
 				not = {
 					has_army_experience > 90
@@ -2117,21 +1994,21 @@ technologies = {
 	}
 	robot_34 = {
 		xp_research_type = army
-		xp_unlock_cost = 30
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
 		path = {
 			leads_to_tech = robot_35
 			research_cost_coeff = 1
 		}
 		enable_tactic = tactic_robot_32
-		doctrine = yes
-		research_cost = 4.5
+		research_cost = 1.5
 		categories = {
 			land_doctrine
 			cat_grand_battle_plan
 		}
 		ai_will_do = {
-			factor = 29 
+			factor = 29
 			modifier = {
 				not = {
 					has_army_experience > 90
@@ -2149,8 +2026,8 @@ technologies = {
 	}
 	robot_35 = {
 		xp_research_type = army
-		xp_unlock_cost = 100
-		#xp_research_bonus = 1
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 		enable_tactic = tactic_robot_33
 
 		category_army = {
@@ -2163,14 +2040,13 @@ technologies = {
 		}
 		land_reinforce_rate = 0.02
 		org_loss_when_moving = -0.25
-		doctrine = yes
-		research_cost = 4.5
+		research_cost = 1.5
 		categories = {
 			land_doctrine
 			cat_grand_battle_plan
 		}
 		ai_will_do = {
-			factor = 34 
+			factor = 34
 			modifier = {
 				not = {
 					has_army_experience > 120
@@ -2189,8 +2065,8 @@ technologies = {
 #######################################################################特殊学说
     Gehenna_1 = {
 		xp_research_type = army
-		xp_unlock_cost = 50
-		#xp_research_bonus = 1
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 		xor = { Gehenna_2 }
 		enable_tactic = tactic_tank_22
 		category_all_armor = {
@@ -2198,7 +2074,6 @@ technologies = {
 		}
 		no_supply_grace = 48
 		planning_speed = 0.5
-		doctrine = yes
 		research_cost = 4.5
 		categories = {
 			land_doctrine
@@ -2219,10 +2094,9 @@ technologies = {
 	}
 	Gehenna_2 = {
 		xp_research_type = army
-		xp_unlock_cost = 50
-		#xp_research_bonus = 1
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
-		doctrine = yes
 		research_cost = 4.5
 		xor = { Gehenna_1 }
 		categories = {
@@ -2251,8 +2125,8 @@ technologies = {
 	}
 	Trinity_1 = {
 		xp_research_type = army
-		xp_unlock_cost = 50
-		#xp_research_bonus = 1
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 		xor = { Trinity_2 }
 		category_support_battalions = {
 			soft_attack = 0.2
@@ -2261,7 +2135,6 @@ technologies = {
 			air_attack = 0.1
 		}
 		enable_tactic = tactic_artillery_22
-		doctrine = yes
 		research_cost = 4.5
 		categories = {
 			land_doctrine
@@ -2282,10 +2155,9 @@ technologies = {
 	}
 	Trinity_2 = {
 		xp_research_type = army
-		xp_unlock_cost = 50
-		#xp_research_bonus = 1
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
-		doctrine = yes
 		research_cost = 4.5
 		xor = { Trinity_1 }
 		categories = {
@@ -2311,15 +2183,8 @@ technologies = {
 	}
 	Millennium_1 = {
 		xp_research_type = army
-		xp_unlock_cost = 50
-		#xp_research_bonus = 1
-
-		allow = {
-			tag = MIL
-			##↓↓防止AI虚空研究这个科技，实装后可以去掉↓↓##
-			always = no
-		}
-
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 		path = {
 			leads_to_tech = Millennium_2
 			research_cost_coeff = 1
@@ -2334,35 +2199,29 @@ technologies = {
 		}
 		max_planning = 0.2
 		enable_tactic = tactic_robot_22
-		doctrine = yes
 		research_cost = 4.5
 		categories = {
 			land_doctrine
 		}
-		
+		allow = {
+			tag = MIL
+		}
 		ai_will_do = {
 			factor = 30
 		}
-		#folder = {
-		#	name = land_doctrine_folder
-		#	position = {
-		#		x = -2
-		#		y = 0
-		#	}
-		#}
+		folder = {
+			name = land_doctrine_folder
+			position = {
+				x = -2
+				y = 0
+			}
+		}
 	}
 	Millennium_2 = {
 		xp_research_type = army
-		xp_unlock_cost = 150
-		#xp_research_bonus = 1
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
-		allow = {
-			tag = MIL
-			##↓↓防止AI虚空研究这个科技，实装后可以去掉↓↓##
-			always = no
-		}
-
-		doctrine = yes
 		research_cost = 4.5
 		categories = {
 			land_doctrine
@@ -2370,30 +2229,22 @@ technologies = {
 		ai_will_do = {
 			factor = 30
 		}
-		#folder = {
-		#	name = land_doctrine_folder
-		#	position = {
-		#		x = -2
-		#		y = 2
-		#	}
-		#}
+		folder = {
+			name = land_doctrine_folder
+			position = {
+				x = -2
+				y = 2
+			}
+		}
 	}
 	Abydos_1 = {
 		xp_research_type = army
-		xp_unlock_cost = 50
-		#xp_research_bonus = 1
-
-		allow = {
-			tag = ABY
-			##↓↓防止AI虚空研究这个科技，实装后可以去掉↓↓##
-			always = no
-		}
-
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 		path = {
 			leads_to_tech = Abydos_2
 			research_cost_coeff = 1
 		}
-		doctrine = yes
 		research_cost = 4.5
 		categories = {
 			land_doctrine
@@ -2406,30 +2257,25 @@ technologies = {
 		max_dig_in = 5
 		dig_in_speed_factor = 0.25
 		enable_tactic = tactic_infantry_23
-
+		allow = {
+			tag = ABY
+		}
 		ai_will_do = {
 			factor = 30
 		}
-		#folder = {
-		#	name = land_doctrine_folder
-		#	position = {
-		#		x = -2
-		#		y = 0
-		#	}
-		#}
+		folder = {
+			name = land_doctrine_folder
+			position = {
+				x = -2
+				y = 0
+			}
+		}
 	}
 	Abydos_2 = {
 		xp_research_type = army
-		xp_unlock_cost = 150
-		#xp_research_bonus = 1
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
-		allow = {
-			tag = ABY
-			##↓↓防止AI虚空研究这个科技，实装后可以去掉↓↓##
-			always = no
-		}
-
-		doctrine = yes
 		research_cost = 4.5
 		categories = {
 			land_doctrine
@@ -2438,59 +2284,46 @@ technologies = {
 		ai_will_do = {
 			factor = 30
 		}
-		#folder = {
-		#	name = land_doctrine_folder
-		#	position = {
-		#		x = -2
-		#		y = 2
-		#	}
-		#}
+		folder = {
+			name = land_doctrine_folder
+			position = {
+				x = -2
+				y = 2
+			}
+		}
 	}
 	Hyakkiyako_1 = {
 		xp_research_type = army
-		xp_unlock_cost = 50
-		#xp_research_bonus = 1
-
-		allow = {
-			tag = HYA
-			##↓↓防止AI虚空研究这个科技，实装后可以去掉↓↓##
-			always = no
-		}
-
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 		path = {
 			leads_to_tech = Hyakkiyako_2
 			research_cost_coeff = 1
 		}
-		doctrine = yes
 		research_cost = 4.5
 		categories = {
 			land_doctrine
 			cat_grand_battle_plan
 		}
-		
+		allow = {
+			tag = HYA
+		}
 		ai_will_do = {
 			factor = 30
 		}
-		#folder = {
-		#	name = land_doctrine_folder
-		#	position = {
-		#		x = -2
-		#		y = 0
-		#	}
-		#}
+		folder = {
+			name = land_doctrine_folder
+			position = {
+				x = -2
+				y = 0
+			}
+		}
 	}
 	Hyakkiyako_2 = {
 		xp_research_type = army
-		xp_unlock_cost = 150
-		#xp_research_bonus = 1
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
-		allow = {
-			tag = HYA
-			##↓↓防止AI虚空研究这个科技，实装后可以去掉↓↓##
-			always = no
-		}
-
-		doctrine = yes
 		research_cost = 4.5
 		categories = {
 			land_doctrine
@@ -2499,59 +2332,46 @@ technologies = {
 		ai_will_do = {
 			factor = 30
 		}
-		#folder = {
-		#	name = land_doctrine_folder
-		#	position = {
-		#		x = -2
-		#		y = 2
-		#	}
-		#}
+		folder = {
+			name = land_doctrine_folder
+			position = {
+				x = -2
+				y = 2
+			}
+		}
 	}
 	Shanhaijing_1 = {
 		xp_research_type = army
-		xp_unlock_cost = 50
-		#xp_research_bonus = 1
-
-		allow = {
-			tag = SHA
-			##↓↓防止AI虚空研究这个科技，实装后可以去掉↓↓##
-			always = no
-		}
-
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 		path = {
 			leads_to_tech = Shanhaijing_2
 			research_cost_coeff = 1
 		}
-		doctrine = yes
 		research_cost = 4.5
 		categories = {
 			land_doctrine
 			cat_grand_battle_plan
 		}
-		
+		allow = {
+			tag = SHA
+		}
 		ai_will_do = {
 			factor = 30
 		}
-		#folder = {
-		#	name = land_doctrine_folder
-		#	position = {
-		#		x = -2
-		#		y = 0
-		#	}
-		#}
+		folder = {
+			name = land_doctrine_folder
+			position = {
+				x = -2
+				y = 0
+			}
+		}
 	}
 	Shanhaijing_2 = {
 		xp_research_type = army
-		xp_unlock_cost = 150
-		#xp_research_bonus = 1
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
-		allow = {
-			tag = SHA
-			##↓↓防止AI虚空研究这个科技，实装后可以去掉↓↓##
-			always = no
-		}
-
-		doctrine = yes
 		research_cost = 4.5
 		categories = {
 			land_doctrine
@@ -2560,59 +2380,46 @@ technologies = {
 		ai_will_do = {
 			factor = 30
 		}
-		#folder = {
-		#	name = land_doctrine_folder
-		#	position = {
-		#		x = -2
-		#		y = 2
-		#	}
-		#}
+		folder = {
+			name = land_doctrine_folder
+			position = {
+				x = -2
+				y = 2
+			}
+		}
 	}
 	RedWinter_1 = {
 		xp_research_type = army
-		xp_unlock_cost = 50
-		#xp_research_bonus = 1
-
-		allow = {
-			tag = RWT
-			##↓↓防止AI虚空研究这个科技，实装后可以去掉↓↓##
-			always = no
-		}
-
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 		path = {
 			leads_to_tech = RedWinter_2
 			research_cost_coeff = 1
 		}
-		doctrine = yes
 		research_cost = 4.5
 		categories = {
 			land_doctrine
 			cat_grand_battle_plan
 		}
-		
+		allow = {
+			tag = RWT
+		}
 		ai_will_do = {
 			factor = 30
 		}
-		#folder = {
-		#	name = land_doctrine_folder
-		#	position = {
-		#		x = -2
-		#		y = 0
-		#	}
-		#}
+		folder = {
+			name = land_doctrine_folder
+			position = {
+				x = -2
+				y = 0
+			}
+		}
 	}
 	RedWinter_2 = {
 		xp_research_type = army
-		xp_unlock_cost = 150
-		#xp_research_bonus = 1
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
-		allow = {
-			tag = RWT
-			##↓↓防止AI虚空研究这个科技，实装后可以去掉↓↓##
-			always = no
-		}
-
-		doctrine = yes
 		research_cost = 4.5
 		categories = {
 			land_doctrine
@@ -2621,25 +2428,18 @@ technologies = {
 		ai_will_do = {
 			factor = 30
 		}
-		#folder = {
-		#	name = land_doctrine_folder
-		#	position = {
-		#		x = -2
-		#		y = 2
-		#	}
-		#}
+		folder = {
+			name = land_doctrine_folder
+			position = {
+				x = -2
+				y = 2
+			}
+		}
 	}
 	Specialresponseteam_1 = {
 		xp_research_type = army
-		xp_unlock_cost = 50
-		#xp_research_bonus = 1
-
-		allow = {
-			tag = SRT
-			##↓↓防止AI虚空研究这个科技，实装后可以去掉↓↓##
-			always = no
-		}
-
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 		path = {
 			leads_to_tech = Specialresponseteam_2
 			research_cost_coeff = 1
@@ -2653,35 +2453,29 @@ technologies = {
 			soft_attack = 0.2
 		}
 		enable_tactic = tactic_infantry_22
-		doctrine = yes
 		research_cost = 4.5
 		categories = {
 			land_doctrine
 		}
-		
+		allow = {
+			tag = SRT
+		}
 		ai_will_do = {
 			factor = 30
 		}
-		#folder = {
-		#	name = land_doctrine_folder
-		#	position = {
-		#		x = -2
-		#		y = 0
-		#	}
-		#}
+		folder = {
+			name = land_doctrine_folder
+			position = {
+				x = -2
+				y = 0
+			}
+		}
 	}
 	Specialresponseteam_2 = {
 		xp_research_type = army
-		xp_unlock_cost = 150
-		#xp_research_bonus = 1
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
-		allow = {
-			tag = SRT
-			##↓↓防止AI虚空研究这个科技，实装后可以去掉↓↓##
-			always = no
-		}
-
-		doctrine = yes
 		research_cost = 4.5
 		categories = {
 			land_doctrine
@@ -2690,59 +2484,46 @@ technologies = {
 		ai_will_do = {
 			factor = 30
 		}
-		#folder = {
-		#	name = land_doctrine_folder
-		#	position = {
-		#		x = -2
-		#		y = 2
-		#	}
-		#}
+		folder = {
+			name = land_doctrine_folder
+			position = {
+				x = -2
+				y = 2
+			}
+		}
 	}
 	Valkyrie_1 = {
 		xp_research_type = army
-		xp_unlock_cost = 50
-		#xp_research_bonus = 1
-
-		allow = {
-			tag = VAL
-			##↓↓防止AI虚空研究这个科技，实装后可以去掉↓↓##
-			always = no
-		}
-		
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 		path = {
 			leads_to_tech = Valkyrie_2
 			research_cost_coeff = 1
 		}
-		doctrine = yes
 		research_cost = 4.5
 		categories = {
 			land_doctrine
 			cat_grand_battle_plan
 		}
-		
+		allow = {
+			tag = VAL
+		}
 		ai_will_do = {
 			factor = 30
 		}
-		#folder = {
-		#	name = land_doctrine_folder
-		#	position = {
-		#		x = -2
-		#		y = 0
-		#	}
-		#}
+		folder = {
+			name = land_doctrine_folder
+			position = {
+				x = -2
+				y = 0
+			}
+		}
 	}
 	Valkyrie_2 = {
 		xp_research_type = army
-		xp_unlock_cost = 150
-		#xp_research_bonus = 1
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
-		allow = {
-			tag = VAL
-			##↓↓防止AI虚空研究这个科技，实装后可以去掉↓↓##
-			always = no
-		}
-
-		doctrine = yes
 		research_cost = 4.5
 		categories = {
 			land_doctrine
@@ -2751,19 +2532,18 @@ technologies = {
 		ai_will_do = {
 			factor = 30
 		}
-		#folder = {
-		#	name = land_doctrine_folder
-		#	position = {
-		#		x = -2
-		#		y = 2
-		#	}
-		#}
+		folder = {
+			name = land_doctrine_folder
+			position = {
+				x = -2
+				y = 2
+			}
+		}
 	}
 	Arius_1 = {
 		xp_research_type = army
-		xp_unlock_cost = 50
-		#xp_research_bonus = 1
-		doctrine = yes
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 		research_cost = 4.5
 		xor = { Arius_2 }
 		category_special_infantry = {
@@ -2790,10 +2570,9 @@ technologies = {
 	}
 	Arius_2 = {
 		xp_research_type = army
-		xp_unlock_cost = 50
-		#xp_research_bonus = 1
+		xp_research_bonus = 10
+		xp_boost_cost = 100
 
-		doctrine = yes
 		research_cost = 4.5
 		xor = { Arius_1 }
 		categories = {

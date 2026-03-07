@@ -260,8 +260,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Clear_more_debris_areas.dds"
 	}
 	spriteType = {
-		name = "GFX_goal_MIL_Tower_mid-term_Project"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Tower_mid-term_Project.dds"
+		name = "GFX_goal_MIL_Tower_mid_term_Project"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Tower_mid_term_Project.dds"
 	}
 	spriteType = {
 		name = "GFX_goal_MIL_more_research_equipment"
@@ -474,6 +474,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_goal_MIL_Security_Committee_Defense_Reform_Plan"
 		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Security_Committee_Defense_Reform_Plan.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_MIL_we_can_do_it_by_ourselves"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_we_can_do_it_by_ourselves.dds"
 	}
 	spriteType = {
 		name = "GFX_goal_MIL_Integrate_C_and_C"

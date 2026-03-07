@@ -10,7 +10,7 @@ ideas = {
 			default = yes
 			cancel_if_invalid = no
 			modifier = {
-				consumer_goods_factor = 0.4
+				consumer_goods_expected_value = 0.4
 				production_speed_industrial_complex_factor = 0.3
 				production_speed_arms_factory_factor = -0.3
 				production_speed_infrastructure_factor = 0.1
@@ -19,6 +19,7 @@ ideas = {
 				research_speed_factor = 0.05
 				stability_weekly = 0.01
 				industrial_capacity_factory = -0.15
+				
 			}
 			ai_will_do = {
 				base = 3
@@ -30,12 +31,13 @@ ideas = {
 			removal_cost = -1
 			cancel_if_invalid = no
 			modifier = {
-				consumer_goods_factor = 0.3
+				consumer_goods_expected_value = 0.3
 				production_speed_industrial_complex_factor = 0.2
 				production_speed_arms_factory_factor = -0.2
 				production_speed_infrastructure_factor = 0.05
 				research_speed_factor = 0.15
 				industrial_capacity_factory = -0.1
+				factory_energy_consumption = 0.2
 			}
 		}
 		#补给优先
@@ -46,7 +48,7 @@ ideas = {
 			available = {
 			}
 			modifier = {
-				consumer_goods_factor = 0.2
+				consumer_goods_expected_value = 0.2
 				production_speed_industrial_complex_factor = 0.1
 				production_speed_arms_factory_factor = -0.2
 				production_speed_infrastructure_factor = 0.2
@@ -56,6 +58,7 @@ ideas = {
 				production_cost_supply_node_factor = -0.3
 				research_speed_factor = 0.05
 				stability_weekly = 0.01
+				factory_energy_consumption = -0.1
 			}
 		}
 		#军备建设
@@ -67,12 +70,13 @@ ideas = {
 				has_war_support > 0.39
 			}
 			modifier = {
-				consumer_goods_factor = 0.15
+				consumer_goods_expected_value = 0.15
 				production_speed_industrial_complex_factor = -0.3
 				production_speed_arms_factory_factor = 0.3
 				production_speed_infrastructure_factor = -0.05
 				research_speed_factor = 0.05
 				industrial_capacity_factory = 0.2
+				factory_energy_consumption = 0.2
 			}
 			ai_will_do = {
 				base = 0
@@ -94,7 +98,7 @@ ideas = {
 				}
 			}
 			modifier = {
-				consumer_goods_factor = 0.1
+				consumer_goods_expected_value = 0.1
 				production_speed_industrial_complex_factor = -0.2
 				production_speed_arms_factory_factor = 0.2
 				production_speed_infrastructure_factor = 0.05
@@ -104,6 +108,7 @@ ideas = {
 				industrial_capacity_factory = 0.2
 				stability_weekly = -0.01
 				war_support_weekly = 0.02
+				factory_energy_consumption = 0.3
 			}
 		}
 		###特殊经济法案###
@@ -124,7 +129,7 @@ ideas = {
 				has_war = yes
 			}
 			modifier = {
-				consumer_goods_factor = 0.05
+				consumer_goods_expected_value = 0.05
 				production_speed_industrial_complex_factor = -0.1
 				production_speed_arms_factory_factor = 0.2
 				production_speed_infrastructure_factor = -0.05
@@ -136,6 +141,7 @@ ideas = {
 				war_support_weekly = 0.03
 				army_attack_factor = 0.1
 				army_defence_factor = 0.1
+				factory_energy_consumption = 0.3
 			}
 		}
 		#夫人控制
@@ -162,7 +168,7 @@ ideas = {
 				}
 			}
 			modifier = {
-				consumer_goods_factor = 0.05
+				consumer_goods_expected_value = 0.05
 				production_speed_industrial_complex_factor = 0.1
 				production_speed_arms_factory_factor = 0.2
 				production_speed_fuel_silo_factor = 0.2
@@ -172,6 +178,7 @@ ideas = {
 				production_speed_bunker_factor = 0.3
 				research_speed_factor = 0.05
 				industrial_capacity_factory = 0.1
+				factory_energy_consumption = -0.5
 			}
 			
 			
@@ -194,7 +201,7 @@ ideas = {
 				always = no
 			}
 			modifier = {
-				consumer_goods_factor = 0.15
+				consumer_goods_expected_value = 0.15
 				production_speed_industrial_complex_factor = 0.2
 				production_speed_arms_factory_factor = 0.2
 				production_speed_infrastructure_factor = 0.2
@@ -221,7 +228,7 @@ ideas = {
 				always = no
 			}
 			modifier = {
-				consumer_goods_factor = 0.05
+				consumer_goods_expected_value = 0.05
 				production_speed_industrial_complex_factor = -0.1
 				production_speed_arms_factory_factor = 0.2
 				production_speed_infrastructure_factor = -0.05
@@ -246,7 +253,7 @@ ideas = {
 			available = {
 			}
 			modifier = {
-				consumer_goods_factor = 0.2
+				consumer_goods_expected_value = 0.2
 				production_speed_industrial_complex_factor = 0.1
 				production_speed_arms_factory_factor = 0.1
 				production_speed_fuel_silo_factor = -0.2
@@ -256,6 +263,7 @@ ideas = {
 				production_speed_bunker_factor = 0.3
 				research_speed_factor = 0.25
 				industrial_capacity_factory = 0.1
+				factory_energy_consumption = 0.3
 			}
 		}
 	}

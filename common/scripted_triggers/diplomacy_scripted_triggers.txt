@@ -417,13 +417,26 @@ game_weight_can_add_communist = {
 
 DIPLOMACY_JOIN_ALLY_ENABLE_TRIGGER = {
 	FROM = {
-		#演习
-		Great_Game_is_involved = no
+	    if = {
+	        limit = {
+	            tag =  SCH #夏莱别凑热闹
+	        }
+	        Great_Game_is_involved = no
+	    }
+
+
+
+		# #演习
+		# Great_Game_is_involved = no
 	}
 }
 DIPLOMACY_CALL_ALLY_ENABLE_TRIGGER = {
-	#演习
-	Great_Game_is_involved = no
+	        Great_Game_is_involved = no
+	    	Not = {
+				tag = SCH
+			}
+	# #演习
+	# Great_Game_is_involved = no
 }
 DIPLOMACY_CREATE_FACTION_ENABLE_TRIGGER = {
 	custom_override_tooltip = {

@@ -3,6 +3,7 @@
 mio_cat_eq_support_artillery_equipment: "所有支援火炮"
 mio_cat_eq_support_at_equipment: "所有支援反坦克武器"
 mio_cat_eq_support_aa_equipment: "所有支援防空武器"
+mio_cat_eq_all_aircraft: "所有无人机"
 
 #通用mio
  BA_common_notice_tt: "点击以关闭这一提醒"

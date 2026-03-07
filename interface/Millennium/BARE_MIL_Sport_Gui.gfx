@@ -1,0 +1,118 @@
+spriteTypes = {
+	# 大运动会 GUI 主背景
+	SpriteType = {
+		name = "GFX_MIL_sport_GUI_BG"
+		texturefile = "gfx/interface/MIL_sport/MIL_sport_GUI_BG.dds"
+	}
+
+	# 大运动会详情背景
+	SpriteType = {
+		name = "GFX_MIL_sport_GUI_Detail_BG"
+		texturefile = "gfx/interface/MIL_sport/MIL_sport_GUI_Detail_BG.dds"
+	}
+
+	# 添加按钮
+	SpriteType = {
+		name = "GFX_MIL_sport_GUI_Info_Add_Button"
+		texturefile = "gfx/interface/MIL_sport/MIL_sport_GUI_Info_Add_Button.dds"
+	}
+
+	# 减少按钮
+	SpriteType = {
+		name = "GFX_MIL_sport_GUI_Info_Sub_Button"
+		texturefile = "gfx/interface/MIL_sport/MIL_sport_GUI_Info_Sub_Button.dds"
+	}
+
+	# 信息背景 1-5
+	SpriteType = {
+		name = "GFX_MIL_sport_GUI_Info_BG_1"
+		texturefile = "gfx/interface/MIL_sport/MIL_sport_GUI_Info_BG_1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_MIL_sport_GUI_Info_BG_2"
+		texturefile = "gfx/interface/MIL_sport/MIL_sport_GUI_Info_BG_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_MIL_sport_GUI_Info_BG_3"
+		texturefile = "gfx/interface/MIL_sport/MIL_sport_GUI_Info_BG_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_MIL_sport_GUI_Info_BG_4"
+		texturefile = "gfx/interface/MIL_sport/MIL_sport_GUI_Info_BG_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_MIL_sport_GUI_Info_BG_5"
+		texturefile = "gfx/interface/MIL_sport/MIL_sport_GUI_Info_BG_5.dds"
+	}
+
+	# 信息图标 1-6
+	SpriteType = {
+		name = "GFX_MIL_sport_GUI_Info_Icon_1"
+		texturefile = "gfx/interface/MIL_sport/MIL_sport_GUI_Info_Icon_1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_MIL_sport_GUI_Info_Icon_2"
+		texturefile = "gfx/interface/MIL_sport/MIL_sport_GUI_Info_Icon_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_MIL_sport_GUI_Info_Icon_3"
+		texturefile = "gfx/interface/MIL_sport/MIL_sport_GUI_Info_Icon_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_MIL_sport_GUI_Info_Icon_4"
+		texturefile = "gfx/interface/MIL_sport/MIL_sport_GUI_Info_Icon_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_MIL_sport_GUI_Info_Icon_5"
+		texturefile = "gfx/interface/MIL_sport/MIL_sport_GUI_Info_Icon_5.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_MIL_sport_GUI_Info_Icon_6"
+		texturefile = "gfx/interface/MIL_sport/MIL_sport_GUI_Info_Icon_6.dds"
+	}
+
+	# 信息分隔线
+	SpriteType = {
+		name = "GFX_MIL_sport_GUI_Info_Line"
+		texturefile = "gfx/interface/MIL_sport/MIL_sport_GUI_Info_Line.dds"
+	}
+
+	# 起始线
+	SpriteType = {
+		name = "GFX_MIL_sport_GUI_Info_Start_Line"
+		texturefile = "gfx/interface/MIL_sport/MIL_sport_GUI_Info_Start_Line.dds"
+		noOfFrames = 5
+	}
+
+	# 进度条 (0% 和 100%)
+	SpriteType = {
+		name = "GFX_MIL_sport_GUI_Info_Progress_0"
+		texturefile = "gfx/interface/MIL_sport/MIL_sport_GUI_Info_Progress_0.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_MIL_sport_GUI_Info_Progress_100"
+		texturefile = "gfx/interface/MIL_sport/MIL_sport_GUI_Info_Progress_100.dds"
+	}
+
+	progressbartype = {
+		name = "GFX_MIL_sport_GUI_Info_Progress"
+		color = { 0.0 0.0 0.0 }
+		colortwo = { 0.0 0.0 0.0 }
+		textureFile1 = "gfx/interface/MIL_sport/MIL_sport_GUI_Info_Progress_0.dds"
+		textureFile2 = "gfx/interface/MIL_sport/MIL_sport_GUI_Info_Progress_100.dds"
+		size = { x = 259 y = 20 }
+		effectFile = "gfx//FX//progress.lua"
+		horizontal = yes
+		steps = 100
+	}
+}

@@ -111,6 +111,7 @@ country_event = {
 	}
 	option = {
 		name = TRI_events.3.b
+		TRI_change_player_focus_position = yes
 		ai_chance = {
 			base = 4
 		}
