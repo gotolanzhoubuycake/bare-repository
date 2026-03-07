@@ -10,8 +10,8 @@
 #   - Great_Game_power_score_from_technologies：科研分数
 #   - Great_Game_power_score_factor：连胜/连败修正系数
 # 说明：
-#   - 陆军分数 = (本国+所有属国部署陆军人数K) × 3
-#   - 空军分数 = (本国+所有属国部署空军人数K) × 2
+#   - 陆军分数 = (本国+所有属国部署陆军人数K) × 5
+#   - 空军分数 = (本国+所有属国部署空军人数K) × 4
 #   - 工业分数 = 军工数×2 + 民工数×1
 #   - 科研分数 = 已研究科技数×2
 #   - 连胜修正：1 + 连胜次数×0.05（上限1.5倍，即最多+0.5）
@@ -26,7 +26,7 @@ Great_Game_calculate_power_score = {
 			add_to_variable = { PREV.Great_Game_power_score_from_army = deployed_army_manpower_k }
 			add_to_variable = { PREV.Great_Game_power_score_from_air = deployed_airforce_manpower_k }
 		}
-		multiply_variable = { Great_Game_power_score_from_army = 3 }
+		multiply_variable = { Great_Game_power_score_from_army = 6 }
 		multiply_variable = { Great_Game_power_score_from_air = 2 }
 		set_variable = { Great_Game_power_score_from_factories = num_of_military_factories }
 		multiply_variable = { Great_Game_power_score_from_factories = 2 }
@@ -367,6 +367,11 @@ Great_Game_invade_succeeded = {
 				white_peace = PREV
 			}
 		}
+		#白和
+		every_enemy_country = {
+			limit = { Great_Game_is_involved = yes }
+			white_peace = ROOT
+		}
 		clear_array = Great_Game_temp_allies
 		var:Great_Game_invade_target_overlord = {
 			Great_Game_get_coins = yes
@@ -404,11 +409,7 @@ Great_Game_invade_succeeded = {
 			clear_variable = Great_Game_invade_target_overlord
 			clear_variable = Great_Game_enemy
 		}
-		#白和
-		every_enemy_country = {
-			limit = { Great_Game_is_involved = yes }
-			white_peace = ROOT
-		}
+	
 		#夺取托管地区
 		add_to_array = { BA_trusteeship_areas = var:Great_Game_invade_target }
 		if = {
