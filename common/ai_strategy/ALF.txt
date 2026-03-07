@@ -1,3 +1,113 @@
+##造兵
+ALF_unit_production = {
+
+	allowed = {	original_tag = ALF }
+	enable = {
+		always = yes
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = role_ratio
+		id = garrison
+		value = 1
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = mobile
+		value = 10
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = 50
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = heavy_infantry
+		value = 10
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = sp_infantry
+		value = 30
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = infantry
+		value = 10
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = anti_air
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = support
+		value = 3
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = artillery
+		value = 30
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = armor
+		value = 15
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = mechanized
+		value = 10
+	}
+}
+
+ALF_air_unit_production = {
+
+	allowed = {	original_tag = ALF }
+	enable = {
+		has_completed_focus = ALF_dream_approaching
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = 30
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = cas
+		value = 30
+	}
+}
+
+##PP##
+##开局时为陆军部长预留100PP
+ALF_unit_production = {
+
+	allowed = {	original_tag = ALF }
+	enable = {
+		ALF = {
+            NOT = {
+                has_idea = ALF_Washino_Yuei_army_chief
+            }
+        }
+	}
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = pp_spend_amount
+        id = idea
+        value = 100
+    }
+}
+
 ##发射志愿军##
 ALF_2ND_liberation_war_volunteers = {
     allowed = {
@@ -10,6 +120,9 @@ ALF_2ND_liberation_war_volunteers = {
     }
     enable = {
         has_idea = ALF_volunteers_from_farway
+        ALF = {
+            has_war = yes
+        }
     }
 
     abort_when_not_enabled = yes

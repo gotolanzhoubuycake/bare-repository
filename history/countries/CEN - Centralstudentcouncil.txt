@@ -145,3 +145,11 @@ add_to_faction = SCH
 add_to_array = { historical_friend = VAL }
 add_to_array = { historical_friend = SRT }
 
+###BOP
+set_power_balance = {
+    id = CEN_bp_counil_and_administration
+    left_side = CEN_bp_administration_side
+    right_side = CEN_bp_council_side
+	set_value = 0
+}
+####

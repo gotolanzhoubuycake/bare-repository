@@ -17,4 +17,22 @@ spriteTypes = {
 		name = "GFX_GEH_bp_chaos_size"
 		texturefile = "gfx/interface/bop/GEH_bp_chaos_size.dds"
 	}
+
+	##
+	spriteType = {
+		name = "GFX_CEN_bp_Administration_side"
+		texturefile = "gfx/interface/bop/CEN_bp_Administration_side.dds"
+	}
+	spriteType = {
+		name = "GFX_CEN_bp_Administration_side_grey"
+		texturefile = "gfx/interface/bop/CEN_bp_Administration_side_grey.dds"
+	}
+	spriteType = {
+		name = "GFX_CEN_bp_council_side"
+		texturefile = "gfx/interface/bop/CEN_bp_council_side.dds"
+	}
+	spriteType = {
+		name = "GFX_CEN_bp_council_side_grey"
+		texturefile = "gfx/interface/bop/CEN_bp_council_side_grey.dds"
+	}
 }

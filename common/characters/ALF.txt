@@ -443,6 +443,17 @@ characters = {
 			traits = {
 				ALF_infantry_assault_trait
 			}
+			ai_will_do = {
+				base = 0
+				modifier = {
+					add = 1
+					has_completed_focus = ALF_Raise_the_flag
+				}
+				modifier = {
+					add = 1
+					has_political_power > 100
+				}
+			}
 		}
 	}
 	##滩尾辉美
@@ -514,6 +525,17 @@ characters = {
 			}
 			traits = {
 				ALF_logistics_designer_trait
+			}
+			ai_will_do = {
+				base = 0
+				modifier = {
+					add = 1
+					has_completed_focus = ALF_Raise_the_flag
+				}
+				modifier = {
+					add = 1
+					has_political_power > 150
+				}
 			}
 		}
 	}

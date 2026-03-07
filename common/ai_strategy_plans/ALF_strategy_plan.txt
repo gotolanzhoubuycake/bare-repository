@@ -1,0 +1,286 @@
+ARI_stage_1_plan = {
+    name = "ALF Stage1 Plan"
+    desc = "Use for ALF in the early stage of the game. Survive from the disaster."
+
+    allowed = {
+        original_tag = ALF
+    }
+    enable = {
+        ALF = {
+            exists = yes
+        }
+        NOT = {
+            has_completed_focus = ALF_Raise_the_flag
+        }
+    }
+    abort = {
+        ALF = {
+            has_completed_focus = ALF_Raise_the_flag
+            has_completed_focus = ALF_target_HTG
+            has_completed_focus = ALF_target_COS
+            has_completed_focus = ALF_Reorganize_the_postal_system
+            has_completed_focus = ALF_Conduct_community_surveys
+        }
+    }
+
+    ai_national_focuses = {
+        #ALF_a_great_march #Auto Complete
+        ALF_settled_in_new_home
+        ALF_begin_new_journey
+        ALF_memory_of_old_home
+        ALF_recovery_old_stuff
+        ALF_stand_our_ground
+        #ALF_threat_is_coming #Auto Complete
+        ##优先整合核心
+        ALF_target_HTG
+        ALF_target_COS
+        ##优先获取战争能力
+        ALF_Enable_abandoned_inventory
+        ALF_establish_law_enforement_team
+        ##战争借口
+        ALF_operation_protect_wing
+        ALF_target_AVG
+        ##
+        ALF_Reorganize_the_postal_system
+        ALF_Conduct_community_surveys
+        ALF_Raise_the_flag
+    }
+
+    focus_factors = {
+
+    }
+
+    research = {
+        infantry_weapons = 3
+        construction_tech = 2
+        industry = 1.5
+    }
+
+    ideas = {
+		ALF_Washino_Yuei_army_chief = 1
+		##该阶段不要浪费时间给别的内阁##
+		#ALF_Kabahara_Miyoko_high_command = 0
+		#ALF_Kometani_Touna_high_command = 0
+    }
+
+    ##留50点给决议系统
+    ai_strategy = {
+        type = pp_spend_priority
+        id = decision
+        value = 50
+    }
+
+    weight = {
+        factor = 1.0
+		modifier = {
+			factor = 1.1
+		}
+    }
+
+}
+
+
+###########################
+#########与凯撒之战#########
+###########################
+ALF_stage_2_plan = {
+    name = "ALF Stage2 industrial plan"
+    desc = "Prepare for the war. Focus on building up the army and industry."
+
+    allowed = {
+        original_tag = ALF
+    }
+    enable = {
+        ALF = {
+            has_country_flag = ALF_phrase_2_flag
+        }
+    }
+    ###工业国策不会退出。
+    abort = {
+
+    }
+
+    ai_national_focuses = {
+        ##
+        ALF_residential_census
+        ALF_estabilish_Arius_armed_force
+        ##简单军事内容
+        ALF_new_beginning
+        ALF_lessons_from_previous_battle
+        ALF_professional_trainning
+        ##政治工业线I
+        ALF_a_long_way_to_go
+        ALF_confirm_economic_plan
+        ALF_oil_is_industry_blood
+        ALF_repair_the_weapon_factory
+        #
+        ALF_rebuild_arius_school
+        #
+        ALF_lesson_from_civil_war
+        ALF_stable_the_thoughts
+        ALF_diversionary_reformism
+        ALF_create_shared_cognition
+        #解决西街问题
+        ALF_change_outfit
+        ALF_destroy_wsg
+        ALF_infiltrate_enemy
+        ALF_assault_trainning
+        ALF_support_the_pilots
+        ALF_ready_for_battle
+        ALF_end_wsg
+        ##政治工业线II
+        ALF_against_capitulationism
+        ALF_public_debate
+        ALF_we_can_achieve_the_goal
+        ##政治工业线III
+        ALF_focus_trade
+        ALF_expand_goods_production
+        ##接触红冬
+        ALF_contact_redwinter
+        ALF_technology_exchange
+        ALF_reform_staff_department
+        ##政治工业线IV
+        ALF_solve_electric_problem
+        ALF_rebuild_the_hydropower_station
+        ALF_master_machine_tool_technology
+        ALF_infrastructure_plan
+        ALF_resource_produce
+        ALF_be_ready_for_action
+        ##军事线##
+        ALF_sharp_the_blade
+        ALF_establish_officer_school
+        ALF_elegant_combat
+        ALF_strategic_roadmap
+        ##政治工业线V
+        ALF_rebuild_the_market_center
+        ALF_build_more_house
+        ALF_recovery_movement
+        ALF_rebuild_city_operation
+        ##军事线II
+        ALF_united_research_facility
+        ALF_establish_air_force
+        ALF_an_independent_air_foce
+        ALF_air_superiority
+        ALF_JTAC_support
+        ALF_above_sky
+        ALF_helicopter
+        ALF_air_assault_tactics
+        ALF_attack_helicopter
+        ALF_air_gunship
+        ALF_integrated_firepower_system
+    }
+
+    focus_factors = {
+
+    }
+
+    research = {
+        infantry_weapons = 3
+        construction_tech = 2
+        industry = 1.5
+    }
+
+    ideas = {
+		ALF_Washino_Yuei_army_chief = 1
+		ALF_Kabahara_Miyoko_high_command = 1
+		ALF_Kometani_Touna_high_command = 1
+    }
+
+    ##留75点给决议系统
+    ai_strategy = {
+        type = pp_spend_priority
+        id = decision
+        value = 75
+    }
+
+    weight = {
+        factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+    }
+}
+
+ALF_stage_2_war_plan = {
+    name = "ALF Stage2 war plan"
+    desc = "War with kaiser. Military First."
+
+    allowed = {
+        original_tag = ALF
+    }
+    enable = {
+        ALF = {
+            has_completed_focus = ALF_infiltrate_kaiser
+        }
+    }
+    ###与凯撒之战结束后退出
+    abort = {
+        ALF = {
+            has_completed_focus = ALF_dream_approaching
+        }
+    }
+
+    ai_national_focuses = {
+        ##整合核心
+        ALF_integrate_DCA
+        ALF_integrate_KHG
+        ALF_integrate_black_market_cores
+        ##宣战
+        ALF_fate_calls
+        ALF_target_DCA
+        ALF_target_KHG
+        ##联合科研所##
+        ALF_united_research_facility
+        ALF_sharp_the_blade
+        ##战争计划I
+        ALF_optimize_factory_output
+        ALF_extra_armed_force
+        ALF_warno
+        ALF_target_blackmarket
+        ##战争计划II
+        ALF_difficult_situation
+        ALF_enlarge_air_force
+        ALF_air_alert
+        ALF_enemy_tactic_analysis
+        ALF_strike_at_weakness
+        ALF_restore_new_area_production
+        ALF_politic_mobilization
+        ALF_united_as_one
+        ALF_operation_michael
+        ##
+        ALF_establish_officer_school
+        ALF_elegant_combat
+        ALF_strategic_roadmap
+    }
+
+    focus_factors = {
+
+    }
+
+    research = {
+        infantry_weapons = 3
+        construction_tech = 1.0
+        industry = 2.0
+    }
+
+    ideas = {
+		ALF_Washino_Yuei_army_chief = 1
+		ALF_Kabahara_Miyoko_high_command = 1
+		ALF_Kometani_Touna_high_command = 1
+    }
+
+    ##留75点给决议系统
+    ai_strategy = {
+        type = pp_spend_priority
+        id = decision
+        value = 75
+    }
+
+    weight = {
+        factor = 1.0
+		modifier = {
+			factor = 10.0
+            ##一旦激活即为最高优先级
+		}
+    }
+}

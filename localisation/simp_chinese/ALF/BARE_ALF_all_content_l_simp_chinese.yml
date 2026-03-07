@@ -529,7 +529,7 @@
  ALF_Livability_decision_category: "战略储备"
  ALF_Livability_decision_category_desc: "£market_subsidy_small_texticon §Y战略储备§!表示了流亡者为接下来的生存、发展，以及作战所§C储备的资源§!。随着流亡者控制区的增加，维持区域公共设施运转所需的战略储备也会增加；除此之外，面对不同局势所做出的抉择也会影响战略储备的数量。\n\n面对黑市中的汹涌浪潮，流亡者可以消耗战略储备来§G建立优势§!，但若战略储备不足，流亡者的行动也会§R受到限制§!。\n\n目前的战略储备：[?ALF.Livability_var|+=]\n每月战略储备获取：[?modifier@ALF_Livability_int|+=]\n来自规模的消耗：[?ALF.Livability_standard_var||+=]"
  
- improve_livability_decision: "£increase_texticon 增强£market_subsidy_small_texticon §Y战略储备§!获取能力"
+ ALF_improve_livability_decision: "£increase_texticon 增强£market_subsidy_small_texticon §Y战略储备§!获取能力"
  ALF_Livability_for_stability: "改善工作环境"
  ALF_Livability_for_war_support: "战争宣传"
  ALF_Livability_for_manpower: "展开新一轮动员"
@@ -552,6 +552,21 @@
 
  ALF_Livability_count_down_mission: "月度统计"
  ALF_calculate_livability_state_tt: "统计£increase_texticon §Y战略资源§!……"
+####
+ AI_ALF_improve_livability_decision: "§Y（AI决议）§!£increase_texticon 增强£market_subsidy_small_texticon §Y战略储备§!获取能力"
+ AI_ALF_Livability_for_infantry_equipment: "§Y（AI决议）§!重启步兵装备库存"
+ AI_ALF_Livability_for_artillery_equipment: "§Y（AI决议）§!重启火力武器库存"
+ AI_ALF_Livability_for_support_equipment: "§Y（AI决议）§!重启支援装备库存"
+ AI_restore_state_mail_system_targeted_decision: "§Y（AI决议）§!恢复§Y[FROM.GetName]§!的邮政系统"
+ AI_restore_state_electric_system_targeted_decision: "§Y（AI决议）§!将§Y[FROM.GetName]§!区域接入电网"
+ AI_ALF_Livability_for_manpower: "§Y（AI决议）§!展开新一轮动员"
+ AI_ALF_Livability_for_synthetic_refinery: "§Y（AI决议）§!于§Y[FROM.GetName]§!区域建设§C炼油厂§!"
+ AI_ALF_Livability_for_arms_factory: "§Y（AI决议）§!建设§C武器工厂§!"
+ AI_ALF_Livability_for_industrial_complex: "§Y（AI决议）§!建设§C民用工厂§!"
+ AI_ALF_Livability_for_infrastructure: "（地图决议）改善§Y[FROM.GetName]§!区域的§C基础设施§!"
+ AI_ALF_Livability_for_city_loadout: "（地图决议）改善§Y[FROM.GetName]§!区域的街道布局"
+ AI_ALF_Livability_for_arius_city_loadout: "（地图决议）翻修§Y[FROM.GetName]§!区域的公共设施"
+
 ##效果
  ALF_small_improve_livability_modifier_effect_tt: "£increase_texticon §Y战略资源获取§!获得§G小幅度§!提升。"
  ALF_medium_improve_livability_modifier_effect_tt: "£increase_texticon £increase_texticon §Y战略资源获取§!获得§G中幅度§!提升。"

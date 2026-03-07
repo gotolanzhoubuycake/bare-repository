@@ -1,0 +1,16 @@
+﻿l_simp_chinese:
+ ###BOP
+ CEN_bp_counil_and_administration:"高塔俯瞰"
+ CEN_bp_mid_desc_tt:"--------------\n§O联邦议会§!与§C行政委员会§!的矛盾在联邦学生会之中并非秘密。联邦学生会长的失踪后，这一矛盾如今已愈发尖锐。\n\n显而易见，投票解散§YS.R.T特殊学园§!只是一个开始。随着强人政治的结束，§C行政委员会§!的立场正变得愈加微妙。\n\n§Y好戏开场。§!"
+ CEN_bp_administration_side_1_desc_tt:"--------------\n§O联邦议会§!与§C行政委员会§!的矛盾在联邦学生会之中并非秘密。联邦学生会长的失踪后，这一矛盾如今已愈发尖锐。\n\n显而易见，投票解散§YS.R.T特殊学园§!只是一个开始。随着强人政治的结束，§C行政委员会§!的立场正变得愈加微妙。\n\n§R掷下骰子……§!"
+ CEN_bp_administration_side_2_desc_tt:"--------------\n§O联邦议会§!与§C行政委员会§!的矛盾在联邦学生会之中并非秘密。联邦学生会长的失踪后，这一矛盾如今已愈发尖锐。\n\n显而易见，投票解散§YS.R.T特殊学园§!只是一个开始。随着强人政治的结束，§C行政委员会§!的立场正变得愈加微妙。\n\n§G……然后，聆听新秩序的轰鸣。§!"
+ CEN_bp_council_side_1_desc_tt:"--------------\n§O联邦议会§!与§C行政委员会§!的矛盾在联邦学生会之中并非秘密。联邦学生会长的失踪后，这一矛盾如今已愈发尖锐。\n\n显而易见，投票解散§YS.R.T特殊学园§!只是一个开始。随着强人政治的结束，§C行政委员会§!的立场正变得愈加微妙。\n\n§R坚信秩序……§!"
+ CEN_bp_council_side_2_desc_tt:"--------------\n§O联邦议会§!与§C行政委员会§!的矛盾在联邦学生会之中并非秘密。联邦学生会长的失踪后，这一矛盾如今已愈发尖锐。\n\n显而易见，投票解散§YS.R.T特殊学园§!只是一个开始。随着强人政治的结束，§C行政委员会§!的立场正变得愈加微妙。\n\n§G……于是，新的常态回归大地。§!"
+
+ CEN_bp_administration_side:"行政委员会"
+ CEN_bp_council_side:"联邦议会"
+ CEN_bp_mid:"“假战”"
+ CEN_bp_administration_completely_control:"委员会大权在握"
+ CEN_bp_administration_side_slide:"委员会占据上风"
+ CEN_bp_council_completely_control:"议会大权在握"
+ CEN_bp_council_side_slide:"议会占据上风"

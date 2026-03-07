@@ -45,3 +45,61 @@ country_event = {
 		custom_effect_tooltip = Kayas_presidency
 	}
 }
+
+add_namespace = CEN_sp_doc
+
+country_event = {
+	id = CEN_sp_doc.99
+	#picture = GFX_common_event_gui_test
+	title = CEN_sp_doc.99.t
+	desc = CEN_sp_doc.99.desc
+	is_triggered_only = yes
+
+	option = {
+		name = CEN_sp_doc.99.a
+	}
+
+	option = {
+		name = CEN_sp_doc.99.b
+	}
+}
+
+country_event = {
+	id = CEN_sp_doc.18
+	picture = GFX_CEN_OTSI_EI018_KAISERCORP_event_picture
+	title = CEN_sp_doc.18.t
+	desc = CEN_sp_doc.18.desc
+	is_triggered_only = yes
+
+	option = {
+		name = CEN_sp_doc.18.a
+		custom_effect_tooltip = CEN_sp_doc_18_tt
+	}
+}
+
+country_event = {
+	id = CEN_sp_doc.66
+	picture = GFX_CEN_OTSI_AS006_PERORODZILLA_event_picture
+	title = CEN_sp_doc.66.t
+	desc = CEN_sp_doc.66.desc
+	is_triggered_only = yes
+
+	option = {
+		name = CEN_sp_doc.66.a
+		custom_effect_tooltip = CEN_sp_doc_66_tt
+		army_experience = 50
+	}
+}
+
+country_event = {
+	id = CEN_sp_doc.101
+	picture = GFX_TRI_event_11
+	title = CEN_sp_doc.101.t
+	desc = CEN_sp_doc.101.desc
+	is_triggered_only = yes
+
+	option = {
+		name = CEN_sp_doc.101.a
+		custom_effect_tooltip = CEN_sp_doc_101_tt
+	}
+}

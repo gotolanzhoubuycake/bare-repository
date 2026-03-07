@@ -144,6 +144,9 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ALF.5.a
+		ai_chance = {
+			base = 1
+		}
 		ALF_medium_decrease_livability_modifier_effect = yes
 		199 = {
 			add_manpower = 2000
@@ -174,6 +177,9 @@ country_event = {
 	}
 	option = {
 		name = ALF.6.b
+		ai_chance = {
+			base = 1
+		}
 		ALF_small_improve_livability_modifier_effect = yes
 		199 = {
 			add_manpower = 1000
@@ -190,6 +196,9 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ALF.7.a
+		ai_chance = {
+			base = 1
+		}
 		hidden_effect = {
 			load_oob = "ALF_oob_commandos"
 		}
@@ -233,6 +242,9 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ALF.8.a
+		ai_chance = {
+			base = 1
+		}
 		199 = {
 			add_manpower = 2000
 		}
@@ -419,6 +431,9 @@ country_event = {
 	##武器厂位置
 	option = {
 		name = ALF.18.b
+		ai_chance = {
+			base = 10
+		}
 		198 = {
 			set_state_flag = ALF_synthetic_refinery_position_flag
 		}
@@ -535,6 +550,9 @@ country_event = {
 	}
 	option = {
 		name = ALF.23.b
+		ai_chance = {
+			base = 10
+		}
 		country_event = {
 			id = ALF.25
 		}
@@ -587,6 +605,9 @@ country_event = {
 	}
 	option = {
 		name = ALF.26.b
+		ai_chance = {
+			base = 10
+		}
 		country_event = {
 			id = ALF.28
 		}
