@@ -273,14 +273,43 @@ on_actions = {
                     }
                 }
             }
+            #以防止最后结算给反抗军的bug情况
+            else_if = {
+                limit = {
+                    FROM = {
+                        tag = ARR
+                    }
+                    ROOT = {
+                        tag = ARI
+                    }
+                }
+                FROM = {
+                    annex_country = {
+                        target = ROOT
+                        transfer_troops = no
+                    }
+                    random_country = {
+                        limit = {
+                            original_tag = ARI
+                            is_subject_of = ALF
+                        }
+                        ALF = {
+                            annex_country = {
+                                target = PREV
+                                transfer_troops = no
+                            }
+                        }
+                    }
+                }
+            }
             ############################丢人现眼（流亡者线）#####################################
             else_if = {
                 limit = {
                     FROM = {
-                        tag = TRA
+                        original_tag = TRA
                     }
                     ROOT = {
-                        tag = TRR
+                        original_tag = TRR
                     }
                 }
                 FROM = {
@@ -299,7 +328,7 @@ on_actions = {
             else_if = {
                 limit = {
                     FROM = {
-                        tag = GEA
+                        original_tag = GEA
                     }
                     ROOT = {
                         tag = GEL

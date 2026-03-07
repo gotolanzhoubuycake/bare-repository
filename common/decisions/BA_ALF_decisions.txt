@@ -55,6 +55,9 @@ ALF_military_reform_decision_category = {
             }
             force_update_dynamic_modifier = yes
         }
+        ai_will_do = {
+            factor = 2
+        }
     }
     ALF_mrd_armor_improve_decision = {
         visible = {
@@ -93,6 +96,9 @@ ALF_military_reform_decision_category = {
                 ALF_AMF_army_armor_defence_factor_var = 0.05
             }
             force_update_dynamic_modifier = yes
+        }
+        ai_will_do = {
+            factor = 1
         }
     }
     ALF_mrd_modernize_improve_decision = {
@@ -136,6 +142,9 @@ ALF_military_reform_decision_category = {
             }
             force_update_dynamic_modifier = yes
         }
+        ai_will_do = {
+            factor = 2
+        }
     }
     ALF_mrd_officer_improve_decision = {
         visible = {
@@ -175,6 +184,9 @@ ALF_military_reform_decision_category = {
             }
             force_update_dynamic_modifier = yes
         }
+        ai_will_do = {
+            factor = 2
+        }
     }
     ALF_mrd_artillery_improve_decision = {
         visible = {
@@ -213,6 +225,9 @@ ALF_military_reform_decision_category = {
                 ALF_AMF_coordination_bonus_var = 0.05
             }
             force_update_dynamic_modifier = yes
+        }
+        ai_will_do = {
+            factor = 1
         }
     }
     ##强化军事改革速度
@@ -1380,6 +1395,35 @@ ALF_Livability_decision_category = {
             factor = 1
         }
     }
+
+    ##AI开启救济工作
+    AI_Implement_relief_plan_targeted_decision = {
+        state_target = yes
+        target_root_trigger = {
+            has_completed_focus = ALF_Implement_relief_plan
+            is_ai = yes
+        }
+        target_trigger = {
+            FROM = {
+                has_dynamic_modifier = {
+                    modifier = ALF_ruins_of_civil_war_dynamic_modifier
+                }
+                is_owned_and_controlled_by = ALF
+            }
+        }
+        fire_only_once = yes
+        on_map_mode = map_only
+        #icon = my_icon
+        cost = 1
+        days_remove = 28
+        remove_effect = {
+            FROM = {
+                remove_dynamic_modifier = {
+                    modifier = ALF_ruins_of_civil_war_dynamic_modifier
+                }
+            }
+        }
+    }
 }
 
 ALF_war_plan_protect_wing_category = {
@@ -1673,6 +1717,9 @@ ALF_new_capital_decision_category = {
             ALF_use_livability_5_pts = yes
             ALF_capital_progressbargain_5_effect = yes
         }
+        ai_will_do = {
+            factor = 1
+        }
     }
     ##鼓励人员流动
     ALF_new_capital_manpower_decision = {
@@ -1695,6 +1742,9 @@ ALF_new_capital_decision_category = {
                 add_manpower = 1000
             }
         }
+        ai_will_do = {
+            factor = 1
+        }
     }
     ##进行社区宣传
     ALF_new_capital_propaganda_decision = {
@@ -1709,6 +1759,9 @@ ALF_new_capital_decision_category = {
         cost = 100
         remove_effect = {
             ALF_capital_progressbargain_5_effect = yes
+        }
+        ai_will_do = {
+            factor = 1
         }
     }
     ##推动工程突破
@@ -1727,6 +1780,9 @@ ALF_new_capital_decision_category = {
         cost = 20
         remove_effect = {
             ALF_capital_progressbargain_5_effect = yes
+        }
+        ai_will_do = {
+            factor = 1
         }
     }
     ALF_new_capital_construction_decision_test = {
@@ -2296,6 +2352,10 @@ ALF_Gabriel_operation_category = {
         }
         days_remove = 30
         remove_effect = {
+            
+        }
+        ai_will_do = {
+            factor = 1000
         }
     }
     ALF_GBO_cooperate_government_decision = {
@@ -2316,6 +2376,9 @@ ALF_Gabriel_operation_category = {
                 value = 0.3
             }
         }
+        ai_will_do = {
+            factor = 1000
+        }
     }
     ALF_GBO_neutralise_ARI_gov_decision = {
         available = {
@@ -2335,6 +2398,10 @@ ALF_Gabriel_operation_category = {
             resistance_garrison_penetration_chance = -0.3
         }
         remove_effect = {
+
+        }
+        ai_will_do = {
+            factor = 1000
         }
     }
 }
@@ -2478,6 +2545,9 @@ ALF_Uriel_operation_category = {
                 set_country_flag = ALF_UOP_infiltrate_target_flag
             }
         }
+        ai_will_do = {
+            factor = 1
+        }
     }
     ALF_UOP_crack_target_supply_TRA_decision = {
         priority = 79
@@ -2502,6 +2572,10 @@ ALF_Uriel_operation_category = {
         }
         cost = 20
         remove_effect = {
+        
+        }
+        ai_will_do = {
+            factor = 1
         }
     }
     ALF_UOP_crack_target_supply_GEA_decision = {
@@ -2527,6 +2601,10 @@ ALF_Uriel_operation_category = {
         }
         cost = 20
         remove_effect = {
+
+        }
+        ai_will_do = {
+            factor = 1
         }
     }
     ####战役行动
@@ -2566,6 +2644,9 @@ ALF_Uriel_operation_category = {
                     days = 30
                 }
             }
+        }
+        ai_will_do = {
+            factor = 1
         }
     }
     ALF_UOP_Traveller_operation_mission = {
@@ -2685,6 +2766,9 @@ ALF_Uriel_operation_category = {
                 }
             }
         }
+        ai_will_do = {
+            factor = 1
+        }
     }
     ALF_UOP_Eden_operation_mission = {
         priority = 99
@@ -2771,6 +2855,21 @@ ALF_Uriel_operation_category = {
                 type = ALF_pacify_target_wargoal
             }
         }
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                TRA = {
+                    has_capitulated = yes
+                }
+            }
+            modifier = {
+                add = 1
+                GEA = {
+                    has_capitulated = yes
+                }
+            }
+        }
     }
     ALF_UOP_peacher_operation_decision = {
         priority = 79
@@ -2792,6 +2891,21 @@ ALF_Uriel_operation_category = {
             declare_war_on = {
                 target = A46
                 type = ALF_pacify_target_wargoal
+            }
+        }
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                TRA = {
+                    has_capitulated = yes
+                }
+            }
+            modifier = {
+                add = 1
+                GEA = {
+                    has_capitulated = yes
+                }
             }
         }
     }
@@ -2820,6 +2934,30 @@ ALF_Uriel_operation_category = {
         }
         complete_effect = {
             activate_mission = ALF_UOP_geh_operation_mission
+        }
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                A45 = {
+                    OR = {
+                        exists = no
+                        is_subject = yes
+                    }
+                }
+                A46 = {
+                    OR = {
+                        exists = no
+                        is_subject = yes
+                    }
+                }
+            }
+            modifier = {
+                add = 1
+                GEA = {
+                    surrender_progress > 0.5
+                }
+            }
         }
     }
     ALF_UOP_geh_operation_mission = {

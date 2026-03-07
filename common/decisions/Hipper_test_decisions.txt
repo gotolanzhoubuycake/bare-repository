@@ -513,9 +513,16 @@ Hipper_test_decisions_categories = {
             is_ai = no
         }
         complete_effect = {
-            ALF_failure_impact_of_eden_treaty_TRI_stage_1 = yes
-            ALF_failure_impact_of_eden_treaty_TRI_stage_2 = yes
-            ALF_failure_impact_of_eden_treaty_TRI_stage_3 = yes
+            TRI = {
+				country_event = {
+					id = ALF.46
+				}
+			}
+			GEH = {
+				country_event = {
+					id = ALF.50
+				}
+			}
         }
     }
     initialize_2nd_liberation_war = {

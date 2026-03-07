@@ -563,9 +563,10 @@
  AI_ALF_Livability_for_synthetic_refinery: "§Y（AI决议）§!于§Y[FROM.GetName]§!区域建设§C炼油厂§!"
  AI_ALF_Livability_for_arms_factory: "§Y（AI决议）§!建设§C武器工厂§!"
  AI_ALF_Livability_for_industrial_complex: "§Y（AI决议）§!建设§C民用工厂§!"
- AI_ALF_Livability_for_infrastructure: "（地图决议）改善§Y[FROM.GetName]§!区域的§C基础设施§!"
- AI_ALF_Livability_for_city_loadout: "（地图决议）改善§Y[FROM.GetName]§!区域的街道布局"
- AI_ALF_Livability_for_arius_city_loadout: "（地图决议）翻修§Y[FROM.GetName]§!区域的公共设施"
+ AI_ALF_Livability_for_infrastructure: "§Y（AI决议）§!改善§Y[FROM.GetName]§!区域的§C基础设施§!"
+ AI_ALF_Livability_for_city_loadout: "§Y（AI决议）§!改善§Y[FROM.GetName]§!区域的街道布局"
+ AI_ALF_Livability_for_arius_city_loadout: "§Y（AI决议）§!翻修§Y[FROM.GetName]§!区域的公共设施"
+ AI_Implement_relief_plan_targeted_decision: "§Y（AI决议）§!在§Y[FROM.GetName]§!开展救济工作"
 
 ##效果
  ALF_small_improve_livability_modifier_effect_tt: "£increase_texticon §Y战略资源获取§!获得§G小幅度§!提升。"

@@ -178,6 +178,7 @@ ALF_stage_2_plan = {
         infantry_weapons = 3
         construction_tech = 2
         industry = 1.5
+        cas_uav = 1.5
     }
 
     ideas = {
@@ -190,7 +191,7 @@ ALF_stage_2_plan = {
     ai_strategy = {
         type = pp_spend_priority
         id = decision
-        value = 75
+        value = 100
     }
 
     weight = {
@@ -258,9 +259,7 @@ ALF_stage_2_war_plan = {
     }
 
     research = {
-        infantry_weapons = 3
-        construction_tech = 1.0
-        industry = 2.0
+        
     }
 
     ideas = {
@@ -269,17 +268,209 @@ ALF_stage_2_war_plan = {
 		ALF_Kometani_Touna_high_command = 1
     }
 
-    ##留75点给决议系统
-    ai_strategy = {
-        type = pp_spend_priority
-        id = decision
-        value = 75
+    weight = {
+        factor = 1.0
+		modifier = {
+			factor = 10.0
+            ##一旦激活即为最高优先级
+		}
+    }
+}
+
+###冲！滩！
+ALF_stage_3_war_plan = {
+    name = "ALF Stage3 war plan"
+    desc = "End the nightmare. Liberation is coming."
+
+    allowed = {
+        original_tag = ALF
+    }
+    enable = {
+        ALF = {
+            has_completed_focus = ALF_dream_approaching
+        }
+    }
+    ###冲滩结束后退出
+    abort = {
+        ARI = {
+            exists = no
+        }
+    }
+
+    ai_national_focuses = {
+        ##
+        ALF_toward_the_last_object
+        ALF_contact_the_resistants
+        ALF_customized_the_supplyline
+        ALF_storm_the_frontline
+        ALF_Sound_the_bugle
+        ##整合核心
+        ALF_dream_approaching
+        ALF_stand_up_from_defeat
+        ALF_not_again
+        ALF_call_of_duty
+        ALF_focus_future
+        ALF_maintain_work_method
+        ALF_history_on_us
+        ALF_judge_the_evil
+        ALF_salary_balance
+        ALF_stablize_current
+        ALF_Social_Security_System
+        ALF_us_on_history
+        ALF_our_stage_on_world
+        ALF_mapping_the_tunnel
+    }
+
+    focus_factors = {
+
+    }
+
+    research = {
+        
+    }
+
+    ideas = {
+		#ALF_Washino_Yuei_army_chief = 1
+		#ALF_Kabahara_Miyoko_high_command = 1
+		#ALF_Kometani_Touna_high_command = 1
     }
 
     weight = {
         factor = 1.0
 		modifier = {
 			factor = 10.0
+            ##一旦激活即为最高优先级
+		}
+    }
+}
+
+##重建阿里乌斯
+ALF_stage_4_plan = {
+    name = "ALF Stage4 plan"
+    desc = "Rebuild Arius. A new era is coming."
+
+    allowed = {
+        original_tag = ALF
+    }
+    enable = {
+        ALF = {
+            has_completed_focus = ALF_a_long_way_back_home
+        }
+        NOT = {
+            has_completed_focus = ALF_enlighten_the_arius
+        }
+    }
+    abort_when_not_enabled = yes
+
+    ai_national_focuses = {
+        #
+        ALF_enlighten_the_arius
+        ALF_the_old_ways
+        ALF_the_new_dawn
+        #
+        ALF_a_long_way_back_home
+        ALF_judge_the_yesterdays_evil
+        ALF_Amend_the_Constitution
+        ALF_Reshape_cognition
+        ALF_re_educate_movement
+        ALF_Embrace_the_wanderers
+        ALF_clear_todays_rubbles
+        ALF_Implement_relief_plan
+        ALF_rebuild_the_chruch
+        ALF_rebuild_the_old_school
+        ALF_Restore_the_employment_environment
+        #
+    }
+
+    focus_factors = {
+
+    }
+
+    research = {
+        
+    }
+
+    ideas = {
+		#ALF_Washino_Yuei_army_chief = 1
+		#ALF_Kabahara_Miyoko_high_command = 1
+		#ALF_Kometani_Touna_high_command = 1
+    }
+
+    weight = {
+        factor = 1.0
+		modifier = {
+			factor = 10.0
+            ##一旦激活即为最高优先级
+		}
+    }
+}
+
+##准备最终之战
+ALF_stage_4_war_plan = {
+    name = "ALF Stage4 War plan"
+    desc = "Prepare for the final battle. The future of Arius is on the line."
+
+    allowed = {
+        original_tag = ALF
+    }
+    enable = {
+        has_global_flag = TRI_coup_complete_flag
+    }
+    ###与凯撒之战结束后退出
+    abort = {
+        ALF = {
+            has_country_flag = ALF_2ND_LIBERATION_WAR_SUCCESS_FLAG
+        }
+    }
+
+    ai_national_focuses = {
+        #
+        ALF_construct_tomorrows_stair
+        ALF_send_the_envoys
+        ALF_open_the_border
+        ALF_duty_calls_always
+        #
+        ALF_3rd_eden_pact_treaty
+        ALF_those_failured
+        ALF_those_betrayed
+        ALF_a_Desperate_Alliance
+        ALF_appeal_to_the_Discipline_Committee_Member
+        ALF_appeal_to_the_sisters
+        ALF_appeal_to_the_students
+        ALF_eden_alliance
+        ALF_prepared_for_2nd_liberation_war
+        ALF_way_for_glory
+        #
+        ALF_2nd_liberation_war
+        ALF_traveller_operation
+        ALF_eden_operation
+        ALF_full_work_schedule
+        ALF_ask_for_support
+        ALF_stop_rebuild_plan
+        ALF_total_war
+        ALF_shepherd
+        ALF_peacher
+        ALF_another_way
+    }
+
+    focus_factors = {
+
+    }
+
+    research = {
+        
+    }
+
+    ideas = {
+		#ALF_Washino_Yuei_army_chief = 1
+		#ALF_Kabahara_Miyoko_high_command = 1
+		#ALF_Kometani_Touna_high_command = 1
+    }
+
+    weight = {
+        factor = 1.0
+		modifier = {
+			factor = 5.0
             ##一旦激活即为最高优先级
 		}
     }

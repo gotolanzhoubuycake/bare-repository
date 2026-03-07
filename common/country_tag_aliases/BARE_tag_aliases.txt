@@ -51,10 +51,10 @@ ARR = {
 	has_country_flag = ALF_ARI_ARR_aliases_country_flag
 }
 
-TRA = {
-	original_tag = TRI
-	has_country_flag = bad_TRI_flag
-}
+#TRA = {
+#	original_tag = TRI
+#	has_country_flag = bad_TRI_flag
+#}
 
 TRT = {
 	original_tag = TRI
@@ -62,7 +62,7 @@ TRT = {
 }
 
 GEL = {
-	original_tag = GEH
+	original_tag = GEA
 	has_country_flag = loyality_GEH_flag
 }
 
@@ -71,7 +71,7 @@ GER = {
 	has_country_flag = resistants_GEH_flag
 }
 
-GEA = {
-	original_tag = GEH
-	has_country_flag = bad_GEH_flag
-}
+#GEA = {
+#	original_tag = GEH
+#	has_country_flag = bad_GEH_flag
+#}

@@ -3,4 +3,26 @@ areas = {
 	around_ancient_cathedral = {
 		strategic_regions = { 10 11 31 38 40 }
 	}
+
+	##ALF
+	##黑市##
+	black_market_area = {
+		strategic_regions = { 12 }
+	}
+
+	ALF_kaiser_conrolled_market_area = {
+		strategic_regions = { 55 44 }
+	}
+
+	ALF_ARI_liberation_area = {
+		strategic_regions = { 11 }
+	}
+
+	ALF_2ND_liberation_TRA_area = {
+		strategic_regions = { 61 62 76 77 7 }
+	}
+
+	ALF_2ND_liberation_GEA_area = {
+		strategic_regions = { 38 40 63 65 68 67 }
+	}
 }
