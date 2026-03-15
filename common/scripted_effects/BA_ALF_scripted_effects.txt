@@ -516,12 +516,12 @@ ALF_failure_impact_of_eden_treaty_TRI_stage_1 = {
         transfer_state = 118
         ##触发下一阶段
     }
-	TRA = {
-		country_event = {
+    TRA = {
+        country_event = {
             id = ALF.48
             days = 5
         }
-	}
+    }
     create_dynamic_country = {
         original_tag = TRI
         copy_tag = TRI
@@ -664,7 +664,7 @@ ALF_failure_impact_of_eden_treaty_GEH_stage_0 = {
             ideology = Authoritarian_ideology
             popularity = 100
         }
-		transfer_state = 305
+        transfer_state = 305
     }
     create_dynamic_country = {
         original_tag = GEH
@@ -1431,6 +1431,214 @@ initialize_UOP_states_array_effect = {
                 array = global.ALF_Eden_state_array
                 value = THIS.id
             }
+        }
+    }
+}
+
+ALF_launch_the_judgement_script_effect = {
+    if = {
+        limit = {
+            112 = {
+                is_controlled_by = TRA
+            }
+        }
+        launch_nuke = {
+            state = 112
+            controller = TRA
+            nuke_type = thermonuclear_bomb
+        }
+    }
+    if = {
+        limit = {
+            118 = {
+                is_controlled_by = TRA
+            }
+        }
+        launch_nuke = {
+            state = 118
+            controller = TRA
+            nuke_type = thermonuclear_bomb
+        }
+    }
+    if = {
+        limit = {
+            116 = {
+                is_controlled_by = TRA
+            }
+        }
+        launch_nuke = {
+            state = 116
+            controller = TRA
+            nuke_type = thermonuclear_bomb
+        }
+    }
+    if = {
+        limit = {
+            125 = {
+                is_controlled_by = TRA
+            }
+        }
+        launch_nuke = {
+            state = 125
+            controller = TRA
+            nuke_type = thermonuclear_bomb
+        }
+    }
+    if = {
+        limit = {
+            113 = {
+                is_controlled_by = TRA
+            }
+        }
+        launch_nuke = {
+            state = 113
+            controller = TRA
+            nuke_type = thermonuclear_bomb
+        }
+    }
+    if = {
+        limit = {
+            122 = {
+                is_controlled_by = TRA
+            }
+        }
+        launch_nuke = {
+            state = 122
+            controller = TRA
+            nuke_type = thermonuclear_bomb
+        }
+    }
+    if = {
+        limit = {
+            127 = {
+                is_controlled_by = TRA
+            }
+        }
+        launch_nuke = {
+            state = 127
+            controller = TRA
+            nuke_type = thermonuclear_bomb
+        }
+    }
+    if = {
+        limit = {
+            128 = {
+                is_controlled_by = TRA
+            }
+        }
+        launch_nuke = {
+            state = 128
+            controller = TRA
+            nuke_type = thermonuclear_bomb
+        }
+    }
+    if = {
+        limit = {
+            135 = {
+                is_controlled_by = TRA
+            }
+        }
+        launch_nuke = {
+            state = 135
+            controller = TRA
+            nuke_type = thermonuclear_bomb
+        }
+    }
+    ####
+    if = {
+        limit = {
+            650 = {
+                is_controlled_by = GEA
+            }
+        }
+        launch_nuke = {
+            state = 650
+            controller = GEA
+            nuke_type = thermonuclear_bomb
+        }
+    }
+    if = {
+        limit = {
+            173 = {
+                is_controlled_by = GEA
+            }
+        }
+        launch_nuke = {
+            state = 163
+            controller = GEA
+            nuke_type = thermonuclear_bomb
+        }
+    }
+    if = {
+        limit = {
+            187 = {
+                is_controlled_by = GEA
+            }
+        }
+        launch_nuke = {
+            state = 187
+            controller = GEA
+            nuke_type = thermonuclear_bomb
+        }
+    }
+    if = {
+        limit = {
+            306 = {
+                is_controlled_by = GEA
+            }
+        }
+        launch_nuke = {
+            state = 306
+            controller = GEA
+            nuke_type = thermonuclear_bomb
+        }
+    }
+    if = {
+        limit = {
+            186 = {
+                is_controlled_by = GEA
+            }
+        }
+        launch_nuke = {
+            state = 186
+            controller = GEA
+            nuke_type = thermonuclear_bomb
+        }
+    }
+    if = {
+        limit = {
+            305 = {
+                is_controlled_by = GEA
+            }
+        }
+        launch_nuke = {
+            state = 305
+            controller = GEA
+            nuke_type = thermonuclear_bomb
+        }
+    }
+    if = {
+        limit = {
+            184 = {
+                is_controlled_by = GEA
+            }
+        }
+        launch_nuke = {
+            state = 184
+            controller = GEA
+            nuke_type = thermonuclear_bomb
+        }
+    }
+    if = {
+        limit = {
+            304 = {
+                is_controlled_by = GEA
+            }
+        }
+        launch_nuke = {
+            state = 304
+            controller = GEA
+            nuke_type = thermonuclear_bomb
         }
     }
 }

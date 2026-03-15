@@ -185,4 +185,9 @@ spriteTypes = {
         name = "GFX_BAREXP_SE_img_10"
         texturefile = "gfx/interface/SuperEvent/Classic_SuperEvent/BAREXP_SE_img_10.dds"
     }
+
+    spriteType = {
+        name = "GFX_BAREXP_SE_img_11"
+        texturefile = "gfx/interface/SuperEvent/Classic_SuperEvent/BAREXP_SE_img_11.dds"
+    }
 }

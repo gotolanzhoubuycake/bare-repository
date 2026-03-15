@@ -430,6 +430,20 @@ Hipper_test_decisions_categories = {
             BSE_Fire_Super_Event_index_10 = yes
         }
     }
+    BAREXP_show_superevent11_gui = {
+        visible = {
+            is_debug = yes
+            has_global_flag = show_se_test_decision_flag
+        }
+        available = {
+            is_ai = no
+        }
+        complete_effect = {
+            news_event = {
+                id = ALF_news_event.12
+            }
+        }
+    }
     ###查看结算警告###
     check_war_end_flavor_hipp = {
         visible = {
@@ -514,15 +528,15 @@ Hipper_test_decisions_categories = {
         }
         complete_effect = {
             TRI = {
-				country_event = {
-					id = ALF.46
-				}
-			}
-			GEH = {
-				country_event = {
-					id = ALF.50
-				}
-			}
+                country_event = {
+                    id = ALF.46
+                }
+            }
+            GEH = {
+                country_event = {
+                    id = ALF.50
+                }
+            }
         }
     }
     initialize_2nd_liberation_war = {
@@ -652,25 +666,7 @@ Hipper_test_decisions_categories = {
         }
     }
 
-    BAREXP_endgame_closing_screen_gui = {
-        visible = {
-            always = yes
-        }
-        complete_effect = {
-            BARE_ALF_GOOD_END_ENDING_SCREEN_EFFECT = yes
-        }
-    }
-
-    BAREXP_endgame_closing_screen_ALF_BAD_END = {
-        visible = {
-            always = yes
-        }
-        complete_effect = {
-            BARE_ALF_BAD_END_ENDING_SCREEN_EFFECT = yes
-        }
-    }
-    ##阵营目标完成提示
-    check_faction_goal_complete_popup_hipp = {
+    launch_the_judgement_test = {
         visible = {
             is_debug = yes
         }
@@ -678,12 +674,43 @@ Hipper_test_decisions_categories = {
             is_ai = no
         }
         complete_effect = {
-            set_variable = {
-                faction_goal_type_index = 1
-            }
-            BARE_FIRE_FACTION_GOAL_COMPLETE_POPUP_EFFECT = yes
+            ALF_launch_the_judgement_script_effect = yes
         }
     }
+}
+
+BAREXP_endgame_closing_screen_gui = {
+    visible = {
+        always = yes
+    }
+    complete_effect = {
+        BARE_ALF_GOOD_END_ENDING_SCREEN_EFFECT = yes
+    }
+}
+
+BAREXP_endgame_closing_screen_ALF_BAD_END = {
+    visible = {
+        always = yes
+    }
+    complete_effect = {
+        BARE_ALF_BAD_END_ENDING_SCREEN_EFFECT = yes
+    }
+}
+##阵营目标完成提示
+check_faction_goal_complete_popup_hipp = {
+    visible = {
+        is_debug = yes
+    }
+    available = {
+        is_ai = no
+    }
+    complete_effect = {
+        set_variable = {
+            faction_goal_type_index = 1
+        }
+        BARE_FIRE_FACTION_GOAL_COMPLETE_POPUP_EFFECT = yes
+    }
+}
 }
 
 CEN_Operation_Uranus_categories = {

@@ -347,20 +347,17 @@ ALF_war_with_Kaiser_wait = {
         ALF = {
             has_war_with = CAH
         }
-        OR = {
-            CAB = {
+
+        CAB = {
+            OR = {
                 has_capitulated = yes
+                surrender_progress > 0.7
             }
-            CAH = {
+        }
+        CAH = {
+            OR = {
                 has_capitulated = yes
-            }
-            AND = {
-                CAH = {
-                    surrender_progress > 0.5
-                }
-                CAB = {
-                    surrender_progress > 0.5
-                }
+                surrender_progress > 0.7
             }
         }
         NOT = {
@@ -449,6 +446,11 @@ ALF_war_with_ARI = {
         id = CAH
         value = 100
     }
+    ai_strategy = {
+        type = force_defend_ally_borders
+        id = ARR
+        value = 60
+    }
 }
 
 ##第一阶段，先蹲，主力解决圣三一
@@ -496,24 +498,24 @@ ALF_war_with_TRI_AND_GEH_STAGE_1 = {
 
     ##关注主要战场就行了！！
     ai_strategy = {
-        type = force_defend_ally_borders
-        id = TRT
+       type = force_defend_ally_borders
+       id = TRI
         value = 100
     }
     ai_strategy = {
         type = force_defend_ally_borders
-        id = GER
+        id = GEH
         value = 100
     }
     ai_strategy = {
         type = front_unit_request
         tag = TRA
-        value = 100
+        value = 80
     }
     ai_strategy = {
         type = front_unit_request
         tag = GEA
-        value = 75
+        value = 50
     }
 
     #####
@@ -547,7 +549,7 @@ ALF_war_with_TRI_AND_GEH_STAGE_1 = {
         tag = CAP
         value = -100
     }
-    
+
 
     ###先对付圣三一
     ai_strategy = {
@@ -555,7 +557,7 @@ ALF_war_with_TRI_AND_GEH_STAGE_1 = {
         tag = TRA
         #ratio = 0.1
         ordertype = front
-        execution_type = careful
+        execution_type = balanced
         manual_attack = yes
         execute_order = yes
     }
@@ -613,15 +615,14 @@ ALF_war_with_TRI_AND_GEH_STAGE_2 = {
         value = 50
     }
 
-    ##关注主要战场就行了！！
     ai_strategy = {
-        type = force_defend_ally_borders
-        id = TRT
+       type = force_defend_ally_borders
+       id = TRI
         value = 100
     }
     ai_strategy = {
         type = force_defend_ally_borders
-        id = GER
+        id = GEH
         value = 100
     }
     ai_strategy = {
@@ -656,19 +657,19 @@ ALF_war_with_TRI_AND_GEH_STAGE_2 = {
         tag = A25
         value = -100
     }
-    
+
     ai_strategy = {
         type = front_unit_request
         tag = A24
         value = -100
     }
-    
+
     ai_strategy = {
         type = front_unit_request
         tag = CAP
         value = -100
     }
-    
+
     ###先对付圣三一
     ai_strategy = {
         type = front_control
@@ -734,13 +735,13 @@ ALF_war_with_TRI_AND_GEH_STAGE_2EX = {
 
     ##关注主要战场就行了！！
     ai_strategy = {
-        type = force_defend_ally_borders
-        id = TRT
+       type = force_defend_ally_borders
+       id = TRI
         value = 100
     }
     ai_strategy = {
         type = force_defend_ally_borders
-        id = GER
+        id = GEH
         value = 100
     }
     ai_strategy = {
@@ -775,19 +776,19 @@ ALF_war_with_TRI_AND_GEH_STAGE_2EX = {
         tag = A25
         value = -100
     }
-    
+
     ai_strategy = {
         type = front_unit_request
         tag = A24
         value = -100
     }
-    
+
     ai_strategy = {
         type = front_unit_request
         tag = CAP
         value = -100
     }
-    
+
     ###先对付圣三一
     ai_strategy = {
         type = front_control

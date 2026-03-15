@@ -178,7 +178,10 @@ on_actions = {
             else_if = {
                 limit = {
                     FROM = {
-                        tag = ALF
+                        OR = {
+                            tag = ALF
+                            tag = FSC
+                        }
                     }
                     ROOT = {
                         OR = {
@@ -202,14 +205,14 @@ on_actions = {
                             tag = AVG
                         }
                     }
-                    FROM = {
+                    ALF = {
                         country_event = {
                             id = ALF.15
                             days = 2
                         }
                     }
                 }
-                FROM = {
+                ALF = {
                     annex_country = {
                         target = ROOT
                         transfer_troops = no
@@ -220,7 +223,11 @@ on_actions = {
             else_if = {
                 limit = {
                     FROM = {
-                        tag = ALF
+                        OR = {
+                            tag = ALF
+                            tag = FSC
+                        }
+                        
                     }
                     ROOT = {
                         tag = CAH
@@ -234,7 +241,10 @@ on_actions = {
             else_if = {
                 limit = {
                     FROM = {
-                        tag = ALF
+                        OR = {
+                            tag = ALF
+                            tag = FSC
+                        }
                     }
                     ROOT = {
                         tag = CAB

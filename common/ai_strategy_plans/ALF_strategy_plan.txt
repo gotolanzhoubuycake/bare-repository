@@ -135,6 +135,9 @@ ALF_stage_2_plan = {
         ##政治工业线III
         ALF_focus_trade
         ALF_expand_goods_production
+        ##军事线II##
+        ALF_moden_combat
+        ALF_armor_spearhead
         ##接触红冬
         ALF_contact_redwinter
         ALF_technology_exchange
@@ -146,7 +149,7 @@ ALF_stage_2_plan = {
         ALF_infrastructure_plan
         ALF_resource_produce
         ALF_be_ready_for_action
-        ##军事线##
+        ##军事线III##
         ALF_sharp_the_blade
         ALF_establish_officer_school
         ALF_elegant_combat
@@ -156,7 +159,7 @@ ALF_stage_2_plan = {
         ALF_build_more_house
         ALF_recovery_movement
         ALF_rebuild_city_operation
-        ##军事线II
+        ##军事线IV
         ALF_united_research_facility
         ALF_establish_air_force
         ALF_an_independent_air_foce
@@ -451,6 +454,18 @@ ALF_stage_4_war_plan = {
         ALF_shepherd
         ALF_peacher
         ALF_another_way
+        ##打仗好歹点下军事线吧
+        ALF_united_research_facility
+        ALF_establish_air_force
+        ALF_an_independent_air_foce
+        ALF_air_superiority
+        ALF_JTAC_support
+        ALF_above_sky
+        ALF_helicopter
+        ALF_air_assault_tactics
+        ALF_attack_helicopter
+        ALF_air_gunship
+        ALF_integrated_firepower_system
     }
 
     focus_factors = {

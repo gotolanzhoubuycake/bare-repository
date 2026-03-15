@@ -173,6 +173,7 @@ BARE_SuperEvent_2_effect_10 = {
 	}
 }
 
+##公司战争##
 BARE_SuperEvent_2_effect_11 = {
 	if = {
 		limit = {
@@ -183,8 +184,7 @@ BARE_SuperEvent_2_effect_11 = {
 		}
 		BARE_SuperEvent_2_fire_super_event = yes
 		hidden_effect = {
-			scoped_sound_effect = BARE_SuperEvent_Sound_enterprise_war
-			scoped_play_song = "BARE_SuperEvent_Sound_Block_2m"
+			scoped_play_song = "BARE_SuperEvent_Sound_Steel_Rain"
 		}
 	}
 }
@@ -247,13 +247,13 @@ BSE_Fire_Super_Event_index_6 = {
 	#scoped_play_song = "BSP_The_Battle_on_Ice_Short"
 }
 
+##光复战争##
 BSE_Fire_Super_Event_index_7 = {
 	set_variable = {
 		barexp_super_event_index = 7
 	}
 	hidden_effect = {
-		scoped_sound_effect = BARE_SuperEvent_Sound_2ND_LIBERATION_WAR
-		scoped_play_song = "BARE_SuperEvent_Sound_Block_2m"
+		scoped_play_song = "BARE_SuperEvent_Sound_Pain_is_Salvation"
 	}
 }
 
@@ -284,6 +284,15 @@ BSE_Fire_Super_Event_index_10 = {
 	hidden_effect = {
 		scoped_sound_effect = BARE_SuperEvent_Sound_GEH_TRI_Total_War
 		scoped_play_song = "BARE_SuperEvent_Sound_Block_2m"
+	}
+}
+
+BSE_Fire_Super_Event_index_11 = {
+	set_variable = {
+		barexp_super_event_index = 11
+	}
+	hidden_effect = {
+		scoped_play_song = BARE_SuperEvent_Sound_lap_time
 	}
 }
 

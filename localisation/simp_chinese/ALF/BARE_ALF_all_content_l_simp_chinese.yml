@@ -1,6 +1,4 @@
 ﻿l_simp_chinese:
- BARE_SuperEvent_Song_for_the_Beyond: "再会之歌"
- BARE_SuperEvent_Sound_lap_time: "LAP TIME"
 ####################
 ##变身名字
 ####################
@@ -182,8 +180,10 @@
  ALF_rebuild_the_hydropower_station: "完成废弃水电站工程"
  ALF_rebuild_the_hydropower_station_desc: "通过联邦电网，我们解决了市民的基本用电需求。但流亡者逐步扩大的工业生产规模，以及各种特殊项目，需要更庞大且稳定的能源供给。\n\n考虑到我们目前的处境，重新整修被「金钗盗贼帮」当做据点的废弃水电站也许是一个最为经济的方案。不过，流亡者缺少对如此规模的工厂的建设经验。因此可以预想到，相关工程会消耗大量的战略储备。"
  ALF_be_ready_for_action: "蓄势待发"
+ ALF_be_ready_for_action_desc: "通过长久的规划，城市如今已经焕然一新，然而，如今的基沃托斯依旧风云激荡。\n\n战争终会叩响我们的门扉，此时正应鼓起勇气，坚定保卫阿里乌斯来之不易的现代生活。"
  ALF_be_ready_for_action_tt: "§Y阿里乌斯解放阵线§!追加效果：\n战争支持度：§G+10%§!" 
  ALF_residential_census: "进行居民人口普查"
+ ALF_residential_census_desc: "长期沦为不法地带破坏了黑市地区的基层结构，也持续滋生着各种治安与社会问题，带来了诸多或大或小的隐患。\n\n针对这一情况，我们可以依托恢复后的邮政系统，以及其它的强力执行部门，对区域内进行一次彻底的人口调查。相关成果奖成为我们恢复基层组织生命力的重要一步。"
  
  ALF_change_outfit: "改头换面"
  ALF_change_outfit_desc: "「庇护之羽」行动的胜利也表明，黑市地带的这些所谓的“地头蛇”并非是不败金身。尽管如此，流亡者也必须认识到，这片被称为“黑市”的土地并不友好。\n\n毫无疑问，“阿里乌斯学园”这个名讳既容易招致敌意，亦有可能引来夫人的爪牙。因此，流亡者必须采用一个更加“低调且灵活”的身份进行活动，以便应对各种情况。"
@@ -698,7 +698,7 @@
 
  ALF_stand_up_the_committee: "起来，战斗！"
  ALF_they_shall_no_pass: "不许通过"
- ALF_Unlimited_bombing: "§O无限制轰炸§!"
+ ALF_Unlimited_bombing: "§O洲际温压弹头§!"
  ALF_volunteers_from_farway: "援助远邻"
  ALF_full_work_schedule_idea: "全力生产"
  ALF_cancel_rebuild_plan_idea: "暂停重建计划"

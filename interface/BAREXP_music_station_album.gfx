@@ -1,0 +1,7 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_barexp_superevent_album_art"
+		texturefile = "gfx/music_station/barexp_superevent_album_art.dds"
+		noOfFrames = 2
+	}
+}

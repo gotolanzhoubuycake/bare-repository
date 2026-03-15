@@ -773,16 +773,16 @@ country_event = {
 	title = ALF.34.t
 	desc = ALF.34.desc
 	is_triggered_only = yes
-	immediate = {
-		hidden_effect = {
-			scoped_play_song = BARE_SuperEvent_Sound_lap_time
-		}
-	}
 	option = {
 		name = ALF.34.a
 		activate_mission = ALF_GBO_trigger_mission
 		set_country_flag = ALF_GBO_begins_flag
 		set_global_flag = ARIUS_IN_BLACKMARKET_ROAD_OPEN_GLOBAL_FLAG
+		hidden_effect = {
+			news_event = {
+				id = ALF_news_event.12
+			}
+		}
 	}
 }
 

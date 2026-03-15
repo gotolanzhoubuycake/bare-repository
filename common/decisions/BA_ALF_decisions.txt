@@ -491,10 +491,10 @@ ALF_Livability_decision_category = {
                 remove_core_of = WSG
             }
         }
-		ai_will_do = {
-			#优！先！
-			factor = 100
-		}
+        ai_will_do = {
+            #优！先！
+            factor = 100
+        }
     }
     ##开启救济工作
     Implement_relief_plan_targeted_decision = {
@@ -936,11 +936,11 @@ ALF_Livability_decision_category = {
     AI_ALF_improve_livability_decision = {
         available = {
             has_war = no
-			is_ai = yes
+            is_ai = yes
         }
-		visible = {
-			is_ai = yes
-		}
+        visible = {
+            is_ai = yes
+        }
         cost = 1
         days_remove = 60
         days_re_enable = 180
@@ -958,12 +958,12 @@ ALF_Livability_decision_category = {
     AI_ALF_Livability_for_infantry_equipment = {
         visible = {
             has_completed_focus = ALF_Enable_abandoned_inventory
-			is_ai = yes
+            is_ai = yes
         }
         available = {
-			is_ai = yes
+            is_ai = yes
         }
-		cost = 1
+        cost = 1
         days_remove = 7
         days_re_enable = 7
         remove_effect = {
@@ -981,7 +981,7 @@ ALF_Livability_decision_category = {
                     infantry_equipment < 1000
                 }
             }
-			modifier = {
+            modifier = {
                 factor = 10
                 has_equipment = {
                     infantry_equipment < 0
@@ -993,12 +993,12 @@ ALF_Livability_decision_category = {
     AI_ALF_Livability_for_artillery_equipment = {
         visible = {
             has_completed_focus = ALF_Enable_abandoned_inventory
-			is_ai = yes
+            is_ai = yes
         }
         available = {
-			is_ai = yes
+            is_ai = yes
         }
-		cost = 1
+        cost = 1
         days_remove = 7
         days_re_enable = 7
         remove_effect = {
@@ -1008,7 +1008,7 @@ ALF_Livability_decision_category = {
                 producer = ALF
             }
         }
-		ai_will_do = {
+        ai_will_do = {
             factor = 0
             modifier = {
                 add = 1
@@ -1016,7 +1016,7 @@ ALF_Livability_decision_category = {
                     light_fire_support_equipment < 250
                 }
             }
-			modifier = {
+            modifier = {
                 factor = 10
                 has_equipment = {
                     light_fire_support_equipment < 0
@@ -1028,12 +1028,12 @@ ALF_Livability_decision_category = {
     AI_ALF_Livability_for_support_equipment = {
         visible = {
             has_completed_focus = ALF_Enable_abandoned_inventory
-			is_ai = yes
+            is_ai = yes
         }
         available = {
-			is_ai = yes
+            is_ai = yes
         }
-		cost = 1
+        cost = 1
         days_remove = 7
         days_re_enable = 7
         remove_effect = {
@@ -1043,7 +1043,7 @@ ALF_Livability_decision_category = {
                 producer = ALF
             }
         }
-		ai_will_do = {
+        ai_will_do = {
             factor = 0
             modifier = {
                 add = 1
@@ -1051,7 +1051,7 @@ ALF_Livability_decision_category = {
                     support_equipment < 250
                 }
             }
-			modifier = {
+            modifier = {
                 factor = 10
                 has_equipment = {
                     support_equipment < 0
@@ -1059,15 +1059,15 @@ ALF_Livability_decision_category = {
             }
         }
     }
-	##恢复区域邮政系统
+    ##恢复区域邮政系统
     AI_restore_state_mail_system_targeted_decision = {
         state_target = yes
-		available = {
-			
-		}
+        available = {
+
+        }
         target_root_trigger = {
             has_completed_focus = ALF_Reorganize_the_postal_system
-			is_ai = yes
+            is_ai = yes
         }
         ##只有黑市省份在位于这一决议的范围##
         target_array = global.black_market_state
@@ -1092,9 +1092,9 @@ ALF_Livability_decision_category = {
                 ALF_small_improve_livability_modifier_effect = yes
             }
         }
-		ai_will_do = {
-			factor = 1
-		}
+        ai_will_do = {
+            factor = 1
+        }
     }
     ##区域供电
     AI_restore_state_electric_system_targeted_decision = {
@@ -1104,7 +1104,7 @@ ALF_Livability_decision_category = {
         }
         target_root_trigger = {
             has_idea = ALF_CEN_electric_contract_1
-			is_ai = yes
+            is_ai = yes
         }
         ##只有黑市省份在位于这一决议的范围##
         target_array = global.black_market_state
@@ -1129,9 +1129,9 @@ ALF_Livability_decision_category = {
                 ALF_small_improve_livability_modifier_effect = yes
             }
         }
-		ai_will_do = {
-			factor = 1
-		}
+        ai_will_do = {
+            factor = 1
+        }
     }
 
     ##AI战争动员
@@ -1584,9 +1584,9 @@ ALF_war_plan_protect_wing_category = {
         remove_effect = {
 
         }
-		ai_will_do = {
-			factor = 1000
-		}
+        ai_will_do = {
+            factor = 1000
+        }
     }
     ##对金钗盗贼团宣战
     ALF_war_with_HTG_decision = {
@@ -1826,6 +1826,48 @@ ALF_anti_kaiser_operation_category = {
         complete_effect = {
             set_country_flag = ALF_EPW_Stage_1_trigger_mission_has_completed_flag
             activate_mission = ALF_EPW_Stage_2_counter_mission
+            hidden_effect = {
+                if = {
+                    limit = {
+                        BMG = {
+                            exists = yes
+                        }
+                    }
+
+                    ALF = {
+                        annex_country = {
+                            target = BMG
+                            transfer_troops = no
+                        }
+                    }
+                }
+                if = {
+                    limit = {
+                        BMT = {
+                            exists = yes
+                        }
+                    }
+                    ALF = {
+                        annex_country = {
+                            target = BMT
+                            transfer_troops = no
+                        }
+                    }
+                }
+                if = {
+                    limit = {
+                        BMR = {
+                            exists = yes
+                        }
+                    }
+                    ALF = {
+                        annex_country = {
+                            target = BMR
+                            transfer_troops = no
+                        }
+                    }
+                }
+            }
         }
         timeout_effect = {
             activate_mission = ALF_EPW_Stage_1_trigger_mission
@@ -2352,7 +2394,7 @@ ALF_Gabriel_operation_category = {
         }
         days_remove = 30
         remove_effect = {
-            
+
         }
         ai_will_do = {
             factor = 1000
@@ -2572,7 +2614,7 @@ ALF_Uriel_operation_category = {
         }
         cost = 20
         remove_effect = {
-        
+
         }
         ai_will_do = {
             factor = 1
@@ -2866,7 +2908,7 @@ ALF_Uriel_operation_category = {
             modifier = {
                 add = 1
                 GEA = {
-                    has_capitulated = yes
+                    surrender_progress > 0.5
                 }
             }
         }
@@ -2904,7 +2946,7 @@ ALF_Uriel_operation_category = {
             modifier = {
                 add = 1
                 GEA = {
-                    has_capitulated = yes
+                    surrender_progress > 0.5
                 }
             }
         }

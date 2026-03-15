@@ -2,24 +2,36 @@
 
 music = {
 	name = "BARE_SuperEvent_Sound_Block_1m"
-	file = "BARE_SuperEvent_Sound_Block_1m.ogg"
+	file = "BARE_SuperEvent_Music/BARE_SuperEvent_Sound_Block_1m.ogg"
 	volume = 0.65
 }
 
 music = {
 	name = "BARE_SuperEvent_Sound_Block_2m"
-	file = "BARE_SuperEvent_Sound_Block_2m.ogg"
+	file = "BARE_SuperEvent_Music/BARE_SuperEvent_Sound_Block_2m.ogg"
 	volume = 0.65
 }
 
 music = {
 	name = "BARE_SuperEvent_Song_for_the_Beyond"
-	file = "Song_for_the_Beyond.ogg"
+	file = "BARE_SuperEvent_Music/BARE_SuperEvent_Sound_Song_for_the_Beyond.ogg"
 	volume = 0.65
 }
 
 music = {
 	name = "BARE_SuperEvent_Sound_lap_time"
-	file = "BARE_SuperEvent_Sound_lap_time.ogg"
+	file = "BARE_SuperEvent_Music/BARE_SuperEvent_Sound_lap_time.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "BARE_SuperEvent_Sound_Pain_is_Salvation"
+	file = "BARE_SuperEvent_Music/BARE_SuperEvent_Sound_Pain_is_Salvation.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "BARE_SuperEvent_Sound_Steel_Rain"
+	file = "BARE_SuperEvent_Music/BARE_SuperEvent_Sound_Steel_Rain.ogg"
 	volume = 0.65
 }
