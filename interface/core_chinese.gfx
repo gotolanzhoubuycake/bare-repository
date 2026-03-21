@@ -421,6 +421,45 @@ bitmapfonts = {
 	}
 
 	###部分原版字体
+	################
+	#bitmapfont_override = {
+	#	name = "classic_hoi_20b"
+	#	fontfiles = { 
+	#		"gfx/fonts/chinese/hoi_20b_1of4EX"
+	#		"gfx/fonts/chinese/hoi_20b_2of4EX"
+	#		"gfx/fonts/chinese/hoi_20b_3of4EX"
+	#		"gfx/fonts/chinese/hoi_20b_4of4EX"
+	#	}
+	#languages = { "l_simp_chinese" } 
+	#}
+		
+	#bitmapfont_override = {
+	#	name = "classic_hoi_20bs"
+	#	fontfiles = { 
+	#		"gfx/fonts/chinese/hoi_20bs_1of4EX"	
+	#		"gfx/fonts/chinese/hoi_20bs_2of4EX"	
+	#		"gfx/fonts/chinese/hoi_20bs_3of4EX"	
+	#		"gfx/fonts/chinese/hoi_20bs_4of4EX"	
+	#	}
+	#languages = { "l_simp_chinese" } 
+	#}
+
+	bitmapfont = {
+		name = "sp_gui_hoi4_typewriter16"
+		fontfiles = { 	
+			"gfx/fonts/Arial_14"	
+		}
+
+	    #languages = { "l_simp_chinese" } 
+
+		color = 0xff000000
+
+		textcolors = {
+			Y = { 153 153 0 }
+			H = { 153 153 0 }
+		}
+	}
+
 	bitmapfont = {
 		name = "classic_hoi4_typewriter16"
 		fontfiles = { 	

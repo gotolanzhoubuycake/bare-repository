@@ -377,7 +377,7 @@ focus_tree = {
     focus = {
         #长路漫漫
         id = ALF_a_long_way_to_go
-        icon = GFX_goal_unknown
+        icon = GFX_goal_ALF_a_long_way_to_go
         cost = 5
         x = 18
         y = 1
@@ -395,7 +395,7 @@ focus_tree = {
     focus = {
         ##内战的教训
         id = ALF_lesson_from_civil_war
-        icon = GFX_goal_unknown
+        icon = GFX_goal_ALF_lesson_from_civil_war
         relative_position_id = ALF_a_long_way_to_go
         prerequisite = {
             focus = ALF_a_long_way_to_go
@@ -419,7 +419,7 @@ focus_tree = {
     focus = {
         ##稳定人心
         id = ALF_stable_the_thoughts
-        icon = GFX_goal_unknown
+        icon = GFX_goal_ALF_stable_the_thoughts
         relative_position_id = ALF_lesson_from_civil_war
         prerequisite = {
             focus = ALF_lesson_from_civil_war
@@ -449,7 +449,7 @@ focus_tree = {
     focus = {
         ##反对投降主义
         id = ALF_against_capitulationism
-        icon = GFX_goal_unknown
+        icon = GFX_goal_ALF_against_capitulationism
         relative_position_id = ALF_stable_the_thoughts
         prerequisite = {
             focus = ALF_stable_the_thoughts
@@ -477,7 +477,7 @@ focus_tree = {
     focus = {
         ##疏导改良主义
         id = ALF_diversionary_reformism
-        icon = GFX_goal_unknown
+        icon = GFX_goal_ALF_diversionary_reformism
         relative_position_id = ALF_stable_the_thoughts
         prerequisite = {
             focus = ALF_stable_the_thoughts
@@ -505,7 +505,7 @@ focus_tree = {
     focus = {
         ##阿里乌斯临时学园
         id = ALF_rebuild_arius_school
-        icon = GFX_goal_unknown
+        icon = GFX_goal_ALF_rebuild_arius_school
         relative_position_id = ALF_stable_the_thoughts
         prerequisite = {
             focus = ALF_against_capitulationism
@@ -533,7 +533,7 @@ focus_tree = {
     focus = {
         ##公开辩论
         id = ALF_public_debate
-        icon = GFX_goal_unknown
+        icon = GFX_goal_ALF_public_debate
         relative_position_id = ALF_rebuild_arius_school
         prerequisite = {
             focus = ALF_against_capitulationism
@@ -565,7 +565,7 @@ focus_tree = {
     focus = {
         ##共同认知
         id = ALF_create_shared_cognition
-        icon = GFX_goal_unknown
+        icon = GFX_goal_ALF_create_shared_cognition
         relative_position_id = ALF_rebuild_arius_school
         prerequisite = {
             focus = ALF_diversionary_reformism
@@ -598,7 +598,7 @@ focus_tree = {
     focus = {
         ##我们能做到
         id = ALF_we_can_achieve_the_goal
-        icon = GFX_goal_unknown
+        icon = GFX_goal_ALF_we_can_achieve_the_goal
         relative_position_id = ALF_rebuild_arius_school
         prerequisite = {
             focus = ALF_public_debate
