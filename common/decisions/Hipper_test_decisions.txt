@@ -677,40 +677,39 @@ Hipper_test_decisions_categories = {
             ALF_launch_the_judgement_script_effect = yes
         }
     }
-}
 
-BAREXP_endgame_closing_screen_gui = {
-    visible = {
-        always = yes
-    }
-    complete_effect = {
-        BARE_ALF_GOOD_END_ENDING_SCREEN_EFFECT = yes
-    }
-}
-
-BAREXP_endgame_closing_screen_ALF_BAD_END = {
-    visible = {
-        always = yes
-    }
-    complete_effect = {
-        BARE_ALF_BAD_END_ENDING_SCREEN_EFFECT = yes
-    }
-}
-##阵营目标完成提示
-check_faction_goal_complete_popup_hipp = {
-    visible = {
-        is_debug = yes
-    }
-    available = {
-        is_ai = no
-    }
-    complete_effect = {
-        set_variable = {
-            faction_goal_type_index = 1
+    BAREXP_endgame_closing_screen_gui = {
+        visible = {
+            always = yes
         }
-        BARE_FIRE_FACTION_GOAL_COMPLETE_POPUP_EFFECT = yes
+        complete_effect = {
+            BARE_ALF_GOOD_END_ENDING_SCREEN_EFFECT = yes
+        }
     }
-}
+
+    BAREXP_endgame_closing_screen_ALF_BAD_END = {
+        visible = {
+            always = yes
+        }
+        complete_effect = {
+            BARE_ALF_BAD_END_ENDING_SCREEN_EFFECT = yes
+        }
+    }
+    ##阵营目标完成提示
+    check_faction_goal_complete_popup_hipp = {
+        visible = {
+            is_debug = yes
+        }
+        available = {
+            is_ai = no
+        }
+        complete_effect = {
+            set_variable = {
+                faction_goal_type_index = 1
+            }
+            BARE_FIRE_FACTION_GOAL_COMPLETE_POPUP_EFFECT = yes
+        }
+    }
 }
 
 CEN_Operation_Uranus_categories = {
