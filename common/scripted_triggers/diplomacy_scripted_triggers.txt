@@ -431,10 +431,9 @@ DIPLOMACY_JOIN_ALLY_ENABLE_TRIGGER = {
 	}
 }
 DIPLOMACY_CALL_ALLY_ENABLE_TRIGGER = {
-	        Great_Game_is_involved = no
-	    	Not = {
-				tag = SCH
-			}
+	Not = {
+		tag = SCH
+	}
 	# #演习
 	# Great_Game_is_involved = no
 }
