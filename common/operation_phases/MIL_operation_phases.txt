@@ -1,0 +1,39 @@
+MIL_box_weapon_phase_infiltration = {
+    name = MIL_box_weapon_phase_infiltration
+    desc = MIL_box_weapon_phase_infiltration_desc
+    icon = "GFX_operations_infiltrate_armed_forces"
+    picture = "GFX_report_event_generic_sign_treaty1"
+    outcome = MIL_box_weapon_phase_infiltration_outcome
+}
+
+MIL_box_weapon_phase_infiltration_network = {
+    name = MIL_box_weapon_phase_infiltration_network
+    desc = MIL_box_weapon_phase_infiltration_network_desc
+    icon = "GFX_operations_infiltrate_armed_forces"
+    picture = "GFX_report_event_generic_read_budget"
+    outcome = MIL_box_weapon_phase_infiltration_network_outcome
+}
+
+MIL_box_weapon_phase_execute = {
+    name = MIL_box_weapon_phase_execute
+    desc = MIL_box_weapon_phase_execute_desc
+    icon = "GFX_operations_infiltrate_armed_forces"
+    picture = "GFX_report_event_generic_rally"
+    outcome = MIL_box_weapon_phase_execute_outcome
+}
+
+MIL_box_weapon_phase_exfiltration_border = {
+    name = MIL_box_weapon_phase_exfiltration_border
+    desc = MIL_box_weapon_phase_exfiltration_border_desc
+    icon = "GFX_operations_infiltrate_armed_forces"
+    picture = "GFX_report_event_generic_border_guard"
+    outcome = MIL_box_weapon_phase_exfiltration_border_outcome
+}
+
+MIL_box_weapon_phase_exfiltration_go_to_ground = {
+    name = MIL_box_weapon_phase_exfiltration_go_to_ground
+    desc = MIL_box_weapon_phase_exfiltration_go_to_ground_desc
+    icon = "GFX_operations_infiltrate_armed_forces"
+    picture = "GFX_report_event_generic_diplomacy1"
+    outcome = MIL_box_weapon_phase_exfiltration_go_to_ground_outcome
+}
