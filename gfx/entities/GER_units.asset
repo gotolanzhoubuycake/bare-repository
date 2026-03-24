@@ -1,6 +1,6 @@
 ### 格黑娜文化组
 entity = {
-	name = "gehenna_culture_gfx_infantry_entity"
+	name = "GEH_GOV_COSMETIC_infantry_entity"
 	pdxmesh = "GEH_infantry_mg_mesh"
 
 	default_state = "idle"
@@ -45,8 +45,8 @@ entity = {
 }
 
 entity = {
-	name = "gehenna_culture_gfx_infantry_2_entity"
-	clone = "gehenna_culture_gfx_infantry_entity"
+	name = "GEH_GOV_COSMETIC_infantry_2_entity"
+	clone = "GEH_GOV_COSMETIC_infantry_entity"
 	
 	attach = { 	name = "rifle1"	Right_Hand_node = "generic_as_44_weapon_right_entity" }
 	attach = { 	name = "rifle2"	Left_Hand_node 	= "generic_as_44_weapon_left_entity" }
@@ -58,8 +58,8 @@ entity = {
 }
 
 entity = {
-	name = "gehenna_culture_gfx_infantry_3_entity"
-	clone = "gehenna_culture_gfx_infantry_entity"
+	name = "GEH_GOV_COSMETIC_infantry_3_entity"
+	clone = "GEH_GOV_COSMETIC_infantry_entity"
 
 	attach = { 	name = "rifle1"	Right_Hand_node = "generic_scar_l_weapon_right_entity" }
 	attach = { 	name = "rifle2"	Left_Hand_node 	= "generic_scar_l_weapon_left_entity" }
@@ -73,18 +73,18 @@ entity = {
 #特种部队##
 ##########
 entity = {
-	name = "gehenna_culture_gfx_infantry_sf_entity"
-    clone = "gehenna_culture_gfx_infantry_entity"
+	name = "GEH_GOV_COSMETIC_infantry_sf_entity"
+    clone = "GEH_GOV_COSMETIC_infantry_entity"
 }
 
 entity = {
-	name = "gehenna_culture_gfx_infantry_sf_2_entity"
-    clone = "gehenna_culture_gfx_infantry_2_entity"
+	name = "GEH_GOV_COSMETIC_infantry_sf_2_entity"
+    clone = "GEH_GOV_COSMETIC_infantry_2_entity"
 }
 
 entity = {
-	name = "gehenna_culture_gfx_infantry_sf_3_entity"
-    clone = "gehenna_culture_gfx_infantry_3_entity"
+	name = "GEH_GOV_COSMETIC_infantry_sf_3_entity"
+    clone = "GEH_GOV_COSMETIC_infantry_3_entity"
 }
 
 #########
@@ -92,7 +92,7 @@ entity = {
 #########
 
 entity = {
-	name = "gehenna_culture_gfx_artillery_entity"
+	name = "GEH_GOV_COSMETIC_artillery_entity"
 	pdxmesh = "frame_artillery_mesh"
 	
 	default_state = "idle"
@@ -109,7 +109,7 @@ entity = {
 	scale = 1
 	
 	attach = { name = artillery			artillery = "artillery_gun_entity" }
-	attach = { name = infantry			infantry = "gehenna_culture_gfx_infantry_entity" }
+	attach = { name = infantry			infantry = "GEH_GOV_COSMETIC_infantry_entity" }
 }
 
 ###########
@@ -117,7 +117,7 @@ entity = {
 ###########
 
 entity = {
-	name = "gehenna_culture_gfx_infantry_mg_rider_1_entity"
+	name = "GEH_GOV_COSMETIC_infantry_mg_rider_1_entity"
 	pdxmesh = "GEH_infantry_mg_mesh"
 	
 	default_state = "idle"
@@ -143,8 +143,8 @@ entity = {
 }
 
 entity = {
-	name = "gehenna_culture_gfx_infantry_mg_rider_2_entity"
-	clone = "gehenna_culture_gfx_infantry_mg_rider_1_entity"
+	name = "GEH_GOV_COSMETIC_infantry_mg_rider_2_entity"
+	clone = "GEH_GOV_COSMETIC_infantry_mg_rider_1_entity"
 
 	attach = { 	name = "rifle1"	Right_Hand_node = "generic_as_44_weapon_right_entity" }	
 	attach = { 	name = "rifle2"	Left_Hand_node = "generic_as_44_weapon_left_entity" }
@@ -154,8 +154,8 @@ entity = {
 }
 
 entity = {
-	name = "gehenna_culture_gfx_infantry_mg_rider_3_entity"
-	clone = "gehenna_culture_gfx_infantry_mg_rider_1_entity"
+	name = "GEH_GOV_COSMETIC_infantry_mg_rider_3_entity"
+	clone = "GEH_GOV_COSMETIC_infantry_mg_rider_1_entity"
 
 	attach = { 	name = "rifle1"	Right_Hand_node = "generic_scar_l_weapon_right_entity" }
 	attach = { 	name = "rifle2"	Left_Hand_node 	= "generic_scar_l_weapon_left_entity" }
@@ -165,7 +165,7 @@ entity = {
 }
 
 entity = {
-	name = "gehenna_culture_gfx_cavalry_mg_combined_entity"
+	name = "GEH_GOV_COSMETIC_cavalry_mg_combined_entity"
 	pdxmesh = "infantry_cavalry_horse_mesh"
 	
 	default_state = "idle"
@@ -177,31 +177,31 @@ entity = {
 	state = { name = "defend"					animation = "cavalry_idle" 		animation_blend_time = 0.0 }
 	state = { name = "support_attack"			animation = "cavalry_idle" 		animation_blend_time = 0.0 }
 	
-	attach = { 	name = "infantry_unit"			Saddle_Node = "gehenna_culture_gfx_infantry_mg_rider_1_entity" }
+	attach = { 	name = "infantry_unit"			Saddle_Node = "GEH_GOV_COSMETIC_infantry_mg_rider_1_entity" }
 	
 	scale = 0.65
 }
 
 entity = {
-	name = "gehenna_culture_gfx_cavalry_mg_combined_2_entity"
-	clone = "gehenna_culture_gfx_cavalry_mg_combined_entity"
+	name = "GEH_GOV_COSMETIC_cavalry_mg_combined_2_entity"
+	clone = "GEH_GOV_COSMETIC_cavalry_mg_combined_entity"
 
-	attach = { 	name = "infantry_unit"			Saddle_Node = "gehenna_culture_gfx_infantry_mg_rider_2_entity" }
+	attach = { 	name = "infantry_unit"			Saddle_Node = "GEH_GOV_COSMETIC_infantry_mg_rider_2_entity" }
 	
 	scale = 0.65
 }
 
 entity = {
-	name = "gehenna_culture_gfx_cavalry_mg_combined_3_entity"
-	clone = "gehenna_culture_gfx_cavalry_mg_combined_entity"
+	name = "GEH_GOV_COSMETIC_cavalry_mg_combined_3_entity"
+	clone = "GEH_GOV_COSMETIC_cavalry_mg_combined_entity"
 
-	attach = { 	name = "infantry_unit"			Saddle_Node = "gehenna_culture_gfx_infantry_mg_rider_3_entity" }
+	attach = { 	name = "infantry_unit"			Saddle_Node = "GEH_GOV_COSMETIC_infantry_mg_rider_3_entity" }
 	
 	scale = 0.65
 }
 
 entity = {
-	name = "gehenna_culture_gfx_cavalry_1_entity"
+	name = "GEH_GOV_COSMETIC_cavalry_1_entity"
 	pdxmesh = "infantry_cavalry_horse_frame_mesh"
 	
 	default_state = "idle"
@@ -213,30 +213,30 @@ entity = {
 	state = { name = "retreat"					animation = "move" 		animation_blend_time = 0.0 }
 	state = { name = "training"					animation = "attack" 		animation_blend_time = 0.0 }
 	
-	attach = { 	name = "infantry"			infantry = "gehenna_culture_gfx_infantry_mg_rider_1_entity" }
-	attach = { 	name = "cavalry"			cavalry = "gehenna_culture_gfx_cavalry_mg_combined_entity" }
+	attach = { 	name = "infantry"			infantry = "GEH_GOV_COSMETIC_infantry_mg_rider_1_entity" }
+	attach = { 	name = "cavalry"			cavalry = "GEH_GOV_COSMETIC_cavalry_mg_combined_entity" }
 	attach = { 	name = "horse"				horse = "infantry_cavalry_horse_entity" }
 	
 	scale = 1.0
 }
 
 entity = {
-	name = "gehenna_culture_gfx_cavalry_2_entity"
-	clone = "gehenna_culture_gfx_cavalry_1_entity"
+	name = "GEH_GOV_COSMETIC_cavalry_2_entity"
+	clone = "GEH_GOV_COSMETIC_cavalry_1_entity"
 	
-	attach = { 	name = "infantry"			infantry = "gehenna_culture_gfx_infantry_mg_rider_2_entity" }
-	attach = { 	name = "cavalry"			cavalry = "gehenna_culture_gfx_cavalry_mg_combined_2_entity" }
+	attach = { 	name = "infantry"			infantry = "GEH_GOV_COSMETIC_infantry_mg_rider_2_entity" }
+	attach = { 	name = "cavalry"			cavalry = "GEH_GOV_COSMETIC_cavalry_mg_combined_2_entity" }
 	attach = { 	name = "horse"				horse = "infantry_cavalry_horse_entity" }
 	
 	scale = 1.0
 }
 
 entity = {
-	name = "gehenna_culture_gfx_cavalry_3_entity"
-	clone = "gehenna_culture_gfx_cavalry_1_entity"
+	name = "GEH_GOV_COSMETIC_cavalry_3_entity"
+	clone = "GEH_GOV_COSMETIC_cavalry_1_entity"
 	
-	attach = { 	name = "infantry"			infantry = "gehenna_culture_gfx_infantry_mg_rider_3_entity" }
-	attach = { 	name = "cavalry"			cavalry = "gehenna_culture_gfx_cavalry_mg_combined_3_entity" }
+	attach = { 	name = "infantry"			infantry = "GEH_GOV_COSMETIC_infantry_mg_rider_3_entity" }
+	attach = { 	name = "cavalry"			cavalry = "GEH_GOV_COSMETIC_cavalry_mg_combined_3_entity" }
 	attach = { 	name = "horse"				horse = "infantry_cavalry_horse_entity" }
 	
 	scale = 1.0
@@ -244,7 +244,7 @@ entity = {
 
 ###骆驼兵###
 entity = {
-	name = "gehenna_culture_gfx_camelry_mg_combined_1_entity"
+	name = "GEH_GOV_COSMETIC_camelry_mg_combined_1_entity"
 	pdxmesh = "infantry_cavalry_camel_mesh"
 	
 	default_state = "idle"
@@ -254,31 +254,31 @@ entity = {
 	state = { name = "training"					animation = "cavalry_idle" 		animation_blend_time = 0.0 }
 	
 	
-	attach = { 	name = "infantry_unit"			Saddle_Node = "gehenna_culture_gfx_infantry_mg_rider_1_entity" }
+	attach = { 	name = "infantry_unit"			Saddle_Node = "GEH_GOV_COSMETIC_infantry_mg_rider_1_entity" }
 	
 	scale = 0.65
 }
 
 entity = {
-	name = "gehenna_culture_gfx_camelry_mg_combined_2_entity"
-	clone = "gehenna_culture_gfx_camelry_mg_combined_1_entity"
+	name = "GEH_GOV_COSMETIC_camelry_mg_combined_2_entity"
+	clone = "GEH_GOV_COSMETIC_camelry_mg_combined_1_entity"
 	
-	attach = { 	name = "infantry_unit"			Saddle_Node = "gehenna_culture_gfx_infantry_mg_rider_2_entity" }
-	
-	scale = 0.65
-}
-
-entity = {
-	name = "gehenna_culture_gfx_camelry_mg_combined_3_entity"
-	clone = "gehenna_culture_gfx_camelry_mg_combined_1_entity"
-	
-	attach = { 	name = "infantry_unit"			Saddle_Node = "gehenna_culture_gfx_infantry_mg_rider_3_entity" }
+	attach = { 	name = "infantry_unit"			Saddle_Node = "GEH_GOV_COSMETIC_infantry_mg_rider_2_entity" }
 	
 	scale = 0.65
 }
 
 entity = {
-	name = "gehenna_culture_gfx_camelry_entity"
+	name = "GEH_GOV_COSMETIC_camelry_mg_combined_3_entity"
+	clone = "GEH_GOV_COSMETIC_camelry_mg_combined_1_entity"
+	
+	attach = { 	name = "infantry_unit"			Saddle_Node = "GEH_GOV_COSMETIC_infantry_mg_rider_3_entity" }
+	
+	scale = 0.65
+}
+
+entity = {
+	name = "GEH_GOV_COSMETIC_camelry_entity"
 	pdxmesh = "infantry_cavalry_horse_frame_mesh"
 	
 	default_state = "idle"
@@ -290,30 +290,30 @@ entity = {
 	state = { name = "retreat"					animation = "move" 		animation_blend_time = 0.0 }
 	state = { name = "training"					animation = "attack" 		animation_blend_time = 0.0 }
 	
-	attach = { 	name = "infantry"			infantry = "gehenna_culture_gfx_infantry_mg_rider_1_entity" }
-	attach = { 	name = "cavalry"			cavalry = "gehenna_culture_gfx_camelry_mg_combined_1_entity" }
+	attach = { 	name = "infantry"			infantry = "GEH_GOV_COSMETIC_infantry_mg_rider_1_entity" }
+	attach = { 	name = "cavalry"			cavalry = "GEH_GOV_COSMETIC_camelry_mg_combined_1_entity" }
 	attach = { 	name = "horse"				horse = "infantry_cavalry_camel_entity" }
 	
 	scale = 1.0
 }
 
 entity = {
-	name = "gehenna_culture_gfx_camelry_2_entity"
-	clone = "gehenna_culture_gfx_camelry_entity"
+	name = "GEH_GOV_COSMETIC_camelry_2_entity"
+	clone = "GEH_GOV_COSMETIC_camelry_entity"
 	
-	attach = { 	name = "infantry"			infantry = "gehenna_culture_gfx_infantry_mg_rider_2_entity" }
-	attach = { 	name = "cavalry"			cavalry = "gehenna_culture_gfx_camelry_mg_combined_2_entity" }
+	attach = { 	name = "infantry"			infantry = "GEH_GOV_COSMETIC_infantry_mg_rider_2_entity" }
+	attach = { 	name = "cavalry"			cavalry = "GEH_GOV_COSMETIC_camelry_mg_combined_2_entity" }
 	attach = { 	name = "horse"				horse = "infantry_cavalry_camel_entity" }
 	
 	scale = 1.0
 }
 
 entity = {
-	name = "gehenna_culture_gfx_camelry_3_entity"
-	clone = "gehenna_culture_gfx_camelry_entity"
+	name = "GEH_GOV_COSMETIC_camelry_3_entity"
+	clone = "GEH_GOV_COSMETIC_camelry_entity"
 	
-	attach = { 	name = "infantry"			infantry = "gehenna_culture_gfx_infantry_mg_rider_3_entity" }
-	attach = { 	name = "cavalry"			cavalry = "gehenna_culture_gfx_camelry_mg_combined_3_entity" }
+	attach = { 	name = "infantry"			infantry = "GEH_GOV_COSMETIC_infantry_mg_rider_3_entity" }
+	attach = { 	name = "cavalry"			cavalry = "GEH_GOV_COSMETIC_camelry_mg_combined_3_entity" }
 	attach = { 	name = "horse"				horse = "infantry_cavalry_camel_entity" }
 	
 	scale = 1.0
@@ -325,7 +325,7 @@ entity = {
 
 ###车辆 ##
 entity = {
-	name = "gehenna_culture_gfx_stryker_unarmed_entity"
+	name = "GEH_GOV_COSMETIC_stryker_unarmed_entity"
 	pdxmesh = "TRI_stryker_unarmed_mesh"
 	
 	state = { name = "idle"				animation = "idle" 					animation_blend_time = 0.3 animation_speed = 1.0 }
@@ -356,7 +356,7 @@ entity = {
 
 ##步兵模型##
 entity = {
-	name = "gehenna_culture_gfx_vehicle_infantry_mg_1_entity"
+	name = "GEH_GOV_COSMETIC_vehicle_infantry_mg_1_entity"
 	pdxmesh = "GEH_infantry_mg_mesh"	
 	
 	default_state = "idle"
@@ -396,8 +396,8 @@ entity = {
 }
 
 entity = {
-	name = "gehenna_culture_gfx_vehicle_infantry_mg_2_entity"
-	clone = "gehenna_culture_gfx_vehicle_infantry_mg_1_entity"
+	name = "GEH_GOV_COSMETIC_vehicle_infantry_mg_2_entity"
+	clone = "GEH_GOV_COSMETIC_vehicle_infantry_mg_1_entity"
 
 	attach = { 	name = "rifle1"	Right_Hand_node = "generic_as_44_weapon_right_entity" }
 	attach = { 	name = "rifle4"	Root_node_2 = "ENG_infantry_weapon_rifle_right_entity" }
@@ -408,8 +408,8 @@ entity = {
 }
 
 entity = {
-	name = "gehenna_culture_gfx_vehicle_infantry_mg_3_entity"
-	clone = "gehenna_culture_gfx_vehicle_infantry_mg_1_entity"
+	name = "GEH_GOV_COSMETIC_vehicle_infantry_mg_3_entity"
+	clone = "GEH_GOV_COSMETIC_vehicle_infantry_mg_1_entity"
 
 	attach = { 	name = "rifle1"	Right_Hand_node = "generic_scar_l_weapon_right_entity" }
 	attach = { 	name = "rifle2"	Left_Hand_node 	= "generic_scar_l_weapon_left_entity" }
@@ -420,7 +420,7 @@ entity = {
 }
 
 entity = {
-	name = "gehenna_culture_gfx_motorized_entity"
+	name = "GEH_GOV_COSMETIC_motorized_entity"
 	pdxmesh = "motorized_frame_mesh"
 	
 	state = { name = "idle"				animation = "idle" 					animation_blend_time = 0.3 animation_speed = 1.0 }
@@ -433,28 +433,28 @@ entity = {
 	state = { name = "move"				animation = "move" 					animation_blend_time = 0.3 animation_speed = 1.0 }
 	scale = 1.0
 	
-	attach = { 	name = "vehicle"			vehicle = "gehenna_culture_gfx_stryker_unarmed_entity" }
-	attach = { 	name = "infantry"			infantry = "gehenna_culture_gfx_vehicle_infantry_mg_1_entity" }
+	attach = { 	name = "vehicle"			vehicle = "GEH_GOV_COSMETIC_stryker_unarmed_entity" }
+	attach = { 	name = "infantry"			infantry = "GEH_GOV_COSMETIC_vehicle_infantry_mg_1_entity" }
 }
 
 entity = {
-	name = "gehenna_culture_gfx_motorized_2_entity"
-	clone = "gehenna_culture_gfx_motorized_entity"
+	name = "GEH_GOV_COSMETIC_motorized_2_entity"
+	clone = "GEH_GOV_COSMETIC_motorized_entity"
 
-	attach = { 	name = "vehicle"			vehicle = "gehenna_culture_gfx_stryker_unarmed_entity" }
-	attach = { 	name = "infantry"			infantry = "gehenna_culture_gfx_vehicle_infantry_mg_2_entity" }
+	attach = { 	name = "vehicle"			vehicle = "GEH_GOV_COSMETIC_stryker_unarmed_entity" }
+	attach = { 	name = "infantry"			infantry = "GEH_GOV_COSMETIC_vehicle_infantry_mg_2_entity" }
 }
 
 entity = {
-	name = "gehenna_culture_gfx_motorized_3_entity"
-	clone = "gehenna_culture_gfx_motorized_entity"
+	name = "GEH_GOV_COSMETIC_motorized_3_entity"
+	clone = "GEH_GOV_COSMETIC_motorized_entity"
 
-	attach = { 	name = "vehicle"			vehicle = "gehenna_culture_gfx_stryker_unarmed_entity" }
-	attach = { 	name = "infantry"			infantry = "gehenna_culture_gfx_vehicle_infantry_mg_3_entity" }
+	attach = { 	name = "vehicle"			vehicle = "GEH_GOV_COSMETIC_stryker_unarmed_entity" }
+	attach = { 	name = "infantry"			infantry = "GEH_GOV_COSMETIC_vehicle_infantry_mg_3_entity" }
 }
 
 entity = {
-	name = "gehenna_culture_gfx_mechanized_entity"
+	name = "GEH_GOV_COSMETIC_mechanized_entity"
 	pdxmesh = "TRI_bradley_ifv_mesh"
 	
 	state = { name = "idle"				animation = "idle" 					animation_blend_time = 0.3 animation_speed = 1.0 }
@@ -501,7 +501,7 @@ entity = {
 #################
 
 entity = {
-	name = "gehenna_culture_gfx_MI_8_AB_entity"
+	name = "GEH_GOV_COSMETIC_MI_8_AB_entity"
 	pdxmesh = "TRI_MI_8_AB_mesh"
 	
 	state = { name = "idle"				animation = "idle" 				animation_blend_time = 0.3 animation_speed = 1.0 
@@ -530,7 +530,7 @@ entity = {
 }
 
 entity = {
-	name = "gehenna_culture_gfx_airborne_infantry_entity"
+	name = "GEH_GOV_COSMETIC_airborne_infantry_entity"
 	pdxmesh = "motorized_frame_mesh"
 	
 	state = { name = "idle"				animation = "idle" 					animation_blend_time = 0.3 animation_speed = 1.0 }
@@ -543,28 +543,28 @@ entity = {
 	state = { name = "move"				animation = "move" 					animation_blend_time = 0.3 animation_speed = 1.0 }
 	scale = 1.0
 	
-	attach = { 	name = "vehicle"			vehicle = "gehenna_culture_gfx_MI_8_AB_entity" }
-	attach = { 	name = "infantry"			infantry = "gehenna_culture_gfx_vehicle_infantry_mg_1_entity" }
+	attach = { 	name = "vehicle"			vehicle = "GEH_GOV_COSMETIC_MI_8_AB_entity" }
+	attach = { 	name = "infantry"			infantry = "GEH_GOV_COSMETIC_vehicle_infantry_mg_1_entity" }
 }
 
 entity = {
-	name = "gehenna_culture_gfx_airborne_infantry_2_entity"
-	clone = "gehenna_culture_gfx_airborne_infantry_entity"
+	name = "GEH_GOV_COSMETIC_airborne_infantry_2_entity"
+	clone = "GEH_GOV_COSMETIC_airborne_infantry_entity"
 	
-	attach = { 	name = "vehicle"			vehicle = "gehenna_culture_gfx_MI_8_AB_entity" }
-	attach = { 	name = "infantry"			infantry = "gehenna_culture_gfx_vehicle_infantry_mg_2_entity" }
+	attach = { 	name = "vehicle"			vehicle = "GEH_GOV_COSMETIC_MI_8_AB_entity" }
+	attach = { 	name = "infantry"			infantry = "GEH_GOV_COSMETIC_vehicle_infantry_mg_2_entity" }
 }
 
 entity = {
-	name = "gehenna_culture_gfx_airborne_infantry_3_entity"
-	clone = "gehenna_culture_gfx_airborne_infantry_entity"
+	name = "GEH_GOV_COSMETIC_airborne_infantry_3_entity"
+	clone = "GEH_GOV_COSMETIC_airborne_infantry_entity"
 	
-	attach = { 	name = "vehicle"			vehicle = "gehenna_culture_gfx_MI_8_AB_entity" }
-	attach = { 	name = "infantry"			infantry = "gehenna_culture_gfx_vehicle_infantry_mg_3_entity" }
+	attach = { 	name = "vehicle"			vehicle = "GEH_GOV_COSMETIC_MI_8_AB_entity" }
+	attach = { 	name = "infantry"			infantry = "GEH_GOV_COSMETIC_vehicle_infantry_mg_3_entity" }
 }
 
 entity = {
-	name = "gehenna_culture_gfx_air_attack_battalion_entity"	
+	name = "GEH_GOV_COSMETIC_air_attack_battalion_entity"	
 	pdxmesh = "TRI_AH64_APACHE_mesh"
 
 	state = { name = "idle"				animation = "veh_idle" 				animation_blend_time = 0.3 animation_speed = 1.0 
@@ -601,7 +601,7 @@ entity = {
 ##############
 
 entity = {
-	name = "gehenna_culture_gfx_light_armor_entity"
+	name = "GEH_GOV_COSMETIC_light_armor_entity"
 	pdxmesh = "Leopard_1a5_mesh"
 	
 	state = { name = "idle"				animation = "idle"   animation_blend_time = 0.3 }
@@ -639,7 +639,7 @@ entity = {
 }
 
 entity = {
-	name = "gehenna_culture_gfx_medium_armor_entity"
+	name = "GEH_GOV_COSMETIC_medium_armor_entity"
 	pdxmesh = "GER_tank_medium_mesh"
 	
 	state = { name = "idle"				animation = "idle"   animation_blend_time = 0.3 }
@@ -682,7 +682,7 @@ entity = {
 }
 
 entity = {
-	name = "gehenna_culture_gfx_medium_armor_1_entity"
+	name = "GEH_GOV_COSMETIC_medium_armor_1_entity"
 	pdxmesh = "Leopard_1a5_mesh"
 	
 	state = { name = "idle"				animation = "idle"   animation_blend_time = 0.3 }
@@ -721,7 +721,7 @@ entity = {
 
 
 entity = {
-	name = "gehenna_culture_gfx_heavy_armor_entity"
+	name = "GEH_GOV_COSMETIC_heavy_armor_entity"
 	pdxmesh = "GER_tank_heavy_mesh"
 	
 	state = { name = "idle"				animation = "idle"   animation_blend_time = 0.3 }
@@ -764,52 +764,8 @@ entity = {
 	}
 }
 
-##目前只能这么注册了##
 entity = {
-	name = "gehenna_culture_gfx_heavy_armor_2_entity"
-	pdxmesh = "GER_E50_mesh"
-	
-	state = { name = "idle"				animation = "idle"   animation_blend_time = 0.3 }
-	state = { name = "move"				animation = "move"   animation_blend_time = 0.3 
-		event = { time = 0 node="left_exhaust" particle = "tank_exhaust_particle"  keep_particle = no trigger_once = yes } 
-		event = { time = 0 node="right_exhaust" particle = "tank_exhaust_particle"  keep_particle = no trigger_once = yes } 
-		event = { time = 0 node="left_tracks" particle = "tank_moving_tracks_particle"  keep_particle = no trigger_once = yes}
-		event = { time = 0 node="right_tracks" particle = "tank_moving_tracks_particle"  keep_particle = no trigger_once = yes}
-		event = { trigger_once = yes sound = { soundeffect = "tank_engine_medium_move" } }
-	}
-	state = { name = "retreat"				animation = "move"   animation_blend_time = 0.3 
-		event = { time = 0 node="left_exhaust" particle = "tank_exhaust_particle"  keep_particle = no trigger_once = yes } 
-		event = { time = 0 node="right_exhaust" particle = "tank_exhaust_particle"  keep_particle = no trigger_once = yes } 
-		event = { time = 0 node="left_tracks" particle = "tank_moving_tracks_particle"  keep_particle = no trigger_once = yes}
-		event = { time = 0 node="right_tracks" particle = "tank_moving_tracks_particle"  keep_particle = no trigger_once = yes}
-		event = { trigger_once = yes sound = { soundeffect = "tank_engine_medium_move" } }
-	}
-	state = { name = "attack"			animation = "attack" animation_blend_time = 0.3 
-		event = { time = 0 node="barrel" particle = "light_tank_attack_barrel_particle"  keep_particle = yes sound = { soundeffect = heavy_armour_fire } } 
-		event = { time = 0 node="barrel" particle = "light_tank_attack_barrel_smoke_particle"  keep_particle = yes sound = { soundeffect = heavy_armour_fire } } 
-	}
-	state = { name = "defend"			animation = "attack" animation_blend_time = 0.3 
-		event = { time = 0 node="barrel" particle = "light_tank_attack_barrel_particle"  keep_particle = yes sound = { soundeffect = heavy_armour_fire } } 
-		event = { time = 0 node="barrel" particle = "light_tank_attack_barrel_smoke_particle"  keep_particle = yes sound = { soundeffect = heavy_armour_fire } } 
-	}
-	state = { name = "support_attack"	animation = "attack" animation_blend_time = 0.3  
-		event = { time = 0 node="barrel" particle = "light_tank_attack_barrel_particle"  keep_particle = yes sound = { soundeffect = heavy_armour_fire } } 
-		event = { time = 0 node="barrel" particle = "light_tank_attack_barrel_smoke_particle"  keep_particle = yes sound = { soundeffect = heavy_armour_fire } } 
-	}
-	state = { name = "training"				animation = "idle" 			animation_blend_time = 0.3 animation_speed = 1.0
-		event = { time = 0 node="left_exhaust" particle = "tank_exhaust_particle"  keep_particle = no trigger_once = yes }
-		event = { time = 0 node="right_exhaust" particle = "tank_exhaust_particle"  keep_particle = no trigger_once = yes }
-	}
-	
-	scale = 0.95
-
-	game_data = {
-		texture_anim_speed = 0.5
-	}
-}
-
-entity = {
-	name = "gehenna_culture_gfx_medium_armor_2_entity"
+	name = "GEH_GOV_COSMETIC_medium_armor_2_entity"
 	pdxmesh = "Leopard2A4_mesh"
 	
 	state = { name = "idle"				animation = "idle"   animation_blend_time = 0.3 }

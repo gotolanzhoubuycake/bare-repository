@@ -908,7 +908,7 @@ HYA_light_tank_equipment_2_desc: "轻量化74式坦克：在74式原有基础上
 light_tank_equipment_3: "轻量化主战坦克 MK3"
 light_tank_equipment_3_desc: "轻量化主战坦克MK3 作战思路开始从快速战场支援转变的轻型主战坦克，其防护和火力的提升让其有了更强的作战能力，同时其灵活性也不减。"
 
-GEH_light_tank_equipment_3: "Leopard 1A1"
+GEH_light_tank_equipment_3: "Leopard 1A1A1"
 GEH_light_tank_equipment_3_desc: "崭新设计的豹1坦克，使用105mm主炮，战斗全重约40吨左右。该坦克从一开始就定位为外贸给格黑娜的盟友使用的型号，因此着重考虑了在城市道路进行快速机动的能力。轻量化设计使其防护性能不佳，但其主炮可以发射格黑娜自研的先进穿甲与多用途弹药，可对多种目标造成更有效的毁伤。"
 #GEH_light_tank_equipment_3: "TAM"
 #GEH_light_tank_equipment_3_desc: "TAM:搭载有120mm坦克炮的重型步战车，但结构防御也出奇的好。"
@@ -1647,8 +1647,8 @@ heavy_tank_equipment_desc: "重型主战坦克，高防护，高火力，高重�
 heavy_tank_equipment_1: "重型主战坦克 MK1"
 heavy_tank_equipment_1_desc: "重型主战坦克MK1 由老式重型坦克现代化改造而来的早期重型主战坦克，其防护和火力有时候能让现代装甲单位翻车。"
 
-GEH_heavy_tank_equipment_1: "虎式G型"
-GEH_heavy_tank_equipment_1_desc: "虎式G型：基沃托斯改造虎式坦克。"
+GEH_heavy_tank_equipment_1: "虎式X重型战车"
+GEH_heavy_tank_equipment_1_desc: "虎式重型战车是格黑娜标志性的重型装甲车辆——尽管声明显赫，但性能相对落伍。作为纷争时代的便宜之计，虎式坦克在许多细节上都只能说差强人意。多年以来，格黑娜装备研发部门对其进行了数轮改造，但仍旧未能完全挽回设计缺陷。\n\n“虎丸”号坦克是该系列最知名的改装版本，登记于万魔殿的书记枣伊吕波名下。"
 TRI_heavy_tank_equipment_1: "丘TOG2"
 TRI_heavy_tank_equipment_1_desc: "丘TOG2：搭载有94mm炮的观光车。"
 MIL_heavy_tank_equipment_1: "M4A3E2/76"
@@ -1670,9 +1670,8 @@ HYA_heavy_tank_equipment_1_desc: "M4A3E2/76：76型酱爆坦克。"
 
 heavy_tank_equipment_2: "重型主战坦克 MK2"
 heavy_tank_equipment_2_desc: "重型主战坦克MK2 对末代重型坦克进行现代化改造而来的重型主战坦克，现在它们能在基沃托斯发挥它们未完的使命了。"
-
-GEH_heavy_tank_equipment_2: "虎王G型"
-GEH_heavy_tank_equipment_2_desc: "虎王G型：额外加装许多通信设备的虎王坦克。"
+GEH_heavy_tank_equipment_2: "黑豹X重型战车"
+GEH_heavy_tank_equipment_2_desc: "黑豹重型战车体现了格黑娜对于重型战车研究的突破。该车采用了倾斜装甲、先进光学观瞄系统与减震图层，可以追加附加装甲。令人遗憾的是，相关改件可能大大降低黑豹坦克前部负重轮的使用寿命。\n\n就结果而言，黑豹重型战车基本满足了格黑娜的需求。其战斗全重也相比其他重型坦克较轻，可以在市区道路行驶。"
 TRI_heavy_tank_equipment_2: "丘吉尔MK7"
 TRI_heavy_tank_equipment_2_desc: "丘吉尔MK7：经过三一学生改造的丘吉尔坦克。"
 MIL_heavy_tank_equipment_2: "T29"
@@ -1695,8 +1694,8 @@ HYA_heavy_tank_equipment_2_desc: "IS3：红冬出口的第三代重型突破坦�
 heavy_tank_equipment_3: "重型主战坦克 MK3"
 heavy_tank_equipment_3_desc: "重型主战坦克MK3 现代重型主战坦克，更加厚重的复合装甲和更强大的火力能让它在战场上占据优势。"
 
-GEH_heavy_tank_equipment_3: "E75"
-GEH_heavy_tank_equipment_3_desc: "E75：由未完成图纸改造而来的重型主战坦克。"
+GEH_heavy_tank_equipment_3: "虎王X重型战车"
+GEH_heavy_tank_equipment_3_desc: "虎王重型战车是以黑豹坦克的研发经验为基础设计的重型战车。遗憾的是，该车与虎式一样，仅能被称为过渡性的产品。\n\n尽管拥有显著的防护和火力提升，但其夸张的战斗全重使得普通工程车辆难以拖曳和维护虎王坦克。同时，该车对于路面条件的要求较高。到目前为止，格黑娜路政部门仍将该车列为“头号敌人”。"
 TRI_heavy_tank_equipment_3: "黑亲王"
 TRI_heavy_tank_equipment_3_desc: "装备17磅炮的幻想坦克，采用了现代化的引擎和观瞄系统。"
 MIL_heavy_tank_equipment_3: "M48加厚型"
@@ -1719,8 +1718,8 @@ HYA_heavy_tank_equipment_3_desc: "T10A-2：红冬出口的重型坦克，没有�
 heavy_tank_equipment_4: "重型主战坦克 MK4"
 heavy_tank_equipment_4_desc: "重型主战坦克MK4 采用高新科技现代化重型主战坦克，它们是战场上的王者。"
 
-GEH_heavy_tank_equipment_4: "E100"
-GEH_heavy_tank_equipment_4_desc: "E100：昂贵且不可靠的超重型坦克。"
+GEH_heavy_tank_equipment_4: "E50X坦克"
+GEH_heavy_tank_equipment_4_desc: "由虎王概念延伸而来，结合了现代主战坦克性能指标的全新一代超重型坦克。该车几乎没有地面敌手——但作为代价，其维护费也一骑绝尘，几乎等同于只有纯粹收藏价值的奢侈品。显而易见，豹式主战坦克是更为经济的选择，但对于怀有收藏欲望，或其他不可告人目的格黑娜学生来说，秘密拥有这样一台陆地之王依然具备极大的吸引力。"
 TRI_heavy_tank_equipment_4: "征服者MK2"
 TRI_heavy_tank_equipment_4_desc: "征服者MK2：重型现代主战坦克，定位非常奇妙。"
 MIL_heavy_tank_equipment_4: "M1加厚型"
