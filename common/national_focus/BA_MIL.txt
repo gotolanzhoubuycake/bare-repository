@@ -1107,29 +1107,56 @@ focus_tree = {
 		cost = 10
 		x = 60
 		y = 0
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = MIL_Prepare_grand_festival_trigger_tooltip
+				always = no
+			}
+		}
+
+		completion_reward = {
+			add_political_power = 100
+			hidden_effect = {
+				BARE_MIL_Sport_Init_effect = yes
+			}
+			
+			custom_effect_tooltip = MIL_Prepare_grand_festival_effect_tooltip
+		}
 	}
 	focus = { #研讨会会计的烦恼
 		id = MIL_yuuka_unhappy
 		icon = GFX_goal_MIL_yuuka_unhappy
 		relative_position_id = MIL_Prepare_grand_festival
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 4
 		x = -2
 		y = 1
 		prerequisite = {
 			focus = MIL_Prepare_grand_festival
 		}
+
+		completion_reward = {
+			custom_effect_tooltip = MIL_yuuka_unhappy_effect_tooltip
+		}
+
+
 	}
 	focus = { #开源
 		id = MIL_make_more_money
 		icon = GFX_goal_MIL_make_more_money
 		relative_position_id = MIL_Prepare_grand_festival
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 2
 		x = -3
 		y = 2
 		prerequisite = {
 			focus = MIL_yuuka_unhappy
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = MIL_make_more_money_effect_tooltip
+
 		}
 	}
 	focus = { #节流
@@ -1137,7 +1164,7 @@ focus_tree = {
 		icon = GFX_goal_MIL_reduce_cost
 		relative_position_id = MIL_Prepare_grand_festival
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 2
 		x = -1
 		y = 2
 		prerequisite = {
@@ -1150,7 +1177,7 @@ focus_tree = {
 		icon = GFX_goal_MIL_need_help
 		relative_position_id = MIL_Prepare_grand_festival
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 4
 		x = -3
 		y = 3
 		prerequisite = {
@@ -1166,7 +1193,7 @@ focus_tree = {
 		icon = GFX_goal_MIL_we_can_do_it_by_ourselves
 		relative_position_id = MIL_Prepare_grand_festival
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 8
 		x = -1
 		y = 3
 		prerequisite = {
@@ -1181,11 +1208,16 @@ focus_tree = {
 		icon = GFX_goal_MIL_build_grand_festival_work
 		relative_position_id = MIL_Prepare_grand_festival
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 2
 		x = 2
 		y = 1
 		prerequisite = {
 			focus = MIL_Prepare_grand_festival
+		}
+
+		completion_reward = {
+			unlock_decision_tooltip = MIL_Sport_Improve_Millennium_Infrastructure
+			unlock_decision_tooltip = MIL_Sport_Constructing_Sports_Venues
 		}
 	}
 	focus = { #隐藏在暗中的反对
@@ -1193,11 +1225,16 @@ focus_tree = {
 		icon = GFX_goal_MIL_opposition_hidden_in_the_dark
 		relative_position_id = MIL_Prepare_grand_festival
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 6
 		x = 2
 		y = 2
 		prerequisite = {
 			focus = MIL_build_grand_festival_work
+		}
+
+		completion_reward = {
+			add_political_power = 100
+			unlock_decision_tooltip = MIL_Sport_Crackdown_on_Sabotage
 		}
 	}
 	focus = { #科技的力量
@@ -1205,7 +1242,7 @@ focus_tree = {
 		icon = GFX_goal_MIL_The_power_of_Technology
 		relative_position_id = MIL_Prepare_grand_festival
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 2
 		x = 4
 		y = 2
 		prerequisite = {
@@ -1217,7 +1254,7 @@ focus_tree = {
 		icon = GFX_goal_MIL_noas_Strive
 		relative_position_id = MIL_Prepare_grand_festival
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 7
 		x = 2
 		y = 3
 		prerequisite = {
@@ -1229,7 +1266,7 @@ focus_tree = {
 		icon = GFX_goal_MIL_The_construction_work_is_in_full_swing
 		relative_position_id = MIL_Prepare_grand_festival
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 6
 		x = 4
 		y = 3
 		prerequisite = {
@@ -1241,7 +1278,7 @@ focus_tree = {
 		icon = GFX_goal_MIL_MIL_The_Increasingly_refined_preparations
 		relative_position_id = MIL_Prepare_grand_festival
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 4
 		x = 3
 		y = 4
 		prerequisite = {
@@ -1256,7 +1293,7 @@ focus_tree = {
 		icon = GFX_goal_MIL_The_eve_of_the_grand_festival
 		relative_position_id = MIL_Prepare_grand_festival
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 3
 		x = 0
 		y = 4
 		prerequisite = {
@@ -1274,8 +1311,21 @@ focus_tree = {
 		cost = 10
 		x = 0
 		y = 5
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = MIL_The_beginning_of_the_carnival_trigger_tooltip
+				always = no
+			}
+
+		}
 		prerequisite = {
 			focus = MIL_The_eve_of_the_grand_festival
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = MIL_The_beginning_of_the_carnival_effect_tooltip
+
 		}
 	}
 	focus = { #晄轮大祭成功

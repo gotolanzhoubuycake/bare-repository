@@ -25,6 +25,11 @@ TRI_small_uav_equipment_2:"“毒液”FB.6 轻型无人战斗机"
 TRI_small_uav_equipment_3:"“猎人”F.6 轻型无人战斗机"
 TRI_small_uav_equipment_4:"“鹞”FA.2 轻型无人战斗机"
 
+MIL_small_uav_equipment_1:"FD-1 “鬼怪” 轻型无人战斗机"
+MIL_small_uav_equipment_2:"F9F-8 “美洲狮” 轻型无人战斗机"
+MIL_small_uav_equipment_3:"F-11F “虎” 轻型无人战斗机"
+MIL_small_uav_equipment_4:"J-12 轻型无人战斗机"
+
 small_uav_cas_airframe:"轻型无人攻击机"
 small_uav_cas_airframe_desc:"只搭载了少量炸弹，对地导弹和机炮的无人机，有有限的对地攻击能力，缺乏防御能力和反制措施，但胜在数量够多。能以量变引起质变。"
 small_uav_cas_equipment_1:"标准型轻型无人攻击机"
@@ -38,6 +43,11 @@ TRI_small_uav_cas_equipment_2:"“流星” F.8 轻型无人攻击机"
 TRI_small_uav_cas_equipment_3:"F84F 轻型无人攻击机"
 TRI_small_uav_cas_equipment_4:"“阿尔法喷气” 轻型无人攻击机"
 
+MIL_small_uav_cas_equipment_1:"F-84B 轻型无人攻击机"
+MIL_small_uav_cas_equipment_2:"F-86K 轻型无人攻击机"
+MIL_small_uav_cas_equipment_3:"T-38 轻型无人攻击机"
+MIL_small_uav_cas_equipment_4:"A-4F 轻型无人攻击机"
+
 small_uav_recon_airframe:"无人侦察机"
 small_uav_recon_airframe_desc:"用于进行空中侦察的无人机，搭载了光电设备，部分型号拥有对地武器，可以进行一定程度的对地打击"
 small_uav_recon_equipment_1:"标准型无人侦察机"
@@ -50,7 +60,10 @@ TRI_small_uav_recon_equipment_2:"RQ-4“全球鹰” 无人侦察机"
 TRI_small_uav_recon_equipment_3:"MQ-9“死神” 查打一体无人机"
 TRI_small_uav_recon_equipment_4:"“AAROK” 查打一体无人机"
 
-
+MIL_small_uav_recon_equipment_1:"CH-3 无人侦察机"
+MIL_small_uav_recon_equipment_2:"WZ-7 “翔龙” 无人侦察机"
+MIL_small_uav_recon_equipment_3:"MQ-1B “天空战士” 查打一体无人机"
+MIL_small_uav_recon_equipment_4:"MQ-170 “攻击哨兵” 查打一体无人机"
 
 #双发战斗机
 
@@ -60,6 +73,12 @@ TRI_medium_uav_equipment_1:"“闪电”F.6 中型无人战斗机"
 TRI_medium_uav_equipment_2:"“幻影” III 中型无人战斗机"
 TRI_medium_uav_equipment_3:"“幻影” 2000C 中型无人战斗机"
 TRI_medium_uav_equipment_4:"JAS-39E 中型无人战斗机"
+
+MIL_medium_uav_equipment_1:"F-106 “三角标枪” 中型无人战斗机"
+MIL_medium_uav_equipment_2:"F-29 中型无人战斗机"
+MIL_medium_uav_equipment_3:"F-16C 中型无人战斗机"
+MIL_medium_uav_equipment_4:"J-10B TVC 中型无人战斗机"
+
 
 medium_uav_equipment_1:"标准型中型无人战斗机"
 medium_uav_equipment_2:"改进型中型无人战斗机"
@@ -79,6 +98,11 @@ TRI_medium_uav_cas_equipment_2:"“美洲虎” GR1A 中型无人攻击机"
 TRI_medium_uav_cas_equipment_3:"“幻影”F1CT 中型无人攻击机"
 TRI_medium_uav_cas_equipment_4:"“幻影”2000D-RMV 中型无人攻击机"
 
+MIL_medium_uav_cas_equipment_1:"F-107 中型无人攻击机"
+MIL_medium_uav_cas_equipment_2:"TSR-2 中型无人攻击机"
+MIL_medium_uav_cas_equipment_3:"A-7F 中型无人攻击机"
+MIL_medium_uav_cas_equipment_4:"A-12 “复仇者” 中型无人攻击机"
+
 #洲际作战航空器
 
 heavy_uav_airframe:"重型无人战斗机"
@@ -94,12 +118,27 @@ TRI_heavy_uav_equipment_2:"“狂风”F.3 重型无人战斗机"
 TRI_heavy_uav_equipment_3:"“幻影” 4000 重型无人战斗机"
 TRI_heavy_uav_equipment_4:"“台风”FGR.4 重型无人战斗机"
 
+MIL_heavy_uav_equipment_1:"CF-105 “箭” 重型无人战斗机"
+MIL_heavy_uav_equipment_2:"F-15A “鹰” 重型无人战斗机"
+MIL_heavy_uav_equipment_3:"ASF-14 “超级雄猫” 重型无人战斗机"
+MIL_heavy_uav_equipment_4:"SU-47 “金雕” 重型无人战斗机"
+
 heavy_uav_cas_airframe:"无人多用途战斗机"
 heavy_uav_cas_airframe_desc:"你能搞到的最好的炸药投射器，它拥有的对地挂载能轻易炸平一个街区，并在敌方的防空力量眼皮子地下逃之夭夭，同时也能进行一定程度的对空作战能力。就是要考虑账单问题。"
-heavy_uav_cas_equipment_1:"“幻影”5F 无人多用途战斗机"
-heavy_uav_cas_equipment_2:"F111F 无人多用途战斗机"
-heavy_uav_cas_equipment_3:"“狂风” GR.4 无人多用途战斗机"
-heavy_uav_cas_equipment_4:"“阵风” F3 无人多用途战斗机"
+heavy_uav_cas_equipment_1:"标准型无人多用途战斗机"
+heavy_uav_cas_equipment_2:"改进型无人多用途战斗机"
+heavy_uav_cas_equipment_3:"高级型无人多用途战斗机"
+heavy_uav_cas_equipment_4:"先进型无人多用途战斗机"
+
+TRI_heavy_uav_cas_equipment_1:"“幻影”5F 无人多用途战斗机"
+TRI_heavy_uav_cas_equipment_2:"F111F 无人多用途战斗机"
+TRI_heavy_uav_cas_equipment_3:"“狂风” GR.4 无人多用途战斗机"
+TRI_heavy_uav_cas_equipment_4:"“阵风” F3 无人多用途战斗机"
+
+MIL_heavy_uav_cas_equipment_1:"F-4E “鬼怪” 无人多用途战斗机" 
+MIL_heavy_uav_cas_equipment_2:"F-111B 无人多用途战斗机"
+MIL_heavy_uav_cas_equipment_3:"A-9 无人多用途战斗机"
+MIL_heavy_uav_cas_equipment_4:"F-16XL 无人多用途战斗机"
 
 
 transport_plane_equipment:"无人运输机"
@@ -118,6 +157,13 @@ TRI_transport_plane_equipment_3:"AC130J 无人空中炮艇"
 TRI_transport_plane_equipment_3_desc:"显而易见，炮弹也是一种需要及时送达的货物。无人空中炮艇就是为此而生。"
 TRI_transport_plane_equipment_4:"A400G 无人空中炮艇"
 TRI_transport_plane_equipment_4_desc:"显而易见，炮弹也是一种需要及时送达的货物。无人空中炮艇就是为此而生。"
+
+MIL_transport_plane_equipment_1:"C130J 无人运输机"
+MIL_transport_plane_equipment_2:"C-17 无人运输机"
+MIL_transport_plane_equipment_3:"AC130J 无人空中炮艇"
+MIL_transport_plane_equipment_3_desc:"显而易见，炮弹也是一种需要及时送达的货物。无人空中炮艇就是为此而生。"
+MIL_transport_plane_equipment_4:"AC-17 无人空中炮艇"
+MIL_transport_plane_equipment_4_desc:"显而易见，炮弹也是一种需要及时送达的货物。无人空中炮艇就是为此而生。"
 
 
 helicopter_airframe:"通用直升机"

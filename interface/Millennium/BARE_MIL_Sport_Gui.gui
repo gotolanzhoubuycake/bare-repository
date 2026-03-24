@@ -132,8 +132,7 @@ guiTypes = {
 		}
 
 		buttonType = {
-			name = "
-			"
+			name = "MIL_sport_GUI_Info_Add_1"
 			position = { x = 238 y = 356}
 			quadTextureSprite ="GFX_MIL_sport_GUI_Info_Add_Button" 
 		}
