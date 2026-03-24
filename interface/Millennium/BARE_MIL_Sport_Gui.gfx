@@ -56,6 +56,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_MIL_sport_GUI_Info_Icon_1_s"
+		texturefile = "gfx/interface/MIL_sport/MIL_sport_GUI_Info_Icon_1_small.dds"
+	}
+
+	SpriteType = {
 		name = "GFX_MIL_sport_GUI_Info_Icon_2"
 		texturefile = "gfx/interface/MIL_sport/MIL_sport_GUI_Info_Icon_2.dds"
 	}

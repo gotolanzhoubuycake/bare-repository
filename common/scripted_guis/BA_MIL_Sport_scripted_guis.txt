@@ -6,30 +6,38 @@ scripted_gui = {
 			
 		}
 		effects = {
+			MIL_sport_GUI_Info_Add_1_click = {
+				add_to_variable = {
+					BARE_MIL_sport_Security_Have_Var = 1
+				}
+				set_temp_variable = {
+					
+				}
+				set_country_flag = BARE_MIL_sport_Fee_Have_Change
+			}
+			MIL_sport_GUI_Info_Sub_1_click = {
+				add_to_variable = {
+					BARE_MIL_sport_Security_Have_Var = -1
+				}
+				set_country_flag = BARE_MIL_sport_Fee_Have_Change
+			}
 			MIL_sport_GUI_Info_Add_2_click = {
 				add_to_variable = {
 					BARE_MIL_sport_Security_Have_Var = 1
 				}
 				set_country_flag = BARE_MIL_sport_Security_Have_Change
-				add_to_variable = {
-					BARE_MIL_sport_Fee_Month_Cost_Var = 1
-				}
+				BARE_MIL_Sport_Security_Var_Chance_effect = yes
 			}
 			MIL_sport_GUI_Info_Sub_2_click = {
 				add_to_variable = {
 					BARE_MIL_sport_Security_Have_Var = -1
 				}
-				add_to_variable = {
-					BARE_MIL_sport_Fee_Month_Cost_Var = -1
-				}
 				set_country_flag = BARE_MIL_sport_Security_Have_Change
+				BARE_MIL_Sport_Tech_Var_Chance_effect = yes
 			}
 			MIL_sport_GUI_Info_Add_3_click = {
 				add_to_variable = {
 					BARE_MIL_sport_Tech_Have_Var = 1
-				}
-				add_to_variable = {
-					BARE_MIL_sport_Fee_Month_Cost_Var = 2
 				}
 				set_country_flag = BARE_MIL_sport_Tech_Have_Change
 				BARE_MIL_Sport_Tech_Var_Chance_effect = yes
@@ -37,9 +45,6 @@ scripted_gui = {
 			MIL_sport_GUI_Info_Sub_3_click = {
 				add_to_variable = {
 					BARE_MIL_sport_Tech_Have_Var = -1
-				}
-				add_to_variable = {
-					BARE_MIL_sport_Fee_Month_Cost_Var = -2
 				}
 				set_country_flag = BARE_MIL_sport_Tech_Have_Change
 				BARE_MIL_Sport_Tech_Var_Chance_effect = yes

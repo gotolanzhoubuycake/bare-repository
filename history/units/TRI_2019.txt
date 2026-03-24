@@ -349,6 +349,16 @@ units = {
 
 
 	division= {	 #一个师
+		name = "正义委自治区边境快速反应连"
+		location = 5612 # Melbourne #这个师所在的省份
+		division_template = "正义委装甲连" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+
+
+	division= {	 #一个师
 		name = "自警团巡逻部队第1连"
 		location = 11223 # Melbourne #这个师所在的省份
 		division_template = "自警团巡逻部队" #这个师用的编制的名字
@@ -391,6 +401,43 @@ units = {
 	division= {	 #一个师
 		name = "自警团巡逻部队第6连"
 		location = 4416 # Melbourne #这个师所在的省份
+		division_template = "自警团巡逻部队" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+
+	division= {	 #一个师
+		name = "自警团巡逻部队第6连"
+		location = 336 # Melbourne #这个师所在的省份
+		division_template = "自警团巡逻部队" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+
+	division= {	 #一个师
+		name = "自警团古树海护林部队第1连"
+		location = 2802 # Melbourne #这个师所在的省份
+		division_template = "自警团巡逻部队" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+
+
+	division= {	 #一个师
+		name = "自警团古树海护林部队第2连"
+		location = 11181 # Melbourne #这个师所在的省份
+		division_template = "自警团巡逻部队" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+
+	division= {	 #一个师
+		name = "自警团古树海护林部队第2连"
+		location = 4112 # Melbourne #这个师所在的省份
 		division_template = "自警团巡逻部队" #这个师用的编制的名字
 		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
 		start_equipment_factor = 1 #初始装备 0-1

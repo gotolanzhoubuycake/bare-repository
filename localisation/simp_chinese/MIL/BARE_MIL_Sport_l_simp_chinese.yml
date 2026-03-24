@@ -7,7 +7,7 @@ BARE_MIL_sport_GUI_Bottom_Text: "千年信息管理系统“虚数”"
 BARE_MIL_sport_GUI_Info_Text_1_1: "每月经费:"
 BARE_MIL_sport_GUI_Info_Text_1_1_tooltip: "为了办好这次活动，千年准备了大量预算来筹办此次活动，每个月我们都能获得经费来进行各项行动，同时收回上个月没有使用的经费。当然，如果资源的消耗超出预期，我们也可以选择和优香软磨硬泡来获取额外的每月预算，但这会加重学园的财政负担，并且如果将资源过度投入到活动中，这势必会挤占平时科研的资源，进而降低学生对大运动会的支持率。\n§R注意，你每月只能调整一次每月经费§!"
 BARE_MIL_sport_GUI_Info_Text_1_2: "[?BARE_MIL_sport_Fee_Have_Var]/[?BARE_MIL_sport_Fee_All_Var]"
-BARE_MIL_sport_GUI_Info_Text_1_3: "额外获得:[?BARE_MIL_sport_Fee_Extra_Var]/每月消耗:[?BARE_MIL_sport_Fee_Month_Cost_Var]"
+BARE_MIL_sport_GUI_Info_Text_1_3: "额外:[?BARE_MIL_sport_Fee_Extra_Var]/消耗:[?BARE_MIL_sport_Fee_Month_Cost_Var]/等级:[?BARE_MIL_sport_Fee_Level_Var]"
 
 BARE_MIL_sport_GUI_Info_Text_2_1: "安保等级:"
 BARE_MIL_sport_GUI_Info_Text_2_1_tooltip: "对于这种大型活动，必须有适当的安保措施，特别是学园里可能随机生成暴走咖啡机，混水摸鱼的不良学生，试图激烈发表观点的选手等奇怪的东西时。提升安保等级，将有助于减少破坏事件发生的几率以及导致的后果。\n然而，安保措施是要花钱的，而且是很多很多钱。让活动没有东西值得被破坏的显然不是安保措施的初衷，如果缺乏资源，贸然提升安保等级并不是明智之举。\n§R注意，你每月只能调整一次安保等级§!"
@@ -22,11 +22,44 @@ BARE_MIL_sport_GUI_Info_Text_5_1: "准备综合评分:[?BARE_MIL_sport_Score_Var
 BARE_MIL_sport_GUI_Info_Text_6_1: "场地准备程度:"
 
 
-
+MIL_Sport_Improve_Millennium_Infrastructure: "改善千年基础设施"
 
 ##############################################
 #变量和修正相关
 MIL_sport_student_support_monthly: "学生支持度每月变化"
+MIL_sport_student_Fee_monthly: "晄轮大祭每月筹办经费上限"
 BARE_MIL_sport_Student_Support_Modifier: "晄轮大祭-学生支持度"
 BARE_MIL_sport_Tech_Modifier: "晄轮大祭-科研投入"
+BARE_MIL_sport_Security_Modifier: "晄轮大祭-安保投入"
 BARE_MIL_sport_Prepare_Modifier: "筹备晄轮大祭"
+
+
+MIL_Sport_Fee_have_tooltip: "拥有经费[?MIL_Sport_Fee_cost] £MIL_sport_GUI_Info_Icon_1"
+MIL_Sport_Fee_cost_icon_tooltip: "£MIL_sport_GUI_Info_Icon_1 [?MIL_Sport_Fee_cost]"
+MIL_Sport_Fee_cost_icon_tooltip_blocked: "£MIL_sport_GUI_Info_Icon_1 [?MIL_Sport_Fee_cost]"
+
+##############################################
+MIL_Sport_Improve_Millennium_Infrastructure: "改善学园基础设施"
+MIL_Sport_Improve_Millennium_Infrastructure_desc: "晄轮大祭不仅是一场大运动会，实际上也是一场大型的学园交流会，基础设施不仅有助于大运动会的正常开展，也有助于提升学园的形象，因此，对学园周边基础设施进行建设有助于晄轮大祭的开展，也能提升晄轮大祭的支持度。"
+MIL_Sport_Improve_Millennium_Infrastructure_tooltip: "准备综合评分：§G+2%§!\n学生支持度：§G+5%§!"
+
+MIL_Sport_Constructing_Sports_Venues: "修建运动会场地"
+MIL_Sport_Constructing_Sports_Venues_desc: "毫无疑问，运动会要有专业的场地才能开展，尽管学园已经有了一些基础的场地，但对于晄轮大祭而言还是远远不够，运动会场地的修建程度将直接决定运动会的效果，所以尽管花费高昂，但请尽可能完成对运动会场地的建设。这些场地在之后也有助于学园的体育活动，因此能赢得学生的支持。"
+BARE_MIL_sport_Building_Score_Max_Level_tooltip: "最多建设5级场地([?BARE_MIL_sport_Building_Score_Var]/5)"
+
+MIL_Sport_Constructing_Sports_Venues_tooltip: "准备综合评分：§G+[?MIL_Sport_Constructing_Sports_Venues_Score_Add_Temp]%§!\n学生支持度：§G+5%§!\n场地准备程度：§G+1§!"
+
+MIL_Sport_Crackdown_on_Sabotage: "严厉打击混混和破坏分子"
+MIL_Sport_Crackdown_on_Sabotage_desc: "我们已经确认已经有许多不怀好意的眼神看向了晄轮大祭，她们可能有着各种各样的目的，但她们最终的结果都会是毁掉晄轮大祭。通过调度额外的经费，我们可以让C&C先发制人，从而减少破坏的效果。不过，每次出击后，C&C需要额外的经费和一定的时间才能继续行动。"
+MIL_Sport_Crackdown_on_Sabotage_tooltip: "§Y降低一次破坏事件的破坏程度§!"
+
+
+MIL_Public_Decision_Category: "研讨会宣传部决议"
+MIL_Public_We_Can_Do: "宣传决议-我们能做到"
+MIL_Public_Do_you_Part: "宣传决议-为晄轮大祭贡献一份力量"
+MIL_Public_Reduce_Waste: "宣传决议-勤俭节约，减少浪费"
+MIL_Public_Technology_Oriented: "宣传决议-科技乃千年之本"
+MIL_Public_Unique_Charm: "宣传决议-独属于千年的风采"
+MIL_Public_Pull_Together: "宣传决议-齐心协力，共迎晄轮大祭"
+MIL_Public_One_World_One_Dream: "宣传决议-同一个世界，同一个梦想"
+MIL_Public_One_World_One_Dream: "宣传决议-最美好的千年"

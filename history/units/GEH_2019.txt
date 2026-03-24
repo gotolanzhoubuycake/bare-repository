@@ -205,6 +205,15 @@ units = {
 		start_manpower_factor = 1 #初始人力 0-1
 	}
 
+	division= {	 #一个师
+		name = "风纪委边境快速响应大队"
+		location = 4264
+		division_template = "风纪委快速响应纵队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+
 
 	division= {	 #一个师
 		name = "风纪委第一机动支援纵队“闪电”"

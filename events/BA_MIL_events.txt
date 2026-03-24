@@ -276,7 +276,8 @@ country_event = {
 
     option = {
 		name = MIL_sport_event.1.a
-		BARE_MIL_Sport_Init_effect = yes
+		# BARE_MIL_Sport_Init_effect = yes
+        complete_national_focus = MIL_Prepare_grand_festival
 
 		ai_chance = {
 			base = 1
