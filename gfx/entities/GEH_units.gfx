@@ -80,4 +80,24 @@ objectTypes = {
 	    animation = { id = "move"			type = "leopard_2a4_moving_animation" }
 	    animation = { id = "attack"			type = "leopard_2a4_attack_animation" }
     }
+
+	# Leopard1A5
+	pdxmesh = {
+	    name = "Leopard_1a5_mesh"
+	    file = "gfx/models/units/vehicles/leopard_1a5/leopard_1a5.mesh"
+	
+	    animation = { id = "idle"			type = "leopard_1a5_idle_animation" }
+	    animation = { id = "move"			type = "leopard_1a5_moving_animation" }
+	    animation = { id = "attack"			type = "leopard_1a5_attack_animation" }
+    }
+
+	# KPZ70
+	#pdxmesh = {
+	#    name = "KPZ_70_mesh"
+	#    file = "gfx/models/units/vehicles/kpz_70/kpz_70.mesh"
+	#
+	#    animation = { id = "idle"			type = "kpz_70_idle_animation" }
+	#    animation = { id = "move"			type = "kpz_70_moving_animation" }
+	#    animation = { id = "attack"			type = "kpz_70_attack_animation" }
+    #}
 }

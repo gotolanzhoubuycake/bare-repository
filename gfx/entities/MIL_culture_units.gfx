@@ -1,0 +1,25 @@
+objectTypes = {
+
+	# m1038_humvee
+	pdxmesh = {
+	    name = "m1038_humvee_mesh"
+	    file = "gfx/models/units/vehicles/m1038_humvee/m1038_humvee.mesh"
+	
+	    animation = { id = "idle"			type = "m1038_humvee_idle_animation" }
+	    animation = { id = "move"			type = "m1038_humvee_moving_animation" }
+	    animation = { id = "attack"			type = "m1038_humvee_idle_animation" }
+    }
+
+	# recon motorcycle
+	pdxmesh = {
+	    name = "recon_motorcycle_mesh"
+	    file = "gfx/models/units/vehicles/recon_motorcycle/recon_motorcycle.mesh"
+	
+	    animation = { id = "idle"			type = "recon_motorcycle_idle_animation" }
+	    animation = { id = "idle_2"			type = "recon_motorcycle_idle_animation" }
+		animation = { id = "move"			type = "recon_motorcycle_moving_animation" }
+	    animation = { id = "move_2"			type = "recon_motorcycle_moving_animation" }
+		animation = { id = "retreat"			type = "recon_motorcycle_idle_animation" }
+		animation = { id = "retreat_2"			type = "recon_motorcycle_idle_animation" }
+	}
+}

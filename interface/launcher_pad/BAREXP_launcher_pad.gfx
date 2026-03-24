@@ -1,0 +1,104 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_LPS_launcher_pad_bg"
+        texturefile = "gfx/interface/launcher_pad/launcher_pad_bg.dds"
+        TransparenceCheck = yes
+    }
+
+    spriteType = {
+        name = "GFX_LP_Key_Pad_bg"
+        texturefile = "gfx/interface/launcher_pad/LP_Key_Pad_bg.dds"
+        TransparenceCheck = yes
+    }
+
+    spriteType = {
+        name = "GFX_LP_NUM_0"
+        texturefile = "gfx/interface/launcher_pad/LP_NUM_0.dds"
+        TransparenceCheck = yes
+    }
+
+    spriteType = {
+        name = "GFX_LP_NUM_1"
+        texturefile = "gfx/interface/launcher_pad/LP_NUM_1.dds"
+        TransparenceCheck = yes
+    }
+
+    spriteType = {
+        name = "GFX_LP_NUM_2"
+        texturefile = "gfx/interface/launcher_pad/LP_NUM_2.dds"
+        TransparenceCheck = yes
+    }
+
+    spriteType = {
+        name = "GFX_LP_NUM_3"
+        texturefile = "gfx/interface/launcher_pad/LP_NUM_3.dds"
+        TransparenceCheck = yes
+    }
+
+    spriteType = {
+        name = "GFX_LP_NUM_4"
+        texturefile = "gfx/interface/launcher_pad/LP_NUM_4.dds"
+        TransparenceCheck = yes
+    }
+
+    spriteType = {
+        name = "GFX_LP_NUM_5"
+        texturefile = "gfx/interface/launcher_pad/LP_NUM_5.dds"
+        TransparenceCheck = yes
+    }
+
+    spriteType = {
+        name = "GFX_LP_NUM_6"
+        texturefile = "gfx/interface/launcher_pad/LP_NUM_6.dds"
+        TransparenceCheck = yes
+    }
+
+    spriteType = {
+        name = "GFX_LP_NUM_7"
+        texturefile = "gfx/interface/launcher_pad/LP_NUM_7.dds"
+        TransparenceCheck = yes
+    }
+
+    spriteType = {
+        name = "GFX_LP_NUM_8"
+        texturefile = "gfx/interface/launcher_pad/LP_NUM_8.dds"
+        TransparenceCheck = yes
+    }
+
+    spriteType = {
+        name = "GFX_LP_NUM_9"
+        texturefile = "gfx/interface/launcher_pad/LP_NUM_9.dds"
+        TransparenceCheck = yes
+    }
+
+    spriteType = {
+        name = "GFX_LP_NUM_ENTER"
+        texturefile = "gfx/interface/launcher_pad/LP_NUM_ENTER.dds"
+        TransparenceCheck = yes
+    }
+
+    spriteType = {
+        name = "GFX_LP_password_reminder"
+        texturefile = "gfx/interface/launcher_pad/LP_password_reminder.dds"
+        TransparenceCheck = yes
+    }
+
+    spriteType = {
+		name = "GFX_LP_raids_toggle_switch"
+		texturefile = "gfx/interface/launcher_pad/LP_raids_toggle_switch.dds"
+		noOfFrames = 2
+	}
+
+    spriteType = {
+		name = "GFX_LP_key_switch"
+		texturefile = "gfx/interface/launcher_pad/LP_key_switch.dds"
+		noOfFrames = 3
+	}
+
+    spriteType = {
+        name = "GFX_LP_launcher_button"
+        texturefile = "gfx/interface/launcher_pad/LP_launcher_button.dds"
+        noOfFrames = 2
+        TransparenceCheck = yes
+    }
+}

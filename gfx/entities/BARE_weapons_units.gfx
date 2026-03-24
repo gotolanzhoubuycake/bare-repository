@@ -22,4 +22,10 @@ objectTypes = {
 		name = "generic_SCAR_H_forest_weapon_mesh"
 		file = "gfx/models/units/weapons/SCAR_H/SCAR_H_forest.mesh"
 	}
+
+	###FNFAL 原厂##
+	pdxmesh = {
+		name = "generic_FN_FAL_O_weapon_mesh"
+		file = "gfx/models/units/weapons/FN_FAL_O/FN_FAL_O.mesh"
+	}
 }

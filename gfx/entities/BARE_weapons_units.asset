@@ -214,3 +214,48 @@ entity = {
 	pdxmesh = "generic_SCAR_H_forest_weapon_mesh"
 	scale = 1.0
 }
+
+######################
+##FN FAL 原厂 level-1#
+######################
+entity = {
+	name = "generic_FN_FAL_O_left_entity"
+	pdxmesh = "generic_FN_FAL_O_weapon_mesh"
+	scale = 1.0
+}
+
+entity = {
+	name = "generic_FN_FAL_O_right_entity"
+	pdxmesh = "generic_FN_FAL_O_weapon_mesh"
+	scale = 1.0
+
+	get_state_from_parent = yes
+	default_state = "idle"
+	state = { name = "idle" }
+	state = { name = "move"	}
+
+	state = { name = "attack"	animation = "attack"
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } }
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } }
+		event = { time = 0.5 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes }
+	}
+
+	state = { name = "defend"
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } }
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } }
+		event = { time = 0 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes }
+	}
+
+	state = {
+	name = "support_attack"	animation = "support_attack"
+	event = { time = 0 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } }
+	event = { time = 0 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } }
+	event = { time = 0 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "generic_FN_FAL_O_long_idle_entity"
+	pdxmesh = "generic_FN_FAL_O_weapon_mesh"
+	scale = 1.0
+}

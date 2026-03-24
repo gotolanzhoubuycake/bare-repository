@@ -1,0 +1,218 @@
+##显示屏
+defined_text = {
+    name = launcher_pad_status_sl
+    ##没钥匙
+    text = {
+        trigger = {
+            NOT = {
+                check_variable = {
+                    LP_key_switch_posistion = 3
+                }
+            }
+        }
+        localization_key = plz_insert_key_launcher_pad_status_sl
+    }
+    ##密码阶段
+    text = {
+        trigger = {
+            ##钥匙就位
+            check_variable = {
+                LP_key_switch_posistion = 3
+            }
+            ##没有输错密码
+            check_variable = {
+                LP_PASSWORD_WRONG = 0
+            }
+            ##没有输对密码
+            check_variable = {
+                lp_num_index_complete = 0
+            }
+        }
+        localization_key = keyready_launcher_pad_status_sl
+    }
+    text = {
+        trigger = {
+            ##输错密码
+            check_variable = {
+                LP_PASSWORD_WRONG = 1
+            }
+        }
+        localization_key = error_launcher_pad_status_sl
+    }
+    ##等待供电阶段
+    text = {
+        trigger = {
+            ##钥匙就位
+            check_variable = {
+                LP_key_switch_posistion = 3
+            }
+            ##密码正确
+            check_variable = {
+                lp_num_index_complete = 1
+            }
+            ##供电没有
+            OR = {
+                check_variable = {
+                    LP_switch_1_posistion = 0
+                }
+                check_variable = {
+                    LP_switch_2_posistion = 0
+                }
+                check_variable = {
+                    LP_switch_3_posistion = 0
+                }
+            }
+        }
+        localization_key = password_ready_launcher_pad_status_sl
+    }
+
+    ##已供电
+    text = {
+        trigger = {
+            ##钥匙就位
+            check_variable = {
+                LP_key_switch_posistion = 3
+            }
+            ##密码正确
+            check_variable = {
+                lp_num_index_complete = 1
+            }
+            ##供电就位
+            check_variable = {
+                LP_switch_1_posistion = 2
+            }
+            check_variable = {
+                LP_switch_2_posistion = 2
+            }
+            check_variable = {
+                LP_switch_3_posistion = 2
+            }
+        }
+        localization_key = power_ready_launcher_pad_status_sl
+    }
+}
+
+##第1位密码##
+defined_text = {
+    name = launcher_pad_num_1_sl
+    ##不启动钥匙不显示任何内容
+    text = {
+        trigger = {
+            NOT = {
+                check_variable = {
+                    LP_key_switch_posistion = 3
+                }
+            }
+        }
+        localization_key = plz_insert_key_launcher_pad_num_status_sl
+    }
+    text = {
+        trigger = {
+            ##钥匙就位
+            check_variable = {
+                LP_key_switch_posistion = 3
+            }
+        }
+        localization_key = launcher_pad_num_1_ready_sl
+    }
+}
+
+##第2位密码##
+defined_text = {
+    name = launcher_pad_num_2_sl
+    ##不启动钥匙不显示任何内容
+    text = {
+        trigger = {
+            NOT = {
+                check_variable = {
+                    LP_key_switch_posistion = 3
+                }
+            }
+        }
+        localization_key = plz_insert_key_launcher_pad_num_status_sl
+    }
+    text = {
+        trigger = {
+            ##钥匙就位
+            check_variable = {
+                LP_key_switch_posistion = 3
+            }
+        }
+        localization_key = launcher_pad_num_2_ready_sl
+    }
+}
+
+##第3位密码##
+defined_text = {
+    name = launcher_pad_num_3_sl
+    ##不启动钥匙不显示任何内容
+    text = {
+        trigger = {
+            NOT = {
+                check_variable = {
+                    LP_key_switch_posistion = 3
+                }
+            }
+        }
+        localization_key = plz_insert_key_launcher_pad_num_status_sl
+    }
+    text = {
+        trigger = {
+            ##钥匙就位
+            check_variable = {
+                LP_key_switch_posistion = 3
+            }
+        }
+        localization_key = launcher_pad_num_3_ready_sl
+    }
+}
+
+##第4位密码##
+defined_text = {
+    name = launcher_pad_num_4_sl
+    ##不启动钥匙不显示任何内容
+    text = {
+        trigger = {
+            NOT = {
+                check_variable = {
+                    LP_key_switch_posistion = 3
+                }
+            }
+        }
+        localization_key = plz_insert_key_launcher_pad_num_status_sl
+    }
+    text = {
+        trigger = {
+            ##钥匙就位
+            check_variable = {
+                LP_key_switch_posistion = 3
+            }
+        }
+        localization_key = launcher_pad_num_4_ready_sl
+    }
+}
+
+##第5位密码##
+defined_text = {
+    name = launcher_pad_num_5_sl
+    ##不启动钥匙不显示任何内容
+    text = {
+        trigger = {
+            NOT = {
+                check_variable = {
+                    LP_key_switch_posistion = 3
+                }
+            }
+        }
+        localization_key = plz_insert_key_launcher_pad_num_status_sl
+    }
+    text = {
+        trigger = {
+            ##钥匙就位
+            check_variable = {
+                LP_key_switch_posistion = 3
+            }
+        }
+        localization_key = launcher_pad_num_5_ready_sl
+    }
+}

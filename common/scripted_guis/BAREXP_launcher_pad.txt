@@ -1,0 +1,206 @@
+##Remove from expansions
+scripted_gui = {
+	BAREXP_launcher_pad_sgui = {
+		window_name = "BAREXP_launcher_pad_windows"
+		context_type = player_context
+		ai_enabled = {
+			always = no
+		}
+		visible = {
+			check_variable = {
+				LP_OPEN_VAR = 1
+			}
+		}
+		effects = {
+			LP_raids_toggle_switch_1_click = {
+				if = {
+					limit = {
+						check_variable = {
+							LP_switch_1_posistion = 0
+						}
+					}
+					set_variable = {
+						LP_switch_1_posistion = 2
+					}
+				}
+				else = {
+					set_variable = {
+						LP_switch_1_posistion = 0
+					}
+				}
+			}
+			LP_raids_toggle_switch_2_click = {
+				if = {
+					limit = {
+						check_variable = {
+							LP_switch_2_posistion = 0
+						}
+					}
+					set_variable = {
+						LP_switch_2_posistion = 2
+					}
+				}
+				else = {
+					set_variable = {
+						LP_switch_2_posistion = 0
+					}
+				}
+			}
+			LP_raids_toggle_switch_3_click = {
+				if = {
+					limit = {
+						check_variable = {
+							LP_switch_3_posistion = 0
+						}
+					}
+					set_variable = {
+						LP_switch_3_posistion = 2
+					}
+				}
+				else = {
+					set_variable = {
+						LP_switch_3_posistion = 0
+					}
+				}
+			}
+			LP_key_switch_click = {
+				##插钥匙
+				if = {
+					limit = {
+						check_variable = {
+							LP_key_switch_posistion = 0
+						}
+					}
+					set_variable = {
+						LP_key_switch_posistion = 2
+					}
+				}
+				##拧
+				else_if = {
+					limit = {
+						check_variable = {
+							LP_key_switch_posistion = 2
+						}
+					}
+					LP_back_to_start_effect = yes
+					set_variable = {
+						LP_key_switch_posistion = 3
+					}
+				}
+				##拔下来钥匙
+				##归零所有内容
+				else = {
+					LP_back_to_start_effect = yes
+					set_variable = {
+						LP_key_switch_posistion = 0
+					}
+				}
+			}
+			LP_NUM_0_click = {
+				LP_NUM_0_BUTTON_effect = yes
+			}
+			LP_NUM_1_click = {
+				LP_NUM_1_BUTTON_effect = yes
+			}
+			LP_NUM_2_click = {
+				LP_NUM_2_BUTTON_effect = yes
+			}
+			LP_NUM_3_click = {
+				LP_NUM_3_BUTTON_effect = yes
+			}
+			LP_NUM_4_click = {
+				LP_NUM_4_BUTTON_effect = yes
+			}
+			LP_NUM_5_click = {
+				LP_NUM_5_BUTTON_effect = yes
+			}
+			LP_NUM_6_click = {
+				LP_NUM_6_BUTTON_effect = yes
+			}
+			LP_NUM_7_click = {
+				LP_NUM_7_BUTTON_effect = yes
+			}
+			LP_NUM_8_click = {
+				LP_NUM_8_BUTTON_effect = yes
+			}
+			LP_NUM_9_click = {
+				LP_NUM_9_BUTTON_effect = yes
+			}
+			LP_NUM_ENTER_click = {
+				LP_NUM_ENTER_BUTTON_effect = yes
+			}
+			LP_launcher_button_click = {
+				##打开面板……
+				if = {
+					limit = {
+						check_variable = {
+							LP_launcher_button_posistion = 0
+						}
+					}
+					set_variable = {
+						LP_launcher_button_posistion = 2
+					}
+				}
+				##降下审判！
+				else = {
+					country_event = {
+						id = BAREXP_nuke_launcher.1
+					}
+					##归零所有内容
+					LP_back_to_start_effect = yes
+					set_variable = {
+						LP_key_switch_posistion = 0
+					}
+				}
+			}
+			LP_exit_button_click = {			
+				LP_back_to_start_effect = yes
+				set_variable = {
+					LP_key_switch_posistion = 0
+				}
+				set_variable = {
+					LP_OPEN_VAR = 0
+				}
+			}
+		}
+		triggers = {
+			LP_launcher_button_click_enabled = {
+				check_variable = {
+					LP_key_switch_posistion = 3
+				}
+				##密码正确
+				check_variable = {
+					lp_num_index_complete = 1
+				}
+				##供电就位
+				check_variable = {
+					LP_switch_1_posistion = 2
+				}
+				check_variable = {
+					LP_switch_2_posistion = 2
+				}
+				check_variable = {
+					LP_switch_3_posistion = 2
+				}
+			}
+		}
+		properties = {
+			LP_raids_toggle_switch_1 = {
+				frame = LP_switch_1_posistion
+			}
+			LP_raids_toggle_switch_2 = {
+				frame = LP_switch_2_posistion
+			}
+			LP_raids_toggle_switch_3 = {
+				frame = LP_switch_3_posistion
+			}
+			LP_key_switch = {
+				frame = LP_key_switch_posistion
+			}
+			LP_launcher_button = {
+				frame = LP_launcher_button_posistion
+			}
+		}
+		# Get_BARE_openingWelcome_school_bg
+	}
+}

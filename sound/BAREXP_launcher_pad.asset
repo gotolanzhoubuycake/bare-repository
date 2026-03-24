@@ -1,0 +1,62 @@
+sound = {
+	name = "BAREXP_lp_key_sound"
+	file = "launcher_pad/lp_key_sound.wav"
+}
+
+sound = {
+	name = "BAREXP_lp_num_button_sound"
+	file = "launcher_pad/lp_num_button_sound.wav"
+}
+
+sound = {
+	name = "BAREXP_lp_raid_switch_sound"
+	file = "launcher_pad/lp_raid_switch_sound.wav"
+}
+
+sound = {
+	name = "BAREXP_lp_launcher_button_sound"
+	file = "launcher_pad/lp_launcher_button_sound.wav"
+}
+
+soundeffect = {
+	name = BAREXP_lp_key_sound
+	volume = 1
+	sounds = {
+		sound = BAREXP_lp_key_sound
+	}
+}
+
+soundeffect = {
+	name = BAREXP_lp_num_button_sound
+	volume = 1
+	sounds = {
+		sound = BAREXP_lp_num_button_sound
+	}
+}
+
+soundeffect = {
+	name = BAREXP_lp_raid_switch_sound
+	volume = 1
+	sounds = {
+		sound = BAREXP_lp_raid_switch_sound
+	}
+}
+
+soundeffect = {
+	name = BAREXP_lp_launcher_button_sound
+	volume = 1
+	sounds = {
+		sound = BAREXP_lp_launcher_button_sound
+	}
+}
+
+
+category = {
+	name = "BARE_launcher_pad_Sound"
+	soundeffects = {
+		BAREXP_lp_key_sound
+		BAREXP_lp_num_button_sound
+		BAREXP_lp_raid_switch_sound
+		BAREXP_lp_launcher_button_sound
+	}
+}

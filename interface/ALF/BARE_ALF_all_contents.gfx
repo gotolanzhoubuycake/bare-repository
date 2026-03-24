@@ -1,5 +1,12 @@
 spriteTypes = {
-	###国家精神&配图
+	##用于desc的角色肖像##
+	##需要设定lazy load为NO##
+	spriteType = {
+		name = GFX_texticon_BAREXP_Portrait_ALF_Kabahara_Miyoko
+		texturefile = "gfx/leaders/ALF/BAREXP_Portrait_ALF_Kabahara_Miyoko.dds"
+		legacy_lazy_load = no
+	}
+	##国家精神&配图
 	spriteType = {
         name = "GFX_idea_ALF_atsuko_idea"
         texturefile = "gfx/interface/ideas/ALF/atsuko_small.dds"

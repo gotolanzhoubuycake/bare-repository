@@ -710,6 +710,18 @@ Hipper_test_decisions_categories = {
             BARE_FIRE_FACTION_GOAL_COMPLETE_POPUP_EFFECT = yes
         }
     }
+
+    ##发射控制台
+    BAREXP_LP_OPEN_VAR_gui = {
+		visible = {
+			always = yes
+		}
+		complete_effect = {
+		    set_variable = {
+				LP_OPEN_VAR = 1
+			}
+		}
+	}
 }
 
 CEN_Operation_Uranus_categories = {

@@ -1,0 +1,228 @@
+guiTypes = {
+    containerWindowType = {
+        name = "BAREXP_launcher_pad_windows"
+        size = { width = 650 height= 600 }
+        position = { x=0 y=0 }
+        show_position = { x=0 y=0 }
+        show_animation_type = decelerated
+        hide_animation_type = accelerated
+        animation_time = 500
+        show_sound = open_sub_window
+        moveable = yes
+        orientation = CENTER
+		clipping = no
+
+
+        background = {
+            name = "background"
+            quadTextureSprite = "GFX_LPS_launcher_pad_bg"
+        }
+
+        background = {
+            name = "background"
+            quadTextureSprite = "GFX_LP_Key_Pad_bg"
+            position = { x=403 y=58 }
+			##x23 y23
+        }
+
+		buttonType = {
+			name = "LP_exit_button" 
+			position = {x = 570 y = -5 }	
+			spriteType = "GFX_closebutton"
+			shortcut = "SPACE"
+			clicksound = click_close
+		}
+
+		iconType = {
+			name = "LP_password_reminder"
+            position = { x = 30 y = 250 }
+            quadTextureSprite = "GFX_LP_password_reminder"
+		}
+
+        buttonType = {
+            name = "LP_raids_toggle_switch_1"
+            position = { x = 90 y = 188 }
+            quadTextureSprite = "GFX_LP_raids_toggle_switch"
+			clicksound = BAREXP_lp_raid_switch_sound
+        }
+
+        buttonType = {
+            name = "LP_raids_toggle_switch_2"
+            position = { x = 150 y = 188 }
+            quadTextureSprite = "GFX_LP_raids_toggle_switch"
+			clicksound = BAREXP_lp_raid_switch_sound
+        }
+
+        buttonType = {
+            name = "LP_raids_toggle_switch_3"
+            position = { x = 210 y = 188 }
+            quadTextureSprite = "GFX_LP_raids_toggle_switch"
+			clicksound = BAREXP_lp_raid_switch_sound
+        }
+
+		buttonType = {
+            name = "LP_key_switch"
+            position = { x = 298 y = 74 }
+            quadTextureSprite = "GFX_LP_key_switch"
+			clicksound = BAREXP_lp_key_sound
+        }
+
+		buttonType = {
+            name = "LP_launcher_button"
+            position = { x = 282 y = 178 }
+            quadTextureSprite = "GFX_LP_launcher_button"
+			clicksound = BAREXP_lp_launcher_button_sound
+        }
+
+        ##显示屏
+        instantTextboxType = {
+            name = "status"
+            position = { x = 90 y = 78 }
+            orientation = UPPER_LEFT
+            font = "hoi_24header"
+            borderSize = {x = 0 y = 0}
+            text = "[ROOT.launcher_pad_status_sl]"
+            format = center
+            maxWidth = 173
+            maxHeight = 43
+        }
+
+        instantTextboxType = {
+            name = "password_1"
+            position = { x = 91 y = 133 }
+            orientation = UPPER_LEFT
+            font = "hoi_30header"
+            borderSize = {x = 0 y = 0}
+            text = "[?ROOT.launcher_pad_num_1_sl]"
+            format = center
+            maxWidth = 27
+            maxHeight = 45
+        }
+
+        instantTextboxType = {
+            name = "password_2"
+            position = { x = 128 y = 133 }
+            orientation = UPPER_LEFT
+            font = "hoi_30header"
+            borderSize = {x = 0 y = 0}
+            text = "[?ROOT.launcher_pad_num_2_sl]"
+            format = center
+            maxWidth = 27
+            maxHeight = 45
+        }
+
+        instantTextboxType = {
+            name = "password_3"
+            position = { x = 165 y = 133 }
+            orientation = UPPER_LEFT
+            font = "hoi_30header"
+            borderSize = {x = 0 y = 0}
+            text = "[?ROOT.launcher_pad_num_3_sl]"
+            format = center
+            maxWidth = 27
+            maxHeight = 45
+        }
+
+        instantTextboxType = {
+            name = "password_4"
+            position = { x = 201 y = 133 }
+            orientation = UPPER_LEFT
+            font = "hoi_30header"
+            borderSize = {x = 0 y = 0}
+            text = "[?ROOT.launcher_pad_num_4_sl]"
+            format = center
+            maxWidth = 27
+            maxHeight = 45
+        }
+
+        instantTextboxType = {
+            name = "password_5"
+            position = { x = 238 y = 133 }
+            orientation = UPPER_LEFT
+            font = "hoi_30header"
+            borderSize = {x = 0 y = 0}
+            text = "[?ROOT.launcher_pad_num_5_sl]"
+            format = center
+            maxWidth = 27
+            maxHeight = 45
+        }
+
+        ###计算器
+        buttonType = {
+            name = "LP_NUM_0"
+            position = { x =426 y = 226 }
+            quadTextureSprite = "GFX_LP_NUM_0"
+			clicksound = BAREXP_lp_num_button_sound
+        }
+
+        buttonType = {
+            name = "LP_NUM_1"
+            position = { x =426 y = 189 }
+            quadTextureSprite = "GFX_LP_NUM_1"
+			clicksound = BAREXP_lp_num_button_sound
+        }
+
+        buttonType = {
+            name = "LP_NUM_2"
+            position = { x =458 y = 189 }
+            quadTextureSprite = "GFX_LP_NUM_2"
+			clicksound = BAREXP_lp_num_button_sound
+        }
+
+        buttonType = {
+            name = "LP_NUM_3"
+            position = { x =490 y = 189 }
+            quadTextureSprite = "GFX_LP_NUM_3"
+			clicksound = BAREXP_lp_num_button_sound
+        }
+
+        buttonType = {
+            name = "LP_NUM_4"
+            position = { x =426 y = 151 }
+            quadTextureSprite = "GFX_LP_NUM_4"
+			clicksound = BAREXP_lp_num_button_sound
+        }
+
+        buttonType = {
+            name = "LP_NUM_5"
+            position = { x =458 y = 151 }
+            quadTextureSprite = "GFX_LP_NUM_5"
+			clicksound = BAREXP_lp_num_button_sound
+        }
+
+        buttonType = {
+            name = "LP_NUM_6"
+            position = { x =490 y = 151 }
+            quadTextureSprite = "GFX_LP_NUM_6"
+			clicksound = BAREXP_lp_num_button_sound
+        }
+
+        buttonType = {
+            name = "LP_NUM_7"
+            position = { x =426 y = 113 }
+            quadTextureSprite = "GFX_LP_NUM_7"
+			clicksound = BAREXP_lp_num_button_sound
+        }
+
+        buttonType = {
+            name = "LP_NUM_8"
+            position = { x =458 y = 113 }
+            quadTextureSprite = "GFX_LP_NUM_8"
+			clicksound = BAREXP_lp_num_button_sound
+        }
+
+        buttonType = {
+            name = "LP_NUM_9"
+            position = { x =490 y = 113 }
+            quadTextureSprite = "GFX_LP_NUM_9"
+			clicksound = BAREXP_lp_num_button_sound
+        }
+
+		buttonType = {
+            name = "LP_NUM_ENTER"
+            position = { x =522 y = 188 }
+            quadTextureSprite = "GFX_LP_NUM_ENTER"
+			clicksound = BAREXP_lp_num_button_sound
+        }
+    }
+}
