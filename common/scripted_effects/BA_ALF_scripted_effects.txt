@@ -498,10 +498,16 @@ ALF_failure_impact_of_eden_treaty_TRI_stage_0 = {
 }
 
 ALF_failure_impact_of_eden_treaty_TRI_stage_1 = {
+    TRI = {
+        every_core_state = {
+            add_core_of = TRA
+        }
+    }
     ##炸强硬派
-    create_dynamic_country = {
-        original_tag = TRA
-        copy_tag = TRI
+    TRA = {
+        ##分配地块##
+        transfer_state = 118
+        ##触发下一阶段
         set_country_flag = bad_TRI_flag
         #set_cosmetic_tag = TRT_BAD_COSMETIC
         set_politics = {
@@ -512,9 +518,7 @@ ALF_failure_impact_of_eden_treaty_TRI_stage_1 = {
             ideology = Authoritarian_ideology
             popularity = 100
         }
-        ##分配地块##
-        transfer_state = 118
-        ##触发下一阶段
+        inherit_technology = TRI
     }
     TRA = {
         country_event = {
@@ -650,10 +654,15 @@ ALF_failure_impact_of_eden_treaty_TRI_stage_3 = {
 
 ###伊甸失败导致格赫娜政变####
 ALF_failure_impact_of_eden_treaty_GEH_stage_0 = {
+    GEH = {
+        every_core_state = {
+            add_core_of = GEA
+        }
+    }
     ##先炸强硬派##
-    create_dynamic_country = {
-        original_tag = GEA
-        copy_tag = GEH
+    GEA = {
+        transfer_state = 305
+        inherit_technology = GEH
         set_country_flag = bad_GEH_flag
         #set_cosmetic_tag = GEH_BAD_COSMETIC
         set_politics = {
@@ -664,7 +673,6 @@ ALF_failure_impact_of_eden_treaty_GEH_stage_0 = {
             ideology = Authoritarian_ideology
             popularity = 100
         }
-        transfer_state = 305
     }
     create_dynamic_country = {
         original_tag = GEH
@@ -672,6 +680,14 @@ ALF_failure_impact_of_eden_treaty_GEH_stage_0 = {
         set_cosmetic_tag = GEH_GOV_COSMETIC
         transfer_state = 141
         transfer_state = 650
+        set_politics = {
+            ruling_party = Liberalism_ideology
+            elections_allowed = no
+        }
+        set_political_party = {
+            ideology = Liberalism_ideology
+            popularity = 100
+        }
     }
     GEH = {
         transfer_units_fraction = {
@@ -694,27 +710,14 @@ ALF_failure_impact_of_eden_treaty_GEH_stage_0 = {
         BARE_RULE_story_settings_ALF_SELECTED_manpower_initialize_effect = yes
     }
     GEA = {
-        start_civil_war = {
-            ideology = Liberalism_ideology
-            size = 0.15
-            capital = 305
-            set_country_flag = loyality_GEH_flag
-            set_cosmetic_tag = GEH_LOY_COSMETIC
-            set_politics = {
-                ruling_party = Liberalism_ideology
-                elections_allowed = no
-            }
-            set_political_party = {
-                ideology = Liberalism_ideology
-                popularity = 100
-            }
-        }
-    }
-    GEA = {
         add_command_power = 100
         GEA_redirect_character = yes
         BARE_RULE_story_settings_ALF_SELECTED_manpower_initialize_effect = yes
         add_ideas = ALF_GEA_BUFF
+        country_event = {
+            id = ALF.67
+            days = 3
+        }
     }
     news_event = {
         id = ALF_news_event.6
