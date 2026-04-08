@@ -131,4 +131,105 @@
  		}
  		exfiltration_border = { base = 50 }
  	}
+	
  }
+
+
+
+
+MIL_operation_box_weapon = {
+    icon = GFX_operation_box_weapon
+    map_icon = GFX_operation_box_weapon_map
+    name = MIL_operation_box_weapon
+    desc = MIL_operation_box_weapon_desc
+    priority = 5
+
+    days = 30
+    network_strength = 25
+    operatives = 1
+
+    visible = {
+        ROOT = { has_completed_focus = MIL_Networked_Weapons_Necessary }
+        network_national_coverage = {
+            target = FROM
+            value > 0
+        }
+    }
+
+    available = {
+        ROOT = { has_completed_focus = MIL_Networked_Weapons_Necessary }
+    }
+
+    equipment = {
+        civilian_factories = 15
+    }
+
+    risk_chance = 0.40
+    outcome_extra_chance = 0.20
+
+		risk_modifiers = {
+			operation_risk
+		}
+
+		outcome_modifiers = {
+			operation_outcome
+		}
+
+		cost_modifiers = {
+			operation_cost
+		}
+
+		awarded_tokens = {
+			MIL_token_box_weapon_success
+		}
+
+    outcome_execute = {
+        ROOT = {
+            add_operation_token = {
+                tag = FROM
+                token = MIL_token_box_weapon_success
+            }
+        }
+    }
+
+    outcome_extra_execute = {
+        ROOT = {
+            add_operation_token = {
+                tag = FROM
+                token = MIL_token_box_weapon_great_success
+            }
+        }
+    }
+
+    outcome_potential = {
+        ROOT = {
+            add_operation_token = {
+                tag = FROM
+                token = MIL_token_box_weapon_success
+            }
+        }
+    }
+
+    risk_execute = { }
+
+    phases = {
+        MIL_box_weapon_phase_infiltration = { base = 50 }
+        MIL_box_weapon_phase_infiltration_network = {
+            base = 50
+            modifier = {
+                factor = 3
+                ROOT = { has_war = no }
+                FROM = { has_war = no }
+            }
+        }
+    }
+
+    phases = {
+        MIL_box_weapon_phase_execute = { base = 100 }
+    }
+
+    phases = {
+        MIL_box_weapon_phase_exfiltration_border = { base = 50 }
+        MIL_box_weapon_phase_exfiltration_go_to_ground = { base = 50 }
+    }
+}

@@ -30,6 +30,36 @@ technologies = {
 		}
 	}
 
+	bare_rangers_support_tech = {
+
+		research_cost = 1
+
+		#folder = {
+		#	name = infantry_folder
+		#	position = {
+		#		x = -4
+		#		y = -1
+		#	}
+		#}
+
+		#TODO reput it in infantry tech tree
+		allow = {
+			always = no
+		}
+		
+		#dependencies = {
+		#	T1_infantry_weapon = 1
+		#}
+
+		enable_subunits = {
+			rangers_support
+		}	
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 	infantry_weapons_T1 = {
 		enable_equipments = {
 			infantry_equipment_0 

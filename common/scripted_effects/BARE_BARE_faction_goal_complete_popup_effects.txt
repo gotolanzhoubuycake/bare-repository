@@ -1,0 +1,22 @@
+##测试脚本，勿动##
+BARE_FIRE_FACTION_GOAL_COMPLETE_POPUP_EFFECT = {
+	##先关闭已经打开的##
+	clr_country_flag = show_faction_goal_complete_popup_alert
+	add_to_variable = {
+		faction_goal_complete_popup_dirty = 1
+	}
+	###
+	set_country_flag = show_faction_goal_complete_popup_alert
+	add_to_variable = {
+		faction_goal_complete_popup_dirty = 1
+	}
+}
+
+clr_faction_goal_complete_popup_effect = {
+	clr_country_flag = show_faction_goal_complete_popup_alert
+	ROOT = {
+		set_variable = {
+			faction_goal_type_index = 0
+		}
+	}
+}

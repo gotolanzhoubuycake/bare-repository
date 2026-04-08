@@ -1,0 +1,159 @@
+#################### 
+ALF_Infantry_Organization_Producter = {
+	name = ALF_Infantry_Organization_Producter
+	include = BA_Common_Design_Infantry_Organization_Producter
+	icon = GFX_idea_raj_rifle_factory_ishapore
+	allowed = { 
+		tag = ALF
+	}
+	visible = {
+		FROM = {
+			tag = ALF
+		}
+	}
+	available = {
+		FROM = {
+			tag = ALF
+			#has_country_flag = ALF_faction_goal_secure_the_area_flag
+		}
+	}
+}
+
+ALF_artillary_Organization_Producter = {
+	include = BA_Design_artillary_Organization_Producter
+	icon = GFX_idea_raj_ammunition_factory_khadki
+	allowed = { 
+		tag = ALF
+	}
+	visible = {
+		FROM = {
+			tag = ALF
+		}
+	}
+	available = {
+		FROM = {
+			tag = ALF
+		}
+		198 = {
+			is_owned_by = ALF
+		}
+	}
+}
+
+ALF_truck_Organization_Producter = {
+	include = BA_Design_truck_Organization_Producter
+	icon = GFX_idea_generic_supply_line
+	allowed = { 
+		tag = ALF
+	}
+	visible = {
+		FROM = {
+			tag = ALF
+		}
+	}
+	available = {
+		FROM = {
+			tag = ALF
+			has_country_flag = ALF_faction_goal_secure_the_area_flag
+		}
+	}
+}
+
+ALF_tank_Organization_Producter = {
+	include = BA_Design_tank_Organization_Producter
+	icon = GFX_idea_generic_acquire_tanks
+	allowed = { 
+		tag = ALF
+	}
+	visible = {
+		FROM = {
+			tag = ALF
+		}
+	}
+	available = {
+		FROM = {
+			tag = ALF
+		}
+		661 = {
+			is_owned_by = ALF
+		}
+	}
+}
+
+ALF_mecha_Organization_Producter = {
+	include = BA_Design_mecha_Organization_Producter
+	icon = GFX_idea_SOV_organize_wreckers
+	allowed = { 
+		tag = ALF
+	}
+	visible = {
+		FROM = {
+			tag = ALF
+		}
+	}
+	available = {
+		FROM = {
+			tag = ALF
+		}
+		217 = {
+			is_owned_by = ALF
+		}
+	}
+}
+
+ALF_plane_Organization_Producter = {
+	include = BA_Design_plane_Organization_Producter
+	icon = GFX_idea_strategic_bombing_focus
+	allowed = { 
+		tag = ALF
+	}
+	visible = {
+		FROM = {
+			tag = ALF
+		}
+	}
+	available = {
+		FROM = {
+			tag = ALF
+			has_completed_focus = ALF_united_research_facility
+		}
+	}
+}
+
+ALF_helicopter_Organization_Producter = {
+	include = BA_Design_helicopter_Organization_Producter
+	icon = GFX_idea_generic_helicopter_1
+	allowed = { 
+		tag = ALF
+	}
+	visible = {
+		FROM = {
+			tag = ALF
+		}
+	}
+	available = {
+		FROM = {
+			tag = ALF
+			has_completed_focus = ALF_united_research_facility
+		}
+	}
+}
+
+ALF_Gehenna_Volcano_support_equipment_organization = {
+	include = Gehenna_Volcano_support_equipment_organization
+	icon = GFX_MIO_Gehenna_Volcano_support_equipment_organization_icon
+	allowed = { 
+		tag = ALF
+	}
+	visible = {
+		FROM = {
+			tag = ALF
+		}
+	}
+	available = {
+		FROM = {
+			tag = ALF
+			has_completed_focus = ALF_contact_gehenna
+		}
+	}
+}

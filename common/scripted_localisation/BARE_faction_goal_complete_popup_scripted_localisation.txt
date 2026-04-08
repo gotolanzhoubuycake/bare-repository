@@ -1,0 +1,130 @@
+##注意了！分为标题、描述、评价3个主干！
+##独特结算需要如示例进行独特定义
+##不可以动最下方的DEFAULT文本，这是必须有的默认文本。
+
+##描述
+defined_text = {
+	name = BARE_FACTION_GOAL_INDEX_SL
+
+	##站稳脚跟
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = {
+					faction_goal_type_index = 1
+				}
+			}
+		}
+		localization_key = ALF_faction_goal_stand_the_ground_name
+	}
+
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = {
+					faction_goal_type_index = 2
+				}
+			}
+		}
+		localization_key = ALF_faction_goal_back_to_home_name
+	}
+
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = {
+					faction_goal_type_index = 3
+				}
+			}
+		}
+		localization_key = ALF_faction_goal_secure_the_area_name
+	}
+
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = {
+					faction_goal_type_index = 4
+				}
+			}
+		}
+		localization_key = ALF_faction_goal_unlock_military_name
+	}
+
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = {
+					faction_goal_type_index = 5
+				}
+			}
+		}
+		localization_key = ALF_faction_goal_unlock_research_name
+	}
+
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = {
+					faction_goal_type_index = 6
+				}
+			}
+		}
+		localization_key = ALF_faction_goal_spy_master_name
+	}
+
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = {
+					faction_goal_type_index = 7
+				}
+			}
+		}
+		localization_key = ALF_faction_industrial_expansion_name
+	}
+
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = {
+					faction_goal_type_index = 8
+				}
+			}
+		}
+		localization_key = ALF_faction_ensure_power_supply_name
+	}
+
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = {
+					faction_goal_type_index = 9
+				}
+			}
+		}
+		localization_key = ALF_faction_knock_out_kaiser_name
+	}
+
+	text = {
+	    localization_key = FACTION_GOAL_INDEX_SL_DEFAULT_DESC
+	}
+}
+
+defined_text = {
+	name = BARE_FACTION_GOAL_COMPLETE_POPUP_FLAVOR_SL
+	text = {
+		trigger = {
+			ROOT = {
+				check_variable = {
+					faction_goal_type_index = 1
+				}
+			}
+		}
+		localization_key = BARE_FACTION_GOAL_COMPLETE_POPUP_FLAVOR_1
+	}
+
+	text = {
+		localization_key = BARE_FACTION_GOAL_COMPLETE_POPUP_FLAVOR_DEFAULT
+	}
+}

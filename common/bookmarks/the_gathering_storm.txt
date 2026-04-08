@@ -53,6 +53,18 @@ bookmarks = {
 			}
 		}
 
+		MIL = {
+			#minor = yes
+			history = "MIL_GATHERING_STORM_DESC"
+			ideology = no_ideology
+			ideas = {
+
+			}
+			focuses = {
+
+			}
+		}
+
 		#"SRT"={
 		#	history = ""
 		#	ideology = no_ideology

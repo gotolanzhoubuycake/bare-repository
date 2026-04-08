@@ -1,3 +1,23 @@
+###计算实力分数###
+# 功能：计算国家在战术演习系统中的综合实力分数
+# 调用者：Great_Game_generate_global_chart 效果
+# 参数：无
+# 返回：设置以下变量
+#   - Great_Game_power_score：总实力分数
+#   - Great_Game_power_score_from_army：陆军分数
+#   - Great_Game_power_score_from_air：空军分数
+#   - Great_Game_power_score_from_factories：工业分数
+#   - Great_Game_power_score_from_technologies：科研分数
+#   - Great_Game_power_score_factor：连胜/连败修正系数
+# 说明：
+#   - 陆军分数 = (本国+所有属国部署陆军人数K) × 5
+#   - 空军分数 = (本国+所有属国部署空军人数K) × 4
+#   - 工业分数 = 军工数×2 + 民工数×1
+#   - 科研分数 = 已研究科技数×2
+#   - 连胜修正：1 + 连胜次数×0.05（上限1.5倍，即最多+0.5）
+#   - 连败修正：1 - 连败次数×0.05（下限0.5倍，即最多-0.5）
+#   - 最终分数 = (陆军+空军+工业+科研) × 修正系数
+###
 Great_Game_calculate_power_score = {
 	hidden_effect = {
 		set_variable = { Great_Game_power_score_from_army = deployed_army_manpower_k }
@@ -6,7 +26,7 @@ Great_Game_calculate_power_score = {
 			add_to_variable = { PREV.Great_Game_power_score_from_army = deployed_army_manpower_k }
 			add_to_variable = { PREV.Great_Game_power_score_from_air = deployed_airforce_manpower_k }
 		}
-		multiply_variable = { Great_Game_power_score_from_army = 3 }
+		multiply_variable = { Great_Game_power_score_from_army = 6 }
 		multiply_variable = { Great_Game_power_score_from_air = 2 }
 		set_variable = { Great_Game_power_score_from_factories = num_of_military_factories }
 		multiply_variable = { Great_Game_power_score_from_factories = 2 }
@@ -40,6 +60,25 @@ Great_Game_calculate_power_score = {
 		multiply_variable = { Great_Game_power_score = Great_Game_power_score_factor }
 	}
 }
+###生成全局排行榜###
+# 功能：根据所有参与国家的实力分数生成排行榜，并设置排名图标
+# 调用者：
+#   - Great_Game_invade_succeeded 效果（演习成功后更新榜单）
+#   - Great_Game_invade_failed 效果（演习失败后更新榜单）
+#   - Great_Game_force_end_exercise 效果（强制终止演习后更新榜单）
+#   - 游戏初始化和定期更新
+# 参数：无（从 global.Great_Game_overlords 数组读取所有参与国家）
+# 返回：设置以下全局变量
+#   - global.Great_Game_overlords_chart：按实力排序的国家数组
+#   - 每个国家设置以下变量：
+#     - Great_Game_rank：排名（1、2、3...）
+#     - Great_Game_rank_icon_frame：排名图标框架（1=第1名金色，2=第2-3名银色，3=第4-6名铜色，4=第7名及以后普通）
+#     - Great_Game_power_score_faction：如果是盟主，则为派系总分（本国+盟友）
+# 说明：
+#   - 先调用每个国家的 Great_Game_calculate_power_score 计算实力分数
+#   - 使用临时数组存储国家和分数，然后按分数从高到低排序
+#   - 最后在数组末尾添加两个0防止访问越界（bug修复用）
+###
 Great_Game_generate_global_chart = {
 	hidden_effect = {
 		for_each_scope_loop = {
@@ -103,26 +142,36 @@ Great_Game_generate_global_chart = {
 		add_to_array = { global.Great_Game_overlords_chart = 0 }
 	}
 }
-Great_Game_add_cannot_invade = {
-	if = {
-		limit = {
-			NOT = {
-				is_in_array = { Great_Game_cannot_invade = target }
-			}
-		}
-		custom_effect_tooltip = Great_Game_add_cannot_invade
-		add_to_array = { Great_Game_cannot_invade = target }
-	}
-}
-Great_Game_remove_cannot_invade = {
-	if = {
-		limit = {
-			is_in_array = { Great_Game_cannot_invade = target }
-		}
-		custom_effect_tooltip = Great_Game_remove_cannot_invade
-		remove_from_array = { Great_Game_cannot_invade = target }
-	}
-}
+###[未使用] 从免战列表移除###
+# 状态：未使用，已被 Great_Game_remove_from_cannot_invade 效果取代
+# 原功能：检查并从全局免战列表中移除指定国家
+# 说明：此效果缺少自定义tooltip，第618行的增强版提供了更清晰的提示信息
+###
+# Great_Game_remove_cannot_invade = {
+# 	if = {
+# 		limit = {
+# 			is_in_array = { global.Great_Game_cannot_invade = target }
+# 		}
+# 		custom_effect_tooltip = Great_Game_remove_cannot_invade
+# 		remove_from_array = { global.Great_Game_cannot_invade = target }
+# 	}
+# }
+
+###邀请盟友加入演习###
+# 功能：邀请盟友国家加入正在进行的战术演习
+# 调用者：BA_Great_Game_decisions.txt 中的"邀请盟友"决议
+# 参数：需要设置以下临时变量
+#   - ally：要邀请的盟友国家
+#   - leader：演习的发起方（盟主）
+#   - enemy：对手方（敌对盟主）
+# 返回：无
+# 说明：
+#   - 将盟友添加到盟主的 Great_Game_temp_allies 数组
+#   - 更新盟主的派系总分 Great_Game_power_score_faction
+#   - 根据盟主角色设置盟友为进攻方或防守方标记
+#   - 同步盟友的演习相关变量（目标、对手等）
+#   - 取消盟友与对方派系所有成员的军事通行权（确保正常交战）
+###
 Great_Game_invite_to_ally = {
 	custom_effect_tooltip = {
 		localization_key = Great_Game_join_ally_tt
@@ -179,38 +228,120 @@ Great_Game_invite_to_ally = {
 		}
 	}
 }
+
+###开始演习（宣战并激活任务）###
+# 功能：正式启动战术演习，宣战并激活进攻/防守/盟友任务
+# 调用者：BA_Great_Game_decisions.txt 中的"发起演习"决议
+# 参数：需要设置以下变量
+#   - ROOT：进攻方盟主
+#   - FROM：目标托管地区
+#   - FROM.OVERLORD：防守方盟主
+#   - ROOT.Great_Game_temp_allies：进攻方盟友数组（如有）
+#   - FROM.OVERLORD.Great_Game_temp_allies：防守方盟友数组（如有）
+# 返回：无
+# 说明：
+#   - 首先检查防守方是否在免战列表中（global.Great_Game_cannot_invade）
+#   - 如果在免战列表：
+#     - 显示取消提示
+#     - 清理双方所有演习相关变量和标记
+#   - 如果不在免战列表：
+#     - 进攻方对目标地区宣战（战争类型：take_trusteeship）
+#     - 激活进攻方任务 college_exercise_ongoing_attacker
+#     - 所有进攻方盟友加入战争并激活 college_exercise_ongoing_ally 任务
+#     - 防守方激活 college_exercise_ongoing_defender 任务
+#     - 所有防守方盟友加入战争并激活 college_exercise_ongoing_ally 任务
+###
 Great_Game_start_invasion = {
 	hidden_effect = {
-		#攻方
-		declare_war_on = {
-			target = FROM
-			type = take_trusteeship
-		}
-		activate_mission = college_exercise_ongoing_attacker
-		#攻方盟友
-		for_each_scope_loop = {
-			array = Great_Game_temp_allies
-			add_to_war = {
-				targeted_alliance = ROOT
-				enemy = FROM.OVERLORD
+		#检查是否在免战列表中
+		if = {
+			limit = {
+				is_in_array = { global.Great_Game_cannot_invade = FROM.OVERLORD }
 			}
-			activate_mission = college_exercise_ongoing_ally
+			#在免战列表中，取消演习
+			custom_effect_tooltip = Great_Game_invasion_cancelled_due_to_cease_fire_tt
+			#清理变量
+			clear_array = Great_Game_temp_allies
+			clr_country_flag = involved_in_Great_Game_as_attacker
+			clr_country_flag = involved_in_Great_Game_as_ally_leader
+			clear_variable = Great_Game_invader
+			clear_variable = Great_Game_invade_target
+			clear_variable = Great_Game_invade_target_overlord
+			clear_variable = Great_Game_enemy
+			#防守方也清理
+			FROM.OVERLORD = {
+				clear_array = Great_Game_temp_allies
+				clr_country_flag = involved_in_Great_Game_as_defender
+				clr_country_flag = involved_in_Great_Game_as_ally_leader
+				clear_variable = Great_Game_invader
+				clear_variable = Great_Game_invade_target
+				clear_variable = Great_Game_invade_target_overlord
+				clear_variable = Great_Game_enemy
+			}
 		}
-		FROM.OVERLORD = {
-			#守方
-			activate_mission = college_exercise_ongoing_defender
-			#守方盟友
+		else = {
+			#不在免战列表，正常开始演习
+			#攻方
+			declare_war_on = {
+				target = FROM
+				type = take_trusteeship
+			}
+			activate_mission = college_exercise_ongoing_attacker
+			#攻方盟友
 			for_each_scope_loop = {
 				array = Great_Game_temp_allies
 				add_to_war = {
-					targeted_alliance = PREV
-					enemy = ROOT
+					targeted_alliance = ROOT
+					enemy = FROM.OVERLORD
 				}
 				activate_mission = college_exercise_ongoing_ally
+			}
+			FROM.OVERLORD = {
+				#守方
+				activate_mission = college_exercise_ongoing_defender
+				#守方盟友
+				for_each_scope_loop = {
+					array = Great_Game_temp_allies
+					add_to_war = {
+						targeted_alliance = PREV
+						enemy = ROOT
+					}
+					activate_mission = college_exercise_ongoing_ally
+				}
 			}
 		}
 	}
 }
+
+###演习进攻成功###
+# 功能：处理进攻方占领目标地区后的胜利结算
+# 调用者：BA_GST_ZhanZheng_actions.txt 中的 on_state_control_changed 事件
+# 参数：
+#   - ROOT：进攻方盟主
+#   - Great_Game_invade_target：目标地区
+#   - Great_Game_invade_target_overlord：防守方盟主
+#   - Great_Game_enemy：对手方（与防守方盟主相同）
+# 返回：无
+# 说明：
+#   胜利方（进攻方）：
+#   - 增加连胜次数，清零连败次数
+#   - 调用 Great_Game_get_coins 获得代币奖励
+#   - 添加战斗记录（记录目标、对手、结果=1胜利、阵营=1进攻方、日期）
+#   - 所有盟友与对手白和退出战争
+#   - 清理演习标记和变量
+#   - 获得目标地区的托管权（根据资格分配给CEN/CAE/本国）
+#   - 进入演习冷却期（180天）
+#
+#   失败方（防守方）：
+#   - 增加连败次数，清零连胜次数
+#   - 调用 Great_Game_get_coins 获得少量代币奖励
+#   - 添加战斗记录（记录目标、对手、结果=2失败、阵营=2防守方、日期）
+#   - 所有盟友与对手白和退出战争
+#   - 从托管地区数组中移除该地区
+#   - 清理演习标记和变量
+#
+#   最后更新全局排行榜
+###
 Great_Game_invade_succeeded = {
 	custom_effect_tooltip = Great_Game_invade_succeeded_tt
 	Great_Game_get_coins = yes
@@ -235,6 +366,11 @@ Great_Game_invade_succeeded = {
 				limit = { Great_Game_is_involved = yes }
 				white_peace = PREV
 			}
+		}
+		#白和
+		every_enemy_country = {
+			limit = { Great_Game_is_involved = yes }
+			white_peace = ROOT
 		}
 		clear_array = Great_Game_temp_allies
 		var:Great_Game_invade_target_overlord = {
@@ -273,11 +409,7 @@ Great_Game_invade_succeeded = {
 			clear_variable = Great_Game_invade_target_overlord
 			clear_variable = Great_Game_enemy
 		}
-		#白和
-		every_enemy_country = {
-			limit = { Great_Game_is_involved = yes }
-			white_peace = ROOT
-		}
+	
 		#夺取托管地区
 		add_to_array = { BA_trusteeship_areas = var:Great_Game_invade_target }
 		if = {
@@ -332,10 +464,56 @@ Great_Game_invade_succeeded = {
 		Great_Game_generate_global_chart = yes
 	}
 }
+
+###演习进攻失败###
+# 功能：处理防守方成功守住地区后的胜利结算
+# 调用者：
+#   - BA_Great_Game_decisions.txt 中的"撤退"决议（进攻方主动撤退）
+#   - BA_GST_ZhanZheng_actions.txt 中的演习超时事件
+# 参数：
+#   - ROOT：进攻方盟主
+#   - Great_Game_invade_target：目标地区
+#   - Great_Game_invade_target_overlord：防守方盟主
+#   - Great_Game_enemy：对手方（与防守方盟主相同）
+# 返回：无
+# 说明：
+#   胜利方（防守方）：
+#   - 增加连胜次数，清零连败次数
+#   - 调用 Great_Game_get_coins 获得代币奖励
+#   - 添加战斗记录（记录目标、对手、结果=1胜利、阵营=2防守方、日期）
+#   - 所有盟友与对手白和退出战争
+#   - 清理演习标记和变量
+#
+#   失败方（进攻方）：
+#   - 增加连败次数，清零连胜次数
+#   - 调用 Great_Game_get_coins 获得少量代币奖励
+#   - 添加战斗记录（记录目标、对手、结果=2失败、阵营=1进攻方、日期）
+#   - 所有盟友与对手白和退出战争
+#   - 清理演习标记和变量
+#   - 进入演习冷却期（180天）
+#
+#   最后更新全局排行榜
+###
 Great_Game_invade_failed = {
 	custom_effect_tooltip = Great_Game_invade_failed_tt
 	Great_Game_get_coins = yes
 	hidden_effect = {
+		#盟友退战
+		every_other_country = {
+			limit = {
+				has_war_together_with = ROOT
+				Great_Game_is_involved = yes
+			}
+			every_enemy_country = {
+				limit = { Great_Game_is_involved = yes }
+				white_peace = PREV
+			}
+		}
+		clear_array = Great_Game_temp_allies
+		every_enemy_country = {
+			limit = { Great_Game_is_involved = yes }
+			white_peace = ROOT
+		}
 		var:Great_Game_invade_target_overlord = {
 			#增加连胜
 			add_to_variable = { Great_Game_consecutive_wins = 1 }
@@ -377,22 +555,7 @@ Great_Game_invade_failed = {
 		set_variable = { Great_Game_record_faction^Great_Game_record_count = 1 }
 		set_variable = { Great_Game_record_date^Great_Game_record_count = global.date }
 		Great_Game_add_record = yes
-		#盟友退战
-		every_other_country = {
-			limit = {
-				has_war_together_with = ROOT
-				Great_Game_is_involved = yes
-			}
-			every_enemy_country = {
-				limit = { Great_Game_is_involved = yes }
-				white_peace = PREV
-			}
-		}
-		clear_array = Great_Game_temp_allies
-		every_enemy_country = {
-			limit = { Great_Game_is_involved = yes }
-			white_peace = ROOT
-		}
+
 		clr_country_flag = involved_in_Great_Game_as_attacker
 		clr_country_flag = involved_in_Great_Game_as_ally_leader
 		clear_variable = Great_Game_invader
@@ -401,10 +564,27 @@ Great_Game_invade_failed = {
 		clear_variable = Great_Game_enemy
 		set_country_flag = Great_Game_invade_cd
 		activate_mission = Great_Game_invade_cd
-		
+
 		Great_Game_generate_global_chart = yes
 	}
 }
+
+###盟友退出演习###
+# 功能：盟友主动退出正在进行的演习并结算代币
+# 调用者：BA_Great_Game_decisions.txt 中的"退出演习"决议（仅对盟友可见）
+# 参数：
+#   - ROOT：要退出的盟友国家
+#   - Great_Game_ally_leader：盟主国家
+#   - Great_Game_enemy：对手方
+# 返回：无
+# 说明：
+#   - 调用 Great_Game_get_coins 获得代币奖励（按参与时长和伤亡计算）
+#   - 与所有对手白和（退出战争）
+#   - 清理演习相关标记和变量
+#   - 从盟主的 Great_Game_temp_allies 数组中移除自己
+#   - 移除 college_exercise_ongoing_ally 任务
+#   - 进入演习冷却期（60天，比正常结束短120天）
+###
 Great_Game_ally_leave = {
 	Great_Game_get_coins = yes
 	every_enemy_country = {
@@ -432,6 +612,26 @@ Great_Game_ally_leave = {
 		days = -120
 	}
 }
+
+###添加战斗记录###
+# 功能：向国家的战斗记录数组添加一条新记录
+# 调用者：
+#   - Great_Game_invade_succeeded 效果（胜败双方各调用一次）
+#   - Great_Game_invade_failed 效果（胜败双方各调用一次）
+# 参数：需要先设置以下变量（以^index形式存储）
+#   - Great_Game_record_target^Great_Game_record_count：目标地区
+#   - Great_Game_record_enemy^Great_Game_record_count：对手国家
+#   - Great_Game_record_result^Great_Game_record_count：结果（1=胜利，2=失败）
+#   - Great_Game_record_faction^Great_Game_record_count：阵营（1=进攻方，2=防守方）
+#   - Great_Game_record_date^Great_Game_record_count：日期
+# 返回：
+#   - Great_Game_record_count 增加1（记录总数）
+#   - 向5个记录数组各添加1个占位元素（实际数据已通过^index设置）
+# 说明：
+#   - 此效果用于维护战斗历史记录的数组结构
+#   - 数组占位元素的值无意义，实际数据通过变量名^索引方式存储
+#   - 记录用于在GUI中显示战斗历史
+###
 Great_Game_add_record = {
 	add_to_variable = { Great_Game_record_count = 1 }
 	add_to_array = { Great_Game_record_target = 1 }
@@ -440,6 +640,27 @@ Great_Game_add_record = {
 	add_to_array = { Great_Game_record_faction = 1 }
 	add_to_array = { Great_Game_record_date = 1 }
 }
+
+###获得代币奖励###
+# 功能：根据演习中造成的敌方伤亡和战斗表现计算并获得代币奖励
+# 调用者：
+#   - Great_Game_invade_succeeded 效果（胜败双方各调用）
+#   - Great_Game_invade_failed 效果（胜败双方各调用）
+#   - Great_Game_ally_leave 效果（退出盟友调用）
+#   - Great_Game_force_end_exercise 效果（双方各调用）
+# 参数：
+#   - 需要先设置 Great_Game_get_coins_from_combat 变量（战斗中累积的击杀得分）
+# 返回：
+#   - Great_Game_coins 增加计算出的代币数量（上限9999）
+#   - Great_Game_get_coins_from_combat 清零
+# 说明：
+#   代币计算公式：
+#   - 基础 = 所有敌方国家的总伤亡人数K × 20
+#   - 战斗奖励 = Great_Game_get_coins_from_combat（战斗中累积）
+#   - 最终代币 = 基础 + 战斗奖励
+#   - 如果是盟主（有 involved_in_Great_Game_as_ally_leader 标记），则伤亡部分 ÷ 2
+#   - 代币数量四舍五入取整，最终限制在 0-9999 范围内
+###
 Great_Game_get_coins = {
 	for_each_scope_loop = {
 		array = enemies
@@ -465,6 +686,18 @@ Great_Game_get_coins = {
 		max = 9999
 	}
 }
+
+###消耗代币###
+# 功能：花费指定数量的代币
+# 调用者：BA_Great_Game_decisions.txt 中需要消耗代币的决议
+# 参数：需要设置临时变量
+#   - coins：要消耗的代币数量
+# 返回：
+#   - Great_Game_coins 减少指定数量（下限0）
+# 说明：
+#   - 显示自定义tooltip提示消耗数量
+#   - 代币数量限制在 0-9999 范围内
+###
 Great_Game_cost_coins = {
 	custom_effect_tooltip = Great_Game_cost_coins_tt
 	subtract_from_variable = { Great_Game_coins = coins }
@@ -476,6 +709,21 @@ Great_Game_cost_coins = {
 }
 
 
+###设置主要国家（每日检查）###
+# 功能：自动将特定国家标记设置为主要国家（Major）
+# 调用者：on_daily 或 on_weekly 事件（定期检查）
+# 参数：无
+# 返回：如果满足条件，设置国家为主要国家
+# 说明：
+#   - 检查国家是否已经是主要国家，如果不是且在列表中，则设置为主要国家
+#   - 主要国家列表包括：
+#     - TRI（圣三一）、GEH（格黑娜）、MIL（千禧年）、ARI（阿里乌斯）
+#     - CEN（联邦学生会）、VAL（瓦尔基里）、SRT（SRT）、SCH（夏莱）
+#     - ABY（阿拜多斯）
+#     - CAE（凯撒集团）、CAP（凯撒PMC）、CAB（凯撒银行）、CAH（凯撒医院）、CAO（凯撒其他）
+#     - SHA（山海经）、HYA（百鬼夜行）
+#   - 注意：MIL在列表中出现了两次（可能是打字错误，但保留原样）
+###
 Great_Game_set_major_daily = {
 	if = {
 		limit = {
@@ -502,5 +750,312 @@ Great_Game_set_major_daily = {
 			}
 		}
 		set_major = yes
+	}
+}
+
+###强制终止演习（不计入胜负统计，双方均获得胜利代币）###
+# 功能：强制结束正在进行的演习，双方均获得代币奖励但不计入胜负记录
+# 调用者：
+#   - Great_Game_total_cease_fire 效果（某方进入全面免战时）
+#   - 其他需要强制终止演习的场景（如剧情事件）
+# 参数：
+#   - ROOT：进攻方盟主
+#   - Great_Game_invader：进攻方盟主（变量）
+#   - Great_Game_invade_target_overlord：防守方盟主（变量）
+#   - Great_Game_invade_target：目标地区（变量）
+# 返回：无
+# 说明：
+#   与正常胜负结算的区别：
+#   - 双方都不增加连胜/连败次数
+#   - 双方都获得代币奖励（按胜利方标准计算）
+#   - 不添加战斗记录
+#   - 托管地区归属不变
+#
+#   执行流程：
+#   1. 双方（进攻方和防守方）都获得代币奖励
+#   2. 进攻方和防守方的所有盟友与对手白和退出战争
+#   3. 进攻方和防守方主力与对方白和
+#   4. 清理进攻方所有演习相关标记、变量、任务
+#   5. 清理防守方所有演习相关标记、变量、任务
+#   6. 更新全局排行榜
+#
+#   注意：不设置演习冷却期，双方可以立即发起新演习
+###
+Great_Game_force_end_exercise = {
+	hidden_effect = {
+		#进攻方处理
+		set_temp_variable = { attacker = Great_Game_invader }
+		set_temp_variable = { defender = Great_Game_invade_target_overlord }
+		set_temp_variable = { target_area = Great_Game_invade_target }
+
+
+		log = "attacker [?attacker.GetName]"
+		log = "defender [?defender.GetName]"
+		log = "target_area [?target_area.GetName]"
+
+		#双方都获得代币（按胜利方计算）
+		Great_Game_get_coins = yes
+		var:defender = {
+			Great_Game_get_coins = yes
+		}
+
+		#盟友退战
+		every_other_country = {
+			limit = {
+				has_war_together_with = Great_Game_total_cease_fire_Target
+				or = {
+					Great_Game_is_involved = yes
+				}
+			}
+			every_enemy_country = {
+				limit = { Great_Game_is_involved = yes }
+				white_peace = PREV
+			}
+		}
+		
+		#白和双方
+		every_enemy_country = {
+			limit = { Great_Game_is_involved = yes }
+			white_peace = Great_Game_total_cease_fire_Target
+		}
+		var:defender = {
+			every_other_country = {
+				limit = {
+					has_war_together_with = PREV
+					or = {
+						Great_Game_is_involved = yes
+					}
+				}
+				every_enemy_country = {
+					limit = { Great_Game_is_involved = yes }
+					white_peace = PREV
+				}
+			}
+		}
+
+		
+
+		#清理进攻方状态
+		clear_array = Great_Game_temp_allies
+		clr_country_flag = involved_in_Great_Game_as_attacker
+		clr_country_flag = involved_in_Great_Game_as_ally_leader
+		clear_variable = Great_Game_invader
+		clear_variable = Great_Game_invade_target
+		clear_variable = Great_Game_invade_target_overlord
+		clear_variable = Great_Game_enemy
+		remove_mission = college_exercise_ongoing_attacker
+
+		#清理防守方状态
+		var:defender = {
+			clear_array = Great_Game_temp_allies
+			clr_country_flag = involved_in_Great_Game_as_defender
+			clr_country_flag = involved_in_Great_Game_as_ally_leader
+			clear_variable = Great_Game_invader
+			clear_variable = Great_Game_invade_target
+			clear_variable = Great_Game_invade_target_overlord
+			clear_variable = Great_Game_enemy
+			remove_mission = college_exercise_ongoing_defender
+		}
+
+		#更新榜单
+		Great_Game_generate_global_chart = yes
+	}
+}
+
+###取消准备中的演习（清理变量）###
+# 功能：清理准备阶段设置的演习相关变量和标记
+# 调用者：
+#   - Great_Game_total_cease_fire 效果（进入全面免战时清理准备中的演习）
+#   - 其他需要取消准备中演习的场景
+# 参数：
+#   - ROOT：正在准备演习的国家
+# 返回：无
+# 说明：
+#   - HOI4 引擎无法取消已进行中的决议，此效果只是清理已设置的变量
+#   - 清理所有演习相关变量：
+#     - Great_Game_invader：进攻方
+#     - Great_Game_invade_target：目标地区
+#     - Great_Game_invade_target_overlord：防守方
+#     - Great_Game_enemy：对手方
+#     - Great_Game_temp_allies：盟友数组
+#   - 清理所有演习相关标记：
+#     - involved_in_Great_Game_as_attacker：作为进攻方参与标记
+#     - involved_in_Great_Game_as_ally_leader：作为盟主参与标记
+#     - involved_in_Great_Game_as_defender：作为防守方参与标记
+#   - 即使决议仍在进行，由于变量已清空，后续效果也不会执行
+###
+Great_Game_cancel_preparation = {
+	hidden_effect = {
+		#清理已设置的变量（如果有）
+		clear_variable = Great_Game_invader
+		clear_variable = Great_Game_invade_target
+		clear_variable = Great_Game_invade_target_overlord
+		clear_variable = Great_Game_enemy
+		clear_array = Great_Game_temp_allies
+		clr_country_flag = involved_in_Great_Game_as_attacker
+		clr_country_flag = involved_in_Great_Game_as_ally_leader
+		clr_country_flag = involved_in_Great_Game_as_defender
+
+		
+	}
+}
+
+
+
+###[未使用] 从免战列表移除（增强版）###
+# 状态：未使用，功能已整合到 Great_Game_lift_total_cease_fire 效果中
+# 原功能：检查并从全局免战列表中移除指定国家，带有自定义tooltip
+# 说明：
+#   - 相比第106行的旧版本，此版本有更清晰的tooltip（Great_Game_remove_from_cannot_invade_tt）
+#   - 但实际使用中，解除免战功能已整合到 Great_Game_lift_total_cease_fire 中
+#   - 该效果未被任何决议或事件调用
+###
+# Great_Game_remove_from_cannot_invade = {
+# 	if = {
+# 		limit = {
+# 			is_in_array = { global.Great_Game_cannot_invade = target }
+# 		}
+# 		custom_effect_tooltip = Great_Game_remove_from_cannot_invade_tt
+# 		remove_from_array = { global.Great_Game_cannot_invade = target }
+# 	}
+# }
+
+###全面免战：添加免战状态并终止/取消所有相关演习###
+# 功能：使国家进入全面免战状态，终止所有进行中的演习并取消准备中的演习
+# 调用者：BA_Great_Game_decisions.txt 中的"全面免战"决议
+# 参数：
+#   - ROOT：要进入免战状态的国家
+# 返回：
+#   - 将 ROOT 添加到 global.Great_Game_cannot_invade 数组
+# 说明：
+#   执行流程：
+#   1. 将 ROOT 添加到全局免战列表（如果尚未在列表中）
+#
+#   2. 终止 ROOT 正在参与的演习：
+#      - 如果是盟友：调用 Great_Game_ally_leave 退出演习并结算代币
+#      - 如果是进攻方主导：调用 Great_Game_force_end_exercise 终止整个演习
+#      - 如果是防守方主导：由进攻方触发 Great_Game_force_end_exercise 终止演习
+#
+#   3. 清理 ROOT 准备中的演习变量（调用 Great_Game_cancel_preparation）
+#
+#   4. 检查其他国家是否正在对 ROOT 发起演习（进行中或准备中）：
+#      - 遍历所有进攻方，检查其 Great_Game_invade_target_overlord 是否为 ROOT
+#      - 如果是盟友：调用 Great_Game_ally_leave 退出
+#      - 如果是主导方：调用 Great_Game_force_end_exercise 终止
+#
+#   5. 清理其他国家针对 ROOT 的准备中演习变量
+#
+#   免战期间效果：
+#   - 无法被其他国家选为演习目标（决议中会过滤掉）
+#   - 无法主动发起演习（决议不可见或不可用）
+#   - 演习开始时会检查目标是否在免战列表，如果是则自动取消
+###
+Great_Game_total_cease_fire = {
+	custom_effect_tooltip = Great_Game_total_cease_fire_tt
+	hidden_effect = {
+		#1. 对所有有资格参与演习的势力添加免战
+		set_temp_variable = { target = THIS }
+		if = {
+			limit = {
+				NOT = { is_in_array = { global.Great_Game_cannot_invade = target } }
+			}
+			add_to_array = { global.Great_Game_cannot_invade = target }
+		}
+
+		#2. 终止正在进行的演习（区分盟友和主导方）
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = involved_in_Great_Game_as_attacker
+					has_country_flag = involved_in_Great_Game_as_defender
+				}
+			}
+			#检查是否是盟友（盟友有Great_Game_ally_leader变量）
+			if = {
+				limit = { has_variable = Great_Game_ally_leader }
+				#是盟友，只退出演习并结算代币
+				Great_Game_ally_leave = yes
+			}
+			else = {
+				#是主导方，终止整个演习
+				if = {
+					limit = { has_country_flag = involved_in_Great_Game_as_attacker }
+					set_temp_variable = {
+						var = Great_Game_total_cease_fire_Target
+						value = THIS
+					}
+					Great_Game_force_end_exercise = yes
+				}
+				else_if = {
+					limit = { has_country_flag = involved_in_Great_Game_as_defender }
+					set_temp_variable = {
+						var = Great_Game_total_cease_fire_Target
+						value = Great_Game_invader
+					}
+					#由进攻方触发终止
+					var:Great_Game_invader = {
+						Great_Game_force_end_exercise = yes
+					}
+				}
+			}
+		}
+
+		#3. 清理准备中的演习变量
+		Great_Game_cancel_preparation = yes
+
+		#4. 检查是否有其他势力正在对ROOT发起演习
+		every_country = {
+			limit = {
+				has_country_flag = involved_in_Great_Game_as_attacker
+				has_variable = Great_Game_invade_target_overlord
+				check_variable = { Great_Game_invade_target_overlord = PREV }
+			}
+			#检查是否是盟友
+			if = {
+				limit = { has_variable = Great_Game_ally_leader }
+				#是盟友，只退出演习
+				Great_Game_ally_leave = yes
+			}
+			else = {
+				#是主导进攻方，终止整个演习
+				Great_Game_force_end_exercise = yes
+			}
+		}
+
+		#5. 检查针对ROOT的准备中演习（清理变量）
+		every_country = {
+			limit = {
+				has_variable = Great_Game_invade_target_overlord
+				check_variable = { Great_Game_invade_target_overlord = PREV }
+			}
+			Great_Game_cancel_preparation = yes
+		}
+	}
+}
+
+###解除全面免战：从免战列表移除###
+# 功能：解除国家的全面免战状态，恢复可以参与演习
+# 调用者：BA_Great_Game_decisions.txt 中的"解除全面免战"决议
+# 参数：
+#   - ROOT：要解除免战的国家
+#   - target：临时变量，设置为 THIS（ROOT本身）
+# 返回：
+#   - 从 global.Great_Game_cannot_invade 数组中移除 ROOT
+# 说明：
+#   - 检查 ROOT 是否在免战列表中，如果在则移除
+#   - 解除后立即生效：
+#     - 其他国家可以选择 ROOT 的托管地区作为演习目标
+#     - ROOT 可以主动发起演习
+#   - 此效果仅移除免战状态，不影响已结束的演习或冷却期
+###
+Great_Game_lift_total_cease_fire = {
+	custom_effect_tooltip = Great_Game_lift_total_cease_fire_tt
+	hidden_effect = {
+		if = {
+			limit = {
+				is_in_array = { global.Great_Game_cannot_invade = THIS }
+			}
+			remove_from_array = { global.Great_Game_cannot_invade = THIS }
+		}
 	}
 }

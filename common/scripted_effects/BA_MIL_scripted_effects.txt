@@ -2,23 +2,85 @@ BARE_MIL_Sport_Init_effect = {
 	set_global_flag = BARE_MIL_Sport_prepare_flag
 
 	set_variable = {
-		BARE_MIL_sport_Month_Time_Var = 10 #剩余月数
-	}
-	set_variable = {
-		BARE_MIL_sport_Fee_All_Var = 40 #本月最大经费
-	}
-	set_variable = { #本月已有经费
-		BARE_MIL_sport_Fee_Have_Var = BARE_MIL_sport_Fee_All_Var
-	}
-	set_variable = { #额外经费
-		BARE_MIL_sport_Fee_Extra_Var = 0
+		BARE_MIL_sport_Month_Time_Var = 15 #剩余月数
 	}
 
-	set_variable = { #每月消耗
-		BARE_MIL_sport_Fee_Month_Cost_Var = 0
+
+	#准备精神的动态修正
+	set_variable = {
+		BARE_MIL_sport_Prepare_Modifier_MIL_sport_student_support_monthly_var = 5
+	}
+	set_variable = {
+		BARE_MIL_sport_Prepare_Modifier_consumer_goods_factor_var = 0.2
+	}
+	set_variable = {
+		BARE_MIL_sport_Prepare_production_speed_buildings_factor_var = 0.05
+	}
+	set_variable = {
+		BARE_MIL_sport_Prepare_Modifier_research_speed_factor_var = 0.05
+	}
+	set_variable = {
+		BARE_MIL_sport_Prepare_Modifier_industrial_capacity_factory_var = 0.05
+	}
+	set_variable = {
+		BARE_MIL_sport_Prepare_Modifier_MIL_sport_student_Fee_monthly_var = 10
+	}
+
+	#添加动态修正
+	add_dynamic_modifier = {
+		modifier = BARE_MIL_sport_Prepare_Modifier
+	}
+
+	#科技等级修正
+	set_variable = {
+		BARE_MIL_sport_Tech_Modifier_MIL_sport_student_Fee_monthly_var = -6
+	}
+	set_variable = {
+		BARE_MIL_sport_Tech_Modifier_MIL_sport_student_support_monthly_var = 2
+	}
+	set_variable = {
+		BARE_MIL_sport_Tech_Modifier_stability_factor_var = 0.02
+	}
+	set_variable = {
+		BARE_MIL_sport_Tech_Modifier_research_speed_factor_var = 0.02
+	}
+	set_variable = {
+		BARE_MIL_sport_Tech_Modifier_production_speed_buildings_factor_var = 0.02
+	}
+	add_dynamic_modifier = {
+		modifier = BARE_MIL_sport_Tech_Modifier
+	}
+	#安保修正
+	set_variable = {
+		BARE_MIL_sport_Security_Modifier_MIL_sport_student_Fee_monthly_var = -2
+	}
+	add_dynamic_modifier = {
+		modifier = BARE_MIL_sport_Security_Modifier
+	}
+
+
+
+
+	#支持度修正
+	add_dynamic_modifier = {
+		modifier = BARE_MIL_sport_Student_Support_Modifier
+	}
+
+
+	set_variable = {
+		BARE_MIL_sport_Fee_All_Var = modifier@MIL_sport_student_Fee_monthly
+	}
+	set_variable = { #本月有经费
+		BARE_MIL_sport_Fee_Have_Var = BARE_MIL_sport_Fee_All_Var
+	}
+	set_variable = { #额外经费（额外经费）
+		BARE_MIL_sport_Fee_Extra_Var = 0
+	}
+	set_variable = { #每月消耗（文本）
+		BARE_MIL_sport_Fee_Month_Cost_Var = 4
 	}
 	set_variable = { #当前安保等级
-		BARE_MIL_sport_Security_Have_Var = 1
+		BARE_MIL_sport_Security_Have_Var = 2
 	}
 
 	set_variable = { #最大安保等级
@@ -26,7 +88,7 @@ BARE_MIL_Sport_Init_effect = {
 	}
 
 	set_variable = { #当前科技等级
-		BARE_MIL_sport_Tech_Have_Var = 2
+		BARE_MIL_sport_Tech_Have_Var = 1
 	}
 
 	set_variable = { #最大科技等级
@@ -42,13 +104,21 @@ BARE_MIL_Sport_Init_effect = {
 	}
 
 	set_variable = { #场地准备程度
-		BARE_MIL_sport_Building_Score_Var = 1
+		BARE_MIL_sport_Building_Score_Var = 0
+		
 	}
+
+
 }
 
 
 BARE_MIL_Sport_Student_Support_Var_Chance_effect = {
-	
+	clamp_variable = {
+		var = BARE_MIL_sport_Student_Support_Var
+		min = 0
+		max = 100
+
+	}
 
 
 	set_temp_variable = {
@@ -204,4 +274,65 @@ BARE_MIL_Sport_Tech_Var_Chance_effect = {
 	multiply_variable = {
 		BARE_MIL_sport_Tech_Modifier_production_speed_buildings_factor_var = BARE_MIL_sport_Tech_Have_Var
 	}
+
+	set_variable = {
+		BARE_MIL_sport_Tech_Modifier_MIL_sport_student_support_monthly_var = 1
+	}
+	multiply_variable = {
+		BARE_MIL_sport_Tech_Modifier_MIL_sport_student_support_monthly_var = BARE_MIL_sport_Tech_Have_Var
+	}
+
+	set_variable = {
+		BARE_MIL_sport_Tech_Modifier_MIL_sport_student_Fee_monthly_var = -3
+	}
+	multiply_variable = {
+		BARE_MIL_sport_Tech_Modifier_MIL_sport_student_Fee_monthly_var = BARE_MIL_sport_Tech_Have_Var
+	}
+
+	BARE_MIL_Fee_All_Change_effect = yes
+}
+
+BARE_MIL_Fee_All_Change_effect = {
+	set_variable = {
+		BARE_MIL_sport_Fee_All_Var = modifier@MIL_sport_student_Fee_monthly
+	}
+}
+BARE_MIL_Fee_Level_Change_effect = {
+	
+}
+
+BARE_MIL_Sport_Security_Var_Chance_effect = {
+	set_variable = {
+		BARE_MIL_sport_Security_Modifier_MIL_sport_student_Fee_monthly_var = BARE_MIL_sport_Security_Have_Var
+	}
+	BARE_MIL_Fee_All_Change_effect = yes
+}
+
+BARE_MIL_Sport_Monthly_effect = {
+	#每月支持度更新
+	add_to_variable = {
+		BARE_MIL_sport_Student_Support_Var = modifier@MIL_sport_student_support_monthly
+	}
+	BARE_MIL_Sport_Student_Support_Var_Chance_effect = yes
+
+	set_variable = {
+		BARE_MIL_sport_Fee_All_Var = modifier@MIL_sport_student_Fee_monthly
+	}	
+	#经费更新
+	set_variable = { #本月有经费
+		BARE_MIL_sport_Fee_Have_Var = BARE_MIL_sport_Fee_All_Var
+	}
+	add_to_variable = { #额外经费
+		BARE_MIL_sport_Fee_Have_Var = BARE_MIL_sport_Fee_Extra_Var
+	}
+	subtract_from_variable = { #每月消耗
+		BARE_MIL_sport_Fee_Have_Var = BARE_MIL_sport_Fee_Month_Cost_Var
+	}
+	#清理限制flag
+	clr_country_flag = BARE_MIL_sport_Security_Have_Change
+	clr_country_flag = BARE_MIL_sport_Tech_Have_Change
+}
+
+BARE_MIL_Sport_Complete_effect = {
+	clr_global_flag = BARE_MIL_Sport_prepare_flag
 }

@@ -104,7 +104,7 @@ on_actions = {
                             }
                         }
                         create_unit = {
-                            division = "name = "伊甸条约组织维和部队" division_template = "伊甸条约组织维和部队" start_experience_factor = 1 start_equipment_factor = 1 start_manpower_factor = 1"
+                            division = "name = \"伊甸条约组织维和部队\" division_template = \"伊甸条约组织维和部队\" start_experience_factor = 1 start_equipment_factor = 1 start_manpower_factor = 1"
                             owner = PREV
                             count = 8
                             allow_spawning_on_enemy_provs = yes							#允许创建在敌方省份上
@@ -407,7 +407,6 @@ on_actions = {
             BARE_PEACE_EVENT_POPUP_DEFAULT_FOR_CAPITULATION = yes
         }
     }
-
     on_capitulation = {
         effect = {
             ########################光复战争#####################

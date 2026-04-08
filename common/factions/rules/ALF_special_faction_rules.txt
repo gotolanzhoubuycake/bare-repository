@@ -1,0 +1,24 @@
+#goals_only_faction_leader = {
+#	type = member_rules
+#	trigger = {
+#		is_faction_leader = yes	
+#	}
+#}
+
+###ALF Special###
+ALF_goals_controls_by_script_only = {
+	type = faction_goal_rules
+	available = {
+		# Whether the rule should be available for the faction
+		# NOTE that this won't block the rule from being set with an effect!
+		#
+		# SCOPE = faction leader: COUNTRY
+		always = no
+	}
+	can_remove = {
+		always = no
+	}
+	trigger = {
+		always = no
+	}
+}

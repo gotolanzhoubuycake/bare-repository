@@ -9,7 +9,7 @@ sub_units = { #
 		active = yes
 
 		type = {
-			mechanized
+			motorized
 		}
 		
 		group = JiDong_BuBing #!机动步兵

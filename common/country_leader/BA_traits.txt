@@ -1,3 +1,6 @@
+##land_doctrine_cost_factor = -0.25
+##这句话已经死了，用下面这句
+##land_doctrine_cost_factor = -0.25
 @tier1 = 15
 leader_traits = {
 	#模板
@@ -1292,7 +1295,10 @@ leader_traits = {
 	##分析员
 	ALF_intelligence_analyst = {
 		random = no
-		decryption = 1
+		resistance_growth = -0.05
+		civilian_intel_to_others = -10
+		army_intel_to_others = -10
+		decryption_power = 1
 		operative_slot = 1
 		agency_upgrade_time = -0.2
 	}

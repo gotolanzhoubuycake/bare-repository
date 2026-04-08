@@ -1,6 +1,0 @@
-objectTypes = {
-	pdxmesh = {
-		name = "building_heavy_arms_factory"
-		file = "gfx/models/buildings/factory.mesh"
-	}
-}

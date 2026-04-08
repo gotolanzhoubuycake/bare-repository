@@ -1,0 +1,29 @@
+technologies = { #三一特殊科技
+	tech_railwaygun_units_unlock = {
+		research_cost = 1
+		start_year = 2019
+        enable_equipments = {
+			railway_gun_equipment_1
+		}
+		enable_subunits = {
+			railway_gun
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+    tech_super_railwaygun_units_unlock = {
+		research_cost = 1
+		start_year = 2019
+        enable_equipments = {
+			super_heavy_railway_gun_equipment_1
+		}
+		enable_subunits = {
+			super_heavy_railway_gun
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

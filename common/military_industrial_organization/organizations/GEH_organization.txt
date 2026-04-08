@@ -1,10 +1,10 @@
-##     ##    ###    ######## ######## ########  #### ######## ##       
-###   ###   ## ##      ##    ##       ##     ##  ##  ##       ##       
-#### ####  ##   ##     ##    ##       ##     ##  ##  ##       ##       
-## ### ## ##     ##    ##    ######   ########   ##  ######   ##       
-##     ## #########    ##    ##       ##   ##    ##  ##       ##       
-##     ## ##     ##    ##    ##       ##    ##   ##  ##       ##       
-##     ## ##     ##    ##    ######## ##     ## #### ######## ######## 
+##     ##    ###    ######## ######## ########  #### ######## ##
+###   ###   ## ##      ##    ##       ##     ##  ##  ##       ##
+#### ####  ##   ##     ##    ##       ##     ##  ##  ##       ##
+## ### ## ##     ##    ##    ######   ########   ##  ######   ##
+##     ## #########    ##    ##       ##   ##    ##  ##       ##
+##     ## ##     ##    ##    ##       ##    ##   ##  ##       ##
+##     ## ##     ##    ##    ######## ##     ## #### ######## ########
 ###########################
 ######## Artillery ########
 ###########################
@@ -23,8 +23,7 @@ Gehenna_Volcano_support_equipment_organization = {
 	research_categories = {
 		support_all
 	}
-
-	ai_will_do  = {
+	ai_will_do = {
 		factor = 1
 	}
 	on_design_team_assigned_to_tech = {
@@ -91,7 +90,7 @@ Gehenna_Volcano_support_equipment_organization = {
 		position = {
 			x = 0
 			y = 0
-		}		
+		}
 		production_bonus = {
 			production_resource_need_factor = -0.2
 		}
@@ -113,7 +112,8 @@ Gehenna_Volcano_support_equipment_organization = {
 		}
 		limit_to_equipment_type = {
 			mio_cat_eq_support_at_equipment
-		}		# optional
+		}
+		# optional
 		equipment_bonus = {
 			hard_attack = 0.05
 		}
@@ -135,7 +135,8 @@ Gehenna_Volcano_support_equipment_organization = {
 		}
 		limit_to_equipment_type = {
 			mio_cat_eq_support_at_equipment
-		}		# optional
+		}
+		# optional
 		equipment_bonus = {
 			ap_attack = 0.05
 		}
@@ -150,10 +151,12 @@ Gehenna_Volcano_support_equipment_organization = {
 		}
 		limit_to_equipment_type = {
 			mio_cat_eq_support_artillery_equipment
-		}		# optional
+		}
+		# optional
 		equipment_bonus = {
 			soft_attack = 0.03
-		}		# optional
+		}
+		# optional
 	}
 	trait = {
 		token = GVS_Blasting_Rope_trait
@@ -179,11 +182,9 @@ Gehenna_Volcano_support_equipment_organization = {
 				custom_effect_tooltip = GVS_Blasting_Rope_tech_tt
 			}
 		}
-
 		limit_to_equipment_type = {
 			support_engineer_equipment
 		}
-		
 		equipment_bonus = {
 			build_cost_ic = 0.03
 		}
@@ -207,7 +208,8 @@ Gehenna_Volcano_support_equipment_organization = {
 			mio_cat_eq_support_artillery_equipment
 			mio_cat_eq_support_at_equipment
 			mio_cat_eq_support_aa_equipment
-		}		# optional
+		}
+		# optional
 		equipment_bonus = {
 			ap_attack = 0.01
 			hard_attack = 0.02
@@ -314,8 +316,8 @@ Gehenna_Volcano_support_equipment_organization = {
 		}
 		limit_to_equipment_type = {
 			mio_cat_eq_support_artillery_equipment
-		    mio_cat_eq_support_at_equipment
-		    mio_cat_eq_support_aa_equipment
+			mio_cat_eq_support_at_equipment
+			mio_cat_eq_support_aa_equipment
 		}
 		equipment_bonus = {
 			build_cost_ic = -0.03
@@ -339,9 +341,10 @@ Gehenna_Volcano_support_equipment_organization = {
 		}
 		limit_to_equipment_type = {
 			mio_cat_eq_support_artillery_equipment
-		    mio_cat_eq_support_at_equipment
-		    mio_cat_eq_support_aa_equipment
-		}		# optional
+			mio_cat_eq_support_at_equipment
+			mio_cat_eq_support_aa_equipment
+		}
+		# optional
 		equipment_bonus = {
 			reliability = 0.03
 			defense = 0.02
@@ -402,8 +405,8 @@ Gehenna_Volcano_support_equipment_organization = {
 		}
 		limit_to_equipment_type = {
 			mio_cat_eq_support_artillery_equipment
-		    mio_cat_eq_support_at_equipment
-		    mio_cat_eq_support_aa_equipment
+			mio_cat_eq_support_at_equipment
+			mio_cat_eq_support_aa_equipment
 		}
 		production_bonus = {
 			production_conversion_speed_factor = 0.5
@@ -429,8 +432,8 @@ Gehenna_Volcano_support_equipment_organization = {
 		}
 		limit_to_equipment_type = {
 			mio_cat_eq_support_artillery_equipment
-		    mio_cat_eq_support_at_equipment
-		    mio_cat_eq_support_aa_equipment
+			mio_cat_eq_support_at_equipment
+			mio_cat_eq_support_aa_equipment
 		}
 		equipment_bonus = {
 			soft_attack = 0.02
@@ -529,28 +532,27 @@ Gehenna_Volcano_support_equipment_organization = {
 		icon = GFX_generic_mio_trait_icon_efficiency_gain
 		special_trait_background = yes
 		position = {
-			x = 9
-			y = 1
+			x = 8
+			y = 4
 		}
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = GVS_Expansion_daily_necessities_trait_trigger_tt
-				check_variable = {
-					GVS_special_traits < 1
-				}
-			}
+			
+		}
+		mutually_exclusive = {
+			GVS_Increase_Financing_size_trait
 		}
 		on_complete = {
 			set_variable = {
 				GVS_special_traits = 1
 			}
-			add_ideas = GVS_Expansion_daily_necessities_Production_Idea
+			FROM = {
+				add_ideas = GVS_Expansion_daily_necessities_Production_Idea
+			}
 		}
 		organization_modifier = {
 			military_industrial_organization_funds_gain = -0.05
 		}
 	}
-
 	trait = {
 		token = GVS_Increase_Financing_size_trait
 		name = GVS_Increase_Financing_size_trait
@@ -558,15 +560,13 @@ Gehenna_Volcano_support_equipment_organization = {
 		special_trait_background = yes
 		position = {
 			x = 9
-			y = 0
+			y = 4
 		}
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = GVS_Increase_Financing_size_trait_trigger_tt
-				check_variable = {
-					GVS_special_traits < 1
-				}
-			}
+
+		}
+		mutually_exclusive = {
+			GVS_Expansion_daily_necessities_trait
 		}
 		on_complete = {
 			set_variable = {
@@ -577,7 +577,6 @@ Gehenna_Volcano_support_equipment_organization = {
 			military_industrial_organization_funds_gain = 0.2
 		}
 	}
-
 	trait = {
 		token = GVS_Hot_springs_Development_fund_trait
 		name = GVS_Hot_springs_Development_fund_trait
@@ -585,7 +584,7 @@ Gehenna_Volcano_support_equipment_organization = {
 		special_trait_background = yes
 		position = {
 			x = 9
-			y = 3
+			y = 0
 		}
 		available = {
 			custom_trigger_tooltip = {

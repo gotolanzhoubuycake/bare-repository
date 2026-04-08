@@ -152,3 +152,25 @@ ALF_win_the_final_battle_achievement = {
 		}
 	}
 }
+
+ALF_rebuild_arm_force_achievement = {
+	possible = {
+		custom_override_tooltip = {
+			tooltip = is_playing_ALF_tt
+			OR = {
+				tag = A47
+				tag = ALF
+			}
+		}
+		difficulty > 1
+        game_rules_allow_achievements = yes
+	}
+
+	happened = {
+		custom_override_tooltip = {
+			tooltip = ALF_rebuild_arm_force_achievement_tt
+			tag = ALF
+			has_country_flag = ALF_estabilish_Arius_armed_force_flag
+		}
+	}
+}

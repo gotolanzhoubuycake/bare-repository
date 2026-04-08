@@ -59,5 +59,4 @@ resources = {
 	# placeholder_8 = { icon_frame = 18 cic = 0.125 convoys = 0.06 }
 	# placeholder_9 = { icon_frame = 19 cic = 0.125 convoys = 0.06 }
 	##################################################
-
 }

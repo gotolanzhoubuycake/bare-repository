@@ -910,6 +910,8 @@ heavy_bm_aa_MK4_desc: "先进的重型防空机甲，拥有凶猛的防空火力
 heavy_bm_destroyer_MK4: "重型格斗机甲 MK4"
 # heavy_bm_destroyer_MK4_desc: "专用于反装甲的先进重型机甲，一旦跟上，就能摧毁任何敌人的装甲单位。"
 
+assault_vehicle_dummy_upgrade: "改进自救工具"
+assault_vehicle_dummy_upgrade_desc: "调整了大小与折叠性，可以收纳在工具箱或装甲挂点上的自救工具，可以处理一些意外情况。"
 assault_vehicle_attack_upgrade1: "突击载具武备升级 MK1"
 assault_vehicle_attack_upgrade1_desc: "改进的弹药和主要武器提升了载具的火力。"
 assault_vehicle_attack_upgrade2: "突击载具武备升级 MK2"
@@ -1219,3 +1221,18 @@ T5_opaz: "T5级神秘科技"
 T5_opaz_desc: "作为基沃托斯的一大神秘，欧帕兹所蕴含的知识和能量远远超出我们的认知。为了将这股巨大的力量掌握在手中，我们将集中一切力量，试图冲破现有理论的边界，探索这些神秘道具的更深一步的用途。
 
 breakthrough_tech_text: "建造科研设施，招募科学家，完成对应的特殊科研项目解锁"
+
+###
+tech_railwaygun_units_unlock: "列车炮"
+tech_super_railwaygun_units_unlock: "超重型列车炮"
+
+railway_gun: "列车炮"
+railway_gun_equipment: "列车炮组件"
+railway_gun_equipment_1: "列车炮组件"
+railway_gun_equipment_2: "改进型列车炮组件"
+
+super_heavy_railway_gun: "超重型列车炮"
+super_heavy_railway_gun_equipment: "超重型列车炮组件"
+super_heavy_railway_gun_equipment_1: "超重型列车炮组件"
+
+bare_rangers_support_tech: "游骑兵小队"

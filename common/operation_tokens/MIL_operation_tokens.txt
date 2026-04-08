@@ -1,0 +1,21 @@
+MIL_token_box_weapon_success = {
+    name = MIL_token_box_weapon_success
+    desc = MIL_token_box_weapon_success_desc
+    icon = GFX_operations_infiltrate_armed_forces
+
+    targeted_modifier = MIL_box_weapon_success_targeted
+
+    intel_source = civilian
+    intel_gain = 0.5
+}
+
+MIL_token_box_weapon_great_success = {
+    name = MIL_token_box_weapon_great_success
+    desc = MIL_token_box_weapon_great_success_desc
+    icon = GFX_operations_infiltrate_armed_forces
+
+    targeted_modifier = MIL_box_weapon_great_success_targeted
+
+    intel_source = civilian
+    intel_gain = 1.0
+}

@@ -439,6 +439,10 @@ script_enum_equipment_bonus_type = {
 	railway_gun_equipment
 	railway_gun_equipment_1
 	railway_gun_equipment_2
+	##
+	super_heavy_railway_gun_equipment
+	super_heavy_railway_gun_equipment_1
+	##
 	small_uav_equipment_1
 	small_uav_equipment_2
 	small_uav_equipment_3
