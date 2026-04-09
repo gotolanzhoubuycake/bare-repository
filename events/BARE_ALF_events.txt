@@ -145,7 +145,7 @@ country_event = {
     option = {
         name = ALF.5.a
         ai_chance = {
-            base = 1
+            base = 10
         }
         ALF_medium_decrease_livability_modifier_effect = yes
         199 = {
@@ -178,7 +178,7 @@ country_event = {
     option = {
         name = ALF.6.b
         ai_chance = {
-            base = 1
+            base = 10
         }
         ALF_small_improve_livability_modifier_effect = yes
         199 = {
@@ -197,7 +197,7 @@ country_event = {
     option = {
         name = ALF.7.a
         ai_chance = {
-            base = 1
+            base = 10
         }
         hidden_effect = {
             load_oob = "ALF_oob_commandos"
@@ -243,7 +243,7 @@ country_event = {
     option = {
         name = ALF.8.a
         ai_chance = {
-            base = 1
+            base = 10
         }
         199 = {
             add_manpower = 2000

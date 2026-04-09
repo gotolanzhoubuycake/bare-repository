@@ -313,6 +313,12 @@ ALF_war_with_Kaiser = {
         tag = CAP
         value = 50
     }
+    ##多少守一下队友家
+    ai_strategy = {
+        type = force_defend_ally_borders
+        id = FSC
+        value = 10
+    }
     ai_strategy = {
         type = front_unit_request
         tag = A25
@@ -364,6 +370,14 @@ ALF_war_with_Kaiser_wait = {
             ALF = {
                 has_completed_focus = ALF_operation_michael
             }
+        }
+
+        ##这么做有危险！不要在自身危险的情况执行这个方案！
+        FSC = {
+            has_capitulated = no
+        }
+        ALF = {
+            surrender_progress < 0.1
         }
     }
     abort_when_not_enabled = yes
@@ -577,6 +591,12 @@ ALF_war_with_TRI_AND_GEH_STAGE_1 = {
             exists = yes
             has_capitulated = no
         }
+        A06 = {
+            has_capitulated = no
+        }
+        GEA = {
+            surrender_progress < 0.2
+        }
     }
     abort_when_not_enabled = yes
 
@@ -674,6 +694,130 @@ ALF_war_with_TRI_AND_GEH_STAGE_1 = {
         execution_type = careful
         manual_attack = yes
         execute_order = no
+    }
+}
+
+##第一阶段，如果格黑娜露出颓势
+ALF_war_with_TRI_AND_GEH_STAGE_1_EX = {
+    allowed = {	original_tag = ALF }
+    enable = {
+        has_war = yes
+        ALF = {
+            has_completed_focus = ALF_construct_tomorrows_stair
+        }
+        TRA = {
+            exists = yes
+            has_capitulated = no
+        }
+        GEA = {
+            exists = yes
+            has_capitulated = no
+        }
+        OR = {
+            A06 = {
+                has_capitulated = yes
+            }
+            GEA = {
+                surrender_progress > 0.2
+            }
+        }
+    }
+    abort_when_not_enabled = yes
+
+    ##这总是第一关切##
+    ai_strategy = {
+        type = area_priority
+        id = black_market_area
+        value = 10
+    }
+
+    ai_strategy = {
+        type = area_priority
+        id = ALF_ARI_liberation_area
+        value = 10
+    }
+
+    ai_strategy = {
+        type = area_priority
+        id = ALF_2ND_liberation_TRA_area
+        value = 50
+    }
+
+    ai_strategy = {
+        type = area_priority
+        id = ALF_2ND_liberation_GEA_area
+        value = 25
+    }
+
+    ##关注主要战场就行了！！
+    ai_strategy = {
+        type = force_defend_ally_borders
+        id = TRI
+        value = 100
+    }
+    ai_strategy = {
+        type = force_defend_ally_borders
+        id = GEH
+        value = 100
+    }
+    #ai_strategy = {
+    #    type = front_unit_request
+    #    tag = TRA
+    #    value = 80
+    #}
+    #ai_strategy = {
+    #    type = front_unit_request
+    #    tag = GEA
+    #    value = 50
+    #}
+
+    #####
+    ai_strategy = {
+        type = front_unit_request
+        tag = CAP
+        value = -100
+    }
+    ai_strategy = {
+        type = front_unit_request
+        tag = A25
+        value = -100
+    }
+    ai_strategy = {
+        type = front_unit_request
+        tag = A46
+        value = -100
+    }
+    ai_strategy = {
+        type = front_unit_request
+        tag = A24
+        value = -100
+    }
+    ai_strategy = {
+        type = front_unit_request
+        tag = A45
+        value = -100
+    }
+
+
+    ###先对付圣三一
+    ai_strategy = {
+        type = front_control
+        tag = TRA
+        #ratio = 0.1
+        ordertype = front
+        execution_type = careful
+        manual_attack = yes
+        execute_order = no
+    }
+
+    ai_strategy = {
+        type = front_control
+        tag = GEA
+        #ratio = 0.1
+        ordertype = front
+        execution_type = balanced
+        manual_attack = yes
+        execute_order = yes
     }
 }
 

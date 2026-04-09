@@ -445,6 +445,9 @@ ALF_stage_4_war_plan = {
         ALF_way_for_glory
         #
         ALF_2nd_liberation_war
+        #先叫支援！
+        ALF_full_work_schedule
+        ALF_ask_for_support
         ALF_traveller_operation
         ALF_eden_operation
         ALF_full_work_schedule
