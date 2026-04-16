@@ -38,6 +38,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/infantry/infantry_equipment_4.dds"
 	}
 
+	#
+	SpriteType = {
+		name = "GFX_GEH_infantry_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/infantry/GEH_infantry_equipment_0.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEH_infantry_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/infantry/GEH_infantry_equipment_1.dds"
+	}
+	
 	##神秘步兵装备
 	SpriteType = {
 		name = "GFX_special_infantry_equipment_medium"
@@ -84,6 +94,16 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_infantry_weapons_T5_medium"
 		texturefile = "gfx/interface/technologies/infantry/infantry_equipment_4.dds"
+	}
+
+	##
+	SpriteType = {
+		name = "GFX_GEH_infantry_weapons_T1_medium"
+		texturefile = "gfx/interface/technologies/infantry/GEH_infantry_equipment_0.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEH_infantry_weapons_T2_medium"
+		texturefile = "gfx/interface/technologies/infantry/GEH_infantry_equipment_1.dds"
 	}
 
 	###

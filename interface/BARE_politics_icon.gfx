@@ -28,4 +28,15 @@ spriteTypes = {
 		name = "GFX_ideology_LBM_GEH_After_Terrible_type"
 		texturefile = "gfx/interface/ideologies/LBM_GEH_After_Terrible_type.dds"
 	}
+
+	##专制组
+	spriteType = {
+		name = "GFX_ideology_ATN_deep_state_type"
+		texturefile = "gfx/interface/ideologies/ATN_deep_state_type.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_ATN_GEH_Tyrant_Follower_type"
+		texturefile = "gfx/interface/ideologies/ATN_GEH_Tyrant_Follower_type.dds"
+	}
 }

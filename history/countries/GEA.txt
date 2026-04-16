@@ -102,3 +102,7 @@ set_popularities = {
 }
 
 country_lock_all_division_template = yes
+
+recruit_character =  GEA_Hikawa_Rin
+
+##

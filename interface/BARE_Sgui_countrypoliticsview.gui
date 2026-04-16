@@ -32,6 +32,39 @@ guiTypes = {
 		}
 	}
 
+	containerWindowType = {
+		name = "BAREXP_diplomancy_politic_view_window"
+		position = { x= 242 y = 116 }
+		size = { width = 255 height = 60 }
+		clipping = no
+
+		#iconType = {
+		#	name = "Background_diplomancy"		
+		#	quadTextureSprite ="GFX_barexp_ideology_name_bg"
+		#	alwaystransparent = yes
+		#}
+
+		#instantTextboxType = {
+		#	name = "BAREXP_ruling_party_diplomancy"
+		#	position = { x = 22 y = 19 }
+		#	font = "hoi_18mbs"
+		#	text = "BAREXP_ruling_party"
+		#	maxWidth = 155
+		#	maxHeight = 20
+		#	alwaystransparent = yes
+		#}
+
+		instantTextboxType = {
+			name = "BAREXP_ruling_sub_ideology_diplomancy"
+			position = { x = 22 y = 46 }
+			font = "hoi_16mbs"
+			text = "BAREXP_ruling_sub_ideology_diplomancy"
+			maxWidth = 155
+			maxHeight = 20
+			alwaystransparent = yes
+		}
+	}
+
 
 	#
 	containerWindowType = {

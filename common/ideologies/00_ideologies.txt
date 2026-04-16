@@ -113,6 +113,14 @@ ideologies = {
                 can_be_randomly_selected = no
 			}
 
+			ATN_deep_state_type = {
+				can_be_randomly_selected = no
+			}
+
+			ATN_GEH_Tyrant_Follower_type  = {
+                can_be_randomly_selected = no
+			}
+
 		}
 		color = { 105 105 105 }
 

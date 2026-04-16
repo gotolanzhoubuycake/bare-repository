@@ -41,6 +41,12 @@ objectTypes = {
 		file = "gfx/models/units/weapons/HK_G36/HK_G36.mesh"
 	}
 
+	####HK 416####
+	pdxmesh = {
+		name = "generic_HK416_weapon_mesh"
+		file = "gfx/models/units/weapons/HK416/HK416.mesh"
+	}
+
 }
 
 #
