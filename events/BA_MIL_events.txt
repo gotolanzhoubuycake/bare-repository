@@ -365,6 +365,61 @@ country_event = {
 
 
 
+# 事件10：光辉的胜利
+# 由民族精神"永远飘扬的光辉旗帜"触发
+country_event = {
+    id = MIL_cae_war.10
+    title = MIL_cae_war.10.t
+    desc = MIL_cae_war.10.d
+
+    is_triggered_only = yes
+    fire_only_once = yes
+
+    option = {
+        name = MIL_cae_war.10.a
+        ai_chance = {
+            base = 1
+        }
+    }
+}
+
+# 事件11：审判战犯
+# 由民族精神"永远飘扬的光辉旗帜"触发
+country_event = {
+    id = MIL_cae_war.11
+    title = MIL_cae_war.11.t
+    desc = MIL_cae_war.11.d
+
+    is_triggered_only = yes
+    fire_only_once = yes
+
+    option = {
+        name = MIL_cae_war.11.a
+        ai_chance = {
+            base = 1
+        }
+    }
+}
+
+# 事件12：凯撒集团大解体
+# 由民族精神"永远飘扬的光辉旗帜"触发
+country_event = {
+    id = MIL_cae_war.12
+    title = MIL_cae_war.12.t
+    desc = MIL_cae_war.12.d
+
+    is_triggered_only = yes
+    fire_only_once = yes
+
+    option = {
+        name = MIL_cae_war.12.a
+        ai_chance = {
+            base = 1
+        }
+    }
+}
+
+
 country_event = {
     id = MIL_sport_event.1
     title = MIL_sport_event.1.t

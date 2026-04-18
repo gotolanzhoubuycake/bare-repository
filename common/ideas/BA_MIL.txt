@@ -144,6 +144,34 @@ ideas = {
             }
         }
 
+        # 永远飘扬的光辉旗帜
+        MIL_glorious_banner_forever = {
+            name = MIL_glorious_banner_forever
+            picture = MIL_glorious_banner_forever
+
+            allowed = {
+                original_tag = MIL
+            }
+
+            modifier = {
+                political_power_factor = 0.25
+                stability_factor = 0.25
+                war_support_factor = 0.25
+                research_speed_factor = 0.15
+                production_speed_buildings_factor = 0.15
+                industrial_capacity_factory = 0.10
+                production_factory_max_efficiency_factor = 0.10
+                army_attack_factor = 0.15
+                army_defence_factor = 0.15
+                army_org_factor = 0.15
+                army_org_regain = 0.15
+                army_speed_factor = 0.10
+                air_mission_efficiency = 0.15
+                air_cas_efficiency = 0.15
+            }
+        }
+
+
 		MIL_security_department_tooltip_0 = {
 			name = MIL_security_department_name # 承平日久的安保部
 			removal_cost = -1

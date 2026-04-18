@@ -211,6 +211,11 @@ focus_tree = {
 				value = 120
 				tooltip = MIL_CAE_FINAL_economic_situation
 			}
+			# 初始化招募部队装备系数（默认值1.0）
+			set_variable = {
+				var = global.cae_recruit_equipment_factor
+				value = 1
+			}
 			set_variable = {
 				var = global.cae_add_economic_situation
 				value = 0
