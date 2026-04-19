@@ -334,6 +334,63 @@ on_actions = {
                     CAB = { leave_faction = yes }
                     CAH = { leave_faction = yes }
                     CAO = { leave_faction = yes }
+
+                    # 战争结束，清除国家旗帜，停止后续每周经济结算
+                    CAE = { clr_country_flag = CAE_MIL_war_started }
+                    MIL = { clr_country_flag = CAE_MIL_war_started }
+                }
+
+                # =========================================
+                # 凯撒经济胜利判定
+                # 当最终经济状况大于200时，凯撒战胜
+                # =========================================
+                if = {
+                    limit = {
+                        check_variable = { global.cae_final_economic_situation > 200 }
+                        NOT = { has_global_flag = CAE_MIL_war_cae_victory }
+                        NOT = { has_global_flag = CAE_MIL_war_cae_defeated }
+                    }
+                    set_global_flag = CAE_MIL_war_cae_victory
+
+                    # CAE获取在MIL_cae_war.6占领的所有state
+                    CAE = {
+                        # 马尔斯大道占领区
+                        transfer_state = 31
+                        transfer_state = 471
+                        transfer_state = 32
+                        transfer_state = 730
+                        transfer_state = 33
+                        transfer_state = 731
+                        transfer_state = 473
+                        transfer_state = 320
+                        # 千年大街
+                        transfer_state = 733
+                        transfer_state = 321
+                        transfer_state = 322
+                        transfer_state = 732
+                        transfer_state = 323
+                        # 其他占领区
+                        transfer_state = 333
+                        transfer_state = 341
+                        transfer_state = 331
+                        transfer_state = 477
+                        transfer_state = 745
+                        transfer_state = 746
+                        transfer_state = 476
+                    }
+
+                    # 双方白和平（包括参战的凯撒子公司）
+                    MIL = {
+                        white_peace = CAE
+                        white_peace = CAP
+                        white_peace = CAB
+                        white_peace = CAH
+                        white_peace = CAO
+                    }
+
+                    # 战争结束，清除国家旗帜，停止后续每周经济结算
+                    CAE = { clr_country_flag = CAE_MIL_war_started }
+                    MIL = { clr_country_flag = CAE_MIL_war_started }
                 }
             }
         }
