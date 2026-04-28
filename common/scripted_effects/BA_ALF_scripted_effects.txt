@@ -713,7 +713,6 @@ ALF_failure_impact_of_eden_treaty_GEH_stage_0 = {
         add_command_power = 100
         GEA_redirect_character = yes
         BARE_RULE_story_settings_ALF_SELECTED_manpower_initialize_effect = yes
-        add_ideas = ALF_GEA_BUFF
         country_event = {
             id = ALF.67
             days = 3

@@ -34,7 +34,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "BAREXP_diplomancy_politic_view_window"
-		position = { x= 242 y = 116 }
+		position = { x= 241 y = 116 }
 		size = { width = 255 height = 60 }
 		clipping = no
 
