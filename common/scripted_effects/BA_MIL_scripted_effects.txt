@@ -1,17 +1,28 @@
 BARE_MIL_Sport_Init_effect = {
+	# 2026-05-20: 晄轮大祭系统统一初始化入口。
+	# 事件 `MIL_sport_event.1` 自动完成入口国策后调用这里；后续 GUI、月更、决议都依赖这些变量与 flag。
 	set_global_flag = BARE_MIL_Sport_prepare_flag
+	# 2026-05-18: 接入全局宣传活动系统，千年运动会宣传改由通用宣传类别承载
+	BARE_unlock_MIL_public_campaigns_effect = yes
 
 	set_variable = {
 		BARE_MIL_sport_Month_Time_Var = 15 #剩余月数
 	}
+	clr_country_flag = BARE_MIL_Sport_settlement_pending_flag
+	clr_country_flag = BARE_MIL_Sport_settled_flag
 
 
 	#准备精神的动态修正
 	set_variable = {
-		BARE_MIL_sport_Prepare_Modifier_MIL_sport_student_support_monthly_var = 5
+		# 2026-05-21: 筹备期基础舆论压力改为每月-3，支持度需要通过建设、宣传和国策维护。
+		BARE_MIL_sport_Prepare_Modifier_MIL_sport_student_support_monthly_var = -3
 	}
 	set_variable = {
 		BARE_MIL_sport_Prepare_Modifier_consumer_goods_factor_var = 0.2
+	}
+	set_variable = {
+		# 2026-05-20: 国策效果会逐步追加稳定度修正，初始化时保持为0
+		BARE_MIL_sport_Prepare_Modifier_stability_factor_var = 0
 	}
 	set_variable = {
 		BARE_MIL_sport_Prepare_production_speed_buildings_factor_var = 0.05
@@ -23,7 +34,7 @@ BARE_MIL_Sport_Init_effect = {
 		BARE_MIL_sport_Prepare_Modifier_industrial_capacity_factory_var = 0.05
 	}
 	set_variable = {
-		BARE_MIL_sport_Prepare_Modifier_MIL_sport_student_Fee_monthly_var = 10
+		BARE_MIL_sport_Prepare_Modifier_MIL_sport_student_Fee_monthly_var = 15
 	}
 
 	#添加动态修正
@@ -32,17 +43,18 @@ BARE_MIL_Sport_Init_effect = {
 	}
 
 	#科技等级修正
+	# 2026-05-20: 科技等级本身不直接写死到动态修正里，初始化后由 `BARE_MIL_Sport_Tech_Var_Chance_effect` 统一重算。
 	set_variable = {
-		BARE_MIL_sport_Tech_Modifier_MIL_sport_student_Fee_monthly_var = -6
+		BARE_MIL_sport_Tech_Modifier_MIL_sport_student_Fee_monthly_var = -5
 	}
 	set_variable = {
-		BARE_MIL_sport_Tech_Modifier_MIL_sport_student_support_monthly_var = 2
+		BARE_MIL_sport_Tech_Modifier_MIL_sport_student_support_monthly_var = 1
 	}
 	set_variable = {
-		BARE_MIL_sport_Tech_Modifier_stability_factor_var = 0.02
+		BARE_MIL_sport_Tech_Modifier_stability_factor_var = 0.01
 	}
 	set_variable = {
-		BARE_MIL_sport_Tech_Modifier_research_speed_factor_var = 0.02
+		BARE_MIL_sport_Tech_Modifier_research_speed_factor_var = 0.01
 	}
 	set_variable = {
 		BARE_MIL_sport_Tech_Modifier_production_speed_buildings_factor_var = 0.02
@@ -51,6 +63,7 @@ BARE_MIL_Sport_Init_effect = {
 		modifier = BARE_MIL_sport_Tech_Modifier
 	}
 	#安保修正
+	# 2026-05-20: 安保等级通过月度经费 modifier 表现为固定消耗，同时也会被破坏事件读取。
 	set_variable = {
 		BARE_MIL_sport_Security_Modifier_MIL_sport_student_Fee_monthly_var = -2
 	}
@@ -62,22 +75,49 @@ BARE_MIL_Sport_Init_effect = {
 
 
 	#支持度修正
+	# 2026-05-20: 学生支持度修正会在筹备结束后保留一段时间，再通过赛后回正逻辑自然移除。
 	add_dynamic_modifier = {
 		modifier = BARE_MIL_sport_Student_Support_Modifier
 	}
 
 
-	set_variable = {
-		BARE_MIL_sport_Fee_All_Var = modifier@MIL_sport_student_Fee_monthly
-	}
-	set_variable = { #本月有经费
-		BARE_MIL_sport_Fee_Have_Var = BARE_MIL_sport_Fee_All_Var
+	# 2026-05-18: 将经费上限与每月恢复拆分，避免GUI等级只变数字不改实际经费
+	set_variable = { #基础经费上限
+		BARE_MIL_sport_Fee_Base_Max_Var = 25
 	}
 	set_variable = { #额外经费（额外经费）
 		BARE_MIL_sport_Fee_Extra_Var = 0
 	}
-	set_variable = { #每月消耗（文本）
-		BARE_MIL_sport_Fee_Month_Cost_Var = 4
+	set_variable = { #2026-05-20: 外部学园合作提供的额外经费获取上限，不影响自主经费等级和财政危机
+		BARE_MIL_sport_Fee_Cooperation_Extra_Var = 0
+	}
+	set_variable = { #2026-05-20: 外部合作上限最多10点
+		BARE_MIL_sport_Fee_Cooperation_Max_Var = 10
+	}
+	set_variable = { #2026-05-20: 合作学院结算分成计数，每5点合作上限分走2民工和30政治点
+		BARE_MIL_sport_Cooperation_Share_Level_Var = 0
+	}
+	clear_variable = BARE_MIL_sport_Cooperation_GEH_Level_Var
+	clear_variable = BARE_MIL_sport_Cooperation_TRI_Level_Var
+	clear_variable = BARE_MIL_sport_Cooperation_SHA_Level_Var
+	clear_variable = BARE_MIL_sport_Cooperation_RWT_Level_Var
+	clear_variable = BARE_MIL_sport_Cooperation_HYA_Level_Var
+	clr_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag
+	# 2026-05-18: 同步文档初始值，补充经费等级初始变量供GUI读取
+	set_variable = { #当前经费等级
+		BARE_MIL_sport_Fee_Level_Var = 1
+	}
+	set_variable = { #每月固定消耗
+		BARE_MIL_sport_Fee_Month_Cost_Var = 0
+	}
+	set_variable = { #每月自然恢复量
+		BARE_MIL_sport_Fee_Recovery_Var = 0
+	}
+	set_variable = { #经费上限
+		BARE_MIL_sport_Fee_All_Var = 25
+	}
+	set_variable = { #当前可用经费
+		BARE_MIL_sport_Fee_Have_Var = 25
 	}
 	set_variable = { #当前安保等级
 		BARE_MIL_sport_Security_Have_Var = 2
@@ -96,7 +136,7 @@ BARE_MIL_Sport_Init_effect = {
 	}
 
 	set_variable = { #学生支持度
-		BARE_MIL_sport_Student_Support_Var = 50
+		BARE_MIL_sport_Student_Support_Var = 60
 	}
 
 	set_variable = { #准备综合评分
@@ -107,8 +147,105 @@ BARE_MIL_Sport_Init_effect = {
 		BARE_MIL_sport_Building_Score_Var = 0
 		
 	}
+	set_variable = { #场地准备程度GUI显示帧
+		BARE_MIL_sport_Building_Score_Frame_Var = 0
+	}
+
+	BARE_MIL_Fee_Level_Change_effect = yes
 
 
+}
+
+BARE_MIL_Sport_Focus_Yuuka_Unhappy_effect = {
+	# 2026-05-20: 对齐国策文档，“研讨会会计的烦恼”解锁经费调整并提供50点当期经费
+	add_to_variable = {
+		BARE_MIL_sport_Fee_Have_Var = 50
+	}
+}
+
+BARE_MIL_Sport_Focus_Make_More_Money_effect = {
+	# 2026-05-20: “开源”提升经费等级，按既有规则只影响下月恢复与上限，不当月补满
+	add_to_variable = {
+		BARE_MIL_sport_Fee_Level_Var = 1
+	}
+	BARE_MIL_Fee_Level_Change_effect = yes
+}
+
+BARE_MIL_Sport_Focus_Reduce_Cost_effect = {
+	# 2026-05-20: “节流”获得50点当期经费，宣传决议由决议可见条件自动解锁
+	add_to_variable = {
+		BARE_MIL_sport_Fee_Have_Var = 50
+	}
+}
+
+BARE_MIL_Sport_Focus_Need_Help_effect = {
+	# 2026-05-20: 合作路线让筹备动态修正的生活消费品压力降低10%
+	add_to_variable = {
+		BARE_MIL_sport_Prepare_Modifier_consumer_goods_factor_var = -0.10
+	}
+}
+
+BARE_MIL_Sport_Focus_We_Can_Do_effect = {
+	# 2026-05-20: 独立路线的支持度与长期凝聚收益，同时作为大成功隐藏条件
+	add_to_variable = {
+		BARE_MIL_sport_Student_Support_Var = 20
+	}
+	add_to_variable = {
+		BARE_MIL_sport_Prepare_Modifier_stability_factor_var = 0.05
+	}
+	add_to_variable = {
+		BARE_MIL_sport_Prepare_Modifier_MIL_sport_student_support_monthly_var = 1
+	}
+	BARE_MIL_Sport_Student_Support_Var_Chance_effect = yes
+}
+
+BARE_MIL_Sport_Focus_The_Power_Of_Technology_effect = {
+	# 2026-05-20: 科技线国策提供即时学生支持度，科技等级优化仍由后续国策处理
+	add_to_variable = {
+		BARE_MIL_sport_Student_Support_Var = 10
+	}
+	BARE_MIL_Sport_Student_Support_Var_Chance_effect = yes
+}
+
+BARE_MIL_Sport_Focus_Noas_Strive_effect = {
+	# 2026-05-20: 诺亚线追加月度支持与稳定度
+	add_to_variable = {
+		BARE_MIL_sport_Prepare_Modifier_MIL_sport_student_support_monthly_var = 1
+	}
+	add_to_variable = {
+		BARE_MIL_sport_Prepare_Modifier_stability_factor_var = 0.05
+	}
+}
+
+BARE_MIL_Sport_Focus_Construction_Full_Swing_effect = {
+	# 2026-05-20: 如火如荼的建设提供即时稳定、支持和政治点，同时刷新科技经费优化
+	add_stability = 0.10
+	add_political_power = 50
+	add_to_variable = {
+		BARE_MIL_sport_Student_Support_Var = 10
+	}
+	BARE_MIL_Sport_Student_Support_Var_Chance_effect = yes
+	BARE_MIL_Sport_Tech_Var_Chance_effect = yes
+}
+
+BARE_MIL_Sport_Focus_Increasingly_Refined_effect = {
+	# 2026-05-20: 日渐完善的准备降低筹备消费品压力并提供收尾资源
+	add_political_power = 50
+	add_to_variable = {
+		BARE_MIL_sport_Student_Support_Var = 15
+	}
+	add_to_variable = {
+		BARE_MIL_sport_Prepare_Modifier_consumer_goods_factor_var = -0.50
+	}
+	BARE_MIL_Sport_Student_Support_Var_Chance_effect = yes
+}
+
+BARE_MIL_Sport_Focus_Carnival_Start_effect = {
+	# 2026-05-20: 保留最终结算入口，同时补充文档中的“晄轮大祭进行时”180天收益
+	add_dynamic_modifier = {
+		modifier = BARE_MIL_sport_Carnival_Modifier
+		days = 180
+	}
 }
 
 
@@ -254,6 +391,8 @@ BARE_MIL_Sport_Student_Support_Var_Chance_effect = {
 }
 
 BARE_MIL_Sport_Tech_Var_Chance_effect = {
+	# 2026-05-20: 科技等级刷新入口。
+	# GUI 加减科技等级和“如火如荼的建设工作”国策都会调用这里，确保建造速度、科研速度、月支持度和经费消耗同步更新。
 	set_variable = {
 		BARE_MIL_sport_Tech_Modifier_stability_factor_var = 0.01
 	}
@@ -269,7 +408,7 @@ BARE_MIL_Sport_Tech_Var_Chance_effect = {
 	}
 
 	set_variable = {
-		BARE_MIL_sport_Tech_Modifier_production_speed_buildings_factor_var = 0.01
+		BARE_MIL_sport_Tech_Modifier_production_speed_buildings_factor_var = 0.02
 	}
 	multiply_variable = {
 		BARE_MIL_sport_Tech_Modifier_production_speed_buildings_factor_var = BARE_MIL_sport_Tech_Have_Var
@@ -282,8 +421,19 @@ BARE_MIL_Sport_Tech_Var_Chance_effect = {
 		BARE_MIL_sport_Tech_Modifier_MIL_sport_student_support_monthly_var = BARE_MIL_sport_Tech_Have_Var
 	}
 
-	set_variable = {
-		BARE_MIL_sport_Tech_Modifier_MIL_sport_student_Fee_monthly_var = -3
+	# 2026-05-18: 科技等级在“如火如荼的建设工作”前按每级-5经费结算，完成优化后改为每级-3
+	if = {
+		limit = {
+			has_completed_focus = MIL_The_construction_work_is_in_full_swing
+		}
+		set_variable = {
+			BARE_MIL_sport_Tech_Modifier_MIL_sport_student_Fee_monthly_var = -3
+		}
+	}
+	else = {
+		set_variable = {
+			BARE_MIL_sport_Tech_Modifier_MIL_sport_student_Fee_monthly_var = -5
+		}
 	}
 	multiply_variable = {
 		BARE_MIL_sport_Tech_Modifier_MIL_sport_student_Fee_monthly_var = BARE_MIL_sport_Tech_Have_Var
@@ -293,12 +443,500 @@ BARE_MIL_Sport_Tech_Var_Chance_effect = {
 }
 
 BARE_MIL_Fee_All_Change_effect = {
+	# 2026-05-20: 经费聚合入口。
+	# 当前经费不会在调等级时立即补满；这里只刷新“上限”和“下个月恢复量”，月更时才真正加到当前经费。
 	set_variable = {
-		BARE_MIL_sport_Fee_All_Var = modifier@MIL_sport_student_Fee_monthly
+		BARE_MIL_sport_Fee_All_Var = BARE_MIL_sport_Fee_Base_Max_Var
+	}
+	add_to_variable = {
+		BARE_MIL_sport_Fee_All_Var = BARE_MIL_sport_Fee_Extra_Var
+	}
+	add_to_variable = {
+		BARE_MIL_sport_Fee_All_Var = BARE_MIL_sport_Fee_Cooperation_Extra_Var
+	}
+
+	set_variable = {
+		BARE_MIL_sport_Fee_Recovery_Var = modifier@MIL_sport_student_Fee_monthly
+	}
+	add_to_variable = {
+		BARE_MIL_sport_Fee_Recovery_Var = BARE_MIL_sport_Fee_Extra_Var
+	}
+	add_to_variable = {
+		BARE_MIL_sport_Fee_Recovery_Var = BARE_MIL_sport_Fee_Cooperation_Extra_Var
+	}
+	subtract_from_variable = {
+		BARE_MIL_sport_Fee_Recovery_Var = BARE_MIL_sport_Fee_Month_Cost_Var
+	}
+	clamp_variable = {
+		var = BARE_MIL_sport_Fee_Recovery_Var
+		min = 0
+		max = 999
 	}
 }
 BARE_MIL_Fee_Level_Change_effect = {
-	
+	# 2026-05-18: 经费等级直接决定额外经费与月度消耗，但无论升降都不当月改当前经费，只影响下月月结
+
+	clamp_variable = {
+		var = BARE_MIL_sport_Fee_Level_Var
+		min = 1
+		max = 5
+	}
+
+	if = {
+		limit = {
+			check_variable = {
+				BARE_MIL_sport_Fee_Level_Var = 1
+			}
+		}
+		set_variable = {
+			BARE_MIL_sport_Fee_Extra_Var = 0
+		}
+		set_variable = {
+			BARE_MIL_sport_Fee_Month_Cost_Var = 0
+		}
+	}else_if = {
+		limit = {
+			check_variable = {
+				BARE_MIL_sport_Fee_Level_Var = 2
+			}
+		}
+		set_variable = {
+			BARE_MIL_sport_Fee_Extra_Var = 5
+		}
+		set_variable = {
+			BARE_MIL_sport_Fee_Month_Cost_Var = 2
+		}
+	}else_if = {
+		limit = {
+			check_variable = {
+				BARE_MIL_sport_Fee_Level_Var = 3
+			}
+		}
+		set_variable = {
+			BARE_MIL_sport_Fee_Extra_Var = 10
+		}
+		set_variable = {
+			BARE_MIL_sport_Fee_Month_Cost_Var = 4
+		}
+	}else_if = {
+		limit = {
+			check_variable = {
+				BARE_MIL_sport_Fee_Level_Var = 4
+			}
+		}
+		set_variable = {
+			BARE_MIL_sport_Fee_Extra_Var = 15
+		}
+		set_variable = {
+			BARE_MIL_sport_Fee_Month_Cost_Var = 6
+		}
+	}else_if = {
+		limit = {
+			check_variable = {
+				BARE_MIL_sport_Fee_Level_Var = 5
+			}
+		}
+		set_variable = {
+			BARE_MIL_sport_Fee_Extra_Var = 20
+		}
+		set_variable = {
+			BARE_MIL_sport_Fee_Month_Cost_Var = 8
+		}
+	}
+
+	BARE_MIL_Fee_All_Change_effect = yes
+}
+
+BARE_MIL_Sport_Cooperation_Add_Budget_effect = {
+	# 2026-05-20: 合作经费上限最多累计10点；每5点记录1级分成
+	# 事件选项会先写入 `BARE_MIL_sport_Cooperation_Add_Temp_Var`，这里再按剩余额度折算实际新增量。
+	set_temp_variable = {
+		BARE_MIL_sport_Cooperation_Actual_Add_Temp_Var = BARE_MIL_sport_Fee_Cooperation_Max_Var
+	}
+	subtract_from_temp_variable = {
+		BARE_MIL_sport_Cooperation_Actual_Add_Temp_Var = BARE_MIL_sport_Fee_Cooperation_Extra_Var
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = BARE_MIL_sport_Cooperation_Add_Temp_Var
+				value = BARE_MIL_sport_Cooperation_Actual_Add_Temp_Var
+				compare = less_than
+			}
+		}
+		set_temp_variable = {
+			BARE_MIL_sport_Cooperation_Actual_Add_Temp_Var = BARE_MIL_sport_Cooperation_Add_Temp_Var
+		}
+	}
+	clamp_temp_variable = {
+		var = BARE_MIL_sport_Cooperation_Actual_Add_Temp_Var
+		min = 0
+		max = 10
+	}
+
+	add_to_variable = {
+		BARE_MIL_sport_Fee_Cooperation_Extra_Var = BARE_MIL_sport_Cooperation_Actual_Add_Temp_Var
+	}
+	clamp_variable = {
+		var = BARE_MIL_sport_Fee_Cooperation_Extra_Var
+		min = 0
+		max = 10
+	}
+
+	set_variable = {
+		BARE_MIL_sport_Cooperation_Share_Level_Var = BARE_MIL_sport_Fee_Cooperation_Extra_Var
+	}
+	divide_variable = {
+		BARE_MIL_sport_Cooperation_Share_Level_Var = 5
+	}
+	round_variable = BARE_MIL_sport_Cooperation_Share_Level_Var
+	BARE_MIL_Fee_All_Change_effect = yes
+}
+
+BARE_MIL_Sport_Cooperation_Set_Sponsor_Level_effect = {
+	set_temp_variable = {
+		BARE_MIL_sport_Cooperation_Sponsor_Level_Add_Temp_Var = BARE_MIL_sport_Cooperation_Actual_Add_Temp_Var
+	}
+	divide_temp_variable = {
+		BARE_MIL_sport_Cooperation_Sponsor_Level_Add_Temp_Var = 5
+	}
+	round_temp_variable = BARE_MIL_sport_Cooperation_Sponsor_Level_Add_Temp_Var
+	# 2026-05-20: 决议和跨国家作用域不能稳定读取 temp，额外写成普通变量供赞助方修正读取
+	set_variable = {
+		BARE_MIL_sport_Cooperation_Sponsor_Level_Add_Var = BARE_MIL_sport_Cooperation_Sponsor_Level_Add_Temp_Var
+	}
+}
+
+BARE_MIL_Sport_Cooperation_Clear_Result_effect = {
+	# 2026-05-20: 清理合作回复事件的随机结果标记，避免下一次请求串结果
+	clr_country_flag = BARE_MIL_sport_Cooperation_Result_None_flag
+	clr_country_flag = BARE_MIL_sport_Cooperation_Result_5_flag
+	clr_country_flag = BARE_MIL_sport_Cooperation_Result_10_flag
+}
+
+BARE_MIL_Sport_Cooperation_Roll_GEH_effect = {
+	# 2026-05-20: 默认40/40/20；格黑娜对千年关系达到50时20/60/20，达到75时0/80/20
+	BARE_MIL_Sport_Cooperation_Clear_Result_effect = yes
+	if = {
+		limit = { GEH = { exists = yes has_opinion = { target = ROOT value > 74 } } }
+		random_list = {
+			80 = { set_country_flag = BARE_MIL_sport_Cooperation_Result_5_flag }
+			20 = { set_country_flag = BARE_MIL_sport_Cooperation_Result_10_flag }
+		}
+	}
+	else_if = {
+		limit = { GEH = { exists = yes has_opinion = { target = ROOT value > 49 } } }
+		random_list = {
+			20 = { set_country_flag = BARE_MIL_sport_Cooperation_Result_None_flag }
+			60 = { set_country_flag = BARE_MIL_sport_Cooperation_Result_5_flag }
+			20 = { set_country_flag = BARE_MIL_sport_Cooperation_Result_10_flag }
+		}
+	}
+	else = {
+		random_list = {
+			40 = { set_country_flag = BARE_MIL_sport_Cooperation_Result_None_flag }
+			40 = { set_country_flag = BARE_MIL_sport_Cooperation_Result_5_flag }
+			20 = { set_country_flag = BARE_MIL_sport_Cooperation_Result_10_flag }
+		}
+	}
+}
+
+BARE_MIL_Sport_Cooperation_Roll_TRI_effect = {
+	# 2026-05-20: 默认40/40/20；圣三一对千年关系达到50时20/60/20，达到75时0/80/20
+	BARE_MIL_Sport_Cooperation_Clear_Result_effect = yes
+	if = {
+		limit = { TRI = { exists = yes has_opinion = { target = ROOT value > 74 } } }
+		random_list = {
+			80 = { set_country_flag = BARE_MIL_sport_Cooperation_Result_5_flag }
+			20 = { set_country_flag = BARE_MIL_sport_Cooperation_Result_10_flag }
+		}
+	}
+	else_if = {
+		limit = { TRI = { exists = yes has_opinion = { target = ROOT value > 49 } } }
+		random_list = {
+			20 = { set_country_flag = BARE_MIL_sport_Cooperation_Result_None_flag }
+			60 = { set_country_flag = BARE_MIL_sport_Cooperation_Result_5_flag }
+			20 = { set_country_flag = BARE_MIL_sport_Cooperation_Result_10_flag }
+		}
+	}
+	else = {
+		random_list = {
+			40 = { set_country_flag = BARE_MIL_sport_Cooperation_Result_None_flag }
+			40 = { set_country_flag = BARE_MIL_sport_Cooperation_Result_5_flag }
+			20 = { set_country_flag = BARE_MIL_sport_Cooperation_Result_10_flag }
+		}
+	}
+}
+
+BARE_MIL_Sport_Cooperation_Roll_SHA_effect = {
+	# 2026-05-20: 默认40/40/20；山海经对千年关系达到50时20/60/20，达到75时0/80/20
+	BARE_MIL_Sport_Cooperation_Clear_Result_effect = yes
+	if = {
+		limit = { SHA = { exists = yes has_opinion = { target = ROOT value > 74 } } }
+		random_list = {
+			80 = { set_country_flag = BARE_MIL_sport_Cooperation_Result_5_flag }
+			20 = { set_country_flag = BARE_MIL_sport_Cooperation_Result_10_flag }
+		}
+	}
+	else_if = {
+		limit = { SHA = { exists = yes has_opinion = { target = ROOT value > 49 } } }
+		random_list = {
+			20 = { set_country_flag = BARE_MIL_sport_Cooperation_Result_None_flag }
+			60 = { set_country_flag = BARE_MIL_sport_Cooperation_Result_5_flag }
+			20 = { set_country_flag = BARE_MIL_sport_Cooperation_Result_10_flag }
+		}
+	}
+	else = {
+		random_list = {
+			40 = { set_country_flag = BARE_MIL_sport_Cooperation_Result_None_flag }
+			40 = { set_country_flag = BARE_MIL_sport_Cooperation_Result_5_flag }
+			20 = { set_country_flag = BARE_MIL_sport_Cooperation_Result_10_flag }
+		}
+	}
+}
+
+BARE_MIL_Sport_Cooperation_Roll_RWT_effect = {
+	# 2026-05-20: 默认40/40/20；赤冬对千年关系达到50时20/60/20，达到75时0/80/20
+	BARE_MIL_Sport_Cooperation_Clear_Result_effect = yes
+	if = {
+		limit = { RWT = { exists = yes has_opinion = { target = ROOT value > 74 } } }
+		random_list = {
+			80 = { set_country_flag = BARE_MIL_sport_Cooperation_Result_5_flag }
+			20 = { set_country_flag = BARE_MIL_sport_Cooperation_Result_10_flag }
+		}
+	}
+	else_if = {
+		limit = { RWT = { exists = yes has_opinion = { target = ROOT value > 49 } } }
+		random_list = {
+			20 = { set_country_flag = BARE_MIL_sport_Cooperation_Result_None_flag }
+			60 = { set_country_flag = BARE_MIL_sport_Cooperation_Result_5_flag }
+			20 = { set_country_flag = BARE_MIL_sport_Cooperation_Result_10_flag }
+		}
+	}
+	else = {
+		random_list = {
+			40 = { set_country_flag = BARE_MIL_sport_Cooperation_Result_None_flag }
+			40 = { set_country_flag = BARE_MIL_sport_Cooperation_Result_5_flag }
+			20 = { set_country_flag = BARE_MIL_sport_Cooperation_Result_10_flag }
+		}
+	}
+}
+
+BARE_MIL_Sport_Cooperation_Roll_HYA_effect = {
+	# 2026-05-20: 默认40/40/20；百鬼夜行对千年关系达到50时20/60/20，达到75时0/80/20
+	BARE_MIL_Sport_Cooperation_Clear_Result_effect = yes
+	if = {
+		limit = { HYA = { exists = yes has_opinion = { target = ROOT value > 74 } } }
+		random_list = {
+			80 = { set_country_flag = BARE_MIL_sport_Cooperation_Result_5_flag }
+			20 = { set_country_flag = BARE_MIL_sport_Cooperation_Result_10_flag }
+		}
+	}
+	else_if = {
+		limit = { HYA = { exists = yes has_opinion = { target = ROOT value > 49 } } }
+		random_list = {
+			20 = { set_country_flag = BARE_MIL_sport_Cooperation_Result_None_flag }
+			60 = { set_country_flag = BARE_MIL_sport_Cooperation_Result_5_flag }
+			20 = { set_country_flag = BARE_MIL_sport_Cooperation_Result_10_flag }
+		}
+	}
+	else = {
+		random_list = {
+			40 = { set_country_flag = BARE_MIL_sport_Cooperation_Result_None_flag }
+			40 = { set_country_flag = BARE_MIL_sport_Cooperation_Result_5_flag }
+			20 = { set_country_flag = BARE_MIL_sport_Cooperation_Result_10_flag }
+		}
+	}
+}
+
+BARE_MIL_Sport_Cooperation_GEH_Accept_effect = {
+	# 2026-05-20: 格黑娜合作结果由事件选项结算；按实际新增上限记录赞助分成
+	BARE_MIL_Sport_Cooperation_Add_Budget_effect = yes
+	BARE_MIL_Sport_Cooperation_Set_Sponsor_Level_effect = yes
+	set_variable = { BARE_MIL_sport_Cooperation_GEH_Level_Var = BARE_MIL_sport_Cooperation_Sponsor_Level_Add_Var }
+	GEH = {
+		set_variable = { BARE_MIL_sport_Cooperation_Sponsor_consumer_goods_factor_var = MIL.BARE_MIL_sport_Cooperation_Sponsor_Level_Add_Var }
+		multiply_variable = { BARE_MIL_sport_Cooperation_Sponsor_consumer_goods_factor_var = -0.05 }
+		add_dynamic_modifier = { modifier = BARE_MIL_sport_Cooperation_Sponsor_Modifier }
+	}
+	clr_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag
+	BARE_MIL_Sport_Cooperation_Clear_Result_effect = yes
+}
+
+BARE_MIL_Sport_Cooperation_TRI_Accept_effect = {
+	# 2026-05-20: 圣三一合作结果由事件选项结算；按实际新增上限记录赞助分成
+	BARE_MIL_Sport_Cooperation_Add_Budget_effect = yes
+	BARE_MIL_Sport_Cooperation_Set_Sponsor_Level_effect = yes
+	set_variable = { BARE_MIL_sport_Cooperation_TRI_Level_Var = BARE_MIL_sport_Cooperation_Sponsor_Level_Add_Var }
+	TRI = {
+		set_variable = { BARE_MIL_sport_Cooperation_Sponsor_consumer_goods_factor_var = MIL.BARE_MIL_sport_Cooperation_Sponsor_Level_Add_Var }
+		multiply_variable = { BARE_MIL_sport_Cooperation_Sponsor_consumer_goods_factor_var = -0.05 }
+		add_dynamic_modifier = { modifier = BARE_MIL_sport_Cooperation_Sponsor_Modifier }
+	}
+	clr_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag
+	BARE_MIL_Sport_Cooperation_Clear_Result_effect = yes
+}
+
+BARE_MIL_Sport_Cooperation_SHA_Accept_effect = {
+	# 2026-05-20: 山海经合作结果由事件选项结算；按实际新增上限记录赞助分成
+	BARE_MIL_Sport_Cooperation_Add_Budget_effect = yes
+	BARE_MIL_Sport_Cooperation_Set_Sponsor_Level_effect = yes
+	set_variable = { BARE_MIL_sport_Cooperation_SHA_Level_Var = BARE_MIL_sport_Cooperation_Sponsor_Level_Add_Var }
+	SHA = {
+		set_variable = { BARE_MIL_sport_Cooperation_Sponsor_consumer_goods_factor_var = MIL.BARE_MIL_sport_Cooperation_Sponsor_Level_Add_Var }
+		multiply_variable = { BARE_MIL_sport_Cooperation_Sponsor_consumer_goods_factor_var = -0.05 }
+		add_dynamic_modifier = { modifier = BARE_MIL_sport_Cooperation_Sponsor_Modifier }
+	}
+	clr_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag
+	BARE_MIL_Sport_Cooperation_Clear_Result_effect = yes
+}
+
+BARE_MIL_Sport_Cooperation_RWT_Accept_effect = {
+	# 2026-05-20: 赤冬合作结果由事件随机判定；按实际新增上限记录赞助分成
+	BARE_MIL_Sport_Cooperation_Add_Budget_effect = yes
+	BARE_MIL_Sport_Cooperation_Set_Sponsor_Level_effect = yes
+	set_variable = { BARE_MIL_sport_Cooperation_RWT_Level_Var = BARE_MIL_sport_Cooperation_Sponsor_Level_Add_Var }
+	RWT = {
+		set_variable = { BARE_MIL_sport_Cooperation_Sponsor_consumer_goods_factor_var = MIL.BARE_MIL_sport_Cooperation_Sponsor_Level_Add_Var }
+		multiply_variable = { BARE_MIL_sport_Cooperation_Sponsor_consumer_goods_factor_var = -0.05 }
+		add_dynamic_modifier = { modifier = BARE_MIL_sport_Cooperation_Sponsor_Modifier }
+	}
+	clr_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag
+	BARE_MIL_Sport_Cooperation_Clear_Result_effect = yes
+}
+
+BARE_MIL_Sport_Cooperation_HYA_Accept_effect = {
+	# 2026-05-20: 百鬼夜行合作结果由事件选项结算；按实际新增上限记录赞助分成
+	BARE_MIL_Sport_Cooperation_Add_Budget_effect = yes
+	BARE_MIL_Sport_Cooperation_Set_Sponsor_Level_effect = yes
+	set_variable = { BARE_MIL_sport_Cooperation_HYA_Level_Var = BARE_MIL_sport_Cooperation_Sponsor_Level_Add_Var }
+	HYA = {
+		set_variable = { BARE_MIL_sport_Cooperation_Sponsor_consumer_goods_factor_var = MIL.BARE_MIL_sport_Cooperation_Sponsor_Level_Add_Var }
+		multiply_variable = { BARE_MIL_sport_Cooperation_Sponsor_consumer_goods_factor_var = -0.05 }
+		add_dynamic_modifier = { modifier = BARE_MIL_sport_Cooperation_Sponsor_Modifier }
+	}
+	clr_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag
+	BARE_MIL_Sport_Cooperation_Clear_Result_effect = yes
+}
+
+BARE_MIL_Sport_Cooperation_Add_Sponsor_Reward_effect = {
+	# 2026-05-20: 结算时按每5点合作上限给赞助学院2个地图外民工和30政治点
+	set_temp_variable = {
+		BARE_MIL_sport_Cooperation_Sponsor_Civ_Left_Temp_Var = BARE_MIL_sport_Cooperation_Sponsor_Level_Temp_Var
+	}
+	multiply_temp_variable = {
+		BARE_MIL_sport_Cooperation_Sponsor_Civ_Left_Temp_Var = 2
+	}
+	while_loop_effect = {
+		limit = {
+			check_variable = {
+				BARE_MIL_sport_Cooperation_Sponsor_Civ_Left_Temp_Var > 0
+			}
+		}
+		add_offsite_building = {
+			type = industrial_complex
+			level = 1
+		}
+		subtract_from_temp_variable = {
+			BARE_MIL_sport_Cooperation_Sponsor_Civ_Left_Temp_Var = 1
+		}
+	}
+
+	set_temp_variable = {
+		BARE_MIL_sport_Cooperation_Sponsor_PP_Temp_Var = BARE_MIL_sport_Cooperation_Sponsor_Level_Temp_Var
+	}
+	multiply_temp_variable = {
+		BARE_MIL_sport_Cooperation_Sponsor_PP_Temp_Var = 30
+	}
+	add_political_power = BARE_MIL_sport_Cooperation_Sponsor_PP_Temp_Var
+}
+
+BARE_MIL_Sport_Cooperation_Apply_Sponsor_Rewards_effect = {
+	# 2026-05-20: 最终结算时给实际承担合作分成的学院发放收益
+	if = {
+		limit = {
+			check_variable = { BARE_MIL_sport_Cooperation_GEH_Level_Var > 0 }
+			GEH = { exists = yes }
+		}
+		GEH = {
+			set_temp_variable = {
+				BARE_MIL_sport_Cooperation_Sponsor_Level_Temp_Var = MIL.BARE_MIL_sport_Cooperation_GEH_Level_Var
+			}
+			BARE_MIL_Sport_Cooperation_Add_Sponsor_Reward_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			check_variable = { BARE_MIL_sport_Cooperation_TRI_Level_Var > 0 }
+			TRI = { exists = yes }
+		}
+		TRI = {
+			set_temp_variable = {
+				BARE_MIL_sport_Cooperation_Sponsor_Level_Temp_Var = MIL.BARE_MIL_sport_Cooperation_TRI_Level_Var
+			}
+			BARE_MIL_Sport_Cooperation_Add_Sponsor_Reward_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			check_variable = { BARE_MIL_sport_Cooperation_SHA_Level_Var > 0 }
+			SHA = { exists = yes }
+		}
+		SHA = {
+			set_temp_variable = {
+				BARE_MIL_sport_Cooperation_Sponsor_Level_Temp_Var = MIL.BARE_MIL_sport_Cooperation_SHA_Level_Var
+			}
+			BARE_MIL_Sport_Cooperation_Add_Sponsor_Reward_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			check_variable = { BARE_MIL_sport_Cooperation_HYA_Level_Var > 0 }
+			HYA = { exists = yes }
+		}
+		HYA = {
+			set_temp_variable = {
+				BARE_MIL_sport_Cooperation_Sponsor_Level_Temp_Var = MIL.BARE_MIL_sport_Cooperation_HYA_Level_Var
+			}
+			BARE_MIL_Sport_Cooperation_Add_Sponsor_Reward_effect = yes
+		}
+	}
+	if = {
+		limit = {
+			check_variable = { BARE_MIL_sport_Cooperation_RWT_Level_Var > 0 }
+			RWT = { exists = yes }
+		}
+		RWT = {
+			set_temp_variable = {
+				BARE_MIL_sport_Cooperation_Sponsor_Level_Temp_Var = MIL.BARE_MIL_sport_Cooperation_RWT_Level_Var
+			}
+			BARE_MIL_Sport_Cooperation_Add_Sponsor_Reward_effect = yes
+		}
+	}
+}
+
+BARE_MIL_Sport_Cooperation_Remove_Sponsor_Modifiers_effect = {
+	# 2026-05-20: 合作赞助方生活消费品收益只持续到晄轮大祭结束
+	if = { limit = { GEH = { exists = yes } } GEH = { remove_dynamic_modifier = { modifier = BARE_MIL_sport_Cooperation_Sponsor_Modifier } } }
+	if = { limit = { TRI = { exists = yes } } TRI = { remove_dynamic_modifier = { modifier = BARE_MIL_sport_Cooperation_Sponsor_Modifier } } }
+	if = { limit = { SHA = { exists = yes } } SHA = { remove_dynamic_modifier = { modifier = BARE_MIL_sport_Cooperation_Sponsor_Modifier } } }
+	if = { limit = { RWT = { exists = yes } } RWT = { remove_dynamic_modifier = { modifier = BARE_MIL_sport_Cooperation_Sponsor_Modifier } } }
+	if = { limit = { HYA = { exists = yes } } HYA = { remove_dynamic_modifier = { modifier = BARE_MIL_sport_Cooperation_Sponsor_Modifier } } }
+}
+
+BARE_MIL_Sport_Building_Score_Frame_Change_effect = {
+	# 2026-05-18: 场馆准备程度GUI使用5帧星级图，按建设次数1-5映射到帧0-4
+	set_variable = {
+		BARE_MIL_sport_Building_Score_Frame_Var = BARE_MIL_sport_Building_Score_Var
+	}
+	subtract_from_variable = {
+		BARE_MIL_sport_Building_Score_Frame_Var = 1
+	}
+	clamp_variable = {
+		var = BARE_MIL_sport_Building_Score_Frame_Var
+		min = 0
+		max = 4
+	}
 }
 
 BARE_MIL_Sport_Security_Var_Chance_effect = {
@@ -308,31 +946,531 @@ BARE_MIL_Sport_Security_Var_Chance_effect = {
 	BARE_MIL_Fee_All_Change_effect = yes
 }
 
+BARE_MIL_Sport_Sabotage_Check_effect = {
+	# 2026-05-18: 晄轮大祭筹备期每月检测一次破坏事件；安保等级越高，“无事发生”权重越高
+	# 2026-05-20: 非安全结果继续按 8:4:2:1:1 分流；“其他意外”不直接扣分，而是进入事件链入口 `MIL_sport_event.54`。
+	set_temp_variable = {
+		BARE_MIL_sport_Sabotage_Safe_Weight_Temp_Var = BARE_MIL_sport_Security_Have_Var
+	}
+	multiply_temp_variable = {
+		BARE_MIL_sport_Sabotage_Safe_Weight_Temp_Var = 5
+	}
+	add_to_temp_variable = {
+		BARE_MIL_sport_Sabotage_Safe_Weight_Temp_Var = 35
+	}
+	clamp_temp_variable = {
+		var = BARE_MIL_sport_Sabotage_Safe_Weight_Temp_Var
+		min = 40
+		max = 60
+	}
+
+	set_temp_variable_to_random = {
+		var = BARE_MIL_sport_Sabotage_Roll_Temp_Var
+		min = 1
+		max = 100
+		integer = yes
+	}
+
+	if = {
+		limit = {
+			check_variable = {
+				var = BARE_MIL_sport_Sabotage_Roll_Temp_Var
+				value = BARE_MIL_sport_Sabotage_Safe_Weight_Temp_Var
+				compare = less_than_or_equals
+			}
+		}
+		country_event = { id = MIL_sport_event.55 }
+	}
+	else = {
+		subtract_from_temp_variable = {
+			BARE_MIL_sport_Sabotage_Roll_Temp_Var = BARE_MIL_sport_Sabotage_Safe_Weight_Temp_Var
+		}
+
+		set_temp_variable = {
+			BARE_MIL_sport_Sabotage_Remain_Weight_Temp_Var = 100
+		}
+		subtract_from_temp_variable = {
+			BARE_MIL_sport_Sabotage_Remain_Weight_Temp_Var = BARE_MIL_sport_Sabotage_Safe_Weight_Temp_Var
+		}
+
+		# 非安全结果按 8:4:2:1:1 分配给 混混 / 反对学生 / 其他意外 / 温泉开发部 / 混混集团乱斗
+		set_temp_variable = {
+			BARE_MIL_sport_Sabotage_Hooligan_Threshold_Temp_Var = BARE_MIL_sport_Sabotage_Remain_Weight_Temp_Var
+		}
+		divide_temp_variable = {
+			BARE_MIL_sport_Sabotage_Hooligan_Threshold_Temp_Var = 2
+		}
+		round_temp_variable = BARE_MIL_sport_Sabotage_Hooligan_Threshold_Temp_Var
+
+		set_temp_variable = {
+			BARE_MIL_sport_Sabotage_Anti_Threshold_Temp_Var = BARE_MIL_sport_Sabotage_Remain_Weight_Temp_Var
+		}
+		divide_temp_variable = {
+			BARE_MIL_sport_Sabotage_Anti_Threshold_Temp_Var = 4
+		}
+		round_temp_variable = BARE_MIL_sport_Sabotage_Anti_Threshold_Temp_Var
+		add_to_temp_variable = {
+			BARE_MIL_sport_Sabotage_Anti_Threshold_Temp_Var = BARE_MIL_sport_Sabotage_Hooligan_Threshold_Temp_Var
+		}
+
+		set_temp_variable = {
+			BARE_MIL_sport_Sabotage_Other_Threshold_Temp_Var = BARE_MIL_sport_Sabotage_Remain_Weight_Temp_Var
+		}
+		divide_temp_variable = {
+			BARE_MIL_sport_Sabotage_Other_Threshold_Temp_Var = 8
+		}
+		round_temp_variable = BARE_MIL_sport_Sabotage_Other_Threshold_Temp_Var
+		add_to_temp_variable = {
+			BARE_MIL_sport_Sabotage_Other_Threshold_Temp_Var = BARE_MIL_sport_Sabotage_Anti_Threshold_Temp_Var
+		}
+
+		set_temp_variable = {
+			BARE_MIL_sport_Sabotage_Hotspring_Threshold_Temp_Var = BARE_MIL_sport_Sabotage_Remain_Weight_Temp_Var
+		}
+		divide_temp_variable = {
+			BARE_MIL_sport_Sabotage_Hotspring_Threshold_Temp_Var = 16
+		}
+		round_temp_variable = BARE_MIL_sport_Sabotage_Hotspring_Threshold_Temp_Var
+		add_to_temp_variable = {
+			BARE_MIL_sport_Sabotage_Hotspring_Threshold_Temp_Var = BARE_MIL_sport_Sabotage_Other_Threshold_Temp_Var
+		}
+
+		if = {
+			limit = {
+				check_variable = {
+					var = BARE_MIL_sport_Sabotage_Roll_Temp_Var
+					value = BARE_MIL_sport_Sabotage_Hooligan_Threshold_Temp_Var
+					compare = less_than_or_equals
+				}
+			}
+			country_event = { id = MIL_sport_event.50 }
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					var = BARE_MIL_sport_Sabotage_Roll_Temp_Var
+					value = BARE_MIL_sport_Sabotage_Anti_Threshold_Temp_Var
+					compare = less_than_or_equals
+				}
+			}
+			country_event = { id = MIL_sport_event.51 }
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					var = BARE_MIL_sport_Sabotage_Roll_Temp_Var
+					value = BARE_MIL_sport_Sabotage_Other_Threshold_Temp_Var
+					compare = less_than_or_equals
+				}
+			}
+			country_event = { id = MIL_sport_event.54 }
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					var = BARE_MIL_sport_Sabotage_Roll_Temp_Var
+					value = BARE_MIL_sport_Sabotage_Hotspring_Threshold_Temp_Var
+					compare = less_than_or_equals
+				}
+			}
+			country_event = { id = MIL_sport_event.52 }
+		}
+		else = {
+			country_event = { id = MIL_sport_event.53 }
+		}
+	}
+}
+
+BARE_MIL_Sport_Sabotage_Apply_Damage_effect = {
+	# 2026-05-18: 统一结算破坏事件的准备评分损失、打击决议减伤与支持度联动损失
+	# 2026-05-21: 普通破坏事件的支持度损失改为最终实际准备评分损失的1倍；特殊意外事件不调用本效果。
+	clamp_temp_variable = {
+		var = BARE_MIL_sport_Sabotage_Score_Damage_Temp_Var
+		min = 0
+		max = 999
+	}
+
+	if = {
+		limit = {
+			has_country_flag = MIL_Sport_Crackdown_on_Sabotage_flag
+			check_variable = {
+				var = BARE_MIL_sport_Sabotage_Crackdown_Reduction_Temp_Var
+				value = 0
+				compare = greater_than
+			}
+		}
+		subtract_from_temp_variable = {
+			BARE_MIL_sport_Sabotage_Score_Damage_Temp_Var = BARE_MIL_sport_Sabotage_Crackdown_Reduction_Temp_Var
+		}
+		clr_country_flag = MIL_Sport_Crackdown_on_Sabotage_flag
+	}
+
+	clamp_temp_variable = {
+		var = BARE_MIL_sport_Sabotage_Score_Damage_Temp_Var
+		min = 0
+		max = 999
+	}
+
+	subtract_from_variable = {
+		BARE_MIL_sport_Score_Var = BARE_MIL_sport_Sabotage_Score_Damage_Temp_Var
+	}
+	clamp_variable = {
+		var = BARE_MIL_sport_Score_Var
+		min = 0
+		max = 9999
+	}
+
+	set_temp_variable = {
+		BARE_MIL_sport_Sabotage_Support_Damage_Temp_Var = BARE_MIL_sport_Sabotage_Score_Damage_Temp_Var
+	}
+
+	subtract_from_variable = {
+		BARE_MIL_sport_Student_Support_Var = BARE_MIL_sport_Sabotage_Support_Damage_Temp_Var
+	}
+	BARE_MIL_Sport_Student_Support_Var_Chance_effect = yes
+}
+
 BARE_MIL_Sport_Monthly_effect = {
-	#每月支持度更新
+	# 2026-05-20: 月更只在筹备期剩余月份大于0且未进入结算状态时执行；最后一个月不触发破坏事件
+	# 注意：结算事件不调用本 effect，避免“开幕/结算”重复执行支持度、经费和破坏检测。
+	# 每月支持度更新
 	add_to_variable = {
 		BARE_MIL_sport_Student_Support_Var = modifier@MIL_sport_student_support_monthly
 	}
 	BARE_MIL_Sport_Student_Support_Var_Chance_effect = yes
 
-	set_variable = {
-		BARE_MIL_sport_Fee_All_Var = modifier@MIL_sport_student_Fee_monthly
-	}	
-	#经费更新
-	set_variable = { #本月有经费
-		BARE_MIL_sport_Fee_Have_Var = BARE_MIL_sport_Fee_All_Var
+	# 2026-05-21: 科技等级3级起提供月度准备评分；1-2级不加，3/4/5级分别+1/+2/+3。
+	set_temp_variable = {
+		BARE_MIL_sport_Tech_Score_Monthly_Temp_Var = BARE_MIL_sport_Tech_Have_Var
 	}
-	add_to_variable = { #额外经费
-		BARE_MIL_sport_Fee_Have_Var = BARE_MIL_sport_Fee_Extra_Var
+	subtract_from_temp_variable = {
+		BARE_MIL_sport_Tech_Score_Monthly_Temp_Var = 2
 	}
-	subtract_from_variable = { #每月消耗
-		BARE_MIL_sport_Fee_Have_Var = BARE_MIL_sport_Fee_Month_Cost_Var
+	clamp_temp_variable = {
+		var = BARE_MIL_sport_Tech_Score_Monthly_Temp_Var
+		min = 0
+		max = 3
 	}
+	add_to_variable = {
+		BARE_MIL_sport_Score_Var = BARE_MIL_sport_Tech_Score_Monthly_Temp_Var
+	}
+	clamp_variable = {
+		var = BARE_MIL_sport_Score_Var
+		min = 0
+		max = 9999
+	}
+
+	# 2026-05-18: 月度经费改为“按恢复量回补并受上限约束”，不再只刷新显示数字
+	BARE_MIL_Fee_All_Change_effect = yes
+	add_to_variable = {
+		BARE_MIL_sport_Fee_Have_Var = BARE_MIL_sport_Fee_Recovery_Var
+	}
+	if = {
+		limit = {
+			check_variable = {
+				BARE_MIL_sport_Fee_Have_Var > BARE_MIL_sport_Fee_All_Var
+			}
+		}
+		set_variable = {
+			BARE_MIL_sport_Fee_Have_Var = BARE_MIL_sport_Fee_All_Var
+		}
+	}
+
+	if = {
+		limit = {
+			check_variable = {
+				BARE_MIL_sport_Month_Time_Var > 1
+			}
+		}
+		BARE_MIL_Sport_Sabotage_Check_effect = yes
+	}
+
 	#清理限制flag
+	clr_country_flag = BARE_MIL_sport_Fee_Have_Change
 	clr_country_flag = BARE_MIL_sport_Security_Have_Change
 	clr_country_flag = BARE_MIL_sport_Tech_Have_Change
+
+	subtract_from_variable = {
+		BARE_MIL_sport_Month_Time_Var = 1
+	}
+	clamp_variable = {
+		var = BARE_MIL_sport_Month_Time_Var
+		min = 0
+		max = 999
+	}
+	if = {
+		limit = {
+			check_variable = {
+				BARE_MIL_sport_Month_Time_Var < 1
+			}
+		}
+		# 2026-05-20: 只标记待结算，暂不创建或触发结算事件；之后 on_monthly 不再执行月更
+		set_country_flag = BARE_MIL_Sport_settlement_pending_flag
+		# 2026-05-20: 接入最终结算事件；结算入口与月更分离，避免结算时再次执行月度逻辑
+		if = {
+			limit = {
+				NOT = { has_country_flag = BARE_MIL_Sport_settlement_event_queued_flag }
+				NOT = { has_country_flag = BARE_MIL_Sport_settled_flag }
+			}
+			set_country_flag = BARE_MIL_Sport_settlement_event_queued_flag
+			country_event = { id = MIL_sport_event.60 days = 1 }
+		}
+	}
 }
 
 BARE_MIL_Sport_Complete_effect = {
+	# 2026-05-20: 结束筹备期时移除筹备、科技、安保投入修正；学生支持度修正保留并进入赛后回正
+	# 这里也是赞助方临时生活消费品收益的统一清理点。
 	clr_global_flag = BARE_MIL_Sport_prepare_flag
+	clr_country_flag = BARE_MIL_Sport_settlement_pending_flag
+	clr_country_flag = BARE_MIL_Sport_settlement_event_queued_flag
+	set_country_flag = BARE_MIL_Sport_settled_flag
+	remove_dynamic_modifier = { modifier = BARE_MIL_sport_Prepare_Modifier }
+	remove_dynamic_modifier = { modifier = BARE_MIL_sport_Tech_Modifier }
+	remove_dynamic_modifier = { modifier = BARE_MIL_sport_Security_Modifier }
+	BARE_MIL_Sport_Cooperation_Remove_Sponsor_Modifiers_effect = yes
+	set_country_flag = BARE_MIL_Sport_support_normalizing_flag
+	if = {
+		limit = {
+			check_variable = {
+				BARE_MIL_sport_Student_Support_Var > 44
+			}
+			check_variable = {
+				BARE_MIL_sport_Student_Support_Var < 56
+			}
+		}
+		remove_dynamic_modifier = { modifier = BARE_MIL_sport_Student_Support_Modifier }
+		clr_country_flag = BARE_MIL_Sport_support_normalizing_flag
+	}
+}
+
+BARE_MIL_Sport_Settlement_Set_Result_effect = {
+	# 2026-05-20: 第一版结算阈值；后续可继续按合作路线、剧情事件和隐藏条件细化
+	# 判定顺序从高到低，先命中大成功/成功/部分成功，最后兜底为“不顺”。
+	clr_country_flag = BARE_MIL_Sport_settlement_great_success_flag
+	clr_country_flag = BARE_MIL_Sport_settlement_success_flag
+	clr_country_flag = BARE_MIL_Sport_settlement_partial_success_flag
+	clr_country_flag = BARE_MIL_Sport_settlement_troubled_flag
+
+	if = {
+		limit = {
+			has_completed_focus = MIL_we_can_do_it_by_ourselves
+			check_variable = {
+				var = BARE_MIL_sport_Student_Support_Var
+				value = 90
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = BARE_MIL_sport_Score_Var
+				value = 200
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = BARE_MIL_sport_Building_Score_Var
+				value = 5
+				compare = greater_than_or_equals
+			}
+		}
+		set_country_flag = BARE_MIL_Sport_settlement_great_success_flag
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				var = BARE_MIL_sport_Student_Support_Var
+				value = 75
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = BARE_MIL_sport_Score_Var
+				value = 160
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = BARE_MIL_sport_Building_Score_Var
+				value = 4
+				compare = greater_than_or_equals
+			}
+		}
+		set_country_flag = BARE_MIL_Sport_settlement_success_flag
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				var = BARE_MIL_sport_Student_Support_Var
+				value = 60
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = BARE_MIL_sport_Score_Var
+				value = 120
+				compare = greater_than_or_equals
+			}
+			check_variable = {
+				var = BARE_MIL_sport_Building_Score_Var
+				value = 3
+				compare = greater_than_or_equals
+			}
+		}
+		set_country_flag = BARE_MIL_Sport_settlement_partial_success_flag
+	}
+	else = {
+		set_country_flag = BARE_MIL_Sport_settlement_troubled_flag
+	}
+}
+
+BARE_MIL_Sport_Settlement_Set_Reward_Vars_effect = {
+	# 2026-05-20: 奖励统一先写入变量；合作路线按每5点合作上限分出2民工和30政治点
+	set_variable = {
+		BARE_MIL_sport_Settlement_Civ_Factory_Reward_Var = BARE_MIL_sport_Settlement_Civ_Factory_Base_Reward_Var
+	}
+	set_variable = {
+		BARE_MIL_sport_Settlement_PP_Reward_Var = BARE_MIL_sport_Settlement_PP_Base_Reward_Var
+	}
+	set_variable = {
+		BARE_MIL_sport_Settlement_Stability_Reward_Var = BARE_MIL_sport_Settlement_Stability_Base_Reward_Var
+	}
+	set_variable = {
+		BARE_MIL_sport_Settlement_War_Support_Reward_Var = BARE_MIL_sport_Settlement_War_Support_Base_Reward_Var
+	}
+	set_variable = {
+		BARE_MIL_sport_Settlement_Cooperation_Reward_Rate_Var = 1
+	}
+	set_variable = {
+		BARE_MIL_sport_Settlement_Cooperation_Civ_Deduct_Var = BARE_MIL_sport_Cooperation_Share_Level_Var
+	}
+	multiply_variable = {
+		BARE_MIL_sport_Settlement_Cooperation_Civ_Deduct_Var = 2
+	}
+	subtract_from_variable = {
+		BARE_MIL_sport_Settlement_Civ_Factory_Reward_Var = BARE_MIL_sport_Settlement_Cooperation_Civ_Deduct_Var
+	}
+	clamp_variable = {
+		var = BARE_MIL_sport_Settlement_Civ_Factory_Reward_Var
+		min = 0
+		max = 999
+	}
+	set_variable = {
+		BARE_MIL_sport_Settlement_Cooperation_PP_Deduct_Var = BARE_MIL_sport_Cooperation_Share_Level_Var
+	}
+	multiply_variable = {
+		BARE_MIL_sport_Settlement_Cooperation_PP_Deduct_Var = 30
+	}
+	subtract_from_variable = {
+		BARE_MIL_sport_Settlement_PP_Reward_Var = BARE_MIL_sport_Settlement_Cooperation_PP_Deduct_Var
+	}
+	clamp_variable = {
+		var = BARE_MIL_sport_Settlement_PP_Reward_Var
+		min = 0
+		max = 9999
+	}
+}
+
+BARE_MIL_Sport_Settlement_Apply_Reward_effect = {
+	# 2026-05-20: 地图外民用工厂用循环逐个添加，便于之后用变量调整合作后奖励
+	set_temp_variable = {
+		BARE_MIL_sport_Settlement_Civ_Factory_Left_Temp_Var = BARE_MIL_sport_Settlement_Civ_Factory_Reward_Var
+	}
+	while_loop_effect = {
+		limit = {
+			check_variable = {
+				BARE_MIL_sport_Settlement_Civ_Factory_Left_Temp_Var > 0
+			}
+		}
+		add_offsite_building = {
+			type = industrial_complex
+			level = 1
+		}
+		subtract_from_temp_variable = {
+			BARE_MIL_sport_Settlement_Civ_Factory_Left_Temp_Var = 1
+		}
+	}
+
+	add_political_power = BARE_MIL_sport_Settlement_PP_Reward_Var
+	add_stability = BARE_MIL_sport_Settlement_Stability_Reward_Var
+	add_war_support = BARE_MIL_sport_Settlement_War_Support_Reward_Var
+	BARE_MIL_Sport_Cooperation_Apply_Sponsor_Rewards_effect = yes
+	BARE_MIL_Sport_Complete_effect = yes
+}
+
+BARE_MIL_Sport_Settlement_Great_Success_effect = {
+	# 2026-05-20: 大成功只完成隐藏结果国策
+	complete_national_focus = MIL_Hidden_Dreams
+	set_variable = { BARE_MIL_sport_Settlement_Civ_Factory_Base_Reward_Var = 30 }
+	set_variable = { BARE_MIL_sport_Settlement_PP_Base_Reward_Var = 600 }
+	set_variable = { BARE_MIL_sport_Settlement_Stability_Base_Reward_Var = 0.15 }
+	set_variable = { BARE_MIL_sport_Settlement_War_Support_Base_Reward_Var = 0.15 }
+	BARE_MIL_Sport_Settlement_Set_Reward_Vars_effect = yes
+	BARE_MIL_Sport_Settlement_Apply_Reward_effect = yes
+}
+
+BARE_MIL_Sport_Settlement_Success_effect = {
+	# 2026-05-20: 非大成功结局统一完成普通结果国策
+	complete_national_focus = MIL_The_success_of_the_grand_festival
+	set_variable = { BARE_MIL_sport_Settlement_Civ_Factory_Base_Reward_Var = 20 }
+	set_variable = { BARE_MIL_sport_Settlement_PP_Base_Reward_Var = 400 }
+	set_variable = { BARE_MIL_sport_Settlement_Stability_Base_Reward_Var = 0.10 }
+	set_variable = { BARE_MIL_sport_Settlement_War_Support_Base_Reward_Var = 0.10 }
+	BARE_MIL_Sport_Settlement_Set_Reward_Vars_effect = yes
+	BARE_MIL_Sport_Settlement_Apply_Reward_effect = yes
+}
+
+BARE_MIL_Sport_Settlement_Partial_Success_effect = {
+	# 2026-05-20: 非大成功结局统一完成普通结果国策
+	complete_national_focus = MIL_The_success_of_the_grand_festival
+	set_variable = { BARE_MIL_sport_Settlement_Civ_Factory_Base_Reward_Var = 15 }
+	set_variable = { BARE_MIL_sport_Settlement_PP_Base_Reward_Var = 300 }
+	set_variable = { BARE_MIL_sport_Settlement_Stability_Base_Reward_Var = 0.05 }
+	set_variable = { BARE_MIL_sport_Settlement_War_Support_Base_Reward_Var = 0.05 }
+	BARE_MIL_Sport_Settlement_Set_Reward_Vars_effect = yes
+	BARE_MIL_Sport_Settlement_Apply_Reward_effect = yes
+}
+
+BARE_MIL_Sport_Settlement_Troubled_effect = {
+	# 2026-05-20: 非大成功结局统一完成普通结果国策
+	complete_national_focus = MIL_The_success_of_the_grand_festival
+	set_variable = { BARE_MIL_sport_Settlement_Civ_Factory_Base_Reward_Var = 6 }
+	set_variable = { BARE_MIL_sport_Settlement_PP_Base_Reward_Var = 100 }
+	set_variable = { BARE_MIL_sport_Settlement_Stability_Base_Reward_Var = 0 }
+	set_variable = { BARE_MIL_sport_Settlement_War_Support_Base_Reward_Var = 0 }
+	BARE_MIL_Sport_Settlement_Set_Reward_Vars_effect = yes
+	BARE_MIL_Sport_Settlement_Apply_Reward_effect = yes
+}
+
+BARE_MIL_Sport_Post_Settlement_Support_Normalize_effect = {
+	# 2026-05-20: 赛后学生支持度每月向50回正3点；45-55区间内移除支持度修正
+	if = {
+		limit = {
+			check_variable = {
+				BARE_MIL_sport_Student_Support_Var > 55
+			}
+		}
+		subtract_from_variable = {
+			BARE_MIL_sport_Student_Support_Var = 3
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				BARE_MIL_sport_Student_Support_Var < 45
+			}
+		}
+		add_to_variable = {
+			BARE_MIL_sport_Student_Support_Var = 3
+		}
+	}
+
+	BARE_MIL_Sport_Student_Support_Var_Chance_effect = yes
+
+	if = {
+		limit = {
+			check_variable = {
+				BARE_MIL_sport_Student_Support_Var > 44
+			}
+			check_variable = {
+				BARE_MIL_sport_Student_Support_Var < 56
+			}
+		}
+		remove_dynamic_modifier = { modifier = BARE_MIL_sport_Student_Support_Modifier }
+		clr_country_flag = BARE_MIL_Sport_support_normalizing_flag
+	}
 }

@@ -367,7 +367,7 @@ focus_tree = {
 	}
 	focus = { #最终攻势
 		id = MIL_end_attack
-		icon = GFX_goal_MIL_MIL_end_attack
+		icon = GFX_goal_MIL_end_attack
 		relative_position_id = MIL_unexpected_discovery
 		search_filters = { FOCUS_MIL }
 		cost = 10
@@ -422,7 +422,7 @@ focus_tree = {
 	}
 	focus = { #黑崎小雪的债卷
 		id = MIL_koyuki_deberture
-		icon = GFX_goal_MIL_Abnormal_money
+		icon = GFX_goal_MIL_koyuki_deberture
 		relative_position_id = MIL_we_need_money
 		search_filters = { FOCUS_MIL }
 		cost = 10
@@ -434,7 +434,7 @@ focus_tree = {
 	}
 	focus = { #游轮之上的追捕行动
 		id = MIL_catch_koyuki
-		icon = GFX_goal_MIL_Abnormal_money
+		icon = GFX_goal_MIL_catch_koyuki
 		relative_position_id = MIL_we_need_money
 		search_filters = { FOCUS_MIL }
 		cost = 10
@@ -446,7 +446,7 @@ focus_tree = {
 	}
 	focus = { #奇怪的设备订单
 		id = MIL_stange_machine_bill
-		icon = GFX_goal_MIL_Abnormal_money
+		icon = GFX_goal_MIL_stange_machine_bill
 		relative_position_id = MIL_we_need_money
 		search_filters = { FOCUS_MIL }
 		cost = 10
@@ -458,7 +458,7 @@ focus_tree = {
 	}
 	focus = { #下落不明的器材
 		id = MIL_Unaccounted_for_machine
-		icon = GFX_goal_MIL_Abnormal_money
+		icon = GFX_goal_MIL_Unaccounted_for_machine
 		relative_position_id = MIL_we_need_money
 		search_filters = { FOCUS_MIL }
 		cost = 10
@@ -878,6 +878,13 @@ focus_tree = {
 		prerequisite = {
 			focus = MIL_best_internet
 		}
+		completion_reward = {
+			# 2026-05-20: 完成“千年发展的新蓝图”后，延迟 4 个月触发晄轮大祭筹备事件
+			custom_effect_tooltip = MIL_new_development_plan_sport_event_tooltip
+			hidden_effect = {
+				country_event = { id = MIL_sport_event.1 days = 120 }
+			}
+		}
 	}
 	focus = { #更进一步的可能
 		id = MIL_new_progress_possible
@@ -1057,7 +1064,7 @@ focus_tree = {
 	}
 	focus = { #属于一代千年人的智慧结晶
 		id = MIL_mil_wisdom
-		icon = GFX_goal_MIL_mil_wisdom
+		icon = GFX_goal_MIL_wisdom
 		relative_position_id = MIL_we_need_money
 		search_filters = { FOCUS_MIL }
 		cost = 10
@@ -1108,6 +1115,10 @@ focus_tree = {
 		x = 60
 		y = 0
 
+		allow_branch = {
+			has_country_flag = MIL_grand_festival_focus_tree_unlocked
+		}
+
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = MIL_Prepare_grand_festival_trigger_tooltip
@@ -1132,11 +1143,18 @@ focus_tree = {
 		cost = 4
 		x = -2
 		y = 1
+		allow_branch = {
+			has_country_flag = MIL_grand_festival_focus_tree_unlocked
+		}
 		prerequisite = {
 			focus = MIL_Prepare_grand_festival
 		}
 
 		completion_reward = {
+			hidden_effect = {
+				# 2026-05-20: 国策文档要求获得50点筹办经费，具体变量逻辑封装在 scripted effect 中
+				BARE_MIL_Sport_Focus_Yuuka_Unhappy_effect = yes
+			}
 			custom_effect_tooltip = MIL_yuuka_unhappy_effect_tooltip
 		}
 
@@ -1150,11 +1168,18 @@ focus_tree = {
 		cost = 2
 		x = -3
 		y = 2
+		allow_branch = {
+			has_country_flag = MIL_grand_festival_focus_tree_unlocked
+		}
 		prerequisite = {
 			focus = MIL_yuuka_unhappy
 		}
 
 		completion_reward = {
+			hidden_effect = {
+				# 2026-05-20: 国策文档要求经费获取上限+1级，沿用现有“下月恢复”经费逻辑
+				BARE_MIL_Sport_Focus_Make_More_Money_effect = yes
+			}
 			custom_effect_tooltip = MIL_make_more_money_effect_tooltip
 
 		}
@@ -1167,8 +1192,18 @@ focus_tree = {
 		cost = 2
 		x = -1
 		y = 2
+		allow_branch = {
+			has_country_flag = MIL_grand_festival_focus_tree_unlocked
+		}
 		prerequisite = {
 			focus = MIL_yuuka_unhappy
+		}
+		completion_reward = {
+			hidden_effect = {
+				# 2026-05-20: 国策文档要求获得50点筹办经费
+				BARE_MIL_Sport_Focus_Reduce_Cost_effect = yes
+			}
+			custom_effect_tooltip = MIL_reduce_cost_effect_tooltip
 		}
 	}
 	focus = { #寻求支持？
@@ -1180,11 +1215,21 @@ focus_tree = {
 		cost = 4
 		x = -3
 		y = 3
+		allow_branch = {
+			has_country_flag = MIL_grand_festival_focus_tree_unlocked
+		}
 		prerequisite = {
 			focus = MIL_reduce_cost
 		}
 		prerequisite = {
 			focus = MIL_make_more_money
+		}
+		completion_reward = {
+			hidden_effect = {
+				# 2026-05-20: 合作路线降低筹备生活消费品压力，合作决议由既有可见条件解锁
+				BARE_MIL_Sport_Focus_Need_Help_effect = yes
+			}
+			custom_effect_tooltip = MIL_need_help_effect_tooltip
 		}
 	}
 	focus = { #我们能做到
@@ -1196,11 +1241,21 @@ focus_tree = {
 		cost = 8
 		x = -1
 		y = 3
+		allow_branch = {
+			has_country_flag = MIL_grand_festival_focus_tree_unlocked
+		}
 		prerequisite = {
 			focus = MIL_reduce_cost
 		}
 		prerequisite = {
 			focus = MIL_make_more_money
+		}
+		completion_reward = {
+			hidden_effect = {
+				# 2026-05-20: 独立路线补支持度、稳定度和大成功前置收益
+				BARE_MIL_Sport_Focus_We_Can_Do_effect = yes
+			}
+			custom_effect_tooltip = MIL_we_can_do_it_by_ourselves_effect_tooltip
 		}
 	}
 	focus = { #晄轮大祭建设工作
@@ -1211,6 +1266,9 @@ focus_tree = {
 		cost = 2
 		x = 2
 		y = 1
+		allow_branch = {
+			has_country_flag = MIL_grand_festival_focus_tree_unlocked
+		}
 		prerequisite = {
 			focus = MIL_Prepare_grand_festival
 		}
@@ -1228,12 +1286,17 @@ focus_tree = {
 		cost = 6
 		x = 2
 		y = 2
+		allow_branch = {
+			has_country_flag = MIL_grand_festival_focus_tree_unlocked
+		}
 		prerequisite = {
 			focus = MIL_build_grand_festival_work
 		}
 
 		completion_reward = {
 			add_political_power = 100
+			# 2026-05-20: 按国策文档补充“意外”占位事件，正式效果和文本后续填充
+			country_event = { id = MIL_sport_event.70 }
 			unlock_decision_tooltip = MIL_Sport_Crackdown_on_Sabotage
 		}
 	}
@@ -1245,8 +1308,18 @@ focus_tree = {
 		cost = 2
 		x = 4
 		y = 2
+		allow_branch = {
+			has_country_flag = MIL_grand_festival_focus_tree_unlocked
+		}
 		prerequisite = {
 			focus = MIL_build_grand_festival_work
+		}
+		completion_reward = {
+			hidden_effect = {
+				# 2026-05-20: 科技线按国策文档补学生支持度
+				BARE_MIL_Sport_Focus_The_Power_Of_Technology_effect = yes
+			}
+			custom_effect_tooltip = MIL_The_power_of_Technology_effect_tooltip
 		}
 	}
 	focus = { #书记官的努力
@@ -1257,8 +1330,20 @@ focus_tree = {
 		cost = 7
 		x = 2
 		y = 3
+		allow_branch = {
+			has_country_flag = MIL_grand_festival_focus_tree_unlocked
+		}
 		prerequisite = {
 			focus = MIL_opposition_hidden_in_the_dark
+		}
+		completion_reward = {
+			hidden_effect = {
+				# 2026-05-20: 诺亚线按国策文档追加月度支持和稳定度
+				BARE_MIL_Sport_Focus_Noas_Strive_effect = yes
+			}
+			# 2026-05-20: 按国策文档补充“书记官的讲话”占位事件，正式效果和文本后续填充
+			country_event = { id = MIL_sport_event.71 }
+			custom_effect_tooltip = MIL_noas_Strive_effect_tooltip
 		}
 	}
 	focus = { #如火如荼的建设工作
@@ -1269,23 +1354,43 @@ focus_tree = {
 		cost = 6
 		x = 4
 		y = 3
+		allow_branch = {
+			has_country_flag = MIL_grand_festival_focus_tree_unlocked
+		}
 		prerequisite = {
 			focus = MIL_The_power_of_Technology
+		}
+		completion_reward = {
+			hidden_effect = {
+				# 2026-05-20: 如火如荼建设补即时收益，并保留科技经费优化刷新
+				BARE_MIL_Sport_Focus_Construction_Full_Swing_effect = yes
+			}
+			custom_effect_tooltip = MIL_The_construction_work_is_in_full_swing_effect_tooltip
 		}
 	}
 	focus = { #日渐完善的准备
 		id = MIL_The_Increasingly_refined_preparations
-		icon = GFX_goal_MIL_MIL_The_Increasingly_refined_preparations
+		icon = GFX_goal_MIL_The_Increasingly_refined_preparations
 		relative_position_id = MIL_Prepare_grand_festival
 		search_filters = { FOCUS_MIL }
 		cost = 4
 		x = 3
 		y = 4
+		allow_branch = {
+			has_country_flag = MIL_grand_festival_focus_tree_unlocked
+		}
 		prerequisite = {
 			focus = MIL_noas_Strive
 		}
 		prerequisite = {
 			focus = MIL_The_construction_work_is_in_full_swing
+		}
+		completion_reward = {
+			hidden_effect = {
+				# 2026-05-20: 日渐完善的准备补支持度、政治点和消费品压力降低
+				BARE_MIL_Sport_Focus_Increasingly_Refined_effect = yes
+			}
+			custom_effect_tooltip = MIL_The_Increasingly_refined_preparations_effect_tooltip
 		}
 	}
 	focus = { #大祭前夜
@@ -1296,11 +1401,20 @@ focus_tree = {
 		cost = 3
 		x = 0
 		y = 4
-		prerequisite = {
-			focus = MIL_noas_Strive
+		allow_branch = {
+			has_country_flag = MIL_grand_festival_focus_tree_unlocked
 		}
 		prerequisite = {
-			focus = MIL_The_construction_work_is_in_full_swing
+			focus = MIL_The_Increasingly_refined_preparations
+		}
+		prerequisite = {
+			# 2026-05-20: 按国策文档要求，前夜需完成合作/独立路线之一
+			focus = MIL_need_help
+			focus = MIL_we_can_do_it_by_ourselves
+		}
+		completion_reward = {
+			# 2026-05-20: 按国策文档补充“意料之外的紧急状况”占位事件，正式效果和文本后续填充
+			country_event = { id = MIL_sport_event.72 }
 		}
 	}
 	focus = { #狂欢的开始
@@ -1311,6 +1425,9 @@ focus_tree = {
 		cost = 10
 		x = 0
 		y = 5
+		allow_branch = {
+			has_country_flag = MIL_grand_festival_focus_tree_unlocked
+		}
 
 		available = {
 			custom_trigger_tooltip = {
@@ -1325,6 +1442,21 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = MIL_The_beginning_of_the_carnival_effect_tooltip
+			# 2026-05-20: 按国策文档补充“晄轮大祭正式开幕”占位事件，正式效果和文本后续填充
+			country_event = { id = MIL_sport_event.73 }
+			hidden_effect = {
+				# 2026-05-20: 同时保留开幕180天收益与最终结算入口
+				BARE_MIL_Sport_Focus_Carnival_Start_effect = yes
+				# 2026-05-20: 正式开幕国策接入最终结算入口；若月更已排队结算则不重复触发
+				if = {
+					limit = {
+						NOT = { has_country_flag = BARE_MIL_Sport_settlement_event_queued_flag }
+						NOT = { has_country_flag = BARE_MIL_Sport_settled_flag }
+					}
+					set_country_flag = BARE_MIL_Sport_settlement_event_queued_flag
+					country_event = { id = MIL_sport_event.60 days = 1 }
+				}
+			}
 
 		}
 	}
@@ -1336,6 +1468,9 @@ focus_tree = {
 		cost = 10
 		x = -2
 		y = 6
+		allow_branch = {
+			has_country_flag = MIL_grand_festival_focus_tree_unlocked
+		}
 		prerequisite = {
 			focus = MIL_The_beginning_of_the_carnival
 		}
@@ -1348,391 +1483,15 @@ focus_tree = {
 		cost = 10
 		x = 2
 		y = 6
+		allow_branch = {
+			has_country_flag = MIL_grand_festival_focus_tree_unlocked
+		}
 		prerequisite = {
 			focus = MIL_The_beginning_of_the_carnival
 		}
 	}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	focus = { #尚未提交的报告
-		id = MIL_Reports_that_have_not_yet_been_submitted
-		icon = GFX_goal_MIL_Reports_that_have_not_yet_been_submitted
-		search_filters = { FOCUS_MIL }
-		cost = 10
-		x = 60
-		y = 8
-	}
-	focus = { #与联邦学生会的关系
-		id = MIL_The_relationship_with_the_GSC
-		icon = GFX_goal_MIL_The_relationship_with_the_GSC
-		relative_position_id = MIL_Reports_that_have_not_yet_been_submitted
-		search_filters = { FOCUS_MIL }
-		cost = 10
-		x = -4
-		y = 1
-		prerequisite = {
-			focus = MIL_Reports_that_have_not_yet_been_submitted
-		}
-	}
-	focus = { #那位大人
-		id = MIL_The_adult
-		icon = GFX_goal_MIL_The_adult
-		relative_position_id = MIL_Reports_that_have_not_yet_been_submitted
-		search_filters = { FOCUS_MIL }
-		cost = 10
-		x = -5
-		y = 2
-		prerequisite = {
-			focus = MIL_The_relationship_with_the_GSC
-		}
-	}
-	focus = { #与夏莱的联系
-		id = MIL_Contact_with_schale
-		icon = GFX_goal_MIL_Contact_with_schale
-		relative_position_id = MIL_Reports_that_have_not_yet_been_submitted
-		search_filters = { FOCUS_MIL }
-		cost = 10
-		x = -5
-		y = 3
-		prerequisite = {
-			focus = MIL_The_adult
-		}
-	}
-	focus = { #邀请sensei协助校内事务
-		id = MIL_invite_sensei
-		icon = GFX_goal_MIL_invite_sensei
-		relative_position_id = MIL_Reports_that_have_not_yet_been_submitted
-		search_filters = { FOCUS_MIL }
-		cost = 10
-		x = -5
-		y = 4
-		prerequisite = {
-			focus = MIL_Contact_with_schale
-		}
-	}
-
-	focus = { #千年永远的老师
-		id = MIL_our_forever_sensei
-		icon = GFX_goal_MIL_our_forever_sensei
-		relative_position_id = MIL_Reports_that_have_not_yet_been_submitted
-		search_filters = { FOCUS_MIL }
-		cost = 10
-		x = -5
-		y = 4
-		prerequisite = {
-			focus = MIL_Contact_with_schale
-		}
-	}
-
-	focus = { #或许影响不大，但是不能没有
-		id = MIL_Cant_without_GSC
-		icon = GFX_goal_MIL_Cant_without_GSC
-		relative_position_id = MIL_Reports_that_have_not_yet_been_submitted
-		search_filters = { FOCUS_MIL }
-		cost = 10
-		x = -3
-		y = 2
-		prerequisite = {
-			focus = MIL_The_relationship_with_the_GSC
-		}
-	}
-	focus = { #协助联邦学生会事务
-		id = MIL_help_GSC
-		icon = GFX_goal_MIL_help_GSC
-		relative_position_id = MIL_Reports_that_have_not_yet_been_submitted
-		search_filters = { FOCUS_MIL }
-		cost = 10
-		x = -3
-		y = 3
-		prerequisite = {
-			focus = MIL_The_relationship_with_the_GSC
-		}
-	}
-	focus = { #主动上交的经费
-		id = MIL_Funds_voluntarily_surrendered
-		icon = GFX_goal_MIL_Funds_voluntarily_surrendered
-		relative_position_id = MIL_Reports_that_have_not_yet_been_submitted
-		search_filters = { FOCUS_MIL }
-		cost = 10
-		x = -3
-		y = 4
-		prerequisite = {
-			focus = MIL_help_GSC
-		}
-	}
-
-	focus = { #为瓦尔基里提供信息技术支援
-		id = MIL_Provide_IT_Support_to_Valkyrie
-		icon = GFX_goal_MIL_Provide_IT_Support_to_Valkyrie
-		relative_position_id = MIL_Reports_that_have_not_yet_been_submitted
-		search_filters = { FOCUS_MIL }
-		cost = 10
-		x = -1
-		y = 4
-		prerequisite = {
-			focus = MIL_help_GSC
-		}
-	}
-
-	focus = { #向行政官的提议
-		id = MIL_A_proposal_to_the_administrator
-		icon = GFX_goal_MIL_A_proposal_to_the_administrator
-		relative_position_id = MIL_Reports_that_have_not_yet_been_submitted
-		search_filters = { FOCUS_MIL }
-		cost = 10
-		x = -3
-		y = 5
-		prerequisite = {
-			focus = MIL_Funds_voluntarily_surrendered
-		}
-	}
-	focus = { #与瓦尔基里的交流
-		id = MIL_The_communication_with_Valkyrie
-		icon = GFX_goal_MIL_The_communication_with_Valkyrie
-		relative_position_id = MIL_Reports_that_have_not_yet_been_submitted
-		search_filters = { FOCUS_MIL }
-		cost = 10
-		x = -1
-		y = 5
-		prerequisite = {
-			focus = MIL_Funds_voluntarily_surrendered
-		}
-	}
-	focus = { #和其他学院的交流
-		id = MIL_The_communication_with_other_colleges
-		icon = GFX_goal_MIL_The_communication_with_other_colleges
-		relative_position_id = MIL_Reports_that_have_not_yet_been_submitted
-		search_filters = { FOCUS_MIL }
-		cost = 10
-		x = 8
-		y = 1
-		prerequisite = {
-			focus = MIL_Reports_that_have_not_yet_been_submitted
-		}
-	}
-	focus = { #伊甸条约的双方
-		id = MIL_The_two_sides_of_the_Treaty_of_Eden
-		icon = GFX_goal_MIL_The_two_sides_of_the_Treaty_of_Eden
-		relative_position_id = MIL_Reports_that_have_not_yet_been_submitted
-		search_filters = { FOCUS_MIL }
-		cost = 10
-		x = 4
-		y = 2
-		prerequisite = {
-			focus = MIL_The_communication_with_other_colleges
-		}
-	}
-	focus = { #与圣三一的贸易协定
-		id = MIL_The_trade_agreement_with_Trinity
-		icon = GFX_goal_MIL_The_trade_agreement_with_Trinity
-		relative_position_id = MIL_Reports_that_have_not_yet_been_submitted
-		search_filters = { FOCUS_MIL }
-		cost = 10
-		x = 3
-		y = 3
-		prerequisite = {
-			focus = MIL_The_two_sides_of_the_Treaty_of_Eden
-		}
-	}
-	focus = { #“茶会大人物最喜欢的瑞士卷”
-		id = MIL_The_Swiss_rolls_that_are_the_favorite_of_the_big_shots_at_tea_parties
-		icon = GFX_goal_MIL_The_Swiss_rolls_that_are_the_favorite_of_the_big_shots_at_tea_parties
-		relative_position_id = MIL_Reports_that_have_not_yet_been_submitted
-		search_filters = { FOCUS_MIL }
-		cost = 10
-		x = 3
-		y = 4
-		prerequisite = {
-			focus = MIL_The_trade_agreement_with_Trinity
-		}
-	}
-	focus = { #“一起来杯下午茶吧”
-		id = MIL_Lets_have_an_afternoon_tea_together
-		icon = GFX_goal_MIL_Lets_have_an_afternoon_tea_together
-		relative_position_id = MIL_Reports_that_have_not_yet_been_submitted
-		search_filters = { FOCUS_MIL }
-		cost = 10
-		x = 3
-		y = 5
-		prerequisite = {
-			focus = MIL_The_Swiss_rolls_that_are_the_favorite_of_the_big_shots_at_tea_parties
-		}
-	}
-	focus = { #和格黑娜的军事交流
-		id = MIL_Military_exchanges_with_Geh
-		icon = GFX_goal_MIL_Military_exchanges_with_Geh
-		relative_position_id = MIL_Reports_that_have_not_yet_been_submitted
-		search_filters = { FOCUS_MIL }
-		cost = 10
-		x = 5
-		y = 3
-		prerequisite = {
-			focus = MIL_The_two_sides_of_the_Treaty_of_Eden
-		}
-	}
-	focus = { #万魔殿还是风纪委员会
-		id = MIL_The_Hall_of_Ten_Thousand_Demons_is_still_the_Discipline_Inspection_Committee
-		icon = GFX_goal_MIL_The_Hall_of_Ten_Thousand_Demons_is_still_the_Discipline_Inspection_Committee
-		relative_position_id = MIL_Reports_that_have_not_yet_been_submitted
-		search_filters = { FOCUS_MIL }
-		cost = 10
-		x = 5
-		y = 4
-		prerequisite = {
-			focus = MIL_Military_exchanges_with_Geh
-		}
-	}
-	focus = { #画风奇怪的合作交流
-		id = MIL_A_strangely_styled_cooperative_communication
-		icon = GFX_goal_MIL_A_strangely_styled_cooperative_communication
-		relative_position_id = MIL_Reports_that_have_not_yet_been_submitted
-		search_filters = { FOCUS_MIL }
-		cost = 10
-		x = 5
-		y = 5
-		prerequisite = {
-			focus = MIL_The_Hall_of_Ten_Thousand_Demons_is_still_the_Discipline_Inspection_Committee
-		}
-	}
-	focus = { #更广阔的视野
-		id = MIL_A_broader_perspective
-		icon = GFX_goal_MIL_A_broader_perspective
-		relative_position_id = MIL_Reports_that_have_not_yet_been_submitted
-		search_filters = { FOCUS_MIL }
-		cost = 10
-		x = 12
-		y = 2
-		prerequisite = {
-			focus = MIL_The_communication_with_other_colleges
-		}
-	}
-	focus = { #赤冬的温泉疗养活动
-		id = MIL_Hot_spring_treatment_in_red_winter
-		icon = GFX_goal_MIL_Hot_spring_treatment_in_red_winter
-		relative_position_id = MIL_Reports_that_have_not_yet_been_submitted
-		search_filters = { FOCUS_MIL }
-		cost = 10
-		x = 10
-		y = 3
-		prerequisite = {
-			focus = MIL_A_broader_perspective
-		}
-	}
-	focus = { #意料之外的布丁交易
-		id = MIL_Unexpected_pudding
-		icon = GFX_goal_MIL_Unexpected_pudding
-		relative_position_id = MIL_Reports_that_have_not_yet_been_submitted
-		search_filters = { FOCUS_MIL }
-		cost = 10
-		x = 10
-		y = 4
-		prerequisite = {
-			focus = MIL_Hot_spring_treatment_in_red_winter
-		}
-	}
-	focus = { #扩展极地航线
-		id = MIL_Expansion_of_the_Polar_Routes
-		icon = GFX_goal_MIL_Expansion_of_the_Polar_Routes
-		relative_position_id = MIL_Reports_that_have_not_yet_been_submitted
-		search_filters = { FOCUS_MIL }
-		cost = 10
-		x = 10
-		y = 5
-		prerequisite = {
-			focus = MIL_Unexpected_pudding
-		}
-	}
-	focus = { #山海经的美食盛宴
-		id = MIL_The_Gourmet_Banquet_of_the_Shanhai_Classic
-		icon = GFX_goal_MIL_The_Gourmet_Banquet_of_the_Shanhai_Classic
-		relative_position_id = MIL_Reports_that_have_not_yet_been_submitted
-		search_filters = { FOCUS_MIL }
-		cost = 10
-		x = 12
-		y = 3
-		prerequisite = {
-			focus = MIL_A_broader_perspective
-		}
-	}
-	focus = { #玄龙门的大人物
-		id = MIL_The_Important_Figures_of_Xuanlongmen
-		icon = GFX_goal_MIL_The_Important_Figures_of_Xuanlongmen
-		relative_position_id = MIL_Reports_that_have_not_yet_been_submitted
-		search_filters = { FOCUS_MIL }
-		cost = 10
-		x = 12
-		y = 4
-		prerequisite = {
-			focus = MIL_The_Gourmet_Banquet_of_the_Shanhai_Classic
-		}
-	}
-	focus = { #合作共赢乃是正道
-		id = MIL_Cooperation_and_winning_together_is_the_right_path
-		icon = GFX_goal_MIL_Cooperation_and_winning_together_is_the_right_path
-		relative_position_id = MIL_Reports_that_have_not_yet_been_submitted
-		search_filters = { FOCUS_MIL }
-		cost = 10
-		x = 12
-		y = 5
-		prerequisite = {
-			focus = MIL_The_Important_Figures_of_Xuanlongmen
-		}
-	}
-	focus = { #海兰德的交通进修课
-		id = MIL_The_Transportation_Training_Course_of_Hailand
-		icon = GFX_goal_MIL_The_Transportation_Training_Course_of_Hailand
-		relative_position_id = MIL_Reports_that_have_not_yet_been_submitted
-		search_filters = { FOCUS_MIL }
-		cost = 10
-		x = 14
-		y = 3
-		prerequisite = {
-			focus = MIL_A_broader_perspective
-		}
-	}
-	focus = { #高速铁路提速实验
-		id = MIL_The_High_Speed_Railway_Acceleration_Experiment
-		icon = GFX_goal_MIL_The_High_Speed_Railway_Acceleration_Experiment
-		relative_position_id = MIL_Reports_that_have_not_yet_been_submitted
-		search_filters = { FOCUS_MIL }
-		cost = 10
-		x = 14
-		y = 4
-		prerequisite = {
-			focus = MIL_The_Transportation_Training_Course_of_Hailand
-		}
-	}
-	focus = { #更多更好更快的铁路
-		id = MIL_More_better_and_faster_railways
-		icon = GFX_goal_MIL_More_better_and_faster_railways
-		relative_position_id = MIL_Reports_that_have_not_yet_been_submitted
-		search_filters = { FOCUS_MIL }
-		cost = 10
-		x = 14
-		y = 5
-		prerequisite = {
-			focus = MIL_The_High_Speed_Railway_Acceleration_Experiment
-		}
-	}
 
 
 
@@ -2110,7 +1869,7 @@ focus_tree = {
 	}
 	focus = { #千年的钢铁长城
 		id = MIL_Millennium_Steel_Wall
-		icon = GFX_goal_MIL_Millennium_Steel_Wall
+		icon = GFX_goal_MILlennium_Steel_Wall
 		relative_position_id = MIL_Security_Committee_Defense_Reform_Plan
 		search_filters = { FOCUS_MIL }
 		cost = 6
@@ -2394,7 +2153,7 @@ focus_tree = {
 
 	focus = { #千年安定的守护者
 		id = MIL_Millennium_Stability_Guardian
-		icon = GFX_goal_MIL_Millennium_Stability_Guardian
+		icon = GFX_goal_MILlennium_Stability_Guardian
 		relative_position_id = MIL_Security_Committee_Defense_Reform_Plan
 		search_filters = { FOCUS_MIL }
 		cost = 10

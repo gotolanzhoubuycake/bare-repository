@@ -75,6 +75,8 @@ MIL_soaring_eagle = {
 
 
 BARE_MIL_sport_Student_Support_Modifier = {
+    # 2026-05-20: 学生支持度派生修正。
+    # 具体数值由 `BARE_MIL_Sport_Student_Support_Var_Chance_effect` 按支持度档位写入变量。
     enable = { always = yes }
 
 
@@ -88,6 +90,8 @@ BARE_MIL_sport_Student_Support_Modifier = {
 
 
 BARE_MIL_sport_Tech_Modifier = {
+    # 2026-05-20: 科技等级派生修正。
+    # 科技等级每次变化后通过 scripted effect 重算这里引用的变量。
     enable = { always = yes }
 
     MIL_sport_student_Fee_monthly = BARE_MIL_sport_Tech_Modifier_MIL_sport_student_Fee_monthly_var
@@ -98,18 +102,40 @@ BARE_MIL_sport_Tech_Modifier = {
 }
 
 BARE_MIL_sport_Security_Modifier = {
+    # 2026-05-20: 安保等级当前用月度经费恢复修正表现“维护消耗”，同时在破坏事件中影响安全权重和损失。
     MIL_sport_student_Fee_monthly = BARE_MIL_sport_Security_Modifier_MIL_sport_student_Fee_monthly_var
 }
 BARE_MIL_sport_Prepare_Modifier = {
+    # 2026-05-20: 晄轮大祭筹备期核心动态修正。
+    # 国策路线会逐步改写这里的生活消费品、稳定度、月支持度等变量。
     icon = GFX_idea_BARE_MIL_sport_Prepare_Modifier 
     enable = { always = yes }
     MIL_sport_student_Fee_monthly = BARE_MIL_sport_Prepare_Modifier_MIL_sport_student_Fee_monthly_var
     MIL_sport_student_support_monthly =  BARE_MIL_sport_Prepare_Modifier_MIL_sport_student_support_monthly_var
     consumer_goods_factor = BARE_MIL_sport_Prepare_Modifier_consumer_goods_factor_var
+    stability_factor = BARE_MIL_sport_Prepare_Modifier_stability_factor_var
     production_speed_buildings_factor = BARE_MIL_sport_Prepare_production_speed_buildings_factor_var
     research_speed_factor = BARE_MIL_sport_Prepare_Modifier_research_speed_factor_var
     industrial_capacity_factory = BARE_MIL_sport_Prepare_Modifier_industrial_capacity_factory_var
     
+}
+
+BARE_MIL_sport_Carnival_Modifier = {
+    # 2026-05-20: 晄轮大祭开幕后保留180天的临时收益，对应国策文档“晄轮大祭进行时”
+    icon = GFX_idea_BARE_MIL_sport_Prepare_Modifier
+    enable = { always = yes }
+    political_power_factor = 0.15
+    stability_weekly = 0.005
+    production_factory_efficiency_gain_factor = 0.10
+    production_factory_max_efficiency_factor = 0.10
+    industrial_capacity_factory = 0.05
+}
+
+BARE_MIL_sport_Cooperation_Sponsor_Modifier = {
+    # 2026-05-20: 晄轮大祭合作赞助方收益；10点合作上限对应10%生活消费品系数，5点对应5%
+    icon = GFX_idea_BARE_MIL_sport_Prepare_Modifier
+    enable = { always = yes }
+    consumer_goods_factor = BARE_MIL_sport_Cooperation_Sponsor_consumer_goods_factor_var
 }
 
 

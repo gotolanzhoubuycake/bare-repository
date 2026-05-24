@@ -88,8 +88,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_attack_and_conversation.dds"
 	}
 	spriteType = {
-		name = "GFX_goal_MIL_MIL_end_attack"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_MIL_end_attack.dds"
+		name = "GFX_goal_MIL_end_attack"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_end_attack.dds"
 	}
 	spriteType = {
 		name = "GFX_goal_MIL_we_need_money"
@@ -104,20 +104,20 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Abnormal_money.dds"
 	}
 	spriteType = {
-		name = "GFX_goal_MIL_Abnormal_money"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Abnormal_money.dds"
+		name = "GFX_goal_MIL_koyuki_deberture"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_koyuki_deberture.dds"
 	}
 	spriteType = {
-		name = "GFX_goal_MIL_Abnormal_money"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Abnormal_money.dds"
+		name = "GFX_goal_MIL_catch_koyuki"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_catch_koyuki.dds"
 	}
 	spriteType = {
-		name = "GFX_goal_MIL_Abnormal_money"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Abnormal_money.dds"
+		name = "GFX_goal_MIL_stange_machine_bill"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_stange_machine_bill.dds"
 	}
 	spriteType = {
-		name = "GFX_goal_MIL_Abnormal_money"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Abnormal_money.dds"
+		name = "GFX_goal_MIL_Unaccounted_for_machine"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Unaccounted_for_machine.dds"
 	}
 	spriteType = {
 		name = "GFX_goal_MIL_Interrupted_clues"
@@ -276,8 +276,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_nearly_completed_tower.dds"
 	}
 	spriteType = {
-		name = "GFX_goal_MIL_mil_wisdom"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_mil_wisdom.dds"
+		name = "GFX_goal_MIL_wisdom"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_wisdom.dds"
 	}
 	spriteType = {
 		name = "GFX_goal_MIL_clean_not_destory"
@@ -332,8 +332,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_The_construction_work_is_in_full_swing.dds"
 	}
 	spriteType = {
-		name = "GFX_goal_MIL_MIL_The_Increasingly_refined_preparations"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_MIL_The_Increasingly_refined_preparations.dds"
+		name = "GFX_goal_MIL_The_Increasingly_refined_preparations"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_The_Increasingly_refined_preparations.dds"
 	}
 	spriteType = {
 		name = "GFX_goal_MIL_The_eve_of_the_grand_festival"
@@ -420,8 +420,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Lets_have_an_afternoon_tea_together.dds"
 	}
 	spriteType = {
-		name = "GFX_goal_MIL_Military_exchanges_with_Geh"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Military_exchanges_with_Geh.dds"
+		name = "GFX_goal_MILitary_exchanges_with_Geh"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MILitary_exchanges_with_Geh.dds"
 	}
 	spriteType = {
 		name = "GFX_goal_MIL_The_Hall_of_Ten_Thousand_Demons_is_still_the_Discipline_Inspection_Committee"
@@ -528,8 +528,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Stronger_Firepower_Better_Protection.dds"
 	}
 	spriteType = {
-		name = "GFX_goal_MIL_Millennium_Steel_Wall"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Millennium_Steel_Wall.dds"
+		name = "GFX_goal_MILlennium_Steel_Wall"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MILlennium_Steel_Wall.dds"
 	}
 	spriteType = {
 		name = "GFX_goal_MIL_Reorganize_the_Security_Department"
@@ -584,7 +584,7 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Impenetrable_Defense_Line.dds"
 	}
 	spriteType = {
-		name = "GFX_goal_MIL_Millennium_Stability_Guardian"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Millennium_Stability_Guardian.dds"
+		name = "GFX_goal_MILlennium_Stability_Guardian"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MILlennium_Stability_Guardian.dds"
 	}
 }

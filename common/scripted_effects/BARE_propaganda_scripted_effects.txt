@@ -1,0 +1,69 @@
+# 2026-05-18: 新增全局宣传活动系统效果，参考原版苏联宣传鼓动部决议的持续期、冷却和递增成本结构
+BARE_unlock_propaganda_system_effect = {
+	set_country_flag = BARE_propaganda_system_unlocked_flag
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = BARE_propaganda_system_initialized_flag }
+		}
+		set_country_flag = BARE_propaganda_system_initialized_flag
+		set_variable = {
+			BARE_propaganda_active_campaigns_var = 0
+		}
+		set_variable = {
+			BARE_propaganda_max_campaigns_var = 3
+		}
+		set_variable = {
+			BARE_default_propaganda_campaign_duration_var = 180
+		}
+		set_variable = {
+			BARE_default_propaganda_campaign_cooldown_var = 90
+		}
+		set_variable = {
+			BARE_propaganda_base_cost_var = 15
+		}
+		set_variable = {
+			BARE_propaganda_cost_increase_var = 2
+		}
+		set_variable = {
+			BARE_propaganda_campaigns_total_var = 0
+		}
+	}
+}
+
+BARE_unlock_MIL_public_campaigns_effect = {
+	BARE_unlock_propaganda_system_effect = yes
+	set_country_flag = BARE_MIL_public_campaigns_unlocked_flag
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = BARE_MIL_public_campaigns_initialized_flag }
+		}
+		set_country_flag = BARE_MIL_public_campaigns_initialized_flag
+
+		set_variable = {
+			BARE_MIL_public_pull_together_cost_var = BARE_propaganda_base_cost_var
+		}
+		set_variable = {
+			BARE_MIL_public_unique_charm_cost_var = BARE_propaganda_base_cost_var
+		}
+		set_variable = {
+			BARE_MIL_public_technology_oriented_cost_var = BARE_propaganda_base_cost_var
+		}
+		set_variable = {
+			BARE_MIL_public_do_your_part_cost_var = 20
+		}
+		set_variable = {
+			BARE_MIL_public_reduce_waste_cost_var = BARE_propaganda_base_cost_var
+		}
+		set_variable = {
+			BARE_MIL_public_we_can_do_cost_var = 25
+		}
+	}
+}
+
+BARE_increase_propaganda_campaign_cost_effect = {
+	multiply_variable = {
+		BARE_propaganda_cost_var = BARE_propaganda_cost_increase_var
+	}
+}

@@ -1,5 +1,11 @@
 MIL_Sport_decision_category = {
+	# 2026-05-18: 晄轮大祭常规筹备决议。
+	# 这部分仍然挂在千年运动会主类别下，并继续使用原有的运动会变量体系。
 	MIL_Sport_Improve_Millennium_Infrastructure = {
+		# 改善学园基础设施：
+		# 1. 2026-05-21: 成本每3次上涨一次，并在15点经费封顶。
+		# 2. 执行完成后随机在可用州补 1 级基建。
+		# 3. 同时提高综合评分与学生支持度。
 		visible = {
 
 		}
@@ -8,8 +14,25 @@ MIL_Sport_decision_category = {
 			set_temp_variable = {
 				MIL_Sport_Fee_cost = 5
 			}
-			add_to_temp_variable = {
-				MIL_Sport_Fee_cost = MIL_Sport_Improve_Millennium_Infrastructure_use
+			if = {
+				limit = {
+					check_variable = {
+						MIL_Sport_Improve_Millennium_Infrastructure_use > 2
+					}
+				}
+				set_temp_variable = {
+					MIL_Sport_Fee_cost = 10
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						MIL_Sport_Improve_Millennium_Infrastructure_use > 5
+					}
+				}
+				set_temp_variable = {
+					MIL_Sport_Fee_cost = 15
+				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = MIL_Sport_Fee_have_tooltip
@@ -24,8 +47,25 @@ MIL_Sport_decision_category = {
 			set_temp_variable = {
 				MIL_Sport_Fee_cost = 5
 			}
-			add_to_temp_variable = {
-				MIL_Sport_Fee_cost = MIL_Sport_Improve_Millennium_Infrastructure_use
+			if = {
+				limit = {
+					check_variable = {
+						MIL_Sport_Improve_Millennium_Infrastructure_use > 2
+					}
+				}
+				set_temp_variable = {
+					MIL_Sport_Fee_cost = 10
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						MIL_Sport_Improve_Millennium_Infrastructure_use > 5
+					}
+				}
+				set_temp_variable = {
+					MIL_Sport_Fee_cost = 15
+				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = MIL_Sport_Fee_have_tooltip
@@ -67,7 +107,7 @@ MIL_Sport_decision_category = {
 			}
 			custom_effect_tooltip = MIL_Sport_Improve_Millennium_Infrastructure_tooltip
 			add_to_variable = {
-				BARE_MIL_sport_Score_Var = 2
+				BARE_MIL_sport_Score_Var = 10
 			}
 			add_to_variable = {
 				BARE_MIL_sport_Student_Support_Var = 5
@@ -77,6 +117,10 @@ MIL_Sport_decision_category = {
 	}
 
 	MIL_Sport_Constructing_Sports_Venues = {
+		# 修建运动会场地：
+		# 1. 初始成本 10，经重复投入后递增。
+		# 2. 最多建设 5 次，用变量记录场地建设进度。
+		# 3. 评分增长会随着已投入次数进一步放大。
 		visible = {
 
 		}
@@ -147,11 +191,16 @@ MIL_Sport_decision_category = {
 			add_to_variable = {
 				BARE_MIL_sport_Building_Score_Var = 1
 			}
+			BARE_MIL_Sport_Building_Score_Frame_Change_effect = yes
 			BARE_MIL_Sport_Student_Support_Var_Chance_effect = yes
 		}
 	}
 
 	MIL_Sport_Crackdown_on_Sabotage = {
+		# 严厉打击破坏分子：
+		# 1. 这是一个持续型保护决议，不会自动在固定天数后结束。
+		# 2. 只要运动会筹备结束，或已经触发过本次保护，就会被移除。
+		# 3. 这里主要通过国家旗标向其他事件声明“本轮破坏削弱一次”。
 		visible = {
 			
 		}
@@ -204,7 +253,781 @@ MIL_Sport_decision_category = {
 		}
 		custom_cost_text = MIL_Sport_Fee_cost_icon_tooltip
 	}
+
+	MIL_Sport_Volunteer_Coordination_Center = {
+		# 2026-05-21: 新增中期调度决议，用PP和少量经费组织志愿者，补支持度并小幅补准备评分。
+		visible = {
+
+		}
+		available = {
+			set_temp_variable = {
+				MIL_Sport_Fee_cost = 10
+			}
+			custom_trigger_tooltip = {
+				tooltip = MIL_Sport_Fee_have_tooltip
+				check_variable = {
+					var = BARE_MIL_sport_Fee_Have_Var
+					value = MIL_Sport_Fee_cost
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		cost = 25
+		days_remove = 30
+		custom_cost_trigger = {
+			set_temp_variable = {
+				MIL_Sport_Fee_cost = 10
+			}
+			custom_trigger_tooltip = {
+				tooltip = MIL_Sport_Fee_have_tooltip
+				check_variable = {
+					var = BARE_MIL_sport_Fee_Have_Var
+					value = MIL_Sport_Fee_cost
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		custom_cost_text = MIL_Sport_Fee_cost_icon_tooltip
+		complete_effect = {
+			subtract_from_variable = {
+				BARE_MIL_sport_Fee_Have_Var = MIL_Sport_Fee_cost
+			}
+		}
+		remove_effect = {
+			custom_effect_tooltip = MIL_Sport_Volunteer_Coordination_Center_tt
+			add_to_variable = {
+				BARE_MIL_sport_Student_Support_Var = 8
+			}
+			add_to_variable = {
+				BARE_MIL_sport_Score_Var = 5
+			}
+			BARE_MIL_Sport_Student_Support_Var_Chance_effect = yes
+		}
+	}
+
+	MIL_Sport_Venue_Stress_Test = {
+		# 2026-05-21: 新增最后三个月冲刺决议，模拟入场、疏散和设备联调来补准备评分。
+		visible = {
+
+		}
+		available = {
+			check_variable = {
+				BARE_MIL_sport_Month_Time_Var < 4
+			}
+			check_variable = {
+				BARE_MIL_sport_Month_Time_Var > 1
+			}
+			check_variable = {
+				BARE_MIL_sport_Building_Score_Var > 2
+			}
+			set_temp_variable = {
+				MIL_Sport_Fee_cost = 15
+			}
+			custom_trigger_tooltip = {
+				tooltip = MIL_Sport_Fee_have_tooltip
+				check_variable = {
+					var = BARE_MIL_sport_Fee_Have_Var
+					value = MIL_Sport_Fee_cost
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		days_remove = 45
+		custom_cost_trigger = {
+			set_temp_variable = {
+				MIL_Sport_Fee_cost = 15
+			}
+			custom_trigger_tooltip = {
+				tooltip = MIL_Sport_Fee_have_tooltip
+				check_variable = {
+					var = BARE_MIL_sport_Fee_Have_Var
+					value = MIL_Sport_Fee_cost
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		custom_cost_text = MIL_Sport_Fee_cost_icon_tooltip
+		complete_effect = {
+			subtract_from_variable = {
+				BARE_MIL_sport_Fee_Have_Var = MIL_Sport_Fee_cost
+			}
+		}
+		remove_effect = {
+			custom_effect_tooltip = MIL_Sport_Venue_Stress_Test_tt
+			add_to_variable = {
+				BARE_MIL_sport_Score_Var = 15
+			}
+		}
+	}
+
+	MIL_Sport_Temporary_Sponsor_Recruitment = {
+		# 2026-05-21: 新增临时赞助招募，用政治点补充当期可用经费，缓解后期费用门槛。
+		visible = {
+
+		}
+		cost = 75
+		days_re_enable = 60
+		complete_effect = {
+			custom_effect_tooltip = MIL_Sport_Temporary_Sponsor_Recruitment_tt
+			add_to_variable = {
+				BARE_MIL_sport_Fee_Have_Var = 10
+			}
+			if = {
+				limit = {
+					check_variable = {
+						BARE_MIL_sport_Fee_Have_Var > BARE_MIL_sport_Fee_All_Var
+					}
+				}
+				set_variable = {
+					BARE_MIL_sport_Fee_Have_Var = BARE_MIL_sport_Fee_All_Var
+				}
+			}
+		}
+	}
+
+	MIL_Sport_Use_Reserve_Materials = {
+		# 2026-05-21: 新增一次性兜底决议。只有最后三个月、主要筹备国策完成且准备评分低于成功线时可用。
+		visible = {
+
+		}
+		available = {
+			check_variable = {
+				BARE_MIL_sport_Month_Time_Var < 4
+			}
+			check_variable = {
+				BARE_MIL_sport_Month_Time_Var > 0
+			}
+			check_variable = {
+				BARE_MIL_sport_Score_Var < 160
+			}
+			has_completed_focus = MIL_yuuka_unhappy
+			has_completed_focus = MIL_make_more_money
+			has_completed_focus = MIL_reduce_cost
+			OR = {
+				has_completed_focus = MIL_need_help
+				has_completed_focus = MIL_we_can_do_it_by_ourselves
+			}
+			has_completed_focus = MIL_build_grand_festival_work
+			has_completed_focus = MIL_opposition_hidden_in_the_dark
+			has_completed_focus = MIL_The_power_of_Technology
+			has_completed_focus = MIL_noas_Strive
+			has_completed_focus = MIL_The_construction_work_is_in_full_swing
+			has_completed_focus = MIL_The_Increasingly_refined_preparations
+			has_completed_focus = MIL_The_eve_of_the_grand_festival
+		}
+		cost = 100
+		fire_only_once = yes
+		complete_effect = {
+			custom_effect_tooltip = MIL_Sport_Use_Reserve_Materials_tt
+			add_to_variable = {
+				BARE_MIL_sport_Score_Var = 30
+			}
+			add_stability = -0.05
+			add_war_support = -0.05
+		}
+	}
+
+	MIL_Sport_Adjust_Event_Program = {
+		# 2026-05-21: 新增60天冷却的资源互换决议，用准备评分换取学生支持度。
+		visible = {
+
+		}
+		available = {
+			check_variable = {
+				BARE_MIL_sport_Score_Var > 9
+			}
+			set_temp_variable = {
+				MIL_Sport_Fee_cost = 5
+			}
+			custom_trigger_tooltip = {
+				tooltip = MIL_Sport_Fee_have_tooltip
+				check_variable = {
+					var = BARE_MIL_sport_Fee_Have_Var
+					value = MIL_Sport_Fee_cost
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		days_re_enable = 60
+		custom_cost_trigger = {
+			set_temp_variable = {
+				MIL_Sport_Fee_cost = 5
+			}
+			custom_trigger_tooltip = {
+				tooltip = MIL_Sport_Fee_have_tooltip
+				check_variable = {
+					var = BARE_MIL_sport_Fee_Have_Var
+					value = MIL_Sport_Fee_cost
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		custom_cost_text = MIL_Sport_Fee_cost_icon_tooltip
+		complete_effect = {
+			custom_effect_tooltip = MIL_Sport_Adjust_Event_Program_tt
+			subtract_from_variable = {
+				BARE_MIL_sport_Fee_Have_Var = MIL_Sport_Fee_cost
+			}
+			subtract_from_variable = {
+				BARE_MIL_sport_Score_Var = 10
+			}
+			add_to_variable = {
+				BARE_MIL_sport_Student_Support_Var = 10
+			}
+			BARE_MIL_Sport_Student_Support_Var_Chance_effect = yes
+		}
+	}
+
+	MIL_Sport_Requisition_Unplanned_Equipment = {
+		# 2026-05-21: 新增60天冷却的资源互换决议，用学生支持度换取准备评分。
+		visible = {
+
+		}
+		available = {
+			check_variable = {
+				BARE_MIL_sport_Student_Support_Var > 14
+			}
+			set_temp_variable = {
+				MIL_Sport_Fee_cost = 5
+			}
+			custom_trigger_tooltip = {
+				tooltip = MIL_Sport_Fee_have_tooltip
+				check_variable = {
+					var = BARE_MIL_sport_Fee_Have_Var
+					value = MIL_Sport_Fee_cost
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		days_re_enable = 60
+		custom_cost_trigger = {
+			set_temp_variable = {
+				MIL_Sport_Fee_cost = 5
+			}
+			custom_trigger_tooltip = {
+				tooltip = MIL_Sport_Fee_have_tooltip
+				check_variable = {
+					var = BARE_MIL_sport_Fee_Have_Var
+					value = MIL_Sport_Fee_cost
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		custom_cost_text = MIL_Sport_Fee_cost_icon_tooltip
+		complete_effect = {
+			custom_effect_tooltip = MIL_Sport_Requisition_Unplanned_Equipment_tt
+			subtract_from_variable = {
+				BARE_MIL_sport_Fee_Have_Var = MIL_Sport_Fee_cost
+			}
+			subtract_from_variable = {
+				BARE_MIL_sport_Student_Support_Var = 15
+			}
+			add_to_variable = {
+				BARE_MIL_sport_Score_Var = 10
+			}
+			BARE_MIL_Sport_Student_Support_Var_Chance_effect = yes
+		}
+	}
+
+	MIL_Sport_Cooperation_GEH = {
+		# 2026-05-20: 与格黑娜进行商业合作；决议只发出请求，事件回复按关系随机结果后再结算上限
+		visible = {
+			has_completed_focus = MIL_need_help
+			GEH = { exists = yes }
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = MIL_Sport_Cooperation_Request_Pending_tooltip
+				NOT = { has_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag }
+			}
+		}
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			set_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag
+			country_event = { id = MIL_sport_event.65 days = 7 }
+			custom_effect_tooltip = MIL_Sport_Cooperation_Request_Sent_tt
+		}
+	}
+
+	MIL_Sport_Cooperation_TRI = {
+		# 2026-05-20: 与圣三一进行商业合作；决议只发出请求，事件回复按关系随机结果后再结算上限
+		visible = {
+			has_completed_focus = MIL_need_help
+			TRI = { exists = yes }
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = MIL_Sport_Cooperation_Request_Pending_tooltip
+				NOT = { has_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag }
+			}
+		}
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			set_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag
+			country_event = { id = MIL_sport_event.66 days = 7 }
+			custom_effect_tooltip = MIL_Sport_Cooperation_Request_Sent_tt
+		}
+	}
+
+	MIL_Sport_Cooperation_SHA = {
+		# 2026-05-20: 与山海经进行商业合作；决议只发出请求，事件回复按关系随机结果后再结算上限
+		visible = {
+			has_completed_focus = MIL_need_help
+			SHA = { exists = yes }
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = MIL_Sport_Cooperation_Request_Pending_tooltip
+				NOT = { has_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag }
+			}
+		}
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			set_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag
+			country_event = { id = MIL_sport_event.67 days = 7 }
+			custom_effect_tooltip = MIL_Sport_Cooperation_Request_Sent_tt
+		}
+	}
+
+	MIL_Sport_Cooperation_RWT = {
+		# 2026-05-20: 与赤冬进行商业合作；决议只发出请求，事件回复按关系随机结果后再结算上限
+		visible = {
+			has_completed_focus = MIL_need_help
+			RWT = { exists = yes }
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = MIL_Sport_Cooperation_Request_Pending_tooltip
+				NOT = { has_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag }
+			}
+		}
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			set_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag
+			country_event = { id = MIL_sport_event.68 days = 7 }
+			custom_effect_tooltip = MIL_Sport_Cooperation_Request_Sent_tt
+		}
+	}
+
+	MIL_Sport_Cooperation_HYA = {
+		# 2026-05-20: 与百鬼夜行进行商业合作；决议只发出请求，事件回复按关系随机结果后再结算上限
+		visible = {
+			has_completed_focus = MIL_need_help
+			HYA = { exists = yes }
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = MIL_Sport_Cooperation_Request_Pending_tooltip
+				NOT = { has_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag }
+			}
+		}
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			set_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag
+			country_event = { id = MIL_sport_event.69 days = 7 }
+			custom_effect_tooltip = MIL_Sport_Cooperation_Request_Sent_tt
+		}
+	}
 }
+
+# 2026-05-18: 全局宣传系统的千年落地实现。
+# 设计说明：
+# 1. 结构参考原版苏联宣传鼓动部 `SOV_propaganda_campaigns`，保留“持续时间 / 冷却 / 并发上限 / 单项递增成本”的骨架。
+# 2. 用户要求当前先不要使用专用决议 GUI，因此这里把宣传活动写成普通文本决议，但仍复用通用宣传系统变量。
+# 3. 用户还要求把脚本放进千年的决议文件里统一维护，因此虽然类别名仍为全局宣传活动，首批千年宣传决议直接定义在本文件。
+# 4. `visible` 负责把这组决议严格限定在千年与晄轮大祭筹备阶段，避免其他势力误见。
+# 5. `available` 只检查“是否还有宣传栏位”，把宣传系统的并发控制集中交给通用 trigger，后续扩展时不容易写散。
+# 6. `complete_effect` 负责立即结算本次宣传的即时收益，并登记一个正在运行的宣传活动。
+# 7. `remove_effect` 在持续时间结束后负责释放栏位，并把该条宣传的下次成本按全局倍率抬高。
+BARE_global_propaganda_campaigns = {
+	MIL_Public_Pull_Together = {
+		# 齐心协力，共迎晄轮大祭：
+		# 倾向于提升内部凝聚力，属于“稳支持、稳秩序”的基础宣传。
+		priority = 10
+		icon = eng_propaganda_campaigns
+
+		visible = {
+			original_tag = MIL
+			has_country_flag = BARE_MIL_public_campaigns_unlocked_flag
+			has_global_flag = BARE_MIL_Sport_prepare_flag
+		}
+
+		available = {
+			BARE_propaganda_slot_available = yes
+		}
+
+		# 持续时间与冷却完全复用通用宣传系统变量。
+		days_remove = BARE_default_propaganda_campaign_duration_var
+		days_re_enable = BARE_default_propaganda_campaign_cooldown_var
+		cost = BARE_MIL_public_pull_together_cost_var
+
+		# 持续修正：
+		# 用稳定度与政治点增长模拟“组织协同度提升后，校内整体执行更顺”。
+		modifier = {
+			stability_factor = 0.05
+			political_power_factor = 0.05
+		}
+
+		complete_effect = {
+			# 登记一个进行中的宣传活动，并累计系统总发动次数。
+			add_to_variable = {
+				BARE_propaganda_active_campaigns_var = 1
+			}
+			add_to_variable = {
+				BARE_propaganda_campaigns_total_var = 1
+			}
+
+			# 即时收益：
+			# 这类宣传的核心回报是“快速稳住校内舆论”，因此学生支持度提升幅度高于综合评分。
+			add_to_variable = {
+				BARE_MIL_sport_Student_Support_Var = 10
+			}
+			add_to_variable = {
+				BARE_MIL_sport_Score_Var = 5
+			}
+			BARE_MIL_Sport_Student_Support_Var_Chance_effect = yes
+			custom_effect_tooltip = MIL_Public_Pull_Together_tt
+		}
+
+		remove_effect = {
+			# 活动到期后释放一个宣传栏位。
+			add_to_variable = {
+				BARE_propaganda_active_campaigns_var = -1
+			}
+
+			# 递增成本：
+			# 复用通用倍率逻辑，这样后面别的学院接入时不需要重写“涨价规则”。
+			set_variable = {
+				BARE_propaganda_cost_var = BARE_MIL_public_pull_together_cost_var
+			}
+			BARE_increase_propaganda_campaign_cost_effect = yes
+			set_variable = {
+				BARE_MIL_public_pull_together_cost_var = BARE_propaganda_cost_var
+			}
+			clear_variable = BARE_propaganda_cost_var
+			custom_effect_tooltip = BARE_propaganda_campaign_cooldown_tt
+		}
+	}
+
+	MIL_Public_Unique_Charm = {
+		# 独属于千年的风采：
+		# 偏形象包装，兼顾对内认同与对外观感，因此给稳定和月度关系增长。
+		priority = 11
+		icon = eng_propaganda_campaigns
+
+		visible = {
+			original_tag = MIL
+			has_country_flag = BARE_MIL_public_campaigns_unlocked_flag
+			has_global_flag = BARE_MIL_Sport_prepare_flag
+		}
+
+		available = {
+			BARE_propaganda_slot_available = yes
+		}
+
+		days_remove = BARE_default_propaganda_campaign_duration_var
+		days_re_enable = BARE_default_propaganda_campaign_cooldown_var
+		cost = BARE_MIL_public_unique_charm_cost_var
+
+		modifier = {
+			stability_weekly = 0.003
+			opinion_gain_monthly_factor = 0.10
+		}
+
+		complete_effect = {
+			add_to_variable = {
+				BARE_propaganda_active_campaigns_var = 1
+			}
+			add_to_variable = {
+				BARE_propaganda_campaigns_total_var = 1
+			}
+
+			# 这条宣传更偏“学院品牌展示”，所以即时分数与支持度都比较均衡。
+			add_to_variable = {
+				BARE_MIL_sport_Student_Support_Var = 8
+			}
+			add_to_variable = {
+				BARE_MIL_sport_Score_Var = 6
+			}
+			BARE_MIL_Sport_Student_Support_Var_Chance_effect = yes
+			custom_effect_tooltip = MIL_Public_Unique_Charm_tt
+		}
+
+		remove_effect = {
+			add_to_variable = {
+				BARE_propaganda_active_campaigns_var = -1
+			}
+			set_variable = {
+				BARE_propaganda_cost_var = BARE_MIL_public_unique_charm_cost_var
+			}
+			BARE_increase_propaganda_campaign_cost_effect = yes
+			set_variable = {
+				BARE_MIL_public_unique_charm_cost_var = BARE_propaganda_cost_var
+			}
+			clear_variable = BARE_propaganda_cost_var
+			custom_effect_tooltip = BARE_propaganda_campaign_cooldown_tt
+		}
+	}
+
+	MIL_Public_Technology_Oriented = {
+		# 科技乃千年之本：
+		# 偏“技术方案的合理性宣传”，所以持续修正放在科研与建设效率上。
+		priority = 12
+		icon = eng_propaganda_campaigns
+
+		visible = {
+			original_tag = MIL
+			has_country_flag = BARE_MIL_public_campaigns_unlocked_flag
+			has_global_flag = BARE_MIL_Sport_prepare_flag
+		}
+
+		available = {
+			BARE_propaganda_slot_available = yes
+		}
+
+		days_remove = BARE_default_propaganda_campaign_duration_var
+		days_re_enable = BARE_default_propaganda_campaign_cooldown_var
+		cost = BARE_MIL_public_technology_oriented_cost_var
+
+		modifier = {
+			research_speed_factor = 0.05
+			production_speed_buildings_factor = 0.05
+		}
+
+		complete_effect = {
+			add_to_variable = {
+				BARE_propaganda_active_campaigns_var = 1
+			}
+			add_to_variable = {
+				BARE_propaganda_campaigns_total_var = 1
+			}
+
+			# 即时收益更偏筹备质量而非情绪动员，因此评分高于支持度。
+			add_to_variable = {
+				BARE_MIL_sport_Student_Support_Var = 5
+			}
+			add_to_variable = {
+				BARE_MIL_sport_Score_Var = 8
+			}
+			BARE_MIL_Sport_Student_Support_Var_Chance_effect = yes
+			custom_effect_tooltip = MIL_Public_Technology_Oriented_tt
+		}
+
+		remove_effect = {
+			add_to_variable = {
+				BARE_propaganda_active_campaigns_var = -1
+			}
+			set_variable = {
+				BARE_propaganda_cost_var = BARE_MIL_public_technology_oriented_cost_var
+			}
+			BARE_increase_propaganda_campaign_cost_effect = yes
+			set_variable = {
+				BARE_MIL_public_technology_oriented_cost_var = BARE_propaganda_cost_var
+			}
+			clear_variable = BARE_propaganda_cost_var
+			custom_effect_tooltip = BARE_propaganda_campaign_cooldown_tt
+		}
+	}
+
+	MIL_Public_Do_you_Part = {
+		# 为晄轮大祭贡献一份力量：
+		# 这条宣传强调群众动员与资源征集，因此需要先完成“开源”。
+		priority = 13
+		icon = eng_propaganda_campaigns
+
+		visible = {
+			original_tag = MIL
+			has_country_flag = BARE_MIL_public_campaigns_unlocked_flag
+			has_global_flag = BARE_MIL_Sport_prepare_flag
+			has_completed_focus = MIL_make_more_money
+		}
+
+		available = {
+			BARE_propaganda_slot_available = yes
+		}
+
+		days_remove = BARE_default_propaganda_campaign_duration_var
+		days_re_enable = BARE_default_propaganda_campaign_cooldown_var
+		cost = BARE_MIL_public_do_your_part_cost_var
+
+		# 通过降低消费品比例与提高政治点增长，模拟资源调度和组织响应改善。
+		modifier = {
+			political_power_factor = 0.08
+			consumer_goods_factor = -0.03
+		}
+
+		complete_effect = {
+			add_to_variable = {
+				BARE_propaganda_active_campaigns_var = 1
+			}
+			add_to_variable = {
+				BARE_propaganda_campaigns_total_var = 1
+			}
+
+			# 这是首批宣传里唯一一条能直接补充当月筹备经费的活动。
+			add_to_variable = {
+				BARE_MIL_sport_Fee_Have_Var = 5
+			}
+			add_to_variable = {
+				BARE_MIL_sport_Student_Support_Var = 5
+			}
+			add_to_variable = {
+				BARE_MIL_sport_Score_Var = 6
+			}
+			BARE_MIL_Sport_Student_Support_Var_Chance_effect = yes
+			custom_effect_tooltip = MIL_Public_Do_you_Part_tt
+		}
+
+		remove_effect = {
+			add_to_variable = {
+				BARE_propaganda_active_campaigns_var = -1
+			}
+			set_variable = {
+				BARE_propaganda_cost_var = BARE_MIL_public_do_your_part_cost_var
+			}
+			BARE_increase_propaganda_campaign_cost_effect = yes
+			set_variable = {
+				BARE_MIL_public_do_your_part_cost_var = BARE_propaganda_cost_var
+			}
+			clear_variable = BARE_propaganda_cost_var
+			custom_effect_tooltip = BARE_propaganda_campaign_cooldown_tt
+		}
+	}
+
+	MIL_Public_Reduce_Waste = {
+		# 勤俭节约，减少浪费：
+		# 这条宣传偏向内部纪律整顿，因此要求先走“节流”路线。
+		priority = 14
+		icon = eng_propaganda_campaigns
+
+		visible = {
+			original_tag = MIL
+			has_country_flag = BARE_MIL_public_campaigns_unlocked_flag
+			has_global_flag = BARE_MIL_Sport_prepare_flag
+			has_completed_focus = MIL_reduce_cost
+		}
+
+		available = {
+			BARE_propaganda_slot_available = yes
+		}
+
+		days_remove = BARE_default_propaganda_campaign_duration_var
+		days_re_enable = BARE_default_propaganda_campaign_cooldown_var
+		cost = BARE_MIL_public_reduce_waste_cost_var
+
+		modifier = {
+			consumer_goods_factor = -0.05
+			production_speed_buildings_factor = 0.03
+		}
+
+		complete_effect = {
+			add_to_variable = {
+				BARE_propaganda_active_campaigns_var = 1
+			}
+			add_to_variable = {
+				BARE_propaganda_campaigns_total_var = 1
+			}
+
+			# 即时收益以“省下一点当月可支配经费”为核心，评分和支持度则是辅助收益。
+			add_to_variable = {
+				BARE_MIL_sport_Fee_Have_Var = 3
+			}
+			add_to_variable = {
+				BARE_MIL_sport_Student_Support_Var = 4
+			}
+			add_to_variable = {
+				BARE_MIL_sport_Score_Var = 4
+			}
+			BARE_MIL_Sport_Student_Support_Var_Chance_effect = yes
+			custom_effect_tooltip = MIL_Public_Reduce_Waste_tt
+		}
+
+		remove_effect = {
+			add_to_variable = {
+				BARE_propaganda_active_campaigns_var = -1
+			}
+			set_variable = {
+				BARE_propaganda_cost_var = BARE_MIL_public_reduce_waste_cost_var
+			}
+			BARE_increase_propaganda_campaign_cost_effect = yes
+			set_variable = {
+				BARE_MIL_public_reduce_waste_cost_var = BARE_propaganda_cost_var
+			}
+			clear_variable = BARE_propaganda_cost_var
+			custom_effect_tooltip = BARE_propaganda_campaign_cooldown_tt
+		}
+	}
+
+	MIL_Public_We_Can_Do = {
+		# 我们能做到：
+		# 这是第一批宣传中的强化版口号，要求先完成隐藏国策“我们能做到”。
+		# 它的设计目标是把“学院自力更生”的路线收益集中体现在最终冲刺期。
+		priority = 15
+		icon = eng_propaganda_campaigns
+
+		visible = {
+			original_tag = MIL
+			has_country_flag = BARE_MIL_public_campaigns_unlocked_flag
+			has_global_flag = BARE_MIL_Sport_prepare_flag
+			has_completed_focus = MIL_we_can_do_it_by_ourselves
+		}
+
+		available = {
+			BARE_propaganda_slot_available = yes
+		}
+
+		days_remove = BARE_default_propaganda_campaign_duration_var
+		days_re_enable = BARE_default_propaganda_campaign_cooldown_var
+		cost = BARE_MIL_public_we_can_do_cost_var
+
+		# 持续修正明显强于前几条，体现“全校总动员”的后劲。
+		modifier = {
+			industrial_capacity_factory = 0.05
+			production_speed_buildings_factor = 0.08
+			stability_factor = 0.08
+		}
+
+		complete_effect = {
+			add_to_variable = {
+				BARE_propaganda_active_campaigns_var = 1
+			}
+			add_to_variable = {
+				BARE_propaganda_campaigns_total_var = 1
+			}
+
+			# 即时收益也最强，适合当作中后期冲分与冲支持度的核心宣传。
+			add_to_variable = {
+				BARE_MIL_sport_Student_Support_Var = 12
+			}
+			add_to_variable = {
+				BARE_MIL_sport_Score_Var = 10
+			}
+			BARE_MIL_Sport_Student_Support_Var_Chance_effect = yes
+			custom_effect_tooltip = MIL_Public_We_Can_Do_tt
+		}
+
+		remove_effect = {
+			add_to_variable = {
+				BARE_propaganda_active_campaigns_var = -1
+			}
+			set_variable = {
+				BARE_propaganda_cost_var = BARE_MIL_public_we_can_do_cost_var
+			}
+			BARE_increase_propaganda_campaign_cost_effect = yes
+			set_variable = {
+				BARE_MIL_public_we_can_do_cost_var = BARE_propaganda_cost_var
+			}
+			clear_variable = BARE_propaganda_cost_var
+			custom_effect_tooltip = BARE_propaganda_campaign_cooldown_tt
+		}
+	}
+}
+
 MIL_Sport_decision_test_category = {
 	MIL_Sport_Start_decision = {
 		complete_effect = {

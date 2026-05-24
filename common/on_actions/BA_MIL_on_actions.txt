@@ -1,4 +1,29 @@
 on_actions = {
+    # 2026-05-20: 接入晄轮大祭月度循环；剩余月份归零后进入待结算状态，不再执行月更
+    on_monthly_MIL = {
+        effect = {
+            if = {
+                limit = {
+                    original_tag = MIL
+                    has_global_flag = BARE_MIL_Sport_prepare_flag
+                    NOT = { has_country_flag = BARE_MIL_Sport_settlement_pending_flag }
+                    check_variable = {
+                        BARE_MIL_sport_Month_Time_Var > 0
+                    }
+                }
+                BARE_MIL_Sport_Monthly_effect = yes
+            }
+            if = {
+                limit = {
+                    original_tag = MIL
+                    has_country_flag = BARE_MIL_Sport_support_normalizing_flag
+                }
+                # 2026-05-20: 结算后不再跑筹备月更，只保留支持度向50回正的轻量逻辑。
+                BARE_MIL_Sport_Post_Settlement_Support_Normalize_effect = yes
+            }
+        }
+    }
+
     # 千年-凯撒战争每周事件
     # Wiki参考：https://hoi4.paradoxwikis.com/On_actions
     # 用于处理每周减少凯撒经济状况的逻辑
