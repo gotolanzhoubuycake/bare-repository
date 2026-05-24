@@ -1,0 +1,176 @@
+# 2026-05-25: 晄轮大祭 GUI 按钮动态悬浮提示。
+# 说明：这些 defined_text 只负责返回“满足/未满足”状态文本；具体条件说明仍放在本地化文件中，便于后续调整文案。
+
+defined_text = { # 2026-05-25: 经费调整国策解锁状态
+	name = Get_MIL_Sport_Fee_Adjust_Focus_Status
+	text = {
+		trigger = {
+			has_completed_focus = MIL_yuuka_unhappy
+		}
+		localization_key = "MIL_Sport_Condition_Status_Yes"
+	}
+	text = {
+		localization_key = "MIL_Sport_Condition_Status_No"
+	}
+}
+
+defined_text = { # 2026-05-25: 安保调整国策解锁状态
+	name = Get_MIL_Sport_Security_Adjust_Focus_Status
+	text = {
+		trigger = {
+			has_completed_focus = MIL_opposition_hidden_in_the_dark
+		}
+		localization_key = "MIL_Sport_Condition_Status_Yes"
+	}
+	text = {
+		localization_key = "MIL_Sport_Condition_Status_No"
+	}
+}
+
+defined_text = { # 2026-05-25: 科技调整国策解锁状态
+	name = Get_MIL_Sport_Tech_Adjust_Focus_Status
+	text = {
+		trigger = {
+			has_completed_focus = MIL_The_power_of_Technology
+		}
+		localization_key = "MIL_Sport_Condition_Status_Yes"
+	}
+	text = {
+		localization_key = "MIL_Sport_Condition_Status_No"
+	}
+}
+
+defined_text = { # 2026-05-25: 经费等级可提高状态
+	name = Get_MIL_Sport_Fee_Add_Level_Status
+	text = {
+		trigger = {
+			check_variable = {
+				BARE_MIL_sport_Fee_Level_Var < 5
+			}
+		}
+		localization_key = "MIL_Sport_Condition_Status_Yes"
+	}
+	text = {
+		localization_key = "MIL_Sport_Condition_Status_No"
+	}
+}
+
+defined_text = { # 2026-05-25: 经费等级可降低状态
+	name = Get_MIL_Sport_Fee_Sub_Level_Status
+	text = {
+		trigger = {
+			check_variable = {
+				BARE_MIL_sport_Fee_Level_Var > 1
+			}
+		}
+		localization_key = "MIL_Sport_Condition_Status_Yes"
+	}
+	text = {
+		localization_key = "MIL_Sport_Condition_Status_No"
+	}
+}
+
+defined_text = { # 2026-05-25: 经费本月未调整状态
+	name = Get_MIL_Sport_Fee_Monthly_Adjust_Status
+	text = {
+		trigger = {
+			not = {
+				has_country_flag = BARE_MIL_sport_Fee_Have_Change
+			}
+		}
+		localization_key = "MIL_Sport_Condition_Status_Yes"
+	}
+	text = {
+		localization_key = "MIL_Sport_Condition_Status_No"
+	}
+}
+
+defined_text = { # 2026-05-25: 安保等级可提高状态
+	name = Get_MIL_Sport_Security_Add_Level_Status
+	text = {
+		trigger = {
+			check_variable = {
+				BARE_MIL_sport_Security_Have_Var < BARE_MIL_sport_Security_Max_Var
+			}
+		}
+		localization_key = "MIL_Sport_Condition_Status_Yes"
+	}
+	text = {
+		localization_key = "MIL_Sport_Condition_Status_No"
+	}
+}
+
+defined_text = { # 2026-05-25: 安保等级可降低状态
+	name = Get_MIL_Sport_Security_Sub_Level_Status
+	text = {
+		trigger = {
+			check_variable = {
+				BARE_MIL_sport_Security_Have_Var > 1
+			}
+		}
+		localization_key = "MIL_Sport_Condition_Status_Yes"
+	}
+	text = {
+		localization_key = "MIL_Sport_Condition_Status_No"
+	}
+}
+
+defined_text = { # 2026-05-25: 安保本月未调整状态
+	name = Get_MIL_Sport_Security_Monthly_Adjust_Status
+	text = {
+		trigger = {
+			not = {
+				has_country_flag = BARE_MIL_sport_Security_Have_Change
+			}
+		}
+		localization_key = "MIL_Sport_Condition_Status_Yes"
+	}
+	text = {
+		localization_key = "MIL_Sport_Condition_Status_No"
+	}
+}
+
+defined_text = { # 2026-05-25: 科技等级可提高状态
+	name = Get_MIL_Sport_Tech_Add_Level_Status
+	text = {
+		trigger = {
+			check_variable = {
+				BARE_MIL_sport_Tech_Have_Var < BARE_MIL_sport_Tech_Max_Var
+			}
+		}
+		localization_key = "MIL_Sport_Condition_Status_Yes"
+	}
+	text = {
+		localization_key = "MIL_Sport_Condition_Status_No"
+	}
+}
+
+defined_text = { # 2026-05-25: 科技等级可降低状态
+	name = Get_MIL_Sport_Tech_Sub_Level_Status
+	text = {
+		trigger = {
+			check_variable = {
+				BARE_MIL_sport_Tech_Have_Var > 1
+			}
+		}
+		localization_key = "MIL_Sport_Condition_Status_Yes"
+	}
+	text = {
+		localization_key = "MIL_Sport_Condition_Status_No"
+	}
+}
+
+defined_text = { # 2026-05-25: 科技本月未调整状态
+	name = Get_MIL_Sport_Tech_Monthly_Adjust_Status
+	text = {
+		trigger = {
+			not = {
+				has_country_flag = BARE_MIL_sport_Tech_Have_Change
+			}
+		}
+		localization_key = "MIL_Sport_Condition_Status_Yes"
+	}
+	text = {
+		localization_key = "MIL_Sport_Condition_Status_No"
+	}
+}
