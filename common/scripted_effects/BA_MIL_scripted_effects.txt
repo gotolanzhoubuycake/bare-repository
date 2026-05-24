@@ -152,6 +152,8 @@ BARE_MIL_Sport_Init_effect = {
 	}
 
 	BARE_MIL_Fee_Level_Change_effect = yes
+	BARE_MIL_Sport_Student_Support_Var_Chance_effect = yes
+	BARE_MIL_Sport_GUI_Display_Var_Refresh_effect = yes
 
 
 }
@@ -386,6 +388,33 @@ BARE_MIL_Sport_Student_Support_Var_Chance_effect = {
 		BARE_MIL_sport_Student_Support_Modifier_industrial_capacity_factory_var = BARE_MIL_sport_Student_Support_Var_Chance_Level_Temp_Var
 	}
 
+	# 2026-05-25: 写入支持度 GUI 展示变量，供 pdx_tooltip 直接显示当前档位的具体影响。
+	set_variable = {
+		BARE_MIL_sport_Student_Support_Level_Display_Var = BARE_MIL_sport_Student_Support_Var_Chance_Level_Temp_Var
+	}
+	set_variable = {
+		BARE_MIL_sport_Student_Support_Stability_Display_Var = BARE_MIL_sport_Student_Support_Level_Display_Var
+	}
+	multiply_variable = {
+		BARE_MIL_sport_Student_Support_Stability_Display_Var = 2
+	}
+	set_variable = {
+		BARE_MIL_sport_Student_Support_Research_Display_Var = BARE_MIL_sport_Student_Support_Level_Display_Var
+	}
+	multiply_variable = {
+		BARE_MIL_sport_Student_Support_Research_Display_Var = 2
+	}
+	set_variable = {
+		BARE_MIL_sport_Student_Support_Building_Display_Var = BARE_MIL_sport_Student_Support_Level_Display_Var
+	}
+	multiply_variable = {
+		BARE_MIL_sport_Student_Support_Building_Display_Var = 3
+	}
+	set_variable = {
+		BARE_MIL_sport_Student_Support_Factory_Display_Var = BARE_MIL_sport_Student_Support_Level_Display_Var
+	}
+	BARE_MIL_Sport_GUI_Display_Var_Refresh_effect = yes
+
 	force_update_dynamic_modifier = yes
 
 }
@@ -472,6 +501,7 @@ BARE_MIL_Fee_All_Change_effect = {
 		min = 0
 		max = 999
 	}
+	BARE_MIL_Sport_GUI_Display_Var_Refresh_effect = yes
 }
 BARE_MIL_Fee_Level_Change_effect = {
 	# 2026-05-18: 经费等级直接决定额外经费与月度消耗，但无论升降都不当月改当前经费，只影响下月月结
@@ -545,6 +575,77 @@ BARE_MIL_Fee_Level_Change_effect = {
 	}
 
 	BARE_MIL_Fee_All_Change_effect = yes
+}
+
+BARE_MIL_Sport_GUI_Display_Var_Refresh_effect = {
+	# 2026-05-25: 统一刷新 GUI pdx_tooltip 使用的展示变量。
+	# 这些变量只服务界面展示，不直接参与月更、决议花费或结算判定。
+	set_variable = {
+		BARE_MIL_sport_Student_Support_Monthly_Display_Var = modifier@MIL_sport_student_support_monthly
+	}
+
+	set_variable = {
+		BARE_MIL_sport_Sabotage_Safe_Weight_Display_Var = BARE_MIL_sport_Security_Have_Var
+	}
+	multiply_variable = {
+		BARE_MIL_sport_Sabotage_Safe_Weight_Display_Var = 5
+	}
+	add_to_variable = {
+		BARE_MIL_sport_Sabotage_Safe_Weight_Display_Var = 35
+	}
+	clamp_variable = {
+		var = BARE_MIL_sport_Sabotage_Safe_Weight_Display_Var
+		min = 40
+		max = 60
+	}
+
+	set_variable = {
+		BARE_MIL_sport_Tech_Score_Monthly_Display_Var = BARE_MIL_sport_Tech_Have_Var
+	}
+	subtract_from_variable = {
+		BARE_MIL_sport_Tech_Score_Monthly_Display_Var = 2
+	}
+	clamp_variable = {
+		var = BARE_MIL_sport_Tech_Score_Monthly_Display_Var
+		min = 0
+		max = 3
+	}
+	set_variable = {
+		BARE_MIL_sport_Tech_Stability_Display_Var = BARE_MIL_sport_Tech_Have_Var
+	}
+	set_variable = {
+		BARE_MIL_sport_Tech_Research_Display_Var = BARE_MIL_sport_Tech_Have_Var
+	}
+	set_variable = {
+		BARE_MIL_sport_Tech_Building_Display_Var = BARE_MIL_sport_Tech_Have_Var
+	}
+	multiply_variable = {
+		BARE_MIL_sport_Tech_Building_Display_Var = 2
+	}
+
+	set_variable = {
+		BARE_MIL_sport_Building_Next_Score_Display_Var = BARE_MIL_sport_Building_Score_Var
+	}
+	add_to_variable = {
+		BARE_MIL_sport_Building_Next_Score_Display_Var = 1
+	}
+	multiply_variable = {
+		BARE_MIL_sport_Building_Next_Score_Display_Var = 5
+	}
+	clamp_variable = {
+		var = BARE_MIL_sport_Building_Next_Score_Display_Var
+		min = 5
+		max = 25
+	}
+	set_variable = {
+		BARE_MIL_sport_Building_Next_Fee_Display_Var = MIL_Sport_Constructing_Sports_Venues_use
+	}
+	multiply_variable = {
+		BARE_MIL_sport_Building_Next_Fee_Display_Var = 10
+	}
+	add_to_variable = {
+		BARE_MIL_sport_Building_Next_Fee_Display_Var = 10
+	}
 }
 
 BARE_MIL_Sport_Cooperation_Add_Budget_effect = {
@@ -925,7 +1026,7 @@ BARE_MIL_Sport_Cooperation_Remove_Sponsor_Modifiers_effect = {
 }
 
 BARE_MIL_Sport_Building_Score_Frame_Change_effect = {
-	# 2026-05-18: 场馆准备程度GUI使用5帧星级图，按建设次数1-5映射到帧0-4
+	# 2026-05-25: 场馆准备程度GUI使用0基准帧；显示逻辑为“当前帧+1=星级”，1-5级映射到0-4帧。
 	set_variable = {
 		BARE_MIL_sport_Building_Score_Frame_Var = BARE_MIL_sport_Building_Score_Var
 	}
@@ -937,11 +1038,16 @@ BARE_MIL_Sport_Building_Score_Frame_Change_effect = {
 		min = 0
 		max = 4
 	}
+	BARE_MIL_Sport_GUI_Display_Var_Refresh_effect = yes
 }
 
 BARE_MIL_Sport_Security_Var_Chance_effect = {
+	# 2026-05-25: 安保等级是经费维护消耗；刷新时按当前等级写入负值，避免调级后从消耗变成收益。
 	set_variable = {
 		BARE_MIL_sport_Security_Modifier_MIL_sport_student_Fee_monthly_var = BARE_MIL_sport_Security_Have_Var
+	}
+	multiply_variable = {
+		BARE_MIL_sport_Security_Modifier_MIL_sport_student_Fee_monthly_var = -1
 	}
 	BARE_MIL_Fee_All_Change_effect = yes
 }

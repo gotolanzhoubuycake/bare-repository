@@ -116,6 +116,8 @@ guiTypes = {
 		iconType = { #分隔线
 			name ="MIL_sport_GUI_Info_BG_1_2"
 			spriteType = "GFX_MIL_sport_GUI_Info_BG_2"
+			# 2026-05-25: 经费数值栏悬浮显示当前上限、恢复和各项消耗来源。
+			pdx_tooltip = "BARE_MIL_sport_GUI_Info_Text_1_2_tooltip"
 			position = { x=170	 y=356 }
 		}
 
@@ -127,6 +129,7 @@ guiTypes = {
 			font = "LXGW_975_12"
 			borderSize = {x = 0 y = 0}
 			text = "BARE_MIL_sport_GUI_Info_Text_1_2"
+			pdx_tooltip = "BARE_MIL_sport_GUI_Info_Text_1_2_tooltip"
 			maxWidth = 115
 			maxHeight = 26
 			format = center
@@ -144,6 +147,8 @@ guiTypes = {
 		iconType = { #背景
 			name ="MIL_sport_GUI_Info_BG_1_3"
 			spriteType = "GFX_MIL_sport_GUI_Info_BG_3"
+			# 2026-05-25: 经费等级栏悬浮显示当前等级对经费恢复的具体影响。
+			pdx_tooltip = "BARE_MIL_sport_GUI_Info_Text_1_3_tooltip"
 			position = { x=270	 y=356 }
 		}
 
@@ -154,6 +159,7 @@ guiTypes = {
 			font = "LXGW_975_12"
 			borderSize = {x = 0 y = 0}
 			text = "BARE_MIL_sport_GUI_Info_Text_1_3"
+			pdx_tooltip = "BARE_MIL_sport_GUI_Info_Text_1_3_tooltip"
 			maxWidth = 149
 			maxHeight = 16
 			format = center
@@ -206,6 +212,8 @@ guiTypes = {
 		iconType = { #背景
 			name ="MIL_sport_GUI_Info_BG_2_2"
 			spriteType = "GFX_MIL_sport_GUI_Info_BG_2"
+			# 2026-05-25: 安保等级栏悬浮显示当前经费消耗和安全权重。
+			pdx_tooltip = "BARE_MIL_sport_GUI_Info_Text_2_2_tooltip"
 			position = { x=170	 y=400 }
 		}
 
@@ -217,6 +225,7 @@ guiTypes = {
 			font = "LXGW_975_12"
 			borderSize = {x = 0 y = 0}
 			text = "BARE_MIL_sport_GUI_Info_Text_2_2"
+			pdx_tooltip = "BARE_MIL_sport_GUI_Info_Text_2_2_tooltip"
 			maxWidth = 115
 			maxHeight = 26
 			format = center
@@ -276,6 +285,8 @@ guiTypes = {
 		iconType = { #背景
 			name ="MIL_sport_GUI_Info_BG_3_2"
 			spriteType = "GFX_MIL_sport_GUI_Info_BG_2"
+			# 2026-05-25: 科技等级栏悬浮显示当前民族精神收益和经费消耗。
+			pdx_tooltip = "BARE_MIL_sport_GUI_Info_Text_3_2_tooltip"
 			position = { x=170	 y=446 }
 		}
 
@@ -287,6 +298,7 @@ guiTypes = {
 			font = "LXGW_975_12"
 			borderSize = {x = 0 y = 0}
 			text = "BARE_MIL_sport_GUI_Info_Text_3_2"
+			pdx_tooltip = "BARE_MIL_sport_GUI_Info_Text_3_2_tooltip"
 			maxWidth = 115
 			maxHeight = 26
 			format = center
@@ -313,6 +325,8 @@ guiTypes = {
 		iconType = { #文本背景1
 			name ="MIL_sport_GUI_Info_BG_4_1"
 			spriteType = "GFX_MIL_sport_GUI_Info_BG_4"
+			# 2026-05-25: 支持度栏悬浮显示当前支持度档位修正和月度变化。
+			pdx_tooltip = "BARE_MIL_sport_GUI_Info_Text_4_1_tooltip"
 			position = { x=25	 y=487 }
 		}
 
@@ -329,6 +343,7 @@ guiTypes = {
 			font = "LXGW_975_12"
 			borderSize = {x = 0 y = 0}
 			text = "BARE_MIL_sport_GUI_Info_Text_4_1"
+			pdx_tooltip = "BARE_MIL_sport_GUI_Info_Text_4_1_tooltip"
 			maxWidth = 99
 			maxHeight = 16
 			format = center
@@ -339,6 +354,7 @@ guiTypes = {
 		iconType = { #进度条
 			name ="MIL_sport_GUI_Info_Progress_4"
 			spriteType = "GFX_MIL_sport_GUI_Info_Progress"
+			pdx_tooltip = "BARE_MIL_sport_GUI_Info_Text_4_1_tooltip"
 			position = { x=171	 y=488 }
 		}
 
@@ -355,6 +371,8 @@ guiTypes = {
 		iconType = { #文本背景1
 			name ="MIL_sport_GUI_Info_BG_5_1"
 			spriteType = "GFX_MIL_sport_GUI_Info_BG_5"
+			# 2026-05-25: 准备评分栏悬浮显示结算阈值和当前科技月度评分。
+			pdx_tooltip = "BARE_MIL_sport_GUI_Info_Text_5_1_tooltip"
 			position = { x=25	 y=528 }
 		}
 
@@ -371,6 +389,7 @@ guiTypes = {
 			font = "LXGW_975_12"
 			borderSize = {x = 0 y = 0}
 			text = "BARE_MIL_sport_GUI_Info_Text_5_1"
+			pdx_tooltip = "BARE_MIL_sport_GUI_Info_Text_5_1_tooltip"
 			maxWidth = 100
 			maxHeight = 16
 			format = center
@@ -390,6 +409,8 @@ guiTypes = {
 		iconType = { #文本背景1
 			name ="MIL_sport_GUI_Info_BG_6_1"
 			spriteType = "GFX_MIL_sport_GUI_Info_BG_5"
+			# 2026-05-25: 场地等级栏悬浮显示当前等级、结算阈值和下一次建设收益。
+			pdx_tooltip = "BARE_MIL_sport_GUI_Info_Text_6_1_tooltip"
 			position = { x=25	 y=571 }
 		}
 
@@ -406,6 +427,7 @@ guiTypes = {
 			font = "LXGW_975_12"
 			borderSize = {x = 0 y = 0}
 			text = "BARE_MIL_sport_GUI_Info_Text_6_1"
+			pdx_tooltip = "BARE_MIL_sport_GUI_Info_Text_6_1_tooltip"
 			maxWidth = 100
 			maxHeight = 16
 			format = center
@@ -416,6 +438,7 @@ guiTypes = {
 		iconType = { #图标
 			name ="MIL_sport_GUI_Info_Start_Line"
 			spriteType = "GFX_MIL_sport_GUI_Info_Start_Line"
+			pdx_tooltip = "BARE_MIL_sport_GUI_Info_Text_6_1_tooltip"
 			position = { x=148	 y=576 }
 		}
 

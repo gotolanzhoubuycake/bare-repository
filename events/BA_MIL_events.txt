@@ -148,7 +148,10 @@ country_event = {
     is_triggered_only = yes
 
     immediate = {
-        add_political_power = 50
+        # 2026-05-25: immediate内效果统一隐藏，避免事件弹窗显示即时效果。
+        hidden_effect = {
+            add_political_power = 50
+        }
     }
 
 }
@@ -162,8 +165,11 @@ country_event = {
     is_triggered_only = yes
 
     immediate = {
-        add_political_power = 100
-        add_stability = -0.05
+        # 2026-05-25: immediate内效果统一隐藏，避免事件弹窗显示即时效果。
+        hidden_effect = {
+            add_political_power = 100
+            add_stability = -0.05
+        }
     }
 
 }
@@ -177,13 +183,16 @@ country_event = {
     is_triggered_only = yes
 
     immediate = {
-        add_opinion_modifier = {
-            target = CAE
-            modifier = negotiate_with_cae
-        }
-        reverse_add_opinion_modifier = {
-            target = MIL
-            modifier = negotiate_with_cae
+        # 2026-05-25: immediate内效果统一隐藏，避免事件弹窗显示即时效果。
+        hidden_effect = {
+            add_opinion_modifier = {
+                target = CAE
+                modifier = negotiate_with_cae
+            }
+            reverse_add_opinion_modifier = {
+                target = MIL
+                modifier = negotiate_with_cae
+            }
         }
     }
 
@@ -280,83 +289,86 @@ country_event = {
     }
 
     immediate = {
-        # 设置全局标志，解锁凯撒战时宣传决策组和启动经济调整系统
-        CAE = {
-            set_country_flag = CAE_MIL_war_started
-            declare_war_on = {
-                target = MIL
-                type = annex_everything
+        # 2026-05-25: immediate内效果统一隐藏，避免事件弹窗显示即时效果。
+        hidden_effect = {
+            # 设置全局标志，解锁凯撒战时宣传决策组和启动经济调整系统
+            CAE = {
+                set_country_flag = CAE_MIL_war_started
+                declare_war_on = {
+                    target = MIL
+                    type = annex_everything
+                }
+                load_oob = "MIL_CAE_WAR_CAE"
+                # 马尔斯大道占领区
+                set_province_controller = 12171
+                set_province_controller = 7229
             }
-            load_oob = "MIL_CAE_WAR_CAE"
-            # 马尔斯大道占领区
-            set_province_controller = 12171
-            set_province_controller = 7229
-        }
-        MIL = {
-            set_country_flag = CAE_MIL_war_started
-            load_oob = "MIL_CAE_WAR_MIL"
-            # 千年海滩 31,471,32,730,33,731,473,320
-            31 = {
-                set_state_controller_to = CAE
-            }
-            471 = {
-                set_state_controller_to = CAE
-            }
-            32 = {
-                set_state_controller_to = CAE
-            }
-            730 = {
-                set_state_controller_to = CAE
-            }
-            33 = {
-                set_state_controller_to = CAE
-            }
-            731 = {
-                set_state_controller_to = CAE
-            }
-            473 = {
-                set_state_controller_to = CAE
-            }
-            320 = {
-                set_state_controller_to = CAE
-            }
-            # 千年大街 733,321,322,732,323
-            733 = {
-                set_state_controller_to = CAE
-            }
-            321 = {
-                set_state_controller_to = CAE
-            }
-            322 = {
-                set_state_controller_to = CAE
-            }
-            732 = {
-                set_state_controller_to = CAE
-            }
-            323 = {
-                set_state_controller_to = CAE
-            }
-            # 333, 341, 331, 477, 745, 746, 476
-            333 = {
-                set_state_controller_to = CAE
-            }
-            341 = {
-                set_state_controller_to = CAE
-            }
-            331 = {
-                set_state_controller_to = CAE
-            }
-            477 = {
-                set_state_controller_to = CAE
-            }
-            745 = {
-                set_state_controller_to = CAE
-            }
-            746 = {
-                set_state_controller_to = CAE
-            }
-            476 = {
-                set_state_controller_to = CAE
+            MIL = {
+                set_country_flag = CAE_MIL_war_started
+                load_oob = "MIL_CAE_WAR_MIL"
+                # 千年海滩 31,471,32,730,33,731,473,320
+                31 = {
+                    set_state_controller_to = CAE
+                }
+                471 = {
+                    set_state_controller_to = CAE
+                }
+                32 = {
+                    set_state_controller_to = CAE
+                }
+                730 = {
+                    set_state_controller_to = CAE
+                }
+                33 = {
+                    set_state_controller_to = CAE
+                }
+                731 = {
+                    set_state_controller_to = CAE
+                }
+                473 = {
+                    set_state_controller_to = CAE
+                }
+                320 = {
+                    set_state_controller_to = CAE
+                }
+                # 千年大街 733,321,322,732,323
+                733 = {
+                    set_state_controller_to = CAE
+                }
+                321 = {
+                    set_state_controller_to = CAE
+                }
+                322 = {
+                    set_state_controller_to = CAE
+                }
+                732 = {
+                    set_state_controller_to = CAE
+                }
+                323 = {
+                    set_state_controller_to = CAE
+                }
+                # 333, 341, 331, 477, 745, 746, 476
+                333 = {
+                    set_state_controller_to = CAE
+                }
+                341 = {
+                    set_state_controller_to = CAE
+                }
+                331 = {
+                    set_state_controller_to = CAE
+                }
+                477 = {
+                    set_state_controller_to = CAE
+                }
+                745 = {
+                    set_state_controller_to = CAE
+                }
+                746 = {
+                    set_state_controller_to = CAE
+                }
+                476 = {
+                    set_state_controller_to = CAE
+                }
             }
         }
 
@@ -430,8 +442,11 @@ country_event = {
 	fire_only_once = yes
 
 	immediate = {
-		set_country_flag = MIL_grand_festival_focus_tree_unlocked
-		mark_focus_tree_layout_dirty = yes
+		# 2026-05-25: immediate内效果统一隐藏，避免事件弹窗显示即时效果。
+		hidden_effect = {
+			set_country_flag = MIL_grand_festival_focus_tree_unlocked
+			mark_focus_tree_layout_dirty = yes
+		}
 	}
 
 
@@ -451,7 +466,7 @@ country_event = {
 # 口径说明：
 # 1. 每月只检测一次，真正的概率分配在 `BARE_MIL_Sport_Sabotage_Check_effect` 中完成。
 # 2. 主要惩罚为准备综合评分下降。
-# 3. 学生支持度的额外损失按“最终实际破坏度的一半，向下取整，最低 0”统一结算。
+# 3. 2026-05-25: 学生支持度损失按最终实际准备评分损失的 1 倍统一结算，事件选项 tooltip 按当前安保和保护状态显示实际损失。
 country_event = {
     id = MIL_sport_event.50
     title = MIL_sport_event.50.t
@@ -461,7 +476,42 @@ country_event = {
 
     option = {
 		name = MIL_sport_event.50.a
-		custom_effect_tooltip = MIL_Sport_Event_50_effect_tt
+		# 2026-05-25: 破坏事件 tooltip 按当前安保等级和保护状态显示实际扣分。
+		if = {
+			limit = {
+				check_variable = { BARE_MIL_sport_Security_Have_Var < 2 }
+				has_country_flag = MIL_Sport_Crackdown_on_Sabotage_flag
+			}
+			custom_effect_tooltip = MIL_Sport_Event_50_security_1_protected_tt
+		}
+		else_if = {
+			limit = {
+				check_variable = { BARE_MIL_sport_Security_Have_Var < 2 }
+			}
+			custom_effect_tooltip = MIL_Sport_Event_50_security_1_tt
+		}
+		else_if = {
+			limit = {
+				check_variable = { BARE_MIL_sport_Security_Have_Var < 4 }
+				has_country_flag = MIL_Sport_Crackdown_on_Sabotage_flag
+			}
+			custom_effect_tooltip = MIL_Sport_Event_50_security_2_3_protected_tt
+		}
+		else_if = {
+			limit = {
+				check_variable = { BARE_MIL_sport_Security_Have_Var < 4 }
+			}
+			custom_effect_tooltip = MIL_Sport_Event_50_security_2_3_tt
+		}
+		else_if = {
+			limit = {
+				has_country_flag = MIL_Sport_Crackdown_on_Sabotage_flag
+			}
+			custom_effect_tooltip = MIL_Sport_Event_50_security_4_5_protected_tt
+		}
+		else = {
+			custom_effect_tooltip = MIL_Sport_Event_50_security_4_5_tt
+		}
 		set_temp_variable = {
 			BARE_MIL_sport_Sabotage_Score_Damage_Temp_Var = 0
 		}
@@ -504,7 +554,42 @@ country_event = {
 
     option = {
 		name = MIL_sport_event.51.a
-		custom_effect_tooltip = MIL_Sport_Event_51_effect_tt
+		# 2026-05-25: 破坏事件 tooltip 按当前安保等级和保护状态显示实际扣分。
+		if = {
+			limit = {
+				check_variable = { BARE_MIL_sport_Security_Have_Var < 4 }
+				has_country_flag = MIL_Sport_Crackdown_on_Sabotage_flag
+			}
+			custom_effect_tooltip = MIL_Sport_Event_51_security_1_3_protected_tt
+		}
+		else_if = {
+			limit = {
+				check_variable = { BARE_MIL_sport_Security_Have_Var < 4 }
+			}
+			custom_effect_tooltip = MIL_Sport_Event_51_security_1_3_tt
+		}
+		else_if = {
+			limit = {
+				check_variable = { BARE_MIL_sport_Security_Have_Var < 5 }
+				has_country_flag = MIL_Sport_Crackdown_on_Sabotage_flag
+			}
+			custom_effect_tooltip = MIL_Sport_Event_51_security_4_protected_tt
+		}
+		else_if = {
+			limit = {
+				check_variable = { BARE_MIL_sport_Security_Have_Var < 5 }
+			}
+			custom_effect_tooltip = MIL_Sport_Event_51_security_4_tt
+		}
+		else_if = {
+			limit = {
+				has_country_flag = MIL_Sport_Crackdown_on_Sabotage_flag
+			}
+			custom_effect_tooltip = MIL_Sport_Event_51_security_5_protected_tt
+		}
+		else = {
+			custom_effect_tooltip = MIL_Sport_Event_51_security_5_tt
+		}
 		set_temp_variable = {
 			BARE_MIL_sport_Sabotage_Crackdown_Reduction_Temp_Var = 1
 		}
@@ -550,7 +635,16 @@ country_event = {
 
     option = {
 		name = MIL_sport_event.52.a
-		custom_effect_tooltip = MIL_Sport_Event_52_effect_tt
+		# 2026-05-25: 温泉开发部事件不受“严厉打击”保护影响，只按安保等级显示实际扣分。
+		if = {
+			limit = {
+				check_variable = { BARE_MIL_sport_Security_Have_Var < 5 }
+			}
+			custom_effect_tooltip = MIL_Sport_Event_52_security_1_4_tt
+		}
+		else = {
+			custom_effect_tooltip = MIL_Sport_Event_52_security_5_tt
+		}
 		set_temp_variable = {
 			BARE_MIL_sport_Sabotage_Crackdown_Reduction_Temp_Var = 0
 		}
@@ -585,7 +679,29 @@ country_event = {
 
     option = {
 		name = MIL_sport_event.53.a
-		custom_effect_tooltip = MIL_Sport_Event_53_effect_tt
+		# 2026-05-25: 破坏事件 tooltip 按当前安保等级和保护状态显示实际扣分。
+		if = {
+			limit = {
+				check_variable = { BARE_MIL_sport_Security_Have_Var < 5 }
+				has_country_flag = MIL_Sport_Crackdown_on_Sabotage_flag
+			}
+			custom_effect_tooltip = MIL_Sport_Event_53_security_1_4_protected_tt
+		}
+		else_if = {
+			limit = {
+				check_variable = { BARE_MIL_sport_Security_Have_Var < 5 }
+			}
+			custom_effect_tooltip = MIL_Sport_Event_53_security_1_4_tt
+		}
+		else_if = {
+			limit = {
+				has_country_flag = MIL_Sport_Crackdown_on_Sabotage_flag
+			}
+			custom_effect_tooltip = MIL_Sport_Event_53_security_5_protected_tt
+		}
+		else = {
+			custom_effect_tooltip = MIL_Sport_Event_53_security_5_tt
+		}
 		set_temp_variable = {
 			BARE_MIL_sport_Sabotage_Crackdown_Reduction_Temp_Var = 2
 		}
@@ -889,25 +1005,28 @@ country_event = {
 	hidden = yes
 
 	immediate = {
-		if = {
-			limit = {
-				NOT = { has_country_flag = BARE_MIL_Sport_settled_flag }
-			}
-			BARE_MIL_Sport_Settlement_Set_Result_effect = yes
+		# 2026-05-25: immediate内效果统一隐藏，避免事件弹窗显示即时效果。
+		hidden_effect = {
 			if = {
-				limit = { has_country_flag = BARE_MIL_Sport_settlement_great_success_flag }
-				country_event = { id = MIL_sport_event.61 }
-			}
-			else_if = {
-				limit = { has_country_flag = BARE_MIL_Sport_settlement_success_flag }
-				country_event = { id = MIL_sport_event.62 }
-			}
-			else_if = {
-				limit = { has_country_flag = BARE_MIL_Sport_settlement_partial_success_flag }
-				country_event = { id = MIL_sport_event.63 }
-			}
-			else = {
-				country_event = { id = MIL_sport_event.64 }
+				limit = {
+					NOT = { has_country_flag = BARE_MIL_Sport_settled_flag }
+				}
+				BARE_MIL_Sport_Settlement_Set_Result_effect = yes
+				if = {
+					limit = { has_country_flag = BARE_MIL_Sport_settlement_great_success_flag }
+					country_event = { id = MIL_sport_event.61 }
+				}
+				else_if = {
+					limit = { has_country_flag = BARE_MIL_Sport_settlement_success_flag }
+					country_event = { id = MIL_sport_event.62 }
+				}
+				else_if = {
+					limit = { has_country_flag = BARE_MIL_Sport_settlement_partial_success_flag }
+					country_event = { id = MIL_sport_event.63 }
+				}
+				else = {
+					country_event = { id = MIL_sport_event.64 }
+				}
 			}
 		}
 	}
@@ -988,8 +1107,8 @@ country_event = {
     }
 }
 
-# 2026-05-20: 其他大型学院合作回复事件。
-# 维护说明：每个事件 immediate 先设置结果 flag，选项再根据结果 flag 和剩余额度展示 10点/5点/拒绝/额度已满分支。
+# 2026-05-25: 其他大型学院合作回复事件。
+# 维护说明：immediate 只负责抽取回复结果；具体经费上限、赞助方修正、请求清理和效果文本都放在选项内结算。
 country_event = {
     id = MIL_sport_event.65
     title = MIL_sport_event.65.t
@@ -998,7 +1117,10 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		BARE_MIL_Sport_Cooperation_Roll_GEH_effect = yes
+		# 2026-05-25: immediate内效果统一隐藏，避免事件弹窗显示即时效果。
+		hidden_effect = {
+			BARE_MIL_Sport_Cooperation_Roll_GEH_effect = yes
+		}
 	}
 
     option = {
@@ -1007,9 +1129,9 @@ country_event = {
 			has_country_flag = BARE_MIL_sport_Cooperation_Result_10_flag
 			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var < 1 }
 		}
+		custom_effect_tooltip = MIL_Sport_Cooperation_GEH_tt
 		set_temp_variable = { BARE_MIL_sport_Cooperation_Add_Temp_Var = 10 }
 		BARE_MIL_Sport_Cooperation_GEH_Accept_effect = yes
-		custom_effect_tooltip = MIL_Sport_Cooperation_GEH_tt
 		ai_chance = { base = 1 }
     }
 
@@ -1022,9 +1144,9 @@ country_event = {
 			}
 			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var < 10 }
 		}
+		custom_effect_tooltip = MIL_Sport_Cooperation_GEH_PARTIAL_tt
 		set_temp_variable = { BARE_MIL_sport_Cooperation_Add_Temp_Var = 5 }
 		BARE_MIL_Sport_Cooperation_GEH_Accept_effect = yes
-		custom_effect_tooltip = MIL_Sport_Cooperation_GEH_PARTIAL_tt
 		ai_chance = { base = 1 }
     }
 
@@ -1033,9 +1155,9 @@ country_event = {
 		trigger = {
 			has_country_flag = BARE_MIL_sport_Cooperation_Result_None_flag
 		}
+		custom_effect_tooltip = MIL_Sport_Cooperation_None_tt
 		clr_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag
 		BARE_MIL_Sport_Cooperation_Clear_Result_effect = yes
-		custom_effect_tooltip = MIL_Sport_Cooperation_None_tt
 		ai_chance = { base = 1 }
     }
 
@@ -1045,9 +1167,9 @@ country_event = {
 			NOT = { has_country_flag = BARE_MIL_sport_Cooperation_Result_None_flag }
 			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var > 9 }
 		}
+		custom_effect_tooltip = MIL_Sport_Cooperation_Cap_Full_tt
 		clr_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag
 		BARE_MIL_Sport_Cooperation_Clear_Result_effect = yes
-		custom_effect_tooltip = MIL_Sport_Cooperation_Cap_Full_tt
 		ai_chance = { base = 1 }
     }
 }
@@ -1060,7 +1182,10 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		BARE_MIL_Sport_Cooperation_Roll_TRI_effect = yes
+		# 2026-05-25: immediate内效果统一隐藏，避免事件弹窗显示即时效果。
+		hidden_effect = {
+			BARE_MIL_Sport_Cooperation_Roll_TRI_effect = yes
+		}
 	}
 
     option = {
@@ -1069,9 +1194,9 @@ country_event = {
 			has_country_flag = BARE_MIL_sport_Cooperation_Result_10_flag
 			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var < 1 }
 		}
+		custom_effect_tooltip = MIL_Sport_Cooperation_TRI_tt
 		set_temp_variable = { BARE_MIL_sport_Cooperation_Add_Temp_Var = 10 }
 		BARE_MIL_Sport_Cooperation_TRI_Accept_effect = yes
-		custom_effect_tooltip = MIL_Sport_Cooperation_TRI_tt
 		ai_chance = { base = 1 }
     }
 
@@ -1084,9 +1209,9 @@ country_event = {
 			}
 			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var < 10 }
 		}
+		custom_effect_tooltip = MIL_Sport_Cooperation_TRI_PARTIAL_tt
 		set_temp_variable = { BARE_MIL_sport_Cooperation_Add_Temp_Var = 5 }
 		BARE_MIL_Sport_Cooperation_TRI_Accept_effect = yes
-		custom_effect_tooltip = MIL_Sport_Cooperation_TRI_PARTIAL_tt
 		ai_chance = { base = 1 }
     }
 
@@ -1095,9 +1220,9 @@ country_event = {
 		trigger = {
 			has_country_flag = BARE_MIL_sport_Cooperation_Result_None_flag
 		}
+		custom_effect_tooltip = MIL_Sport_Cooperation_None_tt
 		clr_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag
 		BARE_MIL_Sport_Cooperation_Clear_Result_effect = yes
-		custom_effect_tooltip = MIL_Sport_Cooperation_None_tt
 		ai_chance = { base = 1 }
     }
 
@@ -1107,9 +1232,9 @@ country_event = {
 			NOT = { has_country_flag = BARE_MIL_sport_Cooperation_Result_None_flag }
 			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var > 9 }
 		}
+		custom_effect_tooltip = MIL_Sport_Cooperation_Cap_Full_tt
 		clr_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag
 		BARE_MIL_Sport_Cooperation_Clear_Result_effect = yes
-		custom_effect_tooltip = MIL_Sport_Cooperation_Cap_Full_tt
 		ai_chance = { base = 1 }
     }
 }
@@ -1122,7 +1247,10 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		BARE_MIL_Sport_Cooperation_Roll_SHA_effect = yes
+		# 2026-05-25: immediate内效果统一隐藏，避免事件弹窗显示即时效果。
+		hidden_effect = {
+			BARE_MIL_Sport_Cooperation_Roll_SHA_effect = yes
+		}
 	}
 
     option = {
@@ -1131,9 +1259,9 @@ country_event = {
 			has_country_flag = BARE_MIL_sport_Cooperation_Result_10_flag
 			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var < 1 }
 		}
+		custom_effect_tooltip = MIL_Sport_Cooperation_SHA_FULL_tt
 		set_temp_variable = { BARE_MIL_sport_Cooperation_Add_Temp_Var = 10 }
 		BARE_MIL_Sport_Cooperation_SHA_Accept_effect = yes
-		custom_effect_tooltip = MIL_Sport_Cooperation_SHA_FULL_tt
 		ai_chance = { base = 1 }
     }
 
@@ -1146,9 +1274,9 @@ country_event = {
 			}
 			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var < 10 }
 		}
+		custom_effect_tooltip = MIL_Sport_Cooperation_SHA_tt
 		set_temp_variable = { BARE_MIL_sport_Cooperation_Add_Temp_Var = 5 }
 		BARE_MIL_Sport_Cooperation_SHA_Accept_effect = yes
-		custom_effect_tooltip = MIL_Sport_Cooperation_SHA_tt
 		ai_chance = { base = 1 }
     }
 
@@ -1157,9 +1285,9 @@ country_event = {
 		trigger = {
 			has_country_flag = BARE_MIL_sport_Cooperation_Result_None_flag
 		}
+		custom_effect_tooltip = MIL_Sport_Cooperation_None_tt
 		clr_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag
 		BARE_MIL_Sport_Cooperation_Clear_Result_effect = yes
-		custom_effect_tooltip = MIL_Sport_Cooperation_None_tt
 		ai_chance = { base = 1 }
     }
 
@@ -1169,9 +1297,9 @@ country_event = {
 			NOT = { has_country_flag = BARE_MIL_sport_Cooperation_Result_None_flag }
 			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var > 9 }
 		}
+		custom_effect_tooltip = MIL_Sport_Cooperation_Cap_Full_tt
 		clr_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag
 		BARE_MIL_Sport_Cooperation_Clear_Result_effect = yes
-		custom_effect_tooltip = MIL_Sport_Cooperation_Cap_Full_tt
 		ai_chance = { base = 1 }
     }
 }
@@ -1184,7 +1312,10 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		BARE_MIL_Sport_Cooperation_Roll_RWT_effect = yes
+		# 2026-05-25: immediate内效果统一隐藏，避免事件弹窗显示即时效果。
+		hidden_effect = {
+			BARE_MIL_Sport_Cooperation_Roll_RWT_effect = yes
+		}
 	}
 
     option = {
@@ -1193,9 +1324,9 @@ country_event = {
 			has_country_flag = BARE_MIL_sport_Cooperation_Result_10_flag
 			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var < 1 }
 		}
+		custom_effect_tooltip = MIL_Sport_Cooperation_RWT_FULL_tt
 		set_temp_variable = { BARE_MIL_sport_Cooperation_Add_Temp_Var = 10 }
 		BARE_MIL_Sport_Cooperation_RWT_Accept_effect = yes
-		custom_effect_tooltip = MIL_Sport_Cooperation_RWT_FULL_tt
 		ai_chance = { base = 1 }
     }
 
@@ -1208,9 +1339,9 @@ country_event = {
 			}
 			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var < 10 }
 		}
+		custom_effect_tooltip = MIL_Sport_Cooperation_RWT_PARTIAL_tt
 		set_temp_variable = { BARE_MIL_sport_Cooperation_Add_Temp_Var = 5 }
 		BARE_MIL_Sport_Cooperation_RWT_Accept_effect = yes
-		custom_effect_tooltip = MIL_Sport_Cooperation_RWT_PARTIAL_tt
 		ai_chance = { base = 1 }
     }
 
@@ -1219,9 +1350,9 @@ country_event = {
 		trigger = {
 			has_country_flag = BARE_MIL_sport_Cooperation_Result_None_flag
 		}
+		custom_effect_tooltip = MIL_Sport_Cooperation_RWT_tt
 		clr_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag
 		BARE_MIL_Sport_Cooperation_Clear_Result_effect = yes
-		custom_effect_tooltip = MIL_Sport_Cooperation_RWT_tt
 		ai_chance = { base = 1 }
     }
 
@@ -1231,9 +1362,9 @@ country_event = {
 			NOT = { has_country_flag = BARE_MIL_sport_Cooperation_Result_None_flag }
 			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var > 9 }
 		}
+		custom_effect_tooltip = MIL_Sport_Cooperation_Cap_Full_tt
 		clr_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag
 		BARE_MIL_Sport_Cooperation_Clear_Result_effect = yes
-		custom_effect_tooltip = MIL_Sport_Cooperation_Cap_Full_tt
 		ai_chance = { base = 1 }
     }
 }
@@ -1246,7 +1377,10 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		BARE_MIL_Sport_Cooperation_Roll_HYA_effect = yes
+		# 2026-05-25: immediate内效果统一隐藏，避免事件弹窗显示即时效果。
+		hidden_effect = {
+			BARE_MIL_Sport_Cooperation_Roll_HYA_effect = yes
+		}
 	}
 
     option = {
@@ -1255,9 +1389,9 @@ country_event = {
 			has_country_flag = BARE_MIL_sport_Cooperation_Result_10_flag
 			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var < 1 }
 		}
+		custom_effect_tooltip = MIL_Sport_Cooperation_HYA_FULL_tt
 		set_temp_variable = { BARE_MIL_sport_Cooperation_Add_Temp_Var = 10 }
 		BARE_MIL_Sport_Cooperation_HYA_Accept_effect = yes
-		custom_effect_tooltip = MIL_Sport_Cooperation_HYA_FULL_tt
 		ai_chance = { base = 1 }
     }
 
@@ -1270,9 +1404,9 @@ country_event = {
 			}
 			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var < 10 }
 		}
+		custom_effect_tooltip = MIL_Sport_Cooperation_HYA_tt
 		set_temp_variable = { BARE_MIL_sport_Cooperation_Add_Temp_Var = 5 }
 		BARE_MIL_Sport_Cooperation_HYA_Accept_effect = yes
-		custom_effect_tooltip = MIL_Sport_Cooperation_HYA_tt
 		ai_chance = { base = 1 }
     }
 
@@ -1281,9 +1415,9 @@ country_event = {
 		trigger = {
 			has_country_flag = BARE_MIL_sport_Cooperation_Result_None_flag
 		}
+		custom_effect_tooltip = MIL_Sport_Cooperation_None_tt
 		clr_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag
 		BARE_MIL_Sport_Cooperation_Clear_Result_effect = yes
-		custom_effect_tooltip = MIL_Sport_Cooperation_None_tt
 		ai_chance = { base = 1 }
     }
 
@@ -1293,9 +1427,9 @@ country_event = {
 			NOT = { has_country_flag = BARE_MIL_sport_Cooperation_Result_None_flag }
 			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var > 9 }
 		}
+		custom_effect_tooltip = MIL_Sport_Cooperation_Cap_Full_tt
 		clr_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag
 		BARE_MIL_Sport_Cooperation_Clear_Result_effect = yes
-		custom_effect_tooltip = MIL_Sport_Cooperation_Cap_Full_tt
 		ai_chance = { base = 1 }
     }
 }
