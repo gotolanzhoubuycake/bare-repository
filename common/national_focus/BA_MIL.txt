@@ -1734,7 +1734,7 @@ focus_tree = {
 				swap_ideas = {
 					remove_idea = MIL_security_department_tooltip_1
 					add_idea = MIL_security_department_tooltip_2
-					
+
 				}
 			}
 		}
@@ -1769,7 +1769,7 @@ focus_tree = {
 					remove_idea = MIL_security_department_tooltip_2
 					add_idea = MIL_security_department_tooltip_3
 				}
-				
+
 			}
 		}
 	}
