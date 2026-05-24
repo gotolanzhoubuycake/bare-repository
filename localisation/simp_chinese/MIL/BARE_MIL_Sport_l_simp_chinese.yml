@@ -41,6 +41,18 @@ BARE_MIL_sport_Cooperation_Sponsor_Modifier_desc: "该学园正在以赞助方�
 MIL_Sport_Fee_have_tooltip: "拥有经费[?MIL_Sport_Fee_cost] £MIL_sport_GUI_Info_Icon_1"
 MIL_Sport_Fee_cost_icon_tooltip: "£MIL_sport_GUI_Info_Icon_1 [?MIL_Sport_Fee_cost]"
 MIL_Sport_Fee_cost_icon_tooltip_blocked: "£MIL_sport_GUI_Info_Icon_1 [?MIL_Sport_Fee_cost]"
+MIL_Sport_Fee_Adjust_Locked_tooltip: "完成国策§Y$MIL_yuuka_unhappy$§!后，才能调整晄轮大祭经费等级。"
+MIL_Sport_Security_Adjust_Locked_tooltip: "完成国策§Y$MIL_opposition_hidden_in_the_dark$§!后，才能调整晄轮大祭安保等级。"
+MIL_Sport_Tech_Adjust_Locked_tooltip: "完成国策§Y$MIL_The_power_of_Technology$§!后，才能调整晄轮大祭科技等级。"
+# 2026-05-25: GUI 加减按钮悬浮提示，参考 BALP_OLS 的 [Get_...] scripted localisation 方式显示条件是否满足。
+MIL_Sport_Condition_Status_Yes: "£trigger_yes£"
+MIL_Sport_Condition_Status_No: "£trigger_no£"
+MIL_Sport_Fee_Add_Button_tooltip: "§Y提高经费等级§!\n可调整条件：\n[Get_MIL_Sport_Fee_Adjust_Focus_Status] 已完成国策§Y$MIL_yuuka_unhappy$§!\n[Get_MIL_Sport_Fee_Add_Level_Status] 当前经费等级低于§Y5§!\n[Get_MIL_Sport_Fee_Monthly_Adjust_Status] 本月尚未调整经费等级\n效果：提高每月经费上限。新的经费恢复要到§Y下个月月度更新§!才会生效。"
+MIL_Sport_Fee_Sub_Button_tooltip: "§Y降低经费等级§!\n可调整条件：\n[Get_MIL_Sport_Fee_Adjust_Focus_Status] 已完成国策§Y$MIL_yuuka_unhappy$§!\n[Get_MIL_Sport_Fee_Sub_Level_Status] 当前经费等级高于§Y1§!\n[Get_MIL_Sport_Fee_Monthly_Adjust_Status] 本月尚未调整经费等级\n效果：降低每月经费上限。如果当前经费高于新上限，会在§Y下个月月度更新§!时刷新到上限。"
+MIL_Sport_Security_Add_Button_tooltip: "§Y提高安保等级§!\n可调整条件：\n[Get_MIL_Sport_Security_Adjust_Focus_Status] 已完成国策§Y$MIL_opposition_hidden_in_the_dark$§!\n[Get_MIL_Sport_Security_Add_Level_Status] 当前安保等级低于安保等级上限\n[Get_MIL_Sport_Security_Monthly_Adjust_Status] 本月尚未调整安保等级\n效果：提高破坏事件无事发生几率，并增加月度经费消耗。"
+MIL_Sport_Security_Sub_Button_tooltip: "§Y降低安保等级§!\n可调整条件：\n[Get_MIL_Sport_Security_Adjust_Focus_Status] 已完成国策§Y$MIL_opposition_hidden_in_the_dark$§!\n[Get_MIL_Sport_Security_Sub_Level_Status] 当前安保等级高于§Y1§!\n[Get_MIL_Sport_Security_Monthly_Adjust_Status] 本月尚未调整安保等级\n效果：降低破坏事件无事发生几率，并减少月度经费消耗。"
+MIL_Sport_Tech_Add_Button_tooltip: "§Y提高科技等级§!\n可调整条件：\n[Get_MIL_Sport_Tech_Adjust_Focus_Status] 已完成国策§Y$MIL_The_power_of_Technology$§!\n[Get_MIL_Sport_Tech_Add_Level_Status] 当前科技等级低于科技等级上限\n[Get_MIL_Sport_Tech_Monthly_Adjust_Status] 本月尚未调整科技等级\n效果：增加月度经费消耗。科技等级§Y3/4/5§!会分别每月提供§G+1/+2/+3§!准备综合评分。"
+MIL_Sport_Tech_Sub_Button_tooltip: "§Y降低科技等级§!\n可调整条件：\n[Get_MIL_Sport_Tech_Adjust_Focus_Status] 已完成国策§Y$MIL_The_power_of_Technology$§!\n[Get_MIL_Sport_Tech_Sub_Level_Status] 当前科技等级高于§Y1§!\n[Get_MIL_Sport_Tech_Monthly_Adjust_Status] 本月尚未调整科技等级\n效果：减少月度经费消耗。科技等级低于§Y3§!时不再提供每月准备综合评分。"
 
 ##############################################
 # 2026-05-20: 保留这一条作为基础设施决议唯一标题，移除早先重复key，避免后写值覆盖前写值
@@ -64,12 +76,14 @@ MIL_Sport_Volunteer_Coordination_Center_desc: "晄轮大祭需要大量学生志
 MIL_Sport_Volunteer_Coordination_Center_tt: "学生支持度：§G+8%§!\n准备综合评分：§G+5§!"
 MIL_Sport_Venue_Stress_Test: "会场压力测试"
 MIL_Sport_Venue_Stress_Test_desc: "在正式开幕前，研讨会可以组织一次完整的会场压力测试，提前模拟入场、疏散、设备联调和突发状况处理。"
+MIL_Sport_Venue_Stress_Test_condition_tt: "需要处于§Y最后3个月§!，且不能是§Y最后1个月§!；场地准备程度需要达到§Y3§!级以上。"
 MIL_Sport_Venue_Stress_Test_tt: "准备综合评分：§G+15§!"
 MIL_Sport_Temporary_Sponsor_Recruitment: "临时赞助招募"
 MIL_Sport_Temporary_Sponsor_Recruitment_desc: "即使不引入大型学院作为正式赞助方，千年内部的企业、社团和周边商户也能提供一些临时资源。"
 MIL_Sport_Temporary_Sponsor_Recruitment_tt: "当前可用经费：§G+10§!"
 MIL_Sport_Use_Reserve_Materials: "动用储备物资"
 MIL_Sport_Use_Reserve_Materials_desc: "如果准备工作已经走到最后，却仍然无法达到令人满意的结果，研讨会可以动用一批原本不该在此时使用的储备物资。这样做能救急，但代价也会被清楚地记在账上。"
+MIL_Sport_Use_Reserve_Materials_condition_tt: "需要处于§Y最后3个月§!，准备综合评分低于§Y160§!，且晄轮大祭主要筹备国策均已完成。"
 MIL_Sport_Use_Reserve_Materials_tt: "准备综合评分：§G+30§!\n稳定度：§R-5%§!\n战争支持度：§R-5%§!"
 MIL_Sport_Adjust_Event_Program: "调整大会项目"
 MIL_Sport_Adjust_Event_Program_desc: "将部分运动项目改为互动、问答和趣味协作项目，可以降低普通学生对晄轮大祭的抵触，但临时调整赛程会压缩原本的准备成果。"

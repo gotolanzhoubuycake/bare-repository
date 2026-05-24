@@ -7,7 +7,7 @@ MIL_Sport_decision_category = {
 		# 2. 执行完成后随机在可用州补 1 级基建。
 		# 3. 同时提高综合评分与学生支持度。
 		visible = {
-
+			has_completed_focus = MIL_build_grand_festival_work
 		}
 		available = {
 
@@ -122,7 +122,7 @@ MIL_Sport_decision_category = {
 		# 2. 最多建设 5 次，用变量记录场地建设进度。
 		# 3. 评分增长会随着已投入次数进一步放大。
 		visible = {
-
+			has_completed_focus = MIL_build_grand_festival_work
 		}
 		available = {
 
@@ -202,7 +202,7 @@ MIL_Sport_decision_category = {
 		# 2. 只要运动会筹备结束，或已经触发过本次保护，就会被移除。
 		# 3. 这里主要通过国家旗标向其他事件声明“本轮破坏削弱一次”。
 		visible = {
-			
+			has_completed_focus = MIL_opposition_hidden_in_the_dark
 		}
 		available = {
 			set_temp_variable = {
@@ -257,7 +257,7 @@ MIL_Sport_decision_category = {
 	MIL_Sport_Volunteer_Coordination_Center = {
 		# 2026-05-21: 新增中期调度决议，用PP和少量经费组织志愿者，补支持度并小幅补准备评分。
 		visible = {
-
+			has_completed_focus = MIL_build_grand_festival_work
 		}
 		available = {
 			set_temp_variable = {
@@ -308,17 +308,22 @@ MIL_Sport_decision_category = {
 	MIL_Sport_Venue_Stress_Test = {
 		# 2026-05-21: 新增最后三个月冲刺决议，模拟入场、疏散和设备联调来补准备评分。
 		visible = {
-
+			has_completed_focus = MIL_The_construction_work_is_in_full_swing
 		}
 		available = {
-			check_variable = {
-				BARE_MIL_sport_Month_Time_Var < 4
-			}
-			check_variable = {
-				BARE_MIL_sport_Month_Time_Var > 1
-			}
-			check_variable = {
-				BARE_MIL_sport_Building_Score_Var > 2
+			custom_trigger_tooltip = {
+				tooltip = MIL_Sport_Venue_Stress_Test_condition_tt
+				AND = {
+					check_variable = {
+						BARE_MIL_sport_Month_Time_Var < 4
+					}
+					check_variable = {
+						BARE_MIL_sport_Month_Time_Var > 1
+					}
+					check_variable = {
+						BARE_MIL_sport_Building_Score_Var > 2
+					}
+				}
 			}
 			set_temp_variable = {
 				MIL_Sport_Fee_cost = 15
@@ -363,7 +368,7 @@ MIL_Sport_decision_category = {
 	MIL_Sport_Temporary_Sponsor_Recruitment = {
 		# 2026-05-21: 新增临时赞助招募，用政治点补充当期可用经费，缓解后期费用门槛。
 		visible = {
-
+			has_completed_focus = MIL_make_more_money
 		}
 		cost = 75
 		days_re_enable = 60
@@ -388,32 +393,37 @@ MIL_Sport_decision_category = {
 	MIL_Sport_Use_Reserve_Materials = {
 		# 2026-05-21: 新增一次性兜底决议。只有最后三个月、主要筹备国策完成且准备评分低于成功线时可用。
 		visible = {
-
+			has_completed_focus = MIL_The_eve_of_the_grand_festival
 		}
 		available = {
-			check_variable = {
-				BARE_MIL_sport_Month_Time_Var < 4
+			custom_trigger_tooltip = {
+				tooltip = MIL_Sport_Use_Reserve_Materials_condition_tt
+				AND = {
+					check_variable = {
+						BARE_MIL_sport_Month_Time_Var < 4
+					}
+					check_variable = {
+						BARE_MIL_sport_Month_Time_Var > 0
+					}
+					check_variable = {
+						BARE_MIL_sport_Score_Var < 160
+					}
+					has_completed_focus = MIL_yuuka_unhappy
+					has_completed_focus = MIL_make_more_money
+					has_completed_focus = MIL_reduce_cost
+					OR = {
+						has_completed_focus = MIL_need_help
+						has_completed_focus = MIL_we_can_do_it_by_ourselves
+					}
+					has_completed_focus = MIL_build_grand_festival_work
+					has_completed_focus = MIL_opposition_hidden_in_the_dark
+					has_completed_focus = MIL_The_power_of_Technology
+					has_completed_focus = MIL_noas_Strive
+					has_completed_focus = MIL_The_construction_work_is_in_full_swing
+					has_completed_focus = MIL_The_Increasingly_refined_preparations
+					has_completed_focus = MIL_The_eve_of_the_grand_festival
+				}
 			}
-			check_variable = {
-				BARE_MIL_sport_Month_Time_Var > 0
-			}
-			check_variable = {
-				BARE_MIL_sport_Score_Var < 160
-			}
-			has_completed_focus = MIL_yuuka_unhappy
-			has_completed_focus = MIL_make_more_money
-			has_completed_focus = MIL_reduce_cost
-			OR = {
-				has_completed_focus = MIL_need_help
-				has_completed_focus = MIL_we_can_do_it_by_ourselves
-			}
-			has_completed_focus = MIL_build_grand_festival_work
-			has_completed_focus = MIL_opposition_hidden_in_the_dark
-			has_completed_focus = MIL_The_power_of_Technology
-			has_completed_focus = MIL_noas_Strive
-			has_completed_focus = MIL_The_construction_work_is_in_full_swing
-			has_completed_focus = MIL_The_Increasingly_refined_preparations
-			has_completed_focus = MIL_The_eve_of_the_grand_festival
 		}
 		cost = 100
 		fire_only_once = yes
@@ -430,7 +440,7 @@ MIL_Sport_decision_category = {
 	MIL_Sport_Adjust_Event_Program = {
 		# 2026-05-21: 新增60天冷却的资源互换决议，用准备评分换取学生支持度。
 		visible = {
-
+			has_completed_focus = MIL_build_grand_festival_work
 		}
 		available = {
 			check_variable = {
@@ -481,7 +491,7 @@ MIL_Sport_decision_category = {
 	MIL_Sport_Requisition_Unplanned_Equipment = {
 		# 2026-05-21: 新增60天冷却的资源互换决议，用学生支持度换取准备评分。
 		visible = {
-
+			has_completed_focus = MIL_build_grand_festival_work
 		}
 		available = {
 			check_variable = {
@@ -784,6 +794,7 @@ BARE_global_propaganda_campaigns = {
 			original_tag = MIL
 			has_country_flag = BARE_MIL_public_campaigns_unlocked_flag
 			has_global_flag = BARE_MIL_Sport_prepare_flag
+			has_completed_focus = MIL_The_power_of_Technology
 		}
 
 		available = {
@@ -1030,7 +1041,11 @@ BARE_global_propaganda_campaigns = {
 
 MIL_Sport_decision_test_category = {
 	MIL_Sport_Start_decision = {
+		# 2026-05-25: 测试用直接开启入口；仅在该调试决议中移除千年财政危机权力平衡，正式流程仍保持原有国策/事件节奏。
 		complete_effect = {
+			remove_power_balance = {
+				id = MIL_bp_financial_crisis_balance
+			}
 			country_event = MIL_sport_event.1
 		}
 	}

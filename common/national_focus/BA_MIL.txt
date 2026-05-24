@@ -1181,6 +1181,7 @@ focus_tree = {
 				BARE_MIL_Sport_Focus_Make_More_Money_effect = yes
 			}
 			custom_effect_tooltip = MIL_make_more_money_effect_tooltip
+			unlock_decision_tooltip = MIL_Sport_Temporary_Sponsor_Recruitment
 
 		}
 	}
@@ -1276,6 +1277,9 @@ focus_tree = {
 		completion_reward = {
 			unlock_decision_tooltip = MIL_Sport_Improve_Millennium_Infrastructure
 			unlock_decision_tooltip = MIL_Sport_Constructing_Sports_Venues
+			unlock_decision_tooltip = MIL_Sport_Volunteer_Coordination_Center
+			unlock_decision_tooltip = MIL_Sport_Adjust_Event_Program
+			unlock_decision_tooltip = MIL_Sport_Requisition_Unplanned_Equipment
 		}
 	}
 	focus = { #隐藏在暗中的反对
@@ -1297,6 +1301,7 @@ focus_tree = {
 			add_political_power = 100
 			# 2026-05-20: 按国策文档补充“意外”占位事件，正式效果和文本后续填充
 			country_event = { id = MIL_sport_event.70 }
+			custom_effect_tooltip = MIL_opposition_hidden_in_the_dark_effect_tooltip
 			unlock_decision_tooltip = MIL_Sport_Crackdown_on_Sabotage
 		}
 	}
@@ -1320,6 +1325,7 @@ focus_tree = {
 				BARE_MIL_Sport_Focus_The_Power_Of_Technology_effect = yes
 			}
 			custom_effect_tooltip = MIL_The_power_of_Technology_effect_tooltip
+			unlock_decision_tooltip = MIL_Public_Technology_Oriented
 		}
 	}
 	focus = { #书记官的努力
@@ -1366,6 +1372,7 @@ focus_tree = {
 				BARE_MIL_Sport_Focus_Construction_Full_Swing_effect = yes
 			}
 			custom_effect_tooltip = MIL_The_construction_work_is_in_full_swing_effect_tooltip
+			unlock_decision_tooltip = MIL_Sport_Venue_Stress_Test
 		}
 	}
 	focus = { #日渐完善的准备

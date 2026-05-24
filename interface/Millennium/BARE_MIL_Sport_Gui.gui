@@ -109,6 +109,8 @@ guiTypes = {
 			name = "MIL_sport_GUI_Info_Sub_1"
 			position = { x = 139 y = 356}
 			quadTextureSprite ="GFX_MIL_sport_GUI_Info_Sub_Button" 
+			# 2026-05-25: 参考 BALP_OLS 主动技能 GUI，为调整按钮补充可调整条件悬浮提示。
+			pdx_tooltip = "MIL_Sport_Fee_Sub_Button_tooltip"
 		}
 
 		iconType = { #分隔线
@@ -135,6 +137,8 @@ guiTypes = {
 			name = "MIL_sport_GUI_Info_Add_1"
 			position = { x = 238 y = 356}
 			quadTextureSprite ="GFX_MIL_sport_GUI_Info_Add_Button" 
+			# 2026-05-25: 参考 BALP_OLS 主动技能 GUI，为调整按钮补充可调整条件悬浮提示。
+			pdx_tooltip = "MIL_Sport_Fee_Add_Button_tooltip"
 		}
 
 		iconType = { #背景
@@ -195,6 +199,8 @@ guiTypes = {
 			name = "MIL_sport_GUI_Info_Sub_2"
 			position = { x = 139 y = 401}
 			quadTextureSprite ="GFX_MIL_sport_GUI_Info_Sub_Button" 
+			# 2026-05-25: 参考 BALP_OLS 主动技能 GUI，为调整按钮补充可调整条件悬浮提示。
+			pdx_tooltip = "MIL_Sport_Security_Sub_Button_tooltip"
 		}
 
 		iconType = { #背景
@@ -221,6 +227,8 @@ guiTypes = {
 			name = "MIL_sport_GUI_Info_Add_2"
 			position = { x = 238 y = 401}
 			quadTextureSprite ="GFX_MIL_sport_GUI_Info_Add_Button" 
+			# 2026-05-25: 参考 BALP_OLS 主动技能 GUI，为调整按钮补充可调整条件悬浮提示。
+			pdx_tooltip = "MIL_Sport_Security_Add_Button_tooltip"
 		}
 
 		iconType = { #分隔线
@@ -261,6 +269,8 @@ guiTypes = {
 			name = "MIL_sport_GUI_Info_Sub_3"
 			position = { x = 139 y = 446}
 			quadTextureSprite ="GFX_MIL_sport_GUI_Info_Sub_Button" 
+			# 2026-05-25: 参考 BALP_OLS 主动技能 GUI，为调整按钮补充可调整条件悬浮提示。
+			pdx_tooltip = "MIL_Sport_Tech_Sub_Button_tooltip"
 		}
 
 		iconType = { #背景
@@ -287,6 +297,8 @@ guiTypes = {
 			name = "MIL_sport_GUI_Info_Add_3"
 			position = { x = 238 y = 446}
 			quadTextureSprite ="GFX_MIL_sport_GUI_Info_Add_Button" 
+			# 2026-05-25: 参考 BALP_OLS 主动技能 GUI，为调整按钮补充可调整条件悬浮提示。
+			pdx_tooltip = "MIL_Sport_Tech_Add_Button_tooltip"
 		}
 
 		iconType = { #分隔线

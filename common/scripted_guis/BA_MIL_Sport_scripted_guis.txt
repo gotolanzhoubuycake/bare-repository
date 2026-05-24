@@ -8,6 +8,7 @@ scripted_gui = {
 		effects = {
 			# 2026-05-18: 修复第一行经费按钮误改安保等级、安保减号误刷科技的问题
 			# 2026-05-20: 三组按钮分别对应 经费等级 / 安保等级 / 科技等级；每月各自只能调整一次。
+			# 2026-05-25: 三组按钮再分别加入国策解锁门槛，避免筹备线未推进时过早开放后台调节。
 			# 经费按钮只刷新上限与下月恢复量，不立即补充当前经费。
 			MIL_sport_GUI_Info_Add_1_click = {
 				add_to_variable = {
@@ -56,6 +57,10 @@ scripted_gui = {
 		triggers = {
 			# 2026-05-20: enabled trigger 同时检查等级边界和“本月已调整”flag；flag 在月更中统一清理。
 			MIL_sport_GUI_Info_Add_1_click_enabled = {
+				custom_trigger_tooltip = {
+					tooltip = MIL_Sport_Fee_Adjust_Locked_tooltip
+					has_completed_focus = MIL_yuuka_unhappy
+				}
 				check_variable = {
 					BARE_MIL_sport_Fee_Level_Var < 5
 				}
@@ -64,6 +69,10 @@ scripted_gui = {
 				}
 			}
 			MIL_sport_GUI_Info_Sub_1_click_enabled = {
+				custom_trigger_tooltip = {
+					tooltip = MIL_Sport_Fee_Adjust_Locked_tooltip
+					has_completed_focus = MIL_yuuka_unhappy
+				}
 				check_variable = {
 					BARE_MIL_sport_Fee_Level_Var > 1
 				}
@@ -72,6 +81,10 @@ scripted_gui = {
 				}
 			}
 			MIL_sport_GUI_Info_Add_2_click_enabled = {
+				custom_trigger_tooltip = {
+					tooltip = MIL_Sport_Security_Adjust_Locked_tooltip
+					has_completed_focus = MIL_opposition_hidden_in_the_dark
+				}
 				check_variable = {
 					BARE_MIL_sport_Security_Have_Var < BARE_MIL_sport_Security_Max_Var
 				}
@@ -80,6 +93,10 @@ scripted_gui = {
 				}
 			}
 			MIL_sport_GUI_Info_Sub_2_click_enabled = {
+				custom_trigger_tooltip = {
+					tooltip = MIL_Sport_Security_Adjust_Locked_tooltip
+					has_completed_focus = MIL_opposition_hidden_in_the_dark
+				}
 				check_variable = {
 					BARE_MIL_sport_Security_Have_Var > 1
 				}
@@ -88,6 +105,10 @@ scripted_gui = {
 				}
 			}
 			MIL_sport_GUI_Info_Add_3_click_enabled = {
+				custom_trigger_tooltip = {
+					tooltip = MIL_Sport_Tech_Adjust_Locked_tooltip
+					has_completed_focus = MIL_The_power_of_Technology
+				}
 				check_variable = {
 					BARE_MIL_sport_Tech_Have_Var < BARE_MIL_sport_Tech_Max_Var
 				}
@@ -96,6 +117,10 @@ scripted_gui = {
 				}
 			}
 			MIL_sport_GUI_Info_Sub_3_click_enabled = {
+				custom_trigger_tooltip = {
+					tooltip = MIL_Sport_Tech_Adjust_Locked_tooltip
+					has_completed_focus = MIL_The_power_of_Technology
+				}
 				check_variable = {
 					BARE_MIL_sport_Tech_Have_Var > 1
 				}
