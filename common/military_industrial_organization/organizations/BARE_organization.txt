@@ -742,7 +742,7 @@ BA_Design_tank_Organization_Producter = {
 			BA_design_organization_producter_tank2
 		}
 		mutually_exclusive = {
-			BA_design_organization_producter_tank4
+			BA_design_organization_producter_tank3
 		}
 		equipment_bonus = {
 			build_cost_ic = -0.06
@@ -1390,7 +1390,7 @@ BA_Design_mecha_Organization_Producter = {
 			BA_design_organization_producter_mecha
 		}
 		mutually_exclusive = {
-			BA_design_organization_producter_mecha3
+			BA_design_organization_producter_mecha4
 		}
 		equipment_bonus = {
 			soft_attack = 0.08

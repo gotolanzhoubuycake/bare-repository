@@ -26,7 +26,6 @@ SWC = "countries/SweetsClub.txt"  ##甜品部
 TVC = "countries/TrinityVigilanteCrew.txt"  ##自警团
 UPA = "countries/UnexpectedAlliance.txt" ##补课部
 AJD = "countries/AnjouDominion.txt" ##安如骑士团
-TRR = "countries/TrinityRiots.txt" ##安如骑士团
 ###########圣三一文化结束############
 HYA = "countries/Hyakkiyako.txt"
 MIL = "countries/Millennium.txt"
@@ -121,7 +120,7 @@ A55		= "countries/A55.txt"
 #A74		= "countries/A74.txt"
 #A75		= "countries/A75.txt"
 
-##
+##解放阵线剧本
 ALF = "countries/AriusLiberationFront.txt"
 HTG	= "countries/HairpinThievesGang.txt"
 AVG	= "countries/AriusVanguard.txt"
@@ -133,3 +132,7 @@ KHG = "countries/KadaHelmetGang.txt"  ##咔哒头盔团
 BMG	= "countries/BlackMarketGuards.txt"  ##黑市安保军
 BMT = "countries/BlackMarketMotorTeam.txt"  ##黑市摩托队
 BMR = "countries/BlackMarketResidentialArea.txt"  ##黑市平民窟
+#
+TRR = "countries/TrinityRiots.txt"
+TRA = "countries/TrinityBad.txt"
+GEA = "countries/GehennaBad.txt"

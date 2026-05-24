@@ -44,3 +44,70 @@ animation = {
     name = "leopard_2a4_attack_animation"
     file = "leopard_2a4/leopard_2a4_attack.anim"
 }
+
+##Leopard_1a5
+animation = {
+    name = "leopard_1a5_idle_animation"
+    file = "leopard_1a5/leopard_1a5_idle.anim"
+}
+
+animation = {
+    name = "leopard_1a5_attack_animation"
+    file = "leopard_1a5/leopard_1a5_attack.anim"
+}
+
+animation = {
+    name = "leopard_1a5_moving_animation"
+    file = "leopard_1a5/leopard_1a5_moving.anim"
+}
+
+##humvee_m1038
+animation = {
+    name = "m1038_humvee_idle_animation"
+    file = "m1038_humvee/m1038_humvee_idle.anim"
+}
+
+animation = {
+    name = "m1038_humvee_moving_animation"
+    file = "m1038_humvee/m1038_humvee_moving.anim"
+}
+
+##recon motorcycle
+animation = {
+    name = "recon_motorcycle_idle_animation"
+    file = "recon_motorcycle/recon_motorcycle_idle.anim"
+}
+
+animation = {
+    name = "recon_motorcycle_moving_animation"
+    file = "recon_motorcycle/recon_motorcycle_moving.anim"
+}
+
+##recon motorcycle_infantry
+animation = {
+    name = "infantry_motorcycle_idle_animation"
+    file = "recon_motorcycle/infantry_motorcycle_idle.anim"
+}
+
+animation = {
+    name = "infantry_motorcycle_moving_animation"
+    file = "recon_motorcycle/infantry_motorcycle_moving.anim"
+}
+
+##KPZ_70
+#animation = {
+#    name = "kpz_70_idle_animation"
+#    file = "kpz_70/kpz_70_idle.anim"
+#}
+
+#animation = {
+#    name = "kpz_70_moving_animation"
+#    file = "kpz_70/kpz_70_moving.anim"
+#}
+
+#animation = {
+#    name = "kpz_70_attack_animation"
+#    file = "kpz_70/kpz_70_attack.anim"
+#}
+
+#

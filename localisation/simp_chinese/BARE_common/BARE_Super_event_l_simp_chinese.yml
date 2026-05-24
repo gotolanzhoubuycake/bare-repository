@@ -79,8 +79,6 @@ BARE_SuperEvent_2_HELP_HOSHINO_M: "唉，凯撒集团怎么这么坏呢 —— h
 # BARE_SuperEvent_2_HELP_Hoshino_D: "夏莱成功挫败凯撒集团绑架学生的阴谋"
 # BARE_SuperEvent_2_HELP_Hoshino_M: "唉，凯撒集团怎么这么坏呢 —— hoshinolove"
 
-BARE_SuperEvent_Sound_Block_1m: "沉默一分钟"
-
 BARE_SuperEvent_2_MIKA_COUP_ARI: "圣三一政变未遂"
 BARE_SuperEvent_2_MIKA_COUP_ARI_A: "政变影像回放"
 BARE_SuperEvent_2_MIKA_COUP_ARI_D: "茶会成员圣园未花伙同阿里乌斯发动政变，但政变宣告失败。"
@@ -141,9 +139,9 @@ BAREXP_SE_Quote.6: "我的建议是，忘掉这回事的人应当重新记起这
 BAREXP_SE_Remark.6: "力量即秩序……"
 
 #流亡者对圣三一
-BAREXP_SE_Title.7: "光复战争"
-BAREXP_SE_Quote.7: "不要问是否应点燃火炬，要问黑暗是否仍旧留存；\n对理想主义者的讥讽，当回以解放的子弹。\n\n——「领袖」"
-BAREXP_SE_Remark.7: "擎起火炬！"
+BAREXP_SE_Title.7: "天使进军"
+BAREXP_SE_Quote.7: "羊羔们宣言说：“看呐，仇恨将被钉在棺木中！”\n于是，恶魔也诅咒道：“有一颗被遗忘的钉子将要锈蚀。”\n\n——圣三一古代寓言"
+BAREXP_SE_Remark.7: "何以救赎？"
 
 BAREXP_SE_Title.8: "格黑娜进军"
 BAREXP_SE_Quote.8: "任何人，就算是最软弱的懦夫，都可以发动战争。\n不过，只有胜利者有资格结束一切。\n\n——雷帝"
@@ -157,9 +155,14 @@ BAREXP_SE_Title.10: "倾注怒火之杯"
 BAREXP_SE_Quote.10: "只要正义降临，哪怕天崩地裂\n\n——古代谚语"
 BAREXP_SE_Remark.10: "始即为终……"
 
+BAREXP_SE_Title.11: "第二次阿里乌斯内战"
+BAREXP_SE_Quote.11: "不要问是否应点燃火炬，要问黑暗是否仍旧留存；\n对理想主义者的讥讽，当回以解放的子弹。\n\n——「领袖」"
+BAREXP_SE_Remark.11: "擎起火炬！"
+
 BAREXP_SE_Title.99: "格黑娜-圣三一之战"
 BAREXP_SE_Quote.99: "在发起战争之前，人们总是被灌输可以得到什么，以及得到这一切将会是如何轻松。对于听信这种诈骗的受害者来说，人行道上的惨状大概也只能算一场序幕。\n\n——守月铃美"
 BAREXP_SE_Remark.99: "那就让它开始吧。"
+
 
 
 

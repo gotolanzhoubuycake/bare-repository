@@ -1,0 +1,1149 @@
+##数字0
+LP_NUM_0_BUTTON_effect = {
+	##输入第0位密码
+	if = {
+		limit = {
+			check_variable = {
+				lp_num_index = 0
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		set_variable = {
+			lp_num_index_00 = 0
+		}
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##输入第1位密码
+	else_if = {
+		limit = {
+			##检查密码位置，是否已经输入ENTER
+			check_variable = {
+				lp_num_index = 1
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		##设置第1位数字
+		set_variable = {
+			lp_num_index_01 = 0
+		}
+		##进入下一位
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##输入第2位密码
+	else_if = {
+		limit = {
+			##检查密码位置，是否已经输入ENTER
+			check_variable = {
+				lp_num_index = 2
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		##设置第2位数字
+		set_variable = {
+			lp_num_index_02 = 0
+		}
+		##输入下一位
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##输入第3位密码
+	else_if = {
+		limit = {
+			##检查密码位置，是否已经输入ENTER
+			check_variable = {
+				lp_num_index = 3
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		##设置第3位数字
+		set_variable = {
+			lp_num_index_03 = 0
+		}
+		##输入下一位
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##输入第4位密码
+	else_if = {
+		limit = {
+			##检查密码位置，是否已经输入ENTER
+			check_variable = {
+				lp_num_index = 4
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		##设置第4位数字
+		set_variable = {
+			lp_num_index_04 = 0
+		}
+		##输入下一位
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##若密码已经输完5位，或禁用，则，无事发生
+	else = {
+	}
+}
+
+LP_NUM_1_BUTTON_effect = {
+	##输入第0位密码
+	if = {
+		limit = {
+			check_variable = {
+				lp_num_index = 0
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		set_variable = {
+			lp_num_index_00 = 1
+		}
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##输入第1位密码
+	else_if = {
+		limit = {
+			##检查密码位置，是否已经输入ENTER
+			check_variable = {
+				lp_num_index = 1
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		##设置第1位数字
+		set_variable = {
+			lp_num_index_01 = 1
+		}
+		##进入下一位
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##输入第2位密码
+	else_if = {
+		limit = {
+			##检查密码位置，是否已经输入ENTER
+			check_variable = {
+				lp_num_index = 2
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		##设置第2位数字
+		set_variable = {
+			lp_num_index_02 = 1
+		}
+		##输入下一位
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##输入第3位密码
+	else_if = {
+		limit = {
+			##检查密码位置，是否已经输入ENTER
+			check_variable = {
+				lp_num_index = 3
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		##设置第3位数字
+		set_variable = {
+			lp_num_index_03 = 1
+		}
+		##输入下一位
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##输入第4位密码
+	else_if = {
+		limit = {
+			##检查密码位置，是否已经输入ENTER
+			check_variable = {
+				lp_num_index = 4
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		##设置第4位数字
+		set_variable = {
+			lp_num_index_04 = 1
+		}
+		##输入下一位
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##若密码已经输完5位，无事发生
+	else = {
+	}
+}
+
+##数字2
+LP_NUM_2_BUTTON_effect = {
+	##输入第0位密码
+	if = {
+		limit = {
+			check_variable = {
+				lp_num_index = 0
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		set_variable = {
+			lp_num_index_00 = 2
+		}
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##输入第1位密码
+	else_if = {
+		limit = {
+			##检查密码位置，是否已经输入ENTER
+			check_variable = {
+				lp_num_index = 1
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		##设置第1位数字
+		set_variable = {
+			lp_num_index_01 = 2
+		}
+		##进入下一位
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##输入第2位密码
+	else_if = {
+		limit = {
+			##检查密码位置，是否已经输入ENTER
+			check_variable = {
+				lp_num_index = 2
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		##设置第2位数字
+		set_variable = {
+			lp_num_index_02 = 2
+		}
+		##输入下一位
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##输入第3位密码
+	else_if = {
+		limit = {
+			##检查密码位置，是否已经输入ENTER
+			check_variable = {
+				lp_num_index = 3
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		##设置第3位数字
+		set_variable = {
+			lp_num_index_03 = 2
+		}
+		##输入下一位
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##输入第4位密码
+	else_if = {
+		limit = {
+			##检查密码位置，是否已经输入ENTER
+			check_variable = {
+				lp_num_index = 4
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		##设置第4位数字
+		set_variable = {
+			lp_num_index_04 = 2
+		}
+		##输入下一位
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##若密码已经输完5位，无事发生
+	else = {
+	}
+}
+
+##数字3
+LP_NUM_3_BUTTON_effect = {
+	##输入第0位密码
+	if = {
+		limit = {
+			check_variable = {
+				lp_num_index = 0
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		set_variable = {
+			lp_num_index_00 = 3
+		}
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##输入第1位密码
+	else_if = {
+		limit = {
+			##检查密码位置，是否已经输入ENTER
+			check_variable = {
+				lp_num_index = 1
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		##设置第1位数字
+		set_variable = {
+			lp_num_index_01 = 3
+		}
+		##进入下一位
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##输入第2位密码
+	else_if = {
+		limit = {
+			##检查密码位置，是否已经输入ENTER
+			check_variable = {
+				lp_num_index = 2
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		##设置第2位数字
+		set_variable = {
+			lp_num_index_02 = 3
+		}
+		##输入下一位
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##输入第3位密码
+	else_if = {
+		limit = {
+			##检查密码位置，是否已经输入ENTER
+			check_variable = {
+				lp_num_index = 3
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		##设置第3位数字
+		set_variable = {
+			lp_num_index_03 = 3
+		}
+		##输入下一位
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##输入第4位密码
+	else_if = {
+		limit = {
+			##检查密码位置，是否已经输入ENTER
+			check_variable = {
+				lp_num_index = 4
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		##设置第4位数字
+		set_variable = {
+			lp_num_index_04 = 3
+		}
+		##输入下一位
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##若密码已经输完5位，或禁用，则，无事发生
+	else = {
+	}
+}
+
+##数字4
+LP_NUM_4_BUTTON_effect = {
+	##输入第0位密码
+	if = {
+		limit = {
+			check_variable = {
+				lp_num_index = 0
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		set_variable = {
+			lp_num_index_00 = 4
+		}
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##输入第1位密码
+	else_if = {
+		limit = {
+			##检查密码位置，是否已经输入ENTER
+			check_variable = {
+				lp_num_index = 1
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		##设置第1位数字
+		set_variable = {
+			lp_num_index_01 = 4
+		}
+		##进入下一位
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##输入第2位密码
+	else_if = {
+		limit = {
+			##检查密码位置，是否已经输入ENTER
+			check_variable = {
+				lp_num_index = 2
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		##设置第2位数字
+		set_variable = {
+			lp_num_index_02 = 4
+		}
+		##输入下一位
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##输入第3位密码
+	else_if = {
+		limit = {
+			##检查密码位置，是否已经输入ENTER
+			check_variable = {
+				lp_num_index = 3
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		##设置第3位数字
+		set_variable = {
+			lp_num_index_03 = 4
+		}
+		##输入下一位
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##输入第4位密码
+	else_if = {
+		limit = {
+			##检查密码位置，是否已经输入ENTER
+			check_variable = {
+				lp_num_index = 4
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		##设置第4位数字
+		set_variable = {
+			lp_num_index_04 = 4
+		}
+		##输入下一位
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##若密码已经输完5位，或禁用，则，无事发生
+	else = {
+	}
+}
+
+##数字5
+LP_NUM_5_BUTTON_effect = {
+	##输入第0位密码
+	if = {
+		limit = {
+			check_variable = {
+				lp_num_index = 0
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		set_variable = {
+			lp_num_index_00 = 5
+		}
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##输入第1位密码
+	else_if = {
+		limit = {
+			##检查密码位置，是否已经输入ENTER
+			check_variable = {
+				lp_num_index = 1
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		##设置第1位数字
+		set_variable = {
+			lp_num_index_01 = 5
+		}
+		##进入下一位
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##输入第2位密码
+	else_if = {
+		limit = {
+			##检查密码位置，是否已经输入ENTER
+			check_variable = {
+				lp_num_index = 2
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		##设置第2位数字
+		set_variable = {
+			lp_num_index_02 = 5
+		}
+		##输入下一位
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##输入第3位密码
+	else_if = {
+		limit = {
+			##检查密码位置，是否已经输入ENTER
+			check_variable = {
+				lp_num_index = 3
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		##设置第3位数字
+		set_variable = {
+			lp_num_index_03 = 5
+		}
+		##输入下一位
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##输入第4位密码
+	else_if = {
+		limit = {
+			##检查密码位置，是否已经输入ENTER
+			check_variable = {
+				lp_num_index = 4
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		##设置第4位数字
+		set_variable = {
+			lp_num_index_04 = 5
+		}
+		##输入下一位
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##若密码已经输完5位，或禁用，则，无事发生
+	else = {
+	}
+}
+
+##数字6
+LP_NUM_6_BUTTON_effect = {
+	##输入第0位密码
+	if = {
+		limit = {
+			check_variable = {
+				lp_num_index = 0
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		set_variable = {
+			lp_num_index_00 = 6
+		}
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##输入第1位密码
+	else_if = {
+		limit = {
+			##检查密码位置，是否已经输入ENTER
+			check_variable = {
+				lp_num_index = 1
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		##设置第1位数字
+		set_variable = {
+			lp_num_index_01 = 6
+		}
+		##进入下一位
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##输入第2位密码
+	else_if = {
+		limit = {
+			##检查密码位置，是否已经输入ENTER
+			check_variable = {
+				lp_num_index = 2
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		##设置第2位数字
+		set_variable = {
+			lp_num_index_02 = 6
+		}
+		##输入下一位
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##输入第3位密码
+	else_if = {
+		limit = {
+			##检查密码位置，是否已经输入ENTER
+			check_variable = {
+				lp_num_index = 3
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		##设置第3位数字
+		set_variable = {
+			lp_num_index_03 = 6
+		}
+		##输入下一位
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##输入第4位密码
+	else_if = {
+		limit = {
+			##检查密码位置，是否已经输入ENTER
+			check_variable = {
+				lp_num_index = 4
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		##设置第4位数字
+		set_variable = {
+			lp_num_index_04 = 6
+		}
+		##输入下一位
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##若密码已经输完5位，或禁用，则，无事发生
+	else = {
+	}
+}
+
+##数字7
+LP_NUM_7_BUTTON_effect = {
+	##输入第0位密码
+	if = {
+		limit = {
+			check_variable = {
+				lp_num_index = 0
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		set_variable = {
+			lp_num_index_00 = 7
+		}
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##输入第1位密码
+	else_if = {
+		limit = {
+			##检查密码位置，是否已经输入ENTER
+			check_variable = {
+				lp_num_index = 1
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		##设置第1位数字
+		set_variable = {
+			lp_num_index_01 = 7
+		}
+		##进入下一位
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##输入第2位密码
+	else_if = {
+		limit = {
+			##检查密码位置，是否已经输入ENTER
+			check_variable = {
+				lp_num_index = 2
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		##设置第2位数字
+		set_variable = {
+			lp_num_index_02 = 7
+		}
+		##输入下一位
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##输入第3位密码
+	else_if = {
+		limit = {
+			##检查密码位置，是否已经输入ENTER
+			check_variable = {
+				lp_num_index = 3
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		##设置第3位数字
+		set_variable = {
+			lp_num_index_03 = 7
+		}
+		##输入下一位
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##输入第4位密码
+	else_if = {
+		limit = {
+			##检查密码位置，是否已经输入ENTER
+			check_variable = {
+				lp_num_index = 4
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		##设置第4位数字
+		set_variable = {
+			lp_num_index_04 = 7
+		}
+		##输入下一位
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##若密码已经输完5位，或禁用，则，无事发生
+	else = {
+	}
+}
+
+##数字8
+LP_NUM_8_BUTTON_effect = {
+	##输入第0位密码
+	if = {
+		limit = {
+			check_variable = {
+				lp_num_index = 0
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		set_variable = {
+			lp_num_index_00 = 8
+		}
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##输入第1位密码
+	else_if = {
+		limit = {
+			##检查密码位置，是否已经输入ENTER
+			check_variable = {
+				lp_num_index = 1
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		##设置第1位数字
+		set_variable = {
+			lp_num_index_01 = 8
+		}
+		##进入下一位
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##输入第2位密码
+	else_if = {
+		limit = {
+			##检查密码位置，是否已经输入ENTER
+			check_variable = {
+				lp_num_index = 2
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		##设置第2位数字
+		set_variable = {
+			lp_num_index_02 = 8
+		}
+		##输入下一位
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##输入第3位密码
+	else_if = {
+		limit = {
+			##检查密码位置，是否已经输入ENTER
+			check_variable = {
+				lp_num_index = 3
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		##设置第3位数字
+		set_variable = {
+			lp_num_index_03 = 8
+		}
+		##输入下一位
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##输入第4位密码
+	else_if = {
+		limit = {
+			##检查密码位置，是否已经输入ENTER
+			check_variable = {
+				lp_num_index = 4
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		##设置第4位数字
+		set_variable = {
+			lp_num_index_04 = 8
+		}
+		##输入下一位
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##若密码已经输完5位，或禁用，则，无事发生
+	else = {
+	}
+}
+
+##数字9
+LP_NUM_9_BUTTON_effect = {
+	##输入第0位密码
+	if = {
+		limit = {
+			check_variable = {
+				lp_num_index = 0
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		set_variable = {
+			lp_num_index_00 = 9
+		}
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##输入第1位密码
+	else_if = {
+		limit = {
+			##检查密码位置，是否已经输入ENTER
+			check_variable = {
+				lp_num_index = 1
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		##设置第1位数字
+		set_variable = {
+			lp_num_index_01 = 9
+		}
+		##进入下一位
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##输入第2位密码
+	else_if = {
+		limit = {
+			##检查密码位置，是否已经输入ENTER
+			check_variable = {
+				lp_num_index = 2
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		##设置第2位数字
+		set_variable = {
+			lp_num_index_02 = 9
+		}
+		##输入下一位
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##输入第3位密码
+	else_if = {
+		limit = {
+			##检查密码位置，是否已经输入ENTER
+			check_variable = {
+				lp_num_index = 3
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		##设置第3位数字
+		set_variable = {
+			lp_num_index_03 = 9
+		}
+		##输入下一位
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##输入第4位密码
+	else_if = {
+		limit = {
+			##检查密码位置，是否已经输入ENTER
+			check_variable = {
+				lp_num_index = 4
+			}
+			check_variable = {
+				lp_num_index_complete = 0
+			}
+		}
+		##设置第4位数字
+		set_variable = {
+			lp_num_index_04 = 9
+		}
+		##输入下一位
+		add_to_variable = {
+			lp_num_index = 1
+		}
+	}
+	##若密码已经输完5位，或禁用，则，无事发生
+	else = {
+	}
+}
+
+LP_NUM_ENTER_BUTTON_effect = {
+	##密码正确-91725
+	if = {
+		limit = {
+			check_variable = {
+				lp_num_index_00 = 9
+			}
+			check_variable = {
+				lp_num_index_01 = 1
+			}
+			check_variable = {
+				lp_num_index_02 = 7
+			}
+			check_variable = {
+				lp_num_index_03 = 2
+			}
+			check_variable = {
+				lp_num_index_04 = 5
+			}
+			check_variable = {
+				LP_PASSWORD_WRONG = 0
+			}
+		}
+		##停用密码输入系统，因为已经进入下一个阶段
+		set_variable = {
+			lp_num_index_complete = 1
+		}
+	}
+	##还原密码错误状态
+	else_if = {
+		limit = {
+			check_variable = {
+				LP_PASSWORD_WRONG = 1
+			}
+		}	
+		##重置密码输入系统##
+		set_variable = {
+			lp_num_index = 0
+		}
+        set_variable = {
+			LP_PASSWORD_WRONG = 0
+		}
+		##还原所有数字
+		set_variable = {
+			lp_num_index_00 = 0
+		}
+		set_variable = {
+			lp_num_index_01 = 0
+		}
+		set_variable = {
+			lp_num_index_02 = 0
+		}
+		set_variable = {
+			lp_num_index_03 = 0
+		}
+		set_variable = {
+			lp_num_index_04 = 0
+		}
+	}
+	##密码错误
+	else = {
+		##在屏幕显示密码错误
+		set_variable = {
+			LP_PASSWORD_WRONG = 1
+		}
+	}
+}
+
+LP_back_to_start_effect = {
+	##归零密码盘和显示
+	set_variable = {
+		lp_num_index_00 = 0
+	}
+	set_variable = {
+		lp_num_index_01 = 0
+	}
+	set_variable = {
+		lp_num_index_02 = 0
+	}
+	set_variable = {
+		lp_num_index_03 = 0
+	}
+	set_variable = {
+		lp_num_index_04 = 0
+	}
+	set_variable = {
+		lp_num_index = 0
+	}
+	set_variable = {
+		LP_PASSWORD_WRONG = 0
+	}
+	##归零密码状态
+	set_variable = {
+		lp_num_index_complete = 0
+	}
+	##归零供电状态##
+	set_variable = {
+		LP_switch_1_posistion = 0
+	}
+	set_variable = {
+		LP_switch_2_posistion = 0
+	}
+	set_variable = {
+		LP_switch_3_posistion = 0
+	}
+	##归零发射盖##
+	set_variable = {
+		LP_launcher_button_posistion = 0
+	}
+}

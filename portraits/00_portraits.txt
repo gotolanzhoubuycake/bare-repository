@@ -545,6 +545,82 @@ GEH = {#格黑娜
 	}
 }
 
+GEA = {#专制格黑娜
+	army = { #将领随机
+		male = {
+			"GFX_Portrait_geh_1"
+			"GFX_Portrait_geh_2"
+			"GFX_Portrait_geh_3"
+			"GFX_Portrait_geh_4"
+			"GFX_Portrait_geh_5"
+		}
+	}
+
+	political = { #领导人随机
+		no_ideology = {
+			male = {
+				"GFX_Portrait_geh_1"
+				"GFX_Portrait_geh_2"
+				"GFX_Portrait_geh_3"
+				"GFX_Portrait_geh_4"
+				"GFX_Portrait_geh_5"
+			}
+		}
+
+		Authoritarian_ideology = {
+			male = {
+				"GFX_Portrait_geh_1"
+				"GFX_Portrait_geh_2"
+				"GFX_Portrait_geh_3"
+				"GFX_Portrait_geh_4"
+				"GFX_Portrait_geh_5"
+			}
+		}
+
+		Liberalism_ideology = {
+			male = {
+				"GFX_Portrait_geh_1"
+				"GFX_Portrait_geh_2"
+				"GFX_Portrait_geh_3"
+				"GFX_Portrait_geh_4"
+				"GFX_Portrait_geh_5"
+			}
+		}
+	}
+	operative = { #特工
+		female = {
+			"GFX_Portrait_geh_1"
+			"GFX_Portrait_geh_2"
+			"GFX_Portrait_geh_3"
+			"GFX_Portrait_geh_4"
+			"GFX_Portrait_geh_5"
+		}
+		male = {
+			"GFX_Portrait_geh_1"
+			"GFX_Portrait_geh_2"
+			"GFX_Portrait_geh_3"
+			"GFX_Portrait_geh_4"
+			"GFX_Portrait_geh_5"
+		}
+	}
+	scientist = { #科学家
+		male = {
+			"GFX_Portrait_geh_1"
+			"GFX_Portrait_geh_2"
+			"GFX_Portrait_geh_3"
+			"GFX_Portrait_geh_4"
+			"GFX_Portrait_geh_5"
+		}
+		female = {
+			"GFX_Portrait_geh_1"
+			"GFX_Portrait_geh_2"
+			"GFX_Portrait_geh_3"
+			"GFX_Portrait_geh_4"
+			"GFX_Portrait_geh_5"
+		}
+	}
+}
+
 A06 = {#格黑娜工业区
 	army = { #将领随机
 		male = {
@@ -4187,6 +4263,90 @@ A55 = {#废墟工厂
 
 
 TRI = {#圣三一
+	army = { #将领随机
+		male = {
+			"GFX_Portrait_tri_1"
+			"GFX_Portrait_tri_2"
+			"GFX_Portrait_tri_3"
+			"GFX_Portrait_tri_4"
+			"GFX_Portrait_tri_5"
+			"GFX_Portrait_tri_6"
+		}
+	}
+
+	political = { #领导人随机
+		no_ideology = {
+			male = {
+				"GFX_Portrait_tri_1"
+				"GFX_Portrait_tri_2"
+				"GFX_Portrait_tri_3"
+				"GFX_Portrait_tri_4"
+				"GFX_Portrait_tri_5"
+				"GFX_Portrait_tri_6"
+			}
+		}
+
+		Authoritarian_ideology = {
+			male = {
+				"GFX_Portrait_tri_1"
+				"GFX_Portrait_tri_2"
+				"GFX_Portrait_tri_3"
+				"GFX_Portrait_tri_4"
+				"GFX_Portrait_tri_5"
+				"GFX_Portrait_tri_6"
+			}
+		}
+
+		Progressivism_ideology = {
+			male = {
+				"GFX_Portrait_tri_1"
+				"GFX_Portrait_tri_2"
+				"GFX_Portrait_tri_3"
+				"GFX_Portrait_tri_4"
+				"GFX_Portrait_tri_5"
+				"GFX_Portrait_tri_6"
+			}
+		}
+	}
+	operative = { #特工
+		female = {
+			"GFX_Portrait_tri_1"
+			"GFX_Portrait_tri_2"
+			"GFX_Portrait_tri_3"
+			"GFX_Portrait_tri_4"
+			"GFX_Portrait_tri_5"
+			"GFX_Portrait_tri_6"
+		}
+		male = {
+			"GFX_Portrait_tri_1"
+			"GFX_Portrait_tri_2"
+			"GFX_Portrait_tri_3"
+			"GFX_Portrait_tri_4"
+			"GFX_Portrait_tri_5"
+			"GFX_Portrait_tri_6"
+		}
+	}
+	scientist = { #科学家
+		male = {
+			"GFX_Portrait_tri_1"
+			"GFX_Portrait_tri_2"
+			"GFX_Portrait_tri_3"
+			"GFX_Portrait_tri_4"
+			"GFX_Portrait_tri_5"
+			"GFX_Portrait_tri_6"
+		}
+		female = {
+			"GFX_Portrait_tri_1"
+			"GFX_Portrait_tri_2"
+			"GFX_Portrait_tri_3"
+			"GFX_Portrait_tri_4"
+			"GFX_Portrait_tri_5"
+			"GFX_Portrait_tri_6"
+		}
+	}
+}
+
+TRA = {#专制圣三一
 	army = { #将领随机
 		male = {
 			"GFX_Portrait_tri_1"

@@ -1,0 +1,15 @@
+add_namespace = BAREXP_nuke_launcher
+##格赫娜
+country_event = {
+	id = BAREXP_nuke_launcher.1
+	#picture = GFX_common_event_gui_test
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		goto_province = 6959
+		launch_nuke = {
+			province = 6959
+			nuke_type = thermonuclear_bomb
+		}
+	}
+}

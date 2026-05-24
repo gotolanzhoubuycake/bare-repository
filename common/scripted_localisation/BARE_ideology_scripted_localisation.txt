@@ -48,6 +48,20 @@ defined_text = {
 		localization_key = ATN_TRI_Hawk_type
 	}
 
+	text = {
+		trigger = {				
+            has_country_leader_ideology = ATN_deep_state_type
+		}
+		localization_key = ATN_deep_state_type
+	}
+
+	text = {
+		trigger = {				
+            has_country_leader_ideology = ATN_GEH_Tyrant_Follower_type
+		}
+		localization_key = ATN_GEH_Tyrant_Follower_type
+	}
+
 	##神秘哲学组##
 	text = {
 		trigger = {				

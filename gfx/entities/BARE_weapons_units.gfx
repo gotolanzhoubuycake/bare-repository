@@ -22,4 +22,31 @@ objectTypes = {
 		name = "generic_SCAR_H_forest_weapon_mesh"
 		file = "gfx/models/units/weapons/SCAR_H/SCAR_H_forest.mesh"
 	}
+
+	###FNFAL 原厂##
+	pdxmesh = {
+		name = "generic_FN_FAL_O_weapon_mesh"
+		file = "gfx/models/units/weapons/FN_FAL_O/FN_FAL_O.mesh"
+	}
+
+	####G3A3 标准配色####
+	pdxmesh = {
+		name = "generic_G3A3_weapon_mesh"
+		file = "gfx/models/units/weapons/G3A3/G3A3.mesh"
+	}
+
+	####HK G36####
+	pdxmesh = {
+		name = "generic_HK_G36_weapon_mesh"
+		file = "gfx/models/units/weapons/HK_G36/HK_G36.mesh"
+	}
+
+	####HK 416####
+	pdxmesh = {
+		name = "generic_HK416_weapon_mesh"
+		file = "gfx/models/units/weapons/HK416/HK416.mesh"
+	}
+
 }
+
+#

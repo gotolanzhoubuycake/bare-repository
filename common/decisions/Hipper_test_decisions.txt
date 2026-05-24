@@ -430,6 +430,20 @@ Hipper_test_decisions_categories = {
             BSE_Fire_Super_Event_index_10 = yes
         }
     }
+    BAREXP_show_superevent11_gui = {
+        visible = {
+            is_debug = yes
+            has_global_flag = show_se_test_decision_flag
+        }
+        available = {
+            is_ai = no
+        }
+        complete_effect = {
+            news_event = {
+                id = ALF_news_event.12
+            }
+        }
+    }
     ###查看结算警告###
     check_war_end_flavor_hipp = {
         visible = {
@@ -513,9 +527,16 @@ Hipper_test_decisions_categories = {
             is_ai = no
         }
         complete_effect = {
-            ALF_failure_impact_of_eden_treaty_TRI_stage_1 = yes
-            ALF_failure_impact_of_eden_treaty_TRI_stage_2 = yes
-            ALF_failure_impact_of_eden_treaty_TRI_stage_3 = yes
+            TRI = {
+                country_event = {
+                    id = ALF.46
+                }
+            }
+            GEH = {
+                country_event = {
+                    id = ALF.50
+                }
+            }
         }
     }
     initialize_2nd_liberation_war = {
@@ -645,6 +666,18 @@ Hipper_test_decisions_categories = {
         }
     }
 
+    launch_the_judgement_test = {
+        visible = {
+            is_debug = yes
+        }
+        available = {
+            is_ai = no
+        }
+        complete_effect = {
+            ALF_launch_the_judgement_script_effect = yes
+        }
+    }
+
     BAREXP_endgame_closing_screen_gui = {
         visible = {
             always = yes
@@ -677,6 +710,18 @@ Hipper_test_decisions_categories = {
             BARE_FIRE_FACTION_GOAL_COMPLETE_POPUP_EFFECT = yes
         }
     }
+
+    ##发射控制台
+    BAREXP_LP_OPEN_VAR_gui = {
+		visible = {
+			always = yes
+		}
+		complete_effect = {
+		    set_variable = {
+				LP_OPEN_VAR = 1
+			}
+		}
+	}
 }
 
 CEN_Operation_Uranus_categories = {

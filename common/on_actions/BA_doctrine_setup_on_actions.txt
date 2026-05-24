@@ -5,6 +5,11 @@ on_actions = {
 				set_grand_doctrine = trinity_superior_firepower
 				set_sub_doctrine = SD_TSHA
 			}
+			##
+			ALF = {
+				set_grand_doctrine = liberation_front_grand_doctrines
+				set_sub_doctrine = sf_subdoctrine_storm_troops
+			}
 		}
 	}
 }

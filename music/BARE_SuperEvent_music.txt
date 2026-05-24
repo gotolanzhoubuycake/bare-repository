@@ -1,13 +1,20 @@
 music_station = "BARE_SuperEvent_Music"
 music = {
-	song = "BARE_SuperEvent_Sound_Block_1m"
+	song = "BARE_SuperEvent_Sound_Steel_Rain"
 	chance = {
 		factor = 0
 	}
 }
 
 music = {
-	song = "BARE_SuperEvent_Sound_Block_2m"
+	song = "BARE_SuperEvent_Sound_lap_time"
+	chance = {
+		factor = 0
+	}
+}
+
+music = {
+	song = "BARE_SuperEvent_Sound_Pain_is_Salvation"
 	chance = {
 		factor = 0
 	}
@@ -21,7 +28,14 @@ music = {
 }
 
 music = {
-	song = "BARE_SuperEvent_Sound_lap_time"
+	song = "BARE_SuperEvent_Sound_Block_1m"
+	chance = {
+		factor = 0
+	}
+}
+
+music = {
+	song = "BARE_SuperEvent_Sound_Block_2m"
 	chance = {
 		factor = 0
 	}

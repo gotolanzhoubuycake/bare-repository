@@ -1,0 +1,27 @@
+spriteTypes = {
+	##OTSI相关
+	##签名
+	spriteType = {
+        name = "GFX_CEN_signature_Igarashi_Yomi_event_picture"
+        texturefile = "gfx/event_pictures/CEN/OTSI/signature_Igarashi_Yomi.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+        name = "GFX_CEN_signature_shiranui_kaya_event_picture"
+        texturefile = "gfx/event_pictures/CEN/OTSI/signature_shiranui_kaya.dds"
+		legacy_lazy_load = no
+	}
+
+	##事件图片
+	spriteType = {
+        name = "GFX_CEN_OTSI_AS006_PERORODZILLA_event_picture"
+        texturefile = "gfx/event_pictures/CEN/OTSI/OTSI_AS006_PERORODZILLA.dds"
+	}
+
+	spriteType = {
+        name = "GFX_CEN_OTSI_EI018_KAISERCORP_event_picture"
+        texturefile = "gfx/event_pictures/CEN/OTSI/OTSI_EI018_KAISERCORP.dds"
+	}
+
+}

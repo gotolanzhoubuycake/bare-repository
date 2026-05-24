@@ -1,7 +1,4 @@
 sf_subdoctrine_paratroopers = {
-	##空突强化
-	##trinity super heavy artillery
-	##TSHA
 	track = track_sf
 	name = SD_sf_subdoctrine_paratroopers_NAME
 	description = SD_sf_subdoctrine_paratroopers_DESC
@@ -182,9 +179,6 @@ sf_subdoctrine_paratroopers = {
 }
 
 sf_subdoctrine_commandos = {
-	##SF强化
-	##trinity super heavy artillery
-	##TSHA
 	track = track_sf
 	name = SD_sf_subdoctrine_commandos_NAME
 	description = SD_sf_subdoctrine_commandos_DESC
@@ -329,9 +323,6 @@ sf_subdoctrine_commandos = {
 
 ##突击部队##
 sf_subdoctrine_storm_troops = {
-	##SF强化
-	##trinity super heavy artillery
-	##TSHA
 	track = track_sf
 	name = SD_sf_subdoctrine_storm_troops_NAME
 	description = SD_sf_subdoctrine_storm_troops_DESC
@@ -346,6 +337,10 @@ sf_subdoctrine_storm_troops = {
 	}
 	ai_will_do = {
 		base = 1
+		modifier = {
+			factor = 1000
+			original_tag = ALF
+		}
 	}
 	# EFFECTS
 	enable_tactic = tactic_infantry_21

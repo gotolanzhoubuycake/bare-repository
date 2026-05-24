@@ -100,6 +100,12 @@ objectTypes = {
 		animation = { id = "bicycle_move_2"		type = "infantry_bicycle_move_2_animation" }
 		animation = { id = "bicycle_retreat"	type = "infantry_bicycle_retreat_animation" }
 		animation = { id = "bicycle_retreat_2"	type = "infantry_bicycle_retreat_2_animation" }
+		##
+		##
+		animation = { id = "recon_bicycle_idle"	type = "infantry_motorcycle_idle_animation" }
+		animation = { id = "recon_bicycle_idle_2"	type = "infantry_motorcycle_idle_animation" }
+		animation = { id = "recon_bicycle_move"	type = "infantry_motorcycle_moving_animation" }
+		animation = { id = "recon_bicycle_move_2"	type = "infantry_motorcycle_moving_animation" }
 	}
 
 	pdxmesh = {
@@ -133,6 +139,11 @@ objectTypes = {
 		animation = { id = "bicycle_move_2"		type = "infantry_bicycle_move_2_animation" }
 		animation = { id = "bicycle_retreat"	type = "infantry_bicycle_retreat_animation" }
 		animation = { id = "bicycle_retreat_2"	type = "infantry_bicycle_retreat_2_animation" }
+		##
+		animation = { id = "recon_bicycle_idle"	type = "infantry_motorcycle_idle_animation" }
+		animation = { id = "recon_bicycle_idle_2"	type = "infantry_motorcycle_idle_animation" }
+		animation = { id = "recon_bicycle_move"	type = "infantry_motorcycle_moving_animation" }
+		animation = { id = "recon_bicycle_move_2"	type = "infantry_motorcycle_moving_animation" }
 	}
 }
 ##

@@ -1,0 +1,14 @@
+﻿l_simp_chinese:
+ plz_insert_key_launcher_pad_status_sl: ""
+ keyready_launcher_pad_status_sl: "§YRequire§! §RCODE§!"
+ error_launcher_pad_status_sl: "§RERROR§!"
+ password_ready_launcher_pad_status_sl: "§YWARHEAD§!：§GSAFE§!"
+ power_ready_launcher_pad_status_sl: "§YWARHEAD§!：§RARMED§!"
+
+###
+ plz_insert_key_launcher_pad_num_status_sl: ""
+ launcher_pad_num_1_ready_sl: "[?ROOT.lp_num_index_00]"
+ launcher_pad_num_2_ready_sl: "[?ROOT.lp_num_index_01]"
+ launcher_pad_num_3_ready_sl: "[?ROOT.lp_num_index_02]"
+ launcher_pad_num_4_ready_sl: "[?ROOT.lp_num_index_03]"
+ launcher_pad_num_5_ready_sl: "[?ROOT.lp_num_index_04]"

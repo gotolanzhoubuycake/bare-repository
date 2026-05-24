@@ -987,3 +987,18 @@ news_event = {
 
 	}
 }
+
+##阿里乌斯解放之战##
+news_event = {
+	id = ALF_news_event.12
+	picture = GFX_BA_news_cathedral_war
+	title = ALF_news_event.12.t
+	desc = ALF_news_event.12.desc
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = ALF_news_event.12.a
+		BSE_Fire_Super_Event_index_11 = yes
+	}
+}

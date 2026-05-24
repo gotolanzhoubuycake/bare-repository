@@ -41,6 +41,10 @@ GIT = {
 	color = rgb { 139 0 0 }
 	color_ui = rgb { 149 10 10 }
 }
+GEA = {
+	color = rgb { 112 128 144 }
+	color_ui = rgb { 112 128 144 }
+}
 ###########格黑娜文化结束############
 HYA = {
 	color = rgb { 255 105 180 }
@@ -80,6 +84,10 @@ TRI = {
 TRR = {
 	color = rgb { 255 192 203 }
 	color_ui = rgb { 255 192 203 }
+}
+TRA = {
+	color = rgb { 82 105 93 }
+	color_ui = rgb { 82 105 93 }
 }
 TEP = {
 	color = rgb { 250 128 114 }

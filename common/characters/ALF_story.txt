@@ -1,0 +1,48 @@
+characters = {
+	TRA_Jinguji_Miu = {
+		name = TRA_Jinguji_Miu_name #神宮寺 美羽
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_tri_3
+				small = GFX_Portrait_tri_3_small
+			}
+			army = {
+				large = GFX_Portrait_tri_3
+			}
+		}
+		country_leader = {
+			ideology = ATN_deep_state_type
+			desc = TRA_Jinguji_Miu_desc
+			traits = {
+	
+			}
+			expire = "9999.1.1.1"
+			id = -1
+		}
+	}
+
+	#氷川 凛 (Hikawa Rin)
+	GEA_Hikawa_Rin = {
+		name = GEA_Hikawa_Rin_name
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_geh_5
+				small = GFX_Portrait_geh_5_small
+			}
+			army = {
+				large = GFX_Portrait_geh_5
+			}
+		}
+		country_leader = {
+			ideology = ATN_GEH_Tyrant_Follower_type
+			desc = GEA_Hikawa_Rin_desc
+			traits = {
+	
+			}
+			expire = "9999.1.1.1"
+			id = -1
+		}
+	}
+}
+
+##不要动最后的空行！！！！##
