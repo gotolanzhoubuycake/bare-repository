@@ -280,15 +280,144 @@ country_event = {
     }
 
     immediate = {
+        # 设置全局标志，解锁凯撒战时宣传决策组和启动经济调整系统
         CAE = {
+            set_country_flag = CAE_MIL_war_started
             declare_war_on = {
                 target = MIL
                 type = annex_everything
             }
+            load_oob = "MIL_CAE_WAR_CAE"
+            # 马尔斯大道占领区
+            set_province_controller = 12171
+            set_province_controller = 7229
+        }
+        MIL = {
+            set_country_flag = CAE_MIL_war_started
+            load_oob = "MIL_CAE_WAR_MIL"
+            # 千年海滩 31,471,32,730,33,731,473,320
+            31 = {
+                set_state_controller_to = CAE
+            }
+            471 = {
+                set_state_controller_to = CAE
+            }
+            32 = {
+                set_state_controller_to = CAE
+            }
+            730 = {
+                set_state_controller_to = CAE
+            }
+            33 = {
+                set_state_controller_to = CAE
+            }
+            731 = {
+                set_state_controller_to = CAE
+            }
+            473 = {
+                set_state_controller_to = CAE
+            }
+            320 = {
+                set_state_controller_to = CAE
+            }
+            # 千年大街 733,321,322,732,323
+            733 = {
+                set_state_controller_to = CAE
+            }
+            321 = {
+                set_state_controller_to = CAE
+            }
+            322 = {
+                set_state_controller_to = CAE
+            }
+            732 = {
+                set_state_controller_to = CAE
+            }
+            323 = {
+                set_state_controller_to = CAE
+            }
+            # 333, 341, 331, 477, 745, 746, 476
+            333 = {
+                set_state_controller_to = CAE
+            }
+            341 = {
+                set_state_controller_to = CAE
+            }
+            331 = {
+                set_state_controller_to = CAE
+            }
+            477 = {
+                set_state_controller_to = CAE
+            }
+            745 = {
+                set_state_controller_to = CAE
+            }
+            746 = {
+                set_state_controller_to = CAE
+            }
+            476 = {
+                set_state_controller_to = CAE
+            }
+        }
+
+    }
+}
+
+
+
+# 事件10：光辉的胜利
+# 由民族精神"永远飘扬的光辉旗帜"触发
+country_event = {
+    id = MIL_cae_war.10
+    title = MIL_cae_war.10.t
+    desc = MIL_cae_war.10.d
+
+    is_triggered_only = yes
+    fire_only_once = yes
+
+    option = {
+        name = MIL_cae_war.10.a
+        ai_chance = {
+            base = 1
         }
     }
 }
 
+# 事件11：审判战犯
+# 由民族精神"永远飘扬的光辉旗帜"触发
+country_event = {
+    id = MIL_cae_war.11
+    title = MIL_cae_war.11.t
+    desc = MIL_cae_war.11.d
+
+    is_triggered_only = yes
+    fire_only_once = yes
+
+    option = {
+        name = MIL_cae_war.11.a
+        ai_chance = {
+            base = 1
+        }
+    }
+}
+
+# 事件12：凯撒集团大解体
+# 由民族精神"永远飘扬的光辉旗帜"触发
+country_event = {
+    id = MIL_cae_war.12
+    title = MIL_cae_war.12.t
+    desc = MIL_cae_war.12.d
+
+    is_triggered_only = yes
+    fire_only_once = yes
+
+    option = {
+        name = MIL_cae_war.12.a
+        ai_chance = {
+            base = 1
+        }
+    }
+}
 
 
 country_event = {

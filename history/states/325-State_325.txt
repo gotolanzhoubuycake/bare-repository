@@ -12,7 +12,7 @@ state={
 			infrastructure = 3
 			industrial_complex = 1
 		}
-		owner = A07
+		owner = MIL
 		add_core_of=A07
 		add_core_of=MIL
 		victory_points = {6462 5}

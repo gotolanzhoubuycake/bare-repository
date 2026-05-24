@@ -1,0 +1,59 @@
+﻿l_simp_chinese:
+ # 决策类别
+ CAE_war_propaganda_category: "战时宣传政策"
+ CAE_war_produce_category: "凯撒战时雇佣兵征兵决议"
+
+
+ # 决策1：对千年产品进行抹黑
+ CAE_smear_MIL_products: "对千年产品进行抹黑"
+ CAE_smear_MIL_products_desc: "通过各种渠道散布关于千年产品的负面消息，质疑其质量和安全性。这将削弱消费者对千年产品的信任，转而选择凯撒的产品。"
+
+ # 决策2：传播不利于千年的言论
+ CAE_spread_anti_MIL_propaganda: "传播不利于千年的言论"
+ CAE_spread_anti_MIL_propaganda_desc: "利用媒体和网络，传播关于千年的谣言和负面宣传。这将进一步损害千年的声誉，为我们的商业利益铺平道路。"
+
+ # 决策3：宣布不实产品测试结论
+ CAE_fake_product_test: "宣布不实产品测试结论"
+ CAE_fake_product_test_desc: "发布虚假的产品测试报告，宣称凯撒产品在各项指标上均优于千年产品。虽然这种做法可能引起质疑，但在战争期间，消费者更关注眼前的选择。"
+
+ # 决策4：征用占领区资源进行生产
+ CAE_confiscate_resources: "征用占领区资源进行生产"
+ CAE_confiscate_resources_desc: "征用千年占领区的原材料和设备，将其用于凯撒的生产线。这将有效补充我们的供应链，但可能会激起当地居民的不满。"
+
+ # 决策5：从占领区"合法"征收资产充实公司财务
+ CAE_seize_assets: "从占领区"合法"征收资产充实公司财务"
+ CAE_seize_assets_desc: "以"战时需要"为名，征收占领区内的企业资产和金融资源。这将为凯撒集团带来可观的收益，但同时也将引发更强烈的抵抗。"
+
+ # 新闻事件：被迫劳作的市民们
+ CAE_forced_labor.1.t: "被迫劳作的市民们"
+ CAE_forced_labor.1.d: "在千年占领区，凯撒集团开始强制征用当地资源进行生产。许多千年市民被要求在凯撒控制的工厂中劳动，为我们的战争机器提供动力。虽然这些行动在国际上引发了争议，但在战时，经济利益高于一切。"
+
+ # 新闻事件：搜捕游击队
+ CAE_hunt_guerrilla.1.t: "搜捕游击队"
+ CAE_hunt_guerrilla.1.d: "随着凯撒集团在千年占领区征收更多资产，当地的抵抗运动也开始活跃起来。凯撒PMC部队正在各占领城市展开搜捕行动，以清除那些试图破坏我们经济利益的组织。这场"治安行动"正在变得越来越血腥。"
+
+CAE_recruit_zayu_army: "招募杂牌佣兵"
+
+CAE_recruit_normal_army: "招募普通佣兵"
+
+CAE_recruit_advanced_army: "招募精锐佣兵"
+
+CAE_light_armor_army: "招募轻装甲部队"
+
+CAE_medium_armor_army: "招募主战装甲部队"
+
+CAE_heavy_armor_army: "招募重型装甲部队"
+
+CAE_produce_infantry_equipment: "生产步兵用装备"
+
+CAE_produce_fire_support_equipment: "生产火力支援装备"
+
+CAE_produce_truck_equipment: "生产运输载具"
+
+CAE_produce_infantry_vehicle_equipment: "生产步兵载具"
+
+CAE_produce_light_vehicle_equipment: "生产轻装甲车辆"
+
+CAE_produce_medium_vehicle_equipment: "生产中型装甲车辆"
+
+CAE_produce_heavy_vehicle_equipment: "生产重型装甲车辆"

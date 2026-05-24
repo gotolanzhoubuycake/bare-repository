@@ -154,6 +154,9 @@ focus_tree = {
                 remove_idea = MIL_unqualified_club_investigate_3
                 add_idea = MIL_investigate_success
             }
+			CAE = {
+				set_country_flag = CC_COMPLETE
+			}
         }
 	}
 	focus = { #对凯撒的通牒
@@ -175,6 +178,10 @@ focus_tree = {
             country_event = {
                 id = MIL_event.11
             }
+			CAE = {
+				set_country_flag = FUCK_COMPLETE
+			}
+
         }
 	}
 	focus = { #紧张的局势
@@ -193,11 +200,101 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			# 初始化凯撒经济状况（初始值120）
 			set_variable = {
 				var = global.cae_economic_situation
 				value = 120
 				tooltip = MIL_CAE_economic_situation
 			}
+			set_variable = {
+				var = global.cae_final_economic_situation
+				value = 120
+				tooltip = MIL_CAE_FINAL_economic_situation
+			}
+			# 初始化招募部队装备系数（默认值1.0）
+			set_variable = {
+				var = global.cae_recruit_equipment_factor
+				value = 1
+			}
+			set_variable = {
+				var = global.cae_add_economic_situation
+				value = 0
+			}
+			# 初始化凯撒经济状况相关跟踪变量（设置基准值）
+			# cae_MIL_states_count 将在 on_daily_CAE 中实时计算，此处初始化为0
+			set_variable = { global.cae_MIL_states_count = 0 }
+			# cae_manpower_lost_7k5 用于跟踪凯撒人力损失（每7.5k为1单位，初始0表示0损失）
+			set_variable = { global.cae_manpower_lost_7k5 = 0 }
+			# mil_manpower_lost_2k 用于跟踪千年人力损失（每2k为1单位，初始0表示0损失）
+			set_variable = { global.mil_manpower_lost_2k = 0 }
+			country_event = {
+                id = MIL_cae_war.6
+                days = 7
+            }
+			every_owned_state = {
+				limit = {
+					OR = {
+						is_core_of = A07 # 千年大街
+						is_core_of = A03 # 千年海滩
+					}
+				}
+				teleport_armies = {
+					to_province = 11905
+				}
+				set_demilitarized_zone = yes # 设置为非军事区
+			}
+
+			# 333, 341, 331, 477, 745, 746, 476
+			# 千年时代广场
+			333 = {
+				teleport_armies = {
+					to_province = 11905
+				}
+				set_demilitarized_zone = yes # 设置为非军事区
+			}
+			# 千年休闲中心
+			341 = {
+				teleport_armies = {
+					to_province = 11905
+				}
+				set_demilitarized_zone = yes # 设置为非军事区
+			}
+			# 千年学生公园
+			331 = {
+				teleport_armies = {
+					to_province = 11905
+				}
+				set_demilitarized_zone = yes # 设置为非军事区
+			}
+			# 千年西路
+			477 = {
+				teleport_armies = {
+					to_province = 11905
+				}
+				set_demilitarized_zone = yes # 设置为非军事区
+			}
+			# 尤里卡广场北
+			745 = {
+				teleport_armies = {
+					to_province = 11905
+				}
+				set_demilitarized_zone = yes # 设置为非军事区
+			}
+			# 尤里卡广场南
+			746 = {
+				teleport_armies = {
+					to_province = 11905
+				}
+				set_demilitarized_zone = yes # 设置为非军事区
+			}
+			# 千年南路
+			476 = {
+				teleport_armies = {
+					to_province = 11905
+				}
+				set_demilitarized_zone = yes # 设置为非军事区
+			}
+
 		}
 	}
 	focus = { #守护我们的千年！

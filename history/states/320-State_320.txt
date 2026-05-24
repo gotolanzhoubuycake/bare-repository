@@ -13,7 +13,7 @@ state={
 			industrial_complex = 1
 			arms_factory = 1
 		}
-		owner = A03
+		owner = MIL
 		add_core_of=A03
 		add_core_of=MIL
     }
