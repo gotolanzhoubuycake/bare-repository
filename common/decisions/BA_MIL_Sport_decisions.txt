@@ -196,6 +196,268 @@ MIL_Sport_decision_category = {
 		}
 	}
 
+	MIL_Sport_Construct_Landmark_Main_Stadium = {
+		# 2026-05-27: 前期一次性大型场馆预投资。
+		# 入口：只在筹备前6个月、场地准备程度不超过3级时可启动。
+		# 关键变量：只增加场地准备程度，不改写 `MIL_Sport_Constructing_Sports_Venues_use`，因此不会抬高普通场馆下一次费用。
+		# 结果：240天后给准备评分、学生支持度、随机地块民用工厂和场地准备程度。
+		visible = {
+			has_completed_focus = MIL_build_grand_festival_work
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = MIL_Sport_Landmark_Main_Stadium_condition_tt
+				AND = {
+					check_variable = {
+						BARE_MIL_sport_Month_Time_Var > 9
+					}
+					check_variable = {
+						BARE_MIL_sport_Building_Score_Var < 4
+					}
+				}
+			}
+			set_temp_variable = {
+				MIL_Sport_Fee_cost = 60
+			}
+			custom_trigger_tooltip = {
+				tooltip = MIL_Sport_Fee_have_tooltip
+				check_variable = {
+					var = BARE_MIL_sport_Fee_Have_Var
+					value = MIL_Sport_Fee_cost
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		cost = 30
+		days_remove = 240
+		fire_only_once = yes
+		custom_cost_trigger = {
+			set_temp_variable = {
+				MIL_Sport_Fee_cost = 60
+			}
+			custom_trigger_tooltip = {
+				tooltip = MIL_Sport_Fee_have_tooltip
+				check_variable = {
+					var = BARE_MIL_sport_Fee_Have_Var
+					value = MIL_Sport_Fee_cost
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		custom_cost_text = MIL_Sport_Fee_cost_icon_tooltip
+		complete_effect = {
+			subtract_from_variable = {
+				BARE_MIL_sport_Fee_Have_Var = MIL_Sport_Fee_cost
+			}
+		}
+		remove_effect = {
+			custom_effect_tooltip = MIL_Sport_Landmark_Main_Stadium_tt
+			add_to_variable = {
+				BARE_MIL_sport_Score_Var = 20
+			}
+			add_to_variable = {
+				BARE_MIL_sport_Student_Support_Var = 10
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			add_to_variable = {
+				BARE_MIL_sport_Building_Score_Var = 1
+			}
+			clamp_variable = {
+				var = BARE_MIL_sport_Building_Score_Var
+				min = 0
+				max = 5
+			}
+			BARE_MIL_Sport_Building_Score_Frame_Change_effect = yes
+			BARE_MIL_Sport_Student_Support_Var_Chance_effect = yes
+		}
+	}
+
+	MIL_Sport_Establish_Savings_Fund = {
+		# 2026-05-27: 一次性建立储蓄资金，用前期溢出经费换取后续三次临时经费动用权限。
+		visible = {
+			has_completed_focus = MIL_yuuka_unhappy
+		}
+		available = {
+			set_temp_variable = {
+				MIL_Sport_Fee_cost = 40
+			}
+			custom_trigger_tooltip = {
+				tooltip = MIL_Sport_Fee_have_tooltip
+				check_variable = {
+					var = BARE_MIL_sport_Fee_Have_Var
+					value = MIL_Sport_Fee_cost
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		cost = 25
+		fire_only_once = yes
+		custom_cost_trigger = {
+			set_temp_variable = {
+				MIL_Sport_Fee_cost = 40
+			}
+			custom_trigger_tooltip = {
+				tooltip = MIL_Sport_Fee_have_tooltip
+				check_variable = {
+					var = BARE_MIL_sport_Fee_Have_Var
+					value = MIL_Sport_Fee_cost
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		custom_cost_text = MIL_Sport_Fee_cost_icon_tooltip
+		complete_effect = {
+			custom_effect_tooltip = MIL_Sport_Establish_Savings_Fund_tt
+			subtract_from_variable = {
+				BARE_MIL_sport_Fee_Have_Var = MIL_Sport_Fee_cost
+			}
+			set_country_flag = BARE_MIL_sport_Savings_Fund_Unlocked_flag
+			set_variable = {
+				BARE_MIL_sport_Reserve_Fund_Use_Left_Var = 3
+			}
+		}
+	}
+
+	MIL_Sport_Use_Reserve_Fund = {
+		# 2026-05-27: 储蓄资金的动用入口。
+		# 每次直接增加10点当期经费，允许短期超过上限；最多由储蓄资金变量控制为3次。
+		visible = {
+			has_country_flag = BARE_MIL_sport_Savings_Fund_Unlocked_flag
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = MIL_Sport_Use_Reserve_Fund_condition_tt
+				check_variable = {
+					BARE_MIL_sport_Reserve_Fund_Use_Left_Var > 0
+				}
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = MIL_Sport_Use_Reserve_Fund_tt
+			add_to_variable = {
+				BARE_MIL_sport_Fee_Have_Var = 10
+			}
+			subtract_from_variable = {
+				BARE_MIL_sport_Reserve_Fund_Use_Left_Var = 1
+			}
+			clamp_variable = {
+				var = BARE_MIL_sport_Reserve_Fund_Use_Left_Var
+				min = 0
+				max = 3
+			}
+		}
+	}
+
+	MIL_Sport_Expand_Executive_Committee = {
+		# 2026-05-27: 前期必点组织建设决议。
+		# 基础月度支持压力已提高到-5，本决议完成后向筹备动态修正补回每月+2，并给一次性支持度与准备评分。
+		visible = {
+			has_completed_focus = MIL_yuuka_unhappy
+		}
+		available = {
+			set_temp_variable = {
+				MIL_Sport_Fee_cost = 40
+			}
+			custom_trigger_tooltip = {
+				tooltip = MIL_Sport_Fee_have_tooltip
+				check_variable = {
+					var = BARE_MIL_sport_Fee_Have_Var
+					value = MIL_Sport_Fee_cost
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		cost = 100
+		days_remove = 90
+		fire_only_once = yes
+		custom_cost_trigger = {
+			set_temp_variable = {
+				MIL_Sport_Fee_cost = 40
+			}
+			custom_trigger_tooltip = {
+				tooltip = MIL_Sport_Fee_have_tooltip
+				check_variable = {
+					var = BARE_MIL_sport_Fee_Have_Var
+					value = MIL_Sport_Fee_cost
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		custom_cost_text = MIL_Sport_Fee_cost_icon_tooltip
+		complete_effect = {
+			subtract_from_variable = {
+				BARE_MIL_sport_Fee_Have_Var = MIL_Sport_Fee_cost
+			}
+		}
+		remove_effect = {
+			custom_effect_tooltip = MIL_Sport_Expand_Executive_Committee_tt
+			set_country_flag = BARE_MIL_sport_Executive_Committee_Expanded_flag
+			add_to_variable = {
+				BARE_MIL_sport_Prepare_Modifier_MIL_sport_student_support_monthly_var = 2
+			}
+			add_to_variable = {
+				BARE_MIL_sport_Student_Support_Var = 5
+			}
+			add_to_variable = {
+				BARE_MIL_sport_Score_Var = 10
+			}
+			BARE_MIL_Sport_Student_Support_Var_Chance_effect = yes
+			BARE_MIL_Sport_GUI_Display_Var_Refresh_effect = yes
+		}
+	}
+
+	MIL_Sport_Connect_Imaginary_Automation = {
+		# 2026-05-27: 接入“虚数”自动化调度系统。
+		# 完成后由月更按科技等级把剩余经费转换为准备评分，每月最多+5。
+		visible = {
+			has_completed_focus = MIL_The_power_of_Technology
+		}
+		available = {
+			set_temp_variable = {
+				MIL_Sport_Fee_cost = 20
+			}
+			custom_trigger_tooltip = {
+				tooltip = MIL_Sport_Fee_have_tooltip
+				check_variable = {
+					var = BARE_MIL_sport_Fee_Have_Var
+					value = MIL_Sport_Fee_cost
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		days_remove = 30
+		fire_only_once = yes
+		custom_cost_trigger = {
+			set_temp_variable = {
+				MIL_Sport_Fee_cost = 20
+			}
+			custom_trigger_tooltip = {
+				tooltip = MIL_Sport_Fee_have_tooltip
+				check_variable = {
+					var = BARE_MIL_sport_Fee_Have_Var
+					value = MIL_Sport_Fee_cost
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		custom_cost_text = MIL_Sport_Fee_cost_icon_tooltip
+		complete_effect = {
+			subtract_from_variable = {
+				BARE_MIL_sport_Fee_Have_Var = MIL_Sport_Fee_cost
+			}
+		}
+		remove_effect = {
+			custom_effect_tooltip = MIL_Sport_Connect_Imaginary_Automation_tt
+			set_country_flag = BARE_MIL_sport_Imaginary_Automation_Active_flag
+		}
+	}
+
 	MIL_Sport_Crackdown_on_Sabotage = {
 		# 严厉打击破坏分子：
 		# 1. 这是一个持续型保护决议，不会自动在固定天数后结束。
@@ -367,6 +629,7 @@ MIL_Sport_decision_category = {
 
 	MIL_Sport_Temporary_Sponsor_Recruitment = {
 		# 2026-05-21: 新增临时赞助招募，用政治点补充当期可用经费，缓解后期费用门槛。
+		# 2026-05-26: 临时赞助允许当前经费短期超过上限；不在本决议内即时压回上限，后续由月更统一刷新。
 		visible = {
 			has_completed_focus = MIL_make_more_money
 		}
@@ -376,16 +639,6 @@ MIL_Sport_decision_category = {
 			custom_effect_tooltip = MIL_Sport_Temporary_Sponsor_Recruitment_tt
 			add_to_variable = {
 				BARE_MIL_sport_Fee_Have_Var = 10
-			}
-			if = {
-				limit = {
-					check_variable = {
-						BARE_MIL_sport_Fee_Have_Var > BARE_MIL_sport_Fee_All_Var
-					}
-				}
-				set_variable = {
-					BARE_MIL_sport_Fee_Have_Var = BARE_MIL_sport_Fee_All_Var
-				}
 			}
 		}
 	}

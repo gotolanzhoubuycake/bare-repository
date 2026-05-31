@@ -466,7 +466,7 @@ country_event = {
 # 口径说明：
 # 1. 每月只检测一次，真正的概率分配在 `BARE_MIL_Sport_Sabotage_Check_effect` 中完成。
 # 2. 主要惩罚为准备综合评分下降。
-# 3. 2026-05-25: 学生支持度损失按最终实际准备评分损失的 1 倍统一结算，事件选项 tooltip 按当前安保和保护状态显示实际损失。
+# 3. 2026-05-26: 破坏事件基础惩罚翻倍；学生支持度损失按最终实际准备评分损失的 1 倍统一结算。
 country_event = {
     id = MIL_sport_event.50
     title = MIL_sport_event.50.t
@@ -476,7 +476,7 @@ country_event = {
 
     option = {
 		name = MIL_sport_event.50.a
-		# 2026-05-25: 破坏事件 tooltip 按当前安保等级和保护状态显示实际扣分。
+		# 2026-05-26: 破坏事件 tooltip 按翻倍后的当前安保等级和保护状态显示实际扣分。
 		if = {
 			limit = {
 				check_variable = { BARE_MIL_sport_Security_Have_Var < 2 }
@@ -525,7 +525,7 @@ country_event = {
 				}
 			}
 			set_temp_variable = {
-				BARE_MIL_sport_Sabotage_Score_Damage_Temp_Var = 2
+				BARE_MIL_sport_Sabotage_Score_Damage_Temp_Var = 4
 			}
 		}
 		else_if = {
@@ -535,7 +535,7 @@ country_event = {
 				}
 			}
 			set_temp_variable = {
-				BARE_MIL_sport_Sabotage_Score_Damage_Temp_Var = 1
+				BARE_MIL_sport_Sabotage_Score_Damage_Temp_Var = 2
 			}
 		}
 		BARE_MIL_Sport_Sabotage_Apply_Damage_effect = yes
@@ -554,7 +554,7 @@ country_event = {
 
     option = {
 		name = MIL_sport_event.51.a
-		# 2026-05-25: 破坏事件 tooltip 按当前安保等级和保护状态显示实际扣分。
+		# 2026-05-26: 破坏事件 tooltip 按翻倍后的当前安保等级和保护状态显示实际扣分。
 		if = {
 			limit = {
 				check_variable = { BARE_MIL_sport_Security_Have_Var < 4 }
@@ -601,7 +601,7 @@ country_event = {
 				}
 			}
 			set_temp_variable = {
-				BARE_MIL_sport_Sabotage_Score_Damage_Temp_Var = 3
+				BARE_MIL_sport_Sabotage_Score_Damage_Temp_Var = 6
 			}
 		}
 		else_if = {
@@ -611,12 +611,12 @@ country_event = {
 				}
 			}
 			set_temp_variable = {
-				BARE_MIL_sport_Sabotage_Score_Damage_Temp_Var = 2
+				BARE_MIL_sport_Sabotage_Score_Damage_Temp_Var = 4
 			}
 		}
 		else = {
 			set_temp_variable = {
-				BARE_MIL_sport_Sabotage_Score_Damage_Temp_Var = 1
+				BARE_MIL_sport_Sabotage_Score_Damage_Temp_Var = 2
 			}
 		}
 		BARE_MIL_Sport_Sabotage_Apply_Damage_effect = yes
@@ -635,7 +635,7 @@ country_event = {
 
     option = {
 		name = MIL_sport_event.52.a
-		# 2026-05-25: 温泉开发部事件不受“严厉打击”保护影响，只按安保等级显示实际扣分。
+		# 2026-05-26: 温泉开发部事件不受“严厉打击”保护影响，只按翻倍后的安保等级显示实际扣分。
 		if = {
 			limit = {
 				check_variable = { BARE_MIL_sport_Security_Have_Var < 5 }
@@ -655,12 +655,12 @@ country_event = {
 				}
 			}
 			set_temp_variable = {
-				BARE_MIL_sport_Sabotage_Score_Damage_Temp_Var = 10
+				BARE_MIL_sport_Sabotage_Score_Damage_Temp_Var = 20
 			}
 		}
 		else = {
 			set_temp_variable = {
-				BARE_MIL_sport_Sabotage_Score_Damage_Temp_Var = 5
+				BARE_MIL_sport_Sabotage_Score_Damage_Temp_Var = 10
 			}
 		}
 		BARE_MIL_Sport_Sabotage_Apply_Damage_effect = yes
@@ -679,7 +679,7 @@ country_event = {
 
     option = {
 		name = MIL_sport_event.53.a
-		# 2026-05-25: 破坏事件 tooltip 按当前安保等级和保护状态显示实际扣分。
+		# 2026-05-26: 破坏事件 tooltip 按翻倍后的当前安保等级和保护状态显示实际扣分。
 		if = {
 			limit = {
 				check_variable = { BARE_MIL_sport_Security_Have_Var < 5 }
@@ -712,12 +712,12 @@ country_event = {
 				}
 			}
 			set_temp_variable = {
-				BARE_MIL_sport_Sabotage_Score_Damage_Temp_Var = 5
+				BARE_MIL_sport_Sabotage_Score_Damage_Temp_Var = 10
 			}
 		}
 		else = {
 			set_temp_variable = {
-				BARE_MIL_sport_Sabotage_Score_Damage_Temp_Var = 2
+				BARE_MIL_sport_Sabotage_Score_Damage_Temp_Var = 4
 			}
 		}
 		BARE_MIL_Sport_Sabotage_Apply_Damage_effect = yes
@@ -1109,6 +1109,7 @@ country_event = {
 
 # 2026-05-25: 其他大型学院合作回复事件。
 # 维护说明：immediate 只负责抽取回复结果；具体经费上限、赞助方修正、请求清理和效果文本都放在选项内结算。
+# 2026-05-26: 合作总上限提高到20；完整合作在剩余额度至少10时显示，剩余额度不足时改用5点合作选项。
 country_event = {
     id = MIL_sport_event.65
     title = MIL_sport_event.65.t
@@ -1127,7 +1128,7 @@ country_event = {
 		name = MIL_sport_event.65.a
 		trigger = {
 			has_country_flag = BARE_MIL_sport_Cooperation_Result_10_flag
-			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var < 1 }
+			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var < 11 }
 		}
 		custom_effect_tooltip = MIL_Sport_Cooperation_GEH_tt
 		set_temp_variable = { BARE_MIL_sport_Cooperation_Add_Temp_Var = 10 }
@@ -1140,9 +1141,12 @@ country_event = {
 		trigger = {
 			OR = {
 				has_country_flag = BARE_MIL_sport_Cooperation_Result_5_flag
-				has_country_flag = BARE_MIL_sport_Cooperation_Result_10_flag
+				AND = {
+					has_country_flag = BARE_MIL_sport_Cooperation_Result_10_flag
+					check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var > 10 }
+				}
 			}
-			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var < 10 }
+			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var < 20 }
 		}
 		custom_effect_tooltip = MIL_Sport_Cooperation_GEH_PARTIAL_tt
 		set_temp_variable = { BARE_MIL_sport_Cooperation_Add_Temp_Var = 5 }
@@ -1165,7 +1169,7 @@ country_event = {
 		name = MIL_sport_event.65.x
 		trigger = {
 			NOT = { has_country_flag = BARE_MIL_sport_Cooperation_Result_None_flag }
-			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var > 9 }
+			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var > 19 }
 		}
 		custom_effect_tooltip = MIL_Sport_Cooperation_Cap_Full_tt
 		clr_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag
@@ -1192,7 +1196,7 @@ country_event = {
 		name = MIL_sport_event.66.a
 		trigger = {
 			has_country_flag = BARE_MIL_sport_Cooperation_Result_10_flag
-			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var < 1 }
+			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var < 11 }
 		}
 		custom_effect_tooltip = MIL_Sport_Cooperation_TRI_tt
 		set_temp_variable = { BARE_MIL_sport_Cooperation_Add_Temp_Var = 10 }
@@ -1205,9 +1209,12 @@ country_event = {
 		trigger = {
 			OR = {
 				has_country_flag = BARE_MIL_sport_Cooperation_Result_5_flag
-				has_country_flag = BARE_MIL_sport_Cooperation_Result_10_flag
+				AND = {
+					has_country_flag = BARE_MIL_sport_Cooperation_Result_10_flag
+					check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var > 10 }
+				}
 			}
-			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var < 10 }
+			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var < 20 }
 		}
 		custom_effect_tooltip = MIL_Sport_Cooperation_TRI_PARTIAL_tt
 		set_temp_variable = { BARE_MIL_sport_Cooperation_Add_Temp_Var = 5 }
@@ -1230,7 +1237,7 @@ country_event = {
 		name = MIL_sport_event.66.x
 		trigger = {
 			NOT = { has_country_flag = BARE_MIL_sport_Cooperation_Result_None_flag }
-			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var > 9 }
+			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var > 19 }
 		}
 		custom_effect_tooltip = MIL_Sport_Cooperation_Cap_Full_tt
 		clr_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag
@@ -1257,7 +1264,7 @@ country_event = {
 		name = MIL_sport_event.67.c
 		trigger = {
 			has_country_flag = BARE_MIL_sport_Cooperation_Result_10_flag
-			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var < 1 }
+			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var < 11 }
 		}
 		custom_effect_tooltip = MIL_Sport_Cooperation_SHA_FULL_tt
 		set_temp_variable = { BARE_MIL_sport_Cooperation_Add_Temp_Var = 10 }
@@ -1270,9 +1277,12 @@ country_event = {
 		trigger = {
 			OR = {
 				has_country_flag = BARE_MIL_sport_Cooperation_Result_5_flag
-				has_country_flag = BARE_MIL_sport_Cooperation_Result_10_flag
+				AND = {
+					has_country_flag = BARE_MIL_sport_Cooperation_Result_10_flag
+					check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var > 10 }
+				}
 			}
-			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var < 10 }
+			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var < 20 }
 		}
 		custom_effect_tooltip = MIL_Sport_Cooperation_SHA_tt
 		set_temp_variable = { BARE_MIL_sport_Cooperation_Add_Temp_Var = 5 }
@@ -1295,7 +1305,7 @@ country_event = {
 		name = MIL_sport_event.67.x
 		trigger = {
 			NOT = { has_country_flag = BARE_MIL_sport_Cooperation_Result_None_flag }
-			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var > 9 }
+			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var > 19 }
 		}
 		custom_effect_tooltip = MIL_Sport_Cooperation_Cap_Full_tt
 		clr_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag
@@ -1322,7 +1332,7 @@ country_event = {
 		name = MIL_sport_event.68.b
 		trigger = {
 			has_country_flag = BARE_MIL_sport_Cooperation_Result_10_flag
-			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var < 1 }
+			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var < 11 }
 		}
 		custom_effect_tooltip = MIL_Sport_Cooperation_RWT_FULL_tt
 		set_temp_variable = { BARE_MIL_sport_Cooperation_Add_Temp_Var = 10 }
@@ -1335,9 +1345,12 @@ country_event = {
 		trigger = {
 			OR = {
 				has_country_flag = BARE_MIL_sport_Cooperation_Result_5_flag
-				has_country_flag = BARE_MIL_sport_Cooperation_Result_10_flag
+				AND = {
+					has_country_flag = BARE_MIL_sport_Cooperation_Result_10_flag
+					check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var > 10 }
+				}
 			}
-			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var < 10 }
+			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var < 20 }
 		}
 		custom_effect_tooltip = MIL_Sport_Cooperation_RWT_PARTIAL_tt
 		set_temp_variable = { BARE_MIL_sport_Cooperation_Add_Temp_Var = 5 }
@@ -1360,7 +1373,7 @@ country_event = {
 		name = MIL_sport_event.68.x
 		trigger = {
 			NOT = { has_country_flag = BARE_MIL_sport_Cooperation_Result_None_flag }
-			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var > 9 }
+			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var > 19 }
 		}
 		custom_effect_tooltip = MIL_Sport_Cooperation_Cap_Full_tt
 		clr_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag
@@ -1387,7 +1400,7 @@ country_event = {
 		name = MIL_sport_event.69.c
 		trigger = {
 			has_country_flag = BARE_MIL_sport_Cooperation_Result_10_flag
-			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var < 1 }
+			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var < 11 }
 		}
 		custom_effect_tooltip = MIL_Sport_Cooperation_HYA_FULL_tt
 		set_temp_variable = { BARE_MIL_sport_Cooperation_Add_Temp_Var = 10 }
@@ -1400,9 +1413,12 @@ country_event = {
 		trigger = {
 			OR = {
 				has_country_flag = BARE_MIL_sport_Cooperation_Result_5_flag
-				has_country_flag = BARE_MIL_sport_Cooperation_Result_10_flag
+				AND = {
+					has_country_flag = BARE_MIL_sport_Cooperation_Result_10_flag
+					check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var > 10 }
+				}
 			}
-			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var < 10 }
+			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var < 20 }
 		}
 		custom_effect_tooltip = MIL_Sport_Cooperation_HYA_tt
 		set_temp_variable = { BARE_MIL_sport_Cooperation_Add_Temp_Var = 5 }
@@ -1425,7 +1441,7 @@ country_event = {
 		name = MIL_sport_event.69.x
 		trigger = {
 			NOT = { has_country_flag = BARE_MIL_sport_Cooperation_Result_None_flag }
-			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var > 9 }
+			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var > 19 }
 		}
 		custom_effect_tooltip = MIL_Sport_Cooperation_Cap_Full_tt
 		clr_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag

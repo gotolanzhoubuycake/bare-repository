@@ -674,6 +674,77 @@ ideas = {
             }
         }
 
+        # 2026-05-27: 晄轮大祭结算永久民族精神。
+        # 四档均使用同名显示“千年之梦”，强度按“进行不顺”基础效果线性加倍：1/2/3/4倍；大成功额外提供每周稳定度。
+        MIL_millennium_dream_troubled = {
+            name = MIL_millennium_dream
+            picture = MIL_place_of_pursuing_truth
+            removal_cost = -1
+
+            allowed = {
+                original_tag = MIL
+            }
+
+            modifier = {
+                consumer_goods_factor = -0.05
+                industrial_capacity_factory = 0.05
+                research_speed_factor = 0.05
+                production_speed_buildings_factor = 0.05
+            }
+        }
+
+        MIL_millennium_dream_partial_success = {
+            name = MIL_millennium_dream
+            picture = MIL_place_of_pursuing_truth
+            removal_cost = -1
+
+            allowed = {
+                original_tag = MIL
+            }
+
+            modifier = {
+                consumer_goods_factor = -0.10
+                industrial_capacity_factory = 0.10
+                research_speed_factor = 0.10
+                production_speed_buildings_factor = 0.10
+            }
+        }
+
+        MIL_millennium_dream_success = {
+            name = MIL_millennium_dream
+            picture = MIL_place_of_pursuing_truth
+            removal_cost = -1
+
+            allowed = {
+                original_tag = MIL
+            }
+
+            modifier = {
+                consumer_goods_factor = -0.15
+                industrial_capacity_factory = 0.15
+                research_speed_factor = 0.15
+                production_speed_buildings_factor = 0.15
+            }
+        }
+
+        MIL_millennium_dream_great_success = {
+            name = MIL_millennium_dream
+            picture = MIL_place_of_pursuing_truth
+            removal_cost = -1
+
+            allowed = {
+                original_tag = MIL
+            }
+
+            modifier = {
+                consumer_goods_factor = -0.20
+                industrial_capacity_factory = 0.20
+                research_speed_factor = 0.20
+                production_speed_buildings_factor = 0.20
+                stability_weekly = 0.01
+            }
+        }
+
 
 
         

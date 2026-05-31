@@ -101,6 +101,16 @@ BARE_MIL_sport_Tech_Modifier = {
     production_speed_buildings_factor =  BARE_MIL_sport_Tech_Modifier_production_speed_buildings_factor_var
 }
 
+BARE_MIL_sport_Fee_Modifier = {
+    # 2026-05-26: 仅移除经费等级自身的月度经费固定消耗；安保和科技的月度经费消耗保持不变。
+    # 高经费等级改为在学生支持度月度变化中体现资源挤占压力。
+    # 2026-05-26: 每级经费等级额外增加10%生活消费品需求，变量由经费等级刷新逻辑统一写入。
+    enable = { always = yes }
+
+    MIL_sport_student_support_monthly = BARE_MIL_sport_Fee_Modifier_MIL_sport_student_support_monthly_var
+    consumer_goods_factor = BARE_MIL_sport_Fee_Modifier_consumer_goods_factor_var
+}
+
 BARE_MIL_sport_Security_Modifier = {
     # 2026-05-20: 安保等级当前用月度经费恢复修正表现“维护消耗”，同时在破坏事件中影响安全权重和损失。
     MIL_sport_student_Fee_monthly = BARE_MIL_sport_Security_Modifier_MIL_sport_student_Fee_monthly_var
