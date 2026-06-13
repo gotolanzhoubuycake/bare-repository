@@ -1254,6 +1254,25 @@ focus_tree = {
 			}
 			custom_effect_tooltip = MIL_yuuka_unhappy_effect_tooltip
 		}
+		ai_will_do = {
+			# 2026-06-06: 测试后调整顺序；场馆入口完成后，该国策以数万级权重解锁经费调整，避免被旁支国策抢序。
+			factor = 100
+			modifier = {
+				factor = 10
+				has_global_flag = BARE_MIL_Sport_prepare_flag
+			}
+			modifier = {
+				# 2026-06-06: 场馆建设入口完成后，再高优先解锁经费等级调整能力。
+				factor = 100
+				has_global_flag = BARE_MIL_Sport_prepare_flag
+				has_completed_focus = MIL_build_grand_festival_work
+			}
+			modifier = {
+				factor = 0.05
+				has_global_flag = BARE_MIL_Sport_prepare_flag
+				NOT = { has_completed_focus = MIL_build_grand_festival_work }
+			}
+		}
 
 
 	}
@@ -1281,6 +1300,18 @@ focus_tree = {
 			unlock_decision_tooltip = MIL_Sport_Temporary_Sponsor_Recruitment
 
 		}
+		ai_will_do = {
+			# 2026-06-06: 经费线是合作/独立路线前置，晄轮大祭激活后权重提高到千级。
+			factor = 120
+			modifier = {
+				factor = 20
+				has_global_flag = BARE_MIL_Sport_prepare_flag
+			}
+			modifier = {
+				factor = 4
+				has_country_flag = BARE_MIL_sport_AI_reserve_venue_budget_flag
+			}
+		}
 	}
 	focus = { #节流
 		id = MIL_reduce_cost
@@ -1302,6 +1333,18 @@ focus_tree = {
 				BARE_MIL_Sport_Focus_Reduce_Cost_effect = yes
 			}
 			custom_effect_tooltip = MIL_reduce_cost_effect_tooltip
+		}
+		ai_will_do = {
+			# 2026-06-06: 经费线是合作/独立路线前置，晄轮大祭激活后权重提高到千级。
+			factor = 110
+			modifier = {
+				factor = 18
+				has_global_flag = BARE_MIL_Sport_prepare_flag
+			}
+			modifier = {
+				factor = 4
+				has_country_flag = BARE_MIL_sport_AI_reserve_venue_budget_flag
+			}
 		}
 	}
 	focus = { #寻求支持？
@@ -1329,6 +1372,18 @@ focus_tree = {
 			}
 			custom_effect_tooltip = MIL_need_help_effect_tooltip
 		}
+		ai_will_do = {
+			# 2026-06-06: 合作路线国策必须在经费线完成后尽快确定路线，权重拉开到万级。
+			factor = 250
+			modifier = {
+				factor = 50
+				has_country_flag = BARE_MIL_sport_AI_cooperation_route_flag
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = BARE_MIL_sport_AI_independent_route_flag
+			}
+		}
 	}
 	focus = { #我们能做到
 		id = MIL_we_can_do_it_by_ourselves
@@ -1355,6 +1410,23 @@ focus_tree = {
 			}
 			custom_effect_tooltip = MIL_we_can_do_it_by_ourselves_effect_tooltip
 		}
+		ai_will_do = {
+			# 2026-06-06: 独立路线为小概率路线，但一旦选中也需要明显高于普通旁支。
+			factor = 120
+			modifier = {
+				factor = 50
+				has_country_flag = BARE_MIL_sport_AI_independent_route_flag
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = BARE_MIL_sport_AI_cooperation_route_flag
+			}
+			modifier = {
+				factor = 3
+				check_variable = { BARE_MIL_sport_Student_Support_Var > 74 }
+				check_variable = { BARE_MIL_sport_Building_Score_Var > 2 }
+			}
+		}
 	}
 	focus = { #晄轮大祭建设工作
 		id = MIL_build_grand_festival_work
@@ -1377,6 +1449,14 @@ focus_tree = {
 			unlock_decision_tooltip = MIL_Sport_Volunteer_Coordination_Center
 			unlock_decision_tooltip = MIL_Sport_Adjust_Event_Program
 			unlock_decision_tooltip = MIL_Sport_Requisition_Unplanned_Equipment
+		}
+		ai_will_do = {
+			# 2026-06-06: 测试后调整顺序；场馆建设入口必须是晄轮大祭启动后的第一优先国策，权重拉开到十万级。
+			factor = 1000
+			modifier = {
+				factor = 100
+				has_global_flag = BARE_MIL_Sport_prepare_flag
+			}
 		}
 	}
 	focus = { #隐藏在暗中的反对
@@ -1401,6 +1481,31 @@ focus_tree = {
 			custom_effect_tooltip = MIL_opposition_hidden_in_the_dark_effect_tooltip
 			unlock_decision_tooltip = MIL_Sport_Crackdown_on_Sabotage
 		}
+		ai_will_do = {
+			# 2026-06-06: 经费线和路线确定后再推进安保解锁，避免抢走前序关键国策。
+			factor = 80
+			modifier = {
+				factor = 15
+				has_global_flag = BARE_MIL_Sport_prepare_flag
+			}
+			modifier = {
+				factor = 0.1
+				has_global_flag = BARE_MIL_Sport_prepare_flag
+				NOT = { has_completed_focus = MIL_yuuka_unhappy }
+			}
+			modifier = {
+				factor = 0.3
+				has_global_flag = BARE_MIL_Sport_prepare_flag
+				OR = {
+					NOT = { has_completed_focus = MIL_make_more_money }
+					NOT = { has_completed_focus = MIL_reduce_cost }
+				}
+			}
+			modifier = {
+				factor = 2
+				has_country_flag = BARE_MIL_sport_AI_support_pressure_flag
+			}
+		}
 	}
 	focus = { #科技的力量
 		id = MIL_The_power_of_Technology
@@ -1423,6 +1528,31 @@ focus_tree = {
 			}
 			custom_effect_tooltip = MIL_The_power_of_Technology_effect_tooltip
 			unlock_decision_tooltip = MIL_Public_Technology_Oriented
+		}
+		ai_will_do = {
+			# 2026-06-06: 经费线和路线确定后再推进科技解锁，避免抢走前序关键国策。
+			factor = 75
+			modifier = {
+				factor = 15
+				has_global_flag = BARE_MIL_Sport_prepare_flag
+			}
+			modifier = {
+				factor = 0.1
+				has_global_flag = BARE_MIL_Sport_prepare_flag
+				NOT = { has_completed_focus = MIL_yuuka_unhappy }
+			}
+			modifier = {
+				factor = 0.3
+				has_global_flag = BARE_MIL_Sport_prepare_flag
+				OR = {
+					NOT = { has_completed_focus = MIL_make_more_money }
+					NOT = { has_completed_focus = MIL_reduce_cost }
+				}
+			}
+			modifier = {
+				factor = 2
+				has_country_flag = BARE_MIL_sport_AI_score_pressure_flag
+			}
 		}
 	}
 	focus = { #书记官的努力
@@ -1448,6 +1578,17 @@ focus_tree = {
 			country_event = { id = MIL_sport_event.71 }
 			custom_effect_tooltip = MIL_noas_Strive_effect_tooltip
 		}
+		ai_will_do = {
+			factor = 70
+			modifier = {
+				factor = 8
+				has_global_flag = BARE_MIL_Sport_prepare_flag
+			}
+			modifier = {
+				factor = 2
+				has_country_flag = BARE_MIL_sport_AI_support_pressure_flag
+			}
+		}
 	}
 	focus = { #如火如荼的建设工作
 		id = MIL_The_construction_work_is_in_full_swing
@@ -1470,6 +1611,17 @@ focus_tree = {
 			}
 			custom_effect_tooltip = MIL_The_construction_work_is_in_full_swing_effect_tooltip
 			unlock_decision_tooltip = MIL_Sport_Venue_Stress_Test
+		}
+		ai_will_do = {
+			factor = 70
+			modifier = {
+				factor = 8
+				has_global_flag = BARE_MIL_Sport_prepare_flag
+			}
+			modifier = {
+				factor = 2
+				has_country_flag = BARE_MIL_sport_AI_score_pressure_flag
+			}
 		}
 	}
 	focus = { #日渐完善的准备
@@ -1496,6 +1648,13 @@ focus_tree = {
 			}
 			custom_effect_tooltip = MIL_The_Increasingly_refined_preparations_effect_tooltip
 		}
+		ai_will_do = {
+			factor = 90
+			modifier = {
+				factor = 10
+				has_country_flag = BARE_MIL_sport_AI_high_priority_flag
+			}
+		}
 	}
 	focus = { #大祭前夜
 		id = MIL_The_eve_of_the_grand_festival
@@ -1519,6 +1678,13 @@ focus_tree = {
 		completion_reward = {
 			# 2026-05-20: 按国策文档补充“意料之外的紧急状况”占位事件，正式效果和文本后续填充
 			country_event = { id = MIL_sport_event.72 }
+		}
+		ai_will_do = {
+			factor = 80
+			modifier = {
+				factor = 10
+				has_country_flag = BARE_MIL_sport_AI_high_priority_flag
+			}
 		}
 	}
 	focus = { #狂欢的开始
@@ -1562,6 +1728,9 @@ focus_tree = {
 				}
 			}
 
+		}
+		ai_will_do = {
+			factor = 0
 		}
 	}
 	focus = { #晄轮大祭成功

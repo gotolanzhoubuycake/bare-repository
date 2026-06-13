@@ -114,6 +114,46 @@ MIL_Sport_decision_category = {
 			}
 			BARE_MIL_Sport_Student_Support_Var_Chance_effect = yes
 		}
+		ai_will_do = {
+			factor = 8
+			modifier = {
+				# 2026-06-06: AI 第26天月末消费窗口，基础设施属于可重复消费，低于地标、一次性建设和场馆建设。
+				factor = 20
+				has_country_flag = BARE_MIL_sport_AI_Late_Month_Spend_Boost_flag
+			}
+			modifier = {
+				# 2026-06-06: 场馆可建且路线目标未达成时，基础设施强降权但不硬封锁，避免重复决议完全不可选。
+				factor = 0.05
+				NOT = { has_active_mission = MIL_Sport_Constructing_Sports_Venues }
+				check_variable = {
+					var = BARE_MIL_sport_Building_Score_Var
+					value = BARE_MIL_sport_AI_Venue_Target_Var
+					compare = less_than
+				}
+				check_variable = {
+					var = BARE_MIL_sport_Fee_Have_Var
+					value = BARE_MIL_sport_AI_Next_Venue_Cost_Var
+					compare = greater_than_or_equals
+				}
+			}
+			modifier = {
+				factor = 0
+				check_variable = { BARE_MIL_sport_Month_Time_Var < 2 }
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = BARE_MIL_sport_AI_strict_reserve_budget_flag
+				NOT = { has_country_flag = BARE_MIL_sport_AI_Late_Month_Spend_Boost_flag }
+			}
+			modifier = {
+				factor = 2
+				has_country_flag = BARE_MIL_sport_AI_score_pressure_flag
+			}
+			modifier = {
+				factor = 1.5
+				has_country_flag = BARE_MIL_sport_AI_support_pressure_flag
+			}
+		}
 	}
 
 	MIL_Sport_Constructing_Sports_Venues = {
@@ -174,7 +214,7 @@ MIL_Sport_decision_category = {
 			add_to_variable = {
 				MIL_Sport_Constructing_Sports_Venues_use = 1
 			}
-			custom_effect_tooltip = MIL_Sport_Constructing_Sports_Venues_tooltip
+			# 2026-06-08: 先计算本次准备评分收益，再显示自定义效果文本，避免本地化读取不到动态数值。
 			set_temp_variable = {
 				MIL_Sport_Constructing_Sports_Venues_Score_Add_Temp = 5
 			}
@@ -182,6 +222,7 @@ MIL_Sport_decision_category = {
 				MIL_Sport_Constructing_Sports_Venues_Score_Add_Temp = MIL_Sport_Constructing_Sports_Venues_use
 
 			}
+			custom_effect_tooltip = MIL_Sport_Constructing_Sports_Venues_tooltip
 			add_to_variable = {
 				BARE_MIL_sport_Score_Var = MIL_Sport_Constructing_Sports_Venues_Score_Add_Temp
 			}
@@ -194,6 +235,66 @@ MIL_Sport_decision_category = {
 			BARE_MIL_Sport_Building_Score_Frame_Change_effect = yes
 			BARE_MIL_Sport_Student_Support_Var_Chance_effect = yes
 		}
+		ai_will_do = {
+			# 2026-06-06: 普通场馆在地标和关键一次性建设已经启动/完成后，应成为最高经费消费优先级。
+			factor = 5000
+			modifier = {
+				# 2026-06-06: AI 第26天月末消费窗口，优先把当前经费用到场馆硬条件。
+				factor = 1000
+				has_country_flag = BARE_MIL_sport_AI_Late_Month_Spend_Boost_flag
+			}
+			modifier = {
+				# 2026-06-06: 普通场馆只给“当前资源足以启动”的地标和关键一次性建设让路；资源不足时继续用剩余经费修场馆。
+				factor = 0
+				OR = {
+					AND = {
+						NOT = { has_country_flag = BARE_MIL_sport_Landmark_Main_Stadium_Built_flag }
+						check_variable = { BARE_MIL_sport_Month_Time_Var > 9 }
+						check_variable = { BARE_MIL_sport_Building_Score_Var < 4 }
+						check_variable = { BARE_MIL_sport_Fee_Have_Var > 59 }
+						has_political_power > 29
+					}
+					AND = {
+						NOT = { has_country_flag = BARE_MIL_sport_Executive_Committee_Expanded_flag }
+						NOT = { has_active_mission = MIL_Sport_Expand_Executive_Committee }
+						check_variable = { BARE_MIL_sport_Fee_Have_Var > 39 }
+						has_political_power > 99
+					}
+					AND = {
+						NOT = { has_country_flag = BARE_MIL_sport_Savings_Fund_Unlocked_flag }
+						check_variable = { BARE_MIL_sport_Fee_Have_Var > 39 }
+						has_political_power > 24
+					}
+					AND = {
+						NOT = { has_country_flag = BARE_MIL_sport_Imaginary_Automation_Active_flag }
+						NOT = { has_active_mission = MIL_Sport_Connect_Imaginary_Automation }
+						check_variable = { BARE_MIL_sport_Fee_Have_Var > 19 }
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				check_variable = { BARE_MIL_sport_Month_Time_Var < 3 }
+			}
+			modifier = {
+				factor = 4
+				check_variable = { BARE_MIL_sport_Building_Score_Var < 3 }
+			}
+			modifier = {
+				factor = 2
+				check_variable = { BARE_MIL_sport_Building_Score_Var < 4 }
+			}
+			modifier = {
+				factor = 2
+				has_country_flag = BARE_MIL_sport_AI_independent_route_flag
+				check_variable = { BARE_MIL_sport_Building_Score_Var < 5 }
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = BARE_MIL_sport_AI_cooperation_route_flag
+				check_variable = { BARE_MIL_sport_Building_Score_Var > 3 }
+			}
+		}
 	}
 
 	MIL_Sport_Construct_Landmark_Main_Stadium = {
@@ -202,7 +303,15 @@ MIL_Sport_decision_category = {
 		# 关键变量：只增加场地准备程度，不改写 `MIL_Sport_Constructing_Sports_Venues_use`，因此不会抬高普通场馆下一次费用。
 		# 结果：240天后给准备评分、学生支持度、随机地块民用工厂和场地准备程度。
 		visible = {
+			# 2026-06-06: 地标级场馆的窗口条件同时控制显示；前期窗口结束、场地等级过高或已启动后不再显示。
 			has_completed_focus = MIL_build_grand_festival_work
+			NOT = { has_country_flag = BARE_MIL_sport_Landmark_Main_Stadium_Built_flag }
+			check_variable = {
+				BARE_MIL_sport_Month_Time_Var > 9
+			}
+			check_variable = {
+				BARE_MIL_sport_Building_Score_Var < 4
+			}
 		}
 		available = {
 			custom_trigger_tooltip = {
@@ -249,6 +358,7 @@ MIL_Sport_decision_category = {
 			subtract_from_variable = {
 				BARE_MIL_sport_Fee_Have_Var = MIL_Sport_Fee_cost
 			}
+			set_country_flag = BARE_MIL_sport_Landmark_Main_Stadium_Built_flag
 		}
 		remove_effect = {
 			custom_effect_tooltip = MIL_Sport_Landmark_Main_Stadium_tt
@@ -275,6 +385,31 @@ MIL_Sport_decision_category = {
 			}
 			BARE_MIL_Sport_Building_Score_Frame_Change_effect = yes
 			BARE_MIL_Sport_Student_Support_Var_Chance_effect = yes
+		}
+		ai_will_do = {
+			# 2026-06-06: AI 预算顺序改为地标级主运动场优先，避免前期地标窗口被其他建设挤掉。
+			factor = 120
+			modifier = {
+				# 2026-06-06: AI 第26天月末消费窗口，地标在可用时仍是最高消费优先级。
+				factor = 150
+				has_country_flag = BARE_MIL_sport_AI_Late_Month_Spend_Boost_flag
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = BARE_MIL_sport_Landmark_Main_Stadium_Built_flag
+			}
+			modifier = {
+				factor = 0
+				check_variable = { BARE_MIL_sport_Month_Time_Var < 10 }
+			}
+			modifier = {
+				factor = 0
+				check_variable = { BARE_MIL_sport_Fee_Have_Var < 60 }
+			}
+			modifier = {
+				factor = 2
+				has_country_flag = BARE_MIL_sport_AI_independent_route_flag
+			}
 		}
 	}
 
@@ -322,6 +457,31 @@ MIL_Sport_decision_category = {
 				BARE_MIL_sport_Reserve_Fund_Use_Left_Var = 3
 			}
 		}
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				# 2026-06-06: AI 第26天月末消费窗口，储蓄资金作为一次性建设高于普通可重复决议。
+				factor = 800
+				has_country_flag = BARE_MIL_sport_AI_Late_Month_Spend_Boost_flag
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = BARE_MIL_sport_Savings_Fund_Unlocked_flag
+			}
+			modifier = {
+				factor = 0
+				check_variable = { BARE_MIL_sport_Month_Time_Var < 7 }
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = BARE_MIL_sport_AI_strict_reserve_budget_flag
+				NOT = { has_country_flag = BARE_MIL_sport_AI_Late_Month_Spend_Boost_flag }
+			}
+			modifier = {
+				factor = 2
+				has_country_flag = BARE_MIL_sport_AI_independent_route_flag
+			}
+		}
 	}
 
 	MIL_Sport_Use_Reserve_Fund = {
@@ -329,6 +489,10 @@ MIL_Sport_decision_category = {
 		# 每次直接增加10点当期经费，允许短期超过上限；最多由储蓄资金变量控制为3次。
 		visible = {
 			has_country_flag = BARE_MIL_sport_Savings_Fund_Unlocked_flag
+			# 2026-06-08: 储备资金次数用完后直接隐藏，避免保留不可用决议。
+			check_variable = {
+				BARE_MIL_sport_Reserve_Fund_Use_Left_Var > 0
+			}
 		}
 		available = {
 			custom_trigger_tooltip = {
@@ -350,6 +514,51 @@ MIL_Sport_decision_category = {
 				var = BARE_MIL_sport_Reserve_Fund_Use_Left_Var
 				min = 0
 				max = 3
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				# 2026-06-06: 月末消费窗口不允许靠储备资金补经费，只消耗当前已有经费。
+				factor = 0
+				has_country_flag = BARE_MIL_sport_AI_Late_Month_Spend_Boost_flag
+			}
+			modifier = {
+				# 2026-06-06: 避免基础 factor 为0导致正向权重失效；仅在建设预留或后期短板时允许 AI 动用储备资金。
+				factor = 0
+				NOT = {
+					OR = {
+						has_country_flag = BARE_MIL_sport_AI_reserve_venue_budget_flag
+						AND = {
+							has_country_flag = BARE_MIL_sport_AI_critical_one_shots_unfinished_flag
+							check_variable = { BARE_MIL_sport_Fee_Have_Var < 40 }
+						}
+						AND = {
+							check_variable = { BARE_MIL_sport_Month_Time_Var < 4 }
+							OR = {
+								has_country_flag = BARE_MIL_sport_AI_support_pressure_flag
+								has_country_flag = BARE_MIL_sport_AI_score_pressure_flag
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 100
+				has_country_flag = BARE_MIL_sport_AI_reserve_venue_budget_flag
+			}
+			modifier = {
+				factor = 60
+				has_country_flag = BARE_MIL_sport_AI_critical_one_shots_unfinished_flag
+				check_variable = { BARE_MIL_sport_Fee_Have_Var < 40 }
+			}
+			modifier = {
+				factor = 80
+				check_variable = { BARE_MIL_sport_Month_Time_Var < 4 }
+				OR = {
+					has_country_flag = BARE_MIL_sport_AI_support_pressure_flag
+					has_country_flag = BARE_MIL_sport_AI_score_pressure_flag
+				}
 			}
 		}
 	}
@@ -410,6 +619,32 @@ MIL_Sport_decision_category = {
 			BARE_MIL_Sport_Student_Support_Var_Chance_effect = yes
 			BARE_MIL_Sport_GUI_Display_Var_Refresh_effect = yes
 		}
+		ai_will_do = {
+			factor = 80
+			modifier = {
+				# 2026-06-06: AI 第26天月末消费窗口，执行委员会是高价值一次性建设。
+				factor = 150
+				has_country_flag = BARE_MIL_sport_AI_Late_Month_Spend_Boost_flag
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = BARE_MIL_sport_Executive_Committee_Expanded_flag
+			}
+			modifier = {
+				# 2026-06-06: 预留经费时先满足地标级主运动场，执行委员会等到高优先级预算满足后再启动。
+				factor = 0
+				has_country_flag = BARE_MIL_sport_AI_strict_reserve_budget_flag
+				NOT = { has_country_flag = BARE_MIL_sport_AI_Late_Month_Spend_Boost_flag }
+			}
+			modifier = {
+				factor = 0
+				check_variable = { BARE_MIL_sport_Month_Time_Var < 7 }
+			}
+			modifier = {
+				factor = 2
+				has_country_flag = BARE_MIL_sport_AI_support_pressure_flag
+			}
+		}
 	}
 
 	MIL_Sport_Connect_Imaginary_Automation = {
@@ -455,6 +690,33 @@ MIL_Sport_decision_category = {
 		remove_effect = {
 			custom_effect_tooltip = MIL_Sport_Connect_Imaginary_Automation_tt
 			set_country_flag = BARE_MIL_sport_Imaginary_Automation_Active_flag
+		}
+		ai_will_do = {
+			# 2026-06-06: 科技升级被推迟到建设优先链之后，因此自动化不能再因为低科技等级被压低到几乎不执行。
+			factor = 40
+			modifier = {
+				# 2026-06-06: AI 第26天月末消费窗口，自动化可消化后续剩余经费。
+				factor = 250
+				has_country_flag = BARE_MIL_sport_AI_Late_Month_Spend_Boost_flag
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = BARE_MIL_sport_Imaginary_Automation_Active_flag
+			}
+			modifier = {
+				# 2026-06-06: 自动化属于关键一次性建设，但不能抢占地标或前序一次性建设的预留经费。
+				factor = 0
+				has_country_flag = BARE_MIL_sport_AI_strict_reserve_budget_flag
+				NOT = { has_country_flag = BARE_MIL_sport_AI_Late_Month_Spend_Boost_flag }
+			}
+			modifier = {
+				factor = 0
+				check_variable = { BARE_MIL_sport_Month_Time_Var < 5 }
+			}
+			modifier = {
+				factor = 2
+				has_country_flag = BARE_MIL_sport_AI_score_pressure_flag
+			}
 		}
 	}
 
@@ -514,6 +776,40 @@ MIL_Sport_decision_category = {
 			}
 		}
 		custom_cost_text = MIL_Sport_Fee_cost_icon_tooltip
+		ai_will_do = {
+			factor = 6
+			modifier = {
+				# 2026-06-06: 场馆可建且路线目标未达成时，安保保护强降权但不硬封锁。
+				factor = 0.05
+				NOT = { has_active_mission = MIL_Sport_Constructing_Sports_Venues }
+				check_variable = {
+					var = BARE_MIL_sport_Building_Score_Var
+					value = BARE_MIL_sport_AI_Venue_Target_Var
+					compare = less_than
+				}
+				check_variable = {
+					var = BARE_MIL_sport_Fee_Have_Var
+					value = BARE_MIL_sport_AI_Next_Venue_Cost_Var
+					compare = greater_than_or_equals
+				}
+			}
+			modifier = {
+				factor = 0
+				check_variable = { BARE_MIL_sport_Month_Time_Var < 2 }
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = MIL_Sport_Crackdown_on_Sabotage_flag
+			}
+			modifier = {
+				factor = 2
+				has_country_flag = BARE_MIL_sport_AI_support_pressure_flag
+			}
+			modifier = {
+				factor = 2
+				has_country_flag = BARE_MIL_sport_AI_score_pressure_flag
+			}
+		}
 	}
 
 	MIL_Sport_Volunteer_Coordination_Center = {
@@ -565,28 +861,65 @@ MIL_Sport_decision_category = {
 			}
 			BARE_MIL_Sport_Student_Support_Var_Chance_effect = yes
 		}
+		ai_will_do = {
+			# 2026-06-06: 志愿者是补救型重复决议；场馆可建前不硬封锁，但基础权重低于普通场馆。
+			factor = 10
+			modifier = {
+				# 2026-06-06: AI 第26天月末消费窗口，志愿组织低于场馆和一次性建设。
+				factor = 10
+				has_country_flag = BARE_MIL_sport_AI_Late_Month_Spend_Boost_flag
+			}
+			modifier = {
+				# 2026-06-06: 场馆可建且路线目标未达成时，志愿者决议强降权但不硬封锁。
+				factor = 0.05
+				NOT = { has_active_mission = MIL_Sport_Constructing_Sports_Venues }
+				check_variable = {
+					var = BARE_MIL_sport_Building_Score_Var
+					value = BARE_MIL_sport_AI_Venue_Target_Var
+					compare = less_than
+				}
+				check_variable = {
+					var = BARE_MIL_sport_Fee_Have_Var
+					value = BARE_MIL_sport_AI_Next_Venue_Cost_Var
+					compare = greater_than_or_equals
+				}
+			}
+			modifier = {
+				factor = 0
+				check_variable = { BARE_MIL_sport_Month_Time_Var < 2 }
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = BARE_MIL_sport_AI_strict_reserve_budget_flag
+				NOT = { has_country_flag = BARE_MIL_sport_AI_Late_Month_Spend_Boost_flag }
+			}
+			modifier = {
+				factor = 2
+				has_country_flag = BARE_MIL_sport_AI_support_pressure_flag
+			}
+			modifier = {
+				factor = 1.5
+				has_country_flag = BARE_MIL_sport_AI_score_pressure_flag
+			}
+		}
 	}
 
 	MIL_Sport_Venue_Stress_Test = {
 		# 2026-05-21: 新增最后三个月冲刺决议，模拟入场、疏散和设备联调来补准备评分。
 		visible = {
 			has_completed_focus = MIL_The_construction_work_is_in_full_swing
+			# 2026-06-08: 除经费外的开启门槛直接控制显示；未到冲刺窗口或场地不足时不显示。
+			check_variable = {
+				BARE_MIL_sport_Month_Time_Var < 4
+			}
+			check_variable = {
+				BARE_MIL_sport_Month_Time_Var > 1
+			}
+			check_variable = {
+				BARE_MIL_sport_Building_Score_Var > 2
+			}
 		}
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = MIL_Sport_Venue_Stress_Test_condition_tt
-				AND = {
-					check_variable = {
-						BARE_MIL_sport_Month_Time_Var < 4
-					}
-					check_variable = {
-						BARE_MIL_sport_Month_Time_Var > 1
-					}
-					check_variable = {
-						BARE_MIL_sport_Building_Score_Var > 2
-					}
-				}
-			}
 			set_temp_variable = {
 				MIL_Sport_Fee_cost = 15
 			}
@@ -625,6 +958,35 @@ MIL_Sport_decision_category = {
 				BARE_MIL_sport_Score_Var = 15
 			}
 		}
+		ai_will_do = {
+			# 2026-06-06: 原条件式 AI 权重改为非零基础值，便于第26天消费窗口正常生效。
+			factor = 1
+			modifier = {
+				# 2026-06-06: 场馆可建且路线目标未达成时，压力测试强降权但不硬封锁。
+				factor = 0.05
+				NOT = { has_active_mission = MIL_Sport_Constructing_Sports_Venues }
+				check_variable = {
+					var = BARE_MIL_sport_Building_Score_Var
+					value = BARE_MIL_sport_AI_Venue_Target_Var
+					compare = less_than
+				}
+				check_variable = {
+					var = BARE_MIL_sport_Fee_Have_Var
+					value = BARE_MIL_sport_AI_Next_Venue_Cost_Var
+					compare = greater_than_or_equals
+				}
+			}
+			modifier = {
+				factor = 20
+				has_country_flag = BARE_MIL_sport_AI_Late_Month_Spend_Boost_flag
+			}
+			modifier = {
+				factor = 50
+				has_country_flag = BARE_MIL_sport_AI_score_pressure_flag
+				check_variable = { BARE_MIL_sport_Month_Time_Var < 4 }
+				check_variable = { BARE_MIL_sport_Month_Time_Var > 1 }
+			}
+		}
 	}
 
 	MIL_Sport_Temporary_Sponsor_Recruitment = {
@@ -641,42 +1003,86 @@ MIL_Sport_decision_category = {
 				BARE_MIL_sport_Fee_Have_Var = 10
 			}
 		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				# 2026-06-06: 月末消费窗口不允许触发临时赞助，只消耗当前已有经费。
+				factor = 0
+				has_country_flag = BARE_MIL_sport_AI_Late_Month_Spend_Boost_flag
+			}
+			modifier = {
+				# 2026-06-06: 避免基础 factor 为0导致正向权重失效；仅在预留建设经费或末期短板时用政治点换经费。
+				factor = 0
+				NOT = {
+					OR = {
+						AND = {
+							has_country_flag = BARE_MIL_sport_AI_reserve_venue_budget_flag
+							has_political_power > 100
+						}
+						AND = {
+							has_country_flag = BARE_MIL_sport_AI_critical_one_shots_unfinished_flag
+							check_variable = { BARE_MIL_sport_Fee_Have_Var < 40 }
+							has_political_power > 125
+						}
+						AND = {
+							check_variable = { BARE_MIL_sport_Month_Time_Var < 4 }
+							OR = {
+								has_country_flag = BARE_MIL_sport_AI_support_pressure_flag
+								has_country_flag = BARE_MIL_sport_AI_score_pressure_flag
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 70
+				has_country_flag = BARE_MIL_sport_AI_reserve_venue_budget_flag
+				has_political_power > 100
+			}
+			modifier = {
+				factor = 40
+				has_country_flag = BARE_MIL_sport_AI_critical_one_shots_unfinished_flag
+				check_variable = { BARE_MIL_sport_Fee_Have_Var < 40 }
+				has_political_power > 125
+			}
+			modifier = {
+				factor = 50
+				check_variable = { BARE_MIL_sport_Month_Time_Var < 4 }
+				OR = {
+					has_country_flag = BARE_MIL_sport_AI_support_pressure_flag
+					has_country_flag = BARE_MIL_sport_AI_score_pressure_flag
+				}
+			}
+		}
 	}
 
 	MIL_Sport_Use_Reserve_Materials = {
 		# 2026-05-21: 新增一次性兜底决议。只有最后三个月、主要筹备国策完成且准备评分低于成功线时可用。
 		visible = {
 			has_completed_focus = MIL_The_eve_of_the_grand_festival
-		}
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = MIL_Sport_Use_Reserve_Materials_condition_tt
-				AND = {
-					check_variable = {
-						BARE_MIL_sport_Month_Time_Var < 4
-					}
-					check_variable = {
-						BARE_MIL_sport_Month_Time_Var > 0
-					}
-					check_variable = {
-						BARE_MIL_sport_Score_Var < 160
-					}
-					has_completed_focus = MIL_yuuka_unhappy
-					has_completed_focus = MIL_make_more_money
-					has_completed_focus = MIL_reduce_cost
-					OR = {
-						has_completed_focus = MIL_need_help
-						has_completed_focus = MIL_we_can_do_it_by_ourselves
-					}
-					has_completed_focus = MIL_build_grand_festival_work
-					has_completed_focus = MIL_opposition_hidden_in_the_dark
-					has_completed_focus = MIL_The_power_of_Technology
-					has_completed_focus = MIL_noas_Strive
-					has_completed_focus = MIL_The_construction_work_is_in_full_swing
-					has_completed_focus = MIL_The_Increasingly_refined_preparations
-					has_completed_focus = MIL_The_eve_of_the_grand_festival
-				}
+			# 2026-06-08: 除政治点数外的开启门槛直接控制显示；未进入兜底窗口或不缺评分时不显示。
+			check_variable = {
+				BARE_MIL_sport_Month_Time_Var < 4
 			}
+			check_variable = {
+				BARE_MIL_sport_Month_Time_Var > 0
+			}
+			check_variable = {
+				BARE_MIL_sport_Score_Var < 160
+			}
+			has_completed_focus = MIL_yuuka_unhappy
+			has_completed_focus = MIL_make_more_money
+			has_completed_focus = MIL_reduce_cost
+			OR = {
+				has_completed_focus = MIL_need_help
+				has_completed_focus = MIL_we_can_do_it_by_ourselves
+			}
+			has_completed_focus = MIL_build_grand_festival_work
+			has_completed_focus = MIL_opposition_hidden_in_the_dark
+			has_completed_focus = MIL_The_power_of_Technology
+			has_completed_focus = MIL_noas_Strive
+			has_completed_focus = MIL_The_construction_work_is_in_full_swing
+			has_completed_focus = MIL_The_Increasingly_refined_preparations
 		}
 		cost = 100
 		fire_only_once = yes
@@ -687,6 +1093,24 @@ MIL_Sport_decision_category = {
 			}
 			add_stability = -0.05
 			add_war_support = -0.05
+		}
+		ai_will_do = {
+			# 2026-06-06: 原 factor=0 可能导致兜底权重永远无法抬起，改为非零基础值并用条件归零。
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					AND = {
+						has_country_flag = BARE_MIL_sport_AI_score_pressure_flag
+						check_variable = { BARE_MIL_sport_Month_Time_Var < 4 }
+					}
+				}
+			}
+			modifier = {
+				factor = 100
+				has_country_flag = BARE_MIL_sport_AI_score_pressure_flag
+				check_variable = { BARE_MIL_sport_Month_Time_Var < 4 }
+			}
 		}
 	}
 
@@ -739,6 +1163,34 @@ MIL_Sport_decision_category = {
 			}
 			BARE_MIL_Sport_Student_Support_Var_Chance_effect = yes
 		}
+		ai_will_do = {
+			# 2026-06-06: 原条件式 AI 权重改为非零基础值，便于第26天消费窗口正常生效。
+			factor = 1
+			modifier = {
+				# 2026-06-06: 场馆可建且路线目标未达成时，资源互换强降权但不硬封锁。
+				factor = 0.05
+				NOT = { has_active_mission = MIL_Sport_Constructing_Sports_Venues }
+				check_variable = {
+					var = BARE_MIL_sport_Building_Score_Var
+					value = BARE_MIL_sport_AI_Venue_Target_Var
+					compare = less_than
+				}
+				check_variable = {
+					var = BARE_MIL_sport_Fee_Have_Var
+					value = BARE_MIL_sport_AI_Next_Venue_Cost_Var
+					compare = greater_than_or_equals
+				}
+			}
+			modifier = {
+				factor = 10
+				has_country_flag = BARE_MIL_sport_AI_Late_Month_Spend_Boost_flag
+			}
+			modifier = {
+				factor = 30
+				has_country_flag = BARE_MIL_sport_AI_support_pressure_flag
+				check_variable = { BARE_MIL_sport_Score_Var > 169 }
+			}
+		}
 	}
 
 	MIL_Sport_Requisition_Unplanned_Equipment = {
@@ -790,6 +1242,34 @@ MIL_Sport_decision_category = {
 			}
 			BARE_MIL_Sport_Student_Support_Var_Chance_effect = yes
 		}
+		ai_will_do = {
+			# 2026-06-06: 原条件式 AI 权重改为非零基础值，便于第26天消费窗口正常生效。
+			factor = 1
+			modifier = {
+				# 2026-06-06: 场馆可建且路线目标未达成时，资源互换强降权但不硬封锁。
+				factor = 0.05
+				NOT = { has_active_mission = MIL_Sport_Constructing_Sports_Venues }
+				check_variable = {
+					var = BARE_MIL_sport_Building_Score_Var
+					value = BARE_MIL_sport_AI_Venue_Target_Var
+					compare = less_than
+				}
+				check_variable = {
+					var = BARE_MIL_sport_Fee_Have_Var
+					value = BARE_MIL_sport_AI_Next_Venue_Cost_Var
+					compare = greater_than_or_equals
+				}
+			}
+			modifier = {
+				factor = 10
+				has_country_flag = BARE_MIL_sport_AI_Late_Month_Spend_Boost_flag
+			}
+			modifier = {
+				factor = 30
+				has_country_flag = BARE_MIL_sport_AI_score_pressure_flag
+				check_variable = { BARE_MIL_sport_Student_Support_Var > 84 }
+			}
+		}
 	}
 
 	MIL_Sport_Cooperation_GEH = {
@@ -797,6 +1277,8 @@ MIL_Sport_decision_category = {
 		visible = {
 			has_completed_focus = MIL_need_help
 			GEH = { exists = yes }
+			# 2026-06-08: 合作经费上限已满时隐藏全部学园合作请求。
+			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var < 20 }
 		}
 		available = {
 			custom_trigger_tooltip = {
@@ -811,6 +1293,30 @@ MIL_Sport_decision_category = {
 			country_event = { id = MIL_sport_event.65 days = 7 }
 			custom_effect_tooltip = MIL_Sport_Cooperation_Request_Sent_tt
 		}
+		ai_will_do = {
+			# 2026-06-06: 合作路线需要尽快发出请求，基础权重大幅提高。
+			factor = 220
+			modifier = {
+				factor = 0
+				has_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag
+			}
+			modifier = {
+				factor = 0
+				check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var > 19 }
+			}
+			modifier = {
+				factor = 0
+				has_political_power < 50
+			}
+			modifier = {
+				factor = 10
+				GEH = { has_opinion = { target = ROOT value > 74 } }
+			}
+			modifier = {
+				factor = 4
+				GEH = { has_opinion = { target = ROOT value > 49 } }
+			}
+		}
 	}
 
 	MIL_Sport_Cooperation_TRI = {
@@ -818,6 +1324,8 @@ MIL_Sport_decision_category = {
 		visible = {
 			has_completed_focus = MIL_need_help
 			TRI = { exists = yes }
+			# 2026-06-08: 合作经费上限已满时隐藏全部学园合作请求。
+			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var < 20 }
 		}
 		available = {
 			custom_trigger_tooltip = {
@@ -832,6 +1340,30 @@ MIL_Sport_decision_category = {
 			country_event = { id = MIL_sport_event.66 days = 7 }
 			custom_effect_tooltip = MIL_Sport_Cooperation_Request_Sent_tt
 		}
+		ai_will_do = {
+			# 2026-06-06: 圣三一默认优先级最高，确保合作路线不会因权重过低拖延。
+			factor = 260
+			modifier = {
+				factor = 0
+				has_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag
+			}
+			modifier = {
+				factor = 0
+				check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var > 19 }
+			}
+			modifier = {
+				factor = 0
+				has_political_power < 50
+			}
+			modifier = {
+				factor = 10
+				TRI = { has_opinion = { target = ROOT value > 74 } }
+			}
+			modifier = {
+				factor = 4
+				TRI = { has_opinion = { target = ROOT value > 49 } }
+			}
+		}
 	}
 
 	MIL_Sport_Cooperation_SHA = {
@@ -839,6 +1371,8 @@ MIL_Sport_decision_category = {
 		visible = {
 			has_completed_focus = MIL_need_help
 			SHA = { exists = yes }
+			# 2026-06-08: 合作经费上限已满时隐藏全部学园合作请求。
+			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var < 20 }
 		}
 		available = {
 			custom_trigger_tooltip = {
@@ -853,6 +1387,30 @@ MIL_Sport_decision_category = {
 			country_event = { id = MIL_sport_event.67 days = 7 }
 			custom_effect_tooltip = MIL_Sport_Cooperation_Request_Sent_tt
 		}
+		ai_will_do = {
+			# 2026-06-06: 提高合作请求基础权重，关系修正仍负责排序。
+			factor = 170
+			modifier = {
+				factor = 0
+				has_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag
+			}
+			modifier = {
+				factor = 0
+				check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var > 19 }
+			}
+			modifier = {
+				factor = 0
+				has_political_power < 50
+			}
+			modifier = {
+				factor = 10
+				SHA = { has_opinion = { target = ROOT value > 74 } }
+			}
+			modifier = {
+				factor = 4
+				SHA = { has_opinion = { target = ROOT value > 49 } }
+			}
+		}
 	}
 
 	MIL_Sport_Cooperation_RWT = {
@@ -860,6 +1418,8 @@ MIL_Sport_decision_category = {
 		visible = {
 			has_completed_focus = MIL_need_help
 			RWT = { exists = yes }
+			# 2026-06-08: 合作经费上限已满时隐藏全部学园合作请求。
+			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var < 20 }
 		}
 		available = {
 			custom_trigger_tooltip = {
@@ -874,6 +1434,30 @@ MIL_Sport_decision_category = {
 			country_event = { id = MIL_sport_event.68 days = 7 }
 			custom_effect_tooltip = MIL_Sport_Cooperation_Request_Sent_tt
 		}
+		ai_will_do = {
+			# 2026-06-06: 提高合作请求基础权重，关系修正仍负责排序。
+			factor = 150
+			modifier = {
+				factor = 0
+				has_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag
+			}
+			modifier = {
+				factor = 0
+				check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var > 19 }
+			}
+			modifier = {
+				factor = 0
+				has_political_power < 50
+			}
+			modifier = {
+				factor = 10
+				RWT = { has_opinion = { target = ROOT value > 74 } }
+			}
+			modifier = {
+				factor = 4
+				RWT = { has_opinion = { target = ROOT value > 49 } }
+			}
+		}
 	}
 
 	MIL_Sport_Cooperation_HYA = {
@@ -881,6 +1465,8 @@ MIL_Sport_decision_category = {
 		visible = {
 			has_completed_focus = MIL_need_help
 			HYA = { exists = yes }
+			# 2026-06-08: 合作经费上限已满时隐藏全部学园合作请求。
+			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var < 20 }
 		}
 		available = {
 			custom_trigger_tooltip = {
@@ -894,6 +1480,30 @@ MIL_Sport_decision_category = {
 			set_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag
 			country_event = { id = MIL_sport_event.69 days = 7 }
 			custom_effect_tooltip = MIL_Sport_Cooperation_Request_Sent_tt
+		}
+		ai_will_do = {
+			# 2026-06-06: 提高合作请求基础权重，关系修正仍负责排序。
+			factor = 200
+			modifier = {
+				factor = 0
+				has_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag
+			}
+			modifier = {
+				factor = 0
+				check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var > 19 }
+			}
+			modifier = {
+				factor = 0
+				has_political_power < 50
+			}
+			modifier = {
+				factor = 10
+				HYA = { has_opinion = { target = ROOT value > 74 } }
+			}
+			modifier = {
+				factor = 4
+				HYA = { has_opinion = { target = ROOT value > 49 } }
+			}
 		}
 	}
 }
@@ -975,6 +1585,19 @@ BARE_global_propaganda_campaigns = {
 			clear_variable = BARE_propaganda_cost_var
 			custom_effect_tooltip = BARE_propaganda_campaign_cooldown_tt
 		}
+		ai_will_do = {
+			# 2026-06-06: 宣传决议此前权重过低，AI 经常不使用；提高基础权重但仍低于场馆建设链。
+			factor = 80
+			modifier = {
+				# 2026-06-06: AI 第26天月末消费窗口，宣传花费政治点，不参与经费预留封锁。
+				factor = 3
+				has_country_flag = BARE_MIL_sport_AI_Late_Month_Spend_Boost_flag
+			}
+			modifier = {
+				factor = 2
+				has_country_flag = BARE_MIL_sport_AI_support_pressure_flag
+			}
+		}
 	}
 
 	MIL_Public_Unique_Charm = {
@@ -1034,6 +1657,23 @@ BARE_global_propaganda_campaigns = {
 			}
 			clear_variable = BARE_propaganda_cost_var
 			custom_effect_tooltip = BARE_propaganda_campaign_cooldown_tt
+		}
+		ai_will_do = {
+			# 2026-06-06: 宣传决议此前权重过低，AI 经常不使用；提高基础权重但仍低于场馆建设链。
+			factor = 70
+			modifier = {
+				# 2026-06-06: AI 第26天月末消费窗口，宣传花费政治点，不参与经费预留封锁。
+				factor = 3
+				has_country_flag = BARE_MIL_sport_AI_Late_Month_Spend_Boost_flag
+			}
+			modifier = {
+				factor = 1.5
+				has_country_flag = BARE_MIL_sport_AI_support_pressure_flag
+			}
+			modifier = {
+				factor = 1.5
+				has_country_flag = BARE_MIL_sport_AI_score_pressure_flag
+			}
 		}
 	}
 
@@ -1095,6 +1735,19 @@ BARE_global_propaganda_campaigns = {
 			}
 			clear_variable = BARE_propaganda_cost_var
 			custom_effect_tooltip = BARE_propaganda_campaign_cooldown_tt
+		}
+		ai_will_do = {
+			# 2026-06-06: 宣传决议此前权重过低，AI 经常不使用；提高基础权重但仍低于场馆建设链。
+			factor = 75
+			modifier = {
+				# 2026-06-06: AI 第26天月末消费窗口，宣传花费政治点，不参与经费预留封锁。
+				factor = 3
+				has_country_flag = BARE_MIL_sport_AI_Late_Month_Spend_Boost_flag
+			}
+			modifier = {
+				factor = 2
+				has_country_flag = BARE_MIL_sport_AI_score_pressure_flag
+			}
 		}
 	}
 
@@ -1161,6 +1814,23 @@ BARE_global_propaganda_campaigns = {
 			clear_variable = BARE_propaganda_cost_var
 			custom_effect_tooltip = BARE_propaganda_campaign_cooldown_tt
 		}
+		ai_will_do = {
+			# 2026-06-06: 该宣传能补充当期经费，在宽松预留时应更积极。
+			factor = 90
+			modifier = {
+				# 2026-06-06: AI 第26天月末消费窗口，宣传花费政治点，不参与经费预留封锁。
+				factor = 3
+				has_country_flag = BARE_MIL_sport_AI_Late_Month_Spend_Boost_flag
+			}
+			modifier = {
+				factor = 2
+				has_country_flag = BARE_MIL_sport_AI_reserve_venue_budget_flag
+			}
+			modifier = {
+				factor = 1.5
+				has_country_flag = BARE_MIL_sport_AI_support_pressure_flag
+			}
+		}
 	}
 
 	MIL_Public_Reduce_Waste = {
@@ -1225,6 +1895,23 @@ BARE_global_propaganda_campaigns = {
 			clear_variable = BARE_propaganda_cost_var
 			custom_effect_tooltip = BARE_propaganda_campaign_cooldown_tt
 		}
+		ai_will_do = {
+			# 2026-06-06: 该宣传能补充当期经费，在宽松预留时应更积极。
+			factor = 85
+			modifier = {
+				# 2026-06-06: AI 第26天月末消费窗口，宣传花费政治点，不参与经费预留封锁。
+				factor = 3
+				has_country_flag = BARE_MIL_sport_AI_Late_Month_Spend_Boost_flag
+			}
+			modifier = {
+				factor = 1.5
+				has_country_flag = BARE_MIL_sport_AI_reserve_venue_budget_flag
+			}
+			modifier = {
+				factor = 0.5
+				has_country_flag = BARE_MIL_sport_AI_support_pressure_flag
+			}
+		}
 	}
 
 	MIL_Public_We_Can_Do = {
@@ -1288,6 +1975,26 @@ BARE_global_propaganda_campaigns = {
 			}
 			clear_variable = BARE_propaganda_cost_var
 			custom_effect_tooltip = BARE_propaganda_campaign_cooldown_tt
+		}
+		ai_will_do = {
+			# 2026-06-06: 独立路线核心宣传权重提高，避免因基础权重偏低长期不启动。
+			factor = 120
+			modifier = {
+				# 2026-06-06: AI 第26天月末消费窗口，独立路线宣传仍低于建设链消费。
+				factor = 3
+				has_country_flag = BARE_MIL_sport_AI_Late_Month_Spend_Boost_flag
+			}
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = BARE_MIL_sport_AI_independent_route_flag }
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_country_flag = BARE_MIL_sport_AI_support_pressure_flag
+					has_country_flag = BARE_MIL_sport_AI_score_pressure_flag
+				}
+			}
 		}
 	}
 }

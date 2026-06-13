@@ -1133,7 +1133,7 @@ country_event = {
 		custom_effect_tooltip = MIL_Sport_Cooperation_GEH_tt
 		set_temp_variable = { BARE_MIL_sport_Cooperation_Add_Temp_Var = 10 }
 		BARE_MIL_Sport_Cooperation_GEH_Accept_effect = yes
-		ai_chance = { base = 1 }
+		ai_chance = { base = 100 }
     }
 
     option = {
@@ -1151,7 +1151,7 @@ country_event = {
 		custom_effect_tooltip = MIL_Sport_Cooperation_GEH_PARTIAL_tt
 		set_temp_variable = { BARE_MIL_sport_Cooperation_Add_Temp_Var = 5 }
 		BARE_MIL_Sport_Cooperation_GEH_Accept_effect = yes
-		ai_chance = { base = 1 }
+		ai_chance = { base = 80 }
     }
 
     option = {
@@ -1201,7 +1201,7 @@ country_event = {
 		custom_effect_tooltip = MIL_Sport_Cooperation_TRI_tt
 		set_temp_variable = { BARE_MIL_sport_Cooperation_Add_Temp_Var = 10 }
 		BARE_MIL_Sport_Cooperation_TRI_Accept_effect = yes
-		ai_chance = { base = 1 }
+		ai_chance = { base = 100 }
     }
 
     option = {
@@ -1219,7 +1219,7 @@ country_event = {
 		custom_effect_tooltip = MIL_Sport_Cooperation_TRI_PARTIAL_tt
 		set_temp_variable = { BARE_MIL_sport_Cooperation_Add_Temp_Var = 5 }
 		BARE_MIL_Sport_Cooperation_TRI_Accept_effect = yes
-		ai_chance = { base = 1 }
+		ai_chance = { base = 80 }
     }
 
     option = {
@@ -1269,7 +1269,7 @@ country_event = {
 		custom_effect_tooltip = MIL_Sport_Cooperation_SHA_FULL_tt
 		set_temp_variable = { BARE_MIL_sport_Cooperation_Add_Temp_Var = 10 }
 		BARE_MIL_Sport_Cooperation_SHA_Accept_effect = yes
-		ai_chance = { base = 1 }
+		ai_chance = { base = 100 }
     }
 
     option = {
@@ -1287,7 +1287,7 @@ country_event = {
 		custom_effect_tooltip = MIL_Sport_Cooperation_SHA_tt
 		set_temp_variable = { BARE_MIL_sport_Cooperation_Add_Temp_Var = 5 }
 		BARE_MIL_Sport_Cooperation_SHA_Accept_effect = yes
-		ai_chance = { base = 1 }
+		ai_chance = { base = 80 }
     }
 
     option = {
@@ -1337,7 +1337,7 @@ country_event = {
 		custom_effect_tooltip = MIL_Sport_Cooperation_RWT_FULL_tt
 		set_temp_variable = { BARE_MIL_sport_Cooperation_Add_Temp_Var = 10 }
 		BARE_MIL_Sport_Cooperation_RWT_Accept_effect = yes
-		ai_chance = { base = 1 }
+		ai_chance = { base = 100 }
     }
 
     option = {
@@ -1355,7 +1355,7 @@ country_event = {
 		custom_effect_tooltip = MIL_Sport_Cooperation_RWT_PARTIAL_tt
 		set_temp_variable = { BARE_MIL_sport_Cooperation_Add_Temp_Var = 5 }
 		BARE_MIL_Sport_Cooperation_RWT_Accept_effect = yes
-		ai_chance = { base = 1 }
+		ai_chance = { base = 80 }
     }
 
     option = {
@@ -1405,7 +1405,7 @@ country_event = {
 		custom_effect_tooltip = MIL_Sport_Cooperation_HYA_FULL_tt
 		set_temp_variable = { BARE_MIL_sport_Cooperation_Add_Temp_Var = 10 }
 		BARE_MIL_Sport_Cooperation_HYA_Accept_effect = yes
-		ai_chance = { base = 1 }
+		ai_chance = { base = 100 }
     }
 
     option = {
@@ -1423,7 +1423,7 @@ country_event = {
 		custom_effect_tooltip = MIL_Sport_Cooperation_HYA_tt
 		set_temp_variable = { BARE_MIL_sport_Cooperation_Add_Temp_Var = 5 }
 		BARE_MIL_Sport_Cooperation_HYA_Accept_effect = yes
-		ai_chance = { base = 1 }
+		ai_chance = { base = 80 }
     }
 
     option = {

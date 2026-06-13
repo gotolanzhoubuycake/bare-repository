@@ -24,6 +24,21 @@ on_actions = {
         }
     }
 
+    # 2026-06-06: 晄轮大祭 AI 月末经费消耗日检；第26天后给3天高决议倾向，不直接扣经费。
+    on_daily_MIL = {
+        effect = {
+            if = {
+                limit = {
+                    original_tag = MIL
+                    is_ai = yes
+                    has_global_flag = BARE_MIL_Sport_prepare_flag
+                    NOT = { has_country_flag = BARE_MIL_Sport_settlement_pending_flag }
+                }
+                BARE_MIL_Sport_AI_Daily_Check_effect = yes
+            }
+        }
+    }
+
     # 千年-凯撒战争每周事件
     # Wiki参考：https://hoi4.paradoxwikis.com/On_actions
     # 用于处理每周减少凯撒经济状况的逻辑

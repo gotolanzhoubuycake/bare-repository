@@ -130,12 +130,12 @@ scripted_gui = {
 			}
 		}
 		properties = {
-			# 2026-05-20: 支持度进度条直接读取 0-100 支持度变量；场馆准备程度读取 0-4 图帧变量。
+			# 2026-06-08: 支持度进度条直接读取 0-100 支持度变量；场馆准备程度直接读取0-5级变量，对应6帧进度条。
 			MIL_sport_GUI_Info_Progress_4 = {
 				frame = var:BARE_MIL_sport_Student_Support_Var
 			}
 			MIL_sport_GUI_Info_Start_Line = {
-				frame = var:BARE_MIL_sport_Building_Score_Frame_Var
+				frame = var:BARE_MIL_sport_Building_Score_Var
 			}
 		}
 			
