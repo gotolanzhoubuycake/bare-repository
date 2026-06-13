@@ -15,22 +15,6 @@ GEH_dualHeaded_Makoto_Weekly_factor = {
 
 
 
-GEH_dualHeaded_Makoto_Weekly_factor = {
-    color_type = neutral
-	value_type = percentage
-	precision = 2
-	category = country
-}
-
-
-GEH_dualHeaded_Makoto_Weekly_factor = {
-    color_type = neutral
-	value_type = percentage
-	precision = 2
-	category = country
-}
-
-
 GEH_societies_gourmet_research_destructive_weekly = {
 	color_type = bad
 	value_type = number
