@@ -1,4 +1,4 @@
-version="1.14.*"
+version="1.19.*"
 tags={
 	"Alternative History"
 	"Gameplay"
@@ -93,4 +93,4 @@ replace_path="gfx/flags/small"
 replace_path="gfx/interface/equipmentdesigner/graphic_db"
 replace_path="portraits"
 name="碧蓝档案-自新复始"
-supported_version="1.14.7"
+supported_version="1.19.*"
