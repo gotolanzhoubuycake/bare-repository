@@ -35,7 +35,7 @@ sub_units = {
 		max_strength = 1
 		max_organisation = 30
 		default_morale = 0.05
-		manpower = 200
+		manpower = 60
 		deployment_cost = 1
 		training_time = 120
 
@@ -90,7 +90,7 @@ sub_units = {
 		max_strength = 1
 		max_organisation = 30
 		default_morale = 0.05
-		manpower = 200
+		manpower = 60
 		deployment_cost = 1
 		training_time = 120
 
@@ -150,7 +150,7 @@ sub_units = {
 		max_strength = 1
 		max_organisation = 30
 		default_morale = 0.05
-		manpower = 200
+		manpower = 60
 		deployment_cost = 1
 		training_time = 120
 
@@ -207,7 +207,7 @@ sub_units = {
 		max_strength = 1
 		max_organisation = 30
 		default_morale = 0.05
-		manpower = 200
+		manpower = 60
 		deployment_cost = 1
 		training_time = 120
 
@@ -259,7 +259,7 @@ sub_units = {
 		max_strength = 1
 		max_organisation = 30
 		default_morale = 0.05
-		manpower = 200
+		manpower = 60
 		deployment_cost = 1
 		training_time = 120
 
@@ -315,7 +315,7 @@ sub_units = {
 		max_strength = 1
 		max_organisation = 30
 		default_morale = 0.05
-		manpower = 200
+		manpower = 60
 		deployment_cost = 1
 		training_time = 120
 
@@ -370,7 +370,7 @@ sub_units = {
 		max_strength = 1
 		max_organisation = 30
 		default_morale = 0.05
-		manpower = 200
+		manpower = 60
 		deployment_cost = 1
 		training_time = 120
 
@@ -425,7 +425,7 @@ sub_units = {
 		max_strength = 1
 		max_organisation = 30
 		default_morale = 0.05
-		manpower = 200
+		manpower = 60
 		deployment_cost = 1
 		training_time = 120
 
@@ -476,7 +476,7 @@ sub_units = {
 		max_strength = 1
 		max_organisation = 30
 		default_morale = 0.05
-		manpower = 200
+		manpower = 60
 		deployment_cost = 1
 		training_time = 120
 
@@ -528,7 +528,7 @@ sub_units = {
 		max_strength = 1
 		max_organisation = 30
 		default_morale = 0.05
-		manpower = 200
+		manpower = 60
 		deployment_cost = 1
 		training_time = 120
 
@@ -579,7 +579,7 @@ sub_units = {
 		max_strength = 1
 		max_organisation = 30
 		default_morale = 0.05
-		manpower = 200
+		manpower = 60
 		deployment_cost = 1
 		training_time = 120
 
@@ -626,7 +626,7 @@ sub_units = {
 		max_strength = 15
 		max_organisation = 60
 		default_morale = 0.3
-		manpower = 600
+		manpower = 80
 		deployment_cost = 3
 		training_time = 90
 
@@ -669,7 +669,7 @@ sub_units = {
 		max_strength = 15
 		max_organisation = 60
 		default_morale = 0.3
-		manpower = 600
+		manpower = 80
 		deployment_cost = 3
 		training_time = 90
 
@@ -744,7 +744,7 @@ sub_units = {
 		max_strength = 14
 		max_organisation = 70
 		default_morale = 0.4
-		manpower = 600
+		manpower = 80
 		deployment_cost = 3
 		training_time = 150
 
@@ -790,7 +790,7 @@ sub_units = {
 			infantry_equipment = 40
 			light_tank_chassis = 30
 		}
-		manpower = 600
+		manpower = 80
 		max_organisation = 40
 		default_morale = 0.1
 		training_time = 180
@@ -864,7 +864,7 @@ sub_units = {
 		#Size Definitions
 		max_organisation = 35
 		default_morale = 0.1
-		manpower = 600
+		manpower = 80
 		deployment_cost = 3
 		training_time = 180
 		max_strength = 10
@@ -971,7 +971,7 @@ sub_units = {
 			heavy_tank_chassis = 20
 		}
 
-		manpower = 600
+		manpower = 80
 		max_organisation = 30
 		default_morale = 0.1
 		max_strength = 10
