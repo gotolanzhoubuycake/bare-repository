@@ -3,7 +3,7 @@ MIL_cae_war_decision_category = {
     # 决议1：号召停用凯撒商品
     # 前置：完成国策"一个公司最害怕的事情"
     # 花费100pp，持续30天
-    # 完成后：民族精神追加效果生活消费品系数+10%，战争支持度+5%，每周凯撒经济状况-1%
+    # 完成后：民族精神追加效果生活消费品系数+10%，战争支持度+5%，每月凯撒经济状况-1%
     MIL_boycott_CAE_products = {
         icon = MIL_boycott_CAE_products
 
@@ -25,7 +25,7 @@ MIL_cae_war_decision_category = {
             # 追加民族精神效果
             add_to_variable = { global.MIL_cae_war_consumer_goods = 0.1 }
             add_to_variable = { MIL_cae_war_war_support = 0.05 }
-            # 设置每周经济状况减少的flag
+            # 设置每月经济状况减少的flag
             set_country_flag = MIL_cae_eco_weekly_minus_1
         }
 
@@ -37,7 +37,7 @@ MIL_cae_war_decision_category = {
     # 决议2：全面禁用凯撒商品
     # 前置：完成国策"不给凯撒提供一份收益"
     # 花费150pp，持续30天
-    # 完成后：民族精神追加效果生活消费品系数+10%，战争支持度+5%，每周凯撒经济状况-1.5%，触发事件
+    # 完成后：民族精神追加效果生活消费品系数+10%，战争支持度+5%，每月凯撒经济状况-1.5%，触发事件
     MIL_ban_all_CAE_products = {
         icon = generic_civil_support
 
@@ -64,7 +64,7 @@ MIL_cae_war_decision_category = {
             # 追加民族精神效果
             add_to_variable = { global.MIL_cae_war_consumer_goods = 0.1 }
             add_to_variable = { global.MIL_cae_war_war_support = 0.05 }
-            # 更新每周经济状况减少
+            # 更新每月经济状况减少
             set_country_flag = MIL_cae_eco_weekly_minus_1_5
             # 触发事件
             country_event = { id = MIL_cae_war.2 }

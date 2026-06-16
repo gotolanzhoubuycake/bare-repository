@@ -1,0 +1,25 @@
+spriteTypes = {
+	# 凯撒战争线决议 UI 主背景
+	SpriteType = {
+		name = "GFX_MIL_cae_war_GUI_BG"
+		texturefile = "gfx/interface/MIL_cae_war/MIL_cae_war_GUI_BG.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_MIL_cae_war_economy_progressbar_bg"
+		texturefile = "gfx/interface/MIL_cae_war/MIL_cae_war_progress_blue.dds"
+	}
+
+	# 凯撒经济状况竖向进度条：蓝色底图单独绘制，黄色填充层随0~100帧变化。
+	progressbartype = {
+		name = "GFX_MIL_cae_war_economy_progressbar"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/MIL_cae_war/MIL_cae_war_progress_yellow_fill.png"
+		textureFile2 = "gfx/interface/MIL_cae_war/MIL_cae_war_progress_empty.png"
+		size = { x = 24 y = 213 }
+		effectFile = "gfx/FX/progress.lua"
+		steps = 100
+		horizontal = no
+	}
+}

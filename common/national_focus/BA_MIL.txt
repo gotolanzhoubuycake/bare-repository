@@ -200,16 +200,21 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			# 初始化凯撒经济状况（初始值120）
+			# 初始化凯撒经济状况（初始值80）
 			set_variable = {
 				var = global.cae_economic_situation
-				value = 120
+				value = 80
 				tooltip = MIL_CAE_economic_situation
 			}
 			set_variable = {
 				var = global.cae_final_economic_situation
-				value = 120
+				value = 80
 				tooltip = MIL_CAE_FINAL_economic_situation
+			}
+			# 决议GUI竖向进度条使用0~100帧，初始经济80对应40帧。
+			set_variable = {
+				var = global.cae_economic_progress_frame
+				value = 40
 			}
 			# 初始化招募部队装备系数（默认值1.0）
 			set_variable = {
@@ -218,6 +223,14 @@ focus_tree = {
 			}
 			set_variable = {
 				var = global.cae_add_economic_situation
+				value = 0
+			}
+			set_variable = {
+				var = global.cae_last_add_eco
+				value = 0
+			}
+			set_variable = {
+				var = global.cae_predicted_monthly_change
 				value = 0
 			}
 			# 初始化凯撒经济状况相关跟踪变量（设置基准值）
@@ -485,7 +498,7 @@ focus_tree = {
 		id = MIL_we_need_money
 		icon = GFX_goal_MIL_we_need_money
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 1
 		x = 35
 		y = 0
         completion_reward = {
@@ -586,11 +599,18 @@ focus_tree = {
 		icon = GFX_goal_MIL_no_debt
 		relative_position_id = MIL_we_need_money
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 2
 		x = 10
 		y = 1
 		prerequisite = {
 			focus = MIL_we_need_money
+		}
+		completion_reward = {
+			set_power_balance = {
+				# 解锁财政危机平衡机制，设定初始值为偏向危机80% 初始值已在定义中实现
+				id = MIL_bp_financial_crisis_balance
+			}
+			add_political_power = 50
 		}
 	}
 	focus = { #千年大赏
@@ -762,18 +782,19 @@ focus_tree = {
 		prerequisite = {
 			focus = MIL_it_ugly
 		}
-        completion_reward = {
+		completion_reward = {
 			random_owned_controlled_state = {
 				limit = {
-						not = {
-							state = 638
-							state = 639
-							state = 640
-							state = 641
-							state = 642
-							state = 643
-						}
+					NOT = {
+						state = 638
+						state = 639
+						state = 640
+						state = 641
+						state = 642
+						state = 643
 					}
+				}
+				set_state_flag = MIL_but_useful_selected_state
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -781,25 +802,32 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-		}
-        completion_reward = {
 			random_owned_controlled_state = {
 				limit = {
-						not = {
-							state = 638
-							state = 639
-							state = 640
-							state = 641
-							state = 642
-							state = 643
-						}
+					NOT = {
+						state = 638
+						state = 639
+						state = 640
+						state = 641
+						state = 642
+						state = 643
 					}
+					NOT = {
+						has_state_flag = MIL_but_useful_selected_state
+					}
+				}
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
 					instant_build = yes
 				}
+			}
+			every_owned_state = {
+				limit = {
+					has_state_flag = MIL_but_useful_selected_state
+				}
+				clr_state_flag = MIL_but_useful_selected_state
 			}
 		}
 	}
@@ -814,11 +842,11 @@ focus_tree = {
 		prerequisite = {
 			focus = MIL_i_think_it_can
 		}
-		 completion_reward = {
+		completion_reward = {
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-					type = arms_factory
+					type = heavy_arms_factory
 					level = 1
 					instant_build = yes
 				}
@@ -841,12 +869,12 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_power_balance_value = {
-                    id = MIL_bp_financial_crisis_balance
-                    value = -0.2
-	}
+				id = MIL_bp_financial_crisis_balance
+				value = -0.2
+			}
 			country_event = MIL_event.6
+		}
 	}
-}
 	focus = { #新的激励计划
 		id = MIL_New_incentive_plan
 		icon = GFX_goal_MIL_New_incentive_plan
@@ -876,11 +904,14 @@ focus_tree = {
 		icon = GFX_goal_MIL_old_school_redevelopment
 		relative_position_id = MIL_we_need_money
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 3
 		x = 15
 		y = 2
 		prerequisite = {
 			focus = MIL_no_debt
+		}
+		completion_reward = {
+			add_political_power = 100
 		}
 	}
 	focus = { #废墟清理方案
@@ -912,11 +943,21 @@ focus_tree = {
 		icon = GFX_goal_MIL_Unexpected_surprise
 		relative_position_id = MIL_we_need_money
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 3
 		x = 14
 		y = 5
 		prerequisite = {
 			focus = MIL_Let_go_all_out
+		}
+		completion_reward = {
+			add_breakthrough_points = {
+				specialization = specialization_land
+				value = 1
+			}
+			add_breakthrough_points = {
+				specialization = specialization_air
+				value = 1
+			}
 		}
 	}
 	focus = { #这已经不是一般的钉子户了

@@ -39,72 +39,53 @@ on_actions = {
         }
     }
 
-    # 千年-凯撒战争每周事件
+    # 千年-凯撒战争月度事件
     # Wiki参考：https://hoi4.paradoxwikis.com/On_actions
-    # 用于处理每周减少凯撒经济状况的逻辑
+    # 用于处理每月减少凯撒经济状况的逻辑
 # =====================================================
 # 千年-凯撒战争经济状况机制
 # Wiki参考：https://hoi4.paradoxwikis.com/On_actions
 #
 # 可用全局变量（供机制/UI显示使用）：
-#   global.cae_economic_situation          - 凯撒经济状况基础值（初始120，受每周规则4-7和决议累积修改）
-#   global.cae_final_economic_situation    - 凯撒经济状况最终值（基础值 + 规则1-3快照偏移量，每周结算）
-#   global.cae_add_economic_situation      - 规则1-3快照偏移量（每周结算时计算）
-#   global.cae_last_add_eco               - 上周规则1-3偏移量（用于计算变化量）
-#   global.cae_predicted_weekly_change     - 本周经济状况预测变化量（规则1-7合计，每日更新）
-#   global.MIL_cae_war_cae_army_attack_factor       - 凯撒部队攻击修正（每周结算）
-#   global.MIL_cae_war_cae_army_defence_factor      - 凯撒部队防御修正（每周结算）
-#   global.MIL_cae_war_cae_army_org_factor          - 凯撒部队组织度上限修正（每周结算）
-#   global.MIL_cae_war_cae_army_org_regain          - 凯撒部队组织度恢复修正（每周结算）
-#   global.MIL_cae_war_cae_air_mission_efficiency   - 凯撒空军效率修正（每周结算）
-#   global.cae_recruit_equipment_factor             - 凯撒招募部队初始装备系数（0~1，每周结算，经济<100时递减，每降低1减少0.005，最低为0.5）
+#   global.cae_economic_situation          - 凯撒经济状况基础值（初始80，受月度规则4-7和决议累积修改）
+#   global.cae_final_economic_situation    - 凯撒经济状况最终值（基础值 + 规则1-3快照偏移量，每月结算）
+#   global.cae_economic_progress_frame     - 决议GUI进度条帧值（最终经济状况0~200换算为0~100）
+#   global.cae_add_economic_situation      - 规则1-3快照偏移量（每月结算时计算）
+#   global.cae_last_add_eco               - 上月规则1-3偏移量（用于计算变化量）
+#   global.cae_predicted_monthly_change    - 本月经济状况预测变化量（规则1-7及千年决议每月扣减合计，每日更新）
+#   global.MIL_cae_war_cae_army_attack_factor       - 凯撒部队攻击修正（每月结算）
+#   global.MIL_cae_war_cae_army_defence_factor      - 凯撒部队防御修正（每月结算）
+#   global.MIL_cae_war_cae_army_org_factor          - 凯撒部队组织度上限修正（每月结算）
+#   global.MIL_cae_war_cae_army_org_regain          - 凯撒部队组织度恢复修正（每月结算）
+#   global.MIL_cae_war_cae_air_mission_efficiency   - 凯撒空军效率修正（每月结算）
+#   global.cae_recruit_equipment_factor             - 凯撒招募部队初始装备系数（0~1，每月结算，经济<100时递减，每降低1减少0.005，最低为0.5）
+#
+# 凯撒战争决议 GUI 缓存变量（每日刷新，供 localisation 直接显示）：
+#   global.MIL_cae_war_GUI_CAE_factory_count               - 凯撒工厂总数（军工 + 民工）
+#   global.MIL_cae_war_GUI_CAE_deployed_manpower           - 凯撒服役人数（陆海空 deployed_*_manpower_k 合计，单位为k）
+#   global.MIL_cae_war_GUI_CAE_casualties                  - 凯撒总伤亡（casualties_k，单位为k）
+#   global.MIL_cae_war_GUI_CAE_occupied_state_count         - 凯撒当前控制的千年核心省份数量
+#   global.MIL_cae_war_GUI_CAE_remaining_core_state_count   - 凯撒当前仍控制的凯撒核心省份数量
+#   global.MIL_cae_war_GUI_MIL_factory_count               - 千年工厂总数（军工 + 民工）
+#   global.MIL_cae_war_GUI_MIL_deployed_manpower           - 千年服役人数（陆海空 deployed_*_manpower_k 合计，单位为k）
+#   global.MIL_cae_war_GUI_MIL_casualties                  - 千年总伤亡（casualties_k，单位为k）
+#   global.MIL_cae_war_GUI_MIL_occupied_state_count         - 千年当前控制的凯撒核心省份数量
+#   global.MIL_cae_war_GUI_MIL_remaining_core_state_count   - 千年当前仍控制的千年核心省份数量
+#   global.cae_predicted_monthly_change                     - UI 显示用预计每月经济变化
+#   global.cae_economic_progress_frame                      - UI 竖向进度条帧值，0为蓝色空条，100为黄色满条
 # =====================================================
-
-    # 用于处理千年决议每周减少凯撒经济状况的逻辑
-    on_weekly_MIL = {
-        effect = {
-            # 检查是否是千年
-            if = {
-                limit = {
-                    original_tag = MIL
-                }
-
-                # 决议1效果：每周凯撒经济状况-1
-                if = {
-                    limit = {
-                        has_country_flag = MIL_cae_eco_weekly_minus_1
-                    }
-                    subtract_from_variable = {
-                        var = global.cae_economic_situation
-                        value = 1
-                    }
-                }
-
-                # 决议2效果：每周凯撒经济状况-1.5（在-1%基础上）
-                if = {
-                    limit = {
-                        has_country_flag = MIL_cae_eco_weekly_minus_1_5
-                    }
-                    subtract_from_variable = {
-                        var = global.cae_economic_situation
-                        value = 1.5
-                    }
-                }
-            }
-        }
-    }
 
     # =====================================================
     # 千年-凯撒战争每日预测
-    # 每日计算规则1-7的预测值，存入全局变量供显示
-    # 同时每日更新最终经济状况和战斗力修正
+    # 每日计算规则1-7和千年决议每月扣减的预测值，存入全局变量供显示
+    # 同时刷新 GUI 缓存；最终经济状况和战斗力修正由 on_monthly_CAE 结算
     # 规则1：凯撒每控制一个千年省份，经济状况+2%
     # 规则2：凯撒累计每损失7.5k人力，经济状况-1%
     # 规则3：千年累计每损失2k人力，凯撒经济状况+1%
-    # 规则4：凯撒每控制n个千年省份，每周经济状况+0.5n%
-    # 规则5：凯撒每比千年多出1k服役人口，每周经济状况+0.1%
-    # 规则6：凯撒每拥有10k*n个服役人口，每周经济状况-0.1n%
-    # 规则7：凯撒每失去一个核心省份（被千年控制），每周经济状况-10%
+    # 规则4：凯撒每控制n个千年省份，每月经济状况+0.5n%
+    # 规则5：凯撒每比千年多出1k服役人口，每月经济状况+0.1%
+    # 规则6：凯撒每拥有1k个服役人口，每月经济状况-0.01%
+    # 规则7：凯撒每失去一个核心省份（被千年控制），每月经济状况-10%
     # =====================================================
     on_daily_CAE = {
         effect = {
@@ -112,6 +93,84 @@ on_actions = {
                 limit = {
                     has_country_flag = CAE_MIL_war_started
                 }
+
+                # =========================================
+                # 决议 GUI 数据缓存
+                # 左列：凯撒工厂、服役人数、总伤亡、占据千年省份、剩余凯撒核心省份
+                # 右列：千年工厂、服役人数、总伤亡、占据凯撒省份、剩余千年核心省份
+                # 注意：MIL_cae_war_GUI_temp_value 是本段复用的临时累加器，每个统计项开始前都会重置。
+                # =========================================
+
+                # 工厂数量：直接缓存国家当前军工 + 民工总数，显示为整数。
+                CAE = {
+                    set_variable = { global.MIL_cae_war_GUI_CAE_factory_count = num_of_military_factories }
+                    add_to_variable = { global.MIL_cae_war_GUI_CAE_factory_count = num_of_civilian_factories }
+                }
+                MIL = {
+                    set_variable = { global.MIL_cae_war_GUI_MIL_factory_count = num_of_military_factories }
+                    add_to_variable = { global.MIL_cae_war_GUI_MIL_factory_count = num_of_civilian_factories }
+                }
+
+                # 凯撒服役人数：deployed_*_manpower_k 的单位是千人，GUI 也按k显示。
+                set_temp_variable = { MIL_cae_war_GUI_temp_value = 0 }
+                add_to_temp_variable = { MIL_cae_war_GUI_temp_value = CAE.deployed_army_manpower_k }
+                add_to_temp_variable = { MIL_cae_war_GUI_temp_value = CAE.deployed_navy_manpower_k }
+                add_to_temp_variable = { MIL_cae_war_GUI_temp_value = CAE.deployed_airforce_manpower_k }
+                set_variable = { global.MIL_cae_war_GUI_CAE_deployed_manpower = MIL_cae_war_GUI_temp_value }
+
+                # 千年服役人数：同样合计陆海空服役人数，GUI 保持k单位。
+                set_temp_variable = { MIL_cae_war_GUI_temp_value = 0 }
+                add_to_temp_variable = { MIL_cae_war_GUI_temp_value = MIL.deployed_army_manpower_k }
+                add_to_temp_variable = { MIL_cae_war_GUI_temp_value = MIL.deployed_navy_manpower_k }
+                add_to_temp_variable = { MIL_cae_war_GUI_temp_value = MIL.deployed_airforce_manpower_k }
+                set_variable = { global.MIL_cae_war_GUI_MIL_deployed_manpower = MIL_cae_war_GUI_temp_value }
+
+                # 总伤亡：casualties_k 的单位也是千人，GUI 也按k显示。
+                set_temp_variable = { MIL_cae_war_GUI_temp_value = CAE.casualties_k }
+                set_variable = { global.MIL_cae_war_GUI_CAE_casualties = MIL_cae_war_GUI_temp_value }
+
+                set_temp_variable = { MIL_cae_war_GUI_temp_value = MIL.casualties_k }
+                set_variable = { global.MIL_cae_war_GUI_MIL_casualties = MIL_cae_war_GUI_temp_value }
+
+                # 凯撒占据省份：统计凯撒当前控制的千年核心省份数量。
+                set_temp_variable = { MIL_cae_war_GUI_temp_value = 0 }
+                CAE = {
+                    every_controlled_state = {
+                        limit = { is_core_of = MIL }
+                        add_to_temp_variable = { MIL_cae_war_GUI_temp_value = 1 }
+                    }
+                }
+                set_variable = { global.MIL_cae_war_GUI_CAE_occupied_state_count = MIL_cae_war_GUI_temp_value }
+
+                # 千年占据省份：统计千年当前控制的凯撒核心省份数量。
+                set_temp_variable = { MIL_cae_war_GUI_temp_value = 0 }
+                MIL = {
+                    every_controlled_state = {
+                        limit = { is_core_of = CAE }
+                        add_to_temp_variable = { MIL_cae_war_GUI_temp_value = 1 }
+                    }
+                }
+                set_variable = { global.MIL_cae_war_GUI_MIL_occupied_state_count = MIL_cae_war_GUI_temp_value }
+
+                # 凯撒剩余核心：统计凯撒当前仍控制的凯撒核心省份数量。
+                set_temp_variable = { MIL_cae_war_GUI_temp_value = 0 }
+                CAE = {
+                    every_controlled_state = {
+                        limit = { is_core_of = CAE }
+                        add_to_temp_variable = { MIL_cae_war_GUI_temp_value = 1 }
+                    }
+                }
+                set_variable = { global.MIL_cae_war_GUI_CAE_remaining_core_state_count = MIL_cae_war_GUI_temp_value }
+
+                # 千年剩余核心：统计千年当前仍控制的千年核心省份数量。
+                set_temp_variable = { MIL_cae_war_GUI_temp_value = 0 }
+                MIL = {
+                    every_controlled_state = {
+                        limit = { is_core_of = MIL }
+                        add_to_temp_variable = { MIL_cae_war_GUI_temp_value = 1 }
+                    }
+                }
+                set_variable = { global.MIL_cae_war_GUI_MIL_remaining_core_state_count = MIL_cae_war_GUI_temp_value }
 
                 # =========================================
                 # 规则1-3预测：快照偏移量
@@ -139,11 +198,11 @@ on_actions = {
                 add_to_temp_variable = { add_eco = death_population_mil }
 
                 # =========================================
-                # 规则4-7预测：每周累积变化量
+                # 规则4-7预测：每月累积变化量
                 # =========================================
                 set_temp_variable = { predicted_change = 0 }
 
-                # 规则4预测：凯撒每控制n个千年省份，每周经济状况+0.5n%
+                # 规则4预测：凯撒每控制n个千年省份，每月经济状况+0.5n%
                 CAE = {
                     every_controlled_state = {
                         limit = {
@@ -153,7 +212,7 @@ on_actions = {
                     }
                 }
 
-                # 规则5预测：凯撒每比千年多出1k服役人口，每周经济状况+0.1%
+                # 规则5预测：凯撒每比千年多出1k服役人口，每月经济状况+0.1%
                 set_temp_variable = { manpower_advantage = 0 }
                 add_to_temp_variable = { manpower_advantage = CAE.deployed_army_manpower_k }
                 add_to_temp_variable = { manpower_advantage = CAE.deployed_navy_manpower_k }
@@ -168,7 +227,7 @@ on_actions = {
                 divide_temp_variable = { manpower_advantage = 10 }
                 add_to_temp_variable = { predicted_change = manpower_advantage }
 
-                # 规则6预测：凯撒每拥有10k*n个服役人口，每周经济状况-0.1n%
+                # 规则6预测：凯撒每拥有10k*n个服役人口，每月经济状况-0.1n%
                 set_temp_variable = { manpower_cost = 0 }
                 add_to_temp_variable = { manpower_cost = CAE.deployed_army_manpower_k }
                 add_to_temp_variable = { manpower_cost = CAE.deployed_navy_manpower_k }
@@ -176,7 +235,7 @@ on_actions = {
                 divide_temp_variable = { manpower_cost = 100 }
                 subtract_from_temp_variable = { predicted_change = manpower_cost }
 
-                # 规则7预测：凯撒每失去一个核心省份（被千年控制），每周经济状况-10%
+                # 规则7预测：凯撒每失去一个核心省份（被千年控制），每月经济状况-10%
                 MIL = {
                     every_controlled_state = {
                         limit = {
@@ -186,29 +245,49 @@ on_actions = {
                     }
                 }
 
-                # 计算规则1-3本周偏移量变化 = 当前偏移量 - 上周偏移量
+                # 千年决议预测：抵制/全面禁用凯撒商品带来的每月扣减
+                if = {
+                    limit = {
+                        MIL = { has_country_flag = MIL_cae_eco_weekly_minus_1 }
+                    }
+                    subtract_from_temp_variable = { predicted_change = 1 }
+                }
+                if = {
+                    limit = {
+                        MIL = { has_country_flag = MIL_cae_eco_weekly_minus_1_5 }
+                    }
+                    subtract_from_temp_variable = { predicted_change = 1.5 }
+                }
+
+                # 计算规则1-3本月偏移量变化 = 当前偏移量 - 上月偏移量
                 set_temp_variable = { add_eco_change = add_eco }
                 subtract_from_temp_variable = { add_eco_change = global.cae_last_add_eco }
                 # 合并规则1-3变化量和规则4-7变化量，存入全局变量（仅预测，不结算）
                 add_to_temp_variable = { predicted_change = add_eco_change }
-                set_variable = { global.cae_predicted_weekly_change = predicted_change }
+                set_variable = { global.cae_predicted_monthly_change = predicted_change }
+
+                # 经济状况竖向进度条：最终经济状况0~200换算为进度条0~100帧。
+                set_temp_variable = { cae_economic_progress_frame = global.cae_final_economic_situation }
+                clamp_temp_variable = { var = cae_economic_progress_frame min = 0 max = 200 }
+                divide_temp_variable = { cae_economic_progress_frame = 2 }
+                set_variable = { global.cae_economic_progress_frame = cae_economic_progress_frame }
             }
         }
     }
 
     # =====================================================
-    # 千年-凯撒战争每周经济调整（合并所有规则）
+    # 千年-凯撒战争每月经济调整（合并所有规则）
     # 规则1-3：快照偏移量，每次重新计算
     # 规则1：凯撒每控制一个千年省份，经济状况+2%
     # 规则2：凯撒累计每损失7.5k人力，经济状况-1%
     # 规则3：千年累计每损失2k人力，凯撒经济状况+1%
-    # 规则4-7：每周累积变化，直接修改基础经济状况
-    # 规则4：凯撒每控制n个千年省份，每周经济状况+0.5n%
-    # 规则5：凯撒每比千年多出1k服役人口，每周经济状况+0.1%
-    # 规则6：凯撒每拥有10k*n个服役人口，每周经济状况-0.1n%
-    # 规则7：凯撒每失去一个核心省份（被千年控制），每周经济状况-10%
+    # 规则4-7：每月累积变化，直接修改基础经济状况
+    # 规则4：凯撒每控制n个千年省份，每月经济状况+0.5n%
+    # 规则5：凯撒每比千年多出1k服役人口，每月经济状况+0.1%
+    # 规则6：凯撒每拥有10k*n个服役人口，每月经济状况-0.1n%
+    # 规则7：凯撒每失去一个核心省份（被千年控制），每月经济状况-10%
     # =====================================================
-    on_weekly_CAE = {
+    on_monthly_CAE = {
         effect = {
             if = {
                 limit = {
@@ -216,7 +295,7 @@ on_actions = {
                 }
 
                 # =========================================
-                # 规则1-3：快照偏移量（基于累积数据，每周重新计算）
+                # 规则1-3：快照偏移量（基于累积数据，每月重新计算）
                 # =========================================
                 set_temp_variable = { add_eco = 0 }
 
@@ -241,21 +320,21 @@ on_actions = {
                 add_to_temp_variable = { add_eco = death_population_mil }
 
                 # =========================================
-                # 规则4-7：每周累积变化，直接修改基础经济状况
+                # 规则4-7：每月累积变化，直接修改基础经济状况
                 # =========================================
-                set_temp_variable = { weekly_change = 0 }
+                set_temp_variable = { monthly_change = 0 }
 
-                # 规则4：凯撒每控制n个千年省份，每周经济状况+0.5n%
+                # 规则4：凯撒每控制n个千年省份，每月经济状况+0.5n%
                 CAE = {
                     every_controlled_state = {
                         limit = {
                             is_core_of = MIL
                         }
-                        add_to_temp_variable = { weekly_change = 0.5 }
+                        add_to_temp_variable = { monthly_change = 0.5 }
                     }
                 }
 
-                # 规则5：凯撒每比千年多出1k服役人口，每周经济状况+0.1%
+                # 规则5：凯撒每比千年多出1k服役人口，每月经济状况+0.1%
                 # 计算公式：(凯撒服役人口 - 千年服役人口) / 10
                 set_temp_variable = { manpower_advantage = 0 }
                 add_to_temp_variable = { manpower_advantage = CAE.deployed_army_manpower_k }
@@ -269,29 +348,44 @@ on_actions = {
                     min = 0
                 }
                 divide_temp_variable = { manpower_advantage = 10 }
-                add_to_temp_variable = { weekly_change = manpower_advantage }
+                add_to_temp_variable = { monthly_change = manpower_advantage }
 
-                # 规则6：凯撒每拥有10k*n个服役人口，每周经济状况-0.1n%
+                # 规则6：凯撒每拥有10k*n个服役人口，每月经济状况-0.1n%
                 # 计算公式：凯撒总服役人口 / 100
                 set_temp_variable = { manpower_cost = 0 }
                 add_to_temp_variable = { manpower_cost = CAE.deployed_army_manpower_k }
                 add_to_temp_variable = { manpower_cost = CAE.deployed_navy_manpower_k }
                 add_to_temp_variable = { manpower_cost = CAE.deployed_airforce_manpower_k }
                 divide_temp_variable = { manpower_cost = 100 }
-                subtract_from_temp_variable = { weekly_change = manpower_cost }
+                subtract_from_temp_variable = { monthly_change = manpower_cost }
 
-                # 规则7：凯撒每失去一个核心省份（被千年控制），每周经济状况-10%
+                # 规则7：凯撒每失去一个核心省份（被千年控制），每月经济状况-10%
                 MIL = {
                     every_controlled_state = {
                         limit = {
                             is_core_of = CAE
                         }
-                        subtract_from_temp_variable = { weekly_change = 10 }
+                        subtract_from_temp_variable = { monthly_change = 10 }
                     }
                 }
 
-                # 将每周变化累积到基础经济状况
-                add_to_variable = { global.cae_economic_situation = weekly_change }
+                # 千年决议：抵制/全面禁用凯撒商品带来的每月扣减
+                # 仍沿用旧 flag 名，避免重命名影响已有决议状态。
+                if = {
+                    limit = {
+                        MIL = { has_country_flag = MIL_cae_eco_weekly_minus_1 }
+                    }
+                    subtract_from_temp_variable = { monthly_change = 1 }
+                }
+                if = {
+                    limit = {
+                        MIL = { has_country_flag = MIL_cae_eco_weekly_minus_1_5 }
+                    }
+                    subtract_from_temp_variable = { monthly_change = 1.5 }
+                }
+
+                # 将每月变化累积到基础经济状况
+                add_to_variable = { global.cae_economic_situation = monthly_change }
 
                 # =========================================
                 # 计算最终经济状况 = 基础值 + 快照偏移量
@@ -299,6 +393,12 @@ on_actions = {
                 set_variable = { global.cae_final_economic_situation = global.cae_economic_situation }
                 set_variable = { global.cae_add_economic_situation = add_eco }
                 add_to_variable = { global.cae_final_economic_situation = global.cae_add_economic_situation }
+
+                # 经济状况竖向进度条：最终经济状况0~200换算为进度条0~100帧。
+                set_temp_variable = { cae_economic_progress_frame = global.cae_final_economic_situation }
+                clamp_temp_variable = { var = cae_economic_progress_frame min = 0 max = 200 }
+                divide_temp_variable = { cae_economic_progress_frame = 2 }
+                set_variable = { global.cae_economic_progress_frame = cae_economic_progress_frame }
 
                 # =========================================
                 # 战斗力影响计算
@@ -316,7 +416,7 @@ on_actions = {
                 set_variable = { global.MIL_cae_war_cae_army_org_regain = MIL_cae_war_temp_calc }
                 set_variable = { global.MIL_cae_war_cae_air_mission_efficiency = MIL_cae_war_temp_calc }
 
-                # 记录本周偏移量，供下周daily计算变化量使用
+                # 记录本月偏移量，供下月 daily 计算变化量使用
                 set_variable = { global.cae_last_add_eco = add_eco }
 
                 # =========================================
@@ -334,11 +434,11 @@ on_actions = {
 
                 # =========================================
                 # 凯撒经济崩溃判定
-                # 当最终经济状况小于0时，凯撒战败
+                # 当最终经济状况小于等于0时，凯撒战败
                 # =========================================
                 if = {
                     limit = {
-                        check_variable = { global.cae_final_economic_situation < 0 }
+                        NOT = { check_variable = { global.cae_final_economic_situation > 0 } }
                         NOT = { has_global_flag = CAE_MIL_war_cae_defeated }
                     }
                     set_global_flag = CAE_MIL_war_cae_defeated
@@ -378,18 +478,18 @@ on_actions = {
                     CAH = { leave_faction = yes }
                     CAO = { leave_faction = yes }
 
-                    # 战争结束，清除国家旗帜，停止后续每周经济结算
+                    # 战争结束，清除国家旗帜，停止后续每月经济结算
                     CAE = { clr_country_flag = CAE_MIL_war_started }
                     MIL = { clr_country_flag = CAE_MIL_war_started }
                 }
 
                 # =========================================
                 # 凯撒经济胜利判定
-                # 当最终经济状况大于200时，凯撒战胜
+                # 当最终经济状况大于等于200时，凯撒战胜
                 # =========================================
                 if = {
                     limit = {
-                        check_variable = { global.cae_final_economic_situation > 200 }
+                        NOT = { check_variable = { global.cae_final_economic_situation < 200 } }
                         NOT = { has_global_flag = CAE_MIL_war_cae_victory }
                         NOT = { has_global_flag = CAE_MIL_war_cae_defeated }
                     }
@@ -431,7 +531,7 @@ on_actions = {
                         white_peace = CAO
                     }
 
-                    # 战争结束，清除国家旗帜，停止后续每周经济结算
+                    # 战争结束，清除国家旗帜，停止后续每月经济结算
                     CAE = { clr_country_flag = CAE_MIL_war_started }
                     MIL = { clr_country_flag = CAE_MIL_war_started }
                 }

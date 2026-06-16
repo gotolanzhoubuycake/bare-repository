@@ -1,0 +1,232 @@
+guiTypes = {
+	containerWindowType = {
+		name = "BARE_MIL_cae_war_GUI"
+		# decision_category SGUI 的根容器会被决议列表布局接管，根 position 基本不生效。
+		# 外层宽度跟随决议面板，避免固定宽度参与布局导致整体偏移。
+		position = { x = 0 y = 0 }
+		size = { width = 100% height = 738 }
+		clipping = no
+
+		containerWindowType = {
+			name = "BARE_MIL_cae_war_GUI_Panel"
+			position = { x = 15 y = 18 }
+			size = { width = 480 height = 720 }
+			clipping = no
+
+			iconType = {
+				name = "MIL_cae_war_GUI_BG"
+				spriteType = "GFX_MIL_cae_war_GUI_BG"
+				position = { x = 0 y = 0 }
+			}
+
+			iconType = {
+				name = "MIL_cae_war_GUI_Economy_Progress_BG"
+				spriteType = "GFX_MIL_cae_war_economy_progressbar_bg"
+				position = { x = 224 y = 354 }
+			}
+
+			iconType = {
+				name = "MIL_cae_war_GUI_Economy_Progress"
+				spriteType = "GFX_MIL_cae_war_economy_progressbar"
+				position = { x = 224 y = 354 }
+			}
+
+		instantTextboxType = {
+			name = "MIL_cae_war_GUI_Title_Text"
+			position = { x = 93 y = 17 }
+			textureFile = ""
+			font = "LXGW_975_16"
+			borderSize = { x = 0 y = 0 }
+			text = "BARE_MIL_cae_war_GUI_Title_Text"
+			maxWidth = 296
+			maxHeight = 22
+			format = center
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = {
+			name = "MIL_cae_war_GUI_Detail_Text"
+			position = { x = 41 y = 82 }
+			textureFile = ""
+			font = "LXGW_975_12"
+			borderSize = { x = 0 y = 0 }
+			text = "BARE_MIL_cae_war_GUI_Detail_Text"
+			maxWidth = 399
+			maxHeight = 211
+			format = left
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = {
+			name = "MIL_cae_war_GUI_CAE_Factory_Text"
+			position = { x = 44 y = 370 }
+			textureFile = ""
+			font = "LXGW_975_11"
+			borderSize = { x = 0 y = 0 }
+			text = "BARE_MIL_cae_war_GUI_CAE_Factory_Text"
+			maxWidth = 158
+			maxHeight = 17
+			format = left
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = {
+			name = "MIL_cae_war_GUI_MIL_Factory_Text"
+			position = { x = 269 y = 370 }
+			textureFile = ""
+			font = "LXGW_975_11"
+			borderSize = { x = 0 y = 0 }
+			text = "BARE_MIL_cae_war_GUI_MIL_Factory_Text"
+			maxWidth = 158
+			maxHeight = 17
+			format = left
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = {
+			name = "MIL_cae_war_GUI_CAE_Air_Text"
+			position = { x = 44 y = 410 }
+			textureFile = ""
+			font = "LXGW_975_11"
+			borderSize = { x = 0 y = 0 }
+			text = "BARE_MIL_cae_war_GUI_CAE_Air_Text"
+			maxWidth = 158
+			maxHeight = 17
+			format = left
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = {
+			name = "MIL_cae_war_GUI_MIL_Air_Text"
+			position = { x = 269 y = 410 }
+			textureFile = ""
+			font = "LXGW_975_11"
+			borderSize = { x = 0 y = 0 }
+			text = "BARE_MIL_cae_war_GUI_MIL_Air_Text"
+			maxWidth = 158
+			maxHeight = 17
+			format = left
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = {
+			name = "MIL_cae_war_GUI_CAE_State_Text"
+			position = { x = 44 y = 450 }
+			textureFile = ""
+			font = "LXGW_975_11"
+			borderSize = { x = 0 y = 0 }
+			text = "BARE_MIL_cae_war_GUI_CAE_State_Text"
+			maxWidth = 158
+			maxHeight = 17
+			format = left
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = {
+			name = "MIL_cae_war_GUI_MIL_State_Text"
+			position = { x = 269 y = 450 }
+			textureFile = ""
+			font = "LXGW_975_11"
+			borderSize = { x = 0 y = 0 }
+			text = "BARE_MIL_cae_war_GUI_MIL_State_Text"
+			maxWidth = 158
+			maxHeight = 17
+			format = left
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = {
+			name = "MIL_cae_war_GUI_CAE_Ground_Text"
+			position = { x = 44 y = 490 }
+			textureFile = ""
+			font = "LXGW_975_11"
+			borderSize = { x = 0 y = 0 }
+			text = "BARE_MIL_cae_war_GUI_CAE_Ground_Text"
+			maxWidth = 158
+			maxHeight = 17
+			format = left
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = {
+			name = "MIL_cae_war_GUI_MIL_Ground_Text"
+			position = { x = 269 y = 490 }
+			textureFile = ""
+			font = "LXGW_975_11"
+			borderSize = { x = 0 y = 0 }
+			text = "BARE_MIL_cae_war_GUI_MIL_Ground_Text"
+			maxWidth = 158
+			maxHeight = 17
+			format = left
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = {
+			name = "MIL_cae_war_GUI_CAE_Loss_Text"
+			position = { x = 44 y = 530 }
+			textureFile = ""
+			font = "LXGW_975_11"
+			borderSize = { x = 0 y = 0 }
+			text = "BARE_MIL_cae_war_GUI_CAE_Loss_Text"
+			maxWidth = 158
+			maxHeight = 17
+			format = left
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = {
+			name = "MIL_cae_war_GUI_MIL_Loss_Text"
+			position = { x = 269 y = 530 }
+			textureFile = ""
+			font = "LXGW_975_11"
+			borderSize = { x = 0 y = 0 }
+			text = "BARE_MIL_cae_war_GUI_MIL_Loss_Text"
+			maxWidth = 158
+			maxHeight = 17
+			format = left
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = {
+			name = "MIL_cae_war_GUI_Economy_Text"
+			position = { x = 37 y = 596 }
+			textureFile = ""
+			font = "LXGW_975_12"
+			borderSize = { x = 0 y = 0 }
+			text = "BARE_MIL_cae_war_GUI_Economy_Text"
+			pdx_tooltip = "BARE_MIL_cae_war_GUI_Economy_Text_tooltip"
+			maxWidth = 398
+			maxHeight = 18
+			format = center
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = {
+			name = "MIL_cae_war_GUI_Monthly_Change_Text"
+			position = { x = 37 y = 631 }
+			textureFile = ""
+			font = "LXGW_975_12"
+			borderSize = { x = 0 y = 0 }
+			text = "BARE_MIL_cae_war_GUI_Monthly_Change_Text"
+			pdx_tooltip = "BARE_MIL_cae_war_GUI_Monthly_Change_Text_tooltip"
+			maxWidth = 398
+			maxHeight = 18
+			format = center
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = {
+			name = "MIL_cae_war_GUI_Bottom_Text"
+			position = { x = 87 y = 670 }
+			textureFile = ""
+			font = "LXGW_975_18"
+			borderSize = { x = 0 y = 0 }
+			text = "BARE_MIL_cae_war_GUI_Bottom_Text"
+			maxWidth = 307
+			maxHeight = 26
+			format = center
+			alwaystransparent = yes
+		}
+		}
+	}
+}
