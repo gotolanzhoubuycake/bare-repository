@@ -5,21 +5,28 @@ spriteTypes = {
 		texturefile = "gfx/interface/MIL_cae_war/MIL_cae_war_GUI_BG.dds"
 	}
 
-	SpriteType = {
-		name = "GFX_MIL_cae_war_economy_progressbar_bg"
-		texturefile = "gfx/interface/MIL_cae_war/MIL_cae_war_progress_blue.dds"
-	}
+	# SpriteType = {
+	# 	name = "GFX_MIL_cae_war_economy_progressbar_bg"
+	# 	texturefile = "gfx/interface/MIL_cae_war/MIL_cae_war_progress_blue.dds"
+	# }
+
+	# SpriteType = {
+	# 	name = "GFX_MIL_cae_war_economy_progressbar"
+	# 	texturefile = "gfx/interface/MIL_cae_war/MIL_cae_war_progress_blue.dds"
+	# }
 
 	# 凯撒经济状况竖向进度条：蓝色底图单独绘制，黄色填充层随0~100帧变化。
 	progressbartype = {
 		name = "GFX_MIL_cae_war_economy_progressbar"
-		color = { 1.0 1.0 1.0 }
-		colortwo = { 1.0 1.0 1.0 }
-		textureFile1 = "gfx/interface/MIL_cae_war/MIL_cae_war_progress_yellow_fill.png"
-		textureFile2 = "gfx/interface/MIL_cae_war/MIL_cae_war_progress_empty.png"
+		color = { 0.0 0.0 0.0 }
+		colortwo = { 0.0 0.0 0.0 }
+		textureFile1 = "gfx/interface/MIL_cae_war/MIL_cae_war_progress_blue.dds"
+		textureFile2 = "gfx/interface/MIL_cae_war/MIL_cae_war_progress_yellow.dds"
 		size = { x = 24 y = 213 }
-		effectFile = "gfx/FX/progress.lua"
+		# 2026-06-17 修改：切换为自下而上的竖向进度 FX，配合凯撒战争经济进度条显示。
+		effectFile = "gfx/FX/progress_vertical.lua"
 		steps = 100
-		horizontal = no
+		# 2026-06-17 修改：方向由 progress_vertical FX 的 Y 轴裁切控制，避免进度条系统再次转向。
+		horizontal = yes
 	}
 }

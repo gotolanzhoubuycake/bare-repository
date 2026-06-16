@@ -7,29 +7,25 @@ guiTypes = {
 		size = { width = 100% height = 738 }
 		clipping = no
 
-		containerWindowType = {
-			name = "BARE_MIL_cae_war_GUI_Panel"
-			position = { x = 15 y = 18 }
-			size = { width = 480 height = 720 }
-			clipping = no
+		iconType = {
+			name = "MIL_cae_war_GUI_BG"
+			spriteType = "GFX_MIL_cae_war_GUI_BG"
+			position = { x = 0 y = 0 }
+		}
 
-			iconType = {
-				name = "MIL_cae_war_GUI_BG"
-				spriteType = "GFX_MIL_cae_war_GUI_BG"
-				position = { x = 0 y = 0 }
-			}
+		# iconType = {
+		# 	name = "MIL_cae_war_GUI_Economy_Progress_BG"
+		# 	spriteType = "GFX_MIL_cae_war_economy_progressbar_bg"
+		# 	position = { x = 224 y = 354 }
+		# }
 
-			iconType = {
-				name = "MIL_cae_war_GUI_Economy_Progress_BG"
-				spriteType = "GFX_MIL_cae_war_economy_progressbar_bg"
-				position = { x = 224 y = 354 }
-			}
+		iconType = {
+			name = "MIL_cae_war_GUI_Economy_Progress"
+			spriteType = "GFX_MIL_cae_war_economy_progressbar"
+			position = { x = 224 y = 354 }
+		}
 
-			iconType = {
-				name = "MIL_cae_war_GUI_Economy_Progress"
-				spriteType = "GFX_MIL_cae_war_economy_progressbar"
-				position = { x = 224 y = 354 }
-			}
+		
 
 		instantTextboxType = {
 			name = "MIL_cae_war_GUI_Title_Text"
@@ -227,6 +223,6 @@ guiTypes = {
 			format = center
 			alwaystransparent = yes
 		}
-		}
+		
 	}
 }
