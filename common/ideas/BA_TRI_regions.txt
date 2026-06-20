@@ -4,25 +4,49 @@ ideas = {
 			on_add = {
 				remove_ideas = TRI_center_campus_region
 				add_to_array = { TRI_regions = token:TRI_center_campus_region }
-				set_variable = { region_x@TRI_center_campus_region = 6 }
-				set_variable = { region_y@TRI_center_campus_region = 367 }
+				set_variable = { region_x@TRI_center_campus_region = 124 }
+				set_variable = { region_y@TRI_center_campus_region = 368 }
 				set_variable = { region_stability@TRI_center_campus_region = 0.95 }
-				set_variable = { tea_party@TRI_center_campus_region = 200 }
-				set_variable = { justice@TRI_center_campus_region = 40 }
-				set_variable = { sisterhood@TRI_center_campus_region = 40 }
-				set_variable = { knights@TRI_center_campus_region = 40 }
+				set_variable = { mil_adm_teaparty@TRI_center_campus_region = 12 }
+				set_variable = { cul_adm_teaparty@TRI_center_campus_region = 14 }
+				set_variable = { soc_adm_teaparty@TRI_center_campus_region = 16 }
+				set_variable = { mil_adm_justice@TRI_center_campus_region = 4 }
+				set_variable = { cul_adm_sisterhood@TRI_center_campus_region = 4 }
+				set_variable = { soc_adm_knights@TRI_center_campus_region = 4 }
 				add_to_array = { TRI_center_campus_region = 118 }
 				add_to_array = { TRI_center_campus_region = 114 }
-				add_to_array = { TRI_center_campus_region = 115 }
-				add_to_array = { TRI_center_campus_region = 112 }
 				add_to_array = { TRI_center_campus_region = 368 }
-				add_to_array = { TRI_center_campus_region = 691 }
 				add_to_array = { TRI_region_present_state = 118 }
 				118 = { set_state_flag = region_present }
-				set_variable = { state_num@TRI_center_campus_region = 6 }
+				set_variable = { state_num@TRI_center_campus_region = 3}
 				for_each_scope_loop = {
 					array = TRI_center_campus_region
 					set_variable = { state_region = token:TRI_center_campus_region }
+				}
+			}
+		}
+		TRI_western_campus_region = { #西校园
+			on_add = {
+				remove_ideas = TRI_western_campus_region
+				add_to_array = { TRI_regions = token:TRI_western_campus_region }
+				set_variable = { region_x@TRI_western_campus_region = 6 }
+				set_variable = { region_y@TRI_western_campus_region = 360 }
+				set_variable = { region_stability@TRI_western_campus_region = 0.95 }
+				set_variable = { mil_adm_teaparty@TRI_western_campus_region = 12 }
+				set_variable = { cul_adm_teaparty@TRI_western_campus_region = 14 }
+				set_variable = { soc_adm_teaparty@TRI_western_campus_region = 16 }
+				set_variable = { mil_adm_justice@TRI_western_campus_region = 4 }
+				set_variable = { cul_adm_sisterhood@TRI_western_campus_region = 4 }
+				set_variable = { soc_adm_knights@TRI_western_campus_region = 4 }
+				add_to_array = { TRI_western_campus_region = 115 }
+				add_to_array = { TRI_western_campus_region = 112 }
+				add_to_array = { TRI_western_campus_region = 691 }
+				add_to_array = { TRI_region_present_state = 115 }
+				115 = { set_state_flag = region_present }
+				set_variable = { state_num@TRI_western_campus_region = 3 }
+				for_each_scope_loop = {
+					array = TRI_western_campus_region
+					set_variable = { state_region = token:TRI_western_campus_region }
 				}
 			}
 		}
@@ -33,16 +57,20 @@ ideas = {
 				set_variable = { region_x@TRI_northern_campus_region = 84 }
 				set_variable = { region_y@TRI_northern_campus_region = 278 }
 				set_variable = { region_stability@TRI_northern_campus_region = 0.95 }
-				set_variable = { tea_party@TRI_northern_campus_region = 80 }
-				set_variable = { justice@TRI_northern_campus_region = 20 }
-				set_variable = { sisterhood@TRI_northern_campus_region = 60 }
-				set_variable = { knights@TRI_northern_campus_region = 20 }
+				set_variable = { mil_adm_teaparty@TRI_northern_campus_region = 6 }
+				set_variable = { cul_adm_teaparty@TRI_northern_campus_region = 4 }
+				set_variable = { soc_adm_teaparty@TRI_northern_campus_region = 8 }
+				set_variable = { mil_adm_justice@TRI_northern_campus_region = 3 }
+				set_variable = { cul_adm_sisterhood@TRI_northern_campus_region = 12 }
+				set_variable = { soc_adm_knights@TRI_northern_campus_region = 4 }
 				add_to_array = { TRI_northern_campus_region = 116 }
+				add_to_array = { TRI_northern_campus_region = 125 }
 				add_to_array = { TRI_northern_campus_region = 367 }
+				add_to_array = { TRI_northern_campus_region = 687 }
 				add_to_array = { TRI_northern_campus_region = 693 }
 				add_to_array = { TRI_region_present_state = 116 }
 				116 = { set_state_flag = region_present }
-				set_variable = { state_num@TRI_northern_campus_region = 3 }
+				set_variable = { state_num@TRI_northern_campus_region = 5 }
 				for_each_scope_loop = {
 					array = TRI_northern_campus_region
 					set_variable = { state_region = token:TRI_northern_campus_region }
@@ -51,23 +79,23 @@ ideas = {
 		}
 		TRI_eastern_campus_region = { #东校园
 			on_add = {
-				remove_ideas = TRI_northern_campus_region
+				remove_ideas = TRI_eastern_campus_region
 				add_to_array = { TRI_regions = token:TRI_eastern_campus_region }
-				set_variable = { region_x@TRI_eastern_campus_region = 243 }
-				set_variable = { region_y@TRI_eastern_campus_region = 289 }
+				set_variable = { region_x@TRI_eastern_campus_region = 264 }
+				set_variable = { region_y@TRI_eastern_campus_region = 348 }
 				set_variable = { region_stability@TRI_eastern_campus_region = 0.95 }
-				set_variable = { tea_party@TRI_eastern_campus_region = 120 }
-				set_variable = { justice@TRI_eastern_campus_region = 45 }
-				set_variable = { sisterhood@TRI_eastern_campus_region = 15 }
-				set_variable = { knights@TRI_eastern_campus_region = 45 }
+				set_variable = { mil_adm_teaparty@TRI_eastern_campus_region = 4 }
+				set_variable = { cul_adm_teaparty@TRI_eastern_campus_region = 8 }
+				set_variable = { soc_adm_teaparty@TRI_eastern_campus_region = 4 }
+				set_variable = { mil_adm_justice@TRI_eastern_campus_region = 7 }
+				set_variable = { cul_adm_sisterhood@TRI_eastern_campus_region = 4 }
+				set_variable = { soc_adm_knights@TRI_eastern_campus_region = 8 }
 				add_to_array = { TRI_eastern_campus_region = 121 }
 				add_to_array = { TRI_eastern_campus_region = 124 }
-				add_to_array = { TRI_eastern_campus_region = 125 }
 				add_to_array = { TRI_eastern_campus_region = 366 }
-				add_to_array = { TRI_eastern_campus_region = 687 }
 				add_to_array = { TRI_region_present_state = 124 }
 				124 = { set_state_flag = region_present }
-				set_variable = { state_num@TRI_eastern_campus_region = 5 }
+				set_variable = { state_num@TRI_eastern_campus_region = 3 }
 				for_each_scope_loop = {
 					array = TRI_eastern_campus_region
 					set_variable = { state_region = token:TRI_eastern_campus_region }
@@ -79,12 +107,14 @@ ideas = {
 				remove_ideas = TRI_southern_campus_region
 				add_to_array = { TRI_regions = token:TRI_southern_campus_region }
 				set_variable = { region_x@TRI_southern_campus_region = 84 }
-				set_variable = { region_y@TRI_southern_campus_region = 508 }
+				set_variable = { region_y@TRI_southern_campus_region = 458 }
 				set_variable = { region_stability@TRI_southern_campus_region = 0.95 }
-				set_variable = { tea_party@TRI_southern_campus_region = 100 }
-				set_variable = { justice@TRI_southern_campus_region = 15 }
-				set_variable = { sisterhood@TRI_southern_campus_region = 15 }
-				set_variable = { knights@TRI_southern_campus_region = 15 }
+				set_variable = { mil_adm_teaparty@TRI_southern_campus_region = 6 }
+				set_variable = { cul_adm_teaparty@TRI_southern_campus_region = 8 }
+				set_variable = { soc_adm_teaparty@TRI_southern_campus_region = 7 }
+				set_variable = { mil_adm_justice@TRI_southern_campus_region = 2 }
+				set_variable = { cul_adm_sisterhood@TRI_southern_campus_region = 2 }
+				set_variable = { soc_adm_knights@TRI_southern_campus_region = 2 }
 				add_to_array = { TRI_southern_campus_region = 113 }
 				add_to_array = { TRI_southern_campus_region = 122 }
 				add_to_array = { TRI_southern_campus_region = 123 }
@@ -109,10 +139,12 @@ ideas = {
 				set_variable = { region_x@TRI_industrial_park_region = 215 }
 				set_variable = { region_y@TRI_industrial_park_region = 89 }
 				set_variable = { region_stability@TRI_industrial_park_region = 0.9 }
-				set_variable = { tea_party@TRI_industrial_park_region = 30 }
-				set_variable = { justice@TRI_industrial_park_region = 15 }
-				set_variable = { sisterhood@TRI_industrial_park_region = 15 }
-				set_variable = { knights@TRI_industrial_park_region = 15 }
+				set_variable = { mil_adm_teaparty@TRI_industrial_park_region = 9 }
+				set_variable = { cul_adm_teaparty@TRI_industrial_park_region = 11 }
+				set_variable = { soc_adm_teaparty@TRI_industrial_park_region = 18 }
+				set_variable = { mil_adm_justice@TRI_industrial_park_region = 6 }
+				set_variable = { cul_adm_sisterhood@TRI_industrial_park_region = 6 }
+				set_variable = { soc_adm_knights@TRI_industrial_park_region = 6 }
 				add_to_array = { TRI_industrial_park_region = 120 }
 				add_to_array = { TRI_industrial_park_region = 135 }
 				add_to_array = { TRI_industrial_park_region = 348 }
@@ -133,10 +165,12 @@ ideas = {
 				set_variable = { region_x@TRI_living_area_region = 156 }
 				set_variable = { region_y@TRI_living_area_region = 192 }
 				set_variable = { region_stability@TRI_living_area_region = 0.9 }
-				set_variable = { tea_party@TRI_living_area_region = 30 }
-				set_variable = { justice@TRI_living_area_region = 15 }
-				set_variable = { sisterhood@TRI_living_area_region = 15 }
-				set_variable = { knights@TRI_living_area_region = 15 }
+				set_variable = { mil_adm_teaparty@TRI_living_area_region = 7 }
+				set_variable = { cul_adm_teaparty@TRI_living_area_region = 10 }
+				set_variable = { soc_adm_teaparty@TRI_living_area_region = 14 }
+				set_variable = { mil_adm_justice@TRI_living_area_region = 5 }
+				set_variable = { cul_adm_sisterhood@TRI_living_area_region = 4 }
+				set_variable = { soc_adm_knights@TRI_living_area_region = 4 }
 				add_to_array = { TRI_living_area_region = 127 }
 				add_to_array = { TRI_living_area_region = 128 }
 				add_to_array = { TRI_region_present_state = 128 }
@@ -155,10 +189,12 @@ ideas = {
 				set_variable = { region_x@TRI_business_district_region = 321 }
 				set_variable = { region_y@TRI_business_district_region = 77 }
 				set_variable = { region_stability@TRI_business_district_region = 0.9 }
-				set_variable = { tea_party@TRI_business_district_region = 30 }
-				set_variable = { justice@TRI_business_district_region = 15 }
-				set_variable = { sisterhood@TRI_business_district_region = 15 }
-				set_variable = { knights@TRI_business_district_region = 15 }
+				set_variable = { mil_adm_teaparty@TRI_business_district_region = 9 }
+				set_variable = { cul_adm_teaparty@TRI_business_district_region = 15 }
+				set_variable = { soc_adm_teaparty@TRI_business_district_region = 15 }
+				set_variable = { mil_adm_justice@TRI_business_district_region = 6 }
+				set_variable = { cul_adm_sisterhood@TRI_business_district_region = 4 }
+				set_variable = { soc_adm_knights@TRI_business_district_region = 4 }
 				add_to_array = { TRI_business_district_region = 129 }
 				add_to_array = { TRI_business_district_region = 130 }
 				add_to_array = { TRI_business_district_region = 131 }
@@ -173,185 +209,8 @@ ideas = {
 				}
 			}
 		}
-		# TRI_northwestern_region = { #西北
-		# 	on_add = {
-		# 		remove_ideas = TRI_northwestern_region
-		# 		add_to_array = { TRI_regions = token:TRI_northwestern_region }
-		# 		set_variable = { region_x@TRI_northwestern_region = 50 }
-		# 		set_variable = { region_y@TRI_northwestern_region = 5 }
-		# 		set_variable = { region_stability@TRI_northwestern_region = 0.7 }
-		# 		set_variable = { tea_party@TRI_northwestern_region = 5 }
-		# 		set_variable = { justice@TRI_northwestern_region = 5 }
-		# 		set_variable = { sisterhood@TRI_northwestern_region = 5 }
-		# 		set_variable = { knights@TRI_northwestern_region = 5 }
-		# 		add_to_array = { TRI_northwestern_region = 381 }
-		# 		add_to_array = { TRI_northwestern_region = 382 }
-		# 		add_to_array = { TRI_northwestern_region = 369 }
-		# 		add_to_array = { TRI_northwestern_region = 370 }
-		# 		add_to_array = { TRI_northwestern_region = 371 }
-		# 		add_to_array = { TRI_northwestern_region = 372 }
-		# 		add_to_array = { TRI_northwestern_region = 126 }
-		# 		add_to_array = { TRI_northwestern_region = 127 }
-		# 		set_variable = { state_num@TRI_northwestern_region = 8 }
-		# 		for_each_scope_loop = {
-		# 			array = TRI_northwestern_region
-		# 			set_variable = { state_region = token:TRI_northwestern_region }
-		# 		}
-		# 	}
-		# }
-		# TRI_cultural_center_region = { #文化中心
-		# 	on_add = {
-		# 		remove_ideas = TRI_cultural_center_region
-		# 		add_to_array = { TRI_regions = token:TRI_cultural_center_region }
-		# 		set_variable = { region_x@TRI_cultural_center_region = 405 }
-		# 		set_variable = { region_y@TRI_cultural_center_region = 125 }
-		# 		set_variable = { region_stability@TRI_cultural_center_region = 1 }
-		# 		set_variable = { tea_party@TRI_cultural_center_region = 15 }
-		# 		set_variable = { justice@TRI_cultural_center_region = 5 }
-		# 		set_variable = { sisterhood@TRI_cultural_center_region = 10 }
-		# 		set_variable = { knights@TRI_cultural_center_region = 5 }
-		# 		add_to_array = { TRI_cultural_center_region = 648 }
-		# 		add_to_array = { TRI_cultural_center_region = 54 }
-		# 		add_to_array = { TRI_cultural_center_region = 56 }
-		# 		set_variable = { state_num@TRI_cultural_center_region = 3 }
-		# 		for_each_scope_loop = {
-		# 			array = TRI_cultural_center_region
-		# 			set_variable = { state_region = token:TRI_cultural_center_region }
-		# 		}
-		# 	}
-		# }
-		# TRI_dormitory_region = { #宿舍区
-		# 	on_add = {
-		# 		remove_ideas = TRI_dormitory_region
-		# 		add_to_array = { TRI_regions = token:TRI_dormitory_region }
-		# 		set_variable = { region_x@TRI_dormitory_region = 397 }
-		# 		set_variable = { region_y@TRI_dormitory_region = 189 }
-		# 		set_variable = { region_stability@TRI_dormitory_region = 0.95 }
-		# 		set_variable = { tea_party@TRI_dormitory_region = 15 }
-		# 		set_variable = { justice@TRI_dormitory_region = 5 }
-		# 		set_variable = { sisterhood@TRI_dormitory_region = 5 }
-		# 		set_variable = { knights@TRI_dormitory_region = 10 }
-		# 		add_to_array = { TRI_dormitory_region = 53 }
-		# 		add_to_array = { TRI_dormitory_region = 50 }
-		# 		add_to_array = { TRI_dormitory_region = 51 }
-		# 		set_variable = { state_num@TRI_dormitory_region = 3 }
-		# 		for_each_scope_loop = {
-		# 			array = TRI_dormitory_region
-		# 			set_variable = { state_region = token:TRI_dormitory_region }
-		# 		}
-		# 	}
-		# }
-		# TRI_doria_region = { #多利亚
-		# 	on_add = {
-		# 		remove_ideas = TRI_doria_region
-		# 		add_to_array = { TRI_regions = token:TRI_doria_region }
-		# 		set_variable = { region_x@TRI_doria_region = 397 }
-		# 		set_variable = { region_y@TRI_doria_region = 240 }
-		# 		set_variable = { region_stability@TRI_doria_region = 0.95 }
-		# 		set_variable = { tea_party@TRI_doria_region = 10 }
-		# 		set_variable = { justice@TRI_doria_region = 5 }
-		# 		set_variable = { sisterhood@TRI_doria_region = 5 }
-		# 		set_variable = { knights@TRI_doria_region = 5 }
-		# 		add_to_array = { TRI_doria_region = 46 }
-		# 		add_to_array = { TRI_doria_region = 48 }
-		# 		set_variable = { state_num@TRI_doria_region = 2 }
-		# 		for_each_scope_loop = {
-		# 			array = TRI_doria_region
-		# 			set_variable = { state_region = token:TRI_doria_region }
-		# 		}
-		# 	}
-		# }
-		# TRI_southwestern_region = { #西南
-		# 	on_add = {
-		# 		remove_ideas = TRI_southwestern_region
-		# 		add_to_array = { TRI_regions = token:TRI_southwestern_region }
-		# 		set_variable = { region_x@TRI_southwestern_region = 7 }
-		# 		set_variable = { region_y@TRI_southwestern_region = 253 }
-		# 		set_variable = { region_stability@TRI_southwestern_region = 0.6 }
-		# 		set_variable = { tea_party@TRI_southwestern_region = 2 }
-		# 		set_variable = { justice@TRI_southwestern_region = 2 }
-		# 		set_variable = { sisterhood@TRI_southwestern_region = 2 }
-		# 		set_variable = { knights@TRI_southwestern_region = 2 }
-		# 		add_to_array = { TRI_southwestern_region = 376 }
-		# 		add_to_array = { TRI_southwestern_region = 377 }
-		# 		add_to_array = { TRI_southwestern_region = 378 }
-		# 		add_to_array = { TRI_southwestern_region = 379 }
-		# 		add_to_array = { TRI_southwestern_region = 380 }
-		# 		add_to_array = { TRI_southwestern_region = 105 }
-		# 		set_variable = { state_num@TRI_southwestern_region = 6 }
-		# 		for_each_scope_loop = {
-		# 			array = TRI_southwestern_region
-		# 			set_variable = { state_region = token:TRI_southwestern_region }
-		# 		}
-		# 	}
-		# }
-		# TRI_coastal_region = { #滨海
-		# 	on_add = {
-		# 		remove_ideas = TRI_coastal_region
-		# 		add_to_array = { TRI_regions = token:TRI_coastal_region }
-		# 		set_variable = { region_x@TRI_coastal_region = 103 }
-		# 		set_variable = { region_y@TRI_coastal_region = 467 }
-		# 		set_variable = { region_stability@TRI_coastal_region = 0.85 }
-		# 		set_variable = { tea_party@TRI_coastal_region = 10 }
-		# 		set_variable = { justice@TRI_coastal_region = 10 }
-		# 		set_variable = { sisterhood@TRI_coastal_region = 5 }
-		# 		set_variable = { knights@TRI_coastal_region = 5 }
-		# 		add_to_array = { TRI_coastal_region = 101 }
-		# 		add_to_array = { TRI_coastal_region = 102 }
-		# 		add_to_array = { TRI_coastal_region = 103 }
-		# 		add_to_array = { TRI_coastal_region = 360 }
-		# 		add_to_array = { TRI_coastal_region = 361 }
-		# 		set_variable = { state_num@TRI_coastal_region = 5 }
-		# 		for_each_scope_loop = {
-		# 			array = TRI_coastal_region
-		# 			set_variable = { state_region = token:TRI_coastal_region }
-		# 		}
-		# 	}
-		# }
-		# TRI_southern_living_quarters_region = { #南生活区
-		# 	on_add = {
-		# 		remove_ideas = TRI_southern_living_quarters_region
-		# 		add_to_array = { TRI_regions = token:TRI_southern_living_quarters_region }
-		# 		set_variable = { region_x@TRI_southern_living_quarters_region = 124 }
-		# 		set_variable = { region_y@TRI_southern_living_quarters_region = 348 }
-		# 		set_variable = { region_stability@TRI_southern_living_quarters_region = 0.9 }
-		# 		set_variable = { tea_party@TRI_southern_living_quarters_region = 5 }
-		# 		set_variable = { justice@TRI_southern_living_quarters_region = 5 }
-		# 		set_variable = { sisterhood@TRI_southern_living_quarters_region = 5 }
-		# 		set_variable = { knights@TRI_southern_living_quarters_region = 5 }
-		# 		add_to_array = { TRI_southern_living_quarters_region = 104 }
-		# 		add_to_array = { TRI_southern_living_quarters_region = 106 }
-		# 		add_to_array = { TRI_southern_living_quarters_region = 107 }
-		# 		add_to_array = { TRI_southern_living_quarters_region = 110 }
-		# 		add_to_array = { TRI_southern_living_quarters_region = 117 }
-		# 		add_to_array = { TRI_southern_living_quarters_region = 119 }
-		# 		set_variable = { state_num@TRI_southern_living_quarters_region = 6 }
-		# 		for_each_scope_loop = {
-		# 			array = TRI_southern_living_quarters_region
-		# 			set_variable = { state_region = token:TRI_southern_living_quarters_region }
-		# 		}
-		# 	}
-		# }
-		# TRI_southern_business_district_region = { #南商业区
-		# 	on_add = {
-		# 		remove_ideas = TRI_southern_business_district_region
-		# 		add_to_array = { TRI_regions = token:TRI_southern_business_district_region }
-		# 		set_variable = { region_x@TRI_southern_business_district_region = 259 }
-		# 		set_variable = { region_y@TRI_southern_business_district_region = 355 }
-		# 		set_variable = { region_stability@TRI_southern_business_district_region = 0.9 }
-		# 		set_variable = { tea_party@TRI_southern_business_district_region = 5 }
-		# 		set_variable = { justice@TRI_southern_business_district_region = 5 }
-		# 		set_variable = { sisterhood@TRI_southern_business_district_region = 5 }
-		# 		set_variable = { knights@TRI_southern_business_district_region = 5 }
-		# 		add_to_array = { TRI_southern_business_district_region = 108 }
-		# 		add_to_array = { TRI_southern_business_district_region = 109 }
-		# 		add_to_array = { TRI_southern_business_district_region = 111 }
-		# 		set_variable = { state_num@TRI_southern_business_district_region = 3 }
-		# 		for_each_scope_loop = {
-		# 			array = TRI_southern_business_district_region
-		# 			set_variable = { state_region = token:TRI_southern_business_district_region }
-		# 		}
-		# 	}
-		# }
+		TRI_region_military = {}
+		TRI_region_culture = {}
+		TRI_region_society = {}
 	}
 }

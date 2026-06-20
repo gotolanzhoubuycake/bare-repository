@@ -53,4 +53,10 @@ spriteTypes = {
 		tilingCenter = yes
 		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
 	}
+	SpriteType = {
+		name = "BA_button_with_check_30_30"
+		texturefile = "gfx/interface/BA_button_with_check_30_30.dds"
+		noOfFrames = 2
+	}
+
 }

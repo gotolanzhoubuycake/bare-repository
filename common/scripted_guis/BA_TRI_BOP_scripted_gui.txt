@@ -263,6 +263,12 @@ scripted_gui = {
 					x = region_x@var:region
 					y = region_y@var:region
 				}
+				TRI_regions_house_pie = {
+					frame = 1
+				}
+				TRI_regions_teaparty_pie = {
+					frame = tea_party_pie_frame@var:TRI_selected_region
+				}
 				TRI_regions_knights_pie = {
 					frame = 100
 				}
@@ -272,10 +278,220 @@ scripted_gui = {
 				TRI_regions_justice_pie = {
 					frame = association_pie_1@var:TRI_selected_region
 				}
+				TRI_regions_adm_bar_mil_teaparty = {
+					frame = mil_adm_teaparty_frame@var:TRI_selected_region
+				}
+				TRI_regions_adm_bar_justice = {
+					frame = military_adm_frame@var:TRI_selected_region
+				}
+				TRI_regions_adm_bar_cul_teaparty = {
+					frame = cul_adm_teaparty_frame@var:TRI_selected_region
+				}
+				TRI_regions_adm_bar_sisterhood = {
+					frame = culture_adm_frame@var:TRI_selected_region
+				}
+				TRI_regions_adm_bar_soc_teaparty = {
+					frame = soc_adm_teaparty_frame@var:TRI_selected_region
+				}
+				TRI_regions_adm_bar_knights = {
+					frame = society_adm_frame@var:TRI_selected_region
+				}
+				TRI_regions_adm_mil_select = {
+					frame = TRI_regions_adm_mil_select_button
+				}
+				TRI_regions_adm_cul_select = {
+					frame = TRI_regions_adm_cul_select_button
+				}
+				TRI_regions_adm_soc_select = {
+					frame = TRI_regions_adm_soc_select_button
+				}
+			}
+			triggers = {
+				TRI_regions_confiscate_adm_click_enabled = {
+					if = {
+						limit = { check_variable = { TRI_region_target_association = token:TRI_parliament_association_3 } }
+						check_variable = { mil_adm_justice@var:TRI_selected_region > 0 }
+					}
+					else_if = {
+						limit = { check_variable = { TRI_region_target_association = token:TRI_parliament_association_4 } }
+						check_variable = { cul_adm_sisterhood@var:TRI_selected_region > 0 }
+					}
+					else = {
+						check_variable = { soc_adm_knights@var:TRI_selected_region > 0 }
+					}
+				}
+				TRI_regions_confiscate_adm_click_enabled = {
+					if = {
+						limit = { check_variable = { TRI_region_target_association = token:TRI_parliament_association_3 } }
+						check_variable = { mil_adm_teaparty@var:TRI_selected_region > 0 }
+					}
+					else_if = {
+						limit = { check_variable = { TRI_region_target_association = token:TRI_parliament_association_4 } }
+						check_variable = { cul_adm_teaparty@var:TRI_selected_region > 0 }
+					}
+					else = {
+						check_variable = { soc_adm_teaparty@var:TRI_selected_region > 0 }
+					}
+				}
+				TRI_regions_adm_justice_click_enabled = {
+					check_variable = { TRI_regions_adm_mil_select_button = 0 }
+				}
+				TRI_regions_adm_sisterhood_click_enabled = {
+					check_variable = { TRI_regions_adm_cul_select_button = 0 }
+				}
+				TRI_regions_adm_knights_click_enabled = {
+					check_variable = { TRI_regions_adm_soc_select_button = 0 }
+				}
+				TRI_regions_draw_adm_button_click_enabled = {
+					if = {
+						limit = { check_variable = { TRI_region_target_work = token:TRI_region_military } }
+						check_variable = { mil_adm_teaparty@var:TRI_selected_region > 0 }
+					}
+					else_if = {
+						limit = { check_variable = { TRI_region_target_work = token:TRI_region_culture } }
+						check_variable = { cul_adm_teaparty@var:TRI_selected_region > 0 }
+					}
+					else = {
+						check_variable = { soc_adm_teaparty@var:TRI_selected_region > 0 }
+					}
+					has_political_power > 10
+				}
+				TRI_regions_invest_adm_button_click_enabled = {
+					OR = {
+						check_variable = { TRI_region_spare_adm > 0 }
+						has_political_power > 10
+					}
+				}
 			}
 			effects = {
 				TRI_region_button_click = {
 					set_variable = { TRI_selected_region = region }
+				}
+				TRI_regions_adm_mil_select_click = {
+					set_variable = { TRI_region_target_association = token:TRI_parliament_association_3 }
+					set_variable = { TRI_region_target_work = token:TRI_region_military }
+					set_variable = { TRI_regions_adm_mil_select_button = 2 }
+					set_variable = { TRI_regions_adm_cul_select_button = 0 }
+					set_variable = { TRI_regions_adm_soc_select_button = 0 }
+				}
+				TRI_regions_adm_cul_select_click = {
+					set_variable = { TRI_region_target_association = token:TRI_parliament_association_4 }
+					set_variable = { TRI_region_target_work = token:TRI_region_culture }
+					set_variable = { TRI_regions_adm_mil_select_button = 0 }
+					set_variable = { TRI_regions_adm_cul_select_button = 2 }
+					set_variable = { TRI_regions_adm_soc_select_button = 0 }
+				}
+				TRI_regions_adm_soc_select_click = {
+					set_variable = { TRI_region_target_association = token:TRI_parliament_association_5 }
+					set_variable = { TRI_region_target_work = token:TRI_region_society }
+					set_variable = { TRI_regions_adm_mil_select_button = 0 }
+					set_variable = { TRI_regions_adm_cul_select_button = 0 }
+					set_variable = { TRI_regions_adm_soc_select_button = 2 }
+				}
+				TRI_regions_adm_justice_click = {
+					set_variable = { TRI_region_target_association = token:TRI_parliament_association_3 }
+					set_variable = { TRI_region_target_work = token:TRI_region_military }
+					set_variable = { TRI_regions_adm_mil_select_button = 2 }
+					set_variable = { TRI_regions_adm_cul_select_button = 0 }
+					set_variable = { TRI_regions_adm_soc_select_button = 0 }
+				}
+				TRI_regions_adm_sisterhood_click = {
+					set_variable = { TRI_region_target_association = token:TRI_parliament_association_4 }
+					set_variable = { TRI_region_target_work = token:TRI_region_culture }
+					set_variable = { TRI_regions_adm_mil_select_button = 0 }
+					set_variable = { TRI_regions_adm_cul_select_button = 2 }
+					set_variable = { TRI_regions_adm_soc_select_button = 0 }
+				}
+				TRI_regions_adm_knights_click = {
+					set_variable = { TRI_region_target_association = token:TRI_parliament_association_5 }
+					set_variable = { TRI_region_target_work = token:TRI_region_society }
+					set_variable = { TRI_regions_adm_mil_select_button = 0 }
+					set_variable = { TRI_regions_adm_cul_select_button = 0 }
+					set_variable = { TRI_regions_adm_soc_select_button = 2 }
+				}
+				TRI_regions_confiscate_adm_click = {
+					set_temp_variable = { association = TRI_region_target_association }
+					set_temp_variable = { loyalty_change = -0.02 }
+					TRI_parliament_loyalty_change = yes
+					set_temp_variable = { radicalism_change = 0.01 }
+					TRI_parliament_radicalism_change = yes
+					if = {
+						limit = { check_variable = { TRI_region_target_association = token:TRI_parliament_association_3 } }
+						add_to_variable = { mil_adm_teaparty@var:TRI_selected_region = 1 }
+						add_to_variable = { mil_adm_justice@var:TRI_selected_region = -1 }
+					}
+					else_if = {
+						limit = { check_variable = { TRI_region_target_association = token:TRI_parliament_association_4 } }
+						add_to_variable = { cul_adm_teaparty@var:TRI_selected_region = 1 }
+						add_to_variable = { cul_adm_sisterhood@var:TRI_selected_region = -1 }
+					}
+					else = {
+						add_to_variable = { soc_adm_teaparty@var:TRI_selected_region = 1 }
+						add_to_variable = { soc_adm_knights@var:TRI_selected_region = -1 }
+					}
+					TRI_region_generate_statistics = yes
+				}
+				TRI_regions_entrust_adm_click = {
+					set_temp_variable = { association = TRI_region_target_association }
+					set_temp_variable = { loyalty_change = 0.01 }
+					TRI_parliament_loyalty_change = yes
+					if = {
+						limit = { check_variable = { TRI_region_target_association = token:TRI_parliament_association_3 } }
+						add_to_variable = { mil_adm_teaparty@var:TRI_selected_region = -1 }
+						add_to_variable = { mil_adm_justice@var:TRI_selected_region = 1 }
+					}
+					else_if = {
+						limit = { check_variable = { TRI_region_target_association = token:TRI_parliament_association_4 } }
+						add_to_variable = { cul_adm_teaparty@var:TRI_selected_region = -1 }
+						add_to_variable = { cul_adm_sisterhood@var:TRI_selected_region = 1 }
+					}
+					else = {
+						add_to_variable = { soc_adm_teaparty@var:TRI_selected_region = -1 }
+						add_to_variable = { soc_adm_knights@var:TRI_selected_region = 1 }
+					}
+					TRI_region_generate_statistics = yes
+				}
+				TRI_regions_draw_adm_button_click = {
+					if = {
+						limit = { check_variable = { TRI_region_target_work = token:TRI_region_military } }
+						add_to_variable = { mil_adm_teaparty@var:TRI_selected_region = -1 }
+					}
+					else_if = {
+						limit = { check_variable = { TRI_region_target_work = token:TRI_region_culture } }
+						add_to_variable = { cul_adm_teaparty@var:TRI_selected_region = -1 }
+					}
+					else = {
+						add_to_variable = { soc_adm_teaparty@var:TRI_selected_region = -1 }
+					}
+					add_political_power = -10
+					add_to_variable = { TRI_region_spare_adm = 1 }
+					TRI_region_generate_statistics = yes
+				}
+				TRI_regions_invest_adm_button_click = {
+					if = {
+						limit = { check_variable = { TRI_region_target_work = token:TRI_region_military } }
+						add_to_variable = { mil_adm_teaparty@var:TRI_selected_region = 1 }
+					}
+					else_if = {
+						limit = { check_variable = { TRI_region_target_work = token:TRI_region_culture } }
+						add_to_variable = { cul_adm_teaparty@var:TRI_selected_region = 1 }
+					}
+					else = {
+						add_to_variable = { soc_adm_teaparty@var:TRI_selected_region = 1 }
+					}
+					if = {
+						limit = { check_variable = { TRI_region_spare_adm > 0 } }
+						add_to_variable = { TRI_region_spare_adm = -1 }
+					}
+					else = {
+						add_political_power = -10
+					}
+					TRI_region_generate_statistics = yes
+				}
+				TRI_region_increase_adm_limit_button_click = {
+					add_political_power = -10
+					add_to_variable = { TRI_teaparty_adm_limit = 1 }
+					TRI_region_generate_statistics = yes
 				}
 			}
 	}

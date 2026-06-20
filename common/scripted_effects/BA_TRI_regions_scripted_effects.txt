@@ -1,28 +1,193 @@
 TRI_region_generate_statistics = {
 	clear_array = TRI_tea_party_regions
+	set_variable = {
+		TRI_total_teaparty_adm = 0
+	}
 	for_each_loop = {
 		array = TRI_regions
 		value = region
 		#经济情况
 		set_variable = { region_population_k@var:region = 0 }
-		set_variable = { region_industrial_complex@var:region = 0 }
+		set_variable = { region_mil_building@var:region = 0 }
 		set_variable = { region_arms_factory@var:region = 0 }
+		set_variable = { region_heavy_arms_factory@var:region = 0 }
+		set_variable = { region_industrial_complex@var:region = 0 }
 		set_variable = { average_infrastructure@var:region = 0 }
+		set_variable = { region_resource_value@var:region = 0 }
+
 		every_controlled_state = {
 			limit = {
 				check_variable = { state_region = var:region }
 			}
 			add_to_variable = { PREV.region_population_k@var:region = state_population_k }
-			add_to_variable = { PREV.region_industrial_complex@var:region = non_damaged_building_level@industrial_complex }
+			add_to_variable = { PREV.region_mil_building@var:region = non_damaged_building_level@air_base }
+			add_to_variable = { PREV.region_mil_building@var:region = non_damaged_building_level@radar_station }
+			add_to_variable = { PREV.region_mil_building@var:region = non_damaged_building_level@anti_air_building }
 			add_to_variable = { PREV.region_arms_factory@var:region = non_damaged_building_level@arms_factory }
+			add_to_variable = { PREV.region_heavy_arms_factory@var:region = non_damaged_building_level@heavy_arms_factory }
+			add_to_variable = { PREV.region_industrial_complex@var:region = non_damaged_building_level@industrial_complex }
 			add_to_variable = { PREV.average_infrastructure@var:region = non_damaged_building_level@infrastructure }
+			#计算资源价值
+				set_temp_variable = { fe_value = resource@resources_fe }
+				set_temp_variable = { ec_value = resource@resources_ec }
+				set_temp_variable = { pm_value = resource@resources_pm }
+				set_temp_variable = { rm_value = resource@resources_rm }
+				set_temp_variable = { cm_value = resource@resources_cm }
+				set_temp_variable = { mm_value = resource@resources_mm }
+				multiply_temp_variable = { fe_value = 0.1 }
+				multiply_temp_variable = { ec_value = 0.25 }
+				multiply_temp_variable = { pm_value = 0.25 }
+				multiply_temp_variable = { rm_value = 0.2 }
+				multiply_temp_variable = { cm_value = 0.125 }
+				multiply_temp_variable = { mm_value = 0.25 }
+				add_to_variable = { PREV.region_resource_value@var:region = fe_value }
+				add_to_variable = { PREV.region_resource_value@var:region = ec_value }
+				add_to_variable = { PREV.region_resource_value@var:region = pm_value }
+				add_to_variable = { PREV.region_resource_value@var:region = rm_value }
+				add_to_variable = { PREV.region_resource_value@var:region = cm_value }
+				add_to_variable = { PREV.region_resource_value@var:region = mm_value }
 		}
 		divide_variable = { average_infrastructure@var:region = state_num@var:region }
+		##计算行政点需求
+		#军备与征召
+			set_variable = { military_adm_demand@var:region = region_population_k@var:region }
+			set_variable = { mil_building_modifier@var:region = region_mil_building@var:region }
+			set_variable = { arms_factory_modifier@var:region = region_arms_factory@var:region }
+			set_variable = { heavy_arms_factory_modifier@var:region = region_heavy_arms_factory@var:region }
+			multiply_variable = { heavy_arms_factory_modifier@var:region = 3 }
+			set_variable = { military_modifier@var:region = mil_building_modifier@var:region }
+			add_to_variable = { military_modifier@var:region = arms_factory_modifier@var:region }
+			add_to_variable = { military_modifier@var:region = heavy_arms_factory_modifier@var:region }
+			divide_variable = { military_modifier@var:region = 100 }
+			add_to_variable = { military_modifier@var:region = 1 }
+			multiply_variable = { military_adm_demand@var:region = military_modifier@var:region }
+			divide_variable = { military_adm_demand@var:region = 10 }
+			round_variable = military_adm_demand@var:region
+		#文化与教育
+			set_variable = { culture_adm_demand@var:region = region_population_k@var:region }
+			set_variable = { tech_modifier@var:region = num_researched_technologies }
+			multiply_variable = { tech_modifier@var:region = 0.003 }
+			set_variable = { culture_modifier@var:region = tech_modifier@var:region }
+			add_to_variable = { culture_modifier@var:region = 1 }
+			multiply_variable = { culture_adm_demand@var:region = culture_modifier@var:region }
+			divide_variable = { culture_adm_demand@var:region = 10 }
+			round_variable = culture_adm_demand@var:region
+		#社区与建设
+			set_variable = { society_adm_demand@var:region = region_population_k@var:region }
+			set_variable = { infra_modifier@var:region = average_infrastructure@var:region }
+			divide_variable = { infra_modifier@var:region = 20 }
+			add_to_variable = { infra_modifier@var:region = 1 }
+			multiply_variable = { society_adm_demand@var:region = infra_modifier@var:region }
+
+			set_variable = { industrial_modifier@var:region = region_industrial_complex@var:region }
+			divide_variable = { industrial_modifier@var:region = 100 }
+			set_variable = { resource_modifier@var:region = region_resource_value@var:region }
+			divide_variable = { resource_modifier@var:region = 100 }
+			set_variable = { society_modifier@var:region = industrial_modifier@var:region }
+			add_to_variable = { society_modifier@var:region = resource_modifier@var:region }
+			add_to_variable = { society_modifier@var:region = 1 }
+			multiply_variable = { society_adm_demand@var:region = society_modifier@var:region }
+			divide_variable = { society_adm_demand@var:region = 10 }
+			round_variable = society_adm_demand@var:region
+
+		##计算行政点提供
+		set_variable = { military_adm_invest@var:region = mil_adm_teaparty@var:region }
+		add_to_variable = { military_adm_invest@var:region = mil_adm_justice@var:region }
+		set_variable = { culture_adm_invest@var:region = cul_adm_teaparty@var:region }
+		add_to_variable = { culture_adm_invest@var:region = cul_adm_sisterhood@var:region }
+		set_variable = { society_adm_invest@var:region = soc_adm_teaparty@var:region }
+		add_to_variable = { society_adm_invest@var:region = soc_adm_knights@var:region }
+
+		add_to_variable = { TRI_total_teaparty_adm = mil_adm_teaparty@var:region }
+		add_to_variable = { TRI_total_teaparty_adm = cul_adm_teaparty@var:region }
+		add_to_variable = { TRI_total_teaparty_adm = soc_adm_teaparty@var:region }
+		#效率
+		set_variable = { military_adm_efficiency@var:region = military_adm_invest@var:region }
+		divide_variable = { military_adm_efficiency@var:region = military_adm_demand@var:region }
+		clamp_variable = {
+			var = military_adm_efficiency@var:region
+			max = 1
+		}
+		set_variable = { mil_adm_teaparty_frame@var:region = mil_adm_teaparty@var:region }
+		if = {
+			limit = { check_variable = { military_adm_efficiency@var:region = 1 } }
+			divide_variable = { mil_adm_teaparty_frame@var:region = military_adm_invest@var:region }
+		}
+		else = {
+			divide_variable = { mil_adm_teaparty_frame@var:region = military_adm_demand@var:region }
+		}
+		multiply_variable = { mil_adm_teaparty_frame@var:region = 100 }
+		round_variable = mil_adm_teaparty_frame@var:region
+		set_variable = { military_adm_frame@var:region = military_adm_invest@var:region }
+		divide_variable = { military_adm_frame@var:region = military_adm_demand@var:region }
+		multiply_variable = { military_adm_frame@var:region = 100 }
+		round_variable = military_adm_frame@var:region
+		clamp_variable = {
+			var = military_adm_frame@var:region
+			max = 100
+		}
+
+		set_variable = { culture_adm_efficiency@var:region = culture_adm_invest@var:region }
+		divide_variable = { culture_adm_efficiency@var:region = culture_adm_demand@var:region }
+		clamp_variable = {
+			var = culture_adm_efficiency@var:region
+			max = 1
+		}
+		set_variable = { cul_adm_teaparty_frame@var:region = cul_adm_teaparty@var:region }
+		if = {
+			limit = { check_variable = { culture_adm_efficiency@var:region = 1 } }
+			divide_variable = { cul_adm_teaparty_frame@var:region = culture_adm_invest@var:region }
+		}
+		else = {
+			divide_variable = { cul_adm_teaparty_frame@var:region = culture_adm_demand@var:region }
+		}
+		multiply_variable = { cul_adm_teaparty_frame@var:region = 100 }
+		round_variable = cul_adm_teaparty_frame@var:region
+		set_variable = { culture_adm_frame@var:region = culture_adm_invest@var:region }
+		divide_variable = { culture_adm_frame@var:region = culture_adm_demand@var:region }
+		multiply_variable = { culture_adm_frame@var:region = 100 }
+		round_variable = culture_adm_frame@var:region
+		clamp_variable = {
+			var = culture_adm_frame@var:region
+			max = 100
+		}
+
+		set_variable = { society_adm_efficiency@var:region = society_adm_invest@var:region }
+		divide_variable = { society_adm_efficiency@var:region = society_adm_demand@var:region }
+		clamp_variable = {
+			var = society_adm_efficiency@var:region
+			max = 1
+		}
+		set_variable = { soc_adm_teaparty_frame@var:region = soc_adm_teaparty@var:region }
+		if = {
+			limit = { check_variable = { society_adm_efficiency@var:region = 1 } }
+			divide_variable = { soc_adm_teaparty_frame@var:region = society_adm_invest@var:region }
+		}
+		else = {
+			divide_variable = { soc_adm_teaparty_frame@var:region = society_adm_demand@var:region }
+		}
+		multiply_variable = { soc_adm_teaparty_frame@var:region = 100 }
+		round_variable = soc_adm_teaparty_frame@var:region
+		set_variable = { society_adm_frame@var:region = society_adm_invest@var:region }
+		divide_variable = { society_adm_frame@var:region = society_adm_demand@var:region }
+		multiply_variable = { society_adm_frame@var:region = 100 }
+		round_variable = society_adm_frame@var:region
+		clamp_variable = {
+			var = society_adm_frame@var:region
+			max = 100
+		}
+
 		TRI_region_generate_state_modifiers = yes
 		TRI_region_generate_ruling_association = yes
 	}
-	every_owned_state = {
-		set_variable = { tea_party_ruling = 0 }
+	if = {
+		limit = { check_variable = { TRI_total_teaparty_adm > TRI_teaparty_adm_limit } }
+		set_variable = { TRI_region_adm_consumer = TRI_total_teaparty_adm }
+		subtract_from_variable = { TRI_region_adm_consumer = TRI_teaparty_adm_limit }
+		divide_variable = { TRI_region_adm_consumer = 200 }
+	}
+	else = {
+		set_variable = { TRI_region_adm_consumer = 0 }
 	}
 	TRI_region_generate_seats = yes
 }
@@ -64,40 +229,47 @@ TRI_region_generate_state_modifiers = {
 }
 TRI_region_generate_ruling_association = {
 	#势力分布
-	set_variable = { total_points@var:region = justice@var:region }
-	add_to_variable = { total_points@var:region = sisterhood@var:region }
-	add_to_variable = { total_points@var:region = knights@var:region }
+	set_variable = { teaparty_adm@var:region = mil_adm_teaparty@var:region }
+	add_to_variable = { teaparty_adm@var:region = cul_adm_teaparty@var:region }
+	add_to_variable = { teaparty_adm@var:region = soc_adm_teaparty@var:region }
 	
-	set_variable = { justice_percent@var:region = justice@var:region }
-	set_variable = { sisterhood_percent@var:region = sisterhood@var:region }
-	set_variable = { knights_percent@var:region = knights@var:region }
+	set_variable = { house_adm@var:region = mil_adm_justice@var:region }
+	add_to_variable = { house_adm@var:region = cul_adm_sisterhood@var:region }
+	add_to_variable = { house_adm@var:region = soc_adm_knights@var:region }
 
-	divide_variable = { justice_percent@var:region = total_points@var:region }
-	divide_variable = { sisterhood_percent@var:region = total_points@var:region }
-	divide_variable = { knights_percent@var:region = total_points@var:region }
+	set_variable = { total_adm@var:region = teaparty_adm@var:region }
+	add_to_variable = { total_adm@var:region = house_adm@var:region }
+	
+	set_variable = { justice_percent@var:region = mil_adm_justice@var:region }
+	set_variable = { sisterhood_percent@var:region = cul_adm_sisterhood@var:region }
+	set_variable = { knights_percent@var:region = soc_adm_knights@var:region }
+
+	divide_variable = { justice_percent@var:region = house_adm@var:region }
+	divide_variable = { sisterhood_percent@var:region = house_adm@var:region }
+	divide_variable = { knights_percent@var:region = house_adm@var:region }
 	if = {
-		limit = { check_variable = { tea_party@var:region > total_points@var:region } }
+		limit = { check_variable = { teaparty_adm@var:region > house_adm@var:region } }
 		add_to_array = { TRI_tea_party_regions = var:region }
 		set_variable = { ruling_association@var:region = token:TRI_parliament_association_tea_party }
 	}
 	else_if = {
 		limit = {
-			check_variable = { justice@var:region > sisterhood@var:region }
-			check_variable = { justice@var:region > knights@var:region }
+			check_variable = { mil_adm_justice@var:region > cul_adm_sisterhood@var:region }
+			check_variable = { mil_adm_justice@var:region > soc_adm_knights@var:region }
 		}
 		set_variable = { ruling_association@var:region = token:TRI_parliament_association_3 }
 	}
 	else_if = {
 		limit = { 
-			check_variable = { sisterhood@var:region > justice@var:region }
-			check_variable = { sisterhood@var:region > knights@var:region }
+			check_variable = { cul_adm_sisterhood@var:region > mil_adm_justice@var:region }
+			check_variable = { cul_adm_sisterhood@var:region > soc_adm_knights@var:region }
 		}
 		set_variable = { ruling_association@var:region = token:TRI_parliament_association_4 }
 	}
 	else_if = {
 		limit = { 
-			check_variable = { knights@var:region > justice@var:region }
-			check_variable = { knights@var:region > sisterhood@var:region } 
+			check_variable = { soc_adm_knights@var:region > mil_adm_justice@var:region }
+			check_variable = { soc_adm_knights@var:region > cul_adm_sisterhood@var:region } 
 		}
 		set_variable = { ruling_association@var:region = token:TRI_parliament_association_5 }
 	}
@@ -107,8 +279,8 @@ TRI_region_generate_ruling_association = {
 				modifier = {
 					factor = 0
 					OR = {
-						check_variable = { justice@var:region < sisterhood@var:region }
-						check_variable = { justice@var:region < knights@var:region }
+						check_variable = { mil_adm_justice@var:region < cul_adm_sisterhood@var:region }
+						check_variable = { mil_adm_justice@var:region < soc_adm_knights@var:region }
 					}
 				}
 				set_variable = { ruling_association@var:region = token:TRI_parliament_association_3 }
@@ -117,8 +289,8 @@ TRI_region_generate_ruling_association = {
 				modifier = {
 					factor = 0
 					OR = {
-						check_variable = { sisterhood@var:region < justice@var:region }
-						check_variable = { sisterhood@var:region < knights@var:region }
+						check_variable = { cul_adm_sisterhood@var:region < mil_adm_justice@var:region }
+						check_variable = { cul_adm_sisterhood@var:region < soc_adm_knights@var:region }
 					}
 				}
 				set_variable = { ruling_association@var:region = token:TRI_parliament_association_4 }
@@ -127,8 +299,8 @@ TRI_region_generate_ruling_association = {
 				modifier = {
 					factor = 0
 					OR = {
-						check_variable = { knights@var:region < justice@var:region }
-						check_variable = { knights@var:region < knights@var:region }
+						check_variable = { soc_adm_knights@var:region < mil_adm_justice@var:region }
+						check_variable = { soc_adm_knights@var:region < cul_adm_sisterhood@var:region }
 					}
 				}
 				set_variable = { ruling_association@var:region = token:TRI_parliament_association_5 }
@@ -143,6 +315,11 @@ TRI_region_generate_ruling_association = {
 
 	round_variable = association_pie_1@var:region
 	round_variable = association_pie_2@var:region
+
+	set_variable = { tea_party_pie_frame@var:region = teaparty_adm@var:region }
+	divide_variable = { tea_party_pie_frame@var:region = total_adm@var:region }
+	multiply_variable = { tea_party_pie_frame@var:region = 100 }
+	round_variable = tea_party_pie_frame@var:region
 }
 TRI_region_get_ruling_association = {
 	hidden_effect = {
@@ -227,17 +404,13 @@ TRI_parliament_house_election = {
 			value = region
 			add_to_temp_variable = { total_population = region_population_k@var:region }
 
-			set_temp_variable = { total_points@var:region = justice@var:region }
-			add_to_temp_variable = { total_points@var:region = sisterhood@var:region }
-			add_to_temp_variable = { total_points@var:region = knights@var:region }
+			set_temp_variable = { justice_weight@var:region = mil_adm_justice@var:region }
+			set_temp_variable = { sisterhood_weight@var:region = cul_adm_sisterhood@var:region }
+			set_temp_variable = { knights_weight@var:region = soc_adm_knights@var:region }
 
-			set_temp_variable = { justice_weight@var:region = justice@var:region }
-			set_temp_variable = { sisterhood_weight@var:region = sisterhood@var:region }
-			set_temp_variable = { knights_weight@var:region = knights@var:region }
-
-			divide_temp_variable = { justice_weight@var:region = total_points@var:region }
-			divide_temp_variable = { sisterhood_weight@var:region = total_points@var:region }
-			divide_temp_variable = { knights_weight@var:region = total_points@var:region }
+			divide_temp_variable = { justice_weight@var:region = house_adm@var:region }
+			divide_temp_variable = { sisterhood_weight@var:region = house_adm@var:region }
+			divide_temp_variable = { knights_weight@var:region = house_adm@var:region }
 
 			multiply_temp_variable = { justice_weight@var:region = region_population_k@var:region }
 			multiply_temp_variable = { sisterhood_weight@var:region = region_population_k@var:region }

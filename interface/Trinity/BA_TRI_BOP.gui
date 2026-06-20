@@ -2,7 +2,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "TRI_politics_windows"
-		size = { width = 1000 height= 730 }
+		size = { width = 1080 height= 720 }
 		position = { x=-600 y=85 }
 		show_position = { x=560 y=85 }
 		show_animation_type = decelerated
@@ -28,7 +28,7 @@ guiTypes = {
 		gridBoxType = {
 			name = "TRI_politics_tab_buttons"
 			add_horizontal = no
-			position = { x = 60 y = 40 }
+			position = { x = 60 y = 10 }
 			slotsize = { width = 100 height = 35 }
 		}
 		gridBoxType = {

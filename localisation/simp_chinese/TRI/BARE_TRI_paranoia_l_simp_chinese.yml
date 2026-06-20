@@ -29,14 +29,14 @@
  BA_TRI_forge_investigation_reports_desc: "我们最近对叛徒的调查报告令人担忧。由于我们不知道校内的状态是否是源自于叛徒的行动，还是由于我们设定了不切实际的调查方向。但有一点是明确的，如果我们想要避免继续增加领袖不必要的压力，我们最好把调查数据调整到可以接受的程度。"
  TRI_paranoia_inspection_cd_tt: "该决议在180天后可再次使用"
  TRI_paranoia_conducting_inspection_flag: "正在执行一项审查"
- TRI_character_arrested_tt: "该角色将被“控制”"
+ TRI_character_arrested_tt: "该角色将被边缘化"
  TRI_inspection_in_the_administration: "审查行政机构"
  TRI_inspection_in_the_administration_desc: "我们将对茶话会与基层社团的行政机关进行一次审查以揪出潜在的叛徒"
  TRI_paranoia_administration_purgeable_tt: "行政机构尚能接受审查"
 
  TRI_paranoia.1.t: "顾问被指控为异常分子"
  TRI_paranoia.1.desc: "近日以来，圣三一情报局收到了一些关于[?TRI_purge_event_target.GetName]的匿名指控。这些信件指向了[?TRI_purge_event_target.GetName]需要为已经发生的一部分对《伊甸条约》的签订造成了负面影响的事件负责。"
- TRI_paranoia.1.a: "在事件真的水落石出之前，我们或许应当对其严加看管。"
+ TRI_paranoia.1.a: "在事件真的水落石出之前，我们或许应当对其停职审查。"
  TRI_paranoia.1.b: "只不过是一场政治迫害。"
 
  TRI_paranoia.2.t: "文职部员队伍中的阴谋"
@@ -62,7 +62,7 @@
 
  TRI_paranoia.11.t: "将军被指控为异常分子"
  TRI_paranoia.11.desc: "在甄别异常分子的行动中,圣三一情报局发现,[?TRI_purge_event_target.GetName]曾经发表过一些批判对《伊甸条约》相关事务调动的言论,其可能间接或是直接参与了有害学院稳定、默许破坏《伊甸条约》的行动之中。"
- TRI_paranoia.11.a: "在事件真的水落石出之前，我们或许应当对其严加看管。"
+ TRI_paranoia.11.a: "在事件真的水落石出之前，我们或许应当对其停职审查。"
  TRI_paranoia.11.b: "或许是因公徇私，其心尚不可知。"
 
  TRI_paranoia.12.t: "陆军成员中的流言"

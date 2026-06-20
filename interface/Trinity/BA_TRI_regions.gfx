@@ -4,8 +4,18 @@ spriteTypes = {
         texturefile = "gfx/interface/Trinity/regions/TRI_regions_bg.dds"
     }
     spriteType = {
+        name = "TRI_regions_frame"
+        texturefile = "gfx/interface/Trinity/regions/TRI_regions_frame.png"
+        transparencecheck = yes
+    }
+    spriteType = {
         name = "TRI_center_campus_region_button"
         texturefile = "gfx/interface/Trinity/regions/TRI_center_campus_region_button.png"
+        transparencecheck = yes
+    }
+    spriteType = {
+        name = "TRI_western_campus_region_button"
+        texturefile = "gfx/interface/Trinity/regions/TRI_western_campus_region_button.png"
         transparencecheck = yes
     }
     spriteType = {
@@ -67,8 +77,79 @@ spriteTypes = {
 		effectFile = "gfx/FX/progress_radial.lua"
 		horizontal = yes
 	}
+    progressbartype = {
+		name = "TRI_regions_teaparty_pie"
+        textureFile1 = "gfx/interface/Trinity/regions/TRI_regions_teaparty_pie.dds"
+        textureFile2 = "gfx/interface/Trinity/regions/120_120_empty_bg.dds"
+		size = { x = 120 y = 120 }
+		effectFile = "gfx/FX/progress_radial.lua"
+		horizontal = yes
+	}
+    progressbartype = {
+		name = "TRI_regions_house_pie"
+        textureFile1 = "gfx/interface/Trinity/regions/TRI_regions_house_pie.dds"
+        textureFile2 = "gfx/interface/Trinity/regions/120_120_empty_bg.dds"
+		size = { x = 120 y = 120 }
+		effectFile = "gfx/FX/progress_radial.lua"
+		horizontal = yes
+        steps = 1
+	}
     spriteType = {
         name = "120_120_blue_round_frame"
         texturefile = "gfx/interface/Trinity/regions/120_120_blue_round_frame.dds"
     }
+    progressbartype = {
+		name = "TRI_regions_adm_bar_teaparty"
+        textureFile1 = "gfx/interface/Trinity/regions/TRI_regions_adm_bar_teaparty.png"
+        textureFile2 = "gfx/interface/Trinity/regions/TRI_regions_adm_bar_bg.png"
+		size = { x = 240 y = 30 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = yes
+	}
+    progressbartype = {
+		name = "TRI_regions_adm_bar_justice"
+        textureFile1 = "gfx/interface/Trinity/regions/TRI_regions_adm_bar_justice.png"
+        textureFile2 = "gfx/interface/Trinity/regions/TRI_regions_adm_bar_bg.png"
+		size = { x = 240 y = 30 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = yes
+	}
+    progressbartype = {
+		name = "TRI_regions_adm_bar_sisterhood"
+        textureFile1 = "gfx/interface/Trinity/regions/TRI_regions_adm_bar_sisterhood.png"
+        textureFile2 = "gfx/interface/Trinity/regions/TRI_regions_adm_bar_bg.png"
+		size = { x = 240 y = 30 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = yes
+	}
+    progressbartype = {
+		name = "TRI_regions_adm_bar_knights"
+        textureFile1 = "gfx/interface/Trinity/regions/TRI_regions_adm_bar_knights.png"
+        textureFile2 = "gfx/interface/Trinity/regions/TRI_regions_adm_bar_bg.png"
+		size = { x = 240 y = 30 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = yes
+	}
+    spriteType = {
+        name = "TRI_regions_confiscate_adm_button"
+        texturefile = "gfx/interface/Trinity/regions/TRI_regions_confiscate_adm.png"
+    }
+    spriteType = {
+        name = "TRI_regions_entrust_adm_button"
+        texturefile = "gfx/interface/Trinity/regions/TRI_regions_entrust_adm.png"
+    }
+    spriteType = {
+        name = "TRI_region_increase_adm_limit_button"
+        texturefile = "gfx/interface/Trinity/regions/TRI_region_increase_adm_limit.png"
+    }
+    spriteType = {
+        name = "TRI_regions_draw_adm_button"
+        texturefile = "gfx/interface/Trinity/regions/TRI_regions_draw_adm.png"
+    }
+    spriteType = {
+        name = "TRI_regions_invest_adm_button"
+        texturefile = "gfx/interface/Trinity/regions/TRI_regions_invest_adm.png"
+    }
+
+
 }

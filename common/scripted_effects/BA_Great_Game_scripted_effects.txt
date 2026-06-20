@@ -32,7 +32,7 @@ Great_Game_calculate_power_score = {
 		multiply_variable = { Great_Game_power_score_from_factories = 2 }
 		add_to_variable = { Great_Game_power_score_from_factories = num_of_civilian_factories }
 		set_variable = { Great_Game_power_score_from_technologies = num_researched_technologies }
-		multiply_variable = { num_researched_technologies = 2 }
+		multiply_variable = { Great_Game_power_score_from_technologies = 2 }
 		#连胜/连败的修正
 		if = {
 			limit = { check_variable = { Great_Game_consecutive_wins > 0 } }

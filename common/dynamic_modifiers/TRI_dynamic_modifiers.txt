@@ -320,6 +320,12 @@ TRI_parliament_focus_modifier = {
 	stability_weekly = TRI_focus_stability_weekly
 	war_support_factor = TRI_focus_war_support_factor
 }
+#地区事务
+TRI_region_modifier = {
+	icon = unknown
+	enable = { always = yes }
+	consumer_goods_factor = TRI_region_adm_consumer
+}
 #地区稳定度
 TRI_state_region_stability_modifier = {
 	icon = GFX_decision_hol_inundate_water_lines

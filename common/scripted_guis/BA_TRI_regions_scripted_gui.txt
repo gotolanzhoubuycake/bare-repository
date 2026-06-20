@@ -1,0 +1,41 @@
+scripted_gui = {
+	TRI_regions_open_button = {
+		window_name = "TRI_regions_open_button"
+		context_type = selected_state_context
+		parent_window_token = selected_state_view
+		visible = {
+			controller = { 
+				original_tag = TRI 
+				is_ai = no
+			}
+			has_variable = state_region
+		}
+		effects = {
+			TRI_regions_open_button_click = {
+				controller = {
+					if = {
+						limit = { 
+							OR = {
+								NOT = { has_country_flag = TRI_politics_windows_opened } 
+								NOT = { check_variable = { TRI_politics_selected_tab^0 = token:TRI_politics_tab_regions } } 
+								NOT = { check_variable = { TRI_selected_region = PREV.state_region } } 
+							}
+						}
+						set_country_flag = TRI_politics_windows_opened
+						set_variable = { TRI_selected_region = PREV.state_region }
+						set_variable = { TRI_politics_selected_tab^0 = token:TRI_politics_tab_regions }
+						for_each_loop = {
+							array = TRI_politics_tabs
+							value = tab
+							set_variable = { selected@var:tab = 0 }
+						}
+						set_variable = { selected@TRI_politics_tab_regions  = 2 }
+					}
+					else = {
+						clr_country_flag = TRI_politics_windows_opened
+					}
+				}
+			}
+		}
+	}
+}

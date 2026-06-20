@@ -1,4 +1,5 @@
 ﻿l_simp_chinese:
+ TRI_region_modifier: "地区事务"
  TRI_region_button_tt: "查看大区：§Y[?region.GetTokenLocalizedKey]§!\n[TRI_get_region_house_seats]"
  TRI_regions_open_button_tt: "这个地区属于§Y[?THIS.state_region.GetTokenLocalizedKey]§!大区\n点击打开§Y大区§!界面"
  TRI_region_house_seats: "这个大区产生了[?house_seats@var:region|0Y]个下议院席位"
@@ -6,6 +7,7 @@
  TRI_church_button_tt: "§6古圣堂§!地处格黑娜与圣三一交接之处，其宏伟壮丽的古教堂虽已遍生苔藓，尘土裂痕随处可见...\n它承载着数不清的过往与秘密，无言地见证着两校自古走来，也将继续驻守在此处忠实地注视她们，一如既往。"
 
  TRI_center_campus_region: "中央校园"
+ TRI_western_campus_region: "西校园"
  TRI_northern_campus_region: "北校园"
  TRI_eastern_campus_region: "东校园"
  TRI_southern_campus_region: "南校园"
@@ -14,9 +16,35 @@
  TRI_business_district_region: "商业区"
 
  TRI_region_name: "§Y[?TRI_selected_region.GetTokenLocalizedKey]§!"
- TRI_region_construction_information: "———大区总计———\n发展度：§Y[?region_population_k@var:TRI_selected_region|2]K§!\n平均基建等级：[?average_infrastructure@var:TRI_selected_region|1Y]\n工业工厂：[?region_industrial_complex@var:TRI_selected_region|0Y]  武器工厂：[?region_arms_factory@var:TRI_selected_region|0Y]\n\n稳定度：[?region_stability@var:TRI_selected_region|1Y%]\n茶会：[?tea_party@var:TRI_selected_region|0Y]\n正义委：[?justice@var:TRI_selected_region|0Y]\n修女会：[?sisterhood@var:TRI_selected_region|0Y]\n骑士团：[?knights@var:TRI_selected_region|0Y]"
+ TRI_region_construction_information: "———大区总计———\n发展度:§Y[?region_population_k@var:TRI_selected_region|2]K§!\n平均基建等级:[?average_infrastructure@var:TRI_selected_region|1Y]\n工业工厂:[?region_industrial_complex@var:TRI_selected_region|0Y]\n资源价值:[?region_resource_value@var:TRI_selected_region|0Y]\n武器工厂:[?region_arms_factory@var:TRI_selected_region|0Y]\n重武器工厂:[?region_heavy_arms_factory@var:TRI_selected_region|0Y]\n\n稳定度:[?region_stability@var:TRI_selected_region|1Y%]"
+ TRI_military_adm_text: "军备与征召：[?military_adm_efficiency@var:TRI_selected_region|1%Y]([?military_adm_invest@var:TRI_selected_region|0Y]/[?military_adm_demand@var:TRI_selected_region|0Y])"
+ TRI_culture_adm_text: "文化与教育：[?culture_adm_efficiency@var:TRI_selected_region|1%Y]([?culture_adm_invest@var:TRI_selected_region|0Y]/[?culture_adm_demand@var:TRI_selected_region|0Y])"
+ TRI_society_adm_text: "社区与建设：[?society_adm_efficiency@var:TRI_selected_region|1%Y]([?society_adm_invest@var:TRI_selected_region|0Y]/[?society_adm_demand@var:TRI_selected_region|0Y])"
 
+ TRI_region_military: "军备与征召"
+ TRI_region_culture: "文化与教育"
+ TRI_region_society: "社区与建设"
 
+ TRI_military_adm_points_detail: "§Y[?mil_adm_teaparty@var:TRI_selected_region|0]§!—§R[?mil_adm_justice@var:TRI_selected_region|0]§!\n[?justice_percent@var:TRI_selected_region|1%Y]"
+ TRI_military_adm_tt: "当地§Y军备与征召§!事务需要[?military_adm_demand@var:TRI_selected_region|0Y]行政力以完全效率运作，我们提供了[?military_adm_invest@var:TRI_selected_region|0Y]，其中§Y[?mil_adm_teaparty@var:TRI_selected_region|0]§!直属于§1茶话会§!，§R[?mil_adm_justice@var:TRI_selected_region|0]§!托管予§R正义实现委员会§!\n在§Y[?TRI_selected_region.GetTokenLocalizedKey]§!的所有社团托管行政力中，§R正义实现委员会§!占据了[?justice_percent@var:TRI_selected_region|1%Y]，在下议院选举时将按此比例获得该大区的议席"
+ TRI_culture_adm_points_detail: "§Y[?cul_adm_teaparty@var:TRI_selected_region|0]§!—§8[?cul_adm_sisterhood@var:TRI_selected_region|0]§!\n[?sisterhood_percent@var:TRI_selected_region|1%Y]"
+ TRI_culture_adm_tt: "当地§Y文化与教育§!事务需要[?culture_adm_demand@var:TRI_selected_region|0Y]行政力以完全效率运作，我们提供了[?culture_adm_invest@var:TRI_selected_region|0Y]，其中§Y[?cul_adm_teaparty@var:TRI_selected_region|0]§!直属于§1茶话会§!，§8[?cul_adm_sisterhood@var:TRI_selected_region|0]§!托管予§8修女会§!\n在§Y[?TRI_selected_region.GetTokenLocalizedKey]§!的所有社团托管行政力中，§8修女会§!占据了[?sisterhood_percent@var:TRI_selected_region|1%Y]，在下议院选举时将按此比例获得该大区的议席"
+ TRI_society_adm_points_detail: "§Y[?soc_adm_teaparty@var:TRI_selected_region|0]§!—§9[?soc_adm_knights@var:TRI_selected_region|0]§!\n[?knights_percent@var:TRI_selected_region|1%Y]"
+ TRI_society_adm_tt: "当地§Y社区与建设§!事务需要[?society_adm_demand@var:TRI_selected_region|0Y]行政力以最高效率运作，我们提供了[?society_adm_invest@var:TRI_selected_region|0Y]，其中§Y[?soc_adm_teaparty@var:TRI_selected_region|0]§!直属于§1茶话会§!，§9[?soc_adm_knights@var:TRI_selected_region|0]§!托管予§9救护骑士团§!\n在§Y[?TRI_selected_region.GetTokenLocalizedKey]§!的所有社团托管行政力中，§9救护骑士团§!占据了[?knights_percent@var:TRI_selected_region|1%Y]，在下议院选举时将按此比例获得该大区的议席"
+
+ TRI_region_ruling_association: "主导社团\n§Y[?ruling_association@var:TRI_selected_region.GetTokenLocalizedKey]§!"
+ TRI_region_ruling_association_tt: "茶会需要直辖§Y超过半数§!的行政力以确保对该大区的主导权，否则主导权会落入获得§Y最多托管行政力§!的社团之手"
+ TRI_regions_confiscate_adm_tt: "要求§Y[?TRI_region_target_association.GetTokenLocalizedKey]§!转移§Y1§!行政力到茶会直属之下\n这将使§Y[?TRI_region_target_association.GetTokenLocalizedKey]§!支持度§R-2%§!，激进度§R+1%§!"
+ TRI_regions_entrust_adm_tt: "将茶会直属的§Y1§!行政力托管予§Y[?TRI_region_target_association.GetTokenLocalizedKey]§!\n这将使§Y[?TRI_region_target_association.GetTokenLocalizedKey]§!支持度§G+1%§!"
+
+ TRI_regions_draw_adm_tt: "花费§Y10政治点数§!，将用于§Y[?TRI_region_target_work.GetTokenLocalizedKey]§!的§Y1直辖行政力§!转化为§Y闲置行政力§!"
+ TRI_regions_invest_adm_tt: "向§Y[?TRI_region_target_work.GetTokenLocalizedKey]§!投入§Y1直辖行政力§!，优先使用§Y闲置行政力§!，否则花费§Y10政治点数§!"
+ TRI_region_spare_adm_text: "闲置行政力：[?TRI_region_spare_adm|0Y]"
+
+ TRI_region_adm_limit_text: "总直辖行政力\n[?TRI_total_teaparty_adm|0Y]/[?TRI_teaparty_adm_limit|0Y]"
+ TRI_region_increase_adm_limit_tt: "以§Y10政治点数§!使无维护费直辖行政力§G上限+1§!"
+ TRI_region_adm_limit_consumer_text: "额外生活消费品：[?TRI_region_adm_consumer|1Y%]"
+ TRI_region_adm_limit_consumer_tt: "每§Y1§!点超出上限的直辖行政力都将增加§Y0.5%§!生活消费品修正"
 
  TRI_region_stability_lower_than_tt: "§Y[?FROM.state_region.GetTokenLocalizedKey]大区§!稳定度不高于$STABILITY|Y$%"
  TRI_region_stability_higher_than_tt: "§Y[?FROM.state_region.GetTokenLocalizedKey]大区§!稳定度不低于$STABILITY|Y$%"
@@ -29,7 +57,7 @@
  TRI_region.1.a: "能维持住安稳的日常也是一种奇迹"
  TRI_region_1_tt: "提升稳定度最低的大区的§Y$TRI_parliament_association_3$§!影响力和稳定度"
  TRI_region.2.t: "$TRI_parliament_association_3$清除混混组织"
- TRI_region.2.desc.a: "正义委杂鱼酱1：报告一花大人！圣三一与格黑娜边境的大型混混组织的幾個巢穴已被我们相继捣破，请下达后续指示\n\n一花：各位辛苦了酱紫~，把他们的赃物都回收了之后就赶紧回来吧！\n（通话结束）\n\n正义委杂鱼酱2：（翻找）嗯？看看我找到了什么书！\n\n正义委杂鱼酱3：让我看看！书的名字是...【夏莱地下室的秘密】？\n\n正义委杂鱼酱1：难道传说都是真的？！夏莱的老师会把他喜欢的学生骗进去地下室里面，然...然后做这样那样的事？\n\n正义委杂鱼酱2：不如...嘿嘿...我们在上交之前还是先一睹为快吧！\n（野生的小春突然出现！并以极快的速度将书籍从杂鱼酱的手上夺走没收了）"
+ TRI_region.2.desc.a: "正义委杂鱼酱1：报告一花大人！圣三一与格黑娜边境的大型混混组织的几个巢穴已被我们相继捣破，请下达后续指示\n\n一花：各位辛苦了酱紫~，把他们的赃物都回收了之后就赶紧回来吧！\n（通话结束）\n\n正义委杂鱼酱2：（翻找）嗯？看看我找到了什么书！\n\n正义委杂鱼酱3：让我看看！书的名字是...【夏莱地下室的秘密】？\n\n正义委杂鱼酱1：难道传说都是真的？！夏莱的老师会把他喜欢的学生骗进去地下室里面，然...然后做这样那样的事？\n\n正义委杂鱼酱2：不如...嘿嘿...我们在上交之前还是先一睹为快吧！\n（野生的小春突然出现！并以极快的速度将书籍从杂鱼酱的手上夺走没收了）"
  TRI_region.2.desc.b: "经过正义委的成员努力不懈的奋斗与市民们的鼎力协助，又一个盘踞在圣三一阴暗处的混混组织得以在成型前被捣毁，而在此区域生活的学生也能够得到难得的安宁"
  TRI_region.2.a: "不可以色色！死刑！"
  TRI_region.2.b: "圣三一绝对不会允许这些犯罪者胡作非为！"

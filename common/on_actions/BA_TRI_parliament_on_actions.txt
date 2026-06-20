@@ -4,23 +4,26 @@ on_actions = {
 			TRI = {
 				add_ideas = {
 					TRI_center_campus_region
+					TRI_western_campus_region
 					TRI_northern_campus_region
 					TRI_eastern_campus_region
 					TRI_southern_campus_region
 					TRI_industrial_park_region
 					TRI_living_area_region
 					TRI_business_district_region
-					# TRI_cultural_center_region
-					# TRI_dormitory_region
-					# TRI_doria_region
-					# TRI_southwestern_region
-					# TRI_coastal_region
-					# TRI_southern_living_quarters_region
-					# TRI_southern_business_district_region
 				}
+				set_variable = { TRI_selected_region = token:TRI_center_campus_region }
+				set_variable = { TRI_region_target_association = token:TRI_parliament_association_3 }
+				set_variable = { TRI_region_target_work = token:TRI_region_military }
+				set_variable = { TRI_regions_adm_mil_select_button = 2 }
+				set_variable = { TRI_regions_adm_cul_select_button = 0 }
+				set_variable = { TRI_regions_adm_soc_select_button = 0 }
+				set_variable = { TRI_teaparty_adm_limit = 240 }
 				TRI_region_generate_statistics = yes
 				TRI_parliament_house_election = yes
-				set_variable = { TRI_selected_region = token:TRI_center_campus_region }
+				add_dynamic_modifier = {
+					modifier = TRI_region_modifier
+				}
 				every_controlled_state = {
 					limit = { has_variable = state_region }
 					add_dynamic_modifier = {
