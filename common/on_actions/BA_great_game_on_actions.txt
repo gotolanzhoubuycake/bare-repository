@@ -9,12 +9,8 @@ on_actions = {
 							option = BARE_RULE_start_Great_Game_DEFAULT
 						}
 					}
-					news_event = {
-						id = Great_Game.1000
-						months = 24
-					}
+					Great_Game_safe_open_effect = yes
 				}
-				
 			}
 		}
 	}

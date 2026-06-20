@@ -60,6 +60,6 @@ Great_Game_is_involved = {
             has_country_flag = involved_in_Great_Game_as_defender
         }
     }
-    
+
 }
 
