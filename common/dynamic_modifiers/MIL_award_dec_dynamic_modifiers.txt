@@ -45,6 +45,12 @@ MIL_security_department_of_long_peace = {
     army_chief_cost_factor = MIL_security_department_army_chief_cost
     air_chief_cost_factor = MIL_security_department_air_chief_cost
     high_command_cost_factor = MIL_security_department_high_command_cost
+    # 2026-06-17 修改：长期和平导致学说实践停滞。陆军参考原版 SOV_the_red_army_mastery_loss_factor 的 land_mastery_gain_factor 写法；空军参考原版 air_crew_surveys_spirit 的四轨道精通度写法。
+    land_mastery_gain_factor = MIL_security_department_land_mastery_gain_factor
+    fighter_aircraft_track_mastery_gain_factor = MIL_security_department_fighter_mastery_gain_factor
+    strike_aircraft_track_mastery_gain_factor = MIL_security_department_strike_mastery_gain_factor
+    medium_aircraft_track_mastery_gain_factor = MIL_security_department_medium_mastery_gain_factor
+    heavy_aircraft_track_mastery_gain_factor = MIL_security_department_heavy_mastery_gain_factor
 }
 
 
@@ -52,25 +58,71 @@ MIL_security_department_of_long_peace = {
 
 # 千年天空的守护者
 MIL_guardian_of_millennium_sky = {
-    icon = GFX_idea_MIL_guardian_of_millennium_sky
+    # 2026-06-17 修改：空军线动态修正暂复用现有飞行器图标；原预留图标未注册贴图。
+    icon = GFX_idea_MIL_overly_advanced_aircraft
     enable = { always = yes }
     
     air_mission_efficiency = MIL_var_sky_guardian_efficiency
     air_night_penalty = MIL_var_sky_guardian_night_penalty
     air_weather_penalty = MIL_var_sky_guardian_weather_penalty
-    air_experience_gain_factor = MIL_var_sky_guardian_xp_gain
+    # 2026-06-17 修改：按原版动态修正字段使用空军训练经验获取与空军联队战损经验损失。
+    # 2026-06-17 修改：每日空军经验参考原版动态修正 experience_gain_air 写法。
+    air_training_xp_gain_factor = MIL_var_sky_guardian_xp_gain
+    experience_gain_air = MIL_var_sky_guardian_daily_air_xp
     air_ace_generation_chance_factor = MIL_var_sky_guardian_ace_chance
-    experience_loss_factor = MIL_var_sky_guardian_xp_loss
+    air_wing_xp_loss_when_killed_factor = MIL_var_sky_guardian_air_wing_xp_loss
 }
 
 # 翱翔天际之鹰
 MIL_soaring_eagle = {
-    icon = GFX_idea_MIL_soaring_eagle
+    # 2026-06-17 修改：最终空军动态修正承接千年天空的守护者全部已明确效果，并追加机动性。
+    # 2026-06-17 修改：每日空军经验参考原版动态修正 experience_gain_air 写法。
+    icon = GFX_idea_MIL_overly_advanced_aircraft
     enable = { always = yes }
     
-    air_mission_efficiency = 0.05
+    air_mission_efficiency = 0.20
+    air_night_penalty = -0.10
+    air_weather_penalty = -0.10
+    air_training_xp_gain_factor = 0.05
+    experience_gain_air = 0.10
+    air_ace_generation_chance_factor = 0.10
+    air_wing_xp_loss_when_killed_factor = -0.25
     air_agility_factor = 0.05
-    # Production cost handled via static idea
+}
+
+# 2026-06-18 修改：千年安全委员会校园防卫改革系统进度与阶段奖励承载修正。
+MIL_security_reform_progress_modifier = {
+    icon = GFX_idea_MIL_reorganized_security_department
+    enable = { always = yes }
+
+    army_attack_factor = MIL_security_reform_army_attack_factor_var
+    army_defence_factor = MIL_security_reform_army_defence_factor_var
+    planning_speed = MIL_security_reform_planning_speed_var
+    max_planning_factor = MIL_security_reform_planning_factor_var
+    air_mission_efficiency = MIL_security_reform_air_mission_efficiency_var
+    air_cas_efficiency = MIL_security_reform_air_cas_efficiency_var
+    air_agility_factor = MIL_security_reform_air_agility_factor_var
+}
+
+# 2026-06-18 修改：陆军改革训练决议执行期间的临时经验与陆军精通度收益；拆分陆空修正以避免并行决议互相移除。
+MIL_security_reform_army_training_modifier = {
+    icon = GFX_idea_MIL_reorganized_security_department
+    enable = { always = yes }
+
+    experience_gain_army_factor = MIL_security_reform_temp_army_xp_gain_var
+    land_mastery_gain_factor = MIL_security_reform_temp_land_mastery_gain_var
+}
+
+# 2026-06-18 修改：空军改革训练决议执行期间的临时经验与空军精通度收益；拆分陆空修正以避免并行决议互相移除。
+MIL_security_reform_air_training_modifier = {
+    icon = GFX_idea_MIL_reorganized_security_department
+    enable = { always = yes }
+
+    experience_gain_air_factor = MIL_security_reform_temp_air_xp_gain_var
+    fighter_aircraft_track_mastery_gain_factor = MIL_security_reform_temp_air_mastery_gain_var
+    strike_aircraft_track_mastery_gain_factor = MIL_security_reform_temp_air_mastery_gain_var
+    medium_aircraft_track_mastery_gain_factor = MIL_security_reform_temp_air_mastery_gain_var
+    heavy_aircraft_track_mastery_gain_factor = MIL_security_reform_temp_air_mastery_gain_var
 }
 
 

@@ -155,6 +155,12 @@ set_variable = { MIL_security_department_air_doctrine_cost = 0.35 }
 set_variable = { MIL_security_department_army_chief_cost = 0.33 }
 set_variable = { MIL_security_department_air_chief_cost = 0.33 }
 set_variable = { MIL_security_department_high_command_cost = 0.33 }
+# 2026-06-17 修改：承平日久的安保部新增陆军与空军精通度获取惩罚，后续由安保部改革分两次消除。
+set_variable = { MIL_security_department_land_mastery_gain_factor = -0.3 }
+set_variable = { MIL_security_department_fighter_mastery_gain_factor = -0.3 }
+set_variable = { MIL_security_department_strike_mastery_gain_factor = -0.3 }
+set_variable = { MIL_security_department_medium_mastery_gain_factor = -0.3 }
+set_variable = { MIL_security_department_heavy_mastery_gain_factor = -0.3 }
 add_dynamic_modifier = { modifier = MIL_security_department_of_long_peace }
 
 

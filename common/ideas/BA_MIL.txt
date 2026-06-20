@@ -750,4 +750,19 @@ ideas = {
         
     }
 
+    hidden_ideas = {
+        MIL_soaring_eagle_air_production_hidden = {
+            # 2026-06-17: 翱翔天际之鹰的空军装备生产花费隐藏承载。
+            # 入口：由 `MIL_Soaring_Sky_Eagle` 国策完成时添加。
+            # 关键变量：无；直接对所有空军装备 MIO 类目应用生产花费修正。
+            # 预期结果：玩家获得最终空军动态修正时，同时获得空军生产花费 -10%。
+            equipment_bonus = {
+                mio_cat_eq_all_aircraft = {
+                    build_cost_ic = -0.10
+                    instant = yes
+                }
+            }
+        }
+    }
+
 }

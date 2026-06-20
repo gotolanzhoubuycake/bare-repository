@@ -2346,3 +2346,364 @@ BARE_MIL_Sport_Post_Settlement_Support_Normalize_effect = {
 		clr_country_flag = BARE_MIL_Sport_support_normalizing_flag
 	}
 }
+
+BARE_MIL_Security_Department_Long_Peace_Reform_Progress_effect = {
+	# 2026-06-17: 承平日久的安保部变量消除与动态修正移除统一入口。
+	# 入口：由安保部改革相关国策 completion_reward 调用；与原有攻击、防御、计划变量改善共同结算。
+	# 关键变量：补足基础安保改革收益，并处理陆军组织度、学说花费、军政顾问花费、陆空军精通度获取这些长期和平变量。
+	# 预期结果：基础改革收益与长期和平修正一次性结算；所有相关变量完成对应次数的阶段消除后，移除动态修正。
+	custom_effect_tooltip = MIL_security_department_long_peace_reform_progress_tt
+	hidden_effect = {
+		# 2026-06-17: 将基础安保部改革收益并入同一结算入口，避免 tooltip 与实际效果拆分。
+		add_to_variable = { MIL_security_department_army_attack = 0.05 }
+		add_to_variable = { MIL_security_department_army_defence = 0.05 }
+		if = {
+			limit = { check_variable = { MIL_security_department_army_org < 0 } }
+			add_to_variable = { MIL_security_department_army_org = 0.025 }
+		}
+		add_to_variable = { MIL_security_department_planning_speed = 0.05 }
+		add_to_variable = { MIL_security_department_planning_factor = 0.05 }
+		if = {
+			limit = { check_variable = { MIL_security_department_land_doctrine_cost > 0 } }
+			add_to_variable = { MIL_security_department_land_doctrine_cost = -0.175 }
+		}
+		if = {
+			limit = { check_variable = { MIL_security_department_air_doctrine_cost > 0 } }
+			add_to_variable = { MIL_security_department_air_doctrine_cost = -0.175 }
+		}
+		if = {
+			limit = { check_variable = { MIL_security_department_army_chief_cost > 0 } }
+			add_to_variable = { MIL_security_department_army_chief_cost = -0.165 }
+		}
+		if = {
+			limit = { check_variable = { MIL_security_department_air_chief_cost > 0 } }
+			add_to_variable = { MIL_security_department_air_chief_cost = -0.165 }
+		}
+		if = {
+			limit = { check_variable = { MIL_security_department_high_command_cost > 0 } }
+			add_to_variable = { MIL_security_department_high_command_cost = -0.165 }
+		}
+		# 2026-06-17 修改：陆军按原版 `land_mastery_gain_factor` 变量模式推进；空军按原版四个 aircraft track 精通度 modifier 分轨道推进；已归零时不再重复结算。
+		if = {
+			limit = { check_variable = { MIL_security_department_land_mastery_gain_factor < 0 } }
+			add_to_variable = { MIL_security_department_land_mastery_gain_factor = 0.15 }
+		}
+		if = {
+			limit = { check_variable = { MIL_security_department_fighter_mastery_gain_factor < 0 } }
+			add_to_variable = { MIL_security_department_fighter_mastery_gain_factor = 0.15 }
+		}
+		if = {
+			limit = { check_variable = { MIL_security_department_strike_mastery_gain_factor < 0 } }
+			add_to_variable = { MIL_security_department_strike_mastery_gain_factor = 0.15 }
+		}
+		if = {
+			limit = { check_variable = { MIL_security_department_medium_mastery_gain_factor < 0 } }
+			add_to_variable = { MIL_security_department_medium_mastery_gain_factor = 0.15 }
+		}
+		if = {
+			limit = { check_variable = { MIL_security_department_heavy_mastery_gain_factor < 0 } }
+			add_to_variable = { MIL_security_department_heavy_mastery_gain_factor = 0.15 }
+		}
+
+		if = {
+			limit = { check_variable = { MIL_security_department_army_attack > 0 } }
+			set_variable = { MIL_security_department_army_attack = 0 }
+		}
+		if = {
+			limit = { check_variable = { MIL_security_department_army_defence > 0 } }
+			set_variable = { MIL_security_department_army_defence = 0 }
+		}
+		if = {
+			limit = { check_variable = { MIL_security_department_army_org > 0 } }
+			set_variable = { MIL_security_department_army_org = 0 }
+		}
+		if = {
+			limit = { check_variable = { MIL_security_department_planning_speed > 0 } }
+			set_variable = { MIL_security_department_planning_speed = 0 }
+		}
+		if = {
+			limit = { check_variable = { MIL_security_department_planning_factor > 0 } }
+			set_variable = { MIL_security_department_planning_factor = 0 }
+		}
+		if = {
+			limit = { check_variable = { MIL_security_department_land_doctrine_cost < 0 } }
+			set_variable = { MIL_security_department_land_doctrine_cost = 0 }
+		}
+		if = {
+			limit = { check_variable = { MIL_security_department_air_doctrine_cost < 0 } }
+			set_variable = { MIL_security_department_air_doctrine_cost = 0 }
+		}
+		if = {
+			limit = { check_variable = { MIL_security_department_army_chief_cost < 0 } }
+			set_variable = { MIL_security_department_army_chief_cost = 0 }
+		}
+		if = {
+			limit = { check_variable = { MIL_security_department_air_chief_cost < 0 } }
+			set_variable = { MIL_security_department_air_chief_cost = 0 }
+		}
+		if = {
+			limit = { check_variable = { MIL_security_department_high_command_cost < 0 } }
+			set_variable = { MIL_security_department_high_command_cost = 0 }
+		}
+		if = {
+			limit = { check_variable = { MIL_security_department_land_mastery_gain_factor > 0 } }
+			set_variable = { MIL_security_department_land_mastery_gain_factor = 0 }
+		}
+		if = {
+			limit = { check_variable = { MIL_security_department_fighter_mastery_gain_factor > 0 } }
+			set_variable = { MIL_security_department_fighter_mastery_gain_factor = 0 }
+		}
+		if = {
+			limit = { check_variable = { MIL_security_department_strike_mastery_gain_factor > 0 } }
+			set_variable = { MIL_security_department_strike_mastery_gain_factor = 0 }
+		}
+		if = {
+			limit = { check_variable = { MIL_security_department_medium_mastery_gain_factor > 0 } }
+			set_variable = { MIL_security_department_medium_mastery_gain_factor = 0 }
+		}
+		if = {
+			limit = { check_variable = { MIL_security_department_heavy_mastery_gain_factor > 0 } }
+			set_variable = { MIL_security_department_heavy_mastery_gain_factor = 0 }
+		}
+
+		force_update_dynamic_modifier = yes
+
+		if = {
+			limit = {
+				has_dynamic_modifier = { modifier = MIL_security_department_of_long_peace }
+				NOT = { check_variable = { MIL_security_department_army_attack > 0 } }
+				NOT = { check_variable = { MIL_security_department_army_attack < 0 } }
+				NOT = { check_variable = { MIL_security_department_army_defence > 0 } }
+				NOT = { check_variable = { MIL_security_department_army_defence < 0 } }
+				NOT = { check_variable = { MIL_security_department_army_org > 0 } }
+				NOT = { check_variable = { MIL_security_department_army_org < 0 } }
+				NOT = { check_variable = { MIL_security_department_planning_speed > 0 } }
+				NOT = { check_variable = { MIL_security_department_planning_speed < 0 } }
+				NOT = { check_variable = { MIL_security_department_planning_factor > 0 } }
+				NOT = { check_variable = { MIL_security_department_planning_factor < 0 } }
+				NOT = { check_variable = { MIL_security_department_land_doctrine_cost > 0 } }
+				NOT = { check_variable = { MIL_security_department_land_doctrine_cost < 0 } }
+				NOT = { check_variable = { MIL_security_department_air_doctrine_cost > 0 } }
+				NOT = { check_variable = { MIL_security_department_air_doctrine_cost < 0 } }
+				NOT = { check_variable = { MIL_security_department_army_chief_cost > 0 } }
+				NOT = { check_variable = { MIL_security_department_army_chief_cost < 0 } }
+				NOT = { check_variable = { MIL_security_department_air_chief_cost > 0 } }
+				NOT = { check_variable = { MIL_security_department_air_chief_cost < 0 } }
+				NOT = { check_variable = { MIL_security_department_high_command_cost > 0 } }
+				NOT = { check_variable = { MIL_security_department_high_command_cost < 0 } }
+				NOT = { check_variable = { MIL_security_department_land_mastery_gain_factor > 0 } }
+				NOT = { check_variable = { MIL_security_department_land_mastery_gain_factor < 0 } }
+				NOT = { check_variable = { MIL_security_department_fighter_mastery_gain_factor > 0 } }
+				NOT = { check_variable = { MIL_security_department_fighter_mastery_gain_factor < 0 } }
+				NOT = { check_variable = { MIL_security_department_strike_mastery_gain_factor > 0 } }
+				NOT = { check_variable = { MIL_security_department_strike_mastery_gain_factor < 0 } }
+				NOT = { check_variable = { MIL_security_department_medium_mastery_gain_factor > 0 } }
+				NOT = { check_variable = { MIL_security_department_medium_mastery_gain_factor < 0 } }
+				NOT = { check_variable = { MIL_security_department_heavy_mastery_gain_factor > 0 } }
+				NOT = { check_variable = { MIL_security_department_heavy_mastery_gain_factor < 0 } }
+			}
+			remove_dynamic_modifier = { modifier = MIL_security_department_of_long_peace }
+		}
+	}
+}
+
+BARE_MIL_Security_Reform_Init_effect = {
+	# 2026-06-18: 千年安全委员会校园防卫改革系统初始化入口。
+	# 入口：完成 `MIL_Security_Committee_Defense_Reform_Plan` 后调用；后续改革决议、阶段奖励和最终判断都依赖这些变量。
+	# 关键变量：陆军进度、空军进度、总进度、已获得的 25% 阶段数、单边决议推进量、阶段奖励修正变量。
+	# 预期结果：解锁改革决议类别，初始化进度为0%，挂载进度动态修正，并清理临时训练状态。
+	set_country_flag = MIL_security_reform_system_unlocked_flag
+	clr_country_flag = MIL_security_reform_completed_flag
+	clear_variable = MIL_security_reform_army_progress_var
+	clear_variable = MIL_security_reform_air_progress_var
+	clear_variable = MIL_security_reform_total_progress_var
+	clear_variable = MIL_security_reform_army_stage_var
+	clear_variable = MIL_security_reform_air_stage_var
+	clear_variable = MIL_security_reform_army_decision_progress_var
+	clear_variable = MIL_security_reform_air_decision_progress_var
+	clear_variable = MIL_security_reform_army_attack_factor_var
+	clear_variable = MIL_security_reform_army_defence_factor_var
+	clear_variable = MIL_security_reform_planning_speed_var
+	clear_variable = MIL_security_reform_planning_factor_var
+	clear_variable = MIL_security_reform_air_mission_efficiency_var
+	clear_variable = MIL_security_reform_air_cas_efficiency_var
+	clear_variable = MIL_security_reform_air_agility_factor_var
+	clear_variable = MIL_security_reform_temp_army_xp_gain_var
+	clear_variable = MIL_security_reform_temp_air_xp_gain_var
+	clear_variable = MIL_security_reform_temp_land_mastery_gain_var
+	clear_variable = MIL_security_reform_temp_air_mastery_gain_var
+	# 2026-06-18 修改：分别清理陆军/空军训练动态修正，避免旧存档或并行训练残留状态。
+	remove_dynamic_modifier = { modifier = MIL_security_reform_army_training_modifier }
+	remove_dynamic_modifier = { modifier = MIL_security_reform_air_training_modifier }
+	if = {
+		limit = {
+			NOT = {
+				has_dynamic_modifier = { modifier = MIL_security_reform_progress_modifier }
+			}
+		}
+		add_dynamic_modifier = { modifier = MIL_security_reform_progress_modifier }
+	}
+	force_update_dynamic_modifier = yes
+}
+
+BARE_MIL_Security_Reform_Recalculate_effect = {
+	# 2026-06-18: 千年安全委员会校园防卫改革进度与阶段奖励重算入口。
+	# 入口：所有改革决议或后续国策追加进度后调用；负责限制单项进度、刷新总进度，并按每25%进度写入阶段奖励。
+	# 关键变量：`MIL_security_reform_army_progress_var`、`MIL_security_reform_air_progress_var` 及两类 stage 变量。
+	# 预期结果：进度保持在0-100范围内；陆军/空军每25%各获得一档奖励；总进度达到100时设置完成 flag。
+	if = {
+		limit = { check_variable = { MIL_security_reform_army_progress_var > 100 } }
+		set_variable = { MIL_security_reform_army_progress_var = 100 }
+	}
+	if = {
+		limit = { check_variable = { MIL_security_reform_air_progress_var > 100 } }
+		set_variable = { MIL_security_reform_air_progress_var = 100 }
+	}
+	if = {
+		limit = { check_variable = { MIL_security_reform_army_progress_var < 0 } }
+		set_variable = { MIL_security_reform_army_progress_var = 0 }
+	}
+	if = {
+		limit = { check_variable = { MIL_security_reform_air_progress_var < 0 } }
+		set_variable = { MIL_security_reform_air_progress_var = 0 }
+	}
+
+	set_variable = { MIL_security_reform_total_progress_var = MIL_security_reform_army_progress_var }
+	add_to_variable = { MIL_security_reform_total_progress_var = MIL_security_reform_air_progress_var }
+	if = {
+		limit = { check_variable = { MIL_security_reform_total_progress_var > 100 } }
+		set_variable = { MIL_security_reform_total_progress_var = 100 }
+	}
+
+	set_variable = { MIL_security_reform_army_stage_var = 0 }
+	if = {
+		limit = { check_variable = { MIL_security_reform_army_progress_var > 24 } }
+		set_variable = { MIL_security_reform_army_stage_var = 1 }
+	}
+	if = {
+		limit = { check_variable = { MIL_security_reform_army_progress_var > 49 } }
+		set_variable = { MIL_security_reform_army_stage_var = 2 }
+	}
+	if = {
+		limit = { check_variable = { MIL_security_reform_army_progress_var > 74 } }
+		set_variable = { MIL_security_reform_army_stage_var = 3 }
+	}
+	if = {
+		limit = { check_variable = { MIL_security_reform_army_progress_var > 99 } }
+		set_variable = { MIL_security_reform_army_stage_var = 4 }
+	}
+	set_variable = { MIL_security_reform_army_attack_factor_var = MIL_security_reform_army_stage_var }
+	multiply_variable = { var = MIL_security_reform_army_attack_factor_var value = 0.05 }
+	set_variable = { MIL_security_reform_army_defence_factor_var = MIL_security_reform_army_stage_var }
+	multiply_variable = { var = MIL_security_reform_army_defence_factor_var value = 0.05 }
+	set_variable = { MIL_security_reform_planning_speed_var = MIL_security_reform_army_stage_var }
+	multiply_variable = { var = MIL_security_reform_planning_speed_var value = 0.05 }
+	set_variable = { MIL_security_reform_planning_factor_var = MIL_security_reform_army_stage_var }
+	multiply_variable = { var = MIL_security_reform_planning_factor_var value = 0.05 }
+
+	set_variable = { MIL_security_reform_air_stage_var = 0 }
+	if = {
+		limit = { check_variable = { MIL_security_reform_air_progress_var > 24 } }
+		set_variable = { MIL_security_reform_air_stage_var = 1 }
+	}
+	if = {
+		limit = { check_variable = { MIL_security_reform_air_progress_var > 49 } }
+		set_variable = { MIL_security_reform_air_stage_var = 2 }
+	}
+	if = {
+		limit = { check_variable = { MIL_security_reform_air_progress_var > 74 } }
+		set_variable = { MIL_security_reform_air_stage_var = 3 }
+	}
+	if = {
+		limit = { check_variable = { MIL_security_reform_air_progress_var > 99 } }
+		set_variable = { MIL_security_reform_air_stage_var = 4 }
+	}
+	set_variable = { MIL_security_reform_air_mission_efficiency_var = MIL_security_reform_air_stage_var }
+	multiply_variable = { var = MIL_security_reform_air_mission_efficiency_var value = 0.05 }
+	set_variable = { MIL_security_reform_air_cas_efficiency_var = MIL_security_reform_air_stage_var }
+	multiply_variable = { var = MIL_security_reform_air_cas_efficiency_var value = 0.05 }
+	set_variable = { MIL_security_reform_air_agility_factor_var = MIL_security_reform_air_stage_var }
+	multiply_variable = { var = MIL_security_reform_air_agility_factor_var value = 0.05 }
+
+	if = {
+		limit = {
+			check_variable = { MIL_security_reform_total_progress_var > 99 }
+		}
+		set_country_flag = MIL_security_reform_completed_flag
+	}
+	force_update_dynamic_modifier = yes
+}
+
+BARE_MIL_Security_Reform_Add_Army_Progress_5_effect = {
+	# 2026-06-18: 陆军改革小幅推进入口。
+	# 入口：60天可重复训练类决议完成后调用。
+	# 关键变量：陆军改革进度与陆军决议来源进度；单边决议来源最多推进75点。
+	# 预期结果：在未超过单边上限时增加5点陆军改革进度，并刷新阶段奖励。
+	custom_effect_tooltip = MIL_security_reform_add_army_progress_5_tt
+	hidden_effect = {
+		if = {
+			limit = { check_variable = { MIL_security_reform_army_decision_progress_var < 75 } }
+			add_to_variable = { MIL_security_reform_army_progress_var = 5 }
+			add_to_variable = { MIL_security_reform_army_decision_progress_var = 5 }
+		}
+		BARE_MIL_Security_Reform_Recalculate_effect = yes
+	}
+}
+
+BARE_MIL_Security_Reform_Add_Army_Progress_10_effect = {
+	# 2026-06-18: 陆军改革中幅推进入口。
+	# 入口：180/270天陆军改革项目完成后调用。
+	# 关键变量：陆军改革进度与陆军决议来源进度；超过75点前只推进剩余可用额度。
+	# 预期结果：增加最多10点陆军改革进度，并刷新阶段奖励。
+	custom_effect_tooltip = MIL_security_reform_add_army_progress_10_tt
+	hidden_effect = {
+		if = {
+			limit = { check_variable = { MIL_security_reform_army_decision_progress_var < 66 } }
+			add_to_variable = { MIL_security_reform_army_progress_var = 10 }
+			add_to_variable = { MIL_security_reform_army_decision_progress_var = 10 }
+		}
+		else_if = {
+			limit = { check_variable = { MIL_security_reform_army_decision_progress_var < 75 } }
+			add_to_variable = { MIL_security_reform_army_progress_var = 5 }
+			add_to_variable = { MIL_security_reform_army_decision_progress_var = 5 }
+		}
+		BARE_MIL_Security_Reform_Recalculate_effect = yes
+	}
+}
+
+BARE_MIL_Security_Reform_Add_Air_Progress_5_effect = {
+	# 2026-06-18: 空军改革小幅推进入口。
+	# 入口：60天可重复训练类决议完成后调用。
+	# 关键变量：空军改革进度与空军决议来源进度；单边决议来源最多推进75点。
+	# 预期结果：在未超过单边上限时增加5点空军改革进度，并刷新阶段奖励。
+	custom_effect_tooltip = MIL_security_reform_add_air_progress_5_tt
+	hidden_effect = {
+		if = {
+			limit = { check_variable = { MIL_security_reform_air_decision_progress_var < 75 } }
+			add_to_variable = { MIL_security_reform_air_progress_var = 5 }
+			add_to_variable = { MIL_security_reform_air_decision_progress_var = 5 }
+		}
+		BARE_MIL_Security_Reform_Recalculate_effect = yes
+	}
+}
+
+BARE_MIL_Security_Reform_Add_Air_Progress_10_effect = {
+	# 2026-06-18: 空军改革中幅推进入口。
+	# 入口：180/360天空军改革项目完成后调用。
+	# 关键变量：空军改革进度与空军决议来源进度；超过75点前只推进剩余可用额度。
+	# 预期结果：增加最多10点空军改革进度，并刷新阶段奖励。
+	custom_effect_tooltip = MIL_security_reform_add_air_progress_10_tt
+	hidden_effect = {
+		if = {
+			limit = { check_variable = { MIL_security_reform_air_decision_progress_var < 66 } }
+			add_to_variable = { MIL_security_reform_air_progress_var = 10 }
+			add_to_variable = { MIL_security_reform_air_decision_progress_var = 10 }
+		}
+		else_if = {
+			limit = { check_variable = { MIL_security_reform_air_decision_progress_var < 75 } }
+			add_to_variable = { MIL_security_reform_air_progress_var = 5 }
+			add_to_variable = { MIL_security_reform_air_decision_progress_var = 5 }
+		}
+		BARE_MIL_Security_Reform_Recalculate_effect = yes
+	}
+}

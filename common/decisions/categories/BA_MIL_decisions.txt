@@ -46,3 +46,21 @@ MIL_cae_war_decision_category = {
     visible_when_empty = yes
     priority = 1099 # 位置待调整
 }
+
+# 2026-06-18 修改：千年安全委员会校园防卫改革系统决议组。
+MIL_security_reform_decision_category = {
+    icon = generic_research
+
+    allowed = {
+        original_tag = MIL
+    }
+
+    visible = {
+        original_tag = MIL
+        has_country_flag = MIL_security_reform_system_unlocked_flag
+        NOT = { has_country_flag = MIL_security_reform_completed_flag }
+    }
+
+    visible_when_empty = yes
+    priority = 1100
+}

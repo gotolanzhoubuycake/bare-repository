@@ -1824,7 +1824,9 @@ focus_tree = {
 		completion_reward = {
 			army_experience = 30
 			air_experience = 30
-			# unlocking_decisions = MIL_security_reform_decisions # 解锁决议
+			# 2026-06-18 修改：初始化千年安全委员会校园防卫改革系统，并解锁相关改革决议。
+			BARE_MIL_Security_Reform_Init_effect = yes
+			custom_effect_tooltip = MIL_security_reform_decisions_unlocked_tt
 			country_event = { id = MIL_reform.1 }
 		}
 	}
@@ -1945,19 +1947,17 @@ focus_tree = {
 		}
 		completion_reward = {
 			army_experience = 50
-			add_to_variable = { MIL_security_department_army_attack = 0.05 }
-			add_to_variable = { MIL_security_department_army_defence = 0.05 }
-			add_to_variable = { MIL_security_department_planning_speed = 0.05 }
-			add_to_variable = { MIL_security_department_planning_factor = 0.05 }
+			# 2026-06-17 修改：统一结算安保部改革对承平日久动态修正的全部变量变化，并在全数归零时移除动态修正。
+			BARE_MIL_Security_Department_Long_Peace_Reform_Progress_effect = yes
 			#获得民族精神“千年特战部队”
 			force_update_dynamic_modifier = yes
 			add_ideas = MIL_special_ops_force_1 # 获得新精神（暂无加成）
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = MIL_security_department_tooltip_3
-					add_idea = MIL_security_department_tooltip_4
-				}
-			}
+			# effect_tooltip = {
+			# 	swap_ideas = {
+			# 		remove_idea = MIL_security_department_tooltip_3
+			# 		add_idea = MIL_security_department_tooltip_4
+			# 	}
+			# }
 		}
 	}
 	focus = { #单兵特战机甲开发
@@ -2036,21 +2036,19 @@ focus_tree = {
 			focus = MIL_Special_Forces_Exoskeleton_Development
 		}
 		completion_reward = {
-			add_to_variable = { MIL_security_department_army_attack = 0.05 }
-			add_to_variable = { MIL_security_department_army_defence = 0.05 }
-			add_to_variable = { MIL_security_department_planning_speed = 0.05 }
-			add_to_variable = { MIL_security_department_planning_factor = 0.05 }
+			# 2026-06-17 修改：统一结算安保部改革对承平日久动态修正的全部变量变化，并在全数归零时移除动态修正。
+			BARE_MIL_Security_Department_Long_Peace_Reform_Progress_effect = yes
 			swap_ideas = {
 				remove_idea = MIL_special_ops_force_3_combined
 				add_idea = MIL_special_ops_force_4_final
 			}
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = MIL_security_department_tooltip_1
-					add_idea = MIL_security_department_tooltip_2
+			# effect_tooltip = {
+			# 	swap_ideas = {
+			# 		remove_idea = MIL_security_department_tooltip_1
+			# 		add_idea = MIL_security_department_tooltip_2
 
-				}
-			}
+			# 	}
+			# }
 		}
 	}
 	focus = { #机械筑成的高墙
@@ -2071,20 +2069,18 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_to_variable = { MIL_security_department_army_attack = 0.05 }
-			add_to_variable = { MIL_security_department_army_defence = 0.05 }
-			add_to_variable = { MIL_security_department_planning_speed = 0.05 }
-			add_to_variable = { MIL_security_department_planning_factor = 0.05 }
+			# 2026-06-17 修改：统一结算安保部改革对承平日久动态修正的全部变量变化，并在全数归零时移除动态修正。
+			BARE_MIL_Security_Department_Long_Peace_Reform_Progress_effect = yes
 			hidden_effect = {	add_ideas = steel_torrent_modifier }
 
         	custom_effect_tooltip = MIL_Mechanical_Built_High_Wall_tt
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = MIL_security_department_tooltip_2
-					add_idea = MIL_security_department_tooltip_3
-				}
+			# effect_tooltip = {
+			# 	swap_ideas = {
+			# 		remove_idea = MIL_security_department_tooltip_2
+			# 		add_idea = MIL_security_department_tooltip_3
+			# 	}
 
-			}
+			# }
 		}
 	}
 	focus = { #操作系统升级
@@ -2150,17 +2146,15 @@ focus_tree = {
 			focus = MIL_Operating_System_Upgrade
 		}
 		completion_reward = {
-			add_to_variable = { MIL_security_department_army_attack = 0.05 }
-			add_to_variable = { MIL_security_department_army_defence = 0.05 }
-			add_to_variable = { MIL_security_department_planning_speed = 0.05 }
-			add_to_variable = { MIL_security_department_planning_factor = 0.05 }
+			# 2026-06-17 修改：统一结算安保部改革对承平日久动态修正的全部变量变化，并在全数归零时移除动态修正。
+			BARE_MIL_Security_Department_Long_Peace_Reform_Progress_effect = yes
 
-			effect_tooltip = {
-				swap_ideas = {
-					remove_idea = MIL_security_department_tooltip_3
-					add_idea = MIL_security_department_tooltip_4
-				}
-			}
+			# effect_tooltip = {
+			# 	swap_ideas = {
+			# 		remove_idea = MIL_security_department_tooltip_3
+			# 		add_idea = MIL_security_department_tooltip_4
+			# 	}
+			# }
 		}
 	}
 	focus = { #更强的火力更好的防护
@@ -2249,7 +2243,19 @@ focus_tree = {
 		}
 		completion_reward = {
 			air_experience = 100
-			#获得民族精神“千年天空的守护者”
+			custom_effect_tooltip = MIL_Guard_the_Sky_of_a_Millennium_tt
+			hidden_effect = {
+				# 2026-06-17 修改：按空军线文档接入“千年天空的守护者”动态修正初始状态。
+				set_variable = { MIL_var_sky_guardian_efficiency = 0 }
+				set_variable = { MIL_var_sky_guardian_night_penalty = 0 }
+				set_variable = { MIL_var_sky_guardian_weather_penalty = 0 }
+				set_variable = { MIL_var_sky_guardian_xp_gain = 0 }
+				set_variable = { MIL_var_sky_guardian_daily_air_xp = 0 }
+				set_variable = { MIL_var_sky_guardian_ace_chance = 0 }
+				set_variable = { MIL_var_sky_guardian_air_wing_xp_loss = 0 }
+				add_dynamic_modifier = { modifier = MIL_guardian_of_millennium_sky }
+				force_update_dynamic_modifier = yes
+			}
 		}
 	}
 	focus = { #实用化无人机开发
@@ -2279,7 +2285,18 @@ focus_tree = {
 			focus = MIL_Practical_Drone_Development
 		}
 		completion_reward = {
-			#民族精神千年天空的守护者追加效果
+			custom_effect_tooltip = MIL_Silent_Hunter_tt
+			hidden_effect = {
+				# 2026-06-17 修改：按既有空军线阶段注释接入任务效率、夜间与天气惩罚改善。
+				set_variable = { MIL_var_sky_guardian_efficiency = 0.10 }
+				set_variable = { MIL_var_sky_guardian_night_penalty = -0.10 }
+				set_variable = { MIL_var_sky_guardian_weather_penalty = -0.10 }
+				if = {
+					limit = { NOT = { has_dynamic_modifier = { modifier = MIL_guardian_of_millennium_sky } } }
+					add_dynamic_modifier = { modifier = MIL_guardian_of_millennium_sky }
+				}
+				force_update_dynamic_modifier = yes
+			}
 		}
 	}
 	focus = { #小规模空中战术推演
@@ -2295,7 +2312,28 @@ focus_tree = {
 		}
 		completion_reward = {
 			air_experience = 50
-			#民族精神千年天空的守护者追加效果
+			custom_effect_tooltip = MIL_Small_Scale_Air_Tactics_tt
+			hidden_effect = {
+				# 2026-06-17 修改：按既有空军线阶段注释接入训练经验获取；同时补齐左支未完成时的基础飞行修正。
+				if = {
+					limit = { check_variable = { MIL_var_sky_guardian_efficiency < 0.10 } }
+					set_variable = { MIL_var_sky_guardian_efficiency = 0.10 }
+				}
+				if = {
+					limit = { check_variable = { MIL_var_sky_guardian_night_penalty > -0.10 } }
+					set_variable = { MIL_var_sky_guardian_night_penalty = -0.10 }
+				}
+				if = {
+					limit = { check_variable = { MIL_var_sky_guardian_weather_penalty > -0.10 } }
+					set_variable = { MIL_var_sky_guardian_weather_penalty = -0.10 }
+				}
+				set_variable = { MIL_var_sky_guardian_xp_gain = 0.05 }
+				if = {
+					limit = { NOT = { has_dynamic_modifier = { modifier = MIL_guardian_of_millennium_sky } } }
+					add_dynamic_modifier = { modifier = MIL_guardian_of_millennium_sky }
+				}
+				force_update_dynamic_modifier = yes
+			}
 		}
 	}
 	focus = { #“鹰击长空”对抗演习
@@ -2310,7 +2348,28 @@ focus_tree = {
 			focus = MIL_Small_Scale_Air_Tactics
 		}
 		completion_reward = {
-			#民族精神“千年天空的守护者”追加效果
+			custom_effect_tooltip = MIL_Eagle_Strike_Exercise_tt
+			hidden_effect = {
+				# 2026-06-17 修改：按既有空军线阶段注释接入对抗演习最终训练收益。
+				set_variable = { MIL_var_sky_guardian_efficiency = 0.15 }
+				if = {
+					limit = { check_variable = { MIL_var_sky_guardian_night_penalty > -0.10 } }
+					set_variable = { MIL_var_sky_guardian_night_penalty = -0.10 }
+				}
+				if = {
+					limit = { check_variable = { MIL_var_sky_guardian_weather_penalty > -0.10 } }
+					set_variable = { MIL_var_sky_guardian_weather_penalty = -0.10 }
+				}
+				set_variable = { MIL_var_sky_guardian_xp_gain = 0.05 }
+				set_variable = { MIL_var_sky_guardian_daily_air_xp = 0.10 }
+				set_variable = { MIL_var_sky_guardian_ace_chance = 0.10 }
+				set_variable = { MIL_var_sky_guardian_air_wing_xp_loss = -0.25 }
+				if = {
+					limit = { NOT = { has_dynamic_modifier = { modifier = MIL_guardian_of_millennium_sky } } }
+					add_dynamic_modifier = { modifier = MIL_guardian_of_millennium_sky }
+				}
+				force_update_dynamic_modifier = yes
+			}
 		}
 	}
 	focus = { #翱翔天际之鹰
@@ -2328,7 +2387,14 @@ focus_tree = {
 			focus = MIL_Silent_Hunter
 		}
 		completion_reward = {
-			#将民族精神“千年天空守护者”替换为“翱翔天际之鹰”，追加效果
+			custom_effect_tooltip = MIL_Soaring_Sky_Eagle_tt
+			hidden_effect = {
+				# 2026-06-17 修改：空军线最终节点移除阶段动态修正，替换为最终动态修正。
+				remove_dynamic_modifier = { modifier = MIL_guardian_of_millennium_sky }
+				add_dynamic_modifier = { modifier = MIL_soaring_eagle }
+				add_ideas = MIL_soaring_eagle_air_production_hidden
+				force_update_dynamic_modifier = yes
+			}
 		}
 	}
 	focus = { #看不见的防线

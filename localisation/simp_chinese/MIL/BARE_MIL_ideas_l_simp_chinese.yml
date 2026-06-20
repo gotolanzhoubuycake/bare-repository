@@ -221,7 +221,27 @@ MIL_till_the_last_man_standing: "死战到底"
 MIL_fierce_resistance: "激烈的抵抗"
 
 MIL_security_department_name: "承平日久的安保部"
+# 2026-06-17: 统一展示安保部改革对承平日久动态修正的阶段性惩罚消除。
+MIL_security_department_long_peace_reform_progress_tt: "§Y承平日久的安保部§!惩罚削减：\n陆军攻击惩罚：§G-5.00%§!\n陆军防御惩罚：§G-5.00%§!\n陆军组织度惩罚：§G-2.50%§!\n计划速度惩罚：§G-5.00%§!\n最大计划惩罚：§G-5.00%§!\n陆军学说花费惩罚：§G-17.50%§!\n空军学说花费惩罚：§G-17.50%§!\n陆军部长花费惩罚：§G-16.50%§!\n空军部长花费惩罚：§G-16.50%§!\n最高指挥花费惩罚：§G-16.50%§!\n陆军精通度获取惩罚：§G-15.00%§!\n空军战斗机/强袭/中型/重型精通度获取惩罚：§G-15.00%§!"
 MIL_special_ops_force_name: "千年特战部队"
+
+MIL_guardian_of_millennium_sky: "千年天空的守护者"
+MIL_guardian_of_millennium_sky_desc: "千年的安保部正在恢复自治区领空防卫能力。"
+MIL_soaring_eagle: "翱翔天际之鹰"
+MIL_soaring_eagle_desc: "千年的空中力量已经完成整训，足以承担学院天空的防卫任务。"
+MIL_security_reform_progress_modifier: "校园防卫改革"
+MIL_security_reform_progress_modifier_desc: "千年安全委员会校园防卫改革正在持续推进。"
+# 2026-06-18 修改：拆分陆军/空军改革训练动态修正本地化，避免并行训练时文本和修正互相覆盖。
+MIL_security_reform_army_training_modifier: "安保部陆军改革训练"
+MIL_security_reform_army_training_modifier_desc: "安保部正在进行阶段性的陆军改革训练。"
+MIL_security_reform_air_training_modifier: "安保部空军改革训练"
+MIL_security_reform_air_training_modifier_desc: "安保部正在进行阶段性的空军改革训练。"
+# 2026-06-17: 空军线效果提示按现有文档和脚本中已明确的阶段数值补充；实用化无人机开发未写明确效果，暂不添加提示。
+MIL_Guard_the_Sky_of_a_Millennium_tt: "获得动态修正：§H千年天空的守护者§!。"
+MIL_Silent_Hunter_tt: "§H千年天空的守护者§!追加效果：\n空军任务效率：§G+10.00%§!\n恶劣天气惩罚：§G-10.00%§!\n夜间惩罚：§G-10.00%§!"
+MIL_Small_Scale_Air_Tactics_tt: "§H千年天空的守护者§!追加效果：\n空军训练经验获取：§G+5.00%§!"
+MIL_Eagle_Strike_Exercise_tt: "§H千年天空的守护者§!追加效果：\n空军任务效率：§G+5.00%§!\n每日空军经验：§G+0.10§!\n王牌机师产生概率：§G+10.00%§!\n空军联队战损经验损失：§G-25.00%§!"
+MIL_Soaring_Sky_Eagle_tt: "将§H千年天空的守护者§!替换为§H翱翔天际之鹰§!，其效果为：\n空军任务效率：§G+20.00%§!\n恶劣天气惩罚：§G-10.00%§!\n夜间惩罚：§G-10.00%§!\n空军训练经验获取：§G+5.00%§!\n每日空军经验：§G+0.10§!\n王牌机师产生概率：§G+10.00%§!\n空军联队战损经验损失：§G-25.00%§!\n空军机动性：§G+5.00%§!\n空军生产花费：§G-10.00%§!"
 
 MIL_fight_against_cae: "与凯撒的战争"
 CAE_economic_status: "凯撒经济状况"
