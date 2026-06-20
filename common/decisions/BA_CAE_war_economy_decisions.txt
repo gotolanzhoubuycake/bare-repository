@@ -1,0 +1,773 @@
+# 凯撒对千年战争 - 经济相关决策
+CAE_war_propaganda_category = {
+
+    # 决策1：对千年产品进行抹黑
+    # 花费50pp，持续15天，间隔45天可用
+    # 完成后：凯撒经济状况+3%
+    CAE_smear_MIL_products = {
+        icon = GFX_decision_generic_political_discourse
+
+        visible = {
+            original_tag = CAE
+
+        }
+
+        available = {
+            NOT = { has_country_flag = CAE_war_propaganda_active }
+        }
+
+        cost = 50
+        days_remove = 15
+        days_re_enable = 45
+
+        complete_effect = {
+            set_country_flag = CAE_war_propaganda_active
+        }
+
+        remove_effect = {
+            add_to_variable = { global.cae_economic_situation = 3 }
+            clr_country_flag = CAE_war_propaganda_active
+        }
+
+        ai_will_do = {
+            base = 8
+        }
+    }
+
+    # 决策2：传播不利于千年的言论
+    # 花费45pp，持续15天，间隔60天可用
+    # 完成后：凯撒经济状况+4%
+    CAE_spread_anti_MIL_propaganda = {
+        icon = GFX_decision_generic_political_discourse
+
+        visible = {
+            original_tag = CAE
+        }
+
+        available = {
+            NOT = { has_country_flag = CAE_war_propaganda_active }
+        }
+
+        cost = 45
+        days_remove = 15
+        days_re_enable = 60
+
+        complete_effect = {
+            set_country_flag = CAE_war_propaganda_active
+        }
+
+        remove_effect = {
+            add_to_variable = { global.cae_economic_situation = 4 }
+            clr_country_flag = CAE_war_propaganda_active
+        }
+
+        ai_will_do = {
+            base = 7
+        }
+    }
+
+    # 决策3：宣布不实产品测试结论
+    # 花费30pp，持续15天，间隔75天可用
+    # 完成后：凯撒经济状况+5%
+    CAE_fake_product_test = {
+        icon = GFX_decision_generic_political_discourse
+
+        visible = {
+            original_tag = CAE
+        }
+
+        available = {
+            NOT = { has_country_flag = CAE_war_propaganda_active }
+        }
+
+        cost = 30
+        days_remove = 15
+        days_re_enable = 75
+
+        complete_effect = {
+            set_country_flag = CAE_war_propaganda_active
+        }
+
+        remove_effect = {
+            add_to_variable = { global.cae_economic_situation = 5 }
+            clr_country_flag = CAE_war_propaganda_active
+        }
+
+        ai_will_do = {
+            base = 9
+        }
+    }
+
+    # 决策4：征用占领区资源进行生产
+    # 花费100pp，持续30天，间隔60天可用
+    # 完成后：每个控制的千年省份经济状况+1%，占领区抵抗+10，顺从-5
+    # 第一次使用触发事件：被迫劳作的市民们
+    CAE_confiscate_resources = {
+        icon = GFX_decision_generic_political_discourse
+
+        visible = {
+            original_tag = CAE
+        }
+
+        available = {
+            NOT = { has_country_flag = CAE_war_propaganda_active }
+            any_owned_state = {
+                is_core_of = MIL
+            }
+        }
+
+        cost = 100
+        days_remove = 30
+        days_re_enable = 60
+
+        complete_effect = {
+            set_country_flag = CAE_war_propaganda_active
+        }
+
+        remove_effect = {
+            # 初始化计数器
+            set_temp_variable = { CAE_MIL_state_counter = 0 }
+            # 计算控制的千年省份数量
+            every_owned_state = {
+                limit = {
+                    is_core_of = MIL
+                }
+                add_to_temp_variable = { CAE_MIL_state_counter = 1 }
+            }
+            # 每个省份+1%经济状况
+            add_to_variable = {
+                global.cae_economic_situation = CAE_MIL_state_counter
+            }
+            # 占领区效果
+            every_owned_state = {
+                limit = {
+                    is_core_of = MIL
+                }
+                add_resistance = 10
+                add_compliance = -5
+            }
+            # 第一次触发事件
+            if = {
+                limit = {
+                    NOT = { has_country_flag = CAE_confiscate_resources_first_done }
+                }
+                news_event = { id = CAE_forced_labor.1 }
+                set_country_flag = CAE_confiscate_resources_first_done
+            }
+            clr_country_flag = CAE_war_propaganda_active
+        }
+
+        ai_will_do = {
+            base = 6
+        }
+    }
+
+    # 决策5：从占领区"合法"征收资产充实公司财务
+    # 花费150pp，持续30天，间隔90天可用
+    # 完成后：每个控制的千年省份经济状况+2%，占领区抵抗+15，顺从-10
+    # 第一次使用触发事件：搜捕游击队
+    CAE_seize_assets = {
+        icon = GFX_decision_generic_political_discourse
+
+        visible = {
+            original_tag = CAE
+        }
+
+        available = {
+            NOT = { has_country_flag = CAE_war_propaganda_active }
+            any_owned_state = {
+                is_core_of = MIL
+            }
+        }
+
+        cost = 150
+        days_remove = 30
+        days_re_enable = 90
+
+        complete_effect = {
+            set_country_flag = CAE_war_propaganda_active
+        }
+
+        remove_effect = {
+            # 初始化计数器
+            set_temp_variable = { CAE_MIL_state_counter_2 = 0 }
+            # 计算控制的千年省份数量
+            every_owned_state = {
+                limit = {
+                    is_core_of = MIL
+                }
+                add_to_temp_variable = { CAE_MIL_state_counter_2 = 1 }
+            }
+            # 每个省份+2%经济状况
+            multiply_temp_variable = { CAE_MIL_state_counter_2 = 2 }
+            add_to_variable = {
+                global.cae_economic_situation = CAE_MIL_state_counter_2
+            }
+            # 占领区效果
+            every_owned_state = {
+                limit = {
+                    is_core_of = MIL
+                }
+                add_resistance = 15
+                add_compliance = -10
+            }
+            # 第一次触发事件
+            if = {
+                limit = {
+                    NOT = { has_country_flag = CAE_seize_assets_first_done }
+                }
+                country_event = { id = CAE_hunt_guerrilla.1 }
+                set_country_flag = CAE_seize_assets_first_done
+            }
+            clr_country_flag = CAE_war_propaganda_active
+        }
+
+        ai_will_do = {
+            base = 5
+        }
+    }
+
+}
+
+# 凯撒战时雇佣兵征兵决议
+CAE_war_produce_category = {
+    # 招募杂牌佣兵
+    # 招募杂牌佣兵
+    # 间隔45日可用，召唤12个乌合之众编制6自动机 + 6个乌合之众编制6步兵
+    CAE_recruit_zayu_army = {
+        icon = GFX_decision_generic_political_discourse
+
+        visible = {
+            original_tag = CAE
+        }
+
+        days_remove = 30
+        days_re_enable = 45
+
+        remove_effect = {
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            NOT = { has_country_flag = CAE_NOT_FIRST_ZAYU }
+                        }
+                        random_owned_state = {
+                            prioritize = { 28 }
+                            create_unit = {
+                                division = "name = \"凯撒杂牌佣兵师\" division_template = \"凯撒杂牌佣兵师\" start_experience_factor = 1 start_equipment_factor = [CAE_RECRUIT_EQUIP_FACTOR] start_manpower_factor = 1"
+                                count = 12
+                                owner = CAE
+                                allow_spawning_on_enemy_provs = no
+                            }
+                        }
+                        set_country_flag = CAE_NOT_FIRST_ZAYU
+                    }
+                    random_owned_state = {
+                        prioritize = { 28 }
+                        create_unit = {
+                            division = "name = \"凯撒杂牌佣兵师\" division_template = \"凯撒杂牌佣兵师\" start_experience_factor = 1 start_equipment_factor = [CAE_RECRUIT_EQUIP_FACTOR] start_manpower_factor = 1"
+                            count = 12
+                            owner = CAE
+                            allow_spawning_on_enemy_provs = no
+                        }
+                    }
+                }
+                CAE_RECRUIT_EQUIP_FACTOR = "[?global.cae_recruit_equipment_factor]"
+            }
+        }
+        ai_will_do = {
+            base = 5
+        }
+    }
+
+    # 招募普通佣兵
+    # 间隔60日可用
+    CAE_recruit_normal_army = {
+        icon = GFX_decision_generic_political_discourse
+
+        visible = {
+            original_tag = CAE
+        }
+
+        days_remove = 60
+        days_re_enable = 60
+
+        remove_effect = {
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            NOT = { has_country_flag = CAE_NOT_FIRST_NORMAL }
+                        }
+                        random_owned_state = {
+                            prioritize = { 28 }
+                            create_unit = {
+                                division = "name = \"凯撒普通佣兵1型师\" division_template = \"凯撒普通佣兵1型师\" start_experience_factor = 1 start_equipment_factor = [CAE_RECRUIT_EQUIP_FACTOR] start_manpower_factor = 1"
+                                count = 3
+                                owner = CAE
+                                allow_spawning_on_enemy_provs = no
+                            }
+                            create_unit = {
+                                division = "name = \"凯撒普通佣兵2型师\" division_template = \"凯撒普通佣兵2型师\" start_experience_factor = 1 start_equipment_factor = [CAE_RECRUIT_EQUIP_FACTOR] start_manpower_factor = 1"
+                                count = 6
+                                owner = CAE
+                                allow_spawning_on_enemy_provs = no
+                            }
+                        }
+                        set_country_flag = CAE_NOT_FIRST_NORMAL
+                    }
+                    random_owned_state = {
+                        prioritize = { 28 }
+                        create_unit = {
+                            division = "name = \"凯撒普通佣兵1型师\" division_template = \"凯撒普通佣兵1型师\" start_experience_factor = 1 start_equipment_factor = [CAE_RECRUIT_EQUIP_FACTOR] start_manpower_factor = 1"
+                            count = 3
+                            owner = CAE
+                            allow_spawning_on_enemy_provs = no
+                        }
+                        create_unit = {
+                            division = "name = \"凯撒普通佣兵2型师\" division_template = \"凯撒普通佣兵2型师\" start_experience_factor = 1 start_equipment_factor = [CAE_RECRUIT_EQUIP_FACTOR] start_manpower_factor = 1"
+                            count = 6
+                            owner = CAE
+                            allow_spawning_on_enemy_provs = no
+                        }
+                    }
+                }
+                CAE_RECRUIT_EQUIP_FACTOR = "[?global.cae_recruit_equipment_factor]"
+            }
+        }
+        ai_will_do = {
+            base = 5
+        }
+    }
+
+    # 招募精锐佣兵
+    # 间隔75日可用
+    CAE_recruit_advanced_army = {
+        icon = GFX_decision_generic_political_discourse
+
+        visible = {
+            original_tag = CAE
+        }
+
+        days_remove = 75
+        days_re_enable = 75
+
+        remove_effect = {
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            NOT = { has_country_flag = CAE_NOT_FIRST_ADVANCED }
+                        }
+                        random_owned_state = {
+                            prioritize = { 28 }
+                            create_unit = {
+                                division = "name = \"凯撒精锐佣兵1型师\" division_template = \"凯撒精锐佣兵1型师\" start_experience_factor = 1 start_equipment_factor = [CAE_RECRUIT_EQUIP_FACTOR] start_manpower_factor = 1"
+                                count = 4
+                                owner = CAE
+                                allow_spawning_on_enemy_provs = no
+                            }
+                            create_unit = {
+                                division = "name = \"凯撒精锐佣兵2型师\" division_template = \"凯撒精锐佣兵2型师\" start_experience_factor = 1 start_equipment_factor = [CAE_RECRUIT_EQUIP_FACTOR] start_manpower_factor = 1"
+                                count = 4
+                                owner = CAE
+                                allow_spawning_on_enemy_provs = no
+                            }
+                        }
+                        set_country_flag = CAE_NOT_FIRST_ADVANCED
+                    }
+                    random_owned_state = {
+                        prioritize = { 28 }
+                        create_unit = {
+                            division = "name = \"凯撒精锐佣兵1型师\" division_template = \"凯撒精锐佣兵1型师\" start_experience_factor = 1 start_equipment_factor = [CAE_RECRUIT_EQUIP_FACTOR] start_manpower_factor = 1"
+                            count = 4
+                            owner = CAE
+                            allow_spawning_on_enemy_provs = no
+                        }
+                        create_unit = {
+                            division = "name = \"凯撒精锐佣兵2型师\" division_template = \"凯撒精锐佣兵2型师\" start_experience_factor = 1 start_equipment_factor = [CAE_RECRUIT_EQUIP_FACTOR] start_manpower_factor = 1"
+                            count = 4
+                            owner = CAE
+                            allow_spawning_on_enemy_provs = no
+                        }
+                    }
+                }
+                CAE_RECRUIT_EQUIP_FACTOR = "[?global.cae_recruit_equipment_factor]"
+            }
+        }
+        ai_will_do = {
+            base = 5
+        }
+    }
+
+    # 招募轻装甲部队
+    # 间隔60日可用
+    CAE_light_armor_army = {
+        icon = GFX_decision_generic_political_discourse
+
+        visible = {
+            original_tag = CAE
+        }
+
+        days_remove = 60
+        days_re_enable = 60
+
+        remove_effect = {
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            NOT = { has_country_flag = CAE_NOT_FIRST_LIGHT_ARMOR }
+                        }
+                        random_owned_state = {
+                            prioritize = { 28 }
+                            create_unit = {
+                                division = "name = \"凯撒轻型装甲师\" division_template = \"凯撒轻型装甲师\" start_experience_factor = 1 start_equipment_factor = [CAE_RECRUIT_EQUIP_FACTOR] start_manpower_factor = 1"
+                                count = 6
+                                owner = CAE
+                                allow_spawning_on_enemy_provs = no
+                            }
+                        }
+                        set_country_flag = CAE_NOT_FIRST_LIGHT_ARMOR
+                    }
+                    random_owned_state = {
+                        prioritize = { 28 }
+                        create_unit = {
+                            division = "name = \"凯撒轻型装甲师\" division_template = \"凯撒轻型装甲师\" start_experience_factor = 1 start_equipment_factor = [CAE_RECRUIT_EQUIP_FACTOR] start_manpower_factor = 1"
+                            count = 6
+                            owner = CAE
+                            allow_spawning_on_enemy_provs = no
+                        }
+                    }
+                }
+                CAE_RECRUIT_EQUIP_FACTOR = "[?global.cae_recruit_equipment_factor]"
+            }
+        }
+        ai_will_do = {
+            base = 5
+        }``
+    }
+
+    # 招募主战装甲部队
+    # 间隔75日可用
+    CAE_medium_armor_army = {
+        icon = GFX_decision_generic_political_discourse
+
+        visible = {
+            original_tag = CAE
+        }
+
+        days_remove = 60
+        days_re_enable = 75
+
+        remove_effect = {
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            NOT = { has_country_flag = CAE_NOT_FIRST_MEDIUM_ARMOR }
+                        }
+                        random_owned_state = {
+                            prioritize = { 28 }
+                            create_unit = {
+                                division = "name = \"凯撒主战装甲师\" division_template = \"凯撒主战装甲师\" start_experience_factor = 1 start_equipment_factor = [CAE_RECRUIT_EQUIP_FACTOR] start_manpower_factor = 1"
+                                count = 4
+                                owner = CAE
+                                allow_spawning_on_enemy_provs = no
+                            }
+                        }
+                        set_country_flag = CAE_NOT_FIRST_MEDIUM_ARMOR
+                    }
+                    random_owned_state = {
+                        prioritize = { 28 }
+                        create_unit = {
+                            division = "name = \"凯撒主战装甲师\" division_template = \"凯撒主战装甲师\" start_experience_factor = 1 start_equipment_factor = [CAE_RECRUIT_EQUIP_FACTOR] start_manpower_factor = 1"
+                            count = 4
+                            owner = CAE
+                            allow_spawning_on_enemy_provs = no
+                        }
+                    }
+                }
+                CAE_RECRUIT_EQUIP_FACTOR = "[?global.cae_recruit_equipment_factor]"
+            }
+        }
+        ai_will_do = {
+            base = 5
+        }
+    }
+
+    # 招募重装甲支援部队
+    # 间隔90日可用
+    CAE_heavy_armor_army = {
+        icon = GFX_decision_generic_political_discourse
+
+        visible = {
+            original_tag = CAE
+        }
+
+        days_remove = 60
+        days_re_enable = 90
+
+        remove_effect = {
+            meta_effect = {
+                text = {
+                    if = {
+                        limit = {
+                            NOT = { has_country_flag = CAE_NOT_FIRST_HEAVY_ARMOR }
+                        }
+                        random_owned_state = {
+                            prioritize = { 28 }
+                            create_unit = {
+                                division = "name = \"凯撒重型装甲支援师\" division_template = \"凯撒重型装甲支援师\" start_experience_factor = 1 start_equipment_factor = [CAE_RECRUIT_EQUIP_FACTOR] start_manpower_factor = 1"
+                                count = 4
+                                owner = CAE
+                                allow_spawning_on_enemy_provs = no
+                            }
+                        }
+                        set_country_flag = CAE_NOT_FIRST_HEAVY_ARMOR
+                    }
+                    random_owned_state = {
+                        prioritize = { 28 }
+                        create_unit = {
+                            division = "name = \"凯撒重型装甲支援师\" division_template = \"凯撒重型装甲支援师\" start_experience_factor = 1 start_equipment_factor = [CAE_RECRUIT_EQUIP_FACTOR] start_manpower_factor = 1"
+                            count = 4
+                            owner = CAE
+                            allow_spawning_on_enemy_provs = no
+                        }
+                    }
+                }
+                CAE_RECRUIT_EQUIP_FACTOR = "[?global.cae_recruit_equipment_factor]"
+            }
+        }
+        ai_will_do = {
+            base = 5
+        }
+    }
+
+    # 生产步兵用装备
+    CAE_produce_infantry_equipment = {
+        icon = GFX_decision_item_bg
+
+        visible = {
+            original_tag = CAE
+        }
+
+        days_remove = 10
+
+        remove_effect = {
+            # 步兵装备 infantry_equipment 10000
+            add_equipment_to_stockpile = {
+                type = infantry_equipment
+                amount = 10000
+                producer = CAE
+
+            }
+            # 支援装备 2500
+            add_equipment_to_stockpile = {
+                type = support_equipment
+                amount = 2500
+                producer = CAE
+
+            }
+            # 自动机 auto_mech 10000
+            add_equipment_to_stockpile = {
+                type = auto_mech
+                amount = 10000
+                producer = CAE
+
+            }
+        }
+
+        ai_will_do = {
+            base = 5
+        }
+    }
+
+    # 生产火力支援装备
+    CAE_produce_fire_support_equipment = {
+        icon = GFX_decision_item_bg
+
+        visible = {
+            original_tag = CAE
+        }
+
+        days_remove = 20
+
+        remove_effect = {
+            # 单兵压制火力装备 light_fire_support_equipment 1500
+            add_equipment_to_stockpile = {
+                type = light_fire_support_equipment
+                amount = 1500
+                producer = CAE
+
+            }
+            # 单兵反装甲装备 1000
+            add_equipment_to_stockpile = {
+                type = heavy_fire_support_equipment
+                amount = 10000
+                producer = CAE
+
+            }
+            # 单兵防空装备 infantry_anti_air_equipment 10000
+            add_equipment_to_stockpile = {
+                type = infantry_anti_air_equipment
+                amount = 750
+                producer = CAE
+
+            }
+        }
+
+        ai_will_do = {
+            base = 5
+        }
+    }
+
+    # 生产运输载具
+    CAE_produce_truck_equipment = {
+        icon = GFX_decision_item_bg
+
+        visible = {
+            original_tag = CAE
+        }
+
+        days_remove = 25
+
+        remove_effect = {
+            # 卡车 motorized_equipment  1500
+            add_equipment_to_stockpile = {
+                type = motorized_equipment
+                amount = 1500
+                producer = CAE
+
+            }
+        }
+
+        ai_will_do = {
+            base = 5
+        }
+    }
+    # 生产步兵载具
+    CAE_produce_infantry_vehicle_equipment = {
+        icon = GFX_decision_item_bg
+
+        visible = {
+            original_tag = CAE
+        }
+
+        days_remove = 30
+
+        remove_effect = {
+            # 步兵战车 ifv_equipment  1000
+            add_equipment_to_stockpile = {
+                type = ifv_equipment
+                amount = 1000
+                producer = CAE
+
+            }
+            # w武装直升机 attack_helicopter_equipment 750
+            add_equipment_to_stockpile = {
+                type = attack_helicopter_equipment
+                amount = 750
+                producer = CAE
+
+            }
+        }
+
+        ai_will_do = {
+            base = 5
+        }
+    }
+    # 生产轻装甲车辆
+    CAE_produce_light_vehicle_equipment = {
+        icon = GFX_decision_item_bg
+
+        visible = {
+            original_tag = CAE
+        }
+
+        days_remove = 40
+
+        remove_effect = {
+            # 轻型坦克 light_tank_chassis 500
+            add_equipment_to_stockpile = {
+                type = light_tank_chassis
+                amount = 500
+                producer = CAE
+            }
+        }
+
+        ai_will_do = {
+            base = 5
+        }
+    }
+    # 生产中型装甲车辆
+    CAE_produce_medium_vehicle_equipment = {
+        icon = GFX_decision_item_bg
+
+        visible = {
+            original_tag = CAE
+        }
+
+        days_remove = 45
+
+        remove_effect = {
+            # 主战坦克 medium_tank_chassis 600
+            add_equipment_to_stockpile = {
+                type = medium_tank_chassis
+                amount = 600
+                producer = CAE
+            }
+            # 中型自行火炮 300
+            add_equipment_to_stockpile = {
+                type = medium_tank_artillery_chassis
+                amount = 300
+                producer = CAE
+            }
+            # 中型自行防空 300
+            add_equipment_to_stockpile = {
+                type = medium_tank_aa_chassis
+                amount = 300
+                producer = CAE
+            }
+        }
+
+        ai_will_do = {
+            base = 5
+        }
+    }
+    # 生产重型装甲车辆
+    CAE_produce_heavy_vehicle_equipment = {
+        icon = GFX_decision_item_bg
+
+        visible = {
+            original_tag = CAE
+        }
+
+        days_remove = 50
+
+        remove_effect = {
+            # 重型坦克 heavy_tank_chassis 400
+            add_equipment_to_stockpile = {
+                type = heavy_tank_chassis
+                amount = 400
+                producer = CAE
+            }
+            # 重型自行反坦克炮
+            add_equipment_to_stockpile = {
+                type = heavy_tank_destroyer_chassis
+                amount = 400
+                producer = CAE
+            }
+            # 中型自行防空 300
+            add_equipment_to_stockpile = {
+                type = heavy_tank_aa_chassis
+                amount = 200
+                producer = CAE
+            }
+        }
+
+        ai_will_do = {
+            base = 5
+        }
+    }
+}

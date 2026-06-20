@@ -75,5 +75,44 @@ ideas = {
 			}
 		}
 
+		# 史上最失败的投资
+		CAE_worst_investment_ever = {
+			name = CAE_worst_investment_ever
+			picture = CAE_worst_investment_ever
+
+			allowed = {
+				original_tag = CAE
+			}
+
+			modifier = {
+				political_power_factor = -0.25
+				stability_factor = -0.25
+				war_support_factor = -0.25
+			}
+		}
+
+		# 崩溃的公司体系
+		CAE_collapsed_corporate_system = {
+			name = CAE_collapsed_corporate_system
+			picture = CAE_collapsed_corporate_system
+
+			allowed = {
+				original_tag = CAE
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.50
+				production_speed_buildings_factor = -0.50
+				production_factory_efficiency_gain_factor = -0.50
+				production_factory_max_efficiency_factor = -0.50
+				research_speed_factor = -0.50
+				army_attack_factor = -0.50
+				army_defence_factor = -0.50
+				army_org_factor = -0.50
+				army_org_regain = -0.50
+				air_mission_efficiency = -0.50
+			}
+		}
+
 	}
 }

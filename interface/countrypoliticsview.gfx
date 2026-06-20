@@ -193,6 +193,21 @@ spriteTypes = {
 		name = "GFX_autonomy_eu_member_icon"
 		textureFile = "gfx/interface/autonomy/autonomy_eu_member_icon.dds"
 	}
+
+	spriteType = {
+		name = "GFX_autonomy_sea_warlord_subject_icon"
+		textureFile = "gfx/interface/autonomy/sea_warlord_subject_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_autonomy_sea_integrated_warlord_subject_icon"
+		textureFile = "gfx/interface/autonomy/sea_integrated_warlord_subject_icon.dds"
+	}
+
+	spriteType = {
+		name = "GFX_autonomy_associated_dominion_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_associated_dominion_icon.dds"
+	}
 	
 	#-------------
 
@@ -588,6 +603,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_pol_view_bg"
 		textureFile = "gfx//interface//pol_view_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_pol_view_bg_no_dlc"
+		textureFile = "gfx//interface//pol_view_bg_no_dlc.dds"
 	}
 
 	spriteType = {

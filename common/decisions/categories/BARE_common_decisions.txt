@@ -1,0 +1,12 @@
+# 2026-05-18: 新增无GUI的全局宣传活动类别，参考原版苏联宣传鼓动部决议结构
+BARE_global_propaganda_campaigns = {
+	priority = 1097
+
+	icon = SOV_propaganda
+
+	visible = {
+		has_country_flag = BARE_propaganda_system_unlocked_flag
+	}
+
+	visible_when_empty = yes
+}

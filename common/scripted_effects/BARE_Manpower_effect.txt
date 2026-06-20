@@ -986,6 +986,130 @@ BARE_Combat_Readiness_Count_Start_Init = {
 		value = token:field_hospital
 	}
 
+	# 2026-06-14: 补充新版 Army HQ 单位的战备占用；数值按 common/units/hq_support.txt 中 manpower 的 K 值写入。
+	# HQ 参谋组 manpower = 60，因此占用 0.06K；HQ 警卫营 manpower = 80，因此占用 0.08K。
+	# 这些 token 仅加入统计数组，不改变单位解锁、装备需求或 GUI 行为。
+	#总部支援与警卫单位 17个
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_hq_support_company = 0.06
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:hq_support_company
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_hq_engineer = 0.06
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:hq_engineer
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_hq_recon = 0.06
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:hq_recon
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_hq_military_police = 0.06
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:hq_military_police
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_hq_maintenance = 0.06
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:hq_maintenance
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_hq_field_hospital = 0.06
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:hq_field_hospital
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_hq_logistics = 0.06
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:hq_logistics
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_hq_signal = 0.06
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:hq_signal
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_hq_naval_liaison = 0.06
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:hq_naval_liaison
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_hq_air_liaison = 0.06
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:hq_air_liaison
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_hq_specops = 0.06
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:hq_specops
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_hq_infantry = 0.08
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:hq_infantry
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_hq_motorized = 0.08
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:hq_motorized
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_hq_paratrooper = 0.08
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:hq_paratrooper
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_hq_light_armor = 0.08
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:hq_light_armor
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_hq_medium_armor = 0.08
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:hq_medium_armor
+	}
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_hq_heavy_armor = 0.08
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:hq_heavy_armor
+	}
+
 	   #格黑娜特殊单位X2
 	# set_variable = {
 	# 	global.BARE_Combat_Readiness_Count_royal_artillery_support_company_units = 0.05

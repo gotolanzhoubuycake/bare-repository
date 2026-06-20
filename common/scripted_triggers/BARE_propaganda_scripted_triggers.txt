@@ -1,0 +1,11 @@
+# 2026-05-18: 新增全局宣传活动系统触发器，暂时以文本决议替代专用GUI
+BARE_propaganda_slot_available = {
+	custom_trigger_tooltip = {
+		tooltip = BARE_propaganda_slot_available_tt
+		check_variable = {
+			var = BARE_propaganda_active_campaigns_var
+			value = BARE_propaganda_max_campaigns_var
+			compare = less_than
+		}
+	}
+}

@@ -95,7 +95,7 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_MIL_sport_GUI_Info_Start_Line"
 		texturefile = "gfx/interface/MIL_sport/MIL_sport_GUI_Info_Start_Line.dds"
-		noOfFrames = 5
+		noOfFrames = 6
 	}
 
 	# 进度条 (0% 和 100%)

@@ -75,8 +75,10 @@ MIL_soaring_eagle = {
 
 
 BARE_MIL_sport_Student_Support_Modifier = {
+    # 2026-05-20: 学生支持度派生修正。
+    # 具体数值由 `BARE_MIL_Sport_Student_Support_Var_Chance_effect` 按支持度档位写入变量。
+    # 2026-06-01: 不带 icon 的动态修正默认隐藏，仅作为实际数值承载；显示文本统一挂在专用文本动态修正上。
     enable = { always = yes }
-
 
     stability_factor =  BARE_MIL_sport_Student_Support_Modifier_stability_factor_var
     research_speed_factor =  BARE_MIL_sport_Student_Support_Modifier_research_speed_factor_var
@@ -88,6 +90,9 @@ BARE_MIL_sport_Student_Support_Modifier = {
 
 
 BARE_MIL_sport_Tech_Modifier = {
+    # 2026-05-20: 科技等级派生修正。
+    # 科技等级每次变化后通过 scripted effect 重算这里引用的变量。
+    # 2026-06-01: 不带 icon 的动态修正默认隐藏，仅作为实际数值承载；显示文本统一挂在专用文本动态修正上。
     enable = { always = yes }
 
     MIL_sport_student_Fee_monthly = BARE_MIL_sport_Tech_Modifier_MIL_sport_student_Fee_monthly_var
@@ -97,19 +102,63 @@ BARE_MIL_sport_Tech_Modifier = {
     production_speed_buildings_factor =  BARE_MIL_sport_Tech_Modifier_production_speed_buildings_factor_var
 }
 
+BARE_MIL_sport_Fee_Modifier = {
+    # 2026-05-26: 仅移除经费等级自身的月度经费固定消耗；安保和科技的月度经费消耗保持不变。
+    # 高经费等级改为在学生支持度月度变化中体现资源挤占压力。
+    # 2026-05-26: 每级经费等级额外增加10%生活消费品需求，变量由经费等级刷新逻辑统一写入。
+    # 2026-06-01: 不带 icon 的动态修正默认隐藏，仅作为实际数值承载；显示文本统一挂在专用文本动态修正上。
+    enable = { always = yes }
+
+    MIL_sport_student_support_monthly = BARE_MIL_sport_Fee_Modifier_MIL_sport_student_support_monthly_var
+    consumer_goods_factor = BARE_MIL_sport_Fee_Modifier_consumer_goods_factor_var
+}
+
 BARE_MIL_sport_Security_Modifier = {
+    # 2026-05-20: 安保等级当前用月度经费恢复修正表现“维护消耗”，同时在破坏事件中影响安全权重和损失。
+    # 2026-06-01: 不带 icon 的动态修正默认隐藏，仅作为实际数值承载；显示文本统一挂在专用文本动态修正上。
     MIL_sport_student_Fee_monthly = BARE_MIL_sport_Security_Modifier_MIL_sport_student_Fee_monthly_var
 }
 BARE_MIL_sport_Prepare_Modifier = {
-    icon = GFX_idea_BARE_MIL_sport_Prepare_Modifier 
+    # 2026-05-20: 晄轮大祭筹备期核心动态修正。
+    # 国策路线会逐步改写这里的生活消费品、稳定度、月支持度等变量。
+    # 2026-06-01: 不带 icon 的动态修正默认隐藏，仅作为实际数值承载；显示文本统一挂在专用文本动态修正上。
     enable = { always = yes }
+
     MIL_sport_student_Fee_monthly = BARE_MIL_sport_Prepare_Modifier_MIL_sport_student_Fee_monthly_var
     MIL_sport_student_support_monthly =  BARE_MIL_sport_Prepare_Modifier_MIL_sport_student_support_monthly_var
     consumer_goods_factor = BARE_MIL_sport_Prepare_Modifier_consumer_goods_factor_var
+    stability_factor = BARE_MIL_sport_Prepare_Modifier_stability_factor_var
     production_speed_buildings_factor = BARE_MIL_sport_Prepare_production_speed_buildings_factor_var
     research_speed_factor = BARE_MIL_sport_Prepare_Modifier_research_speed_factor_var
     industrial_capacity_factory = BARE_MIL_sport_Prepare_Modifier_industrial_capacity_factory_var
-    
+}
+
+BARE_MIL_sport_State_Text_Modifier = {
+    # 2026-06-06: 晄轮大祭国家层面文本动态修正。
+    # 本修正带 icon 因而可见，但不写入任何实际 modifier 数值；实际效果仍由 Prepare/Fee/Security/Tech/Student Support 等隐藏动态修正承担。
+    # 用途：只调用一个 custom_modifier_tooltip，把“总修正优先、细项随后”的显示顺序写入本地化文本内部，避免依赖多个 tooltip 声明顺序。
+    icon = GFX_idea_BARE_MIL_sport_Prepare_Modifier
+    enable = { always = yes }
+
+    custom_modifier_tooltip = BARE_MIL_sport_State_Modifier_Total_custom_tooltip
+}
+
+BARE_MIL_sport_Carnival_Modifier = {
+    # 2026-05-20: 晄轮大祭开幕后保留180天的临时收益，对应国策文档“晄轮大祭进行时”
+    icon = GFX_idea_BARE_MIL_sport_Prepare_Modifier
+    enable = { always = yes }
+    political_power_factor = 0.15
+    stability_weekly = 0.005
+    production_factory_efficiency_gain_factor = 0.10
+    production_factory_max_efficiency_factor = 0.10
+    industrial_capacity_factory = 0.05
+}
+
+BARE_MIL_sport_Cooperation_Sponsor_Modifier = {
+    # 2026-05-20: 晄轮大祭合作赞助方收益；10点合作上限对应10%生活消费品系数，5点对应5%
+    icon = GFX_idea_BARE_MIL_sport_Prepare_Modifier
+    enable = { always = yes }
+    consumer_goods_factor = BARE_MIL_sport_Cooperation_Sponsor_consumer_goods_factor_var
 }
 
 

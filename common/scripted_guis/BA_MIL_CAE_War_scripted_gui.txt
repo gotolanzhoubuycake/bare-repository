@@ -1,0 +1,13 @@
+scripted_gui = {
+	BARE_MIL_cae_war_GUI_SG = {
+		context_type = decision_category
+		window_name = "BARE_MIL_cae_war_GUI"
+		visible = {
+		}
+		properties = {
+			MIL_cae_war_GUI_Economy_Progress = {
+				frame = global.cae_economic_progress_frame
+			}
+		}
+	}
+}

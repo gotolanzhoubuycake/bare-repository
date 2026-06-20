@@ -1,0 +1,7 @@
+﻿l_simp_chinese:
+# 2026-05-18: 新增全局宣传活动系统文本，参考原版苏联宣传鼓动部决议并改为无GUI文本版
+ BARE_global_propaganda_campaigns: "宣传活动"
+ BARE_global_propaganda_campaigns_desc: "通过集中组织宣传活动，我们可以在一段时间内持续引导舆论、调动资源并强化特定政策方向。\n\n当前进行中的宣传活动：§Y[?BARE_propaganda_active_campaigns_var]§!/§Y[?BARE_propaganda_max_campaigns_var]§!\n单次宣传持续时间：§Y[?BARE_default_propaganda_campaign_duration_var]§!天\n宣传冷却时间：§Y[?BARE_default_propaganda_campaign_cooldown_var]§!天\n累计开展宣传活动：§Y[?BARE_propaganda_campaigns_total_var]§!"
+ BARE_propaganda_slot_available_tt: "当前仍有可用的宣传栏位（已用§Y[?BARE_propaganda_active_campaigns_var]§!/§Y[?BARE_propaganda_max_campaigns_var]§!）。"
+ BARE_propaganda_campaign_cooldown_tt: "该宣传活动结束后将进入§Y[?BARE_default_propaganda_campaign_cooldown_var]§!天冷却。"
+

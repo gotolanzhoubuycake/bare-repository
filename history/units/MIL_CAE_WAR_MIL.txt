@@ -1,0 +1,302 @@
+# 凯撒战争线，千年防守部队
+division_template = {
+	name = "千年防守部队"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+	support = {
+		recon = {x=0 y=0}
+	}
+}
+units = {
+    # 填线师
+	# 千年秋叶原 2248,857,9335
+	division = {
+        name = "千年防守部队"
+		location = 2248
+		division_template = "千年防守部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+    }
+    division = {
+        name = "千年防守部队"
+		location = 857
+		division_template = "千年防守部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+    }
+    division = {
+        name = "千年防守部队"
+		location = 9335
+		division_template = "千年防守部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+    }
+    # 春草小路 2079
+    division = {
+        name = "千年防守部队"
+		location = 2079
+		division_template = "千年防守部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+    }
+    # 千年公园南 5713,6980
+    division = {
+        name = "千年防守部队"
+		location = 5713
+		division_template = "千年防守部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+    }
+    division = {
+        name = "千年防守部队"
+		location = 6980
+		division_template = "千年防守部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+    }
+    # 千年第二校舍 1211,11860
+    division = {
+        name = "千年防守部队"
+		location = 1211
+		division_template = "千年防守部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+    }
+    division = {
+        name = "千年防守部队"
+		location = 11860
+		division_template = "千年防守部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+    }
+    # 千年数据中心 810
+    division = {
+        name = "千年防守部队"
+		location = 810
+		division_template = "千年防守部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+    }
+    # 单片机大道 2426,11951,6614,11987
+    division = {
+        name = "千年防守部队"
+		location = 2426
+		division_template = "千年防守部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+    }
+    division = {
+        name = "千年防守部队"
+		location = 11951
+		division_template = "千年防守部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+    }
+    division = {
+        name = "千年防守部队"
+		location = 6614
+		division_template = "千年防守部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+    }
+    division = {
+        name = "千年防守部队"
+		location = 11987
+		division_template = "千年防守部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+    }
+    # 千年第一校舍 4433,7979
+    division = {
+        name = "千年防守部队"
+		location = 4433
+		division_template = "千年防守部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+    }
+    division = {
+        name = "千年防守部队"
+		location = 7979
+		division_template = "千年防守部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+    }
+    # 千年商场 1345,2826,315
+    division = {
+        name = "千年防守部队"
+		location = 1345
+		division_template = "千年防守部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+    }
+    division = {
+        name = "千年防守部队"
+		location = 2826
+		division_template = "千年防守部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+    }
+    division = {
+        name = "千年防守部队"
+		location = 315
+		division_template = "千年防守部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+    }
+    # 巨塔西路 12008
+    division = {
+        name = "千年防守部队"
+		location = 12008
+		division_template = "千年防守部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+    }
+    # 千年中心公园 7956,5164,3738,6272,12076,9169,2361,5429
+    division = {
+        name = "千年防守部队"
+		location = 7956
+		division_template = "千年防守部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+    }
+    division = {
+        name = "千年防守部队"
+		location = 5164
+		division_template = "千年防守部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+    }
+    division = {
+        name = "千年防守部队"
+		location = 3738
+		division_template = "千年防守部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+    }
+    division = {
+        name = "千年防守部队"
+		location = 6272
+		division_template = "千年防守部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+    }
+    division = {
+        name = "千年防守部队"
+		location = 12076
+		division_template = "千年防守部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+    }
+    division = {
+        name = "千年防守部队"
+		location = 9169
+		division_template = "千年防守部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+    }
+    division = {
+        name = "千年防守部队"
+		location = 2361
+		division_template = "千年防守部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+    }
+    division = {
+        name = "千年防守部队"
+		location = 5429
+		division_template = "千年防守部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+    }
+    # 二进制大道 4467,4481,6142,3756
+    division = {
+        name = "千年防守部队"
+		location = 4467
+		division_template = "千年防守部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+    }
+    division = {
+        name = "千年防守部队"
+		location = 4481
+		division_template = "千年防守部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+    }
+    division = {
+        name = "千年防守部队"
+		location = 6142
+		division_template = "千年防守部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+    }
+    division = {
+        name = "千年防守部队"
+		location = 3756
+		division_template = "千年防守部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+    }
+    # 马尔斯大道 6679
+    division = {
+        name = "千年防守部队"
+		location = 6679
+		division_template = "千年防守部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+    }
+    # 千年科技馆 4795,5176
+    division = {
+        name = "千年防守部队"
+		location = 4795
+		division_template = "千年防守部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+    }
+    division = {
+        name = "千年防守部队"
+		location = 5176
+		division_template = "千年防守部队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+    }
+}

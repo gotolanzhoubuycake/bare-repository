@@ -704,11 +704,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_goal_MIL_MIL_end_attack_shine"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_MIL_end_attack.dds"
+		name = "GFX_goal_MIL_end_attack_shine"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_end_attack.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Millennium/GFX_goal_MIL_MIL_end_attack.dds"
+			animationmaskfile = "gfx/interface/goals/Millennium/GFX_goal_MIL_end_attack.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -721,7 +721,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Millennium/GFX_goal_MIL_MIL_end_attack.dds"
+			animationmaskfile = "gfx/interface/goals/Millennium/GFX_goal_MIL_end_attack.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -832,11 +832,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_goal_MIL_Abnormal_money_shine"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Abnormal_money.dds"
+		name = "GFX_goal_MIL_koyuki_deberture_shine"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_koyuki_deberture.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Abnormal_money.dds"
+			animationmaskfile = "gfx/interface/goals/Millennium/GFX_goal_MIL_koyuki_deberture.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -849,7 +849,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Abnormal_money.dds"
+			animationmaskfile = "gfx/interface/goals/Millennium/GFX_goal_MIL_koyuki_deberture.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -864,11 +864,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_goal_MIL_Abnormal_money_shine"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Abnormal_money.dds"
+		name = "GFX_goal_MIL_catch_koyuki_shine"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_catch_koyuki.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Abnormal_money.dds"
+			animationmaskfile = "gfx/interface/goals/Millennium/GFX_goal_MIL_catch_koyuki.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -881,7 +881,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Abnormal_money.dds"
+			animationmaskfile = "gfx/interface/goals/Millennium/GFX_goal_MIL_catch_koyuki.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -896,11 +896,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_goal_MIL_Abnormal_money_shine"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Abnormal_money.dds"
+		name = "GFX_goal_MIL_stange_machine_bill_shine"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_stange_machine_bill.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Abnormal_money.dds"
+			animationmaskfile = "gfx/interface/goals/Millennium/GFX_goal_MIL_stange_machine_bill.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -913,7 +913,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Abnormal_money.dds"
+			animationmaskfile = "gfx/interface/goals/Millennium/GFX_goal_MIL_stange_machine_bill.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -928,11 +928,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_goal_MIL_Abnormal_money_shine"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Abnormal_money.dds"
+		name = "GFX_goal_MIL_Unaccounted_for_machine_shine"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Unaccounted_for_machine.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Abnormal_money.dds"
+			animationmaskfile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Unaccounted_for_machine.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -945,7 +945,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Abnormal_money.dds"
+			animationmaskfile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Unaccounted_for_machine.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -2208,11 +2208,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_goal_MIL_mil_wisdom_shine"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_mil_wisdom.dds"
+		name = "GFX_goal_MIL_wisdom_shine"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_wisdom.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Millennium/GFX_goal_MIL_mil_wisdom.dds"
+			animationmaskfile = "gfx/interface/goals/Millennium/GFX_goal_MIL_wisdom.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -2225,7 +2225,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Millennium/GFX_goal_MIL_mil_wisdom.dds"
+			animationmaskfile = "gfx/interface/goals/Millennium/GFX_goal_MIL_wisdom.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -2656,11 +2656,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_goal_MIL_MIL_The_Increasingly_refined_preparations_shine"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_MIL_The_Increasingly_refined_preparations.dds"
+		name = "GFX_goal_MIL_The_Increasingly_refined_preparations_shine"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_The_Increasingly_refined_preparations.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Millennium/GFX_goal_MIL_MIL_The_Increasingly_refined_preparations.dds"
+			animationmaskfile = "gfx/interface/goals/Millennium/GFX_goal_MIL_The_Increasingly_refined_preparations.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -2673,7 +2673,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Millennium/GFX_goal_MIL_MIL_The_Increasingly_refined_preparations.dds"
+			animationmaskfile = "gfx/interface/goals/Millennium/GFX_goal_MIL_The_Increasingly_refined_preparations.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -3360,11 +3360,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_goal_MIL_Military_exchanges_with_Geh_shine"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Military_exchanges_with_Geh.dds"
+		name = "GFX_goal_MILitary_exchanges_with_Geh_shine"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MILitary_exchanges_with_Geh.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Military_exchanges_with_Geh.dds"
+			animationmaskfile = "gfx/interface/goals/Millennium/GFX_goal_MILitary_exchanges_with_Geh.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -3377,7 +3377,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Military_exchanges_with_Geh.dds"
+			animationmaskfile = "gfx/interface/goals/Millennium/GFX_goal_MILitary_exchanges_with_Geh.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -4223,11 +4223,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_goal_MIL_Millennium_Steel_Wall_shine"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Millennium_Steel_Wall.dds"
+		name = "GFX_goal_MILlennium_Steel_Wall_shine"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MILlennium_Steel_Wall.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Millennium_Steel_Wall.dds"
+			animationmaskfile = "gfx/interface/goals/Millennium/GFX_goal_MILlennium_Steel_Wall.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -4240,7 +4240,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Millennium_Steel_Wall.dds"
+			animationmaskfile = "gfx/interface/goals/Millennium/GFX_goal_MILlennium_Steel_Wall.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -4671,11 +4671,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_goal_MIL_Millennium_Stability_Guardian_shine"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Millennium_Stability_Guardian.dds"
+		name = "GFX_goal_MILlennium_Stability_Guardian_shine"
+		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MILlennium_Stability_Guardian.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Millennium_Stability_Guardian.dds"
+			animationmaskfile = "gfx/interface/goals/Millennium/GFX_goal_MILlennium_Stability_Guardian.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -4688,7 +4688,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Millennium_Stability_Guardian.dds"
+			animationmaskfile = "gfx/interface/goals/Millennium/GFX_goal_MILlennium_Stability_Guardian.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no

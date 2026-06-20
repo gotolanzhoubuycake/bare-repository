@@ -148,7 +148,10 @@ country_event = {
     is_triggered_only = yes
 
     immediate = {
-        add_political_power = 50
+        # 2026-05-25: immediate内效果统一隐藏，避免事件弹窗显示即时效果。
+        hidden_effect = {
+            add_political_power = 50
+        }
     }
 
 }
@@ -162,8 +165,11 @@ country_event = {
     is_triggered_only = yes
 
     immediate = {
-        add_political_power = 100
-        add_stability = -0.05
+        # 2026-05-25: immediate内效果统一隐藏，避免事件弹窗显示即时效果。
+        hidden_effect = {
+            add_political_power = 100
+            add_stability = -0.05
+        }
     }
 
 }
@@ -177,13 +183,16 @@ country_event = {
     is_triggered_only = yes
 
     immediate = {
-        add_opinion_modifier = {
-            target = CAE
-            modifier = negotiate_with_cae
-        }
-        reverse_add_opinion_modifier = {
-            target = MIL
-            modifier = negotiate_with_cae
+        # 2026-05-25: immediate内效果统一隐藏，避免事件弹窗显示即时效果。
+        hidden_effect = {
+            add_opinion_modifier = {
+                target = CAE
+                modifier = negotiate_with_cae
+            }
+            reverse_add_opinion_modifier = {
+                target = MIL
+                modifier = negotiate_with_cae
+            }
         }
     }
 
@@ -261,6 +270,166 @@ country_event = {
     }
 }
 
+# 事件：凯撒宣战
+country_event = {
+    id = MIL_cae_war.6
+
+    title = MIL_cae_war.6.t
+    desc = MIL_cae_war.6.d
+
+
+    is_triggered_only = yes
+    fire_only_once = yes
+
+    option = {
+        name = MIL_cae_war.6.a
+        ai_chance = {
+            base = 1
+        }
+    }
+
+    immediate = {
+        # 2026-05-25: immediate内效果统一隐藏，避免事件弹窗显示即时效果。
+        hidden_effect = {
+            # 设置全局标志，解锁凯撒战时宣传决策组和启动经济调整系统
+            CAE = {
+                set_country_flag = CAE_MIL_war_started
+                declare_war_on = {
+                    target = MIL
+                    type = annex_everything
+                }
+                load_oob = "MIL_CAE_WAR_CAE"
+                # 马尔斯大道占领区
+                set_province_controller = 12171
+                set_province_controller = 7229
+            }
+            MIL = {
+                set_country_flag = CAE_MIL_war_started
+                load_oob = "MIL_CAE_WAR_MIL"
+                # 千年海滩 31,471,32,730,33,731,473,320
+                31 = {
+                    set_state_controller_to = CAE
+                }
+                471 = {
+                    set_state_controller_to = CAE
+                }
+                32 = {
+                    set_state_controller_to = CAE
+                }
+                730 = {
+                    set_state_controller_to = CAE
+                }
+                33 = {
+                    set_state_controller_to = CAE
+                }
+                731 = {
+                    set_state_controller_to = CAE
+                }
+                473 = {
+                    set_state_controller_to = CAE
+                }
+                320 = {
+                    set_state_controller_to = CAE
+                }
+                # 千年大街 733,321,322,732,323
+                733 = {
+                    set_state_controller_to = CAE
+                }
+                321 = {
+                    set_state_controller_to = CAE
+                }
+                322 = {
+                    set_state_controller_to = CAE
+                }
+                732 = {
+                    set_state_controller_to = CAE
+                }
+                323 = {
+                    set_state_controller_to = CAE
+                }
+                # 333, 341, 331, 477, 745, 746, 476
+                333 = {
+                    set_state_controller_to = CAE
+                }
+                341 = {
+                    set_state_controller_to = CAE
+                }
+                331 = {
+                    set_state_controller_to = CAE
+                }
+                477 = {
+                    set_state_controller_to = CAE
+                }
+                745 = {
+                    set_state_controller_to = CAE
+                }
+                746 = {
+                    set_state_controller_to = CAE
+                }
+                476 = {
+                    set_state_controller_to = CAE
+                }
+            }
+        }
+
+    }
+}
+
+
+
+# 事件10：光辉的胜利
+# 由民族精神"永远飘扬的光辉旗帜"触发
+country_event = {
+    id = MIL_cae_war.10
+    title = MIL_cae_war.10.t
+    desc = MIL_cae_war.10.d
+
+    is_triggered_only = yes
+    fire_only_once = yes
+
+    option = {
+        name = MIL_cae_war.10.a
+        ai_chance = {
+            base = 1
+        }
+    }
+}
+
+# 事件11：审判战犯
+# 由民族精神"永远飘扬的光辉旗帜"触发
+country_event = {
+    id = MIL_cae_war.11
+    title = MIL_cae_war.11.t
+    desc = MIL_cae_war.11.d
+
+    is_triggered_only = yes
+    fire_only_once = yes
+
+    option = {
+        name = MIL_cae_war.11.a
+        ai_chance = {
+            base = 1
+        }
+    }
+}
+
+# 事件12：凯撒集团大解体
+# 由民族精神"永远飘扬的光辉旗帜"触发
+country_event = {
+    id = MIL_cae_war.12
+    title = MIL_cae_war.12.t
+    desc = MIL_cae_war.12.d
+
+    is_triggered_only = yes
+    fire_only_once = yes
+
+    option = {
+        name = MIL_cae_war.12.a
+        ai_chance = {
+            base = 1
+        }
+    }
+}
 
 
 country_event = {
@@ -272,6 +441,13 @@ country_event = {
 
 	fire_only_once = yes
 
+	immediate = {
+		# 2026-05-25: immediate内效果统一隐藏，避免事件弹窗显示即时效果。
+		hidden_effect = {
+			set_country_flag = MIL_grand_festival_focus_tree_unlocked
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
 
 
     option = {
@@ -283,7 +459,1053 @@ country_event = {
 			base = 1
 		}
     }
-    
+
+}
+
+# 2026-05-18: 晄轮大祭月度破坏事件。
+# 口径说明：
+# 1. 每月只检测一次，真正的概率分配在 `BARE_MIL_Sport_Sabotage_Check_effect` 中完成。
+# 2. 主要惩罚为准备综合评分下降。
+# 3. 2026-05-26: 破坏事件基础惩罚翻倍；学生支持度损失按最终实际准备评分损失的 1 倍统一结算。
+country_event = {
+    id = MIL_sport_event.50
+    title = MIL_sport_event.50.t
+    desc = MIL_sport_event.50.d
+
+	is_triggered_only = yes
+
+    option = {
+		name = MIL_sport_event.50.a
+		# 2026-05-26: 破坏事件 tooltip 按翻倍后的当前安保等级和保护状态显示实际扣分。
+		if = {
+			limit = {
+				check_variable = { BARE_MIL_sport_Security_Have_Var < 2 }
+				has_country_flag = MIL_Sport_Crackdown_on_Sabotage_flag
+			}
+			custom_effect_tooltip = MIL_Sport_Event_50_security_1_protected_tt
+		}
+		else_if = {
+			limit = {
+				check_variable = { BARE_MIL_sport_Security_Have_Var < 2 }
+			}
+			custom_effect_tooltip = MIL_Sport_Event_50_security_1_tt
+		}
+		else_if = {
+			limit = {
+				check_variable = { BARE_MIL_sport_Security_Have_Var < 4 }
+				has_country_flag = MIL_Sport_Crackdown_on_Sabotage_flag
+			}
+			custom_effect_tooltip = MIL_Sport_Event_50_security_2_3_protected_tt
+		}
+		else_if = {
+			limit = {
+				check_variable = { BARE_MIL_sport_Security_Have_Var < 4 }
+			}
+			custom_effect_tooltip = MIL_Sport_Event_50_security_2_3_tt
+		}
+		else_if = {
+			limit = {
+				has_country_flag = MIL_Sport_Crackdown_on_Sabotage_flag
+			}
+			custom_effect_tooltip = MIL_Sport_Event_50_security_4_5_protected_tt
+		}
+		else = {
+			custom_effect_tooltip = MIL_Sport_Event_50_security_4_5_tt
+		}
+		set_temp_variable = {
+			BARE_MIL_sport_Sabotage_Score_Damage_Temp_Var = 0
+		}
+		set_temp_variable = {
+			BARE_MIL_sport_Sabotage_Crackdown_Reduction_Temp_Var = 1
+		}
+		if = {
+			limit = {
+				check_variable = {
+					BARE_MIL_sport_Security_Have_Var < 2
+				}
+			}
+			set_temp_variable = {
+				BARE_MIL_sport_Sabotage_Score_Damage_Temp_Var = 4
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					BARE_MIL_sport_Security_Have_Var < 4
+				}
+			}
+			set_temp_variable = {
+				BARE_MIL_sport_Sabotage_Score_Damage_Temp_Var = 2
+			}
+		}
+		BARE_MIL_Sport_Sabotage_Apply_Damage_effect = yes
+		ai_chance = {
+			base = 1
+		}
+    }
+}
+
+country_event = {
+    id = MIL_sport_event.51
+    title = MIL_sport_event.51.t
+    desc = MIL_sport_event.51.d
+
+	is_triggered_only = yes
+
+    option = {
+		name = MIL_sport_event.51.a
+		# 2026-05-26: 破坏事件 tooltip 按翻倍后的当前安保等级和保护状态显示实际扣分。
+		if = {
+			limit = {
+				check_variable = { BARE_MIL_sport_Security_Have_Var < 4 }
+				has_country_flag = MIL_Sport_Crackdown_on_Sabotage_flag
+			}
+			custom_effect_tooltip = MIL_Sport_Event_51_security_1_3_protected_tt
+		}
+		else_if = {
+			limit = {
+				check_variable = { BARE_MIL_sport_Security_Have_Var < 4 }
+			}
+			custom_effect_tooltip = MIL_Sport_Event_51_security_1_3_tt
+		}
+		else_if = {
+			limit = {
+				check_variable = { BARE_MIL_sport_Security_Have_Var < 5 }
+				has_country_flag = MIL_Sport_Crackdown_on_Sabotage_flag
+			}
+			custom_effect_tooltip = MIL_Sport_Event_51_security_4_protected_tt
+		}
+		else_if = {
+			limit = {
+				check_variable = { BARE_MIL_sport_Security_Have_Var < 5 }
+			}
+			custom_effect_tooltip = MIL_Sport_Event_51_security_4_tt
+		}
+		else_if = {
+			limit = {
+				has_country_flag = MIL_Sport_Crackdown_on_Sabotage_flag
+			}
+			custom_effect_tooltip = MIL_Sport_Event_51_security_5_protected_tt
+		}
+		else = {
+			custom_effect_tooltip = MIL_Sport_Event_51_security_5_tt
+		}
+		set_temp_variable = {
+			BARE_MIL_sport_Sabotage_Crackdown_Reduction_Temp_Var = 1
+		}
+		if = {
+			limit = {
+				check_variable = {
+					# 2026-05-20: HOI4 不支持“不高于”运算符；这里用 < 4 等价表达安保等级不高于3。
+					BARE_MIL_sport_Security_Have_Var < 4
+				}
+			}
+			set_temp_variable = {
+				BARE_MIL_sport_Sabotage_Score_Damage_Temp_Var = 6
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					BARE_MIL_sport_Security_Have_Var < 5
+				}
+			}
+			set_temp_variable = {
+				BARE_MIL_sport_Sabotage_Score_Damage_Temp_Var = 4
+			}
+		}
+		else = {
+			set_temp_variable = {
+				BARE_MIL_sport_Sabotage_Score_Damage_Temp_Var = 2
+			}
+		}
+		BARE_MIL_Sport_Sabotage_Apply_Damage_effect = yes
+		ai_chance = {
+			base = 1
+		}
+    }
+}
+
+country_event = {
+    id = MIL_sport_event.52
+    title = MIL_sport_event.52.t
+    desc = MIL_sport_event.52.d
+
+	is_triggered_only = yes
+
+    option = {
+		name = MIL_sport_event.52.a
+		# 2026-05-26: 温泉开发部事件不受“严厉打击”保护影响，只按翻倍后的安保等级显示实际扣分。
+		if = {
+			limit = {
+				check_variable = { BARE_MIL_sport_Security_Have_Var < 5 }
+			}
+			custom_effect_tooltip = MIL_Sport_Event_52_security_1_4_tt
+		}
+		else = {
+			custom_effect_tooltip = MIL_Sport_Event_52_security_5_tt
+		}
+		set_temp_variable = {
+			BARE_MIL_sport_Sabotage_Crackdown_Reduction_Temp_Var = 0
+		}
+		if = {
+			limit = {
+				check_variable = {
+					BARE_MIL_sport_Security_Have_Var < 5
+				}
+			}
+			set_temp_variable = {
+				BARE_MIL_sport_Sabotage_Score_Damage_Temp_Var = 20
+			}
+		}
+		else = {
+			set_temp_variable = {
+				BARE_MIL_sport_Sabotage_Score_Damage_Temp_Var = 10
+			}
+		}
+		BARE_MIL_Sport_Sabotage_Apply_Damage_effect = yes
+		ai_chance = {
+			base = 1
+		}
+    }
+}
+
+country_event = {
+    id = MIL_sport_event.53
+    title = MIL_sport_event.53.t
+    desc = MIL_sport_event.53.d
+
+	is_triggered_only = yes
+
+    option = {
+		name = MIL_sport_event.53.a
+		# 2026-05-26: 破坏事件 tooltip 按翻倍后的当前安保等级和保护状态显示实际扣分。
+		if = {
+			limit = {
+				check_variable = { BARE_MIL_sport_Security_Have_Var < 5 }
+				has_country_flag = MIL_Sport_Crackdown_on_Sabotage_flag
+			}
+			custom_effect_tooltip = MIL_Sport_Event_53_security_1_4_protected_tt
+		}
+		else_if = {
+			limit = {
+				check_variable = { BARE_MIL_sport_Security_Have_Var < 5 }
+			}
+			custom_effect_tooltip = MIL_Sport_Event_53_security_1_4_tt
+		}
+		else_if = {
+			limit = {
+				has_country_flag = MIL_Sport_Crackdown_on_Sabotage_flag
+			}
+			custom_effect_tooltip = MIL_Sport_Event_53_security_5_protected_tt
+		}
+		else = {
+			custom_effect_tooltip = MIL_Sport_Event_53_security_5_tt
+		}
+		set_temp_variable = {
+			BARE_MIL_sport_Sabotage_Crackdown_Reduction_Temp_Var = 2
+		}
+		if = {
+			limit = {
+				check_variable = {
+					BARE_MIL_sport_Security_Have_Var < 5
+				}
+			}
+			set_temp_variable = {
+				BARE_MIL_sport_Sabotage_Score_Damage_Temp_Var = 10
+			}
+		}
+		else = {
+			set_temp_variable = {
+				BARE_MIL_sport_Sabotage_Score_Damage_Temp_Var = 4
+			}
+		}
+		BARE_MIL_Sport_Sabotage_Apply_Damage_effect = yes
+		ai_chance = {
+			base = 1
+		}
+    }
+}
+
+country_event = {
+    id = MIL_sport_event.54
+    title = MIL_sport_event.54.t
+    desc = MIL_sport_event.54.d
+
+	is_triggered_only = yes
+	hidden = yes
+
+    option = {
+		name = MIL_sport_event.54.a
+		# 2026-05-20: “筹备中的意外”改为额外事件链入口，抽中后再随机分发到具体意外事件
+		# 2026-05-20: 补入“祸从天降”，该事件按准备评分损失处理，不走普通破坏事件的支持度联动结算
+		random_list = {
+			1 = {
+				country_event = { id = MIL_sport_event.56 }
+			}
+			1 = {
+				country_event = { id = MIL_sport_event.57 }
+			}
+			1 = {
+				country_event = { id = MIL_sport_event.58 }
+			}
+			1 = {
+				country_event = { id = MIL_sport_event.59 }
+			}
+			1 = {
+				country_event = { id = MIL_sport_event.74 }
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+    }
+}
+
+country_event = {
+    id = MIL_sport_event.56
+    title = MIL_sport_event.56.t
+    desc = MIL_sport_event.56.d
+
+	is_triggered_only = yes
+
+    option = {
+		name = MIL_sport_event.56.a
+		custom_effect_tooltip = MIL_Sport_Event_56_effect_tt
+		subtract_from_variable = {
+			BARE_MIL_sport_Score_Var = 10
+		}
+		clamp_variable = {
+			var = BARE_MIL_sport_Score_Var
+			min = 0
+			max = 9999
+		}
+		add_to_variable = {
+			BARE_MIL_sport_Student_Support_Var = 5
+		}
+		BARE_MIL_Sport_Student_Support_Var_Chance_effect = yes
+		ai_chance = {
+			base = 1
+		}
+    }
+}
+
+country_event = {
+    id = MIL_sport_event.57
+    title = MIL_sport_event.57.t
+    desc = MIL_sport_event.57.d
+
+	is_triggered_only = yes
+
+    option = {
+		name = MIL_sport_event.57.a
+		custom_effect_tooltip = MIL_Sport_Event_57_effect_tt
+		add_to_variable = {
+			BARE_MIL_sport_Score_Var = 5
+		}
+		clamp_variable = {
+			var = BARE_MIL_sport_Score_Var
+			min = 0
+			max = 9999
+		}
+		add_to_variable = {
+			BARE_MIL_sport_Student_Support_Var = 15
+		}
+		BARE_MIL_Sport_Student_Support_Var_Chance_effect = yes
+		ai_chance = {
+			base = 1
+		}
+    }
+}
+
+country_event = {
+    id = MIL_sport_event.58
+    title = MIL_sport_event.58.t
+    desc = MIL_sport_event.58.d
+
+	is_triggered_only = yes
+
+    option = {
+		name = MIL_sport_event.58.a
+		custom_effect_tooltip = MIL_Sport_Event_58_a_effect_tt
+		trigger = {
+			any_owned_state = {
+				is_controlled_by = ROOT
+				non_damaged_building_level = {
+					building = industrial_complex
+					level > 0
+				}
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {
+				non_damaged_building_level = {
+					building = industrial_complex
+					level > 0
+				}
+			}
+			remove_building = {
+				type = industrial_complex
+				level = 1
+			}
+		}
+		add_to_variable = {
+			BARE_MIL_sport_Score_Var = 5
+		}
+		clamp_variable = {
+			var = BARE_MIL_sport_Score_Var
+			min = 0
+			max = 9999
+		}
+		ai_chance = {
+			base = 1
+		}
+    }
+
+    option = {
+		name = MIL_sport_event.58.b
+		custom_effect_tooltip = MIL_Sport_Event_58_b_effect_tt
+		trigger = {
+			any_owned_state = {
+				is_controlled_by = ROOT
+				non_damaged_building_level = {
+					building = industrial_complex
+					level > 0
+				}
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {
+				non_damaged_building_level = {
+					building = industrial_complex
+					level > 0
+				}
+			}
+			remove_building = {
+				type = industrial_complex
+				level = 1
+			}
+		}
+		add_to_variable = {
+			BARE_MIL_sport_Student_Support_Var = 5
+		}
+		BARE_MIL_Sport_Student_Support_Var_Chance_effect = yes
+		ai_chance = {
+			base = 1
+		}
+    }
+
+    option = {
+		name = MIL_sport_event.58.c
+		trigger = {
+			NOT = {
+				any_owned_state = {
+					is_controlled_by = ROOT
+					non_damaged_building_level = {
+						building = industrial_complex
+						level > 0
+					}
+				}
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+    }
+}
+
+country_event = {
+    id = MIL_sport_event.59
+    title = MIL_sport_event.59.t
+    desc = MIL_sport_event.59.d
+
+	is_triggered_only = yes
+
+    option = {
+		name = MIL_sport_event.59.a
+		custom_effect_tooltip = MIL_Sport_Event_59_a_effect_tt
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		subtract_from_variable = {
+			BARE_MIL_sport_Score_Var = 10
+		}
+		clamp_variable = {
+			var = BARE_MIL_sport_Score_Var
+			min = 0
+			max = 9999
+		}
+		ai_chance = {
+			base = 1
+		}
+    }
+
+    option = {
+		name = MIL_sport_event.59.b
+		custom_effect_tooltip = MIL_Sport_Event_59_b_effect_tt
+		ai_chance = {
+			base = 1
+		}
+    }
+}
+
+country_event = {
+    id = MIL_sport_event.74
+    title = MIL_sport_event.74.t
+    desc = MIL_sport_event.74.d
+
+	is_triggered_only = yes
+
+    option = {
+		name = MIL_sport_event.74.a
+		custom_effect_tooltip = MIL_Sport_Event_74_effect_tt
+		# 2026-05-20: “祸从天降”是筹备意外事件，不使用普通破坏事件的支持度联动损失。
+		subtract_from_variable = {
+			BARE_MIL_sport_Score_Var = 15
+		}
+		clamp_variable = {
+			var = BARE_MIL_sport_Score_Var
+			min = 0
+			max = 9999
+		}
+		ai_chance = {
+			base = 1
+		}
+    }
+}
+
+country_event = {
+    id = MIL_sport_event.55
+    title = MIL_sport_event.55.t
+    desc = MIL_sport_event.55.d
+
+	is_triggered_only = yes
+	hidden = yes
+
+    option = {
+		name = MIL_sport_event.55.a
+		ai_chance = {
+			base = 1
+		}
+    }
+}
+
+# 2026-05-20: 晄轮大祭最终结算。60为隐藏分发入口，61-64为可见结果事件。
+country_event = {
+    id = MIL_sport_event.60
+    title = MIL_sport_event.60.t
+    desc = MIL_sport_event.60.d
+
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		# 2026-05-25: immediate内效果统一隐藏，避免事件弹窗显示即时效果。
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = BARE_MIL_Sport_settled_flag }
+				}
+				BARE_MIL_Sport_Settlement_Set_Result_effect = yes
+				if = {
+					limit = { has_country_flag = BARE_MIL_Sport_settlement_great_success_flag }
+					country_event = { id = MIL_sport_event.61 }
+				}
+				else_if = {
+					limit = { has_country_flag = BARE_MIL_Sport_settlement_success_flag }
+					country_event = { id = MIL_sport_event.62 }
+				}
+				else_if = {
+					limit = { has_country_flag = BARE_MIL_Sport_settlement_partial_success_flag }
+					country_event = { id = MIL_sport_event.63 }
+				}
+				else = {
+					country_event = { id = MIL_sport_event.64 }
+				}
+			}
+		}
+	}
+
+    option = {
+		name = MIL_sport_event.60.a
+		ai_chance = {
+			base = 1
+		}
+    }
+}
+
+country_event = {
+    id = MIL_sport_event.61
+    title = MIL_sport_event.61.t
+    desc = MIL_sport_event.61.d
+
+	is_triggered_only = yes
+
+    option = {
+		name = MIL_sport_event.61.a
+		custom_effect_tooltip = MIL_Sport_Settlement_Great_Success_tt
+		BARE_MIL_Sport_Settlement_Great_Success_effect = yes
+		ai_chance = {
+			base = 1
+		}
+    }
+}
+
+country_event = {
+    id = MIL_sport_event.62
+    title = MIL_sport_event.62.t
+    desc = MIL_sport_event.62.d
+
+	is_triggered_only = yes
+
+    option = {
+		name = MIL_sport_event.62.a
+		custom_effect_tooltip = MIL_Sport_Settlement_Success_tt
+		BARE_MIL_Sport_Settlement_Success_effect = yes
+		ai_chance = {
+			base = 1
+		}
+    }
+}
+
+country_event = {
+    id = MIL_sport_event.63
+    title = MIL_sport_event.63.t
+    desc = MIL_sport_event.63.d
+
+	is_triggered_only = yes
+
+    option = {
+		name = MIL_sport_event.63.a
+		custom_effect_tooltip = MIL_Sport_Settlement_Partial_Success_tt
+		BARE_MIL_Sport_Settlement_Partial_Success_effect = yes
+		ai_chance = {
+			base = 1
+		}
+    }
+}
+
+country_event = {
+    id = MIL_sport_event.64
+    title = MIL_sport_event.64.t
+    desc = MIL_sport_event.64.d
+
+	is_triggered_only = yes
+
+    option = {
+		name = MIL_sport_event.64.a
+		custom_effect_tooltip = MIL_Sport_Settlement_Troubled_tt
+		BARE_MIL_Sport_Settlement_Troubled_effect = yes
+		ai_chance = {
+			base = 1
+		}
+    }
+}
+
+# 2026-05-25: 其他大型学院合作回复事件。
+# 维护说明：immediate 只负责抽取回复结果；具体经费上限、赞助方修正、请求清理和效果文本都放在选项内结算。
+# 2026-05-26: 合作总上限提高到20；完整合作在剩余额度至少10时显示，剩余额度不足时改用5点合作选项。
+country_event = {
+    id = MIL_sport_event.65
+    title = MIL_sport_event.65.t
+    desc = MIL_sport_event.65.d
+
+	is_triggered_only = yes
+
+	immediate = {
+		# 2026-05-25: immediate内效果统一隐藏，避免事件弹窗显示即时效果。
+		hidden_effect = {
+			BARE_MIL_Sport_Cooperation_Roll_GEH_effect = yes
+		}
+	}
+
+    option = {
+		name = MIL_sport_event.65.a
+		trigger = {
+			has_country_flag = BARE_MIL_sport_Cooperation_Result_10_flag
+			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var < 11 }
+		}
+		custom_effect_tooltip = MIL_Sport_Cooperation_GEH_tt
+		set_temp_variable = { BARE_MIL_sport_Cooperation_Add_Temp_Var = 10 }
+		BARE_MIL_Sport_Cooperation_GEH_Accept_effect = yes
+		ai_chance = { base = 100 }
+    }
+
+    option = {
+		name = MIL_sport_event.65.b
+		trigger = {
+			OR = {
+				has_country_flag = BARE_MIL_sport_Cooperation_Result_5_flag
+				AND = {
+					has_country_flag = BARE_MIL_sport_Cooperation_Result_10_flag
+					check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var > 10 }
+				}
+			}
+			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var < 20 }
+		}
+		custom_effect_tooltip = MIL_Sport_Cooperation_GEH_PARTIAL_tt
+		set_temp_variable = { BARE_MIL_sport_Cooperation_Add_Temp_Var = 5 }
+		BARE_MIL_Sport_Cooperation_GEH_Accept_effect = yes
+		ai_chance = { base = 80 }
+    }
+
+    option = {
+		name = MIL_sport_event.65.c
+		trigger = {
+			has_country_flag = BARE_MIL_sport_Cooperation_Result_None_flag
+		}
+		custom_effect_tooltip = MIL_Sport_Cooperation_None_tt
+		clr_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag
+		BARE_MIL_Sport_Cooperation_Clear_Result_effect = yes
+		ai_chance = { base = 1 }
+    }
+
+    option = {
+		name = MIL_sport_event.65.x
+		trigger = {
+			NOT = { has_country_flag = BARE_MIL_sport_Cooperation_Result_None_flag }
+			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var > 19 }
+		}
+		custom_effect_tooltip = MIL_Sport_Cooperation_Cap_Full_tt
+		clr_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag
+		BARE_MIL_Sport_Cooperation_Clear_Result_effect = yes
+		ai_chance = { base = 1 }
+    }
+}
+
+country_event = {
+    id = MIL_sport_event.66
+    title = MIL_sport_event.66.t
+    desc = MIL_sport_event.66.d
+
+	is_triggered_only = yes
+
+	immediate = {
+		# 2026-05-25: immediate内效果统一隐藏，避免事件弹窗显示即时效果。
+		hidden_effect = {
+			BARE_MIL_Sport_Cooperation_Roll_TRI_effect = yes
+		}
+	}
+
+    option = {
+		name = MIL_sport_event.66.a
+		trigger = {
+			has_country_flag = BARE_MIL_sport_Cooperation_Result_10_flag
+			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var < 11 }
+		}
+		custom_effect_tooltip = MIL_Sport_Cooperation_TRI_tt
+		set_temp_variable = { BARE_MIL_sport_Cooperation_Add_Temp_Var = 10 }
+		BARE_MIL_Sport_Cooperation_TRI_Accept_effect = yes
+		ai_chance = { base = 100 }
+    }
+
+    option = {
+		name = MIL_sport_event.66.b
+		trigger = {
+			OR = {
+				has_country_flag = BARE_MIL_sport_Cooperation_Result_5_flag
+				AND = {
+					has_country_flag = BARE_MIL_sport_Cooperation_Result_10_flag
+					check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var > 10 }
+				}
+			}
+			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var < 20 }
+		}
+		custom_effect_tooltip = MIL_Sport_Cooperation_TRI_PARTIAL_tt
+		set_temp_variable = { BARE_MIL_sport_Cooperation_Add_Temp_Var = 5 }
+		BARE_MIL_Sport_Cooperation_TRI_Accept_effect = yes
+		ai_chance = { base = 80 }
+    }
+
+    option = {
+		name = MIL_sport_event.66.c
+		trigger = {
+			has_country_flag = BARE_MIL_sport_Cooperation_Result_None_flag
+		}
+		custom_effect_tooltip = MIL_Sport_Cooperation_None_tt
+		clr_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag
+		BARE_MIL_Sport_Cooperation_Clear_Result_effect = yes
+		ai_chance = { base = 1 }
+    }
+
+    option = {
+		name = MIL_sport_event.66.x
+		trigger = {
+			NOT = { has_country_flag = BARE_MIL_sport_Cooperation_Result_None_flag }
+			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var > 19 }
+		}
+		custom_effect_tooltip = MIL_Sport_Cooperation_Cap_Full_tt
+		clr_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag
+		BARE_MIL_Sport_Cooperation_Clear_Result_effect = yes
+		ai_chance = { base = 1 }
+    }
+}
+
+country_event = {
+    id = MIL_sport_event.67
+    title = MIL_sport_event.67.t
+    desc = MIL_sport_event.67.d
+
+	is_triggered_only = yes
+
+	immediate = {
+		# 2026-05-25: immediate内效果统一隐藏，避免事件弹窗显示即时效果。
+		hidden_effect = {
+			BARE_MIL_Sport_Cooperation_Roll_SHA_effect = yes
+		}
+	}
+
+    option = {
+		name = MIL_sport_event.67.c
+		trigger = {
+			has_country_flag = BARE_MIL_sport_Cooperation_Result_10_flag
+			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var < 11 }
+		}
+		custom_effect_tooltip = MIL_Sport_Cooperation_SHA_FULL_tt
+		set_temp_variable = { BARE_MIL_sport_Cooperation_Add_Temp_Var = 10 }
+		BARE_MIL_Sport_Cooperation_SHA_Accept_effect = yes
+		ai_chance = { base = 100 }
+    }
+
+    option = {
+		name = MIL_sport_event.67.a
+		trigger = {
+			OR = {
+				has_country_flag = BARE_MIL_sport_Cooperation_Result_5_flag
+				AND = {
+					has_country_flag = BARE_MIL_sport_Cooperation_Result_10_flag
+					check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var > 10 }
+				}
+			}
+			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var < 20 }
+		}
+		custom_effect_tooltip = MIL_Sport_Cooperation_SHA_tt
+		set_temp_variable = { BARE_MIL_sport_Cooperation_Add_Temp_Var = 5 }
+		BARE_MIL_Sport_Cooperation_SHA_Accept_effect = yes
+		ai_chance = { base = 80 }
+    }
+
+    option = {
+		name = MIL_sport_event.67.b
+		trigger = {
+			has_country_flag = BARE_MIL_sport_Cooperation_Result_None_flag
+		}
+		custom_effect_tooltip = MIL_Sport_Cooperation_None_tt
+		clr_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag
+		BARE_MIL_Sport_Cooperation_Clear_Result_effect = yes
+		ai_chance = { base = 1 }
+    }
+
+    option = {
+		name = MIL_sport_event.67.x
+		trigger = {
+			NOT = { has_country_flag = BARE_MIL_sport_Cooperation_Result_None_flag }
+			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var > 19 }
+		}
+		custom_effect_tooltip = MIL_Sport_Cooperation_Cap_Full_tt
+		clr_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag
+		BARE_MIL_Sport_Cooperation_Clear_Result_effect = yes
+		ai_chance = { base = 1 }
+    }
+}
+
+country_event = {
+    id = MIL_sport_event.68
+    title = MIL_sport_event.68.t
+    desc = MIL_sport_event.68.d
+
+	is_triggered_only = yes
+
+	immediate = {
+		# 2026-05-25: immediate内效果统一隐藏，避免事件弹窗显示即时效果。
+		hidden_effect = {
+			BARE_MIL_Sport_Cooperation_Roll_RWT_effect = yes
+		}
+	}
+
+    option = {
+		name = MIL_sport_event.68.b
+		trigger = {
+			has_country_flag = BARE_MIL_sport_Cooperation_Result_10_flag
+			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var < 11 }
+		}
+		custom_effect_tooltip = MIL_Sport_Cooperation_RWT_FULL_tt
+		set_temp_variable = { BARE_MIL_sport_Cooperation_Add_Temp_Var = 10 }
+		BARE_MIL_Sport_Cooperation_RWT_Accept_effect = yes
+		ai_chance = { base = 100 }
+    }
+
+    option = {
+		name = MIL_sport_event.68.c
+		trigger = {
+			OR = {
+				has_country_flag = BARE_MIL_sport_Cooperation_Result_5_flag
+				AND = {
+					has_country_flag = BARE_MIL_sport_Cooperation_Result_10_flag
+					check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var > 10 }
+				}
+			}
+			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var < 20 }
+		}
+		custom_effect_tooltip = MIL_Sport_Cooperation_RWT_PARTIAL_tt
+		set_temp_variable = { BARE_MIL_sport_Cooperation_Add_Temp_Var = 5 }
+		BARE_MIL_Sport_Cooperation_RWT_Accept_effect = yes
+		ai_chance = { base = 80 }
+    }
+
+    option = {
+		name = MIL_sport_event.68.a
+		trigger = {
+			has_country_flag = BARE_MIL_sport_Cooperation_Result_None_flag
+		}
+		custom_effect_tooltip = MIL_Sport_Cooperation_RWT_tt
+		clr_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag
+		BARE_MIL_Sport_Cooperation_Clear_Result_effect = yes
+		ai_chance = { base = 1 }
+    }
+
+    option = {
+		name = MIL_sport_event.68.x
+		trigger = {
+			NOT = { has_country_flag = BARE_MIL_sport_Cooperation_Result_None_flag }
+			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var > 19 }
+		}
+		custom_effect_tooltip = MIL_Sport_Cooperation_Cap_Full_tt
+		clr_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag
+		BARE_MIL_Sport_Cooperation_Clear_Result_effect = yes
+		ai_chance = { base = 1 }
+    }
+}
+
+country_event = {
+    id = MIL_sport_event.69
+    title = MIL_sport_event.69.t
+    desc = MIL_sport_event.69.d
+
+	is_triggered_only = yes
+
+	immediate = {
+		# 2026-05-25: immediate内效果统一隐藏，避免事件弹窗显示即时效果。
+		hidden_effect = {
+			BARE_MIL_Sport_Cooperation_Roll_HYA_effect = yes
+		}
+	}
+
+    option = {
+		name = MIL_sport_event.69.c
+		trigger = {
+			has_country_flag = BARE_MIL_sport_Cooperation_Result_10_flag
+			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var < 11 }
+		}
+		custom_effect_tooltip = MIL_Sport_Cooperation_HYA_FULL_tt
+		set_temp_variable = { BARE_MIL_sport_Cooperation_Add_Temp_Var = 10 }
+		BARE_MIL_Sport_Cooperation_HYA_Accept_effect = yes
+		ai_chance = { base = 100 }
+    }
+
+    option = {
+		name = MIL_sport_event.69.a
+		trigger = {
+			OR = {
+				has_country_flag = BARE_MIL_sport_Cooperation_Result_5_flag
+				AND = {
+					has_country_flag = BARE_MIL_sport_Cooperation_Result_10_flag
+					check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var > 10 }
+				}
+			}
+			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var < 20 }
+		}
+		custom_effect_tooltip = MIL_Sport_Cooperation_HYA_tt
+		set_temp_variable = { BARE_MIL_sport_Cooperation_Add_Temp_Var = 5 }
+		BARE_MIL_Sport_Cooperation_HYA_Accept_effect = yes
+		ai_chance = { base = 80 }
+    }
+
+    option = {
+		name = MIL_sport_event.69.b
+		trigger = {
+			has_country_flag = BARE_MIL_sport_Cooperation_Result_None_flag
+		}
+		custom_effect_tooltip = MIL_Sport_Cooperation_None_tt
+		clr_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag
+		BARE_MIL_Sport_Cooperation_Clear_Result_effect = yes
+		ai_chance = { base = 1 }
+    }
+
+    option = {
+		name = MIL_sport_event.69.x
+		trigger = {
+			NOT = { has_country_flag = BARE_MIL_sport_Cooperation_Result_None_flag }
+			check_variable = { BARE_MIL_sport_Fee_Cooperation_Extra_Var > 19 }
+		}
+		custom_effect_tooltip = MIL_Sport_Cooperation_Cap_Full_tt
+		clr_country_flag = BARE_MIL_sport_Cooperation_Request_Pending_flag
+		BARE_MIL_Sport_Cooperation_Clear_Result_effect = yes
+		ai_chance = { base = 1 }
+    }
+}
+
+# 2026-05-20: 晄轮大祭国策专属剧情事件占位。
+# 维护说明：70-73 已经被国策接线，但目前只承载弹窗位置；正式文本和效果确认前不要在这里擅自加入数值。
+country_event = {
+    id = MIL_sport_event.70
+    title = MIL_sport_event.70.t
+    desc = MIL_sport_event.70.d
+
+	is_triggered_only = yes
+
+    option = {
+		name = MIL_sport_event.70.a
+		# 2026-05-20: TODO 后续补充“意外”事件效果
+		ai_chance = { base = 1 }
+    }
+}
+
+country_event = {
+    id = MIL_sport_event.71
+    title = MIL_sport_event.71.t
+    desc = MIL_sport_event.71.d
+
+	is_triggered_only = yes
+
+    option = {
+		name = MIL_sport_event.71.a
+		# 2026-05-20: TODO 后续补充“书记官的讲话”事件效果
+		ai_chance = { base = 1 }
+    }
+}
+
+country_event = {
+    id = MIL_sport_event.72
+    title = MIL_sport_event.72.t
+    desc = MIL_sport_event.72.d
+
+	is_triggered_only = yes
+
+    option = {
+		name = MIL_sport_event.72.a
+		# 2026-05-20: TODO 后续补充“意料之外的紧急状况”事件效果
+		ai_chance = { base = 1 }
+    }
+}
+
+country_event = {
+    id = MIL_sport_event.73
+    title = MIL_sport_event.73.t
+    desc = MIL_sport_event.73.d
+
+	is_triggered_only = yes
+
+    option = {
+		name = MIL_sport_event.73.a
+		# 2026-05-20: TODO 后续补充“晄轮大祭正式开幕”事件效果
+		ai_chance = { base = 1 }
+    }
 }
 
 

@@ -72,6 +72,7 @@
  MIL_award_game_department_new_invention: "千年游戏大赏"
 
  MIL_CAE_economic_situation: "凯撒经济状况："
+ MIL_CAE_FINAL_economic_situation: "凯撒经济状况："
  MIL_cae_war_decision_category: "凯撒冲突决议组"
  MIL_Sport_decision_category: "大运动会"
 # MIL_cae_war_decision_category_desc: "通过一系列决议打击凯撒的经济状况，为与凯撒的战争做好准备。"
@@ -80,12 +81,12 @@
  # 决议1：号召停用凯撒商品
  MIL_boycott_CAE_products: "号召停用凯撒商品"
  MIL_boycott_CAE_products_desc: "我们的学园正在和敌人开战，但我们的学生却还在用敌人的商品？我们将号召学生们用其他产品来取代凯撒的商品，虽然这势必会增加成本，但我们不能再资敌了。"
- MIL_boycott_CAE_products_tt: "民族精神$MIL_fight_against_cae$追加效果：生活消费品系数+10%，战争支持度+5%\n每周凯撒经济状况-1%"
+ MIL_boycott_CAE_products_tt: "民族精神$MIL_fight_against_cae$追加效果：生活消费品系数+10%，战争支持度+5%\n每月凯撒经济状况-1%"
 
  # 决议2：全面禁用凯撒商品
  MIL_ban_all_CAE_products: "全面禁用凯撒商品"
  MIL_ban_all_CAE_products_desc: "“别让罪恶的章鱼图标出现在千年学园”，我们将下令全面禁止使用凯撒的商品，并免费提供我们的商品来取而代之，尽管这会提升我们的财政压力，但失去我们这个大市场，凯撒的日子也不会好过。"
- MIL_ban_all_CAE_products_tt: "民族精神$MIL_fight_against_cae$追加效果：生活消费品系数+10%，战争支持度+5%\n每周凯撒经济状况-1.5%"
+ MIL_ban_all_CAE_products_tt: "民族精神$MIL_fight_against_cae$追加效果：生活消费品系数+10%，战争支持度+5%\n每月凯撒经济状况-1.5%"
 
  # 决议3：对凯撒实施网络攻击
  MIL_cyber_attack_CAE: "对凯撒实施网络攻击"
@@ -115,3 +116,22 @@
  MIL_seek_RWT_support: "寻求赤冬的支持"
  MIL_seek_RWT_support_desc: "作为奉行集体主义的冰霜之地，赤冬本来就对肆意妄为，铺张浪费的凯撒没啥好感，更何况基沃托斯的头号刺头-工务部对凯撒集团这种布尔乔亚更是深恶痛绝了，她们会支持我们的。"
  MIL_seek_academy_support_tt: "凯撒经济状况-5%"
+
+ # 凯撒战争线决议 GUI
+ BARE_MIL_cae_war_GUI_Title_Text: "§W企业战争§!"
+ BARE_MIL_cae_war_GUI_Detail_Text: "§W凯撒集团对基沃托斯的贪婪最终让它发动了这场战争，而我们要站在阻止它们野心的最前线。这场战争将决定基沃托斯能否守护学园都市这个名义共同体，我们不能退缩。\n凯撒集团的经济状况直接决定了它继续战争的动力，我们的自治区领土丢失、部队被击溃会导致市场对凯撒集团更有信心，进而提升它们的经济状况。\n反之，坚守阵地、击溃入侵者，并发动反攻，能让凯撒集团在基沃托斯的影响力极大幅削弱，进而重创它们的经济状况。\n如果凯撒集团的经济状况达到200%，或者我们被完全击溃，那我们的战斗就失去意义，也意味着凯撒集团大获全胜。反之，如果我们能将它们的经济状况削弱到0，或者完全击溃它们，那它们就再也无法继续作战，并将为自己的野心付出代价。\n千禧科技学园将众志成城，为基沃托斯的未来奋战到最后一刻！§!"
+ BARE_MIL_cae_war_GUI_CAE_Factory_Text: "§W凯撒工厂数量：§Y[?global.MIL_cae_war_GUI_CAE_factory_count|0]§!"
+ BARE_MIL_cae_war_GUI_MIL_Factory_Text: "§W千年工厂数量：§Y[?global.MIL_cae_war_GUI_MIL_factory_count|0]§!"
+ BARE_MIL_cae_war_GUI_CAE_Air_Text: "§W凯撒服役人数：§Y[?global.MIL_cae_war_GUI_CAE_deployed_manpower|0]k§!"
+ BARE_MIL_cae_war_GUI_MIL_Air_Text: "§W千年服役人数：§Y[?global.MIL_cae_war_GUI_MIL_deployed_manpower|0]k§!"
+ BARE_MIL_cae_war_GUI_CAE_State_Text: "§W凯撒总伤亡：§Y[?global.MIL_cae_war_GUI_CAE_casualties|0]k§!"
+ BARE_MIL_cae_war_GUI_MIL_State_Text: "§W千年总伤亡：§Y[?global.MIL_cae_war_GUI_MIL_casualties|0]k§!"
+ BARE_MIL_cae_war_GUI_CAE_Ground_Text: "§W凯撒占据省份：§Y[?global.MIL_cae_war_GUI_CAE_occupied_state_count|0]§!"
+ BARE_MIL_cae_war_GUI_MIL_Ground_Text: "§W千年占据省份：§Y[?global.MIL_cae_war_GUI_MIL_occupied_state_count|0]§!"
+ BARE_MIL_cae_war_GUI_CAE_Loss_Text: "§W凯撒剩余核心：§Y[?global.MIL_cae_war_GUI_CAE_remaining_core_state_count|0]§!"
+ BARE_MIL_cae_war_GUI_MIL_Loss_Text: "§W千年剩余核心：§Y[?global.MIL_cae_war_GUI_MIL_remaining_core_state_count|0]§!"
+ BARE_MIL_cae_war_GUI_Economy_Text: "§W凯撒集团经济状况：[?global.cae_final_economic_situation|Y1]%§!"
+ BARE_MIL_cae_war_GUI_Economy_Text_tooltip: "§Y凯撒集团经济状况§!\n当前最终经济状况：§Y[?global.cae_final_economic_situation|Y1]%§!\n基础经济状况：§Y[?global.cae_economic_situation|Y1]%§!\n战场快照修正：§Y[?global.cae_add_economic_situation|+=1]%§!\n\n达到§R0%§!时，凯撒集团将输掉这场战争。\n达到§G200%§!时，凯撒集团将赢得这场战争。"
+ BARE_MIL_cae_war_GUI_Monthly_Change_Text: "§W每月经济状况变化：[?global.cae_predicted_monthly_change|+=1]%§!"
+ BARE_MIL_cae_war_GUI_Monthly_Change_Text_tooltip: "§Y预计每月变化§!\n当前预测：§Y[?global.cae_predicted_monthly_change|+=1]%§!\n\n该值由凯撒控制千年省份、双方伤亡、双方服役人口差距、凯撒总体服役人口负担、千年控制凯撒核心省份，以及千年抵制/禁用凯撒商品的每月扣减共同决定。"
+ BARE_MIL_cae_war_GUI_Bottom_Text: "§W千年信息管理系统§!"

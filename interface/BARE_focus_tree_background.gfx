@@ -9,7 +9,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_NULL_focus_tree_background"
-		texturefile = "gfx//interface//focus_tree_background//BULL_BG.png"
+		texturefile = "gfx//interface//focus_tree_background//NULL_BG.png"
 	}
 
 	spriteType = {
