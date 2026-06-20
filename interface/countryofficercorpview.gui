@@ -617,9 +617,9 @@ guiTypes = {
 			}
 
 			containerWindowType = {
-				name = "land_doctrine_button" # A container window of the format X_doctrine_button will automatically be linked to doctrine folder "X"
-				position = { x=9999 y=9999 } #虚空
-				# position = { x=260 y=-11 }
+				name = "baland_doctrine_button" # A container window of the format X_doctrine_button will automatically be linked to doctrine folder "X"
+				# position = { x=9999 y=9999 } #虚空
+				position = { x=260 y=-11 }
 				size = {width=20 height=20}
 				clipping = no
 
@@ -879,9 +879,9 @@ guiTypes = {
 			}
 
 			containerWindowType = {
-				name = "air_doctrine_button" # A container window of the format X_doctrine_button will automatically be linked to doctrine folder "X"
-				# position = { x=260 y=-10 }
-				position = { x = 9999 y = 9999 } #虚空
+				name = "baair_doctrine_button" # A container window of the format X_doctrine_button will automatically be linked to doctrine folder "X"
+				position = { x=260 y=-10 }
+				# position = { x = 9999 y = 9999 } #虚空
 				size = {width=20 height=20}
 				clipping = no
 

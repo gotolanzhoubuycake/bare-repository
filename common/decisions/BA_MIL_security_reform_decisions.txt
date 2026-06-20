@@ -1,0 +1,224 @@
+# 2026-06-18 修改：新增千年安全委员会校园防卫改革系统决议，承接新版文档中的陆军/空军改革进度推进。
+MIL_security_reform_decision_category = {
+
+    MIL_security_reform_automaton_operation_training = {
+        icon = generic_army
+        visible = {
+            has_country_flag = MIL_security_reform_system_unlocked_flag
+            NOT = { has_country_flag = MIL_security_reform_completed_flag }
+        }
+        available = {
+            has_army_experience > 29
+            check_variable = { MIL_security_reform_army_decision_progress_var < 75 }
+        }
+        cost = 0
+        days_remove = 60
+        days_re_enable = 1
+        modifier = {
+            civilian_factory_use = 0
+        }
+        complete_effect = {
+            # 2026-06-18 修改：改革训练按设计消耗陆军经验，避免 decision cost 误消耗政治点数。
+            army_experience = -30
+            set_variable = { MIL_security_reform_temp_army_xp_gain_var = 0.05 }
+            set_variable = { MIL_security_reform_temp_land_mastery_gain_var = 0.05 }
+            if = {
+                limit = {
+                    NOT = { has_dynamic_modifier = { modifier = MIL_security_reform_army_training_modifier } }
+                }
+                add_dynamic_modifier = { modifier = MIL_security_reform_army_training_modifier }
+            }
+            force_update_dynamic_modifier = yes
+        }
+        remove_effect = {
+            clear_variable = MIL_security_reform_temp_army_xp_gain_var
+            clear_variable = MIL_security_reform_temp_land_mastery_gain_var
+            remove_dynamic_modifier = { modifier = MIL_security_reform_army_training_modifier }
+            BARE_MIL_Security_Reform_Add_Army_Progress_5_effect = yes
+        }
+        ai_will_do = { base = 2 }
+    }
+
+    MIL_security_reform_drone_operation_training = {
+        icon = generic_air
+        visible = {
+            has_country_flag = MIL_security_reform_system_unlocked_flag
+            NOT = { has_country_flag = MIL_security_reform_completed_flag }
+        }
+        available = {
+            has_air_experience > 29
+            check_variable = { MIL_security_reform_air_decision_progress_var < 75 }
+        }
+        cost = 0
+        days_remove = 60
+        days_re_enable = 1
+        complete_effect = {
+            # 2026-06-18 修改：改革训练按设计消耗空军经验，避免 decision cost 误消耗政治点数。
+            air_experience = -30
+            set_variable = { MIL_security_reform_temp_air_xp_gain_var = 0.05 }
+            set_variable = { MIL_security_reform_temp_air_mastery_gain_var = 0.05 }
+            if = {
+                limit = {
+                    NOT = { has_dynamic_modifier = { modifier = MIL_security_reform_air_training_modifier } }
+                }
+                add_dynamic_modifier = { modifier = MIL_security_reform_air_training_modifier }
+            }
+            force_update_dynamic_modifier = yes
+        }
+        remove_effect = {
+            clear_variable = MIL_security_reform_temp_air_xp_gain_var
+            clear_variable = MIL_security_reform_temp_air_mastery_gain_var
+            remove_dynamic_modifier = { modifier = MIL_security_reform_air_training_modifier }
+            BARE_MIL_Security_Reform_Add_Air_Progress_5_effect = yes
+        }
+        ai_will_do = { base = 2 }
+    }
+
+    MIL_security_reform_ground_tactics_improvement = {
+        icon = generic_army
+        visible = {
+            has_country_flag = MIL_security_reform_system_unlocked_flag
+            NOT = { has_country_flag = MIL_security_reform_completed_flag }
+        }
+        available = {
+            has_army_experience > 99
+            check_variable = { MIL_security_reform_army_decision_progress_var < 75 }
+        }
+        cost = 0
+        days_remove = 180
+        fire_only_once = yes
+        complete_effect = {
+            # 2026-06-18 修改：改革项目按设计消耗陆军经验，启动时扣除资源。
+            army_experience = -100
+        }
+        remove_effect = {
+            custom_effect_tooltip = MIL_security_reform_ground_tactics_improvement_tt
+            BARE_MIL_Security_Reform_Add_Army_Progress_10_effect = yes
+        }
+        ai_will_do = { base = 1 }
+    }
+
+    MIL_security_reform_experimental_mech_refit = {
+        icon = generic_army
+        visible = {
+            has_country_flag = MIL_security_reform_system_unlocked_flag
+            has_completed_focus = MIL_Mechanical_Built_High_Wall
+            NOT = { has_country_flag = MIL_security_reform_completed_flag }
+        }
+        available = {
+            has_army_experience > 99
+            check_variable = { MIL_security_reform_army_decision_progress_var < 75 }
+        }
+        cost = 0
+        days_remove = 180
+        fire_only_once = yes
+        complete_effect = {
+            # 2026-06-18 修改：改革项目按设计消耗陆军经验，启动时扣除资源。
+            army_experience = -100
+        }
+        remove_effect = {
+            custom_effect_tooltip = MIL_security_reform_experimental_mech_refit_tt
+            BARE_MIL_Security_Reform_Add_Army_Progress_10_effect = yes
+        }
+        ai_will_do = { base = 1 }
+    }
+
+    MIL_security_reform_special_ops_system_upgrade = {
+        icon = generic_army
+        visible = {
+            has_country_flag = MIL_security_reform_system_unlocked_flag
+            has_completed_focus = MIL_Integrate_C_and_C
+            NOT = { has_country_flag = MIL_security_reform_completed_flag }
+        }
+        available = {
+            has_army_experience > 149
+            check_variable = { MIL_security_reform_army_decision_progress_var < 75 }
+        }
+        cost = 0
+        days_remove = 270
+        fire_only_once = yes
+        complete_effect = {
+            # 2026-06-18 修改：改革项目按设计消耗陆军经验，启动时扣除资源。
+            army_experience = -150
+        }
+        remove_effect = {
+            custom_effect_tooltip = MIL_security_reform_special_ops_system_upgrade_tt
+            BARE_MIL_Security_Reform_Add_Army_Progress_10_effect = yes
+        }
+        ai_will_do = { base = 1 }
+    }
+
+    MIL_security_reform_update_drone_manual = {
+        icon = generic_air
+        visible = {
+            has_country_flag = MIL_security_reform_system_unlocked_flag
+            NOT = { has_country_flag = MIL_security_reform_completed_flag }
+        }
+        available = {
+            has_air_experience > 99
+            check_variable = { MIL_security_reform_air_decision_progress_var < 75 }
+        }
+        cost = 0
+        days_remove = 180
+        fire_only_once = yes
+        complete_effect = {
+            # 2026-06-18 修改：改革项目按设计消耗空军经验，启动时扣除资源。
+            air_experience = -100
+        }
+        remove_effect = {
+            custom_effect_tooltip = MIL_security_reform_update_drone_manual_tt
+            BARE_MIL_Security_Reform_Add_Air_Progress_10_effect = yes
+        }
+        ai_will_do = { base = 1 }
+    }
+
+    MIL_security_reform_optimize_ground_crew = {
+        icon = generic_air
+        visible = {
+            has_country_flag = MIL_security_reform_system_unlocked_flag
+            NOT = { has_country_flag = MIL_security_reform_completed_flag }
+        }
+        available = {
+            has_air_experience > 99
+            check_variable = { MIL_security_reform_air_decision_progress_var < 75 }
+        }
+        cost = 0
+        days_remove = 180
+        fire_only_once = yes
+        complete_effect = {
+            # 2026-06-18 修改：改革项目按设计消耗空军经验，启动时扣除资源。
+            air_experience = -100
+        }
+        remove_effect = {
+            custom_effect_tooltip = MIL_security_reform_optimize_ground_crew_tt
+            BARE_MIL_Security_Reform_Add_Air_Progress_10_effect = yes
+        }
+        ai_will_do = { base = 1 }
+    }
+
+    MIL_security_reform_practical_aircraft_design = {
+        icon = generic_air
+        visible = {
+            has_country_flag = MIL_security_reform_system_unlocked_flag
+            has_completed_focus = MIL_Practical_Drone_Development
+            NOT = { has_country_flag = MIL_security_reform_completed_flag }
+        }
+        available = {
+            has_air_experience > 99
+            check_variable = { MIL_security_reform_air_decision_progress_var < 75 }
+        }
+        cost = 0
+        days_remove = 360
+        fire_only_once = yes
+        complete_effect = {
+            # 2026-06-18 修改：改革项目按设计消耗空军经验，启动时扣除资源。
+            air_experience = -100
+        }
+        remove_effect = {
+            custom_effect_tooltip = MIL_security_reform_practical_aircraft_design_tt
+            remove_ideas = MIL_overly_advanced_aircraft
+            BARE_MIL_Security_Reform_Add_Air_Progress_10_effect = yes
+        }
+        ai_will_do = { base = 1 }
+    }
+}
