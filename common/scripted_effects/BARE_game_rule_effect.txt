@@ -154,7 +154,10 @@ BARE_RULE_story_settings_ALF_SELECTED_effect = {
 		load_oob = "DCA_oob_2019"
 	}
 	###触发事件###
-	A47 = {
+	random_country = {
+		limit = {
+			is_ai = no
+		}
 		country_event = {
 			id = ALF.99
 		}

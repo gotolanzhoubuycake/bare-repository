@@ -6,6 +6,9 @@ country_event = {
     title = ALF.99.t
     desc = ALF.99.desc
     is_triggered_only = yes
+    #immediate = {
+    #    goto_state = 223
+    #}
     option = {
         name = ALF.99.a
         custom_effect_tooltip = ALF_arrives_in_slience_tt
@@ -15,7 +18,7 @@ country_event = {
                 transfer_state_to = ALF
             }
             ALF = {
-                change_tag_from = A47
+                change_tag_from = ROOT
             }
             ALF = {
                 load_oob = ALF_oob_2019

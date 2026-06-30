@@ -1,0 +1,4 @@
+﻿l_simp_chinese:
+ setup_warning_event.1.t: "注意：不兼容的游戏规则"
+ setup_warning_event.1.d: "在此预设下，§G<学园战术演习>§!规则§R不可用§!。为避免发生潜在问题，该功能在本存档中将被禁用。\n\n对开发者：若需要重新启用该功能，请移步控制台或测试决议。"
+ setup_warning_event.1.a: "我知道了"

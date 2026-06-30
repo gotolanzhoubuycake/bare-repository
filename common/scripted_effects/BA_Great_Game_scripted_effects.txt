@@ -1059,3 +1059,31 @@ Great_Game_lift_total_cease_fire = {
 		}
 	}
 }
+
+##规则保险
+Great_Game_safe_open_effect = {
+    if = {
+        limit = {
+            has_game_rule = {
+                rule = BARE_RULE_story_settings_ALF
+                option = BARE_RULE_story_settings_ALF_SELECTED
+            }
+        }
+        ##激活一个提醒事件##
+        every_country = {
+			limit = {
+				is_ai = no
+			}
+            country_event = {
+                id = setup_warning_event.1
+				#days = 1
+            }
+        }
+    }
+    else = {
+        news_event = {
+            id = Great_Game.1000
+            months = 24
+        }
+    }
+}

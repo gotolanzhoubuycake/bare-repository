@@ -1,3 +1,17 @@
+add_namespace = setup_warning_event
+country_event = {
+	id = setup_warning_event.1
+	title = setup_warning_event.1.t
+	desc = setup_warning_event.1.d
+
+	#picture = GFX_report_event_generic
+	is_triggered_only = yes
+
+	option = {
+		name = setup_warning_event.1.a
+	}
+}
+
 add_namespace = gui_test
 
 news_event = {
