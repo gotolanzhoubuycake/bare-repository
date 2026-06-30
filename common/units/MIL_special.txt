@@ -1,6 +1,6 @@
 sub_units = {
 	MIL_Individual_Special_Operations_Mech = {
-		sprite = Individual_Special_Operations_Mech
+		sprite = infantry
 		map_icon_category = infantry
 		active = no
         cavalry = no
@@ -18,7 +18,7 @@ sub_units = {
 			mechanized 
 		}
 		
-		group = mobile
+		group = JiDong_BuBing
 
 		categories = {
 			category_army
@@ -32,24 +32,25 @@ sub_units = {
 		combat_width = 2 
 		
 
-		max_strength = 35
-		max_organisation = 75
-		default_morale = 0.3 
-		manpower = 160
+		max_strength = 30
+		max_organisation = 50
+		default_morale = 0.25
+		manpower = 210
 
 		#Misc Abilities
-		training_time = 120 
+		training_time = 210
 		suppression = 5.0 
-		weight = 0.5
+		weight = 2
 
-		supply_consumption = 0.20 
+		supply_consumption = 0.27
 		essential = {
 			infantry_equipment
 			MIL_Individual_Special_Operations_Mech_equipment
 		}	
 		need = {
 			infantry_equipment = 100
-			MIL_Individual_Special_Operations_Mech_equipment = 200
+			# 2026-06-24 修改：特战机甲需求数量同步轻型机甲营机甲需求数量。
+			MIL_Individual_Special_Operations_Mech_equipment = 6
 		}
 
 

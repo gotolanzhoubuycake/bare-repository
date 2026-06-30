@@ -43,6 +43,128 @@ ideas = {
 			}
         }
 
+        # 2026-06-29 修改：实用化飞行器设计完成后的初审阶段，使国策本身提供实际飞行器效果。
+        MIL_overly_advanced_aircraft_reviewed = {
+            name = MIL_overly_advanced_aircraft_reviewed
+            picture = MIL_overly_advanced_aircraft
+
+            allowed = {
+                original_tag = MIL
+            }
+
+            modifier = {
+                air_mission_efficiency = -0.08
+                air_superiority_efficiency = -0.15
+                air_cas_efficiency = -0.15
+                air_accidents = 0.15
+            }
+            equipment_bonus = {
+                # 2026-06-29 修改：初审阶段沿用原民族精神的无人机聚合类别，避免效果变化提示拆成多组机体后造成重复观感。
+                mio_cat_eq_all_aircraft = {
+                    build_cost_ic = 0.08
+                    reliability = 0.03
+                    instant = yes
+                }
+            }
+        }
+
+        # 2026-06-29 修改：实用化飞行器设计路线第一阶段，复用原图标并将收益主要落在无人机装备上。
+        MIL_overly_advanced_aircraft_practical_1 = {
+            name = MIL_overly_advanced_aircraft_practical_1
+            picture = MIL_overly_advanced_aircraft
+
+            allowed = {
+                original_tag = MIL
+            }
+
+            modifier = {
+                air_mission_efficiency = -0.05
+                air_superiority_efficiency = -0.10
+                air_cas_efficiency = -0.10
+                air_accidents = 0.10
+            }
+            equipment_bonus = {
+                small_uav_airframe = { build_cost_ic = 0.05 reliability = 0.05 instant = yes }
+                medium_uav_airframe = { build_cost_ic = 0.05 reliability = 0.05 instant = yes }
+                heavy_uav_airframe = { build_cost_ic = 0.05 reliability = 0.05 instant = yes }
+                small_uav_cas_airframe = { build_cost_ic = 0.05 reliability = 0.05 instant = yes }
+                medium_uav_cas_airframe = { build_cost_ic = 0.05 reliability = 0.05 instant = yes }
+                heavy_uav_cas_airframe = { build_cost_ic = 0.05 reliability = 0.05 instant = yes }
+                small_uav_recon_airframe = { build_cost_ic = 0.05 reliability = 0.05 instant = yes }
+            }
+        }
+
+        # 2026-06-29 修改：实用化飞行器设计路线最终阶段，提供低成本高可靠的无人机装备体系。
+        MIL_practical_aircraft_system = {
+            name = MIL_practical_aircraft_system
+            picture = MIL_overly_advanced_aircraft
+
+            allowed = {
+                original_tag = MIL
+            }
+
+            modifier = {
+                air_mission_efficiency = 0.03
+                air_accidents = -0.05
+            }
+            equipment_bonus = {
+                small_uav_airframe = { build_cost_ic = -0.05 reliability = 0.10 air_attack = 0.05 instant = yes }
+                medium_uav_airframe = { build_cost_ic = -0.05 reliability = 0.10 air_attack = 0.05 instant = yes }
+                heavy_uav_airframe = { build_cost_ic = -0.05 reliability = 0.10 air_attack = 0.05 instant = yes }
+                small_uav_cas_airframe = { build_cost_ic = -0.05 reliability = 0.10 air_ground_attack = 0.05 instant = yes }
+                medium_uav_cas_airframe = { build_cost_ic = -0.05 reliability = 0.10 air_ground_attack = 0.05 instant = yes }
+                heavy_uav_cas_airframe = { build_cost_ic = -0.05 reliability = 0.10 air_ground_attack = 0.05 instant = yes }
+                small_uav_recon_airframe = { build_cost_ic = -0.05 reliability = 0.10 instant = yes }
+            }
+        }
+
+        # 2026-06-29 修改：前卫化飞行器设计路线第一阶段，保留高维护代价并换取更强无人机性能。
+        MIL_overly_advanced_aircraft_vanguard_1 = {
+            name = MIL_overly_advanced_aircraft_vanguard_1
+            picture = MIL_overly_advanced_aircraft
+
+            allowed = {
+                original_tag = MIL
+            }
+
+            modifier = {
+                air_mission_efficiency = -0.02
+                air_accidents = 0.15
+            }
+            equipment_bonus = {
+                small_uav_airframe = { build_cost_ic = 0.18 reliability = -0.06 air_attack = 0.14 air_agility = 0.08 instant = yes }
+                medium_uav_airframe = { build_cost_ic = 0.18 reliability = -0.06 air_attack = 0.14 air_agility = 0.08 instant = yes }
+                heavy_uav_airframe = { build_cost_ic = 0.18 reliability = -0.06 air_attack = 0.14 air_agility = 0.08 instant = yes }
+                small_uav_cas_airframe = { build_cost_ic = 0.18 reliability = -0.06 air_ground_attack = 0.14 air_agility = 0.05 instant = yes }
+                medium_uav_cas_airframe = { build_cost_ic = 0.18 reliability = -0.06 air_ground_attack = 0.14 air_agility = 0.05 instant = yes }
+                heavy_uav_cas_airframe = { build_cost_ic = 0.18 reliability = -0.06 air_ground_attack = 0.14 air_agility = 0.05 instant = yes }
+                small_uav_recon_airframe = { build_cost_ic = 0.18 reliability = -0.06 air_agility = 0.08 instant = yes }
+            }
+        }
+
+        # 2026-06-29 修改：前卫化飞行器设计路线最终阶段，形成高性能高代价的千年前卫无人机体系。
+        MIL_vanguard_aircraft_system = {
+            name = MIL_vanguard_aircraft_system
+            picture = MIL_overly_advanced_aircraft
+
+            allowed = {
+                original_tag = MIL
+            }
+
+            modifier = {
+                air_accidents = 0.10
+            }
+            equipment_bonus = {
+                small_uav_airframe = { build_cost_ic = 0.30 reliability = -0.10 air_attack = 0.22 air_agility = 0.15 air_defence = 0.08 instant = yes }
+                medium_uav_airframe = { build_cost_ic = 0.30 reliability = -0.10 air_attack = 0.22 air_agility = 0.15 air_defence = 0.08 instant = yes }
+                heavy_uav_airframe = { build_cost_ic = 0.30 reliability = -0.10 air_attack = 0.22 air_agility = 0.15 air_defence = 0.10 instant = yes }
+                small_uav_cas_airframe = { build_cost_ic = 0.30 reliability = -0.10 air_ground_attack = 0.22 air_agility = 0.08 air_defence = 0.05 instant = yes }
+                medium_uav_cas_airframe = { build_cost_ic = 0.30 reliability = -0.10 air_ground_attack = 0.22 air_agility = 0.08 air_defence = 0.05 instant = yes }
+                heavy_uav_cas_airframe = { build_cost_ic = 0.30 reliability = -0.10 air_ground_attack = 0.22 air_agility = 0.08 air_defence = 0.08 instant = yes }
+                small_uav_recon_airframe = { build_cost_ic = 0.30 reliability = -0.10 air_agility = 0.12 air_defence = 0.08 instant = yes }
+            }
+        }
+
         # 财政危机的阴云
         MIL_shadow_of_financial_crisis = {
             name = MIL_shadow_of_financial_crisis
@@ -245,7 +367,7 @@ ideas = {
 			
 			# 装备修正：包含机甲和自动机
 			equipment_bonus = {
-				Individual_Special_Operations_Mech_equipment = {
+				MIL_Individual_Special_Operations_Mech_equipment = {
 					reliability = 0.10      # 可靠性 +10%
 					build_cost_ic = -0.10   # 生产花费 -10%
 				}
@@ -279,7 +401,7 @@ ideas = {
 			picture = idea_MIL_special_ops_force
 			
 			equipment_bonus = {
-				Individual_Special_Operations_Mech_equipment = {
+				MIL_Individual_Special_Operations_Mech_equipment = {
 					reliability = 0.10
 					build_cost_ic = -0.10
 				}
@@ -304,7 +426,7 @@ ideas = {
 			picture = idea_MIL_special_ops_force
 			
 			equipment_bonus = {
-				Individual_Special_Operations_Mech_equipment = {
+				MIL_Individual_Special_Operations_Mech_equipment = {
 					reliability = 0.10
 					build_cost_ic = -0.10
 				}
@@ -398,23 +520,17 @@ ideas = {
         steel_torrent_modifier_os = {
             allowed = { always = no }
             picture = GFX_idea_steel_torrent
+            # 2026-06-29 修改：战斗机甲使用千年装备类别聚合显示，自动机装备保持 auto_mech 独立加成。
+            # 注意：自动机装备与战斗机甲是两类装备，不能合并到同一装备类别。
             equipment_bonus = {
-                MIL_Individual_Special_Operations_Mech_equipment = {
+                auto_mech = {
                     maximum_speed = 0.05
                     instant = yes
                 }
-                light_bm_chassis = { maximum_speed = 0.05 instant = yes }
-                medium_bm_chassis = { maximum_speed = 0.05 instant = yes }
-                heavy_bm_chassis = { maximum_speed = 0.05 instant = yes }
-                light_bm_destroyer_chassis = { maximum_speed = 0.05 instant = yes }
-                medium_bm_destroyer_chassis = { maximum_speed = 0.05 instant = yes }
-                heavy_bm_destroyer_chassis = { maximum_speed = 0.05 instant = yes }
-                light_bm_artillery_chassis = { maximum_speed = 0.05 instant = yes }
-                medium_bm_artillery_chassis = { maximum_speed = 0.05 instant = yes }
-                heavy_bm_artillery_chassis = { maximum_speed = 0.05 instant = yes }
-                light_bm_aa_chassis = { maximum_speed = 0.05 instant = yes }
-                medium_bm_aa_chassis = { maximum_speed = 0.05 instant = yes }
-                heavy_bm_aa_chassis = { maximum_speed = 0.05 instant = yes }
+                MIL_bm_equipment_category = {
+                    maximum_speed = 0.05
+                    instant = yes
+                }
             }
         }
 
@@ -422,24 +538,18 @@ ideas = {
         steel_torrent_modifier_card = {
             allowed = { always = no }
             picture = GFX_idea_steel_torrent
+            # 2026-06-29 修改：战斗机甲使用千年装备类别聚合显示，自动机装备保持 auto_mech 独立加成。
             equipment_bonus = {
-                MIL_Individual_Special_Operations_Mech_equipment = {
+                auto_mech = {
                     defense = 0.05
                     reliability = 0.05
                     instant = yes
                 }
-                light_bm_chassis = { defense = 0.05 reliability = 0.05 instant = yes }
-                medium_bm_chassis = { defense = 0.05 reliability = 0.05 instant = yes }
-                heavy_bm_chassis = { defense = 0.05 reliability = 0.05 instant = yes }
-                light_bm_destroyer_chassis = { defense = 0.05 reliability = 0.05 instant = yes }
-                medium_bm_destroyer_chassis = { defense = 0.05 reliability = 0.05 instant = yes }
-                heavy_bm_destroyer_chassis = { defense = 0.05 reliability = 0.05 instant = yes }
-                light_bm_artillery_chassis = { defense = 0.05 reliability = 0.05 instant = yes }
-                medium_bm_artillery_chassis = { defense = 0.05 reliability = 0.05 instant = yes }
-                heavy_bm_artillery_chassis = { defense = 0.05 reliability = 0.05 instant = yes }
-                light_bm_aa_chassis = { defense = 0.05 reliability = 0.05 instant = yes }
-                medium_bm_aa_chassis = { defense = 0.05 reliability = 0.05 instant = yes }
-                heavy_bm_aa_chassis = { defense = 0.05 reliability = 0.05 instant = yes }
+                MIL_bm_equipment_category = {
+                    defense = 0.05
+                    reliability = 0.05
+                    instant = yes
+                }
             }
         }
 
@@ -447,25 +557,20 @@ ideas = {
         steel_torrent_modifier_os_card = {
             allowed = { always = no }
             picture = GFX_idea_steel_torrent
+            # 2026-06-29 修改：战斗机甲使用千年装备类别聚合显示，自动机装备保持 auto_mech 独立加成。
             equipment_bonus = {
-                MIL_Individual_Special_Operations_Mech_equipment = {
+                auto_mech = {
                     maximum_speed = 0.05
                     defense = 0.05
                     reliability = 0.05
                     instant = yes
                 }
-                light_bm_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 instant = yes }
-                medium_bm_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 instant = yes }
-                heavy_bm_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 instant = yes }
-                light_bm_destroyer_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 instant = yes }
-                medium_bm_destroyer_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 instant = yes }
-                heavy_bm_destroyer_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 instant = yes }
-                light_bm_artillery_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 instant = yes }
-                medium_bm_artillery_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 instant = yes }
-                heavy_bm_artillery_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 instant = yes }
-                light_bm_aa_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 instant = yes }
-                medium_bm_aa_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 instant = yes }
-                heavy_bm_aa_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 instant = yes }
+                MIL_bm_equipment_category = {
+                    maximum_speed = 0.05
+                    defense = 0.05
+                    reliability = 0.05
+                    instant = yes
+                }
             }
         }
 
@@ -473,8 +578,9 @@ ideas = {
         steel_torrent_modifier_firepower = {
             allowed = { always = no }
             picture = GFX_idea_steel_torrent
+            # 2026-06-29 修改：战斗机甲使用千年装备类别聚合显示，自动机装备保持 auto_mech 独立加成。
             equipment_bonus = {
-                MIL_Individual_Special_Operations_Mech_equipment = {
+                auto_mech = {
                     maximum_speed = 0.05
                     defense = 0.05
                     reliability = 0.05
@@ -483,18 +589,15 @@ ideas = {
                     build_cost_ic = 0.05
                     instant = yes
                 }
-                light_bm_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = 0.05 instant = yes }
-                medium_bm_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = 0.05 instant = yes }
-                heavy_bm_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = 0.05 instant = yes }
-                light_bm_destroyer_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = 0.05 instant = yes }
-                medium_bm_destroyer_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = 0.05 instant = yes }
-                heavy_bm_destroyer_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = 0.05 instant = yes }
-                light_bm_artillery_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = 0.05 instant = yes }
-                medium_bm_artillery_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = 0.05 instant = yes }
-                heavy_bm_artillery_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = 0.05 instant = yes }
-                light_bm_aa_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = 0.05 instant = yes }
-                medium_bm_aa_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = 0.05 instant = yes }
-                heavy_bm_aa_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = 0.05 instant = yes }
+                MIL_bm_equipment_category = {
+                    maximum_speed = 0.05
+                    defense = 0.05
+                    reliability = 0.05
+                    soft_attack = 0.05
+                    breakthrough = 0.10
+                    build_cost_ic = 0.05
+                    instant = yes
+                }
             }
         }
 
@@ -502,8 +605,9 @@ ideas = {
         steel_torrent_modifier_final = {
             allowed = { always = no }
             picture = GFX_idea_steel_torrent
+            # 2026-06-29 修改：战斗机甲使用千年装备类别聚合显示，自动机装备保持 auto_mech 独立加成。
             equipment_bonus = {
-                MIL_Individual_Special_Operations_Mech_equipment = {
+                auto_mech = {
                     maximum_speed = 0.05
                     defense = 0.05
                     reliability = 0.05
@@ -512,18 +616,15 @@ ideas = {
                     build_cost_ic = -0.15
                     instant = yes
                 }
-                light_bm_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = -0.15 instant = yes }
-                medium_bm_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = -0.15 instant = yes }
-                heavy_bm_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = -0.15 instant = yes }
-                light_bm_destroyer_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = -0.15 instant = yes }
-                medium_bm_destroyer_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = -0.15 instant = yes }
-                heavy_bm_destroyer_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = -0.15 instant = yes }
-                light_bm_artillery_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = -0.15 instant = yes }
-                medium_bm_artillery_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = -0.15 instant = yes }
-                heavy_bm_artillery_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = -0.15 instant = yes }
-                light_bm_aa_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = -0.15 instant = yes }
-                medium_bm_aa_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = -0.15 instant = yes }
-                heavy_bm_aa_chassis = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = -0.15 instant = yes }
+                MIL_bm_equipment_category = {
+                    maximum_speed = 0.05
+                    defense = 0.05
+                    reliability = 0.05
+                    soft_attack = 0.05
+                    breakthrough = 0.10
+                    build_cost_ic = -0.15
+                    instant = yes
+                }
             }
         }
 
@@ -644,6 +745,50 @@ ideas = {
                 planning_speed = 0.10
                 air_detection = 0.10
                 air_mission_efficiency = 0.05
+            }
+        }
+
+        # 2026-07-01 修改：千年安定的守护者最终合成民族精神；完成全部军事收束线后统一合并奖励。
+        MIL_strongest_millennium_soldiers = {
+            name = MIL_strongest_millennium_soldiers
+            picture = GFX_idea_MIL_reorganized_security_department
+            modifier = {
+                encryption = 1
+                decryption_speed = 0.10
+                civilian_intel_to_others = -55
+                army_intel_to_others = -55
+                navy_intel_to_others = -45
+                airforce_intel_to_others = -45
+                civilian_intel_factor = 0.10
+                army_intel_factor = 0.10
+                airforce_intel_factor = 0.10
+                counter_intelligence = 1.0
+                planning_speed = 0.10
+                air_detection = 0.15
+                air_mission_efficiency = 0.30
+                air_night_penalty = -0.10
+                air_weather_penalty = -0.10
+                air_training_xp_gain_factor = 0.05
+                experience_gain_air = 0.10
+                air_ace_generation_chance_factor = 0.10
+                air_wing_xp_loss_when_killed_factor = -0.25
+                air_agility_factor = 0.05
+                air_cas_efficiency = 0.05
+                special_forces_training_time_factor = 0.10
+                special_forces_cap = 0.10
+                terrain_penalty_reduction = 0.15
+                special_forces_attack_factor = 0.15
+                special_forces_defence_factor = 0.15
+                modifier_army_sub_unit_infantry_am_attack_factor = 0.05
+                modifier_army_sub_unit_infantry_am_defence_factor = 0.05
+                modifier_army_sub_unit_category_bm_attack_factor = 0.05
+                modifier_army_sub_unit_category_bm_defence_factor = 0.05
+            }
+            equipment_bonus = {
+                mio_cat_eq_all_aircraft = { build_cost_ic = -0.10 instant = yes }
+                MIL_Individual_Special_Operations_Mech_equipment = { reliability = 0.10 build_cost_ic = -0.10 instant = yes }
+                auto_mech = { maximum_speed = 0.05 defense = 0.05 reliability = 0.15 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = -0.30 instant = yes }
+                MIL_bm_equipment_category = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 soft_attack = 0.05 breakthrough = 0.10 build_cost_ic = -0.20 instant = yes }
             }
         }
 

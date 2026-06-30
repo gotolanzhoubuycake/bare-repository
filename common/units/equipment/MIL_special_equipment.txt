@@ -1,36 +1,38 @@
 equipments = {
 
 	MIL_Individual_Special_Operations_Mech_equipment = {
+		# 2026-06-24 修改：按轻型机甲 Mk1 基准重标定；造价为轻型机甲 +15%，主要装备属性为轻型机甲 +10%。
 		year = 2019
 		is_archetype = yes
 		picture = archetype_medium_tank_equipment		
 		is_buildable = no
 		is_convertable = yes
-		type = mechanized
+		# 2026-06-29 修改：加入千年战斗机甲装备类别，用于聚合钢铁洪流等机甲装备加成显示。
+		type = { mechanized MIL_bm_equipment_category }
 		group_by = archetype
 		
 		interface_category = interface_category_armor
 		
 		#Misc Abilities
-		maximum_speed = 11
-		reliability = 0.8
+		maximum_speed = 12.1
+		reliability = 0.88
 
 		#Defensive Abilities
-		defense = 10
-		breakthrough = 30
-		hardness = 0.4
-		armor_value = 50
+		defense = 5.5
+		breakthrough = 26.4
+		hardness = 0.65
+		armor_value = 38.5
 
 		#Offensive Abilities
-		soft_attack = 40
-		hard_attack = 25
-		ap_attack = 25
+		soft_attack = 16.5
+		hard_attack = 8.8
+		ap_attack = 33
 		air_attack = 0
 
 		#Space taken in convoy
 		lend_lease_cost = 12
 		
-		build_cost_ic = 2.5
+		build_cost_ic = 101.2
 		resources = {
 			resources_cm = 3
 			resources_hic = 1
@@ -41,27 +43,28 @@ equipments = {
 	
 	MIL_Individual_Special_Operations_Mech_equipment_1 = {
 
+		# 2026-06-24 修改：按轻型机甲 Mk1 基准重标定；造价为轻型机甲 +15%，主要装备属性为轻型机甲 +10%。
 		archetype = MIL_Individual_Special_Operations_Mech_equipment
 		#Misc Abilities
-		maximum_speed = 11
+		maximum_speed = 12.1
 		reliability = 0.8
 
 		#Defensive Abilities
-		defense = 15
-		breakthrough = 35
-		hardness = 0.4
-		armor_value = 50
+		defense = 5.5
+		breakthrough = 26.4
+		hardness = 0.65
+		armor_value = 38.5
 
 		#Offensive Abilities
-		soft_attack = 40
-		hard_attack = 25
-		ap_attack = 25
+		soft_attack = 16.5
+		hard_attack = 8.8
+		ap_attack = 33
 		air_attack = 0
 
 		#Space taken in convoy
 		lend_lease_cost = 12
 		
-		build_cost_ic = 2.5
+		build_cost_ic = 101.2
 		resources = {
 			resources_cm = 3
 			resources_hic = 1
@@ -70,29 +73,30 @@ equipments = {
 	}
 	MIL_Individual_Special_Operations_Mech_equipment_2 = {
 
+		# 2026-06-24 修改：按轻型机甲 Mk2 基准重标定；造价为轻型机甲 +15%，主要装备属性为轻型机甲 +10%。
 		archetype = MIL_Individual_Special_Operations_Mech_equipment
 		parent = MIL_Individual_Special_Operations_Mech_equipment_1
 		
 		#Misc Abilities
-		maximum_speed = 11
+		maximum_speed = 13.4
 		reliability = 0.8
 
 		#Defensive Abilities
-		defense = 18
-		breakthrough = 40
-		hardness = 0.4
-		armor_value = 50
+		defense = 5.5
+		breakthrough = 34.1
+		hardness = 0.65
+		armor_value = 49.5
 
 		#Offensive Abilities
-		soft_attack = 45
-		hard_attack = 25
-		ap_attack = 25
+		soft_attack = 22.55
+		hard_attack = 12.65
+		ap_attack = 41.8
 		air_attack = 0
 
 		#Space taken in convoy
 		lend_lease_cost = 12
 		
-		build_cost_ic = 2.6
+		build_cost_ic = 103.5
 		resources = {
 			resources_cm = 3
 			resources_hic = 1
@@ -101,29 +105,30 @@ equipments = {
 	}
 	MIL_Individual_Special_Operations_Mech_equipment_3 = {
 
+		# 2026-06-24 修改：按轻型机甲 Mk3 基准重标定；造价为轻型机甲 +15%，主要装备属性为轻型机甲 +10%。
 		archetype = MIL_Individual_Special_Operations_Mech_equipment
 
 		parent = MIL_Individual_Special_Operations_Mech_equipment_2
 		#Misc Abilities
-		maximum_speed = 11
+		maximum_speed = 14.7
 		reliability = 0.8
 
 		#Defensive Abilities
-		defense = 20
-		breakthrough = 45
-		hardness = 0.4
-		armor_value = 50
+		defense = 6.6
+		breakthrough = 41.8
+		hardness = 0.65
+		armor_value = 60.5
 
 		#Offensive Abilities
-		soft_attack = 50
-		hard_attack = 30
-		ap_attack = 25
+		soft_attack = 28.6
+		hard_attack = 16.5
+		ap_attack = 50.6
 		air_attack = 0
 
 		#Space taken in convoy
 		lend_lease_cost = 12
 		
-		build_cost_ic = 2.7
+		build_cost_ic = 115
 		resources = {
 			resources_cm = 3
 			resources_hic = 1
@@ -132,29 +137,30 @@ equipments = {
 	}
 	MIL_Individual_Special_Operations_Mech_equipment_4 = {
 
+		# 2026-06-24 修改：按轻型机甲 Mk4 基准重标定；造价为轻型机甲 +15%，主要装备属性为轻型机甲 +10%。
 		archetype = MIL_Individual_Special_Operations_Mech_equipment
 
 		parent = MIL_Individual_Special_Operations_Mech_equipment_3
 		#Misc Abilities
-		maximum_speed = 11
+		maximum_speed = 16
 		reliability = 0.8
 
 		#Defensive Abilities
-		defense = 25
-		breakthrough = 45
-		hardness = 0.4
-		armor_value = 50
+		defense = 7.7
+		breakthrough = 49.5
+		hardness = 0.65
+		armor_value = 71.5
 
 		#Offensive Abilities
-		soft_attack = 60
-		hard_attack = 30
-		ap_attack = 25
+		soft_attack = 34.65
+		hard_attack = 20.35
+		ap_attack = 59.4
 		air_attack = 0
 
 		#Space taken in convoy
 		lend_lease_cost = 12
 		
-		build_cost_ic = 2.8
+		build_cost_ic = 126.5
 		resources = {
 			resources_cm = 3
 			resources_hic = 1

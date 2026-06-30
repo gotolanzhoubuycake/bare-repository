@@ -1826,7 +1826,7 @@ focus_tree = {
 			air_experience = 30
 			# 2026-06-18 修改：初始化千年安全委员会校园防卫改革系统，并解锁相关改革决议。
 			BARE_MIL_Security_Reform_Init_effect = yes
-			custom_effect_tooltip = MIL_security_reform_decisions_unlocked_tt
+			unlock_decision_category_tooltip = MIL_security_reform_decision_category
 			country_event = { id = MIL_reform.1 }
 		}
 	}
@@ -1848,6 +1848,10 @@ focus_tree = {
 		completion_reward = {
 			# create_unit = ... # 解锁编制“千年特战生”
 			set_technology  = { individual_special_operations_mech_equipment_tech = 1 }
+			# 2026-06-24 修改：完成整合C&C时检查既有突击载具等级，补发已满足条件的高级特战机甲建造科技。
+			BARE_MIL_Special_Operations_Mech_Sync_Equipment_Tech_effect = yes
+			# 2026-06-29 修改：国策解锁改革决议时使用原生解锁提示效果，避免玩家无法从国策效果得知新增决议。
+			unlock_decision_tooltip = MIL_security_reform_special_ops_system_upgrade
 			division_template = {
                 name = "千年特战生"
                 division_names_group = MIL_SPE_01
@@ -1952,6 +1956,7 @@ focus_tree = {
 			#获得民族精神“千年特战部队”
 			force_update_dynamic_modifier = yes
 			add_ideas = MIL_special_ops_force_1 # 获得新精神（暂无加成）
+			custom_effect_tooltip = MIL_Special_Forces_Training_Program_tt
 			# effect_tooltip = {
 			# 	swap_ideas = {
 			# 		remove_idea = MIL_security_department_tooltip_3
@@ -1972,6 +1977,14 @@ focus_tree = {
 			focus = MIL_Special_Forces_Training_Program
 		}
 		completion_reward = {
+			# 2026-06-24 修改：仅在尚未拥有机甲开发对应阶段精神时显示效果提示，避免后续重复显示相同装备加成。
+			if = {
+				limit = {
+					NOT = { has_idea = MIL_special_ops_force_1 }
+					NOT = { has_idea = MIL_special_ops_force_2_training }
+				}
+				custom_effect_tooltip = MIL_Special_Forces_Exoskeleton_Development_tt
+			}
 			# 分支逻辑判断：
 			# 情况A：如果目前是【基础版】，说明还没做训练国策 -> 变为【机甲版】
 			if = {
@@ -2038,6 +2051,8 @@ focus_tree = {
 		completion_reward = {
 			# 2026-06-17 修改：统一结算安保部改革对承平日久动态修正的全部变量变化，并在全数归零时移除动态修正。
 			BARE_MIL_Security_Department_Long_Peace_Reform_Progress_effect = yes
+			# 2026-06-29 修改：国策解锁后续工厂建设决议，并使用原生解锁提示展示给玩家。
+			unlock_decision_tooltip = MIL_special_ops_factory_expansion
 			swap_ideas = {
 				remove_idea = MIL_special_ops_force_3_combined
 				add_idea = MIL_special_ops_force_4_final
@@ -2071,6 +2086,8 @@ focus_tree = {
 		completion_reward = {
 			# 2026-06-17 修改：统一结算安保部改革对承平日久动态修正的全部变量变化，并在全数归零时移除动态修正。
 			BARE_MIL_Security_Department_Long_Peace_Reform_Progress_effect = yes
+			# 2026-06-29 修改：国策解锁改革决议时使用原生解锁提示效果，避免玩家无法从国策效果得知新增决议。
+			unlock_decision_tooltip = MIL_security_reform_experimental_mech_refit
 			hidden_effect = {	add_ideas = steel_torrent_modifier }
 
         	custom_effect_tooltip = MIL_Mechanical_Built_High_Wall_tt
@@ -2098,7 +2115,11 @@ focus_tree = {
 			set_country_flag = MIL_os_upgrade_done
 			custom_effect_tooltip = MIL_OS_Upgrade_tt
 			hidden_effect = {
-				set_technology = { steel_torrent_os_upgrade_tech = 1 }
+				# 2026-06-29 修改：操作系统升级的地形适应性仍由隐藏科技承载，但关闭科技弹窗；玩家只通过国策 tooltip 看到实际效果。
+				set_technology = {
+					steel_torrent_os_upgrade_tech = 1
+					popup = no
+				}
 				if = {
 					limit = { has_country_flag = MIL_card_drawing_done }
 					swap_ideas = { remove_idea = steel_torrent_modifier_card add_idea = steel_torrent_modifier_os_card }
@@ -2190,6 +2211,8 @@ focus_tree = {
 			focus = MIL_Automaton_Operation_Training
 		}
 		completion_reward = {
+			# 2026-06-29 修改：国策解锁后续工厂建设决议，并使用原生解锁提示展示给玩家。
+			unlock_decision_tooltip = MIL_steel_wall_factory_expansion
 			custom_effect_tooltip = MIL_Millennium_Iron_Wall_tt
 			hidden_effect = {
 				swap_ideas = { remove_idea = steel_torrent_modifier_firepower add_idea = steel_torrent_modifier_final }
@@ -2270,7 +2293,8 @@ focus_tree = {
 			focus = MIL_Guard_the_Sky_of_a_Millennium
 		}
 		completion_reward = {
-			#解锁决议“实用化飞行器设计”
+			# 2026-06-29 修改：国策解锁改革决议时使用原生解锁提示效果，避免玩家无法从国策效果得知新增决议。
+			unlock_decision_tooltip = MIL_security_reform_practical_aircraft_design
 		}
 	}
 	focus = { #悄无声息的猎杀者
@@ -2387,6 +2411,8 @@ focus_tree = {
 			focus = MIL_Silent_Hunter
 		}
 		completion_reward = {
+			# 2026-06-29 修改：国策解锁后续工厂建设决议，并使用原生解锁提示展示给玩家。
+			unlock_decision_tooltip = MIL_soaring_eagle_factory_expansion
 			custom_effect_tooltip = MIL_Soaring_Sky_Eagle_tt
 			hidden_effect = {
 				# 2026-06-17 修改：空军线最终节点移除阶段动态修正，替换为最终动态修正。
@@ -2536,7 +2562,7 @@ focus_tree = {
 		icon = GFX_goal_MILlennium_Stability_Guardian
 		relative_position_id = MIL_Security_Committee_Defense_Reform_Plan
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 8
 		x = 1
 		y = 6
 		prerequisite = {
@@ -2544,6 +2570,20 @@ focus_tree = {
 			focus = MIL_Soaring_Sky_Eagle
 			focus = MIL_Millennium_Steel_Wall
 			focus = MIL_Special_Forces_Hell_Training_Unique
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = MIL_Millennium_Stability_Guardian_reform_completed_tt
+				# 2026-07-01 修改：最终军事线国策需要千禧防卫力量改革总进度达到100%后才可执行。
+				has_country_flag = MIL_security_reform_completed_flag
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = MIL_Millennium_Stability_Guardian_tt
+			hidden_effect = {
+				# 2026-07-01 修改：按文档实现最终国策合成效果，将已完成的军事改革成果整合为最终民族精神。
+				BARE_MIL_Millennium_Stability_Guardian_Finalize_effect = yes
+			}
 		}
 
 	}

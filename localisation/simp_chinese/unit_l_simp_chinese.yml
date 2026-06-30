@@ -727,5 +727,8 @@
  category_assist_vehicles: "突击载具"
  Individual_Special_Operations_Mech: "千年特战生"
  Individual_Special_Operations_Mech_Desc: "千年特战生"
+ # 2026-06-24 修改：补充千年专属特战机甲营本地化。
+ MIL_Individual_Special_Operations_Mech: "C&C突击行动组"
+ MIL_Individual_Special_Operations_Mech_desc: "使用单兵机甲，接受了专业训练的C&C行动行动小组，专注于复杂地形作战和高速渗透。"
  AIR_WING_EXPERIENCE_VALUE_MODIFIER: "-经验：$VALUE|%-=2$"
 

@@ -792,13 +792,21 @@ BARE_Combat_Readiness_Count_Start_Init = {
 		array = global.BARE_Combat_Readiness_Unit_Type_Array
 		value = token:heavy_sp_anti_air_brigade
 	}
-	#机甲 12个
+	#机甲 13个
 	set_variable = {
 		global.BARE_Combat_Readiness_Count_light_bm_unit = 0.15
 	}
 	add_to_array = {
 		array = global.BARE_Combat_Readiness_Unit_Type_Array
 		value = token:light_bm_unit
+	}
+	# 2026-06-24 修改：注册千年特战机甲营战备占用；按轻型机甲营同级占用值接入。
+	set_variable = {
+		global.BARE_Combat_Readiness_Count_MIL_Individual_Special_Operations_Mech = 0.21
+	}
+	add_to_array = {
+		array = global.BARE_Combat_Readiness_Unit_Type_Array
+		value = token:MIL_Individual_Special_Operations_Mech
 	}
 	set_variable = {
 		global.BARE_Combat_Readiness_Count_light_bm_sp_artillery_unit = 0.13

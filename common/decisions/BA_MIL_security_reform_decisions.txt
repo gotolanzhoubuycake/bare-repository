@@ -1,4 +1,4 @@
-# 2026-06-18 修改：新增千年安全委员会校园防卫改革系统决议，承接新版文档中的陆军/空军改革进度推进。
+# 2026-06-29 修改：重构为千禧防卫力量共用改革进度；可重复训练受单军种75%上限限制，一次性项目不再因上限关闭。
 MIL_security_reform_decision_category = {
 
     MIL_security_reform_automaton_operation_training = {
@@ -15,25 +15,21 @@ MIL_security_reform_decision_category = {
         days_remove = 60
         days_re_enable = 1
         modifier = {
-            civilian_factory_use = 0
+            # 2026-06-29 修改：重复训练决议激活期间直接提供对应修正，不再通过临时动态修正中转。
+            experience_gain_army_factor = 0.05
         }
         complete_effect = {
             # 2026-06-18 修改：改革训练按设计消耗陆军经验，避免 decision cost 误消耗政治点数。
             army_experience = -30
-            set_variable = { MIL_security_reform_temp_army_xp_gain_var = 0.05 }
-            set_variable = { MIL_security_reform_temp_land_mastery_gain_var = 0.05 }
-            if = {
-                limit = {
-                    NOT = { has_dynamic_modifier = { modifier = MIL_security_reform_army_training_modifier } }
-                }
-                add_dynamic_modifier = { modifier = MIL_security_reform_army_training_modifier }
+            # 2026-06-29 修改：参考捷克国策 add_daily_mastery 写法，训练期间每日增加对应陆军学说精通度。
+            add_daily_mastery = {
+                amount = 0.4
+                days = 60
+                name = MIL_security_reform_automaton_operation_training
+                folder = land
             }
-            force_update_dynamic_modifier = yes
         }
         remove_effect = {
-            clear_variable = MIL_security_reform_temp_army_xp_gain_var
-            clear_variable = MIL_security_reform_temp_land_mastery_gain_var
-            remove_dynamic_modifier = { modifier = MIL_security_reform_army_training_modifier }
             BARE_MIL_Security_Reform_Add_Army_Progress_5_effect = yes
         }
         ai_will_do = { base = 2 }
@@ -52,23 +48,22 @@ MIL_security_reform_decision_category = {
         cost = 0
         days_remove = 60
         days_re_enable = 1
+        modifier = {
+            # 2026-06-29 修改：重复训练决议激活期间直接提供对应修正，不再通过临时动态修正中转。
+            experience_gain_air_factor = 0.05
+        }
         complete_effect = {
             # 2026-06-18 修改：改革训练按设计消耗空军经验，避免 decision cost 误消耗政治点数。
             air_experience = -30
-            set_variable = { MIL_security_reform_temp_air_xp_gain_var = 0.05 }
-            set_variable = { MIL_security_reform_temp_air_mastery_gain_var = 0.05 }
-            if = {
-                limit = {
-                    NOT = { has_dynamic_modifier = { modifier = MIL_security_reform_air_training_modifier } }
-                }
-                add_dynamic_modifier = { modifier = MIL_security_reform_air_training_modifier }
+            # 2026-06-29 修改：参考捷克国策 add_daily_mastery 写法，训练期间每日增加对应空军学说精通度。
+            add_daily_mastery = {
+                amount = 0.4
+                days = 60
+                name = MIL_security_reform_drone_operation_training
+                folder = air
             }
-            force_update_dynamic_modifier = yes
         }
         remove_effect = {
-            clear_variable = MIL_security_reform_temp_air_xp_gain_var
-            clear_variable = MIL_security_reform_temp_air_mastery_gain_var
-            remove_dynamic_modifier = { modifier = MIL_security_reform_air_training_modifier }
             BARE_MIL_Security_Reform_Add_Air_Progress_5_effect = yes
         }
         ai_will_do = { base = 2 }
@@ -82,7 +77,6 @@ MIL_security_reform_decision_category = {
         }
         available = {
             has_army_experience > 99
-            check_variable = { MIL_security_reform_army_decision_progress_var < 75 }
         }
         cost = 0
         days_remove = 180
@@ -93,6 +87,7 @@ MIL_security_reform_decision_category = {
         }
         remove_effect = {
             custom_effect_tooltip = MIL_security_reform_ground_tactics_improvement_tt
+            BARE_MIL_Security_Reform_Ground_Tactics_Improvement_Bonus_effect = yes
             BARE_MIL_Security_Reform_Add_Army_Progress_10_effect = yes
         }
         ai_will_do = { base = 1 }
@@ -107,7 +102,6 @@ MIL_security_reform_decision_category = {
         }
         available = {
             has_army_experience > 99
-            check_variable = { MIL_security_reform_army_decision_progress_var < 75 }
         }
         cost = 0
         days_remove = 180
@@ -118,6 +112,7 @@ MIL_security_reform_decision_category = {
         }
         remove_effect = {
             custom_effect_tooltip = MIL_security_reform_experimental_mech_refit_tt
+            BARE_MIL_Security_Reform_Experimental_Mech_Refit_Bonus_effect = yes
             BARE_MIL_Security_Reform_Add_Army_Progress_10_effect = yes
         }
         ai_will_do = { base = 1 }
@@ -132,7 +127,6 @@ MIL_security_reform_decision_category = {
         }
         available = {
             has_army_experience > 149
-            check_variable = { MIL_security_reform_army_decision_progress_var < 75 }
         }
         cost = 0
         days_remove = 270
@@ -143,6 +137,7 @@ MIL_security_reform_decision_category = {
         }
         remove_effect = {
             custom_effect_tooltip = MIL_security_reform_special_ops_system_upgrade_tt
+            BARE_MIL_Security_Reform_Special_Ops_System_Upgrade_Bonus_effect = yes
             BARE_MIL_Security_Reform_Add_Army_Progress_10_effect = yes
         }
         ai_will_do = { base = 1 }
@@ -156,7 +151,6 @@ MIL_security_reform_decision_category = {
         }
         available = {
             has_air_experience > 99
-            check_variable = { MIL_security_reform_air_decision_progress_var < 75 }
         }
         cost = 0
         days_remove = 180
@@ -167,6 +161,7 @@ MIL_security_reform_decision_category = {
         }
         remove_effect = {
             custom_effect_tooltip = MIL_security_reform_update_drone_manual_tt
+            BARE_MIL_Security_Reform_Update_Drone_Manual_Bonus_effect = yes
             BARE_MIL_Security_Reform_Add_Air_Progress_10_effect = yes
         }
         ai_will_do = { base = 1 }
@@ -180,7 +175,6 @@ MIL_security_reform_decision_category = {
         }
         available = {
             has_air_experience > 99
-            check_variable = { MIL_security_reform_air_decision_progress_var < 75 }
         }
         cost = 0
         days_remove = 180
@@ -191,6 +185,7 @@ MIL_security_reform_decision_category = {
         }
         remove_effect = {
             custom_effect_tooltip = MIL_security_reform_optimize_ground_crew_tt
+            BARE_MIL_Security_Reform_Optimize_Ground_Crew_Bonus_effect = yes
             BARE_MIL_Security_Reform_Add_Air_Progress_10_effect = yes
         }
         ai_will_do = { base = 1 }
@@ -205,7 +200,6 @@ MIL_security_reform_decision_category = {
         }
         available = {
             has_air_experience > 99
-            check_variable = { MIL_security_reform_air_decision_progress_var < 75 }
         }
         cost = 0
         days_remove = 360
@@ -215,9 +209,228 @@ MIL_security_reform_decision_category = {
             air_experience = -100
         }
         remove_effect = {
-            custom_effect_tooltip = MIL_security_reform_practical_aircraft_design_tt
-            remove_ideas = MIL_overly_advanced_aircraft
+            swap_ideas = {
+                remove_idea = MIL_overly_advanced_aircraft
+                add_idea = MIL_overly_advanced_aircraft_reviewed
+            }
+            unlock_decision_tooltip = MIL_aircraft_design_standardize_airframe
+            unlock_decision_tooltip = MIL_aircraft_design_expand_experimental_specs
+            # 2026-06-29 修改：实用化飞行器设计先完成方案初审，再开放后续两条无人机设计路线。
+            set_country_flag = MIL_aircraft_design_route_unlocked_flag
             BARE_MIL_Security_Reform_Add_Air_Progress_10_effect = yes
+        }
+        ai_will_do = { base = 1 }
+    }
+
+    MIL_aircraft_design_standardize_airframe = {
+        icon = generic_air
+        visible = {
+            has_country_flag = MIL_aircraft_design_route_unlocked_flag
+            NOT = { has_country_flag = MIL_aircraft_design_vanguard_path_flag }
+            NOT = { has_country_flag = MIL_aircraft_design_standardize_airframe_completed_flag }
+            has_idea = MIL_overly_advanced_aircraft_reviewed
+        }
+        available = {
+            has_air_experience > 49
+        }
+        cost = 0
+        days_remove = 90
+        fire_only_once = yes
+        complete_effect = {
+            # 2026-06-29 修改：路线入口消耗空军经验并锁定实用化路线。
+            air_experience = -50
+            set_country_flag = MIL_aircraft_design_practical_path_flag
+        }
+        remove_effect = {
+            swap_ideas = {
+                remove_idea = MIL_overly_advanced_aircraft_reviewed
+                add_idea = MIL_overly_advanced_aircraft_practical_1
+            }
+            set_country_flag = MIL_aircraft_design_standardize_airframe_completed_flag
+        }
+        ai_will_do = { base = 1 }
+    }
+
+    MIL_aircraft_design_mass_production_review = {
+        icon = generic_air
+        visible = {
+            has_country_flag = MIL_aircraft_design_practical_path_flag
+            has_country_flag = MIL_aircraft_design_standardize_airframe_completed_flag
+            NOT = { has_country_flag = MIL_aircraft_design_mass_production_review_completed_flag }
+            has_idea = MIL_overly_advanced_aircraft_practical_1
+        }
+        available = {
+            has_air_experience > 74
+        }
+        cost = 0
+        days_remove = 120
+        fire_only_once = yes
+        modifier = {
+            # 2026-06-29 修改：量产化审查占用2座民用工厂，用于重新梳理生产线和维护流程。
+            civilian_factory_use = 2
+        }
+        complete_effect = {
+            air_experience = -75
+        }
+        remove_effect = {
+            swap_ideas = {
+                remove_idea = MIL_overly_advanced_aircraft_practical_1
+                add_idea = MIL_practical_aircraft_system
+            }
+            set_country_flag = MIL_aircraft_design_mass_production_review_completed_flag
+        }
+        ai_will_do = { base = 1 }
+    }
+
+    MIL_aircraft_design_expand_experimental_specs = {
+        icon = generic_air
+        visible = {
+            has_country_flag = MIL_aircraft_design_route_unlocked_flag
+            NOT = { has_country_flag = MIL_aircraft_design_practical_path_flag }
+            NOT = { has_country_flag = MIL_aircraft_design_expand_experimental_specs_completed_flag }
+            has_idea = MIL_overly_advanced_aircraft_reviewed
+        }
+        available = {
+            has_air_experience > 49
+        }
+        cost = 0
+        days_remove = 90
+        fire_only_once = yes
+        complete_effect = {
+            # 2026-06-29 修改：路线入口消耗空军经验并锁定前卫化路线。
+            air_experience = -50
+            set_country_flag = MIL_aircraft_design_vanguard_path_flag
+        }
+        remove_effect = {
+            swap_ideas = {
+                remove_idea = MIL_overly_advanced_aircraft_reviewed
+                add_idea = MIL_overly_advanced_aircraft_vanguard_1
+            }
+            set_country_flag = MIL_aircraft_design_expand_experimental_specs_completed_flag
+        }
+        ai_will_do = { base = 1 }
+    }
+
+    MIL_aircraft_design_high_performance_platform = {
+        icon = generic_air
+        visible = {
+            has_country_flag = MIL_aircraft_design_vanguard_path_flag
+            has_country_flag = MIL_aircraft_design_expand_experimental_specs_completed_flag
+            NOT = { has_country_flag = MIL_aircraft_design_high_performance_platform_completed_flag }
+            has_idea = MIL_overly_advanced_aircraft_vanguard_1
+        }
+        available = {
+            has_air_experience > 74
+        }
+        cost = 0
+        days_remove = 120
+        fire_only_once = yes
+        modifier = {
+            # 2026-06-29 修改：高性能平台整合占用2座民用工厂，用于试验设备与生产设施改造。
+            civilian_factory_use = 2
+        }
+        complete_effect = {
+            air_experience = -75
+        }
+        remove_effect = {
+            swap_ideas = {
+                remove_idea = MIL_overly_advanced_aircraft_vanguard_1
+                add_idea = MIL_vanguard_aircraft_system
+            }
+            set_country_flag = MIL_aircraft_design_high_performance_platform_completed_flag
+        }
+        ai_will_do = { base = 1 }
+    }
+
+    MIL_special_ops_factory_expansion = {
+        icon = generic_construct_mil_factory
+        visible = {
+            has_completed_focus = MIL_Special_Forces_Hell_Training_Unique
+            NOT = { has_country_flag = MIL_special_ops_factory_decision_completed_flag }
+        }
+        cost = 25
+        days_remove = 120
+        fire_only_once = yes
+        modifier = {
+            # 2026-06-29 修改：独属于千年的利刃解锁的后续工厂建设决议，按设计占用3座民用工厂。
+            civilian_factory_use = 3
+        }
+        remove_effect = {
+            # 2026-06-29 修改：在随机一个控制且拥有的千年核心地区扩建2座重武器工厂。
+            random_owned_controlled_state = {
+                limit = {
+                    is_core_of = MIL
+                }
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = heavy_arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            set_country_flag = MIL_special_ops_factory_decision_completed_flag
+        }
+        ai_will_do = { base = 1 }
+    }
+
+    MIL_steel_wall_factory_expansion = {
+        icon = generic_construct_mil_factory
+        visible = {
+            has_completed_focus = MIL_Millennium_Steel_Wall
+            NOT = { has_country_flag = MIL_steel_wall_factory_decision_completed_flag }
+        }
+        cost = 25
+        days_remove = 120
+        fire_only_once = yes
+        modifier = {
+            # 2026-06-29 修改：千年的钢铁长城解锁的后续工厂建设决议，按设计占用3座民用工厂。
+            civilian_factory_use = 3
+        }
+        remove_effect = {
+            # 2026-06-29 修改：在随机一个控制且拥有的千年核心地区扩建2座重武器工厂。
+            random_owned_controlled_state = {
+                limit = {
+                    is_core_of = MIL
+                }
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = heavy_arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            set_country_flag = MIL_steel_wall_factory_decision_completed_flag
+        }
+        ai_will_do = { base = 1 }
+    }
+
+    MIL_soaring_eagle_factory_expansion = {
+        icon = generic_construct_mil_factory
+        visible = {
+            has_completed_focus = MIL_Soaring_Sky_Eagle
+            NOT = { has_country_flag = MIL_soaring_eagle_factory_decision_completed_flag }
+        }
+        cost = 25
+        days_remove = 120
+        fire_only_once = yes
+        modifier = {
+            # 2026-06-29 修改：翱翔天际之鹰解锁的后续工厂建设决议，按设计占用3座民用工厂。
+            civilian_factory_use = 3
+        }
+        remove_effect = {
+            # 2026-06-29 修改：在随机一个控制且拥有的千年核心地区扩建3座武器工厂。
+            random_owned_controlled_state = {
+                limit = {
+                    is_core_of = MIL
+                }
+                add_extra_state_shared_building_slots = 3
+                add_building_construction = {
+                    type = arms_factory
+                    level = 3
+                    instant_build = yes
+                }
+            }
+            set_country_flag = MIL_soaring_eagle_factory_decision_completed_flag
         }
         ai_will_do = { base = 1 }
     }

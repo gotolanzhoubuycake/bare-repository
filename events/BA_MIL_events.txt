@@ -1531,3 +1531,22 @@ country_event = {
         ai_chance = { base = 1 }
     }
 }
+
+country_event = {
+    id = MIL_reform.2
+    title = MIL_reform_2_t
+    desc = MIL_reform_2_desc
+
+    is_triggered_only = yes
+    hidden = yes
+
+    immediate = {
+        # 2026-06-24 修改：T3/T4/T5 突击载具科技完成后统一检查千年高级特战机甲建造科技；事件隐藏，不向玩家重复弹窗。
+        BARE_MIL_Special_Operations_Mech_Sync_Equipment_Tech_effect = yes
+    }
+
+    option = {
+        name = MIL_reform_2_a
+        ai_chance = { base = 1 }
+    }
+}

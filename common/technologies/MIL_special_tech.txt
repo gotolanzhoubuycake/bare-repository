@@ -1,5 +1,6 @@
 technologies = {
     individual_special_operations_mech_equipment_tech = {
+        # 2026-06-24 修改：基础千年特战机甲科技由“整合C&C”国策直接授予，解锁兵种与 Mk1 装备。
         research_cost = 1
         start_year = 2019
 
@@ -13,7 +14,46 @@ technologies = {
         allow = {
             always = no
         }
-    }        
+    }
+    individual_special_operations_mech_equipment_2_tech = {
+        # 2026-06-24 修改：高级千年特战机甲建造科技，随 T3 突击载具科技完成事件或整合C&C完成检查解锁。
+        research_cost = 1
+        start_year = 2019
+
+        enable_equipments = {
+            MIL_Individual_Special_Operations_Mech_equipment_2
+        }
+
+        allow = {
+            always = no
+        }
+    }
+    individual_special_operations_mech_equipment_3_tech = {
+        # 2026-06-24 修改：高级千年特战机甲建造科技，随 T4 突击载具科技完成事件或整合C&C完成检查解锁。
+        research_cost = 1
+        start_year = 2019
+
+        enable_equipments = {
+            MIL_Individual_Special_Operations_Mech_equipment_3
+        }
+
+        allow = {
+            always = no
+        }
+    }
+    individual_special_operations_mech_equipment_4_tech = {
+        # 2026-06-24 修改：高级千年特战机甲建造科技，随 T5 突击载具科技完成事件或整合C&C完成检查解锁。
+        research_cost = 1
+        start_year = 2019
+
+        enable_equipments = {
+            MIL_Individual_Special_Operations_Mech_equipment_4
+        }
+
+        allow = {
+            always = no
+        }
+    }
     steel_torrent_os_upgrade_tech = {
         enable_equipments = { }
         

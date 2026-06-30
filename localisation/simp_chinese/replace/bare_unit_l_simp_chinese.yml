@@ -1,5 +1,6 @@
 ﻿l_simp_chinese:
 #兵种
+MIL_bm_equipment_category: "战斗机甲装备"
 infantry: "常备步兵班"
 infantry_desc: "由经过战斗训练，合理组织起来的基沃托斯居民组成的战斗小组，涵盖了负责整肃风纪的学生，佣兵，或是在道上混的多的混混，使用手中的枪械和班组支援武器进行作战，是各个团体进行战斗时不可或缺的部分，她们能够适应各种情况，但用装甲和火力支援配合她们可以让她们发挥更加高效。"
 infantry_militia: "动员步兵班"
@@ -687,6 +688,11 @@ group_KongZhong_ZhiYuan_title:0 "空中支援部队"
  modifier_army_sub_unit_category_special_infantry_defence_factor: "神秘步兵防御修正"
  modifier_army_sub_unit_category_special_infantry_speed_factor: "神秘步兵速度修正"
  modifier_army_sub_unit_category_special_infantry_max_org_factor: "神秘步兵组织度修正"
+ # 2026-06-29 修改：补充千禧防卫力量专用的自动机与战斗机甲单位修正本地化。
+ modifier_army_sub_unit_infantry_am_attack_factor: "自动机单位攻击"
+ modifier_army_sub_unit_infantry_am_defence_factor: "自动机单位防御"
+ modifier_army_sub_unit_category_bm_attack_factor: "战斗机甲单位攻击"
+ modifier_army_sub_unit_category_bm_defence_factor: "战斗机甲单位防御"
 
 
 DIVISION_EXPERIENCE_TITLE_DEFAULT: "连队指挥官"

@@ -2352,7 +2352,26 @@ BARE_MIL_Security_Department_Long_Peace_Reform_Progress_effect = {
 	# 入口：由安保部改革相关国策 completion_reward 调用；与原有攻击、防御、计划变量改善共同结算。
 	# 关键变量：补足基础安保改革收益，并处理陆军组织度、学说花费、军政顾问花费、陆空军精通度获取这些长期和平变量。
 	# 预期结果：基础改革收益与长期和平修正一次性结算；所有相关变量完成对应次数的阶段消除后，移除动态修正。
-	custom_effect_tooltip = MIL_security_department_long_peace_reform_progress_tt
+	if = {
+		limit = {
+			OR = {
+				check_variable = { MIL_security_department_land_doctrine_cost > 0 }
+				check_variable = { MIL_security_department_air_doctrine_cost > 0 }
+				check_variable = { MIL_security_department_army_chief_cost > 0 }
+				check_variable = { MIL_security_department_air_chief_cost > 0 }
+				check_variable = { MIL_security_department_high_command_cost > 0 }
+				check_variable = { MIL_security_department_land_mastery_gain_factor < 0 }
+				check_variable = { MIL_security_department_fighter_mastery_gain_factor < 0 }
+				check_variable = { MIL_security_department_strike_mastery_gain_factor < 0 }
+				check_variable = { MIL_security_department_medium_mastery_gain_factor < 0 }
+				check_variable = { MIL_security_department_heavy_mastery_gain_factor < 0 }
+			}
+		}
+		custom_effect_tooltip = MIL_security_department_long_peace_reform_progress_full_tt
+	}
+	else = {
+		custom_effect_tooltip = MIL_security_department_long_peace_reform_progress_basic_tt
+	}
 	hidden_effect = {
 		# 2026-06-17: 将基础安保部改革收益并入同一结算入口，避免 tooltip 与实际效果拆分。
 		add_to_variable = { MIL_security_department_army_attack = 0.05 }
@@ -2508,10 +2527,10 @@ BARE_MIL_Security_Department_Long_Peace_Reform_Progress_effect = {
 }
 
 BARE_MIL_Security_Reform_Init_effect = {
-	# 2026-06-18: 千年安全委员会校园防卫改革系统初始化入口。
-	# 入口：完成 `MIL_Security_Committee_Defense_Reform_Plan` 后调用；后续改革决议、阶段奖励和最终判断都依赖这些变量。
-	# 关键变量：陆军进度、空军进度、总进度、已获得的 25% 阶段数、单边决议推进量、阶段奖励修正变量。
-	# 预期结果：解锁改革决议类别，初始化进度为0%，挂载进度动态修正，并清理临时训练状态。
+	# 2026-06-29: 千年安全委员会千禧防卫力量系统初始化入口。
+	# 入口：完成 `MIL_Security_Committee_Defense_Reform_Plan` 后调用；后续改革决议、连续进度奖励和最终判断都依赖这些变量。
+	# 关键变量：陆军贡献、空军贡献、总进度、单军种贡献上限记录、基础连续奖励变量、一次性改革项目奖励变量。
+	# 预期结果：解锁改革决议类别，初始化进度为0%，挂载千禧防卫力量动态修正。
 	set_country_flag = MIL_security_reform_system_unlocked_flag
 	clr_country_flag = MIL_security_reform_completed_flag
 	clear_variable = MIL_security_reform_army_progress_var
@@ -2528,13 +2547,21 @@ BARE_MIL_Security_Reform_Init_effect = {
 	clear_variable = MIL_security_reform_air_mission_efficiency_var
 	clear_variable = MIL_security_reform_air_cas_efficiency_var
 	clear_variable = MIL_security_reform_air_agility_factor_var
-	clear_variable = MIL_security_reform_temp_army_xp_gain_var
-	clear_variable = MIL_security_reform_temp_air_xp_gain_var
-	clear_variable = MIL_security_reform_temp_land_mastery_gain_var
-	clear_variable = MIL_security_reform_temp_air_mastery_gain_var
-	# 2026-06-18 修改：分别清理陆军/空军训练动态修正，避免旧存档或并行训练残留状态。
-	remove_dynamic_modifier = { modifier = MIL_security_reform_army_training_modifier }
-	remove_dynamic_modifier = { modifier = MIL_security_reform_air_training_modifier }
+	clear_variable = MIL_security_reform_ground_tactics_army_attack_factor_var
+	clear_variable = MIL_security_reform_ground_tactics_army_defence_factor_var
+	clear_variable = MIL_security_reform_ground_tactics_planning_speed_var
+	clear_variable = MIL_security_reform_ground_tactics_planning_factor_var
+	clear_variable = MIL_security_reform_mech_infantry_am_attack_factor_var
+	clear_variable = MIL_security_reform_mech_infantry_am_defence_factor_var
+	clear_variable = MIL_security_reform_mech_category_bm_attack_factor_var
+	clear_variable = MIL_security_reform_mech_category_bm_defence_factor_var
+	clear_variable = MIL_security_reform_special_ops_attack_factor_var
+	clear_variable = MIL_security_reform_special_ops_defence_factor_var
+	clear_variable = MIL_security_reform_special_ops_terrain_penalty_reduction_var
+	clear_variable = MIL_security_reform_special_ops_training_time_factor_var
+	clear_variable = MIL_security_reform_drone_manual_air_superiority_efficiency_var
+	clear_variable = MIL_security_reform_ground_crew_air_mission_efficiency_var
+	# 2026-06-24 修改：初始化只挂载改革进度主修正，避免开头国策显示无关的移除修正效果。
 	if = {
 		limit = {
 			NOT = {
@@ -2547,17 +2574,17 @@ BARE_MIL_Security_Reform_Init_effect = {
 }
 
 BARE_MIL_Security_Reform_Recalculate_effect = {
-	# 2026-06-18: 千年安全委员会校园防卫改革进度与阶段奖励重算入口。
-	# 入口：所有改革决议或后续国策追加进度后调用；负责限制单项进度、刷新总进度，并按每25%进度写入阶段奖励。
-	# 关键变量：`MIL_security_reform_army_progress_var`、`MIL_security_reform_air_progress_var` 及两类 stage 变量。
-	# 预期结果：进度保持在0-100范围内；陆军/空军每25%各获得一档奖励；总进度达到100时设置完成 flag。
+	# 2026-06-29: 千禧防卫力量总进度与连续奖励重算入口。
+	# 入口：所有改革决议、一次性项目奖励或后续国策检查完成后调用；负责限制单军种贡献、刷新总进度，并按总进度写入无级变化奖励。
+	# 关键变量：`MIL_security_reform_army_progress_var` 与 `MIL_security_reform_air_progress_var` 是陆空贡献值，单项最多75；`MIL_security_reform_total_progress_var` 是两者合计后的共用改革进度。
+	# 预期结果：单军种贡献保持在0-75范围内，总进度保持在0-100范围内；基础奖励按总进度线性变化，完成100%时设置完成 flag。
 	if = {
-		limit = { check_variable = { MIL_security_reform_army_progress_var > 100 } }
-		set_variable = { MIL_security_reform_army_progress_var = 100 }
+		limit = { check_variable = { MIL_security_reform_army_progress_var > 75 } }
+		set_variable = { MIL_security_reform_army_progress_var = 75 }
 	}
 	if = {
-		limit = { check_variable = { MIL_security_reform_air_progress_var > 100 } }
-		set_variable = { MIL_security_reform_air_progress_var = 100 }
+		limit = { check_variable = { MIL_security_reform_air_progress_var > 75 } }
+		set_variable = { MIL_security_reform_air_progress_var = 75 }
 	}
 	if = {
 		limit = { check_variable = { MIL_security_reform_army_progress_var < 0 } }
@@ -2567,6 +2594,22 @@ BARE_MIL_Security_Reform_Recalculate_effect = {
 		limit = { check_variable = { MIL_security_reform_air_progress_var < 0 } }
 		set_variable = { MIL_security_reform_air_progress_var = 0 }
 	}
+	if = {
+		limit = { check_variable = { MIL_security_reform_army_decision_progress_var > 75 } }
+		set_variable = { MIL_security_reform_army_decision_progress_var = 75 }
+	}
+	if = {
+		limit = { check_variable = { MIL_security_reform_air_decision_progress_var > 75 } }
+		set_variable = { MIL_security_reform_air_decision_progress_var = 75 }
+	}
+	if = {
+		limit = { check_variable = { MIL_security_reform_army_decision_progress_var < 0 } }
+		set_variable = { MIL_security_reform_army_decision_progress_var = 0 }
+	}
+	if = {
+		limit = { check_variable = { MIL_security_reform_air_decision_progress_var < 0 } }
+		set_variable = { MIL_security_reform_air_decision_progress_var = 0 }
+	}
 
 	set_variable = { MIL_security_reform_total_progress_var = MIL_security_reform_army_progress_var }
 	add_to_variable = { MIL_security_reform_total_progress_var = MIL_security_reform_air_progress_var }
@@ -2575,55 +2618,27 @@ BARE_MIL_Security_Reform_Recalculate_effect = {
 		set_variable = { MIL_security_reform_total_progress_var = 100 }
 	}
 
-	set_variable = { MIL_security_reform_army_stage_var = 0 }
-	if = {
-		limit = { check_variable = { MIL_security_reform_army_progress_var > 24 } }
-		set_variable = { MIL_security_reform_army_stage_var = 1 }
-	}
-	if = {
-		limit = { check_variable = { MIL_security_reform_army_progress_var > 49 } }
-		set_variable = { MIL_security_reform_army_stage_var = 2 }
-	}
-	if = {
-		limit = { check_variable = { MIL_security_reform_army_progress_var > 74 } }
-		set_variable = { MIL_security_reform_army_stage_var = 3 }
-	}
-	if = {
-		limit = { check_variable = { MIL_security_reform_army_progress_var > 99 } }
-		set_variable = { MIL_security_reform_army_stage_var = 4 }
-	}
-	set_variable = { MIL_security_reform_army_attack_factor_var = MIL_security_reform_army_stage_var }
-	multiply_variable = { var = MIL_security_reform_army_attack_factor_var value = 0.05 }
-	set_variable = { MIL_security_reform_army_defence_factor_var = MIL_security_reform_army_stage_var }
-	multiply_variable = { var = MIL_security_reform_army_defence_factor_var value = 0.05 }
-	set_variable = { MIL_security_reform_planning_speed_var = MIL_security_reform_army_stage_var }
-	multiply_variable = { var = MIL_security_reform_planning_speed_var value = 0.05 }
-	set_variable = { MIL_security_reform_planning_factor_var = MIL_security_reform_army_stage_var }
-	multiply_variable = { var = MIL_security_reform_planning_factor_var value = 0.05 }
-
-	set_variable = { MIL_security_reform_air_stage_var = 0 }
-	if = {
-		limit = { check_variable = { MIL_security_reform_air_progress_var > 24 } }
-		set_variable = { MIL_security_reform_air_stage_var = 1 }
-	}
-	if = {
-		limit = { check_variable = { MIL_security_reform_air_progress_var > 49 } }
-		set_variable = { MIL_security_reform_air_stage_var = 2 }
-	}
-	if = {
-		limit = { check_variable = { MIL_security_reform_air_progress_var > 74 } }
-		set_variable = { MIL_security_reform_air_stage_var = 3 }
-	}
-	if = {
-		limit = { check_variable = { MIL_security_reform_air_progress_var > 99 } }
-		set_variable = { MIL_security_reform_air_stage_var = 4 }
-	}
-	set_variable = { MIL_security_reform_air_mission_efficiency_var = MIL_security_reform_air_stage_var }
-	multiply_variable = { var = MIL_security_reform_air_mission_efficiency_var value = 0.05 }
-	set_variable = { MIL_security_reform_air_cas_efficiency_var = MIL_security_reform_air_stage_var }
-	multiply_variable = { var = MIL_security_reform_air_cas_efficiency_var value = 0.05 }
-	set_variable = { MIL_security_reform_air_agility_factor_var = MIL_security_reform_air_stage_var }
-	multiply_variable = { var = MIL_security_reform_air_agility_factor_var value = 0.05 }
+	clear_variable = MIL_security_reform_army_stage_var
+	clear_variable = MIL_security_reform_air_stage_var
+	set_variable = { MIL_security_reform_army_attack_factor_var = MIL_security_reform_total_progress_var }
+	multiply_variable = { var = MIL_security_reform_army_attack_factor_var value = 0.002 }
+	add_to_variable = { MIL_security_reform_army_attack_factor_var = MIL_security_reform_ground_tactics_army_attack_factor_var }
+	set_variable = { MIL_security_reform_army_defence_factor_var = MIL_security_reform_total_progress_var }
+	multiply_variable = { var = MIL_security_reform_army_defence_factor_var value = 0.002 }
+	add_to_variable = { MIL_security_reform_army_defence_factor_var = MIL_security_reform_ground_tactics_army_defence_factor_var }
+	set_variable = { MIL_security_reform_planning_speed_var = MIL_security_reform_total_progress_var }
+	multiply_variable = { var = MIL_security_reform_planning_speed_var value = 0.002 }
+	add_to_variable = { MIL_security_reform_planning_speed_var = MIL_security_reform_ground_tactics_planning_speed_var }
+	set_variable = { MIL_security_reform_planning_factor_var = MIL_security_reform_total_progress_var }
+	multiply_variable = { var = MIL_security_reform_planning_factor_var value = 0.002 }
+	add_to_variable = { MIL_security_reform_planning_factor_var = MIL_security_reform_ground_tactics_planning_factor_var }
+	set_variable = { MIL_security_reform_air_mission_efficiency_var = MIL_security_reform_total_progress_var }
+	multiply_variable = { var = MIL_security_reform_air_mission_efficiency_var value = 0.002 }
+	add_to_variable = { MIL_security_reform_air_mission_efficiency_var = MIL_security_reform_ground_crew_air_mission_efficiency_var }
+	set_variable = { MIL_security_reform_air_cas_efficiency_var = MIL_security_reform_total_progress_var }
+	multiply_variable = { var = MIL_security_reform_air_cas_efficiency_var value = 0.002 }
+	set_variable = { MIL_security_reform_air_agility_factor_var = MIL_security_reform_total_progress_var }
+	multiply_variable = { var = MIL_security_reform_air_agility_factor_var value = 0.002 }
 
 	if = {
 		limit = {
@@ -2634,11 +2649,60 @@ BARE_MIL_Security_Reform_Recalculate_effect = {
 	force_update_dynamic_modifier = yes
 }
 
+BARE_MIL_Security_Reform_Ground_Tactics_Improvement_Bonus_effect = {
+	# 2026-06-29: 安全委员会地面战术改进的一次性奖励入口。
+	# 入口：`MIL_security_reform_ground_tactics_improvement` 决议完成后调用。
+	# 关键变量：将地面战术项目的部队攻防、计划速度与计划上限奖励写入千禧防卫力量动态修正的项目奖励变量。
+	# 预期结果：该一次性项目的收益并入 `MIL_security_reform_progress_modifier`，之后由重算入口与基础连续进度奖励共同显示。
+	set_variable = { MIL_security_reform_ground_tactics_army_attack_factor_var = 0.05 }
+	set_variable = { MIL_security_reform_ground_tactics_army_defence_factor_var = 0.05 }
+	set_variable = { MIL_security_reform_ground_tactics_planning_speed_var = 0.05 }
+	set_variable = { MIL_security_reform_ground_tactics_planning_factor_var = 0.05 }
+}
+
+BARE_MIL_Security_Reform_Experimental_Mech_Refit_Bonus_effect = {
+	# 2026-06-29: 作战机甲试验性改造的一次性奖励入口。
+	# 入口：`MIL_security_reform_experimental_mech_refit` 决议完成后调用。
+	# 关键变量：自动机步兵专用攻防变量、战斗机甲分类攻防变量；对应 modifier 已在 `common/units/unit_modifiers/unit_modifiers.txt` 注册。
+	# 预期结果：自动机与战斗机甲攻防收益并入千禧防卫力量动态修正。
+	set_variable = { MIL_security_reform_mech_infantry_am_attack_factor_var = 0.05 }
+	set_variable = { MIL_security_reform_mech_infantry_am_defence_factor_var = 0.05 }
+	set_variable = { MIL_security_reform_mech_category_bm_attack_factor_var = 0.05 }
+	set_variable = { MIL_security_reform_mech_category_bm_defence_factor_var = 0.05 }
+}
+
+BARE_MIL_Security_Reform_Special_Ops_System_Upgrade_Bonus_effect = {
+	# 2026-06-29: 千年特战生作战系统升级的一次性奖励入口。
+	# 入口：`MIL_security_reform_special_ops_system_upgrade` 决议完成后调用。
+	# 关键变量：特种部队攻防、地形惩罚减免与训练时间变化变量。
+	# 预期结果：特战系统升级收益并入千禧防卫力量动态修正。
+	set_variable = { MIL_security_reform_special_ops_attack_factor_var = 0.05 }
+	set_variable = { MIL_security_reform_special_ops_defence_factor_var = 0.05 }
+	set_variable = { MIL_security_reform_special_ops_terrain_penalty_reduction_var = 0.10 }
+	set_variable = { MIL_security_reform_special_ops_training_time_factor_var = 0.10 }
+}
+
+BARE_MIL_Security_Reform_Update_Drone_Manual_Bonus_effect = {
+	# 2026-06-29: 更新无人机操作手册的一次性奖励入口。
+	# 入口：`MIL_security_reform_update_drone_manual` 决议完成后调用。
+	# 关键变量：制空权任务效率项目奖励变量。
+	# 预期结果：无人机操作手册收益并入千禧防卫力量动态修正。
+	set_variable = { MIL_security_reform_drone_manual_air_superiority_efficiency_var = 0.10 }
+}
+
+BARE_MIL_Security_Reform_Optimize_Ground_Crew_Bonus_effect = {
+	# 2026-06-29: 优化地勤工作效率的一次性奖励入口。
+	# 入口：`MIL_security_reform_optimize_ground_crew` 决议完成后调用。
+	# 关键变量：空军任务效率项目奖励变量。
+	# 预期结果：地勤优化收益并入千禧防卫力量动态修正，并与总进度的连续空军任务效率奖励叠加。
+	set_variable = { MIL_security_reform_ground_crew_air_mission_efficiency_var = 0.05 }
+}
+
 BARE_MIL_Security_Reform_Add_Army_Progress_5_effect = {
-	# 2026-06-18: 陆军改革小幅推进入口。
+	# 2026-06-29: 陆军贡献小幅推进入口。
 	# 入口：60天可重复训练类决议完成后调用。
-	# 关键变量：陆军改革进度与陆军决议来源进度；单边决议来源最多推进75点。
-	# 预期结果：在未超过单边上限时增加5点陆军改革进度，并刷新阶段奖励。
+	# 关键变量：陆军贡献与陆军决议来源进度；单军种最多贡献75点。
+	# 预期结果：在未超过单军种上限时增加5点陆军贡献，并刷新千禧防卫力量连续奖励。
 	custom_effect_tooltip = MIL_security_reform_add_army_progress_5_tt
 	hidden_effect = {
 		if = {
@@ -2651,31 +2715,26 @@ BARE_MIL_Security_Reform_Add_Army_Progress_5_effect = {
 }
 
 BARE_MIL_Security_Reform_Add_Army_Progress_10_effect = {
-	# 2026-06-18: 陆军改革中幅推进入口。
+	# 2026-06-29: 陆军贡献中幅推进入口。
 	# 入口：180/270天陆军改革项目完成后调用。
-	# 关键变量：陆军改革进度与陆军决议来源进度；超过75点前只推进剩余可用额度。
-	# 预期结果：增加最多10点陆军改革进度，并刷新阶段奖励。
+	# 关键变量：陆军贡献与陆军决议来源进度；超过75点前只推进剩余可用额度。
+	# 预期结果：增加最多10点陆军贡献，并刷新千禧防卫力量连续奖励；已达上限时不再增加进度。
 	custom_effect_tooltip = MIL_security_reform_add_army_progress_10_tt
 	hidden_effect = {
 		if = {
-			limit = { check_variable = { MIL_security_reform_army_decision_progress_var < 66 } }
+			limit = { check_variable = { MIL_security_reform_army_decision_progress_var < 75 } }
 			add_to_variable = { MIL_security_reform_army_progress_var = 10 }
 			add_to_variable = { MIL_security_reform_army_decision_progress_var = 10 }
-		}
-		else_if = {
-			limit = { check_variable = { MIL_security_reform_army_decision_progress_var < 75 } }
-			add_to_variable = { MIL_security_reform_army_progress_var = 5 }
-			add_to_variable = { MIL_security_reform_army_decision_progress_var = 5 }
 		}
 		BARE_MIL_Security_Reform_Recalculate_effect = yes
 	}
 }
 
 BARE_MIL_Security_Reform_Add_Air_Progress_5_effect = {
-	# 2026-06-18: 空军改革小幅推进入口。
+	# 2026-06-29: 空军贡献小幅推进入口。
 	# 入口：60天可重复训练类决议完成后调用。
-	# 关键变量：空军改革进度与空军决议来源进度；单边决议来源最多推进75点。
-	# 预期结果：在未超过单边上限时增加5点空军改革进度，并刷新阶段奖励。
+	# 关键变量：空军贡献与空军决议来源进度；单军种最多贡献75点。
+	# 预期结果：在未超过单军种上限时增加5点空军贡献，并刷新千禧防卫力量连续奖励。
 	custom_effect_tooltip = MIL_security_reform_add_air_progress_5_tt
 	hidden_effect = {
 		if = {
@@ -2688,22 +2747,87 @@ BARE_MIL_Security_Reform_Add_Air_Progress_5_effect = {
 }
 
 BARE_MIL_Security_Reform_Add_Air_Progress_10_effect = {
-	# 2026-06-18: 空军改革中幅推进入口。
+	# 2026-06-29: 空军贡献中幅推进入口。
 	# 入口：180/360天空军改革项目完成后调用。
-	# 关键变量：空军改革进度与空军决议来源进度；超过75点前只推进剩余可用额度。
-	# 预期结果：增加最多10点空军改革进度，并刷新阶段奖励。
+	# 关键变量：空军贡献与空军决议来源进度；超过75点前只推进剩余可用额度。
+	# 预期结果：增加最多10点空军贡献，并刷新千禧防卫力量连续奖励；已达上限时不再增加进度。
 	custom_effect_tooltip = MIL_security_reform_add_air_progress_10_tt
 	hidden_effect = {
 		if = {
-			limit = { check_variable = { MIL_security_reform_air_decision_progress_var < 66 } }
+			limit = { check_variable = { MIL_security_reform_air_decision_progress_var < 75 } }
 			add_to_variable = { MIL_security_reform_air_progress_var = 10 }
 			add_to_variable = { MIL_security_reform_air_decision_progress_var = 10 }
 		}
-		else_if = {
-			limit = { check_variable = { MIL_security_reform_air_decision_progress_var < 75 } }
-			add_to_variable = { MIL_security_reform_air_progress_var = 5 }
-			add_to_variable = { MIL_security_reform_air_decision_progress_var = 5 }
-		}
 		BARE_MIL_Security_Reform_Recalculate_effect = yes
 	}
+}
+
+BARE_MIL_Special_Operations_Mech_Sync_Equipment_Tech_effect = {
+	# 2026-06-24: 千年特战机甲高级建造科技同步入口。
+	# 入口：完成 `MIL_Integrate_C_and_C` 时直接检查一次；T3/T4/T5 突击载具科技完成事件也会调用。
+	# 关键变量/条件：只在千年已拥有基础特战机甲科技后，根据 T3/T4/T5 突击载具科技补发对应装备建造科技。
+	# 预期结果：不修改任何单位或装备数值；只补齐已满足技术门槛的 `MIL_Individual_Special_Operations_Mech_equipment_*` 生产解锁。
+	if = {
+		limit = {
+			original_tag = MIL
+			has_tech = individual_special_operations_mech_equipment_tech
+			has_tech = T3_assult_vehicle
+			NOT = { has_tech = individual_special_operations_mech_equipment_2_tech }
+		}
+		set_technology = { individual_special_operations_mech_equipment_2_tech = 1 }
+	}
+	if = {
+		limit = {
+			original_tag = MIL
+			has_tech = individual_special_operations_mech_equipment_tech
+			has_tech = T4_assult_vehicle
+			NOT = { has_tech = individual_special_operations_mech_equipment_3_tech }
+		}
+		set_technology = { individual_special_operations_mech_equipment_3_tech = 1 }
+	}
+	if = {
+		limit = {
+			original_tag = MIL
+			has_tech = individual_special_operations_mech_equipment_tech
+			has_tech = T5_assult_vehicle
+			NOT = { has_tech = individual_special_operations_mech_equipment_4_tech }
+		}
+		set_technology = { individual_special_operations_mech_equipment_4_tech = 1 }
+	}
+}
+
+BARE_MIL_Millennium_Stability_Guardian_Finalize_effect = {
+	# 2026-07-01 修改：千年军事线最终合成入口。
+	# 入口：完成 `MIL_Millennium_Stability_Guardian` 后调用。
+	# 关键变量/条件：最终国策要求四条收束线全部完成；不再维护三线组合版本。
+	# 预期结果：移除已被合并的旧军事民族精神和动态修正，添加最终合成民族精神。
+	remove_ideas = MIL_cyber_defense
+	remove_ideas = MIL_cyber_defense_2
+	remove_ideas = MIL_cyber_defense_3
+	remove_ideas = MIL_cyber_defense_4
+	remove_ideas = MIL_cyber_defense_5
+	remove_ideas = MIL_cyber_defense_6
+	remove_ideas = MIL_cyber_defense_final
+	remove_ideas = MIL_special_ops_force_1
+	remove_ideas = MIL_special_ops_force_2_mech
+	remove_ideas = MIL_special_ops_force_2_training
+	remove_ideas = MIL_special_ops_force_3_combined
+	remove_ideas = MIL_special_ops_force_4_final
+	remove_ideas = steel_torrent_modifier
+	remove_ideas = steel_torrent_modifier_os
+	remove_ideas = steel_torrent_modifier_card
+	remove_ideas = steel_torrent_modifier_os_card
+	remove_ideas = steel_torrent_modifier_firepower
+	remove_ideas = steel_torrent_modifier_final
+	remove_ideas = MIL_soaring_eagle_air_production_hidden
+	remove_ideas = MIL_strongest_millennium_soldiers
+	if = {
+		limit = { has_dynamic_modifier = { modifier = MIL_guardian_of_millennium_sky } }
+		remove_dynamic_modifier = { modifier = MIL_guardian_of_millennium_sky }
+	}
+	if = {
+		limit = { has_dynamic_modifier = { modifier = MIL_soaring_eagle } }
+		remove_dynamic_modifier = { modifier = MIL_soaring_eagle }
+	}
+	add_ideas = MIL_strongest_millennium_soldiers
 }

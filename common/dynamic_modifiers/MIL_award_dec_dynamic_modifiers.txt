@@ -90,7 +90,7 @@ MIL_soaring_eagle = {
     air_agility_factor = 0.05
 }
 
-# 2026-06-18 修改：千年安全委员会校园防卫改革系统进度与阶段奖励承载修正。
+# 2026-06-29 修改：千禧防卫力量承载共用改革进度的连续奖励，并统一接收改革决议的一次性项目奖励。
 MIL_security_reform_progress_modifier = {
     icon = GFX_idea_MIL_reorganized_security_department
     enable = { always = yes }
@@ -102,29 +102,16 @@ MIL_security_reform_progress_modifier = {
     air_mission_efficiency = MIL_security_reform_air_mission_efficiency_var
     air_cas_efficiency = MIL_security_reform_air_cas_efficiency_var
     air_agility_factor = MIL_security_reform_air_agility_factor_var
+    modifier_army_sub_unit_infantry_am_attack_factor = MIL_security_reform_mech_infantry_am_attack_factor_var
+    modifier_army_sub_unit_infantry_am_defence_factor = MIL_security_reform_mech_infantry_am_defence_factor_var
+    modifier_army_sub_unit_category_bm_attack_factor = MIL_security_reform_mech_category_bm_attack_factor_var
+    modifier_army_sub_unit_category_bm_defence_factor = MIL_security_reform_mech_category_bm_defence_factor_var
+    special_forces_attack_factor = MIL_security_reform_special_ops_attack_factor_var
+    special_forces_defence_factor = MIL_security_reform_special_ops_defence_factor_var
+    terrain_penalty_reduction = MIL_security_reform_special_ops_terrain_penalty_reduction_var
+    special_forces_training_time_factor = MIL_security_reform_special_ops_training_time_factor_var
+    air_superiority_efficiency = MIL_security_reform_drone_manual_air_superiority_efficiency_var
 }
-
-# 2026-06-18 修改：陆军改革训练决议执行期间的临时经验与陆军精通度收益；拆分陆空修正以避免并行决议互相移除。
-MIL_security_reform_army_training_modifier = {
-    icon = GFX_idea_MIL_reorganized_security_department
-    enable = { always = yes }
-
-    experience_gain_army_factor = MIL_security_reform_temp_army_xp_gain_var
-    land_mastery_gain_factor = MIL_security_reform_temp_land_mastery_gain_var
-}
-
-# 2026-06-18 修改：空军改革训练决议执行期间的临时经验与空军精通度收益；拆分陆空修正以避免并行决议互相移除。
-MIL_security_reform_air_training_modifier = {
-    icon = GFX_idea_MIL_reorganized_security_department
-    enable = { always = yes }
-
-    experience_gain_air_factor = MIL_security_reform_temp_air_xp_gain_var
-    fighter_aircraft_track_mastery_gain_factor = MIL_security_reform_temp_air_mastery_gain_var
-    strike_aircraft_track_mastery_gain_factor = MIL_security_reform_temp_air_mastery_gain_var
-    medium_aircraft_track_mastery_gain_factor = MIL_security_reform_temp_air_mastery_gain_var
-    heavy_aircraft_track_mastery_gain_factor = MIL_security_reform_temp_air_mastery_gain_var
-}
-
 
 BARE_MIL_sport_Student_Support_Modifier = {
     # 2026-05-20: 学生支持度派生修正。

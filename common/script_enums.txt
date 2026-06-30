@@ -137,6 +137,8 @@ script_enum_equipment_category = {
 	anti_tank
 	rocket
 	flame
+	# 2026-06-29 修改：新增千年战斗机甲装备类别，用于聚合钢铁洪流等机甲装备加成的显示。
+	MIL_bm_equipment_category
 	land_cruiser
 	emplacement_gun_ammo
 	ballistic_missile
@@ -187,6 +189,8 @@ script_enum_equipment_bonus_type = {
 	anti_tank
 	rocket
 	flame
+	# 2026-06-29 修改：允许钢铁洪流等装备加成直接引用千年战斗机甲装备类别，避免逐个底盘展开显示。
+	MIL_bm_equipment_category
 
 	# Equipment archetypes & types
 	infantry_equipment

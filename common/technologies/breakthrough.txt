@@ -232,6 +232,10 @@ technologies = {
 		}
 		path = { leads_to_tech = T4_assult_vehicle }
 		categories = { infantry_weapons }
+		on_research_complete = {
+			# 2026-06-24 修改：突击载具达到T3时，仅通过科技完成事件检查千年高级特战机甲建造科技。
+			country_event = { id = MIL_reform.2 }
+		}
 		ai_will_do = { factor = 1 }
 	}
     T4_assult_vehicle = {
@@ -250,6 +254,10 @@ technologies = {
 		}
         path = { leads_to_tech = T5_assult_vehicle }
 		categories = { infantry_weapons }
+		on_research_complete = {
+			# 2026-06-24 修改：突击载具达到T4时，仅通过科技完成事件检查千年高级特战机甲建造科技。
+			country_event = { id = MIL_reform.2 }
+		}
 		ai_will_do = { factor = 1 }
 	}
     T5_assult_vehicle = {
@@ -267,6 +275,10 @@ technologies = {
 			position = { x = 6 y = 16 }
 		}
 		categories = { infantry_weapons }
+		on_research_complete = {
+			# 2026-06-24 修改：突击载具达到T5时，仅通过科技完成事件检查千年高级特战机甲建造科技。
+			country_event = { id = MIL_reform.2 }
+		}
 		ai_will_do = { factor = 1 }
 	}
     #无人机

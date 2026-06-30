@@ -58,7 +58,27 @@ MIL_security_reform_decision_category = {
     visible = {
         original_tag = MIL
         has_country_flag = MIL_security_reform_system_unlocked_flag
-        NOT = { has_country_flag = MIL_security_reform_completed_flag }
+        # 2026-06-29 修改：改革完成后仍允许显示后段国策解锁的工厂建设决议，直到对应决议完成。
+        OR = {
+            NOT = { has_country_flag = MIL_security_reform_completed_flag }
+            AND = {
+                has_completed_focus = MIL_Special_Forces_Hell_Training_Unique
+                NOT = { has_country_flag = MIL_special_ops_factory_decision_completed_flag }
+            }
+            AND = {
+                has_completed_focus = MIL_Millennium_Steel_Wall
+                NOT = { has_country_flag = MIL_steel_wall_factory_decision_completed_flag }
+            }
+            AND = {
+                has_completed_focus = MIL_Soaring_Sky_Eagle
+                NOT = { has_country_flag = MIL_soaring_eagle_factory_decision_completed_flag }
+            }
+            AND = {
+                has_country_flag = MIL_aircraft_design_route_unlocked_flag
+                NOT = { has_country_flag = MIL_aircraft_design_mass_production_review_completed_flag }
+                NOT = { has_country_flag = MIL_aircraft_design_high_performance_platform_completed_flag }
+            }
+        }
     }
 
     visible_when_empty = yes
