@@ -1,6 +1,6 @@
 capital = 275
 oob = "A22_2019"
-set_air_oob = "A22_2019_air_legacy"
+# 2026-07-20: 钢盔团开局不保有空军。
 
 set_stability = 0.50
 set_war_support = 0.50
@@ -104,4 +104,3 @@ set_politics = {
 set_popularities = {
 	no_ideology = 100
 }
-

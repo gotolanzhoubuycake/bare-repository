@@ -1,0 +1,43 @@
+# 2026-07-16 修改：新增千年旧校区废墟袭击战争的投降自动结算与千年投降兜底。
+
+on_actions = {
+	on_capitulation_immediate = {
+		effect = {
+			# 入口：当前投降国是本轮激活的A56/A57/A58之一。
+			# 关键变量：ROOT是投降国；MIL上的活动敌人旗标必须与ROOT严格对应。
+			# 预期结果：敌人投降时由MIL完成胜利吞并、敌军清理和应急边防部队复员。
+			if = {
+				limit = {
+					MIL = { has_country_flag = MIL_ruins_enemy_active }
+					OR = {
+						AND = {
+							original_tag = A56
+							MIL = { has_country_flag = MIL_ruins_active_enemy_A56 }
+						}
+						AND = {
+							original_tag = A57
+							MIL = { has_country_flag = MIL_ruins_active_enemy_A57 }
+						}
+						AND = {
+							original_tag = A58
+							MIL = { has_country_flag = MIL_ruins_active_enemy_A58 }
+						}
+					}
+				}
+				MIL = { BARE_MIL_Ruins_Resolve_Enemy_Attack_effect = yes }
+			}
+
+			# 入口：MIL在本轮废墟敌人仍活动时投降。
+			# 关键变量：正常结算必须先执行，以保证敌人仍被吞并、目标州仍归还MIL；随后再损坏MIL全部核心州建筑。
+			# 预期结果：袭击战争不会导致敌人继续存在，但千年的核心工业与基础设施全部进入待修复状态。
+			if = {
+				limit = {
+					original_tag = MIL
+					has_country_flag = MIL_ruins_enemy_active
+				}
+				BARE_MIL_Ruins_Resolve_Enemy_Attack_effect = yes
+				BARE_MIL_Ruins_Damage_All_Core_State_Buildings_effect = yes
+			}
+		}
+	}
+}

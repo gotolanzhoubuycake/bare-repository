@@ -1,53 +1,14 @@
-air_wings = {   
-
-    209 = {
-        medium_uav_equipment_1 = {
-            owner = "CAP" 
-            amount = 100
-            
-        }
-        medium_uav_equipment_1 = {
-            owner = "CAP" 
-            amount = 100
-            
-        }
-        medium_uav_equipment_1 = {
-            owner = "CAP" 
-            amount = 100
-            
-        }
-         
-        medium_uav_equipment_1 = {
-            owner = "CAP" 
-            amount = 100
-            
-        }
-    }
-
-        259 = {
-        medium_uav_equipment_1 = {
-            owner = "CAP" 
-            amount = 100
-            
-        }
-        medium_uav_equipment_1 = {
-            owner = "CAP" 
-            amount = 100
-            
-        }
-        medium_uav_equipment_1 = {
-            owner = "CAP" 
-            amount = 100
-            
-        }
-         
-        medium_uav_equipment_1 = {
-            owner = "CAP" 
-            amount = 100
-            
-        }
-
-
-
+# 2026-07-20: 凯撒PMC主力战术空军，保留中型主力并追加小型机分遣队。
+air_wings = {
+    # 2026-07-20: 追加低成本小型制空与对地无人机，作为主力机队的数量补充。
+    259 = { medium_uav_equipment_1 = { owner = "CAP" amount = 100 } medium_uav_cas_equipment_1 = { owner = "CAP" amount = 100 } small_uav_equipment_1 = { owner = "CAP" amount = 100 } small_uav_cas_equipment_1 = { owner = "CAP" amount = 100 } small_uav_equipment_1 = { owner = "CAP" amount = 100 } small_uav_cas_equipment_1 = { owner = "CAP" amount = 100 } }
+    209 = { medium_uav_equipment_1 = { owner = "CAP" amount = 100 } medium_uav_cas_equipment_1 = { owner = "CAP" amount = 100 } }
+    609 = { medium_uav_equipment_1 = { owner = "CAP" amount = 100 } medium_uav_cas_equipment_1 = { owner = "CAP" amount = 100 } }
+    208 = {
+        small_uav_recon_equipment_1 = { owner = "CAP" amount = 100 }
+        transport_plane_equipment_1 = { owner = "CAP" amount = 25 }
+        transport_plane_equipment_1 = { owner = "CAP" amount = 25 }
+        transport_plane_equipment_1 = { owner = "CAP" amount = 25 }
+        transport_plane_equipment_1 = { owner = "CAP" amount = 25 }
     }
 }

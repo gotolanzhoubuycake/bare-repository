@@ -8,6 +8,7 @@ state={
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1
+			air_base = 6
 		}
 		owner = ABY
 		add_core_of=ABY

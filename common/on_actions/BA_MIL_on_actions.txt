@@ -1,4 +1,13 @@
 on_actions = {
+    # 2026-07-20 修复：开局监听必须切换到千年国家作用域；地块初始修正和旗标由千年国家历史文件直接建立。
+    on_startup = {
+        effect = {
+            MIL = {
+                BARE_MIL_Ruins_Initialize_effect = yes
+            }
+        }
+    }
+
     # 2026-05-20: 接入晄轮大祭月度循环；剩余月份归零后进入待结算状态，不再执行月更
     on_monthly_MIL = {
         effect = {

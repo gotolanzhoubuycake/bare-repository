@@ -68,6 +68,10 @@ every_possible_country = {
 		NOT = {
 			TAG = HIL
 			TAG = KRO
+			# 2026-07-24 修改：三个废墟敌人使用各自头像池和专属默认领袖，排除通用封锁区头像。
+			TAG = A56
+			TAG = A57
+			TAG = A58
 		}
 		has_idea = BARE_Global_Blockade_Zone
 	}
@@ -78,6 +82,73 @@ every_possible_country = {
 		portraits = {
 			civilian = {
 				large = GFX_portrait_Global_Blockade_Zone_Leader
+			}
+		}
+		country_leader = {
+			ideology = no_ideology_type
+			expire = "9999.1.1.1"
+			id = -1
+		}
+	}
+}
+
+# 2026-07-24 修改：为三个废墟敌人生成使用问号姓名和专用不明头像的开局领袖。
+# 入口：开局历史中的 every_possible_country 生成流程。
+# 关键变量：三个领袖继续使用无意识形态；正式姓名与头像由情报分析效果按活动敌人TAG揭示。
+# 预期结果：A56、A57、A58 在获得情报前统一显示“？”和专用不明身份头像，不使用游戏默认头像。
+every_possible_country = {
+	limit = {
+		TAG = A56
+		has_idea = BARE_Global_Blockade_Zone
+	}
+	generate_character = {
+		token_base = generic_Ruins_A56_Leader
+		name = MIL_ruins_unknown_leader_name
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_MIL_ruins_unknown
+			}
+		}
+		country_leader = {
+			ideology = no_ideology_type
+			expire = "9999.1.1.1"
+			id = -1
+		}
+	}
+}
+
+every_possible_country = {
+	limit = {
+		TAG = A57
+		has_idea = BARE_Global_Blockade_Zone
+	}
+	generate_character = {
+		token_base = generic_Ruins_A57_Leader
+		name = MIL_ruins_unknown_leader_name
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_MIL_ruins_unknown
+			}
+		}
+		country_leader = {
+			ideology = no_ideology_type
+			expire = "9999.1.1.1"
+			id = -1
+		}
+	}
+}
+
+every_possible_country = {
+	limit = {
+		TAG = A58
+		has_idea = BARE_Global_Blockade_Zone
+	}
+	generate_character = {
+		token_base = generic_Ruins_A58_Leader
+		name = MIL_ruins_unknown_leader_name
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_MIL_ruins_unknown
 			}
 		}
 		country_leader = {

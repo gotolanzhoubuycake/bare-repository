@@ -99,7 +99,7 @@ units = {
 
 	division= {
 		name = "第11保安队"
-		location = 695
+		location = 3383
 		division_template = "地方保安部队" #这个师用的编制的名字
 		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
 		start_equipment_factor = 1 #初始装备 0-1
@@ -108,7 +108,7 @@ units = {
 
 	division= {
 		name = "第12保安队"
-		location = 694
+		location = 840
 		division_template = "地方保安部队" #这个师用的编制的名字
 		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
 		start_equipment_factor = 1 #初始装备 0-1

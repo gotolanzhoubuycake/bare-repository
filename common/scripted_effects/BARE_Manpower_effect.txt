@@ -1277,36 +1277,37 @@ BARE_Combat_Readiness_Start_Manpower_Count = {
 			BARE_Combat_Readiness_Start_Manpower_Count_K = BARE_Combat_Readiness_Start_Manpower_Garrison_Count_K
 		}
 		
-		#然后给爷扣人力
-		while_loop_effect = {
-			limit = { 
-				check_variable = {
-					BARE_Combat_Readiness_Start_Manpower_Count_K > 2000
-				}
-			}
-			add_manpower = -2000000
-			add_to_temp_variable = {
-				BARE_Combat_Readiness_Start_Manpower_Count_K = -2000
-			}
-		}
+		# #然后给爷扣人力
+		# 驴我错了我不知道扣的人力居然还能欠着
+		# while_loop_effect = {
+		# 	limit = { 
+		# 		check_variable = {
+		# 			BARE_Combat_Readiness_Start_Manpower_Count_K > 2000
+		# 		}
+		# 	}
+		# 	add_manpower = -2000000
+		# 	add_to_temp_variable = {
+		# 		BARE_Combat_Readiness_Start_Manpower_Count_K = -2000
+		# 	}
+		# }
 		
-		if = {
-			limit = {
-				check_variable = {
-					BARE_Combat_Readiness_Start_Manpower_Count_K > 0
-				}
-			}
-			multiply_temp_variable = {
-				BARE_Combat_Readiness_Start_Manpower_Count_K = 1000
-			}
-			set_temp_variable = {
-				BARE_Combat_Readiness_Start_Manpower_Count_K_sub = 0
-			}
-			subtract_from_temp_variable = {
-				BARE_Combat_Readiness_Start_Manpower_Count_K_sub = BARE_Combat_Readiness_Start_Manpower_Count_K
-			}
-			add_manpower = BARE_Combat_Readiness_Start_Manpower_Count_K_sub
-		}
+		# if = {
+		# 	limit = {
+		# 		check_variable = {
+		# 			BARE_Combat_Readiness_Start_Manpower_Count_K > 0
+		# 		}
+		# 	}
+		# 	multiply_temp_variable = {
+		# 		BARE_Combat_Readiness_Start_Manpower_Count_K = 1000
+		# 	}
+		# 	set_temp_variable = {
+		# 		BARE_Combat_Readiness_Start_Manpower_Count_K_sub = 0
+		# 	}
+		# 	subtract_from_temp_variable = {
+		# 		BARE_Combat_Readiness_Start_Manpower_Count_K_sub = BARE_Combat_Readiness_Start_Manpower_Count_K
+		# 	}
+		# 	add_manpower = BARE_Combat_Readiness_Start_Manpower_Count_K_sub
+		# }
 	}
 
 	

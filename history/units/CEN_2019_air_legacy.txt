@@ -1,16 +1,7 @@
-air_wings = {   
-
+# 2026-07-20: 联邦学生会仅保留少量直属制空机队；瓦尔基里机队在独立OOB中维护。
+air_wings = {
     10 = {
-        medium_uav_equipment_1 = {
-            owner = "CEN" 
-            amount = 100
-            
-        }
-        medium_uav_equipment_1 = {
-            owner = "CEN" 
-            amount = 100
-            
-        }
-
+        medium_uav_equipment_1 = { owner = "CEN" amount = 100 }
+        medium_uav_equipment_1 = { owner = "CEN" amount = 100 }
     }
 }

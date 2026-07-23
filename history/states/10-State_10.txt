@@ -9,7 +9,7 @@ state={
 			infrastructure = 5
 			industrial_complex = 2
 			arms_factory = 2
-			air_base = 3
+			air_base = 10
 		}
 		owner = CEN
 		add_core_of=CEN

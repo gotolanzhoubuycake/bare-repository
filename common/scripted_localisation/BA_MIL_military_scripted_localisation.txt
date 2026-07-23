@@ -1,0 +1,193 @@
+Get_MIL_MDF_Special_Equipment_Text = {
+	# 2026-07-07 修改：千年防卫力量特战装备收益显示入口。
+	# 入口：由 `MIL_millennium_defense_force_equipment_tt` 调用。
+	# 关键条件：完成 `MIL_Special_Forces_Exoskeleton_Development`。
+	# 预期结果：仅在特战装备收益已经生效后显示对应文本。
+	name = Get_MIL_MDF_Special_Equipment_Text
+	text = {
+		trigger = { has_completed_focus = MIL_Special_Forces_Exoskeleton_Development }
+		# 2026-07-14 修改：特战机甲与自动机保持独立装备目标，界面按两类装备分别汇总显示。
+		localization_key = MIL_mdf_special_equipment_effect_tt
+	}
+	text = {
+		localization_key = MIL_mdf_equipment_empty
+	}
+}
+
+Get_MIL_MDF_Mech_Equipment_Text = {
+	# 2026-07-07 修改：千年防卫力量自动机与战斗机甲装备收益显示入口。
+	# 入口：由 `MIL_millennium_defense_force_equipment_tt` 调用。
+	# 关键条件：按钢铁洪流阶段从最终收益向前匹配，避免阶段文本重复显示。
+	# 预期结果：只显示当前最高阶段的自动机与战斗机甲装备收益。
+	name = Get_MIL_MDF_Mech_Equipment_Text
+	text = {
+		trigger = { has_completed_focus = MIL_Millennium_Steel_Wall }
+		localization_key = MIL_mdf_mech_final_effect_tt
+	}
+	text = {
+		trigger = {
+			has_completed_focus = MIL_Stronger_Firepower_Better_Protection
+			has_completed_focus = MIL_Operating_System_Upgrade
+		}
+		localization_key = MIL_mdf_mech_firepower_effect_tt
+	}
+	text = {
+		# 2026-07-14 修改：火力国策先于操作系统升级完成时，显示不含速度收益的真实装备阶段。
+		trigger = { has_completed_focus = MIL_Stronger_Firepower_Better_Protection }
+		localization_key = MIL_mdf_mech_card_firepower_effect_tt
+	}
+	text = {
+		trigger = {
+			has_completed_focus = MIL_Operating_System_Upgrade
+			has_completed_focus = MIL_Card_Drawing_Time
+		}
+		localization_key = MIL_mdf_mech_os_card_effect_tt
+	}
+	text = {
+		trigger = { has_completed_focus = MIL_Operating_System_Upgrade }
+		localization_key = MIL_mdf_mech_os_effect_tt
+	}
+	text = {
+		trigger = { has_completed_focus = MIL_Card_Drawing_Time }
+		localization_key = MIL_mdf_mech_card_effect_tt
+	}
+	text = {
+		localization_key = MIL_mdf_equipment_empty
+	}
+}
+
+Get_MIL_MDF_Air_Equipment_Text = {
+	# 2026-07-07 修改：千年防卫力量空军装备收益显示入口。
+	# 入口：由 `MIL_millennium_defense_force_equipment_tt` 调用。
+	# 关键条件：完成 `MIL_Soaring_Sky_Eagle`。
+	# 预期结果：仅在空军装备生产收益已经生效后显示对应文本。
+	name = Get_MIL_MDF_Air_Equipment_Text
+	text = {
+		trigger = { has_completed_focus = MIL_Soaring_Sky_Eagle }
+		# 2026-07-14 修改：实际效果由 cat_eq_all_uav 装备组承载，界面使用统一的无人机装备汇总文本。
+		localization_key = MIL_mdf_air_equipment_effect_tt
+	}
+	text = {
+		localization_key = MIL_mdf_equipment_empty
+	}
+}
+
+Get_MIL_MDF_Final_Equipment_Text = {
+	# 2026-07-08 修改：千年防卫力量最终收束装备收益显示入口。
+	# 入口：由 `MIL_millennium_defense_force_equipment_tt` 调用。
+	# 关键条件：完成 `MIL_Millennium_Stability_Guardian`。
+	# 预期结果：只在最终国策完成后显示自动机与战斗机甲最终生产收益。
+	name = Get_MIL_MDF_Final_Equipment_Text
+	text = {
+		trigger = { has_completed_focus = MIL_Millennium_Stability_Guardian }
+		# 2026-07-14 修改：最终机甲装备奖励使用聚合文本显示，与 cat_eq_all_bm 装备组的实际效果保持一致。
+		localization_key = MIL_mdf_final_equipment_effect_tt
+	}
+	text = {
+		localization_key = MIL_mdf_equipment_empty
+	}
+}
+
+Get_MIL_MDF_Mech_Terrain_Text = {
+	# 2026-07-07 修改：千年防卫力量战斗机甲地形适应性显示入口。
+	# 入口：由 `MIL_millennium_defense_force_equipment_tt` 调用。
+	# 关键条件：完成 `MIL_Operating_System_Upgrade`。
+	# 预期结果：只在操作系统升级后显示战斗机甲地形适应性变化。
+	name = Get_MIL_MDF_Mech_Terrain_Text
+	text = {
+		trigger = { has_completed_focus = MIL_Operating_System_Upgrade }
+		# 2026-07-14 修改：科技 formatter 只显示分类标题，改用逐地形的原版风格文本完整展示实际科技效果。
+		localization_key = MIL_mdf_mech_terrain_effect_tt
+	}
+	text = {
+		localization_key = MIL_mdf_equipment_empty
+	}
+}
+
+Get_MIL_Ruins_641_Progress_Text = {
+	# 2026-07-21 修改：废弃住宅区1-1-3开发阶段显示入口。
+	# 关键状态：按州旗标从第三阶段向第一阶段匹配，未命中时视为尚未开始。
+	# 预期结果：决议组说明始终显示该地块当前已完成的最高开发阶段。
+	name = Get_MIL_Ruins_641_Progress_Text
+	text = {
+		trigger = { 641 = { has_state_flag = MIL_ruins_stage_3 } }
+		localization_key = MIL_ruins_progress_stage_3
+	}
+	text = {
+		trigger = { 641 = { has_state_flag = MIL_ruins_stage_2 } }
+		localization_key = MIL_ruins_progress_stage_2
+	}
+	text = {
+		trigger = { 641 = { has_state_flag = MIL_ruins_stage_1 } }
+		localization_key = MIL_ruins_progress_stage_1
+	}
+	text = {
+		localization_key = MIL_ruins_progress_stage_0
+	}
+}
+
+Get_MIL_Ruins_643_Progress_Text = {
+	# 2026-07-21 修改：废弃住宅区1-2-1开发阶段显示入口。
+	# 关键状态：按州旗标从第三阶段向第一阶段匹配，未命中时视为尚未开始。
+	# 预期结果：决议组说明始终显示该地块当前已完成的最高开发阶段。
+	name = Get_MIL_Ruins_643_Progress_Text
+	text = {
+		trigger = { 643 = { has_state_flag = MIL_ruins_stage_3 } }
+		localization_key = MIL_ruins_progress_stage_3
+	}
+	text = {
+		trigger = { 643 = { has_state_flag = MIL_ruins_stage_2 } }
+		localization_key = MIL_ruins_progress_stage_2
+	}
+	text = {
+		trigger = { 643 = { has_state_flag = MIL_ruins_stage_1 } }
+		localization_key = MIL_ruins_progress_stage_1
+	}
+	text = {
+		localization_key = MIL_ruins_progress_stage_0
+	}
+}
+
+Get_MIL_Ruins_640_Progress_Text = {
+	# 2026-07-21 修改：废弃城区4-20-1开发阶段显示入口。
+	# 关键状态：按州旗标从第三阶段向第一阶段匹配，未命中时视为尚未开始。
+	# 预期结果：决议组说明始终显示该地块当前已完成的最高开发阶段。
+	name = Get_MIL_Ruins_640_Progress_Text
+	text = {
+		trigger = { 640 = { has_state_flag = MIL_ruins_stage_3 } }
+		localization_key = MIL_ruins_progress_stage_3
+	}
+	text = {
+		trigger = { 640 = { has_state_flag = MIL_ruins_stage_2 } }
+		localization_key = MIL_ruins_progress_stage_2
+	}
+	text = {
+		trigger = { 640 = { has_state_flag = MIL_ruins_stage_1 } }
+		localization_key = MIL_ruins_progress_stage_1
+	}
+	text = {
+		localization_key = MIL_ruins_progress_stage_0
+	}
+}
+
+Get_MIL_Ruins_639_Progress_Text = {
+	# 2026-07-21 修改：废弃城区1-46-9开发阶段显示入口。
+	# 关键状态：按州旗标从第三阶段向第一阶段匹配，未命中时视为尚未开始。
+	# 预期结果：决议组说明始终显示该地块当前已完成的最高开发阶段。
+	name = Get_MIL_Ruins_639_Progress_Text
+	text = {
+		trigger = { 639 = { has_state_flag = MIL_ruins_stage_3 } }
+		localization_key = MIL_ruins_progress_stage_3
+	}
+	text = {
+		trigger = { 639 = { has_state_flag = MIL_ruins_stage_2 } }
+		localization_key = MIL_ruins_progress_stage_2
+	}
+	text = {
+		trigger = { 639 = { has_state_flag = MIL_ruins_stage_1 } }
+		localization_key = MIL_ruins_progress_stage_1
+	}
+	text = {
+		localization_key = MIL_ruins_progress_stage_0
+	}
+}

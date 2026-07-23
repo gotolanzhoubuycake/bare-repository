@@ -14,7 +14,7 @@ state={
 			industrial_complex = 1
 			arms_factory = 3
 			electronic_component_factory = 2
-			air_base = 4
+			air_base = 7
 		}
 		owner = CAP
 		add_core_of=CAP

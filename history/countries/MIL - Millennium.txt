@@ -93,7 +93,10 @@ set_technology = {
 	medium_tank_MK1 = 1
 
 	#千禧年特有的机甲
+	# 2026-07-14 修改：千年开局解锁所有 T1 主线机甲，不包含任何变种。
 	light_bm_mk1 = 1
+	medium_bm_mk1 = 1
+	heavy_bm_mk1 = 1
 
 	#机动载具
 	civilian_car_equipment_T1 = 1
@@ -144,6 +147,35 @@ add_ideas = {
 		modifier = test_manpower_modifier
 	}
 }
+
+# 2026-07-20 修改：开局直接建立旧校区四个废墟地块的地区修正和开发识别旗标。
+# 入口：千年国家历史文件，开局以 MIL 国家作用域执行；后续脚本效果只负责状态推进。
+# 预期结果：开局即显示废墟城市修正；完成“废墟清理方案”后，四个地块的第一阶段决议可以正常出现。
+641 = {
+	add_dynamic_modifier = { modifier = MIL_ruins_city_modifier }
+	set_state_flag = MIL_ruins_area
+	set_state_flag = MIL_ruins_stage_0
+	set_state_flag = MIL_ruins_residential_area
+}
+643 = {
+	add_dynamic_modifier = { modifier = MIL_ruins_city_modifier }
+	set_state_flag = MIL_ruins_area
+	set_state_flag = MIL_ruins_stage_0
+	set_state_flag = MIL_ruins_residential_area
+}
+640 = {
+	add_dynamic_modifier = { modifier = MIL_ruins_city_modifier }
+	set_state_flag = MIL_ruins_area
+	set_state_flag = MIL_ruins_stage_0
+	set_state_flag = MIL_ruins_urban_area
+}
+639 = {
+	add_dynamic_modifier = { modifier = MIL_ruins_city_modifier }
+	set_state_flag = MIL_ruins_area
+	set_state_flag = MIL_ruins_stage_0
+	set_state_flag = MIL_ruins_urban_area
+}
+
 #承平日久的安保部门
 set_variable = { MIL_security_department_army_attack = -0.2 }
 set_variable = { MIL_security_department_army_defence = -0.2 }
@@ -225,4 +257,114 @@ set_power_balance = {
     left_side = MIL_bop_stable
     right_side = MIL_bop_crisis
     set_default = yes
+}
+# 2026-07-20 修改：依据开局部队与现有军工配置装备生产线。
+# 2026-07-20 调整：按有效装备线均分军工，避免步枪产能过度集中。
+add_equipment_production = {
+	equipment = { type = infantry_equipment_0 }
+	requested_factories = 2
+	progress = 0
+	efficiency = 100
+}
+add_equipment_production = {
+	equipment = { type = auto_mech_1 }
+	requested_factories = 2
+	progress = 0
+	efficiency = 100
+}
+add_equipment_production = {
+	equipment = { type = support_equipment_1 }
+	requested_factories = 2
+	progress = 0
+	efficiency = 100
+}
+add_equipment_production = {
+	equipment = { type = transport_plane_equipment_1 }
+	requested_factories = 2
+	progress = 0
+	efficiency = 100
+}
+add_equipment_production = {
+	equipment = { type = light_fire_support_equipment_0 }
+	requested_factories = 2
+	progress = 0
+	efficiency = 100
+}
+add_equipment_production = {
+	equipment = { type = ifv_equipment_1 }
+	requested_factories = 2
+	progress = 0
+	efficiency = 100
+}
+add_equipment_production = {
+	equipment = { type = light_bm_equipment_1 }
+	requested_factories = 2
+	progress = 0
+	efficiency = 100
+}
+add_equipment_production = {
+	equipment = { type = heavy_bm_equipment_1 }
+	requested_factories = 2
+	progress = 0
+	efficiency = 100
+}
+add_equipment_production = {
+	equipment = { type = medium_bm_equipment_1 }
+	requested_factories = 2
+	progress = 0
+	efficiency = 100
+}
+add_equipment_production = {
+	equipment = { type = attack_helicopter_equipment_1 }
+	requested_factories = 2
+	progress = 0
+	efficiency = 100
+}
+add_equipment_production = {
+	equipment = { type = helicopter_equipment_1 }
+	requested_factories = 1
+	progress = 0
+	efficiency = 100
+}
+add_equipment_production = {
+	equipment = { type = medium_uav_equipment_1 }
+	requested_factories = 1
+	progress = 0
+	efficiency = 100
+}
+add_equipment_production = {
+	equipment = { type = medium_uav_cas_equipment_1 }
+	requested_factories = 1
+	progress = 0
+	efficiency = 100
+}
+add_equipment_production = {
+	equipment = { type = heavy_uav_cas_equipment_1 }
+	requested_factories = 1
+	progress = 0
+	efficiency = 100
+}
+add_equipment_production = {
+	equipment = { type = heavy_uav_equipment_1 }
+	requested_factories = 1
+	progress = 0
+	efficiency = 100
+}
+add_equipment_production = {
+	equipment = { type = small_uav_cas_equipment_1 }
+	requested_factories = 1
+	progress = 0
+	efficiency = 100
+}
+add_equipment_production = {
+	equipment = { type = small_uav_equipment_1 }
+	requested_factories = 1
+	progress = 0
+	efficiency = 100
+}
+add_equipment_production = {
+	equipment = { type = small_uav_recon_equipment_1 }
+	requested_factories = 1
+	progress = 0
+	efficiency = 100
 }

@@ -1,0 +1,6 @@
+# 2026-07-20: 章鱼银行直属侦察无人机队，用于预警与设施监视。
+air_wings = {
+    258 = {
+        small_uav_recon_equipment_1 = { owner = "CAO" amount = 100 }
+    }
+}

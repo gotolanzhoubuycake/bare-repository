@@ -33,6 +33,43 @@ MIL_Sport_decision_test_category = {
     priority = 1098
 }
 
+# 2026-07-24 修改：千年旧校区废墟开发、特化攻势和战后解析统一使用同一正式决议组。
+MIL_ruins_development_decision_category = {
+    icon = generic_research
+
+    allowed = {
+        original_tag = MIL
+    }
+
+    visible = {
+        original_tag = MIL
+        OR = {
+            has_country_flag = MIL_ruins_development_decisions_unlocked
+            has_country_flag = MIL_ruins_special_offensive_decisions_unlocked
+        }
+    }
+
+    visible_when_empty = yes
+    priority = 1099
+}
+
+# 2026-07-16 修改：新增仅在调试模式显示的废墟袭击测试决议组。
+MIL_ruins_attack_test_decision_category = {
+    icon = generic_research
+
+    allowed = {
+        original_tag = MIL
+    }
+
+    visible = {
+        original_tag = MIL
+        is_debug = yes
+    }
+
+    visible_when_empty = yes
+    priority = 1200
+}
+
 # 与凯撒的冲突决议组 -- 千年侧
 MIL_cae_war_decision_category = {
     icon = generic_research

@@ -1,10 +1,35 @@
-air_wings = {   
-
-    74 = {
-        medium_uav_equipment_1 = {
-            owner = "VAL" 
-            amount = 100
-            
-        }
+# 2026-07-20: 瓦尔基里联邦治安空军，所有联队只由VAL OOB创建并归属VAL。
+# 部署覆盖联邦本部与D.U.市区；各市区仅维持一支100架级别的小规模分遣队。
+air_wings = {
+    10 = {
+        medium_uav_equipment_1 = { owner = "VAL" amount = 100 }
+        medium_uav_equipment_1 = { owner = "VAL" amount = 100 }
+        medium_uav_equipment_1 = { owner = "VAL" amount = 100 }
+        medium_uav_cas_equipment_1 = { owner = "VAL" amount = 100 }
+        medium_uav_cas_equipment_1 = { owner = "VAL" amount = 100 }
+        medium_uav_cas_equipment_1 = { owner = "VAL" amount = 100 }
+        small_uav_recon_equipment_1 = { owner = "VAL" amount = 100 }
+        # 2026-07-20: 扩充瓦尔基里治安航空网的低成本小型无人机蜂群。
+        small_uav_equipment_1 = { owner = "VAL" amount = 100 }
+        small_uav_equipment_1 = { owner = "VAL" amount = 100 }
+        small_uav_cas_equipment_1 = { owner = "VAL" amount = 100 }
+        small_uav_cas_equipment_1 = { owner = "VAL" amount = 100 }
+        # 2026-07-20: 进一步扩充治安航空网的小型无人机蜂群，维持联邦最大开局空军规模。
+        small_uav_equipment_1 = { owner = "VAL" amount = 100 }
+        small_uav_equipment_1 = { owner = "VAL" amount = 100 }
+        small_uav_cas_equipment_1 = { owner = "VAL" amount = 100 }
+        small_uav_cas_equipment_1 = { owner = "VAL" amount = 100 }
+        transport_plane_equipment_1 = { owner = "VAL" amount = 25 }
+        transport_plane_equipment_1 = { owner = "VAL" amount = 25 }
+        transport_plane_equipment_1 = { owner = "VAL" amount = 25 }
+        transport_plane_equipment_1 = { owner = "VAL" amount = 25 }
     }
+    35 = { medium_uav_equipment_1 = { owner = "VAL" amount = 100 } }
+    3 = { medium_uav_cas_equipment_1 = { owner = "VAL" amount = 100 } }
+    509 = { medium_uav_equipment_1 = { owner = "VAL" amount = 100 } }
+    22 = { small_uav_recon_equipment_1 = { owner = "VAL" amount = 100 } }
+    69 = { medium_uav_equipment_1 = { owner = "VAL" amount = 100 } }
+    132 = { medium_uav_cas_equipment_1 = { owner = "VAL" amount = 100 } }
+    145 = { medium_uav_equipment_1 = { owner = "VAL" amount = 100 } }
+    98 = { medium_uav_cas_equipment_1 = { owner = "VAL" amount = 100 } }
 }

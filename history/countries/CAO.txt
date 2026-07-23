@@ -1,6 +1,8 @@
 ﻿capital = 258
 
 oob = "CAO_2019"
+# 2026-07-20: 章鱼银行直属侦察机队使用独立OOB维护。
+set_air_oob = "CAO_2019_air"
 
 set_research_slots = 2
 
@@ -110,5 +112,16 @@ set_popularities = {
 }
 
 
-
-
+# 2026-07-20 修改：依据开局部队与现有军工配置装备生产线。
+add_equipment_production = {
+	equipment = { type = infantry_equipment_0 }
+	requested_factories = 1
+	progress = 0
+	efficiency = 100
+}
+add_equipment_production = {
+	equipment = { type = small_uav_recon_equipment_1 }
+	requested_factories = 1
+	progress = 0
+	efficiency = 100
+}

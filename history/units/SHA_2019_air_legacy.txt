@@ -1,16 +1,8 @@
-air_wings = {   
-
-    163 = {
-        medium_uav_equipment_1 = {
-            owner = "SHA" 
-            amount = 100
-            
-        }
-        medium_uav_equipment_1 = {
-            owner = "SHA" 
-            amount = 100
-            
-        }
-
-    }
+# 2026-07-20: 山海经开局空军，以中型区域防空、对地与额外小型机为核心。
+air_wings = {
+    # 2026-07-20: 追加低成本小型制空与对地无人机，作为主力机队的数量补充。
+    319 = { medium_uav_equipment_1 = { owner = "SHA" amount = 100 } medium_uav_equipment_1 = { owner = "SHA" amount = 100 } medium_uav_cas_equipment_1 = { owner = "SHA" amount = 100 } small_uav_equipment_1 = { owner = "SHA" amount = 100 } small_uav_equipment_1 = { owner = "SHA" amount = 100 } small_uav_cas_equipment_1 = { owner = "SHA" amount = 100 } }
+    357 = { medium_uav_equipment_1 = { owner = "SHA" amount = 100 } medium_uav_cas_equipment_1 = { owner = "SHA" amount = 100 } small_uav_cas_equipment_1 = { owner = "SHA" amount = 100 } }
+    162 = { medium_uav_cas_equipment_1 = { owner = "SHA" amount = 100 } }
+    163 = { small_uav_recon_equipment_1 = { owner = "SHA" amount = 100 } }
 }

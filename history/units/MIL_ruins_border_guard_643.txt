@@ -1,0 +1,114 @@
+# 2026-07-14 修改：新增废弃住宅区1-2-1遭遇袭击时的千年应急边防 OOB。
+# 入口：在 MIL 国家作用域调用 BARE_MIL_Ruins_Load_Border_Guard_643_OOB_effect。
+# 关键变量：依赖“千年废墟应急边防部队”模板；12个师按指定边境省份平均分布（4193×2、5094×2、5144×2、7038×2、7660×2、12157×2）。
+# 预期结果：袭击触发时在接壤方向生成12个满员、满装备的边防师，为玩家提供调兵反应时间。
+
+units = {
+	division = {
+		name = "第1废墟边防队"
+		location = 5144
+		division_template = "千年废墟应急边防部队"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+		start_manpower_factor = 1
+	}
+
+	division = {
+		name = "第2废墟边防队"
+		location = 5144
+		division_template = "千年废墟应急边防部队"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+		start_manpower_factor = 1
+	}
+
+	division = {
+		name = "第3废墟边防队"
+		location = 4193
+		division_template = "千年废墟应急边防部队"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+		start_manpower_factor = 1
+	}
+
+	division = {
+		name = "第4废墟边防队"
+		location = 4193
+		division_template = "千年废墟应急边防部队"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+		start_manpower_factor = 1
+	}
+
+	division = {
+		name = "第5废墟边防队"
+		location = 7038
+		division_template = "千年废墟应急边防部队"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+		start_manpower_factor = 1
+	}
+
+	division = {
+		name = "第6废墟边防队"
+		location = 7038
+		division_template = "千年废墟应急边防部队"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+		start_manpower_factor = 1
+	}
+
+	division = {
+		name = "第7废墟边防队"
+		location = 7660
+		division_template = "千年废墟应急边防部队"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+		start_manpower_factor = 1
+	}
+
+	division = {
+		name = "第8废墟边防队"
+		location = 7660
+		division_template = "千年废墟应急边防部队"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+		start_manpower_factor = 1
+	}
+
+	division = {
+		name = "第9废墟边防队"
+		location = 12157
+		division_template = "千年废墟应急边防部队"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+		start_manpower_factor = 1
+	}
+
+	division = {
+		name = "第10废墟边防队"
+		location = 12157
+		division_template = "千年废墟应急边防部队"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+		start_manpower_factor = 1
+	}
+
+	division = {
+		name = "第11废墟边防队"
+		location = 5094
+		division_template = "千年废墟应急边防部队"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+		start_manpower_factor = 1
+	}
+
+	division = {
+		name = "第12废墟边防队"
+		location = 5094
+		division_template = "千年废墟应急边防部队"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+		start_manpower_factor = 1
+	}
+}

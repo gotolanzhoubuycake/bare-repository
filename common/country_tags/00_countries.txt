@@ -99,9 +99,10 @@ A53		= "countries/A53.txt"
 A54		= "countries/A54.txt"
 A55		= "countries/A55.txt"
 ##
-#A56		= "countries/A56.txt"
-#A57		= "countries/A57.txt"
-#A58		= "countries/A58.txt"
+# 2026-07-13 修改：启用千年旧校区废墟开发的三类固定敌人 TAG。
+A56		= "countries/A56.txt" #废墟钢盔团
+A57		= "countries/A57.txt" #暴走机械
+A58		= "countries/A58.txt" #十字神明
 #A59		= "countries/A59.txt"
 #A60		= "countries/A60.txt"
 #A61		= "countries/A61.txt"

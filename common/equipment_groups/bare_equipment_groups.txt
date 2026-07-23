@@ -46,7 +46,8 @@ cat_eq_all_fire_support = { #Includes Super Heavy Tank Chassis
 		special_fire_support_equipment
 	}
 }
-cat_eq_all_bm= { #Includes Super Heavy Tank Chassis
+cat_eq_all_bm = {
+	# 2026-07-14 修改：统一注册全部标准战斗机甲与千年特战机甲，供 MIO 和 equipment_bonus 聚合调用。
 
 	equipment_type = {
 		light_bm_chassis
@@ -61,6 +62,40 @@ cat_eq_all_bm= { #Includes Super Heavy Tank Chassis
 		heavy_bm_artillery_chassis
 		heavy_bm_aa_chassis
 		heavy_bm_destroyer_chassis
+		MIL_Individual_Special_Operations_Mech_equipment
+	}
+}
+
+# 2026-07-14 修改：无人机设计路线先注册轻中型基础组，再由全尺寸组嵌套复用，避免重复列出相同框架。
+MIL_cat_eq_uav_light_medium_fighter_airframes = {
+	description = MIL_cat_eq_uav_light_medium_fighter_airframes
+	equipment_type = {
+		small_uav_airframe
+		medium_uav_airframe
+	}
+}
+
+MIL_cat_eq_uav_light_medium_cas_airframes = {
+	description = MIL_cat_eq_uav_light_medium_cas_airframes
+	equipment_type = {
+		small_uav_cas_airframe
+		medium_uav_cas_airframe
+	}
+}
+
+MIL_cat_eq_uav_fighter_airframes = {
+	description = MIL_cat_eq_uav_fighter_airframes
+	equipment_type = {
+		MIL_cat_eq_uav_light_medium_fighter_airframes
+		heavy_uav_airframe
+	}
+}
+
+MIL_cat_eq_uav_cas_airframes = {
+	description = MIL_cat_eq_uav_cas_airframes
+	equipment_type = {
+		MIL_cat_eq_uav_light_medium_cas_airframes
+		heavy_uav_cas_airframe
 	}
 }
 

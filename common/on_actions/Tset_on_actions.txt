@@ -59,14 +59,8 @@ on_actions = {
 				329 = {
 					set_demilitarized_zone = yes
 				}
-				
-				
-				
-
-
-
-
 			}
+			BARE_Combat_Readiness_Get_Manpower = yes
 		}
 	}
 	on_weekly = {
