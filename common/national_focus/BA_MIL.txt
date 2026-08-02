@@ -501,9 +501,12 @@ focus_tree = {
 		cost = 1
 		x = 35
 		y = 0
-        completion_reward = {
-            add_political_power = 50
-
+		completion_reward = {
+			add_political_power = 50
+			add_power_balance_value = {
+				id = MIL_bp_financial_crisis_balance
+				value = -0.02
+			}
 		}
 	}
 	focus = { #追查失踪的资金
@@ -606,11 +609,12 @@ focus_tree = {
 			focus = MIL_we_need_money
 		}
 		completion_reward = {
-			set_power_balance = {
-				# 解锁财政危机平衡机制，设定初始值为偏向危机80% 初始值已在定义中实现
-				id = MIL_bp_financial_crisis_balance
-			}
 			add_political_power = 50
+			add_power_balance_value = {
+				id = MIL_bp_financial_crisis_balance
+				value = -0.02
+			}
+			custom_effect_tooltip = MIL_no_debt_unlock_bop_decisions_tt
 		}
 	}
 	focus = { #千年大赏
@@ -626,6 +630,7 @@ focus_tree = {
 		}
         completion_reward = {
             add_political_power = 100
+			BARE_MIL_award_ensure_dynamic_modifier_effect = yes
         }
 	}
 	focus = { #真理部的理想
@@ -638,6 +643,11 @@ focus_tree = {
 		y = 3
 		prerequisite = {
 			focus = MIL_big_view
+		}
+		select_effect = {
+			country_event = {
+				id = MIL_event.1
+			}
 		}
         completion_reward = {
             add_political_power = 50
@@ -654,6 +664,12 @@ focus_tree = {
 		prerequisite = {
 			focus = MIL_veritas_dream
 		}
+		completion_reward = {
+			custom_effect_tooltip = MIL_Imaginary_number_plan_effect_tt
+			hidden_effect = {
+				BARE_MIL_award_imaginary_number_network_start_project_effect = yes
+			}
+		}
 	}
 	focus = { #艰巨的开发任务
 		id = MIL_difficult_development_task
@@ -666,8 +682,19 @@ focus_tree = {
 		prerequisite = {
 			focus = MIL_Imaginary_number_plan
 		}
-        completion_reward = {
-			country_event = MIL_event.3
+		completion_reward = {
+			add_political_power = 21
+			custom_effect_tooltip = MIL_difficult_development_task_effect_tt
+			hidden_effect = {
+				if = {
+					limit = { has_active_mission = MIL_award_imaginary_number_network_new_invention }
+					add_days_mission_timeout = {
+						mission = MIL_award_imaginary_number_network_new_invention
+						days = -150
+					}
+				}
+			}
+			country_event = { id = MIL_event.3 }
 		}
 	}
 	focus = { #我需要更多咖啡因
@@ -681,8 +708,19 @@ focus_tree = {
 		prerequisite = {
 			focus = MIL_difficult_development_task
 		}
-        completion_reward = {
-			country_event = MIL_event.4
+		completion_reward = {
+			add_political_power = 21
+			custom_effect_tooltip = MIL_more_coffee_effect_tt
+			hidden_effect = {
+				if = {
+					limit = { has_active_mission = MIL_award_imaginary_number_network_new_invention }
+					add_days_mission_timeout = {
+						mission = MIL_award_imaginary_number_network_new_invention
+						days = -150
+					}
+				}
+			}
+			country_event = { id = MIL_event.4 }
 		}
 	}
 	focus = { #软件硬件一起上
@@ -696,6 +734,9 @@ focus_tree = {
 		prerequisite = {
 			focus = MIL_Imaginary_number_plan
 		}
+		completion_reward = {
+			custom_effect_tooltip = MIL_software_and_hardware_effect_tt
+		}
 	}
 	focus = { #工程师部的努力
 		id = MIL_efforts_of_the_Engineering_department
@@ -708,11 +749,82 @@ focus_tree = {
 		prerequisite = {
 			focus = MIL_software_and_hardware
 		}
-	        completion_reward = {
-				random_owned_controlled_state = {
-					add_extra_state_shared_building_slots = 2
+		completion_reward = {
+			if = {
+				limit = {
+					any_controlled_state = {
+						free_building_slots = {
+							building = infrastructure
+							size > 1
+						}
+					}
+				}
+				random_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 1
+						}
+					}
+					hidden_effect = {
+						if = {
+							limit = {
+								NOT = { has_state_flag = MIL_award_imaginary_number_network_tracked_state }
+							}
+							set_state_flag = MIL_award_imaginary_number_network_tracked_state
+							set_variable = { MIL_award_imaginary_number_network_tracked_infrastructure = building_level@infrastructure }
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
 				}
 			}
+			else_if = {
+				limit = {
+					any_controlled_state = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+				}
+				random_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					hidden_effect = {
+						if = {
+							limit = {
+								NOT = { has_state_flag = MIL_award_imaginary_number_network_tracked_state }
+							}
+							set_state_flag = MIL_award_imaginary_number_network_tracked_state
+							set_variable = { MIL_award_imaginary_number_network_tracked_infrastructure = building_level@infrastructure }
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			hidden_effect = {
+				BARE_MIL_award_imaginary_number_network_track_infrastructure_effect = yes
+			}
+			if = {
+				limit = { has_active_mission = MIL_award_imaginary_number_network_new_invention }
+				add_days_mission_timeout = {
+					mission = MIL_award_imaginary_number_network_new_invention
+					days = -90
+				}
+			}
+		}
 	}
 	focus = { #“千年网络，风景独好”
 		id = MIL_best_internet
@@ -728,8 +840,18 @@ focus_tree = {
 		prerequisite = {
 			focus = MIL_more_coffee
 		}
-        completion_reward = {
-			country_event = MIL_event.5
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = MIL_best_internet_virtual_plan_completed_tt
+				has_country_flag = MIL_award_imaginary_number_network_completed
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = MIL_best_internet_effect_tt
+			hidden_effect = {
+				BARE_MIL_award_imaginary_number_network_start_optimize_effect = yes
+			}
+			country_event = { id = MIL_event.5 }
 		}
 	}
 	focus = { #工程师部的展望
@@ -757,6 +879,9 @@ focus_tree = {
 		y = 4
 		prerequisite = {
 			focus = MIL_outlook_of_the_Engineering_Department
+		}
+		completion_reward = {
+			BARE_MIL_award_engineer_department_start_project_effect = yes
 		}
 	}
 	focus = { #你可以质疑大技霸的审美
@@ -867,6 +992,15 @@ focus_tree = {
 		prerequisite = {
 			focus = MIL_Seminar_order
 		}
+		available = {
+			has_country_flag = MIL_award_engineer_department_first_completed
+			check_variable = { MIL_award_engineer_department_order > 0 }
+			OR = {
+				check_variable = { MIL_award_engineer_department_civilian > 0 }
+				check_variable = { MIL_award_engineer_department_army > 0 }
+				check_variable = { MIL_award_engineer_department_infrast > 0 }
+			}
+		}
 		completion_reward = {
 			add_power_balance_value = {
 				id = MIL_bp_financial_crisis_balance
@@ -886,6 +1020,9 @@ focus_tree = {
 		prerequisite = {
 			focus = MIL_big_view
 		}
+		completion_reward = {
+			BARE_MIL_award_game_development_start_project_effect = yes
+		}
 	}
 	focus = { #燃烧的经费
 		id = MIL_money_is_fire
@@ -897,6 +1034,9 @@ focus_tree = {
 		y = 4
 		prerequisite = {
 			focus = MIL_New_incentive_plan
+		}
+		completion_reward = {
+			BARE_MIL_award_decisions_initialize_effect = yes
 		}
 	}
 	focus = { #旧校区废墟开发再利用
@@ -1015,6 +1155,15 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = MIL_best_internet
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = MIL_new_development_plan_financial_stability_tt
+				power_balance_value = {
+					id = MIL_bp_financial_crisis_balance
+					value < -0.799
+				}
+			}
 		}
 		completion_reward = {
 			# 2026-05-20: 完成“千年发展的新蓝图”后，延迟 4 个月触发晄轮大祭筹备事件

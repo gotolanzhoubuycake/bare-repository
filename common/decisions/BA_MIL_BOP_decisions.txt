@@ -1,10 +1,11 @@
 MIL_bop_decision_category = {
-	# 一、节流决议
+	# 一、节流决议：完成“债务清除一揽子计划”后解锁。
 	MIL_bop_cut_useless_clubs = {
 		cost = 50
 		days_remove = 30
 		days_re_enable = 30
 		visible = {
+			has_completed_focus = MIL_no_debt
 		}
 		available = {
 		}
@@ -22,6 +23,7 @@ MIL_bop_decision_category = {
 		days_remove = 60
 		days_re_enable = 30
 		visible = {
+			has_completed_focus = MIL_no_debt
 		}
 		available = {
 		}
@@ -41,6 +43,7 @@ MIL_bop_decision_category = {
 	MIL_bop_reduce_research_funding = {
 		days_re_enable = 90
 		visible = {
+			has_completed_focus = MIL_no_debt
 		}
 		available = {
 		}
@@ -58,6 +61,7 @@ MIL_bop_decision_category = {
 	MIL_bop_close_deficit_factory = {
 		days_re_enable = 60
 		visible = {
+			has_completed_focus = MIL_no_debt
 		}
 		available = {
 		}
@@ -80,11 +84,12 @@ MIL_bop_decision_category = {
 			base = 2
 		}
 	}
-	# 二、建设决议（需完成国策燃烧的经费解锁）
+	# 二、建设决议：完成“燃烧的经费”后解锁。
 	MIL_bop_large_factory_construction = {
 		days_remove = 90
 		days_re_enable = 30
 		visible = {
+			has_completed_focus = MIL_money_is_fire
 		}
 		available = {
 			power_balance_value = {
@@ -129,6 +134,7 @@ MIL_bop_decision_category = {
 		days_remove = 90
 		days_re_enable = 30
 		visible = {
+			has_completed_focus = MIL_money_is_fire
 		}
 		available = {
 			power_balance_value = {
@@ -153,6 +159,7 @@ MIL_bop_decision_category = {
 		days_remove = 30
 		days_re_enable = 60
 		visible = {
+			has_completed_focus = MIL_money_is_fire
 		}
 		available = {
 			power_balance_value = {
@@ -190,6 +197,7 @@ MIL_bop_decision_category = {
 		days_remove = 90
 		days_re_enable = 60
 		visible = {
+			has_completed_focus = MIL_our_product_is_best
 		}
 		available = {
 			power_balance_value = {
@@ -226,21 +234,19 @@ MIL_bop_decision_category = {
 			base = 2
 		}
 	}
+
+	# “千年网络，风景独好”国策解锁；不依赖“燃烧的经费”。
 	MIL_bop_full_virtual_system_access = {
 		days_remove = 180
 		fire_only_once = yes
 		visible = {
-		}
-		available = {
-			power_balance_value = {
-				id = MIL_bp_financial_crisis_balance
-				value < 0.75
-			}
+			has_completed_focus = MIL_best_internet
 		}
 		modifier = {
 			civilian_factory_use = 15
 		}
 		complete_effect = {
+			custom_effect_tooltip = MIL_bop_full_virtual_system_access_tooltip
 			add_power_balance_value = {
 				id = MIL_bp_financial_crisis_balance
 				value = -0.20
@@ -250,6 +256,16 @@ MIL_bop_decision_category = {
 			add_power_balance_value = {
 				id = MIL_bp_financial_crisis_balance
 				value = -0.30
+			}
+			hidden_effect = {
+				set_country_flag = MIL_award_full_virtual_system_access_completed
+				BARE_MIL_award_ensure_dynamic_modifier_effect = yes
+				add_to_variable = { MIL_award_imaginary_number_network_research_speed = 0.05 }
+				set_variable = { MIL_award_millennium_production_factory_max_efficiency_factor = 0.05 }
+				set_variable = { MIL_award_millennium_production_factory_efficiency_gain_factor = 0.05 }
+				set_variable = { MIL_award_millennium_industrial_capacity_factory = 0.05 }
+				set_variable = { MIL_award_millennium_power_balance_weekly = -0.01 }
+				force_update_dynamic_modifier = yes
 			}
 		}
 		ai_will_do = {

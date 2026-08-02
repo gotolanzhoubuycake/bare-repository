@@ -36,6 +36,26 @@ on_actions = {
                 }
                 BARE_MIL_Sport_AI_Daily_Check_effect = yes
             }
+            if = {
+                limit = {
+                    original_tag = MIL
+                    has_completed_focus = MIL_big_view
+                    OR = {
+                        NOT = { has_dynamic_modifier = { modifier = MIL_Millennium_Award } }
+                        has_dynamic_modifier = { modifier = MIL_Imaginary_System_Upgrade }
+                    }
+                }
+                BARE_MIL_award_ensure_dynamic_modifier_effect = yes
+            }
+            if = {
+                limit = {
+                    original_tag = MIL
+                    has_country_flag = MIL_award_imaginary_number_network_project_started
+                    NOT = { has_country_flag = MIL_award_imaginary_number_network_completed }
+                    NOT = { has_country_flag = MIL_award_imaginary_number_network_instruf_flag }
+                }
+                BARE_MIL_award_imaginary_number_network_track_infrastructure_effect = yes
+            }
         }
     }
 

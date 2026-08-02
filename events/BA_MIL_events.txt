@@ -1,6 +1,399 @@
 add_namespace = MIL_event
 add_namespace = MIL_sport_event
 add_namespace = MIL_reform
+add_namespace = MIL_award_game
+add_namespace = MIL_award_engineer
+add_namespace = MIL_award_imaginary
+
+# “虚数”计划基础开发与基站网络均完成时触发；后续国策事件仍使用 MIL_event.5。
+country_event = {
+    id = MIL_award_imaginary.1
+    title = MIL_award_imaginary.1.t
+    desc = MIL_award_imaginary.1.d
+
+    is_triggered_only = yes
+    fire_only_once = yes
+
+    option = {
+        name = MIL_award_imaginary.1.a
+        ai_chance = {
+            base = 1
+        }
+    }
+}
+
+# 游戏开发部“废部危机”事件链：第一次新游开发完成后触发，最后解锁“重启征程”决议。
+country_event = {
+    id = MIL_award_game.1
+    title = MIL_award_game.1.t
+    desc = MIL_award_game.1.d
+
+    is_triggered_only = yes
+    fire_only_once = yes
+
+    option = {
+        name = MIL_award_game.1.a
+        hidden_effect = {
+            add_manpower = 20000
+            country_event = { id = MIL_award_game.2 days = 15 }
+        }
+        ai_chance = {
+            base = 1
+        }
+    }
+}
+
+country_event = {
+    id = MIL_award_game.2
+    title = MIL_award_game.2.t
+    desc = MIL_award_game.2.d
+
+    is_triggered_only = yes
+    fire_only_once = yes
+
+    option = {
+        name = MIL_award_game.2.a
+        hidden_effect = {
+            country_event = { id = MIL_award_game.3 days = 15 }
+        }
+        ai_chance = {
+            base = 1
+        }
+    }
+}
+
+country_event = {
+    id = MIL_award_game.3
+    title = MIL_award_game.3.t
+    desc = MIL_award_game.3.d
+
+    is_triggered_only = yes
+    fire_only_once = yes
+
+    option = {
+        name = MIL_award_game.3.a
+        hidden_effect = {
+            country_event = { id = MIL_award_game.4 days = 6 }
+        }
+        ai_chance = {
+            base = 1
+        }
+    }
+}
+
+country_event = {
+    id = MIL_award_game.4
+    title = MIL_award_game.4.t
+    desc = MIL_award_game.4.d
+
+    is_triggered_only = yes
+    fire_only_once = yes
+
+    option = {
+        name = MIL_award_game.4.a
+        hidden_effect = {
+            country_event = { id = MIL_award_game.5 days = 12 }
+        }
+        ai_chance = {
+            base = 1
+        }
+    }
+}
+
+country_event = {
+    id = MIL_award_game.5
+    title = MIL_award_game.5.t
+    desc = MIL_award_game.5.d
+
+    is_triggered_only = yes
+    fire_only_once = yes
+
+    option = {
+        name = MIL_award_game.5.a
+        hidden_effect = {
+            country_event = { id = MIL_award_game.6 days = 6 }
+        }
+        ai_chance = {
+            base = 1
+        }
+    }
+}
+
+country_event = {
+    id = MIL_award_game.6
+    title = MIL_award_game.6.t
+    desc = MIL_award_game.6.d
+
+    is_triggered_only = yes
+    fire_only_once = yes
+
+    option = {
+        name = MIL_award_game.6.a
+        hidden_effect = {
+            add_army_experience = 15
+            set_country_flag = MIL_award_game_development_restart_available
+        }
+        ai_chance = {
+            base = 1
+        }
+    }
+}
+
+country_event = {
+    id = MIL_award_game.7
+    title = MIL_award_game.7.t
+    desc = MIL_award_game.7.d
+
+    is_triggered_only = yes
+
+    option = {
+        name = MIL_award_game.7.a
+        ai_chance = {
+            base = 1
+        }
+    }
+}
+
+# 工程师部研讨会订单：决议完成后由事件选择具体交付装备。
+country_event = {
+    id = MIL_award_engineer.1
+    title = MIL_award_engineer.1.t
+    desc = MIL_award_engineer.1.d
+
+    is_triggered_only = yes
+
+    option = {
+        name = MIL_award_engineer.1.a
+        add_equipment_to_stockpile = {
+            type = infantry_equipment
+            amount = 3000
+            producer = MIL
+        }
+        BARE_MIL_award_engineer_department_add_order_progress_effect = yes
+        ai_chance = {
+            base = 1
+        }
+    }
+
+    option = {
+        name = MIL_award_engineer.1.b
+        trigger = { has_tech = support_equipment_T1 }
+        add_equipment_to_stockpile = {
+            type = support_equipment
+            amount = 300
+            producer = MIL
+        }
+        BARE_MIL_award_engineer_department_add_order_progress_effect = yes
+        ai_chance = {
+            base = 1
+        }
+    }
+
+    option = {
+        name = MIL_award_engineer.1.c
+        trigger = { has_tech = civilian_car_equipment_T1 }
+        add_equipment_to_stockpile = {
+            type = motorized_equipment
+            amount = 300
+            producer = MIL
+        }
+        BARE_MIL_award_engineer_department_add_order_progress_effect = yes
+        ai_chance = {
+            base = 1
+        }
+    }
+
+    option = {
+        name = MIL_award_engineer.1.opt_auto
+        trigger = { has_tech = Industrial_Robots_T2 }
+        add_equipment_to_stockpile = {
+            type = auto_mech
+            amount = 6000
+            producer = MIL
+        }
+        BARE_MIL_award_engineer_department_add_order_progress_effect = yes
+        ai_chance = {
+            base = 1
+        }
+    }
+}
+
+country_event = {
+    id = MIL_award_engineer.2
+    title = MIL_award_engineer.2.t
+    desc = MIL_award_engineer.2.d
+
+    is_triggered_only = yes
+
+    option = {
+        name = MIL_award_engineer.2.a
+        trigger = { has_tech = light_bm_mk1 }
+        add_equipment_to_stockpile = {
+            type = light_bm_chassis
+            amount = 18
+            producer = MIL
+        }
+        BARE_MIL_award_engineer_department_add_order_progress_effect = yes
+        ai_chance = {
+            base = 1
+        }
+    }
+
+    option = {
+        name = MIL_award_engineer.2.b
+        trigger = { has_tech = medium_bm_mk1 }
+        add_equipment_to_stockpile = {
+            type = medium_bm_chassis
+            amount = 16
+            producer = MIL
+        }
+        BARE_MIL_award_engineer_department_add_order_progress_effect = yes
+        ai_chance = {
+            base = 1
+        }
+    }
+
+    option = {
+        name = MIL_award_engineer.2.c
+        trigger = { has_tech = heavy_bm_mk1 }
+        add_equipment_to_stockpile = {
+            type = heavy_bm_chassis
+            amount = 8
+            producer = MIL
+        }
+        BARE_MIL_award_engineer_department_add_order_progress_effect = yes
+        ai_chance = {
+            base = 1
+        }
+    }
+
+    option = {
+        name = MIL_award_engineer.2.opt_special
+        add_equipment_to_stockpile = {
+            type = MIL_Individual_Special_Operations_Mech_equipment
+            amount = 16
+            producer = MIL
+        }
+        BARE_MIL_award_engineer_department_add_order_progress_effect = yes
+        ai_chance = {
+            base = 1
+        }
+    }
+}
+
+country_event = {
+    id = MIL_award_engineer.3
+    title = MIL_award_engineer.3.t
+    desc = MIL_award_engineer.3.d
+
+    is_triggered_only = yes
+
+    option = {
+        name = MIL_award_engineer.3.a
+        trigger = { has_tech = light_tank_MK1 }
+        add_equipment_to_stockpile = {
+            type = light_tank_chassis
+            amount = 18
+            producer = MIL
+        }
+        BARE_MIL_award_engineer_department_add_order_progress_effect = yes
+        ai_chance = {
+            base = 1
+        }
+    }
+
+    option = {
+        name = MIL_award_engineer.3.b
+        trigger = { has_tech = medium_tank_MK1 }
+        add_equipment_to_stockpile = {
+            type = medium_tank_chassis
+            amount = 16
+            producer = MIL
+        }
+        BARE_MIL_award_engineer_department_add_order_progress_effect = yes
+        ai_chance = {
+            base = 1
+        }
+    }
+
+    option = {
+        name = MIL_award_engineer.3.c
+        trigger = { has_tech = heavy_tank_MK1 }
+        add_equipment_to_stockpile = {
+            type = heavy_tank_chassis
+            amount = 8
+            producer = MIL
+        }
+        BARE_MIL_award_engineer_department_add_order_progress_effect = yes
+        ai_chance = {
+            base = 1
+        }
+    }
+}
+
+country_event = {
+    id = MIL_award_engineer.4
+    title = MIL_award_engineer.4.t
+    desc = MIL_award_engineer.4.d
+
+    is_triggered_only = yes
+
+    option = {
+        name = MIL_award_engineer.4.a
+        trigger = { has_tech = fire_support_weapons_T1 }
+        add_equipment_to_stockpile = {
+            type = light_fire_support_equipment
+            amount = 375
+            producer = MIL
+        }
+        BARE_MIL_award_engineer_department_add_order_progress_effect = yes
+        ai_chance = {
+            base = 1
+        }
+    }
+
+    option = {
+        name = MIL_award_engineer.4.b
+        trigger = { has_tech = fire_support_weapons_T1 }
+        add_equipment_to_stockpile = {
+            type = heavy_fire_support_equipment
+            amount = 375
+            producer = MIL
+        }
+        BARE_MIL_award_engineer_department_add_order_progress_effect = yes
+        ai_chance = {
+            base = 1
+        }
+    }
+
+    option = {
+        name = MIL_award_engineer.4.c
+        trigger = { has_tech = air_defense_weapons_T1 }
+        add_equipment_to_stockpile = {
+            type = infantry_anti_air_equipment
+            amount = 500
+            producer = MIL
+        }
+        BARE_MIL_award_engineer_department_add_order_progress_effect = yes
+        ai_chance = {
+            base = 1
+        }
+    }
+
+    option = {
+        name = MIL_award_engineer.4.opt_mystic
+        trigger = { has_tech = special_fire_support_weapons_T1 }
+        add_equipment_to_stockpile = {
+            type = special_fire_support_equipment
+            amount = 250
+            producer = MIL
+        }
+        BARE_MIL_award_engineer_department_add_order_progress_effect = yes
+        ai_chance = {
+            base = 1
+        }
+    }
+}
 country_event = {
     id = MIL_event.1
     title = MIL_event.1.t

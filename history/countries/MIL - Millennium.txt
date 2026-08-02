@@ -222,7 +222,7 @@ set_variable = {
 }
 set_power_balance = {
     id = MIL_bp_financial_crisis_balance
-    left_side = MIL_bop_stable
-    right_side = MIL_bop_crisis
+    left_side = MIL_bop_stable_side
+    right_side = MIL_bop_crisis_side
     set_default = yes
 }

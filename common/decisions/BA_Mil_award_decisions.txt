@@ -1,25 +1,38 @@
 MIL_award_debug_decisions = {
+    # 调试决议：手动初始化千年大赏测试变量。
     MIL_award_debug_decision = {
         visible = {
             is_debug= yes
         }
         complete_effect = {
             add_political_power = 100
-            #虚数计划大成功率
+            # 虚数系统优化：max=90 对应基础 10% 大成功概率。
             set_variable = {
-                MIL_award_imaginary_number_network_max = 85
+                MIL_award_imaginary_number_network_max = 90
             }
-            #虚数计划概率数
+            # 虚数系统优化：调试初始随机数占位；正式结算时会重新随机。
             set_variable = {
                 MIL_award_imaginary_number_network_prob = 100
             }
-            #虚数计划基建计数
+            # 虚数计划基础阶段：基站网络建设计数，达到 10 次后置完成 flag。
             set_variable = {
                 MIL_award_imaginary_number_network_instruf = 0
             }
-            #虚数计划成功率
+            # 虚数系统优化：min=0，按新版文档只区分 10% 大成功与 90% 成功。
             set_variable = {
-                MIL_award_imaginary_number_network_min = 40
+                MIL_award_imaginary_number_network_min = 0
+            }
+            # 虚数系统优化累计科研速度，动态修正 MIL_Imaginary_System_Upgrade 会读取该变量。
+            set_variable = {
+                MIL_award_imaginary_number_network_research_speed = 0
+            }
+            # 虚数系统优化累计特殊计划项目速度，动态修正 MIL_Imaginary_System_Upgrade 会读取该变量。
+            set_variable = {
+                MIL_award_imaginary_number_network_special_project_speed = 0
+            }
+            # 已完成的虚数优化次数；每完成一次会让下一轮基础时长 +30 日。
+            set_variable = {
+                MIL_award_imaginary_number_network_optimize_count = 0
             }
             #工程师大成功率
             set_variable = {
@@ -68,150 +81,343 @@ MIL_award_debug_decisions = {
         }
     }
 }
+
+MIL_award_decisions = {
+    # 总览占位决议：只用于显示千年大赏说明和后续年度机制入口，不提供可点击效果。
+    MIL_award_overview_placeholder = {
+        visible = {
+            has_completed_focus = MIL_big_view
+        }
+        available = {
+            always = no
+        }
+    }
+}
+
 MIL_award_imaginary_number_network_decisions = {
+    ### “虚数”计划
+    ### 基础开发 mission 和基站建设相互独立：540 日开发完成后设置 main_done，10 次基站建设后设置 instruf_flag。
+    ### 两者都满足时设置虚数计划完成标记并触发成功事件；MIL_best_internet 仍需完成两条分支前置后手动选择。
+    # 说明占位决议：用于在“虚数”计划分类中显示机制说明，不提供可点击效果。
+    MIL_award_imaginary_number_network_overview = {
+        priority = 1000
+        visible = {
+            has_completed_focus = MIL_Imaginary_number_plan
+        }
+        available = {
+            always = no
+        }
+    }
+
+    # 通用加速决议：投入额外经费，短期提高生活消费品占比，结束后减少当前虚数优化 60 日。
     MIL_award_imaginary_number_network_more_money = {
-        days_remove = 45
-        days_re_enable = 45
+        cost = 30
+        days_remove = 15
+        days_re_enable = 60
         modifier = {
-            consumer_goods_factor = 0.1
+            consumer_goods_factor = 0.2
+        }
+        visible = {
+            has_country_flag = MIL_award_basic_decisions_unlocked
+            has_active_mission = MIL_award_imaginary_number_network_optimize
         }
         remove_effect = {
+            # days_remove 结束时才真正缩短 mission，符合“投入持续一段时间后产生研发加速”的设计。
             add_days_mission_timeout = {
-                mission = MIL_award_imaginary_number_network_new_invention
-                days = -45
+                mission = MIL_award_imaginary_number_network_optimize
+                days = -60
             }
         }
     }
+
+    # 通用加速决议：抽调研究人员，短期降低科研速度，结束后减少当前虚数优化 60 日。
     MIL_award_imaginary_number_network_more_people = {
-        days_remove = 45
-        days_re_enable = 45
+        cost = 30
+        days_remove = 15
+        days_re_enable = 60
         modifier = {
             research_speed_factor = -0.05
         }
+        visible = {
+            has_country_flag = MIL_award_basic_decisions_unlocked
+            has_active_mission = MIL_award_imaginary_number_network_optimize
+        }
         remove_effect = {
             add_days_mission_timeout = {
-                mission = MIL_award_imaginary_number_network_new_invention
-                days = -45
+                mission = MIL_award_imaginary_number_network_optimize
+                days = -60
             }
         }
     }
+
+    # 通用加速决议：集中资源研发。虚数优化减少 15 日；如果工程师部项目正在进行，则延后 5 日，体现资源被抽走。
     MIL_award_imaginary_number_network_fix = {
-        
+        cost = 50
+        days_remove = 15
+        days_re_enable = 60
+        visible = {
+            has_country_flag = MIL_award_basic_decisions_unlocked
+            has_active_mission = MIL_award_imaginary_number_network_optimize
+        }
+        remove_effect = {
+            add_days_mission_timeout = {
+                mission = MIL_award_imaginary_number_network_optimize
+                days = -15
+            }
+            if = {
+                limit = { has_active_mission = MIL_award_engineer_department_new_invention }
+                add_days_mission_timeout = {
+                    mission = MIL_award_engineer_department_new_invention
+                    days = 5
+                }
+            }
+        }
     }
+
+    # 提高产品质量：只作用于“优化虚数系统”，且第一轮优化不可使用。
+    # 完成第一轮后 optimize_count 大于 0，从第二轮开始开放。
     MIL_award_imaginary_number_network_update = {
         cost = 25
-        days_remove = 45
-        days_re_enable = 45
+        days_re_enable = 90
+        visible = {
+            has_country_flag = MIL_award_basic_decisions_unlocked
+            has_active_mission = MIL_award_imaginary_number_network_optimize
+            check_variable = { MIL_award_imaginary_number_network_optimize_count > 0 }
+        }
         complete_effect = {
             add_days_mission_timeout = {
-                mission = MIL_award_imaginary_number_network_new_invention
+                mission = MIL_award_imaginary_number_network_optimize
                 days = 15
-            }
-        }
-        remove_effect = {
-            add_to_variable = {
-                MIL_award_imaginary_number_network_min = -10
             }
             add_to_variable = {
                 MIL_award_imaginary_number_network_max = -5
             }
+            # 大成功阈值下降 5 点；clamp 防止多次使用后大成功概率超过 90%。
+            clamp_variable = {
+                var = MIL_award_imaginary_number_network_max
+                min = 10
+                max = 90
+            }
         }
     }
+
+    # 特殊任务：建设新的基站网络。玩家在千年实控州上选择目标州；完成时若目标州仍可建设，则增加 1 基础设施。
+    # 完成“软件硬件一起上”后在地图上显示；仅在虚数计划整体完成后隐藏。
     MIL_award_imaginary_number_network_build = {
         cost = 30
         days_remove = 15
         days_re_enable = 15
         on_map_mode = map_only
         state_target = yes
-        target_array = MIL.core_states
+        target_root_trigger = {
+            has_completed_focus = MIL_software_and_hardware
+            NOT = { has_country_flag = MIL_award_imaginary_number_network_completed }
+            NOT = { has_country_flag = MIL_award_imaginary_number_network_build_ongoing }
+            NOT = { has_country_flag = MIL_award_imaginary_number_network_build_cooldown }
+        }
+        target_trigger = {
+            FROM = {
+                is_controlled_by = ROOT
+                free_building_slots = {
+                    building = infrastructure
+                    size > 0
+                }
+            }
+        }
+        visible = {
+            has_completed_focus = MIL_software_and_hardware
+            NOT = { has_country_flag = MIL_award_imaginary_number_network_completed }
+            NOT = { has_country_flag = MIL_award_imaginary_number_network_build_ongoing }
+            NOT = { has_country_flag = MIL_award_imaginary_number_network_build_cooldown }
+        }
+        available = {
+            custom_override_tooltip = {
+                tooltip = only_one_state_same_time
+                NOT = { has_country_flag = MIL_award_imaginary_number_network_build_ongoing }
+            }
+            custom_override_tooltip = {
+                tooltip = MIL_award_imaginary_number_network_build_cooldown_tt
+                NOT = { has_country_flag = MIL_award_imaginary_number_network_build_cooldown }
+            }
+        }
+        modifier = {
+            civilian_factory_use = 3
+        }
         complete_effect = {
-            
+            FROM = {
+                if = {
+                    limit = {
+                        NOT = { has_state_flag = MIL_award_imaginary_number_network_tracked_state }
+                    }
+                    set_state_flag = MIL_award_imaginary_number_network_tracked_state
+                    set_variable = { MIL_award_imaginary_number_network_tracked_infrastructure = building_level@infrastructure }
+                }
+            }
+            set_country_flag = MIL_award_imaginary_number_network_build_ongoing
         }
         remove_effect = {
-            FROM = {
-                add_building_construction = {
-                    type = infrastructure
-                    level = 1
-                    instant_build = yes
+            clr_country_flag = MIL_award_imaginary_number_network_build_ongoing
+            set_country_flag = { flag = MIL_award_imaginary_number_network_build_cooldown days = 15 }
+            # state_target 决议中 FROM 是玩家选择的州；若完成时目标州已无法继续建设，则静默失败，不增加基站进度。
+            if = {
+                limit = {
+                    FROM = {
+                        is_controlled_by = ROOT
+                        free_building_slots = {
+                            building = infrastructure
+                            size > 0
+                        }
+                    }
                 }
-            }
-            MIL = {
-                add_to_variable = {
-                    MIL_award_imaginary_number_network_instruf = 1
+                FROM = {
+                    add_building_construction = {
+                        type = infrastructure
+                        level = 1
+                        instant_build = yes
+                    }
                 }
-                if = {
-                    check_variable = { MIL_award_imaginary_number_network_instruf = 10 }
-                    set_country_flag = MIL_award_imaginary_number_network_instruf_flag
+                hidden_effect = {
+                    BARE_MIL_award_imaginary_number_network_track_infrastructure_effect = yes
                 }
             }
         }
+        cancel_effect = {
+            clr_country_flag = MIL_award_imaginary_number_network_build_ongoing
+        }
     }
+
+    # 基础开发倒计时：由国策或脚本效果 activate_mission 启动，玩家不能手动点击完成。
     MIL_award_imaginary_number_network_new_invention = {
+        visible = {
+            has_completed_focus = MIL_Imaginary_number_plan
+            has_active_mission = MIL_award_imaginary_number_network_new_invention
+        }
         allowed = { tag = MIL }
+        activation = {
+            always = no
+        }
         available = {
             always = no
         }
+        cancel_trigger = {
+            NOT = { has_completed_focus = MIL_Imaginary_number_plan }
+        }
         timeout_effect = {
-            randomize_variable = {
-                var = MIL_award_imaginary_number_network_prob
-                distribution = uniform
-                min = 0
-                max = 100
-            }
-            if = {
-                limit = { check_variable = { MIL_award_imaginary_number_network_prob > MIL_award_imaginary_number_network_max } }
-                add_to_variable = { MIL_award_imaginary_number_network_research_speed = 0.03 } 
-            }
-            else_if = {
-                limit = { check_variable = { MIL_award_imaginary_number_network_prob > MIL_award_imaginary_number_network_min } }
-                add_to_variable = { MIL_award_imaginary_number_network_research_speed = 0.02 } 
-            }
-            else_if = {
-                limit = { check_variable = { MIL_award_imaginary_number_network_prob > 0 } }
-                add_to_variable = { MIL_award_imaginary_number_network_research_speed = 0.01 } 
-            }
-            else = {
+            # 基础开发时间归零后只设置完成 flag；真正上线还要求基站网络完成。
+            set_country_flag = MIL_award_imaginary_number_network_main_done
+            BARE_MIL_award_imaginary_number_network_try_complete_effect = yes
+        }
+        days_mission_timeout = 540
+        is_good = yes
+    }
 
-            }
+    # 后续优化循环：由 BARE_MIL_award_imaginary_number_network_start_optimize_effect 启动并自动重复。
+    # 每次结算会按概率增加科研速度和特殊计划项目速度，并让下一轮基础时长增加 30 日。
+    MIL_award_imaginary_number_network_optimize = {
+        visible = {
+            has_completed_focus = MIL_best_internet
+            has_active_mission = MIL_award_imaginary_number_network_optimize
+        }
+        allowed = { tag = MIL }
+        activation = {
+            always = no
+        }
+        available = {
+            always = no
+        }
+        cancel_trigger = {
+            NOT = { has_completed_focus = MIL_best_internet }
+        }
+        timeout_effect = {
+            BARE_MIL_award_imaginary_number_network_optimize_finish_effect = yes
         }
         days_mission_timeout = 180
         is_good = yes
     }
 }
+
 MIL_award_engineer_department_decisions = {
+    ### 工程师部的新发明
+    # 说明占位决议：用于在工程师部分类中显示机制说明，不提供可点击效果。
+    MIL_award_engineer_department_overview = {
+        priority = 1000
+        visible = {
+            has_completed_focus = MIL_i_think_it_can
+        }
+        available = {
+            always = no
+        }
+    }
+
     MIL_award_engineer_department_more_money = {
-        days_remove = 45
-        days_re_enable = 45
+        cost = 30
+        days_remove = 15
+        days_re_enable = 60
+        visible = {
+            has_country_flag = MIL_award_basic_decisions_unlocked
+            has_active_mission = MIL_award_engineer_department_new_invention
+        }
         modifier = {
-            consumer_goods_factor = 0.1
+            consumer_goods_factor = 0.2
         }
         remove_effect = {
             add_days_mission_timeout = {
                 mission = MIL_award_engineer_department_new_invention
-                days = -45
+                days = -60
             }
         }
     }
+
     MIL_award_engineer_department_more_people = {
-        days_remove = 45
-        days_re_enable = 45
+        cost = 30
+        days_remove = 15
+        days_re_enable = 60
+        visible = {
+            has_country_flag = MIL_award_basic_decisions_unlocked
+            has_active_mission = MIL_award_engineer_department_new_invention
+        }
         modifier = {
             research_speed_factor = -0.05
         }
         remove_effect = {
             add_days_mission_timeout = {
                 mission = MIL_award_engineer_department_new_invention
-                days = -45
+                days = -60
             }
         }
     }
+
     MIL_award_engineer_department_fix = {
-        
+        cost = 50
+        days_remove = 15
+        days_re_enable = 60
+        visible = {
+            has_country_flag = MIL_award_basic_decisions_unlocked
+            has_active_mission = MIL_award_engineer_department_new_invention
+        }
+        remove_effect = {
+            add_days_mission_timeout = {
+                mission = MIL_award_engineer_department_new_invention
+                days = -15
+            }
+            if = {
+                limit = { has_active_mission = MIL_award_imaginary_number_network_optimize }
+                add_days_mission_timeout = {
+                    mission = MIL_award_imaginary_number_network_optimize
+                    days = 5
+                }
+            }
+        }
     }
+
     MIL_award_engineer_department_update = {
         cost = 25
-        days_remove = 45
-        days_re_enable = 45
+        days_re_enable = 90
+        visible = {
+            has_country_flag = MIL_award_basic_decisions_unlocked
+            has_country_flag = MIL_award_engineer_department_first_completed
+            has_active_mission = MIL_award_engineer_department_new_invention
+        }
         complete_effect = {
             add_days_mission_timeout = {
                 mission = MIL_award_engineer_department_new_invention
@@ -225,12 +431,34 @@ MIL_award_engineer_department_decisions = {
             add_to_variable = {
                 MIL_award_engineer_department_max = -5
             }
+            clamp_variable = {
+                var = MIL_award_engineer_department_min
+                min = 0
+                max = 85
+            }
+            clamp_variable = {
+                var = MIL_award_engineer_department_max
+                min = 15
+                max = 85
+            }
         }
     }
+
     MIL_award_engineer_department_civilian_factory = {
         cost = 50
         days_remove = 60
         days_re_enable = 30
+        visible = {
+            has_completed_focus = MIL_it_ugly
+        }
+        available = {
+            OR = {
+                has_active_mission = MIL_award_engineer_department_new_invention
+                has_country_flag = MIL_award_engineer_department_time_done
+            }
+            NOT = { has_country_flag = MIL_award_engineer_department_task_done }
+            check_variable = { MIL_award_engineer_department_build_progress < 100 }
+        }
         modifier = {
             civilian_factory_use = 3
         }
@@ -242,18 +470,34 @@ MIL_award_engineer_department_decisions = {
             add_to_variable = {
                 MIL_award_engineer_department_civilian = 1
             }
-            if = {
-                check_variable = {
-                    MIL_award_engineer_department_civilian > 1
-                }
-                set_country_flag = MIL_award_engineer_department_flag
+            add_to_variable = {
+                MIL_award_engineer_department_build_progress = 50
             }
+            if = {
+                limit = {
+                    check_variable = { MIL_award_engineer_department_build_progress > 99 }
+                }
+                set_country_flag = MIL_award_engineer_department_task_done
+            }
+            BARE_MIL_award_engineer_department_try_complete_effect = yes
         }
     }
+
     MIL_award_engineer_department_army_factory = {
         cost = 35
         days_remove = 45
         days_re_enable = 30
+        visible = {
+            has_completed_focus = MIL_it_ugly
+        }
+        available = {
+            OR = {
+                has_active_mission = MIL_award_engineer_department_new_invention
+                has_country_flag = MIL_award_engineer_department_time_done
+            }
+            NOT = { has_country_flag = MIL_award_engineer_department_task_done }
+            check_variable = { MIL_award_engineer_department_build_progress < 100 }
+        }
         modifier = {
             civilian_factory_use = 3
         }
@@ -265,20 +509,51 @@ MIL_award_engineer_department_decisions = {
             add_to_variable = {
                 MIL_award_engineer_department_army = 1
             }
-            if = {
-                check_variable = {
-                    MIL_award_engineer_department_army > 2
-                }
-                set_country_flag = MIL_award_engineer_department_flag
+            add_to_variable = {
+                MIL_award_engineer_department_build_progress = 34
             }
+            if = {
+                limit = {
+                    check_variable = { MIL_award_engineer_department_build_progress > 99 }
+                }
+                set_country_flag = MIL_award_engineer_department_task_done
+            }
+            BARE_MIL_award_engineer_department_try_complete_effect = yes
         }
     }
+
     MIL_award_engineer_department_infrastructure = {
         cost = 25
         days_remove = 30
+        days_re_enable = 30
         on_map_mode = map_only
         state_target = yes
-        target_array = MIL.core_states
+        target_root_trigger = {
+            has_completed_focus = MIL_it_ugly
+            OR = {
+                has_active_mission = MIL_award_engineer_department_new_invention
+                has_country_flag = MIL_award_engineer_department_time_done
+            }
+            NOT = { has_country_flag = MIL_award_engineer_department_task_done }
+            check_variable = { MIL_award_engineer_department_build_progress < 100 }
+        }
+        target_trigger = {
+            FROM = {
+                is_controlled_by = ROOT
+                can_construct_building = infrastructure
+            }
+        }
+        visible = {
+            has_completed_focus = MIL_it_ugly
+        }
+        available = {
+            OR = {
+                has_active_mission = MIL_award_engineer_department_new_invention
+                has_country_flag = MIL_award_engineer_department_time_done
+            }
+            NOT = { has_country_flag = MIL_award_engineer_department_task_done }
+            check_variable = { MIL_award_engineer_department_build_progress < 100 }
+        }
         modifier = {
             civilian_factory_use = 3
         }
@@ -290,23 +565,40 @@ MIL_award_engineer_department_decisions = {
                     instant_build = yes
                 }
             }
+            BARE_MIL_award_imaginary_number_network_track_infrastructure_effect = yes
             MIL = {
                 add_to_variable = {
                     MIL_award_engineer_department_infrast = 1
                 }
-                if = {
-                    check_variable = {
-                        MIL_award_engineer_department_infrast > 4
-                    }
-                    set_country_flag = MIL_award_engineer_department_flag
+                add_to_variable = {
+                    MIL_award_engineer_department_build_progress = 25
                 }
+                if = {
+                    limit = {
+                        check_variable = { MIL_award_engineer_department_build_progress > 99 }
+                    }
+                    set_country_flag = MIL_award_engineer_department_task_done
+                }
+                BARE_MIL_award_engineer_department_try_complete_effect = yes
             }
         }
     }
+
     MIL_award_engineer_department_whimsical_ideas = {
         cost = 50
         days_remove = 30
-        days_re_enable = 30
+        days_re_enable = 45
+        visible = {
+            has_completed_focus = MIL_but_useful
+        }
+        available = {
+            OR = {
+                has_active_mission = MIL_award_engineer_department_new_invention
+                has_country_flag = MIL_award_engineer_department_time_done
+            }
+            NOT = { has_country_flag = MIL_award_engineer_department_task_done }
+            check_variable = { MIL_award_engineer_department_support_progress < 100 }
+        }
         modifier = {
             civilian_factory_use = 3
         }
@@ -331,125 +623,174 @@ MIL_award_engineer_department_decisions = {
             add_to_variable = {
                 MIL_award_engineer_department_department = 1
             }
-            if = {
-                check_variable = {
-                    MIL_award_engineer_department_department > 2
-                }
-                set_country_flag = MIL_award_engineer_department_flag
+            add_to_variable = {
+                MIL_award_engineer_department_support_progress = 34
             }
+            if = {
+                limit = {
+                    check_variable = { MIL_award_engineer_department_support_progress > 99 }
+                }
+                set_country_flag = MIL_award_engineer_department_task_done
+            }
+            BARE_MIL_award_engineer_department_try_complete_effect = yes
         }
     }
+
+    # 研讨会订单：单兵武器和支援装备。完成决议后进入事件，由玩家选择具体交付装备。
     MIL_award_engineer_department_more_payout = {
         cost = 50
         days_remove = 60
+        days_re_enable = 30
+        visible = {
+            has_completed_focus = MIL_Seminar_order
+        }
+        available = {
+            OR = {
+                has_active_mission = MIL_award_engineer_department_new_invention
+                has_country_flag = MIL_award_engineer_department_time_done
+            }
+            NOT = { has_country_flag = MIL_award_engineer_department_task_done }
+            check_variable = { MIL_award_engineer_department_order_progress < 100 }
+        }
         modifier = {
             civilian_factory_use = 5
         }
         remove_effect = {
-            random_list = {
-                10 = {
-                    add_equipment_to_stockpile = {
-                        type = infantry_equipment
-                        amount = 3000
-                        producer = MIL
-                    }
-                }
-                10 = {
-                    add_equipment_to_stockpile = {
-                        type = artillery_equipment
-                        amount = 750
-                        producer = MIL
-                    }
-                }
-                10 = {
-                    add_equipment_to_stockpile = {
-                        type = medium_tank_equipment
-                        amount = 200
-                        producer = MIL
-                    }
-                }
-                10 = {
-                    add_equipment_to_stockpile = {
-                        type = heavy_tank_equipment
-                        amount = 100
-                        producer = MIL
-                    }
-                }
-            }
-            add_to_variable = {
-                MIL_award_engineer_department_order = 1
-            }
-            if = {
-                check_variable = {
-                    MIL_award_engineer_department_order > 2
-                }
-                set_country_flag = MIL_award_engineer_department_flag
-            }
+            country_event = MIL_award_engineer.1
         }
     }
+
+    # 研讨会订单：机甲。
+    MIL_award_engineer_department_more_payout_mech = {
+        cost = 50
+        days_remove = 60
+        days_re_enable = 30
+        visible = {
+            has_completed_focus = MIL_Seminar_order
+        }
+        available = {
+            OR = {
+                has_active_mission = MIL_award_engineer_department_new_invention
+                has_country_flag = MIL_award_engineer_department_time_done
+            }
+            NOT = { has_country_flag = MIL_award_engineer_department_task_done }
+            check_variable = { MIL_award_engineer_department_order_progress < 100 }
+        }
+        modifier = {
+            civilian_factory_use = 5
+        }
+        remove_effect = {
+            country_event = MIL_award_engineer.2
+        }
+    }
+
+    # 研讨会订单：坦克。
+    MIL_award_engineer_department_more_payout_tank = {
+        cost = 50
+        days_remove = 60
+        days_re_enable = 30
+        visible = {
+            has_completed_focus = MIL_Seminar_order
+        }
+        available = {
+            OR = {
+                has_active_mission = MIL_award_engineer_department_new_invention
+                has_country_flag = MIL_award_engineer_department_time_done
+            }
+            NOT = { has_country_flag = MIL_award_engineer_department_task_done }
+            check_variable = { MIL_award_engineer_department_order_progress < 100 }
+        }
+        modifier = {
+            civilian_factory_use = 5
+        }
+        remove_effect = {
+            country_event = MIL_award_engineer.3
+        }
+    }
+
+    # 研讨会订单：火力支援装备。
+    MIL_award_engineer_department_more_payout_fire_support = {
+        cost = 50
+        days_remove = 60
+        days_re_enable = 30
+        visible = {
+            has_completed_focus = MIL_Seminar_order
+        }
+        available = {
+            OR = {
+                has_active_mission = MIL_award_engineer_department_new_invention
+                has_country_flag = MIL_award_engineer_department_time_done
+            }
+            NOT = { has_country_flag = MIL_award_engineer_department_task_done }
+            check_variable = { MIL_award_engineer_department_order_progress < 100 }
+        }
+        modifier = {
+            civilian_factory_use = 5
+        }
+        remove_effect = {
+            country_event = MIL_award_engineer.4
+        }
+    }
+
     MIL_award_engineer_department_new_invention = {
+        visible = {
+            has_completed_focus = MIL_i_think_it_can
+            has_active_mission = MIL_award_engineer_department_new_invention
+        }
         allowed = { tag = MIL }
+        activation = {
+            always = no
+        }
         available = {
             always = no
         }
+        cancel_trigger = {
+            NOT = { has_completed_focus = MIL_i_think_it_can }
+        }
         timeout_effect = {
-            if = {
-                limit = { check_variable = { MIL_award_engineer_department_prob > MIL_award_engineer_department_max } }
-                add_to_variable = {
-                    MIL_award_engineer_department_production_speed = 0.05
-                }
-                add_to_variable = {
-                    MIL_award_engineer_department_industrial_capacity = 0.05
-                }
-            }
-            else_if = {
-                limit = { check_variable = { MIL_award_engineer_department_prob > MIL_award_engineer_department_min } }
-                random_list = {
-                    50 = {
-                        add_to_variable = {
-                            MIL_award_engineer_department_production_speed = 0.05
-                        }
-                    }
-                    50 = {
-                        add_to_variable = {
-                            MIL_award_engineer_department_industrial_capacity = 0.05
-                        }
-                    }
-                }
-            }
-            else_if = {
-                limit = { check_variable = { MIL_award_engineer_department_prob > 10 } }
-                random_list = {
-                    50 = {
-                        add_to_variable = {
-                            MIL_award_engineer_department_production_speed = 0.025
-                        }
-                    }
-                    50 = {
-                        add_to_variable = {
-                            MIL_award_engineer_department_industrial_capacity = 0.025
-                        }
-                    }
-                }
-            }
-            else = {
-
-            }
-            randomize_variable = {
-                var = MIL_award_engineer_department_prob
-                distribution = uniform
-                min = 0
-                max = 100
-            }            
+            set_country_flag = MIL_award_engineer_department_time_done
+            BARE_MIL_award_engineer_department_try_complete_effect = yes
         }
         days_mission_timeout = 180
         is_good = yes
     }
 }
+
 MIL_award_game_development_decisions = {
+    ### 游戏开发部的新游开发
+    # 说明占位决议：用于在游戏开发部分类中显示机制说明，不提供可点击效果。
+    MIL_award_game_development_overview = {
+        priority = 1000
+        visible = {
+            has_completed_focus = MIL_New_incentive_plan
+        }
+        available = {
+            always = no
+        }
+    }
+
+    MIL_award_game_development_restart = {
+        cost = 0
+        visible = {
+            has_country_flag = MIL_award_game_development_restart_available
+        }
+        available = {
+            NOT = { has_active_mission = MIL_award_game_department_new_invention }
+        }
+        complete_effect = {
+            clr_country_flag = MIL_award_game_development_crisis_active
+            clr_country_flag = MIL_award_game_development_restart_available
+            set_country_flag = MIL_award_game_development_restart_short
+            BARE_MIL_award_game_development_start_project_effect = yes
+        }
+    }
+
     MIL_award_game_development_more_money = {
         days_remove = 45
         days_re_enable = 45
+        visible = {
+            always = no
+        }
         modifier = {
             consumer_goods_factor = 0.1
         }
@@ -460,9 +801,13 @@ MIL_award_game_development_decisions = {
             }
         }
     }
+
     MIL_award_game_development_more_people = {
         days_remove = 45
         days_re_enable = 45
+        visible = {
+            always = no
+        }
         modifier = {
             research_speed_factor = -0.05
         }
@@ -473,13 +818,20 @@ MIL_award_game_development_decisions = {
             }
         }
     }
+
     MIL_award_game_development_fix = {
-        
+        visible = {
+            always = no
+        }
     }
+
     MIL_award_game_development_update = {
         cost = 25
         days_remove = 45
         days_re_enable = 45
+        visible = {
+            always = no
+        }
         complete_effect = {
             add_days_mission_timeout = {
                 mission = MIL_award_game_department_new_invention
@@ -495,96 +847,94 @@ MIL_award_game_development_decisions = {
             }
         }
     }
+
     MIL_award_game_development_propaganda = {
         cost = 25
         days_remove = 15
         days_re_enable = 30
-        complete_effect = {
+        visible = {
+            has_completed_focus = MIL_New_incentive_plan
+            has_active_mission = MIL_award_game_department_new_invention
+            check_variable = { MIL_award_game_development_completed_count > 1 }
+        }
+        modifier = {
+            consumer_goods_factor = 0.1
         }
         remove_effect = {
-            add_to_variable = {
-                MIL_award_game_development_min = -10
-            }
-            add_to_variable = {
-                MIL_award_game_development_max = -5
-            }
+            BARE_MIL_award_game_development_improve_chance_effect = yes
         }
     }
+
     MIL_award_game_development_test = {
         cost = 25
         days_remove = 45
         days_re_enable = 45
-        complete_effect = {
+        visible = {
+            has_completed_focus = MIL_New_incentive_plan
+            has_active_mission = MIL_award_game_department_new_invention
+            check_variable = { MIL_award_game_development_completed_count > 1 }
+        }
+        modifier = {
+            political_power_factor = -0.03
         }
         remove_effect = {
-            add_to_variable = {
-                MIL_award_game_development_min = -10
-            }
-            add_to_variable = {
-                MIL_award_game_development_max = -5
-            }
+            BARE_MIL_award_game_development_improve_chance_effect = yes
+            country_event = MIL_award_game.7
         }
     }
+
     MIL_award_game_development_debug = {
         cost = 25
         days_remove = 60
         days_re_enable = 45
-        complete_effect = {
+        visible = {
+            has_completed_focus = MIL_New_incentive_plan
+            has_active_mission = MIL_award_game_department_new_invention
+            check_variable = { MIL_award_game_development_completed_count > 1 }
         }
         remove_effect = {
-            add_to_variable = {
-                MIL_award_game_development_min = -10
-            }
-            add_to_variable = {
-                MIL_award_game_development_max = -5
-            }
+            BARE_MIL_award_game_development_improve_chance_effect = yes
         }
     }
+
     MIL_award_game_department_new_invention = {
+        visible = {
+            has_completed_focus = MIL_New_incentive_plan
+            has_active_mission = MIL_award_game_department_new_invention
+        }
         allowed = { tag = MIL }
+        activation = {
+            always = no
+        }
+        available = {
+            always = no
+        }
+        cancel_trigger = {
+            NOT = { has_completed_focus = MIL_New_incentive_plan }
+        }
+        timeout_effect = {
+            BARE_MIL_award_game_development_finish_effect = yes
+        }
+        days_mission_timeout = 180
+        is_good = yes
+    }
+
+    MIL_award_game_development_bonus_timeout = {
+        visible = {
+            has_active_mission = MIL_award_game_development_bonus_timeout
+        }
+        allowed = { tag = MIL }
+        activation = {
+            always = no
+        }
         available = {
             always = no
         }
         timeout_effect = {
-            randomize_variable = {
-                var = MIL_award_game_development_prob
-                distribution = uniform
-                min = 0
-                max = 100
-            }
-            if = {
-                limit = { check_variable = { MIL_award_game_development_prob > MIL_award_game_development_max } }
-                add_to_variable = { MIL_award_game_development_political_power = 0.08 }
-            }
-            else_if = {
-                limit = { check_variable = { MIL_award_game_development_prob > MIL_award_game_development_min } }
-                add_to_variable = { MIL_award_game_development_political_power = 0.02 }
-                random_list = {
-                    50 = {
-                        add_to_variable = { MIL_award_game_development_political_power = 0.05 }
-                    }
-                    50 = {
-                        add_stability = 0.05
-                    }
-                }
-            }
-            else_if = {
-                limit = { check_variable = { MIL_award_game_development_prob > 0 } }
-                add_to_variable = { MIL_award_game_development_political_power = 0.01 }
-                random_list = {
-                    50 = {
-                        add_to_variable = { MIL_award_game_development_political_power = 0.025 }
-                    }
-                    50 = {
-                        add_stability = 0.025
-                    }
-                }
-            }
-            else = {
-                
-            }            
+            set_variable = { MIL_award_game_development_political_power = 0 }
+            force_update_dynamic_modifier = yes
         }
-        days_mission_timeout = 180
+        days_mission_timeout = 120
         is_good = yes
     }
 }
