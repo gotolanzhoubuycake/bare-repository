@@ -1,8 +1,9 @@
 guitypes = {
 	containerwindowtype = {
 		name = "BAREXP_state_lore_button"
-		orientation = LOWER_RIGHT
-		position = { x = 20 y = -80 }
+		# 2026-07-10: 与 state_info_window 对齐，固定在左侧信息栏内，避免悬浮到地图或面板外。
+		orientation = UPPER_LEFT
+		position = { x = 27 y = 304 }
 		buttontype = {
 			name = "state_button"
 			spritetype = "GFX_SL_state_book_button"

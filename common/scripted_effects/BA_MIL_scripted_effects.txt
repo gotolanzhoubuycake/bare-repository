@@ -2527,10 +2527,10 @@ BARE_MIL_Security_Department_Long_Peace_Reform_Progress_effect = {
 }
 
 BARE_MIL_Security_Reform_Init_effect = {
-	# 2026-06-29: 千年安全委员会千禧防卫力量系统初始化入口。
+	# 2026-07-07 修改：千年安全委员会防卫改革初始化入口。
 	# 入口：完成 `MIL_Security_Committee_Defense_Reform_Plan` 后调用；后续改革决议、连续进度奖励和最终判断都依赖这些变量。
-	# 关键变量：陆军贡献、空军贡献、总进度、单军种贡献上限记录、基础连续奖励变量、一次性改革项目奖励变量。
-	# 预期结果：解锁改革决议类别，初始化进度为0%，挂载千禧防卫力量动态修正。
+	# 关键变量：陆军贡献、空军贡献、总进度、改革进度奖励变量，以及千年防卫力量永久收益变量。
+	# 预期结果：解锁改革决议类别，初始化进度为0%，同时挂载改革进度修正与千年防卫力量总修正。
 	set_country_flag = MIL_security_reform_system_unlocked_flag
 	clr_country_flag = MIL_security_reform_completed_flag
 	clear_variable = MIL_security_reform_army_progress_var
@@ -2561,7 +2561,38 @@ BARE_MIL_Security_Reform_Init_effect = {
 	clear_variable = MIL_security_reform_special_ops_training_time_factor_var
 	clear_variable = MIL_security_reform_drone_manual_air_superiority_efficiency_var
 	clear_variable = MIL_security_reform_ground_crew_air_mission_efficiency_var
-	# 2026-06-24 修改：初始化只挂载改革进度主修正，避免开头国策显示无关的移除修正效果。
+	# 2026-07-07 修改：改革进度与军事线永久收益拆分为两个动态修正；千年防卫力量从改革计划开始即获得。
+	clear_variable = MIL_millennium_defense_force_encryption_var
+	clear_variable = MIL_millennium_defense_force_decryption_speed_var
+	clear_variable = MIL_millennium_defense_force_civilian_intel_to_others_var
+	clear_variable = MIL_millennium_defense_force_army_intel_to_others_var
+	clear_variable = MIL_millennium_defense_force_navy_intel_to_others_var
+	clear_variable = MIL_millennium_defense_force_airforce_intel_to_others_var
+	clear_variable = MIL_millennium_defense_force_civilian_intel_factor_var
+	clear_variable = MIL_millennium_defense_force_army_intel_factor_var
+	clear_variable = MIL_millennium_defense_force_airforce_intel_factor_var
+	clear_variable = MIL_millennium_defense_force_counter_intelligence_var
+	clear_variable = MIL_millennium_defense_force_planning_speed_var
+	clear_variable = MIL_millennium_defense_force_air_detection_var
+	clear_variable = MIL_millennium_defense_force_air_mission_efficiency_var
+	clear_variable = MIL_millennium_defense_force_air_night_penalty_var
+	clear_variable = MIL_millennium_defense_force_air_weather_penalty_var
+	clear_variable = MIL_millennium_defense_force_air_training_xp_gain_factor_var
+	clear_variable = MIL_millennium_defense_force_experience_gain_air_var
+	clear_variable = MIL_millennium_defense_force_air_ace_generation_chance_factor_var
+	clear_variable = MIL_millennium_defense_force_air_wing_xp_loss_when_killed_factor_var
+	clear_variable = MIL_millennium_defense_force_air_agility_factor_var
+	clear_variable = MIL_millennium_defense_force_air_cas_efficiency_var
+	clear_variable = MIL_millennium_defense_force_special_forces_training_time_factor_var
+	clear_variable = MIL_millennium_defense_force_special_forces_cap_var
+	clear_variable = MIL_millennium_defense_force_terrain_penalty_reduction_var
+	clear_variable = MIL_millennium_defense_force_special_forces_attack_factor_var
+	clear_variable = MIL_millennium_defense_force_special_forces_defence_factor_var
+	clear_variable = MIL_millennium_defense_force_infantry_am_attack_factor_var
+	clear_variable = MIL_millennium_defense_force_infantry_am_defence_factor_var
+	clear_variable = MIL_millennium_defense_force_category_bm_attack_factor_var
+	clear_variable = MIL_millennium_defense_force_category_bm_defence_factor_var
+	# 2026-07-07 修改：初始化同时挂载改革进度主修正与军事线永久收益总修正。
 	if = {
 		limit = {
 			NOT = {
@@ -2570,14 +2601,22 @@ BARE_MIL_Security_Reform_Init_effect = {
 		}
 		add_dynamic_modifier = { modifier = MIL_security_reform_progress_modifier }
 	}
+	if = {
+		limit = {
+			NOT = {
+				has_dynamic_modifier = { modifier = MIL_millennium_defense_force }
+			}
+		}
+		add_dynamic_modifier = { modifier = MIL_millennium_defense_force }
+	}
 	force_update_dynamic_modifier = yes
 }
 
 BARE_MIL_Security_Reform_Recalculate_effect = {
-	# 2026-06-29: 千禧防卫力量总进度与连续奖励重算入口。
-	# 入口：所有改革决议、一次性项目奖励或后续国策检查完成后调用；负责限制单军种贡献、刷新总进度，并按总进度写入无级变化奖励。
-	# 关键变量：`MIL_security_reform_army_progress_var` 与 `MIL_security_reform_air_progress_var` 是陆空贡献值，单项最多75；`MIL_security_reform_total_progress_var` 是两者合计后的共用改革进度。
-	# 预期结果：单军种贡献保持在0-75范围内，总进度保持在0-100范围内；基础奖励按总进度线性变化，完成100%时设置完成 flag。
+	# 2026-07-10 修改：千年校园防卫改革总进度与陆空独立奖励重算入口。
+	# 入口：所有改革决议、一次性项目奖励或后续国策检查完成后调用；负责限制单军种贡献、刷新总进度，并按陆空各自进度写入基础奖励。
+	# 关键变量：`MIL_security_reform_army_progress_var` 与 `MIL_security_reform_air_progress_var` 是陆空贡献值，单项最多75；每个军种自身每5点进度提供1%基础奖励。
+	# 预期结果：单军种贡献保持在0-75范围内，总进度保持在0-100范围内；陆军和空军基础奖励分别按本军种进度折算，完成100%时设置完成 flag。
 	if = {
 		limit = { check_variable = { MIL_security_reform_army_progress_var > 75 } }
 		set_variable = { MIL_security_reform_army_progress_var = 75 }
@@ -2620,24 +2659,28 @@ BARE_MIL_Security_Reform_Recalculate_effect = {
 
 	clear_variable = MIL_security_reform_army_stage_var
 	clear_variable = MIL_security_reform_air_stage_var
-	set_variable = { MIL_security_reform_army_attack_factor_var = MIL_security_reform_total_progress_var }
+	set_variable = { MIL_security_reform_army_stage_var = MIL_security_reform_army_progress_var }
+	multiply_variable = { var = MIL_security_reform_army_stage_var value = 0.2 }
+	set_variable = { MIL_security_reform_army_attack_factor_var = MIL_security_reform_army_progress_var }
 	multiply_variable = { var = MIL_security_reform_army_attack_factor_var value = 0.002 }
 	add_to_variable = { MIL_security_reform_army_attack_factor_var = MIL_security_reform_ground_tactics_army_attack_factor_var }
-	set_variable = { MIL_security_reform_army_defence_factor_var = MIL_security_reform_total_progress_var }
+	set_variable = { MIL_security_reform_army_defence_factor_var = MIL_security_reform_army_progress_var }
 	multiply_variable = { var = MIL_security_reform_army_defence_factor_var value = 0.002 }
 	add_to_variable = { MIL_security_reform_army_defence_factor_var = MIL_security_reform_ground_tactics_army_defence_factor_var }
-	set_variable = { MIL_security_reform_planning_speed_var = MIL_security_reform_total_progress_var }
+	set_variable = { MIL_security_reform_planning_speed_var = MIL_security_reform_army_progress_var }
 	multiply_variable = { var = MIL_security_reform_planning_speed_var value = 0.002 }
 	add_to_variable = { MIL_security_reform_planning_speed_var = MIL_security_reform_ground_tactics_planning_speed_var }
-	set_variable = { MIL_security_reform_planning_factor_var = MIL_security_reform_total_progress_var }
+	set_variable = { MIL_security_reform_planning_factor_var = MIL_security_reform_army_progress_var }
 	multiply_variable = { var = MIL_security_reform_planning_factor_var value = 0.002 }
 	add_to_variable = { MIL_security_reform_planning_factor_var = MIL_security_reform_ground_tactics_planning_factor_var }
-	set_variable = { MIL_security_reform_air_mission_efficiency_var = MIL_security_reform_total_progress_var }
+	set_variable = { MIL_security_reform_air_stage_var = MIL_security_reform_air_progress_var }
+	multiply_variable = { var = MIL_security_reform_air_stage_var value = 0.2 }
+	set_variable = { MIL_security_reform_air_mission_efficiency_var = MIL_security_reform_air_progress_var }
 	multiply_variable = { var = MIL_security_reform_air_mission_efficiency_var value = 0.002 }
 	add_to_variable = { MIL_security_reform_air_mission_efficiency_var = MIL_security_reform_ground_crew_air_mission_efficiency_var }
-	set_variable = { MIL_security_reform_air_cas_efficiency_var = MIL_security_reform_total_progress_var }
+	set_variable = { MIL_security_reform_air_cas_efficiency_var = MIL_security_reform_air_progress_var }
 	multiply_variable = { var = MIL_security_reform_air_cas_efficiency_var value = 0.002 }
-	set_variable = { MIL_security_reform_air_agility_factor_var = MIL_security_reform_total_progress_var }
+	set_variable = { MIL_security_reform_air_agility_factor_var = MIL_security_reform_air_progress_var }
 	multiply_variable = { var = MIL_security_reform_air_agility_factor_var value = 0.002 }
 
 	if = {
@@ -2646,13 +2689,21 @@ BARE_MIL_Security_Reform_Recalculate_effect = {
 		}
 		set_country_flag = MIL_security_reform_completed_flag
 	}
+	if = {
+		limit = {
+			NOT = {
+				has_dynamic_modifier = { modifier = MIL_millennium_defense_force }
+			}
+		}
+		add_dynamic_modifier = { modifier = MIL_millennium_defense_force }
+	}
 	force_update_dynamic_modifier = yes
 }
 
 BARE_MIL_Security_Reform_Ground_Tactics_Improvement_Bonus_effect = {
 	# 2026-06-29: 安全委员会地面战术改进的一次性奖励入口。
 	# 入口：`MIL_security_reform_ground_tactics_improvement` 决议完成后调用。
-	# 关键变量：将地面战术项目的部队攻防、计划速度与计划上限奖励写入千禧防卫力量动态修正的项目奖励变量。
+	# 关键变量：将地面战术项目的部队攻防、计划速度与计划上限奖励写入千年校园防卫改革动态修正的项目奖励变量。
 	# 预期结果：该一次性项目的收益并入 `MIL_security_reform_progress_modifier`，之后由重算入口与基础连续进度奖励共同显示。
 	set_variable = { MIL_security_reform_ground_tactics_army_attack_factor_var = 0.05 }
 	set_variable = { MIL_security_reform_ground_tactics_army_defence_factor_var = 0.05 }
@@ -2664,7 +2715,7 @@ BARE_MIL_Security_Reform_Experimental_Mech_Refit_Bonus_effect = {
 	# 2026-06-29: 作战机甲试验性改造的一次性奖励入口。
 	# 入口：`MIL_security_reform_experimental_mech_refit` 决议完成后调用。
 	# 关键变量：自动机步兵专用攻防变量、战斗机甲分类攻防变量；对应 modifier 已在 `common/units/unit_modifiers/unit_modifiers.txt` 注册。
-	# 预期结果：自动机与战斗机甲攻防收益并入千禧防卫力量动态修正。
+	# 预期结果：自动机与战斗机甲攻防收益并入千年校园防卫改革动态修正。
 	set_variable = { MIL_security_reform_mech_infantry_am_attack_factor_var = 0.05 }
 	set_variable = { MIL_security_reform_mech_infantry_am_defence_factor_var = 0.05 }
 	set_variable = { MIL_security_reform_mech_category_bm_attack_factor_var = 0.05 }
@@ -2675,7 +2726,7 @@ BARE_MIL_Security_Reform_Special_Ops_System_Upgrade_Bonus_effect = {
 	# 2026-06-29: 千年特战生作战系统升级的一次性奖励入口。
 	# 入口：`MIL_security_reform_special_ops_system_upgrade` 决议完成后调用。
 	# 关键变量：特种部队攻防、地形惩罚减免与训练时间变化变量。
-	# 预期结果：特战系统升级收益并入千禧防卫力量动态修正。
+	# 预期结果：特战系统升级收益并入千年校园防卫改革动态修正。
 	set_variable = { MIL_security_reform_special_ops_attack_factor_var = 0.05 }
 	set_variable = { MIL_security_reform_special_ops_defence_factor_var = 0.05 }
 	set_variable = { MIL_security_reform_special_ops_terrain_penalty_reduction_var = 0.10 }
@@ -2686,7 +2737,7 @@ BARE_MIL_Security_Reform_Update_Drone_Manual_Bonus_effect = {
 	# 2026-06-29: 更新无人机操作手册的一次性奖励入口。
 	# 入口：`MIL_security_reform_update_drone_manual` 决议完成后调用。
 	# 关键变量：制空权任务效率项目奖励变量。
-	# 预期结果：无人机操作手册收益并入千禧防卫力量动态修正。
+	# 预期结果：无人机操作手册收益并入千年校园防卫改革动态修正。
 	set_variable = { MIL_security_reform_drone_manual_air_superiority_efficiency_var = 0.10 }
 }
 
@@ -2694,7 +2745,7 @@ BARE_MIL_Security_Reform_Optimize_Ground_Crew_Bonus_effect = {
 	# 2026-06-29: 优化地勤工作效率的一次性奖励入口。
 	# 入口：`MIL_security_reform_optimize_ground_crew` 决议完成后调用。
 	# 关键变量：空军任务效率项目奖励变量。
-	# 预期结果：地勤优化收益并入千禧防卫力量动态修正，并与总进度的连续空军任务效率奖励叠加。
+	# 预期结果：地勤优化收益并入千年校园防卫改革动态修正，并与总进度的连续空军任务效率奖励叠加。
 	set_variable = { MIL_security_reform_ground_crew_air_mission_efficiency_var = 0.05 }
 }
 
@@ -2702,7 +2753,7 @@ BARE_MIL_Security_Reform_Add_Army_Progress_5_effect = {
 	# 2026-06-29: 陆军贡献小幅推进入口。
 	# 入口：60天可重复训练类决议完成后调用。
 	# 关键变量：陆军贡献与陆军决议来源进度；单军种最多贡献75点。
-	# 预期结果：在未超过单军种上限时增加5点陆军贡献，并刷新千禧防卫力量连续奖励。
+	# 预期结果：在未超过单军种上限时增加5点陆军贡献，并刷新千年校园防卫改革连续奖励。
 	custom_effect_tooltip = MIL_security_reform_add_army_progress_5_tt
 	hidden_effect = {
 		if = {
@@ -2718,7 +2769,7 @@ BARE_MIL_Security_Reform_Add_Army_Progress_10_effect = {
 	# 2026-06-29: 陆军贡献中幅推进入口。
 	# 入口：180/270天陆军改革项目完成后调用。
 	# 关键变量：陆军贡献与陆军决议来源进度；超过75点前只推进剩余可用额度。
-	# 预期结果：增加最多10点陆军贡献，并刷新千禧防卫力量连续奖励；已达上限时不再增加进度。
+	# 预期结果：增加最多10点陆军贡献，并刷新千年校园防卫改革连续奖励；已达上限时不再增加进度。
 	custom_effect_tooltip = MIL_security_reform_add_army_progress_10_tt
 	hidden_effect = {
 		if = {
@@ -2734,7 +2785,7 @@ BARE_MIL_Security_Reform_Add_Air_Progress_5_effect = {
 	# 2026-06-29: 空军贡献小幅推进入口。
 	# 入口：60天可重复训练类决议完成后调用。
 	# 关键变量：空军贡献与空军决议来源进度；单军种最多贡献75点。
-	# 预期结果：在未超过单军种上限时增加5点空军贡献，并刷新千禧防卫力量连续奖励。
+	# 预期结果：在未超过单军种上限时增加5点空军贡献，并刷新千年校园防卫改革连续奖励。
 	custom_effect_tooltip = MIL_security_reform_add_air_progress_5_tt
 	hidden_effect = {
 		if = {
@@ -2750,7 +2801,7 @@ BARE_MIL_Security_Reform_Add_Air_Progress_10_effect = {
 	# 2026-06-29: 空军贡献中幅推进入口。
 	# 入口：180/360天空军改革项目完成后调用。
 	# 关键变量：空军贡献与空军决议来源进度；超过75点前只推进剩余可用额度。
-	# 预期结果：增加最多10点空军贡献，并刷新千禧防卫力量连续奖励；已达上限时不再增加进度。
+	# 预期结果：增加最多10点空军贡献，并刷新千年校园防卫改革连续奖励；已达上限时不再增加进度。
 	custom_effect_tooltip = MIL_security_reform_add_air_progress_10_tt
 	hidden_effect = {
 		if = {
@@ -2796,11 +2847,275 @@ BARE_MIL_Special_Operations_Mech_Sync_Equipment_Tech_effect = {
 	}
 }
 
+BARE_MIL_Millennium_Defense_Force_Clear_Mech_Equipment_Stage_effect = {
+	# 2026-07-07 修改：千年防卫力量钢铁洪流装备阶段清理入口。
+	# 入口：完成钢铁洪流相关装备国策后，由对应写入效果先调用。
+	# 关键变量：无；只移除钢铁洪流装备隐藏 idea，不触碰特战、空军或飞行器设计路线。
+	# 预期结果：同一时间只保留一个钢铁洪流装备阶段，避免装备修正重复叠加。
+	remove_ideas = MIL_millennium_defense_force_mech_os_hidden
+	remove_ideas = MIL_millennium_defense_force_mech_card_hidden
+	remove_ideas = MIL_millennium_defense_force_mech_os_card_hidden
+	remove_ideas = MIL_millennium_defense_force_mech_card_firepower_hidden
+	remove_ideas = MIL_millennium_defense_force_mech_firepower_hidden
+	remove_ideas = MIL_millennium_defense_force_mech_final_hidden
+}
+
+BARE_MIL_Millennium_Defense_Force_Ensure_Modifier_effect = {
+	# 2026-07-07 修改：千年防卫力量动态修正确保入口。
+	# 入口：所有军事线永久收益写入效果调用前使用，兼容被跳过初始化或调试直接完成国策的情况。
+	# 关键变量：无；只检查动态修正是否存在。
+	# 预期结果：`MIL_millennium_defense_force` 始终存在并能读取后续写入变量。
+	if = {
+		limit = {
+			NOT = {
+				has_dynamic_modifier = { modifier = MIL_millennium_defense_force }
+			}
+		}
+		add_dynamic_modifier = { modifier = MIL_millennium_defense_force }
+	}
+}
+
+BARE_MIL_Millennium_Defense_Force_Special_Exoskeleton_effect = {
+	# 2026-07-07 修改：单兵特战机甲开发的永久装备收益写入千年防卫力量。
+	# 入口：完成 `MIL_Special_Forces_Exoskeleton_Development` 后调用。
+	# 关键变量：无；实际装备修正由隐藏 idea 承载，动态修正通过 tooltip 展示。
+	# 预期结果：特战机甲与自动机装备可靠性、生产花费收益不再通过独立可见民族精神显示。
+	BARE_MIL_Millennium_Defense_Force_Ensure_Modifier_effect = yes
+	add_ideas = MIL_millennium_defense_force_special_equipment_hidden
+	force_update_dynamic_modifier = yes
+}
+
+BARE_MIL_Millennium_Defense_Force_Special_Training_effect = {
+	# 2026-07-07 修改：C&C的地狱训练永久收益写入千年防卫力量。
+	# 入口：完成 `MIL_Special_Forces_Hell_Training` 后调用。
+	# 关键变量：特种部队训练时间、上限与地形惩罚减免变量。
+	# 预期结果：特战训练相关收益由千年防卫力量动态修正统一显示。
+	BARE_MIL_Millennium_Defense_Force_Ensure_Modifier_effect = yes
+	add_to_variable = { MIL_millennium_defense_force_special_forces_training_time_factor_var = 0.10 }
+	add_to_variable = { MIL_millennium_defense_force_special_forces_cap_var = 0.10 }
+	add_to_variable = { MIL_millennium_defense_force_terrain_penalty_reduction_var = 0.10 }
+	force_update_dynamic_modifier = yes
+}
+
+BARE_MIL_Millennium_Defense_Force_Special_Final_effect = {
+	# 2026-07-07 修改：独属于千年的利刃永久收益写入千年防卫力量。
+	# 入口：完成 `MIL_Special_Forces_Hell_Training_Unique` 后调用。
+	# 关键变量：特种部队攻防变量。
+	# 预期结果：特战终点攻防收益由千年防卫力量动态修正统一显示。
+	BARE_MIL_Millennium_Defense_Force_Ensure_Modifier_effect = yes
+	add_to_variable = { MIL_millennium_defense_force_special_forces_attack_factor_var = 0.10 }
+	add_to_variable = { MIL_millennium_defense_force_special_forces_defence_factor_var = 0.10 }
+	force_update_dynamic_modifier = yes
+}
+
+BARE_MIL_Millennium_Defense_Force_Mech_OS_effect = {
+	# 2026-07-07 修改：操作系统升级永久收益写入千年防卫力量。
+	# 入口：完成 `MIL_Operating_System_Upgrade` 后调用。
+	# 关键变量：无；装备速度由隐藏 idea 承载，战斗机甲地形适应性仍由隐藏科技承载。
+	# 预期结果：钢铁洪流装备与地形适应性收益由千年防卫力量统一展示。
+	BARE_MIL_Millennium_Defense_Force_Ensure_Modifier_effect = yes
+	set_technology = {
+		steel_torrent_os_upgrade_tech = 1
+		popup = no
+	}
+	BARE_MIL_Millennium_Defense_Force_Clear_Mech_Equipment_Stage_effect = yes
+	if = {
+		# 2026-07-14 修改：如果火力国策已先完成，操作系统升级后应保留火力阶段并补入速度收益。
+		limit = { has_completed_focus = MIL_Stronger_Firepower_Better_Protection }
+		add_ideas = MIL_millennium_defense_force_mech_firepower_hidden
+	}
+	else_if = {
+		limit = { has_country_flag = MIL_card_drawing_done }
+		add_ideas = MIL_millennium_defense_force_mech_os_card_hidden
+	}
+	else = {
+		add_ideas = MIL_millennium_defense_force_mech_os_hidden
+	}
+	force_update_dynamic_modifier = yes
+}
+
+BARE_MIL_Millennium_Defense_Force_Mech_Card_effect = {
+	# 2026-07-07 修改：抽卡时间到永久收益写入千年防卫力量。
+	# 入口：完成 `MIL_Card_Drawing_Time` 后调用。
+	# 关键变量：无；装备防御与可靠性由隐藏 idea 承载。
+	# 预期结果：钢铁洪流装备收益由千年防卫力量统一展示。
+	BARE_MIL_Millennium_Defense_Force_Ensure_Modifier_effect = yes
+	BARE_MIL_Millennium_Defense_Force_Clear_Mech_Equipment_Stage_effect = yes
+	if = {
+		limit = { has_country_flag = MIL_os_upgrade_done }
+		add_ideas = MIL_millennium_defense_force_mech_os_card_hidden
+	}
+	else = {
+		add_ideas = MIL_millennium_defense_force_mech_card_hidden
+	}
+	force_update_dynamic_modifier = yes
+}
+
+BARE_MIL_Millennium_Defense_Force_Mech_Firepower_effect = {
+	# 2026-07-07 修改：更强的火力更好的防护永久收益写入千年防卫力量。
+	# 入口：完成 `MIL_Stronger_Firepower_Better_Protection` 后调用。
+	# 关键变量：无；装备火力、突破与生产花费变化由隐藏 idea 承载。
+	# 预期结果：钢铁洪流装备收益由千年防卫力量统一展示。
+	BARE_MIL_Millennium_Defense_Force_Ensure_Modifier_effect = yes
+	BARE_MIL_Millennium_Defense_Force_Clear_Mech_Equipment_Stage_effect = yes
+	# 2026-07-14 修改：只有已经完成操作系统升级时才写入速度；否则使用不含速度的火力阶段。
+	if = {
+		limit = { has_country_flag = MIL_os_upgrade_done }
+		add_ideas = MIL_millennium_defense_force_mech_firepower_hidden
+	}
+	else = {
+		add_ideas = MIL_millennium_defense_force_mech_card_firepower_hidden
+	}
+	force_update_dynamic_modifier = yes
+}
+
+BARE_MIL_Millennium_Defense_Force_Mech_Final_effect = {
+	# 2026-07-07 修改：千年的钢铁长城永久收益写入千年防卫力量。
+	# 入口：完成 `MIL_Millennium_Steel_Wall` 后调用。
+	# 关键变量：无；最终装备收益由隐藏 idea 承载。
+	# 预期结果：钢铁洪流最终装备收益由千年防卫力量统一展示。
+	BARE_MIL_Millennium_Defense_Force_Ensure_Modifier_effect = yes
+	BARE_MIL_Millennium_Defense_Force_Clear_Mech_Equipment_Stage_effect = yes
+	add_ideas = MIL_millennium_defense_force_mech_final_hidden
+	force_update_dynamic_modifier = yes
+}
+
+BARE_MIL_Millennium_Defense_Force_Air_Base_effect = {
+	# 2026-07-07 修改：空军线基础飞行收益写入千年防卫力量。
+	# 入口：完成 `MIL_Silent_Hunter`，或在未完成该国策时由小规模空中战术推演补齐。
+	# 关键变量：空军任务效率、夜间惩罚与恶劣天气惩罚变量。
+	# 预期结果：基础飞行收益只记账一次，避免左右支路线重复叠加。
+	BARE_MIL_Millennium_Defense_Force_Ensure_Modifier_effect = yes
+	if = {
+		limit = { check_variable = { MIL_millennium_defense_force_air_mission_efficiency_var < 0.10 } }
+		set_variable = { MIL_millennium_defense_force_air_mission_efficiency_var = 0.10 }
+	}
+	if = {
+		limit = { check_variable = { MIL_millennium_defense_force_air_night_penalty_var > -0.10 } }
+		set_variable = { MIL_millennium_defense_force_air_night_penalty_var = -0.10 }
+	}
+	if = {
+		limit = { check_variable = { MIL_millennium_defense_force_air_weather_penalty_var > -0.10 } }
+		set_variable = { MIL_millennium_defense_force_air_weather_penalty_var = -0.10 }
+	}
+	force_update_dynamic_modifier = yes
+}
+
+BARE_MIL_Millennium_Defense_Force_Air_Tactics_effect = {
+	# 2026-07-07 修改：小规模空中战术推演永久收益写入千年防卫力量。
+	# 入口：完成 `MIL_Small_Scale_Air_Tactics` 后调用。
+	# 关键变量：空军训练经验获取变量；同时补齐基础飞行收益。
+	# 预期结果：空军线阶段收益由千年防卫力量动态修正统一显示。
+	BARE_MIL_Millennium_Defense_Force_Air_Base_effect = yes
+	set_variable = { MIL_millennium_defense_force_air_training_xp_gain_factor_var = 0.05 }
+	force_update_dynamic_modifier = yes
+}
+
+BARE_MIL_Millennium_Defense_Force_Air_Exercise_effect = {
+	# 2026-07-07 修改：鹰击长空对抗演习永久收益写入千年防卫力量。
+	# 入口：完成 `MIL_Eagle_Strike_Exercise` 后调用。
+	# 关键变量：空军任务效率、每日空军经验、王牌机师概率与战损经验变量。
+	# 预期结果：空军线阶段收益由千年防卫力量动态修正统一显示。
+	BARE_MIL_Millennium_Defense_Force_Ensure_Modifier_effect = yes
+	if = {
+		limit = { check_variable = { MIL_millennium_defense_force_air_mission_efficiency_var < 0.15 } }
+		set_variable = { MIL_millennium_defense_force_air_mission_efficiency_var = 0.15 }
+	}
+	set_variable = { MIL_millennium_defense_force_air_training_xp_gain_factor_var = 0.05 }
+	set_variable = { MIL_millennium_defense_force_experience_gain_air_var = 0.10 }
+	set_variable = { MIL_millennium_defense_force_air_ace_generation_chance_factor_var = 0.10 }
+	set_variable = { MIL_millennium_defense_force_air_wing_xp_loss_when_killed_factor_var = -0.25 }
+	force_update_dynamic_modifier = yes
+}
+
+BARE_MIL_Millennium_Defense_Force_Air_Final_effect = {
+	# 2026-07-07 修改：翱翔天际之鹰永久收益写入千年防卫力量。
+	# 入口：完成 `MIL_Soaring_Sky_Eagle` 后调用。
+	# 关键变量：空军任务效率、机动性与空军装备生产花费隐藏 idea。
+	# 预期结果：空军终点收益由千年防卫力量动态修正统一显示。
+	BARE_MIL_Millennium_Defense_Force_Ensure_Modifier_effect = yes
+	set_variable = { MIL_millennium_defense_force_air_mission_efficiency_var = 0.20 }
+	set_variable = { MIL_millennium_defense_force_air_night_penalty_var = -0.10 }
+	set_variable = { MIL_millennium_defense_force_air_weather_penalty_var = -0.10 }
+	set_variable = { MIL_millennium_defense_force_air_training_xp_gain_factor_var = 0.05 }
+	set_variable = { MIL_millennium_defense_force_experience_gain_air_var = 0.10 }
+	set_variable = { MIL_millennium_defense_force_air_ace_generation_chance_factor_var = 0.10 }
+	set_variable = { MIL_millennium_defense_force_air_wing_xp_loss_when_killed_factor_var = -0.25 }
+	set_variable = { MIL_millennium_defense_force_air_agility_factor_var = 0.05 }
+	add_ideas = MIL_soaring_eagle_air_production_hidden
+	force_update_dynamic_modifier = yes
+}
+
+BARE_MIL_Millennium_Defense_Force_Network_Base_effect = {
+	# 2026-07-07 修改：看不见的防线永久收益写入千年防卫力量。
+	# 入口：完成 `MIL_Invisible_Defense_Line` 后调用。
+	# 关键变量：加密等级与破译速率变量。
+	# 预期结果：网络防线基础收益由千年防卫力量动态修正统一显示。
+	BARE_MIL_Millennium_Defense_Force_Ensure_Modifier_effect = yes
+	add_to_variable = { MIL_millennium_defense_force_encryption_var = 1 }
+	add_to_variable = { MIL_millennium_defense_force_decryption_speed_var = 0.10 }
+	force_update_dynamic_modifier = yes
+}
+
+BARE_MIL_Millennium_Defense_Force_Network_Information_Security_effect = {
+	# 2026-07-07 修改：信息安全大于天永久收益写入千年防卫力量。
+	# 入口：完成 `MIL_Information_Security` 后调用。
+	# 关键变量：泄露给他国的各类情报变量。
+	# 预期结果：网络防线情报保护收益由千年防卫力量动态修正统一显示。
+	BARE_MIL_Millennium_Defense_Force_Ensure_Modifier_effect = yes
+	add_to_variable = { MIL_millennium_defense_force_civilian_intel_to_others_var = -30 }
+	add_to_variable = { MIL_millennium_defense_force_army_intel_to_others_var = -30 }
+	add_to_variable = { MIL_millennium_defense_force_navy_intel_to_others_var = -30 }
+	add_to_variable = { MIL_millennium_defense_force_airforce_intel_to_others_var = -30 }
+	force_update_dynamic_modifier = yes
+}
+
+BARE_MIL_Millennium_Defense_Force_Network_Weapons_effect = {
+	# 2026-07-07 修改：网络中的武器永久收益写入千年防卫力量。
+	# 入口：完成 `MIL_Networked_Weapons` 后调用。
+	# 关键变量：情报获取与计划速度变量。
+	# 预期结果：网络武器收益由千年防卫力量动态修正统一显示。
+	BARE_MIL_Millennium_Defense_Force_Ensure_Modifier_effect = yes
+	add_to_variable = { MIL_millennium_defense_force_civilian_intel_factor_var = 0.10 }
+	add_to_variable = { MIL_millennium_defense_force_army_intel_factor_var = 0.10 }
+	add_to_variable = { MIL_millennium_defense_force_airforce_intel_factor_var = 0.10 }
+	add_to_variable = { MIL_millennium_defense_force_planning_speed_var = 0.05 }
+	force_update_dynamic_modifier = yes
+}
+
+BARE_MIL_Millennium_Defense_Force_Network_Student_Info_effect = {
+	# 2026-07-07 修改：千年学生信息系统永久收益写入千年防卫力量。
+	# 入口：完成 `MIL_Millennium_Student_Information_System` 后调用。
+	# 关键变量：民政与陆军情报泄露、反间谍变量。
+	# 预期结果：学生信息系统收益由千年防卫力量动态修正统一显示。
+	BARE_MIL_Millennium_Defense_Force_Ensure_Modifier_effect = yes
+	add_to_variable = { MIL_millennium_defense_force_civilian_intel_to_others_var = -10 }
+	add_to_variable = { MIL_millennium_defense_force_army_intel_to_others_var = -10 }
+	add_to_variable = { MIL_millennium_defense_force_counter_intelligence_var = 1.0 }
+	force_update_dynamic_modifier = yes
+}
+
+BARE_MIL_Millennium_Defense_Force_Network_Final_effect = {
+	# 2026-07-07 修改：坚不可摧的防线永久收益写入千年防卫力量。
+	# 入口：完成 `MIL_Impenetrable_Defense_Line` 后调用。
+	# 关键变量：最终情报保护、计划速度、对空探测与空军任务效率变量。
+	# 预期结果：网络线终点收益由千年防卫力量动态修正统一显示。
+	BARE_MIL_Millennium_Defense_Force_Ensure_Modifier_effect = yes
+	add_to_variable = { MIL_millennium_defense_force_civilian_intel_to_others_var = -5 }
+	add_to_variable = { MIL_millennium_defense_force_army_intel_to_others_var = -5 }
+	add_to_variable = { MIL_millennium_defense_force_navy_intel_to_others_var = -5 }
+	add_to_variable = { MIL_millennium_defense_force_airforce_intel_to_others_var = -5 }
+	add_to_variable = { MIL_millennium_defense_force_planning_speed_var = 0.05 }
+	add_to_variable = { MIL_millennium_defense_force_air_detection_var = 0.10 }
+	add_to_variable = { MIL_millennium_defense_force_air_mission_efficiency_var = 0.05 }
+	force_update_dynamic_modifier = yes
+}
+
 BARE_MIL_Millennium_Stability_Guardian_Finalize_effect = {
-	# 2026-07-01 修改：千年军事线最终合成入口。
+	# 2026-07-07 修改：千年军事线最终收束入口。
 	# 入口：完成 `MIL_Millennium_Stability_Guardian` 后调用。
-	# 关键变量/条件：最终国策要求四条收束线全部完成；不再维护三线组合版本。
-	# 预期结果：移除已被合并的旧军事民族精神和动态修正，添加最终合成民族精神。
+	# 关键变量/条件：军事线永久收益已经由各国策直接写入 `MIL_millennium_defense_force`；本效果追加文档指定的最终收束奖励，并清理旧承载。
+	# 预期结果：最终国策不再按四选三组合拆分效果；统一追加网络、空军、特战、自动机与战斗机甲最终奖励，玩家额外获得科研槽。
 	remove_ideas = MIL_cyber_defense
 	remove_ideas = MIL_cyber_defense_2
 	remove_ideas = MIL_cyber_defense_3
@@ -2819,8 +3134,6 @@ BARE_MIL_Millennium_Stability_Guardian_Finalize_effect = {
 	remove_ideas = steel_torrent_modifier_os_card
 	remove_ideas = steel_torrent_modifier_firepower
 	remove_ideas = steel_torrent_modifier_final
-	remove_ideas = MIL_soaring_eagle_air_production_hidden
-	remove_ideas = MIL_strongest_millennium_soldiers
 	if = {
 		limit = { has_dynamic_modifier = { modifier = MIL_guardian_of_millennium_sky } }
 		remove_dynamic_modifier = { modifier = MIL_guardian_of_millennium_sky }
@@ -2829,7 +3142,1265 @@ BARE_MIL_Millennium_Stability_Guardian_Finalize_effect = {
 		limit = { has_dynamic_modifier = { modifier = MIL_soaring_eagle } }
 		remove_dynamic_modifier = { modifier = MIL_soaring_eagle }
 	}
-	add_ideas = MIL_strongest_millennium_soldiers
+	BARE_MIL_Millennium_Defense_Force_Ensure_Modifier_effect = yes
+	add_to_variable = { MIL_millennium_defense_force_civilian_intel_to_others_var = -10 }
+	add_to_variable = { MIL_millennium_defense_force_army_intel_to_others_var = -10 }
+	add_to_variable = { MIL_millennium_defense_force_navy_intel_to_others_var = -10 }
+	add_to_variable = { MIL_millennium_defense_force_airforce_intel_to_others_var = -10 }
+	add_to_variable = { MIL_millennium_defense_force_air_mission_efficiency_var = 0.05 }
+	add_to_variable = { MIL_millennium_defense_force_air_detection_var = 0.05 }
+	add_to_variable = { MIL_millennium_defense_force_air_cas_efficiency_var = 0.05 }
+	add_to_variable = { MIL_millennium_defense_force_special_forces_attack_factor_var = 0.05 }
+	add_to_variable = { MIL_millennium_defense_force_special_forces_defence_factor_var = 0.05 }
+	add_to_variable = { MIL_millennium_defense_force_terrain_penalty_reduction_var = 0.05 }
+	add_to_variable = { MIL_millennium_defense_force_infantry_am_attack_factor_var = 0.05 }
+	add_to_variable = { MIL_millennium_defense_force_infantry_am_defence_factor_var = 0.05 }
+	add_to_variable = { MIL_millennium_defense_force_category_bm_attack_factor_var = 0.05 }
+	add_to_variable = { MIL_millennium_defense_force_category_bm_defence_factor_var = 0.05 }
+	add_ideas = MIL_millennium_defense_force_final_mech_equipment_hidden
+	force_update_dynamic_modifier = yes
+}
+
+BARE_MIL_Ruins_Initialize_effect = {
+	# 2026-07-10 修改：初始化千年旧校区废墟开发系统的四个废墟地块。
+	# 2026-07-13 修改：同步初始化三类固定废墟敌人 TAG，避免使用不可取消科技作为敌人类型开关。
+	# 入口：开局 on_startup 调用；调试决议也可复用本效果进行初始化。
+	# 关键变量：四个固定废墟地块 641、643、640、639；固定敌人 TAG A56/A57/A58；各地块状态旗标记录开发阶段。
+	# 预期结果：四个废墟地块获得“废墟城市”地区动态修正，并标记为未开发废墟；三类废墟敌人获得类型旗标与可移除画像。
+	641 = {
+		if = {
+			limit = {
+				NOT = { has_dynamic_modifier = { modifier = MIL_ruins_city_modifier } }
+				NOT = { has_dynamic_modifier = { modifier = MIL_ruins_city_initial_development_modifier } }
+				NOT = { has_dynamic_modifier = { modifier = MIL_ruins_city_cleared_modifier } }
+				NOT = { has_dynamic_modifier = { modifier = MIL_ruins_excellent_construction_area_modifier } }
+			}
+			add_dynamic_modifier = { modifier = MIL_ruins_city_modifier }
+		}
+		set_state_flag = MIL_ruins_area
+		set_state_flag = MIL_ruins_stage_0
+		set_state_flag = MIL_ruins_residential_area
+	}
+	643 = {
+		if = {
+			limit = {
+				NOT = { has_dynamic_modifier = { modifier = MIL_ruins_city_modifier } }
+				NOT = { has_dynamic_modifier = { modifier = MIL_ruins_city_initial_development_modifier } }
+				NOT = { has_dynamic_modifier = { modifier = MIL_ruins_city_cleared_modifier } }
+				NOT = { has_dynamic_modifier = { modifier = MIL_ruins_excellent_construction_area_modifier } }
+			}
+			add_dynamic_modifier = { modifier = MIL_ruins_city_modifier }
+		}
+		set_state_flag = MIL_ruins_area
+		set_state_flag = MIL_ruins_stage_0
+		set_state_flag = MIL_ruins_residential_area
+	}
+	640 = {
+		if = {
+			limit = {
+				NOT = { has_dynamic_modifier = { modifier = MIL_ruins_city_modifier } }
+				NOT = { has_dynamic_modifier = { modifier = MIL_ruins_city_initial_development_modifier } }
+				NOT = { has_dynamic_modifier = { modifier = MIL_ruins_city_cleared_modifier } }
+				NOT = { has_dynamic_modifier = { modifier = MIL_ruins_excellent_construction_area_modifier } }
+			}
+			add_dynamic_modifier = { modifier = MIL_ruins_city_modifier }
+		}
+		set_state_flag = MIL_ruins_area
+		set_state_flag = MIL_ruins_stage_0
+		set_state_flag = MIL_ruins_urban_area
+	}
+	639 = {
+		if = {
+			limit = {
+				NOT = { has_dynamic_modifier = { modifier = MIL_ruins_city_modifier } }
+				NOT = { has_dynamic_modifier = { modifier = MIL_ruins_city_initial_development_modifier } }
+				NOT = { has_dynamic_modifier = { modifier = MIL_ruins_city_cleared_modifier } }
+				NOT = { has_dynamic_modifier = { modifier = MIL_ruins_excellent_construction_area_modifier } }
+			}
+			add_dynamic_modifier = { modifier = MIL_ruins_city_modifier }
+		}
+		set_state_flag = MIL_ruins_area
+		set_state_flag = MIL_ruins_stage_0
+		set_state_flag = MIL_ruins_urban_area
+	}
+	A56 = {
+		set_country_flag = MIL_ruins_enemy_helmet_tag
+	}
+	A57 = {
+		set_country_flag = MIL_ruins_enemy_machine_tag
+	}
+	A58 = {
+		set_country_flag = MIL_ruins_enemy_cross_divine_tag
+	}
+	MIL = {
+		# 2026-07-18 修改：开局等概率选定一个废墟地块，其首次开发完成时启动SPTF叙事事件链。
+		if = {
+			limit = {
+				NOT = { has_country_flag = MIL_ruins_story_target_641 }
+				NOT = { has_country_flag = MIL_ruins_story_target_643 }
+				NOT = { has_country_flag = MIL_ruins_story_target_640 }
+				NOT = { has_country_flag = MIL_ruins_story_target_639 }
+			}
+			random_list = {
+				25 = { set_country_flag = MIL_ruins_story_target_641 }
+				25 = { set_country_flag = MIL_ruins_story_target_643 }
+				25 = { set_country_flag = MIL_ruins_story_target_640 }
+				25 = { set_country_flag = MIL_ruins_story_target_639 }
+			}
+		}
+	}
+}
+
+BARE_MIL_Ruins_Create_Border_Guard_Template_effect = {
+	# 2026-07-16 修改：按每个地块只触发一次袭击的规则，移除临时模板创建旗标和防重复条件。
+	# 入口：任一 BARE_MIL_Ruins_Load_Border_Guard_*_OOB_effect 执行时，在 MIL 国家作用域调用。
+	# 关键变量：无；玩家使用1个 infantry_am 营，AI使用3个 infantry_am 营。
+	# 预期结果：袭击开始时创建锁定的“千年废墟应急边防部队”模板，供本轮对应地块的边防 OOB 使用。
+	if = {
+		limit = { is_ai = yes }
+		division_template = {
+			name = "千年废墟应急边防部队"
+			is_locked = yes
+			regiments = {
+				infantry_am = { x = 0 y = 0 }
+				infantry_am = { x = 0 y = 1 }
+				infantry_am = { x = 0 y = 2 }
+			}
+		}
+	}
+	else = {
+		division_template = {
+			name = "千年废墟应急边防部队"
+			is_locked = yes
+			regiments = {
+				infantry_am = { x = 0 y = 0 }
+			}
+		}
+	}
+}
+
+BARE_MIL_Ruins_Disband_Border_Guard_effect = {
+	# 2026-07-16 修改：按每个地块只触发一次袭击的规则，直接清理临时模板与部队，不再检查创建旗标。
+	# 入口：任一废墟袭击战争或袭击事件链结束时，在 MIL 国家作用域调用。
+	# 关键变量：只匹配“千年废墟应急边防部队”模板。
+	# 预期结果：解散本轮全部应急边防师、返还其剩余装备和人力，并删除临时模板。
+	delete_unit_template_and_units = {
+		division_template = "千年废墟应急边防部队"
+		disband = yes
+	}
+}
+
+BARE_MIL_Ruins_Load_Border_Guard_643_OOB_effect = {
+	# 2026-07-16 修改：废弃住宅区1-2-1遭遇袭击时直接创建模板并加载千年应急边防 OOB。
+	# 入口：地块643的袭击事件在 MIL 国家作用域调用。
+	# 关键变量：无；模板由 BARE_MIL_Ruins_Create_Border_Guard_Template_effect 创建。
+	# 预期结果：在5144、4193、7038、7660、12157、5094各生成2个边防师，共12个。
+	BARE_MIL_Ruins_Create_Border_Guard_Template_effect = yes
+	load_oob = "MIL_ruins_border_guard_643"
+}
+
+BARE_MIL_Ruins_Load_Border_Guard_641_OOB_effect = {
+	# 2026-07-16 修改：废弃住宅区1-1-3遭遇袭击时直接创建模板并加载千年应急边防 OOB。
+	# 入口：地块641的袭击事件在 MIL 国家作用域调用。
+	# 关键变量：无；模板由 BARE_MIL_Ruins_Create_Border_Guard_Template_effect 创建。
+	# 预期结果：在5144、12060各生成3个，在1731、7019、559各生成2个边防师，共12个。
+	BARE_MIL_Ruins_Create_Border_Guard_Template_effect = yes
+	load_oob = "MIL_ruins_border_guard_641"
+}
+
+BARE_MIL_Ruins_Load_Border_Guard_640_OOB_effect = {
+	# 2026-07-16 修改：废弃城区4-20-1遭遇袭击时直接创建模板并加载千年应急边防 OOB。
+	# 入口：地块640的袭击事件在 MIL 国家作用域调用。
+	# 关键变量：无；模板由 BARE_MIL_Ruins_Create_Border_Guard_Template_effect 创建。
+	# 预期结果：在8246、11835、994、9556、5684各生成2个，在11939、559各生成1个边防师，共12个。
+	BARE_MIL_Ruins_Create_Border_Guard_Template_effect = yes
+	load_oob = "MIL_ruins_border_guard_640"
+}
+
+BARE_MIL_Ruins_Load_Border_Guard_639_OOB_effect = {
+	# 2026-07-16 修改：废弃城区1-46-9遭遇袭击时直接创建模板并加载千年应急边防 OOB。
+	# 入口：地块639的袭击事件在 MIL 国家作用域调用。
+	# 关键变量：无；模板由 BARE_MIL_Ruins_Create_Border_Guard_Template_effect 创建。
+	# 预期结果：在11629、5705、2149、8311各生成2个，在5717、4268、11784、8246各生成1个边防师，共12个。
+	BARE_MIL_Ruins_Create_Border_Guard_Template_effect = yes
+	load_oob = "MIL_ruins_border_guard_639"
+}
+
+BARE_MIL_Ruins_Set_Attack_Target_643_effect = {
+	# 2026-07-16 修改：记录废弃住宅区1-2-1为本轮袭击目标并生成对应应急边防部队。
+	# 入口：MIL_ruins_attack.643事件或调试决议，在 MIL 国家作用域调用。
+	# 关键变量：event_target:MIL_ruins_attack_target_state 保存本次地块作用域；MIL_ruins_active_target_643供投降结算跨事件识别。
+	# 预期结果：地块643标记为已触发袭击和正在遭受袭击，同时为千年加载该方向12个边防师。
+	set_country_flag = MIL_ruins_active_target_643
+	643 = {
+		save_event_target_as = MIL_ruins_attack_target_state
+		set_state_flag = MIL_ruins_attack_triggered
+		set_state_flag = MIL_ruins_under_attack
+		clr_state_flag = MIL_ruins_stage_1_attack_pending
+		clr_state_flag = MIL_ruins_stage_2_attack_pending
+	}
+	BARE_MIL_Ruins_Load_Border_Guard_643_OOB_effect = yes
+}
+
+BARE_MIL_Ruins_Set_Attack_Target_641_effect = {
+	# 2026-07-16 修改：记录废弃住宅区1-1-3为本轮袭击目标并生成对应应急边防部队。
+	# 入口：MIL_ruins_attack.641事件或调试决议，在 MIL 国家作用域调用。
+	# 关键变量：event_target:MIL_ruins_attack_target_state 保存本次地块作用域；MIL_ruins_active_target_641供投降结算跨事件识别。
+	# 预期结果：地块641标记为已触发袭击和正在遭受袭击，同时为千年加载该方向12个边防师。
+	set_country_flag = MIL_ruins_active_target_641
+	641 = {
+		save_event_target_as = MIL_ruins_attack_target_state
+		set_state_flag = MIL_ruins_attack_triggered
+		set_state_flag = MIL_ruins_under_attack
+		clr_state_flag = MIL_ruins_stage_1_attack_pending
+		clr_state_flag = MIL_ruins_stage_2_attack_pending
+	}
+	BARE_MIL_Ruins_Load_Border_Guard_641_OOB_effect = yes
+}
+
+BARE_MIL_Ruins_Set_Attack_Target_640_effect = {
+	# 2026-07-16 修改：记录废弃城区4-20-1为本轮袭击目标并生成对应应急边防部队。
+	# 入口：MIL_ruins_attack.640事件或调试决议，在 MIL 国家作用域调用。
+	# 关键变量：event_target:MIL_ruins_attack_target_state 保存本次地块作用域；MIL_ruins_active_target_640供投降结算跨事件识别。
+	# 预期结果：地块640标记为已触发袭击和正在遭受袭击，同时为千年加载该方向12个边防师。
+	set_country_flag = MIL_ruins_active_target_640
+	640 = {
+		save_event_target_as = MIL_ruins_attack_target_state
+		set_state_flag = MIL_ruins_attack_triggered
+		set_state_flag = MIL_ruins_under_attack
+		clr_state_flag = MIL_ruins_stage_1_attack_pending
+		clr_state_flag = MIL_ruins_stage_2_attack_pending
+	}
+	BARE_MIL_Ruins_Load_Border_Guard_640_OOB_effect = yes
+}
+
+BARE_MIL_Ruins_Set_Attack_Target_639_effect = {
+	# 2026-07-16 修改：记录废弃城区1-46-9为本轮袭击目标并生成对应应急边防部队。
+	# 入口：MIL_ruins_attack.639事件或调试决议，在 MIL 国家作用域调用。
+	# 关键变量：event_target:MIL_ruins_attack_target_state 保存本次地块作用域；MIL_ruins_active_target_639供投降结算跨事件识别。
+	# 预期结果：地块639标记为已触发袭击和正在遭受袭击，同时为千年加载该方向12个边防师。
+	set_country_flag = MIL_ruins_active_target_639
+	639 = {
+		save_event_target_as = MIL_ruins_attack_target_state
+		set_state_flag = MIL_ruins_attack_triggered
+		set_state_flag = MIL_ruins_under_attack
+		clr_state_flag = MIL_ruins_stage_1_attack_pending
+		clr_state_flag = MIL_ruins_stage_2_attack_pending
+	}
+	BARE_MIL_Ruins_Load_Border_Guard_639_OOB_effect = yes
+}
+
+BARE_MIL_Ruins_Set_Active_Target_Intelligence_effect = {
+	# 2026-07-20 修改：统一设置本轮袭击涉及地区的初始“情报缺失”修正，并加入484地区。
+	# 入口：活动目标旗标已经设置后，在MIL国家作用域调用。
+	# 关键变量：MIL_ruins_active_target_641/643/640/639四选一；固定警戒地区为484和485。
+	# 预期结果：目标废墟地块、484和485均获得攻击、移动-90%的初始情报惩罚。
+	484 = {
+		remove_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_analyzed_modifier }
+		remove_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_modifier }
+		add_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_modifier }
+	}
+	485 = {
+		remove_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_analyzed_modifier }
+		remove_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_modifier }
+		add_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_modifier }
+	}
+	if = {
+		limit = { has_country_flag = MIL_ruins_active_target_643 }
+		643 = { remove_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_analyzed_modifier } remove_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_modifier } add_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_modifier } }
+	}
+	else_if = {
+		limit = { has_country_flag = MIL_ruins_active_target_641 }
+		641 = { remove_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_analyzed_modifier } remove_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_modifier } add_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_modifier } }
+	}
+	else_if = {
+		limit = { has_country_flag = MIL_ruins_active_target_640 }
+		640 = { remove_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_analyzed_modifier } remove_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_modifier } add_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_modifier } }
+	}
+	else_if = {
+		limit = { has_country_flag = MIL_ruins_active_target_639 }
+		639 = { remove_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_analyzed_modifier } remove_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_modifier } add_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_modifier } }
+	}
+}
+
+BARE_MIL_Ruins_Apply_Initial_Intelligence_effect = {
+	# 2026-07-24 修改：袭击开始时重置本轮攻势使用状态，并统一隐藏敌人的国家与领导人身份。
+	# 入口：具体敌人活动旗标已经设置后，在MIL国家作用域调用。
+	# 关键变量：两个*_operation_used旗标只记录当前袭击；活动敌人旗标决定接受未知国家外观、问号姓名和专用不明头像的TAG。
+	# 预期结果：每轮袭击都能重新使用一次情报分析和一次特化攻势；敌人显示为“？？？”、黑旗、问号领导人和不明头像。
+	clr_country_flag = MIL_ruins_intelligence_operation_used
+	clr_country_flag = MIL_ruins_special_offensive_used
+	clr_country_flag = MIL_ruins_enemy_intelligence_analyzed
+	BARE_MIL_Ruins_Set_Active_Target_Intelligence_effect = yes
+	if = {
+		limit = { has_country_flag = MIL_ruins_active_enemy_A56 }
+		A56 = {
+			add_ideas = MIL_ruins_enemy_intelligence_blackout
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = MIL_RUINS_UNKNOWN_COSMETIC
+			set_country_leader_name = { name = "MIL_ruins_unknown_leader_name" }
+			set_country_leader_portrait = { portrait = "GFX_Portrait_MIL_ruins_unknown" }
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = MIL_ruins_active_enemy_A57 }
+		A57 = {
+			add_ideas = MIL_ruins_enemy_intelligence_blackout
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = MIL_RUINS_UNKNOWN_COSMETIC
+			set_country_leader_name = { name = "MIL_ruins_unknown_leader_name" }
+			set_country_leader_portrait = { portrait = "GFX_Portrait_MIL_ruins_unknown" }
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = MIL_ruins_active_enemy_A58 }
+		A58 = {
+			add_ideas = MIL_ruins_enemy_intelligence_blackout
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = MIL_RUINS_UNKNOWN_COSMETIC
+			set_country_leader_name = { name = "MIL_ruins_unknown_leader_name" }
+			set_country_leader_portrait = { portrait = "GFX_Portrait_MIL_ruins_unknown" }
+		}
+	}
+}
+
+BARE_MIL_Ruins_Analyze_Active_Enemy_effect = {
+	# 2026-07-24 修改：完成敌情分析后缓解地区惩罚、移除敌方情报封锁并揭示国家及领导人身份。
+	# 入口：分析敌人情报决议完成且本轮敌人仍活动时，在MIL国家作用域调用。
+	# 关键变量：活动目标和敌人旗标；活动敌人TAG决定恢复的正式姓名与头像。
+	# 预期结果：目标、484与485改为攻击、移动-40%，敌人恢复真实国名、国旗、领导人姓名和头像并触发对应汇总事件。
+	484 = {
+		remove_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_modifier }
+		remove_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_analyzed_modifier }
+		add_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_analyzed_modifier }
+	}
+	485 = {
+		remove_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_modifier }
+		remove_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_analyzed_modifier }
+		add_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_analyzed_modifier }
+	}
+	if = { limit = { has_country_flag = MIL_ruins_active_target_643 } 643 = { remove_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_modifier } remove_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_analyzed_modifier } add_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_analyzed_modifier } } }
+	else_if = { limit = { has_country_flag = MIL_ruins_active_target_641 } 641 = { remove_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_modifier } remove_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_analyzed_modifier } add_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_analyzed_modifier } } }
+	else_if = { limit = { has_country_flag = MIL_ruins_active_target_640 } 640 = { remove_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_modifier } remove_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_analyzed_modifier } add_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_analyzed_modifier } } }
+	else_if = { limit = { has_country_flag = MIL_ruins_active_target_639 } 639 = { remove_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_modifier } remove_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_analyzed_modifier } add_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_analyzed_modifier } } }
+	set_country_flag = MIL_ruins_enemy_intelligence_analyzed
+	if = {
+		limit = { has_country_flag = MIL_ruins_active_enemy_A56 }
+		A56 = {
+			remove_ideas = MIL_ruins_enemy_intelligence_blackout
+			drop_cosmetic_tag = yes
+			set_country_leader_name = { name = "MIL_ruins_A56_leader_name" }
+			set_country_leader_portrait = { portrait = "GFX_Portrait_gkt_1" }
+		}
+		country_event = { id = MIL_ruins_intel.1 }
+	}
+	else_if = {
+		limit = { has_country_flag = MIL_ruins_active_enemy_A57 }
+		A57 = {
+			remove_ideas = MIL_ruins_enemy_intelligence_blackout
+			drop_cosmetic_tag = yes
+			set_country_leader_name = { name = "MIL_ruins_A57_leader_name" }
+			set_country_leader_portrait = { portrait = "GFX_Portrait_szsm_1" }
+		}
+		country_event = { id = MIL_ruins_intel.2 }
+	}
+	else_if = {
+		limit = { has_country_flag = MIL_ruins_active_enemy_A58 }
+		A58 = {
+			remove_ideas = MIL_ruins_enemy_intelligence_blackout
+			drop_cosmetic_tag = yes
+			set_country_leader_name = { name = "MIL_ruins_A58_leader_name" }
+			set_country_leader_portrait = { portrait = "GFX_Portrait_szsm_1" }
+		}
+		country_event = { id = MIL_ruins_intel.3 }
+	}
+}
+
+BARE_MIL_Ruins_Clear_Active_Intelligence_effect = {
+	# 2026-07-18 修改：彻底移除本轮袭击产生的地区情报惩罚。
+	# 入口：针对性攻势完成、袭击结算或调试重置，在MIL国家作用域调用。
+	# 预期结果：目标地块、484与485不再保留初始或已分析版本的情报修正。
+	484 = { remove_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_modifier } remove_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_analyzed_modifier } }
+	485 = { remove_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_modifier } remove_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_analyzed_modifier } }
+	if = { limit = { has_country_flag = MIL_ruins_active_target_643 } 643 = { remove_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_modifier } remove_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_analyzed_modifier } } }
+	else_if = { limit = { has_country_flag = MIL_ruins_active_target_641 } 641 = { remove_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_modifier } remove_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_analyzed_modifier } } }
+	else_if = { limit = { has_country_flag = MIL_ruins_active_target_640 } 640 = { remove_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_modifier } remove_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_analyzed_modifier } } }
+	else_if = { limit = { has_country_flag = MIL_ruins_active_target_639 } 639 = { remove_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_modifier } remove_dynamic_modifier = { modifier = MIL_ruins_lack_of_intelligence_analyzed_modifier } } }
+}
+
+BARE_MIL_Ruins_Declare_Active_Enemy_On_Subjects_effect = {
+	# 2026-07-20 修改：让当前废墟袭击者同时向千年的全部附庸宣战。
+	# 入口：具体敌人已经向MIL宣战后，在MIL国家作用域调用。
+	# 关键变量：MIL_ruins_active_enemy_A56/A57/A58三选一；PREV在敌人作用域中指向当前遍历的附庸。
+	# 预期结果：尚未与当前袭击者交战的千年附庸均被该敌人宣战，不影响其他战争。
+	every_subject_country = {
+		if = {
+			limit = {
+				ROOT = { has_country_flag = MIL_ruins_active_enemy_A56 }
+				NOT = { has_war_with = A56 }
+			}
+			A56 = { declare_war_on = { target = PREV type = annex_everything } }
+		}
+		else_if = {
+			limit = {
+				ROOT = { has_country_flag = MIL_ruins_active_enemy_A57 }
+				NOT = { has_war_with = A57 }
+			}
+			A57 = { declare_war_on = { target = PREV type = annex_everything } }
+		}
+		else_if = {
+			limit = {
+				ROOT = { has_country_flag = MIL_ruins_active_enemy_A58 }
+				NOT = { has_war_with = A58 }
+			}
+			A58 = { declare_war_on = { target = PREV type = annex_everything } }
+		}
+	}
+}
+
+BARE_MIL_Ruins_Start_Helmet_Attack_effect = {
+	# 2026-07-16 修改：使用固定TAG A56生成废墟钢盔团袭击部队并向千年宣战。
+	# 入口：目标地块effect已保存event_target:MIL_ruins_attack_target_state后，在 MIL 国家作用域调用。
+	# 关键变量：MIL_ruins_active_enemy_A56记录当前敌人；A56使用3自动机×12、3步兵×1、6步兵×1的固定兵力。
+	# 预期结果：A56取得目标地块及临时核心，在地块内生成14个满员满装备师，并立即向MIL及其附庸宣战。
+	set_country_flag = MIL_ruins_enemy_active
+	# 2026-07-17 修改：永久记录废墟开发期间已经发生过至少一次袭击，供最后一次检测兜底判断。
+	set_country_flag = MIL_ruins_attack_has_occurred
+	set_country_flag = MIL_ruins_active_enemy_A56
+	BARE_MIL_Ruins_Apply_Initial_Intelligence_effect = yes
+	A56 = {
+		set_country_flag = MIL_ruins_enemy_active_tag
+		add_manpower = 100000
+		division_template = {
+			name = "废墟钢盔团自动机小队"
+			is_locked = yes
+			regiments = {
+				infantry_am = { x = 0 y = 0 }
+				infantry_am = { x = 0 y = 1 }
+				infantry_am = { x = 0 y = 2 }
+			}
+		}
+		division_template = {
+			name = "废墟钢盔团步兵小队"
+			is_locked = yes
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+			}
+			support = {
+				fire_support_team_su_la = { x = 0 y = 0 }
+				engineer = { x = 0 y = 1 }
+			}
+		}
+		division_template = {
+			name = "废墟钢盔团步兵中队"
+			is_locked = yes
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+			}
+			support = {
+				fire_support_team_su_la = { x = 0 y = 0 }
+				engineer = { x = 0 y = 1 }
+			}
+		}
+	}
+	event_target:MIL_ruins_attack_target_state = {
+		add_core_of = A56
+		transfer_state_to = A56
+		create_unit = {
+			division = "name = \"？\" division_template = \"废墟钢盔团自动机小队\" start_experience_factor = 0.3 start_equipment_factor = 1 start_manpower_factor = 1"
+			owner = A56
+			count = 12
+			allow_spawning_on_enemy_provs = yes
+		}
+		create_unit = {
+			division = "name = \"？\" division_template = \"废墟钢盔团步兵小队\" start_experience_factor = 0.3 start_equipment_factor = 1 start_manpower_factor = 1"
+			owner = A56
+			count = 1
+			allow_spawning_on_enemy_provs = yes
+		}
+		create_unit = {
+			division = "name = \"？\" division_template = \"废墟钢盔团步兵中队\" start_experience_factor = 0.3 start_equipment_factor = 1 start_manpower_factor = 1"
+			owner = A56
+			count = 1
+			allow_spawning_on_enemy_provs = yes
+		}
+	}
+	A56 = {
+		if = { limit = { MIL = { has_country_flag = MIL_ruins_active_target_643 } } set_capital = { state = 643 remember_old_capital = no } }
+		else_if = { limit = { MIL = { has_country_flag = MIL_ruins_active_target_641 } } set_capital = { state = 641 remember_old_capital = no } }
+		else_if = { limit = { MIL = { has_country_flag = MIL_ruins_active_target_640 } } set_capital = { state = 640 remember_old_capital = no } }
+		else = { set_capital = { state = 639 remember_old_capital = no } }
+		declare_war_on = { target = MIL type = annex_everything }
+	}
+	BARE_MIL_Ruins_Declare_Active_Enemy_On_Subjects_effect = yes
+}
+
+BARE_MIL_Ruins_Start_Machine_Attack_effect = {
+	# 2026-07-16 修改：使用固定TAG A57生成暴走机械袭击部队并向千年宣战。
+	# 入口：目标地块effect已保存event_target:MIL_ruins_attack_target_state后，在 MIL 国家作用域调用。
+	# 关键变量：MIL_ruins_active_enemy_A57记录当前敌人；A57使用3自动机×10、6自动机×5，全部带火炮支援连。
+	# 预期结果：A57取得目标地块及临时核心，在地块内生成15个满员满装备师，并立即向MIL及其附庸宣战。
+	set_country_flag = MIL_ruins_enemy_active
+	# 2026-07-17 修改：永久记录废墟开发期间已经发生过至少一次袭击，供最后一次检测兜底判断。
+	set_country_flag = MIL_ruins_attack_has_occurred
+	set_country_flag = MIL_ruins_active_enemy_A57
+	BARE_MIL_Ruins_Apply_Initial_Intelligence_effect = yes
+	A57 = {
+		set_country_flag = MIL_ruins_enemy_active_tag
+		add_manpower = 100000
+		division_template = {
+			name = "暴走机械集群"
+			is_locked = yes
+			regiments = {
+				infantry_am = { x = 0 y = 0 }
+				infantry_am = { x = 0 y = 1 }
+				infantry_am = { x = 0 y = 2 }
+			}
+			support = {
+				fire_support_team_su_la = { x = 0 y = 0 }
+			}
+		}
+		division_template = {
+			name = "大型暴走机械集群"
+			is_locked = yes
+			regiments = {
+				infantry_am = { x = 0 y = 0 }
+				infantry_am = { x = 0 y = 1 }
+				infantry_am = { x = 0 y = 2 }
+				infantry_am = { x = 1 y = 0 }
+				infantry_am = { x = 1 y = 1 }
+				infantry_am = { x = 1 y = 2 }
+			}
+			support = {
+				fire_support_team_su_la = { x = 0 y = 0 }
+			}
+		}
+	}
+	event_target:MIL_ruins_attack_target_state = {
+		add_core_of = A57
+		transfer_state_to = A57
+		create_unit = {
+			division = "name = \"？\" division_template = \"暴走机械集群\" start_experience_factor = 0.3 start_equipment_factor = 1 start_manpower_factor = 1"
+			owner = A57
+			count = 10
+			allow_spawning_on_enemy_provs = yes
+		}
+		create_unit = {
+			division = "name = \"？\" division_template = \"大型暴走机械集群\" start_experience_factor = 0.3 start_equipment_factor = 1 start_manpower_factor = 1"
+			owner = A57
+			count = 5
+			allow_spawning_on_enemy_provs = yes
+		}
+	}
+	A57 = {
+		if = { limit = { MIL = { has_country_flag = MIL_ruins_active_target_643 } } set_capital = { state = 643 remember_old_capital = no } }
+		else_if = { limit = { MIL = { has_country_flag = MIL_ruins_active_target_641 } } set_capital = { state = 641 remember_old_capital = no } }
+		else_if = { limit = { MIL = { has_country_flag = MIL_ruins_active_target_640 } } set_capital = { state = 640 remember_old_capital = no } }
+		else = { set_capital = { state = 639 remember_old_capital = no } }
+		declare_war_on = { target = MIL type = annex_everything }
+	}
+	BARE_MIL_Ruins_Declare_Active_Enemy_On_Subjects_effect = yes
+}
+
+BARE_MIL_Ruins_Start_Cross_Divine_Attack_effect = {
+	# 2026-07-16 修改：使用固定TAG A58生成十字神明袭击部队并向千年宣战。
+	# 入口：目标地块effect已保存event_target:MIL_ruins_attack_target_state后，在 MIL 国家作用域调用。
+	# 关键变量：MIL_ruins_active_enemy_A58记录当前敌人；A58使用3自动机×15、6自动机×8、5自动机加1中型机甲×5，全部带火炮支援连。
+	# 预期结果：A58取得目标地块及临时核心，在地块内生成28个满员满装备师，并立即向MIL及其附庸宣战。
+	set_country_flag = MIL_ruins_enemy_active
+	# 2026-07-17 修改：永久记录废墟开发期间已经发生过至少一次袭击，供最后一次检测兜底判断。
+	set_country_flag = MIL_ruins_attack_has_occurred
+	set_country_flag = MIL_ruins_active_enemy_A58
+	BARE_MIL_Ruins_Apply_Initial_Intelligence_effect = yes
+	A58 = {
+		set_country_flag = MIL_ruins_enemy_active_tag
+		add_manpower = 150000
+		division_template = {
+			name = "十字神明自动机集群"
+			is_locked = yes
+			regiments = {
+				infantry_am = { x = 0 y = 0 }
+				infantry_am = { x = 0 y = 1 }
+				infantry_am = { x = 0 y = 2 }
+			}
+			support = {
+				fire_support_team_su_la = { x = 0 y = 0 }
+			}
+		}
+		division_template = {
+			name = "十字神明大型自动机集群"
+			is_locked = yes
+			regiments = {
+				infantry_am = { x = 0 y = 0 }
+				infantry_am = { x = 0 y = 1 }
+				infantry_am = { x = 0 y = 2 }
+				infantry_am = { x = 1 y = 0 }
+				infantry_am = { x = 1 y = 1 }
+				infantry_am = { x = 1 y = 2 }
+			}
+			support = {
+				fire_support_team_su_la = { x = 0 y = 0 }
+			}
+		}
+		division_template = {
+			name = "十字神明机甲集群"
+			is_locked = yes
+			regiments = {
+				infantry_am = { x = 0 y = 0 }
+				infantry_am = { x = 0 y = 1 }
+				infantry_am = { x = 0 y = 2 }
+				infantry_am = { x = 0 y = 3 }
+				infantry_am = { x = 0 y = 4 }
+				medium_bm_unit = { x = 1 y = 0 }
+			}
+			support = {
+				fire_support_team_su_la = { x = 0 y = 0 }
+			}
+		}
+	}
+	event_target:MIL_ruins_attack_target_state = {
+		add_core_of = A58
+		transfer_state_to = A58
+		create_unit = {
+			division = "name = \"？\" division_template = \"十字神明自动机集群\" start_experience_factor = 0.3 start_equipment_factor = 1 start_manpower_factor = 1"
+			owner = A58
+			count = 15
+			allow_spawning_on_enemy_provs = yes
+		}
+		create_unit = {
+			division = "name = \"？\" division_template = \"十字神明大型自动机集群\" start_experience_factor = 0.3 start_equipment_factor = 1 start_manpower_factor = 1"
+			owner = A58
+			count = 8
+			allow_spawning_on_enemy_provs = yes
+		}
+		create_unit = {
+			division = "name = \"？\" division_template = \"十字神明机甲集群\" start_experience_factor = 0.3 start_equipment_factor = 1 start_manpower_factor = 1"
+			owner = A58
+			count = 5
+			allow_spawning_on_enemy_provs = yes
+		}
+	}
+	A58 = {
+		if = { limit = { MIL = { has_country_flag = MIL_ruins_active_target_643 } } set_capital = { state = 643 remember_old_capital = no } }
+		else_if = { limit = { MIL = { has_country_flag = MIL_ruins_active_target_641 } } set_capital = { state = 641 remember_old_capital = no } }
+		else_if = { limit = { MIL = { has_country_flag = MIL_ruins_active_target_640 } } set_capital = { state = 640 remember_old_capital = no } }
+		else = { set_capital = { state = 639 remember_old_capital = no } }
+		declare_war_on = { target = MIL type = annex_everything }
+	}
+	BARE_MIL_Ruins_Declare_Active_Enemy_On_Subjects_effect = yes
+}
+
+BARE_MIL_Ruins_Start_Random_Enemy_Attack_effect = {
+	# 2026-07-16 修改：按需求文档权重选择本轮废墟袭击敌人TAG。
+	# 入口：目标地块effect已保存event_target:MIL_ruins_attack_target_state后，在 MIL 国家作用域调用。
+	# 关键变量：暴走机械A57权重55、钢盔团A56权重35、十字神明A58权重10。
+	# 预期结果：三类敌人中恰有一个接管目标地块、生成对应兵力并向MIL宣战。
+	random_list = {
+		55 = { BARE_MIL_Ruins_Start_Machine_Attack_effect = yes }
+		35 = { BARE_MIL_Ruins_Start_Helmet_Attack_effect = yes }
+		10 = { BARE_MIL_Ruins_Start_Cross_Divine_Attack_effect = yes }
+	}
+}
+
+BARE_MIL_Ruins_Delete_Active_Enemy_Forces_effect = {
+	# 2026-07-16 修改：按当前敌人TAG删除废墟袭击临时模板和残余部队。
+	# 入口：正式投降结算或调试重置，在 MIL 国家作用域调用。
+	# 关键变量：MIL_ruins_active_enemy_A56/A57/A58三选一。
+	# 预期结果：只清理当前袭击敌人的临时师与模板，不影响其他TAG或千年部队。
+	if = {
+		limit = { has_country_flag = MIL_ruins_active_enemy_A56 }
+		A56 = {
+			delete_unit_template_and_units = { division_template = "废墟钢盔团自动机小队" disband = no }
+			delete_unit_template_and_units = { division_template = "废墟钢盔团步兵小队" disband = no }
+			delete_unit_template_and_units = { division_template = "废墟钢盔团步兵中队" disband = no }
+			clr_country_flag = MIL_ruins_enemy_active_tag
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = MIL_ruins_active_enemy_A57 }
+		A57 = {
+			delete_unit_template_and_units = { division_template = "暴走机械集群" disband = no }
+			delete_unit_template_and_units = { division_template = "大型暴走机械集群" disband = no }
+			clr_country_flag = MIL_ruins_enemy_active_tag
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = MIL_ruins_active_enemy_A58 }
+		A58 = {
+			delete_unit_template_and_units = { division_template = "十字神明自动机集群" disband = no }
+			delete_unit_template_and_units = { division_template = "十字神明大型自动机集群" disband = no }
+			delete_unit_template_and_units = { division_template = "十字神明机甲集群" disband = no }
+			clr_country_flag = MIL_ruins_enemy_active_tag
+		}
+	}
+}
+
+BARE_MIL_Ruins_Clear_Attack_Runtime_Flags_effect = {
+	# 2026-07-24 修改：统一清理一轮废墟袭击的国家、外观、情报、临时攻势和本轮使用状态。
+	# 入口：正式投降结算或调试重置，在 MIL 国家作用域调用。
+	# 关键变量：当前敌人旗标、当前目标地块旗标和MIL_ruins_enemy_active。
+	# 预期结果：千年恢复启动废墟开发决议的资格，下一块尚未袭击的地块可以继续进行危险检测。
+	BARE_MIL_Ruins_Clear_Active_Intelligence_effect = yes
+	if = {
+		limit = { has_country_flag = MIL_ruins_active_enemy_A56 }
+		A56 = { remove_ideas = MIL_ruins_enemy_intelligence_blackout drop_cosmetic_tag = yes }
+	}
+	else_if = {
+		limit = { has_country_flag = MIL_ruins_active_enemy_A57 }
+		A57 = { remove_ideas = MIL_ruins_enemy_intelligence_blackout drop_cosmetic_tag = yes }
+	}
+	else_if = {
+		limit = { has_country_flag = MIL_ruins_active_enemy_A58 }
+		A58 = { remove_ideas = MIL_ruins_enemy_intelligence_blackout drop_cosmetic_tag = yes }
+	}
+	remove_ideas = MIL_ruins_emp_strike
+	remove_ideas = MIL_ruins_heavy_assault
+	remove_ideas = MIL_ruins_cross_divine_suppression
+	clr_country_flag = MIL_ruins_intelligence_operation_used
+	clr_country_flag = MIL_ruins_special_offensive_used
+	clr_country_flag = MIL_ruins_enemy_intelligence_analyzed
+	clr_country_flag = MIL_ruins_enemy_active
+	# 2026-07-24 修改：清理本次施工因袭击产生的隐藏待处理标记；阶段进度旗标本身不在此处清除。
+	if = {
+		limit = { has_country_flag = MIL_ruins_active_target_643 }
+		643 = {
+			clr_state_flag = MIL_ruins_stage_1_attack_pending
+			clr_state_flag = MIL_ruins_stage_2_attack_pending
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = MIL_ruins_active_target_641 }
+		641 = {
+			clr_state_flag = MIL_ruins_stage_1_attack_pending
+			clr_state_flag = MIL_ruins_stage_2_attack_pending
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = MIL_ruins_active_target_640 }
+		640 = {
+			clr_state_flag = MIL_ruins_stage_1_attack_pending
+			clr_state_flag = MIL_ruins_stage_2_attack_pending
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = MIL_ruins_active_target_639 }
+		639 = {
+			clr_state_flag = MIL_ruins_stage_1_attack_pending
+			clr_state_flag = MIL_ruins_stage_2_attack_pending
+		}
+	}
+	clr_country_flag = MIL_ruins_active_enemy_A56
+	clr_country_flag = MIL_ruins_active_enemy_A57
+	clr_country_flag = MIL_ruins_active_enemy_A58
+	clr_country_flag = MIL_ruins_active_target_643
+	clr_country_flag = MIL_ruins_active_target_641
+	clr_country_flag = MIL_ruins_active_target_640
+	clr_country_flag = MIL_ruins_active_target_639
+}
+
+BARE_MIL_Ruins_Damage_All_Core_State_Buildings_effect = {
+	# 2026-07-16 修改：为千年在废墟袭击战争中投降的情况提供建筑全面损坏结算。
+	# 入口：MIL在废墟敌人仍处于活动状态时投降，由on_capitulation_immediate在MIL国家作用域调用。
+	# 关键变量：遍历MIL全部核心州；damage=100用于将州内现有的可损坏建筑全部转为待修复状态，不降低建筑等级。
+	# 预期结果：千年仍按击败袭击者完成吞并与复员，但所有核心州的基础设施、工业、军事设施和能源建筑均需重新维修。
+	every_core_state = {
+		damage_building = { type = infrastructure damage = 100 }
+		damage_building = { type = arms_factory damage = 100 }
+		damage_building = { type = heavy_arms_factory damage = 100 }
+		damage_building = { type = industrial_complex damage = 100 }
+		damage_building = { type = air_base damage = 100 }
+		damage_building = { type = supply_node damage = 100 }
+		damage_building = { type = rail_way damage = 100 }
+		damage_building = { type = naval_base damage = 100 }
+		damage_building = { type = bunker damage = 100 }
+		damage_building = { type = coastal_bunker damage = 100 }
+		damage_building = { type = stronghold_network damage = 100 }
+		damage_building = { type = dockyard damage = 100 }
+		damage_building = { type = anti_air_building damage = 100 }
+		damage_building = { type = synthetic_refinery damage = 100 }
+		damage_building = { type = metal_processing_plant damage = 100 }
+		damage_building = { type = rare_metal_processing_plant damage = 100 }
+		damage_building = { type = electronic_component_factory damage = 100 }
+		damage_building = { type = opatz_synthesis_center damage = 100 }
+		damage_building = { type = resource_distribution_center damage = 100 }
+		damage_building = { type = construction_center damage = 100 }
+		damage_building = { type = thermal_power_station damage = 100 }
+		damage_building = { type = biological_power_station damage = 100 }
+		damage_building = { type = opaz_power_station damage = 100 }
+		damage_building = { type = fuel_silo damage = 100 }
+		damage_building = { type = radar_station damage = 100 }
+		damage_building = { type = rocket_site damage = 100 }
+		damage_building = { type = nuclear_reactor damage = 100 }
+		damage_building = { type = nuclear_reactor_heavy_water damage = 100 }
+		damage_building = { type = commercial_nuclear_reactor damage = 100 }
+	}
+}
+
+BARE_MIL_Ruins_Resolve_Enemy_Attack_effect = {
+	# 2026-07-16 修改：废墟袭击战争结算时自动完成吞并、敌军清理与边防部队复员。
+	# 2026-07-24 修改：袭击结算只清理战争运行状态，不清理MIL_ruins_stage_1/2/3；已完成的开发阶段必须保留。
+	# 入口：A56/A57/A58投降，或MIL触发投降兜底时，由on_capitulation_immediate在MIL国家作用域调用。
+	# 关键变量：当前敌人旗标决定吞并TAG，当前目标旗标决定结算地块。
+	# 预期结果：MIL吞并被袭击地块但暂不获得核心；应急边防部队解散并返还装备，袭击运行状态清空。
+	BARE_MIL_Ruins_Delete_Active_Enemy_Forces_effect = yes
+	if = {
+		limit = { has_country_flag = MIL_ruins_active_enemy_A56 }
+		annex_country = { target = A56 transfer_troops = no }
+		set_country_flag = MIL_ruins_enemy_A56_defeated
+		add_to_variable = { MIL_ruins_A56_reward_pending = 1 }
+	}
+	else_if = {
+		limit = { has_country_flag = MIL_ruins_active_enemy_A57 }
+		annex_country = { target = A57 transfer_troops = no }
+		set_country_flag = MIL_ruins_enemy_A57_defeated
+		add_to_variable = { MIL_ruins_A57_reward_pending = 1 }
+	}
+	else_if = {
+		limit = { has_country_flag = MIL_ruins_active_enemy_A58 }
+		annex_country = { target = A58 transfer_troops = no }
+		set_country_flag = MIL_ruins_enemy_A58_defeated
+		add_to_variable = { MIL_ruins_A58_reward_pending = 1 }
+	}
+	if = {
+		limit = { has_country_flag = MIL_ruins_active_target_643 }
+		643 = { transfer_state_to = MIL remove_core_of = A56 remove_core_of = A57 remove_core_of = A58 clr_state_flag = MIL_ruins_under_attack set_state_flag = MIL_ruins_enemy_defeated }
+	}
+	else_if = {
+		limit = { has_country_flag = MIL_ruins_active_target_641 }
+		641 = { transfer_state_to = MIL remove_core_of = A56 remove_core_of = A57 remove_core_of = A58 clr_state_flag = MIL_ruins_under_attack set_state_flag = MIL_ruins_enemy_defeated }
+	}
+	else_if = {
+		limit = { has_country_flag = MIL_ruins_active_target_640 }
+		640 = { transfer_state_to = MIL remove_core_of = A56 remove_core_of = A57 remove_core_of = A58 clr_state_flag = MIL_ruins_under_attack set_state_flag = MIL_ruins_enemy_defeated }
+	}
+	else_if = {
+		limit = { has_country_flag = MIL_ruins_active_target_639 }
+		639 = { transfer_state_to = MIL remove_core_of = A56 remove_core_of = A57 remove_core_of = A58 clr_state_flag = MIL_ruins_under_attack set_state_flag = MIL_ruins_enemy_defeated }
+	}
+	BARE_MIL_Ruins_Disband_Border_Guard_effect = yes
+	BARE_MIL_Ruins_Clear_Attack_Runtime_Flags_effect = yes
+}
+
+BARE_MIL_Ruins_Debug_Reset_Enemy_Attack_effect = {
+	# 2026-07-16 修改：为调试决议提供可重复测试的废墟袭击重置流程。
+	# 入口：MIL_ruins_test_reset_attack调试决议，在 MIL 国家作用域调用。
+	# 关键变量：当前敌人和目标地块旗标；目标地块恢复至初始A54/A55所有权。
+	# 预期结果：结束测试战争、删除敌军和临时模板、复员边防师、清除该地块已袭击标记，使同一测试可再次运行。
+	if = { limit = { has_country_flag = MIL_ruins_active_enemy_A56 } white_peace = A56 }
+	else_if = { limit = { has_country_flag = MIL_ruins_active_enemy_A57 } white_peace = A57 }
+	else_if = { limit = { has_country_flag = MIL_ruins_active_enemy_A58 } white_peace = A58 }
+	BARE_MIL_Ruins_Delete_Active_Enemy_Forces_effect = yes
+	if = {
+		limit = { has_country_flag = MIL_ruins_active_target_643 }
+		643 = { transfer_state_to = A54 remove_core_of = A56 remove_core_of = A57 remove_core_of = A58 clr_state_flag = MIL_ruins_under_attack clr_state_flag = MIL_ruins_attack_triggered }
+	}
+	else_if = {
+		limit = { has_country_flag = MIL_ruins_active_target_641 }
+		641 = { transfer_state_to = A54 remove_core_of = A56 remove_core_of = A57 remove_core_of = A58 clr_state_flag = MIL_ruins_under_attack clr_state_flag = MIL_ruins_attack_triggered }
+	}
+	else_if = {
+		limit = { has_country_flag = MIL_ruins_active_target_640 }
+		640 = { transfer_state_to = A55 remove_core_of = A56 remove_core_of = A57 remove_core_of = A58 clr_state_flag = MIL_ruins_under_attack clr_state_flag = MIL_ruins_attack_triggered }
+	}
+	else_if = {
+		limit = { has_country_flag = MIL_ruins_active_target_639 }
+		639 = { transfer_state_to = A55 remove_core_of = A56 remove_core_of = A57 remove_core_of = A58 clr_state_flag = MIL_ruins_under_attack clr_state_flag = MIL_ruins_attack_triggered }
+	}
+	BARE_MIL_Ruins_Disband_Border_Guard_effect = yes
+	BARE_MIL_Ruins_Clear_Attack_Runtime_Flags_effect = yes
+}
+
+# 2026-07-24 修改：补齐废墟开发阶段完成后的危险/机遇检测和SPTF事件入口。
+# 入口：四个废墟地块的阶段1或阶段2决议完成后检测；阶段3完成后检查SPTF事件。
+# 关键变量：地块旗标记录每个阶段是否已经检测；MIL_ruins_attack_has_occurred记录整个开发计划是否已发生过袭击。
+# 预期结果：阶段1和阶段2均可触发袭击或意外收获；若全部阶段2完成前从未遇袭，最后一块地强制触发袭击。
+BARE_MIL_Ruins_Check_Story_Trigger_effect = {
+	# 2026-07-24 修改：将SPTF事件链触发点改为预选地块完成阶段3“重建基础设施”。
+	# 入口：任一地块阶段3完成后，在当前地块作用域调用。
+	# 关键变量：MIL上的四个story_target旗标恰有一个；MIL_ruins_story_started防止重复。
+	# 预期结果：四个地块中只有预选地块会触发MIL_ruins_story.1。
+	if = {
+		limit = {
+			MIL = { NOT = { has_country_flag = MIL_ruins_story_started } }
+			OR = {
+				AND = { state = 641 MIL = { has_country_flag = MIL_ruins_story_target_641 } }
+				AND = { state = 643 MIL = { has_country_flag = MIL_ruins_story_target_643 } }
+				AND = { state = 640 MIL = { has_country_flag = MIL_ruins_story_target_640 } }
+				AND = { state = 639 MIL = { has_country_flag = MIL_ruins_story_target_639 } }
+			}
+		}
+		MIL = {
+			set_country_flag = MIL_ruins_story_started
+			country_event = { id = MIL_ruins_story.1 }
+		}
+	}
+}
+
+BARE_MIL_Ruins_Run_Stage_1_Detection_effect = {
+	# 2026-07-24 修改：阶段1先完成危险/机遇检测，只有未命中袭击时才增加1点开发进度。
+	# 入口：阶段1施工决议完成后，在目标废墟地块作用域调用。
+	# 关键变量：MIL_ruins_stage_1_attack_pending表示本次施工命中袭击；袭击事件的实际开战仍由玩家选项完成。
+	# 预期结果：普通结果和意外收获进入阶段1；遭遇袭击则本次施工不计入阶段进度，战后需重新施工。
+	set_state_flag = MIL_ruins_stage_1_detection_done
+	clr_state_flag = MIL_ruins_stage_1_attack_pending
+	random_list = {
+		# 2026-07-20 修复：按需求文档恢复初步开发后的完整危险/机遇检测。
+		40 = { }
+		25 = {
+			if = {
+				limit = { NOT = { has_state_flag = MIL_ruins_attack_triggered } }
+				set_state_flag = MIL_ruins_stage_1_attack_pending
+				BARE_MIL_Ruins_Trigger_Current_State_Attack_effect = yes
+			}
+		}
+		35 = {
+			random_list = {
+				25 = { state_event = { id = MIL_ruins_surprise.1 trigger_for = MIL } }
+				25 = { state_event = { id = MIL_ruins_surprise.2 trigger_for = MIL } }
+				25 = { state_event = { id = MIL_ruins_surprise.3 trigger_for = MIL } }
+				25 = { state_event = { id = MIL_ruins_surprise.4 trigger_for = MIL } }
+			}
+		}
+	}
+	if = {
+		limit = { NOT = { has_state_flag = MIL_ruins_stage_1_attack_pending } }
+		BARE_MIL_Ruins_Set_Stage_1_effect = yes
+	}
+}
+
+BARE_MIL_Ruins_Trigger_Current_State_Attack_effect = {
+	# 2026-07-20 修改：按当前废墟地块触发其专属袭击事件。
+	# 入口：阶段1或阶段2随机检测命中袭击，或最后一块地的“至少一次袭击”兜底生效时，在废墟地块作用域调用。
+	# 关键变量：当前地块必须是641、643、640、639之一；事件仍在千年国家作用域执行完整袭击初始化。
+	# 预期结果：只有当前地块对应的袭击事件被触发，不改变敌人种类的55/35/10权重。
+	if = {
+		limit = { state = 641 }
+		MIL = { country_event = { id = MIL_ruins_attack.641 } }
+	}
+	else_if = {
+		limit = { state = 643 }
+		MIL = { country_event = { id = MIL_ruins_attack.643 } }
+	}
+	else_if = {
+		limit = { state = 640 }
+		MIL = { country_event = { id = MIL_ruins_attack.640 } }
+	}
+	else_if = {
+		limit = { state = 639 }
+		MIL = { country_event = { id = MIL_ruins_attack.639 } }
+	}
+}
+
+BARE_MIL_Ruins_Run_Stage_2_Detection_effect = {
+	# 2026-07-24 修改：阶段2先完成危险/机遇检测，只有未命中袭击时才增加1点开发进度。
+	# 入口：阶段2施工决议完成后，在目标废墟地块作用域调用。
+	# 关键变量：MIL_ruins_stage_2_attack_pending表示本次施工命中袭击；强制袭击也必须跳过阶段2进度。
+	# 预期结果：普通结果和意外收获进入阶段2；遭遇袭击则本次施工不计入阶段进度，战后需重新施工。
+	set_state_flag = MIL_ruins_stage_2_detection_done
+	clr_state_flag = MIL_ruins_stage_2_attack_pending
+	if = {
+		limit = {
+			# 2026-07-17 修改：若四块地均已完成第二次检测且此前从未遇袭，最后一块地必定触发袭击。
+			MIL = { NOT = { has_country_flag = MIL_ruins_attack_has_occurred } }
+			641 = { has_state_flag = MIL_ruins_stage_2_detection_done }
+			643 = { has_state_flag = MIL_ruins_stage_2_detection_done }
+			640 = { has_state_flag = MIL_ruins_stage_2_detection_done }
+			639 = { has_state_flag = MIL_ruins_stage_2_detection_done }
+		}
+		set_state_flag = MIL_ruins_stage_2_attack_pending
+		BARE_MIL_Ruins_Trigger_Current_State_Attack_effect = yes
+	}
+	else = {
+		random_list = {
+			40 = { }
+			25 = {
+				if = {
+					limit = { NOT = { has_state_flag = MIL_ruins_attack_triggered } }
+					set_state_flag = MIL_ruins_stage_2_attack_pending
+					BARE_MIL_Ruins_Trigger_Current_State_Attack_effect = yes
+				}
+			}
+			35 = {
+				random_list = {
+					25 = { state_event = { id = MIL_ruins_surprise.1 trigger_for = MIL } }
+					25 = { state_event = { id = MIL_ruins_surprise.2 trigger_for = MIL } }
+					25 = { state_event = { id = MIL_ruins_surprise.3 trigger_for = MIL } }
+					25 = { state_event = { id = MIL_ruins_surprise.4 trigger_for = MIL } }
+				}
+			}
+		}
+	}
+	if = {
+		limit = { NOT = { has_state_flag = MIL_ruins_stage_2_attack_pending } }
+		BARE_MIL_Ruins_Set_Stage_2_effect = yes
+	}
+}
+
+BARE_MIL_Ruins_Set_Stage_1_effect = {
+	# 2026-07-24 修改：旧校区废墟地块完成阶段1“初步开发”后的状态切换；仅由未命中袭击的检测结果调用。
+	# 入口：阶段1危险/机遇检测结束且没有 MIL_ruins_stage_1_attack_pending 时，在目标地块作用域调用。
+	# 关键变量：目标地块必须是 641、643、640、639 之一；阶段状态由 MIL_ruins_stage_1 记录。
+	# 预期结果：初始“废墟城市”修正替换为“初步开发的废墟城市”，该地块可进入阶段2。
+	remove_dynamic_modifier = { modifier = MIL_ruins_city_modifier }
+	remove_dynamic_modifier = { modifier = MIL_ruins_city_cleared_modifier }
+	remove_dynamic_modifier = { modifier = MIL_ruins_excellent_construction_area_modifier }
+	if = {
+		limit = { NOT = { has_dynamic_modifier = { modifier = MIL_ruins_city_initial_development_modifier } } }
+		add_dynamic_modifier = { modifier = MIL_ruins_city_initial_development_modifier }
+	}
+	set_state_flag = MIL_ruins_stage_1
+}
+
+BARE_MIL_Ruins_Set_Stage_2_effect = {
+	# 2026-07-24 修改：旧校区废墟地块完成阶段2“清理废墟”后的状态切换；仅由未命中袭击的检测结果调用。
+	# 入口：阶段2危险/机遇检测结束且没有 MIL_ruins_stage_2_attack_pending 时，在目标地块作用域调用。
+	# 关键变量：目标地块必须已经拥有 MIL_ruins_stage_1；阶段状态由 MIL_ruins_stage_2 记录。
+	# 预期结果：“初步开发的废墟城市”替换为“已清理的废墟城市”，该地块可进入阶段3；4块地均完成阶段2后恢复学园战术演习。
+	remove_dynamic_modifier = { modifier = MIL_ruins_city_modifier }
+	remove_dynamic_modifier = { modifier = MIL_ruins_city_initial_development_modifier }
+	remove_dynamic_modifier = { modifier = MIL_ruins_excellent_construction_area_modifier }
+	if = {
+		limit = { NOT = { has_dynamic_modifier = { modifier = MIL_ruins_city_cleared_modifier } } }
+		add_dynamic_modifier = { modifier = MIL_ruins_city_cleared_modifier }
+	}
+	set_state_flag = MIL_ruins_stage_2
+}
+
+BARE_MIL_Ruins_Set_Stage_3_effect = {
+	# 2026-07-13 修改：旧校区废墟地块完成阶段3“重建基础设施”后的最终状态切换。
+	# 入口：废墟开发阶段3决议倒计时完成后，在目标地块作用域调用。
+	# 关键变量：目标地块必须已经拥有 MIL_ruins_stage_2；最终状态由 MIL_ruins_stage_3 记录。
+	# 预期结果：移除废墟负面修正，添加“优良建设区域”，并把该地块控制权、拥有权和核心交给千年。
+	remove_dynamic_modifier = { modifier = MIL_ruins_city_modifier }
+	remove_dynamic_modifier = { modifier = MIL_ruins_city_initial_development_modifier }
+	remove_dynamic_modifier = { modifier = MIL_ruins_city_cleared_modifier }
+	if = {
+		limit = { NOT = { has_dynamic_modifier = { modifier = MIL_ruins_excellent_construction_area_modifier } } }
+		add_dynamic_modifier = { modifier = MIL_ruins_excellent_construction_area_modifier }
+	}
+	set_state_flag = MIL_ruins_stage_3
+	transfer_state_to = MIL
+	add_core_of = MIL
+}
+
+BARE_MIL_Ruins_Spawn_Pin_Holder_Automech_effect = {
+	# 2026-07-14 修改：为“这已经不是一般的钉子户了”提供自动机步兵增援。
+	# 入口：MIL_it_not_normal 国策完成奖励，在千年国家作用域调用。
+	# 关键变量：固定生成地块为 485 东部警戒带；模板由 6 个 infantry_am、recon、engineer 组成。
+	# 预期结果：在东部警戒带生成 3 个满装备、满人力的自动机步兵师。
+	division_template = {
+		name = "废墟警戒自动机步兵"
+		regiments = {
+			infantry_am = { x = 0 y = 0 }
+			infantry_am = { x = 0 y = 1 }
+			infantry_am = { x = 0 y = 2 }
+			infantry_am = { x = 1 y = 0 }
+			infantry_am = { x = 1 y = 1 }
+			infantry_am = { x = 1 y = 2 }
+		}
+		is_locked = yes
+		support = {
+			recon = { x = 0 y = 0 }
+			engineer = { x = 0 y = 1 }
+		}
+	}
+
+	485 = {
+		create_unit = {
+			division = "name = \"废墟警戒自动机步兵\" division_template = \"废墟警戒自动机步兵\" start_experience_factor = 0.3 start_equipment_factor = 1 start_manpower_factor = 1"
+			owner = ROOT
+			count = 3
+			allow_spawning_on_enemy_provs = no
+		}
+	}
+}
+
+BARE_MIL_Ruins_Spawn_Heavy_Assault_Mech_effect = {
+	# 2026-07-14 修改：为“必须出重拳”提供机甲突击增援。
+	# 入口：MIL_we_need_Strong_fight 国策完成奖励，在千年国家作用域调用。
+	# 关键变量：固定生成地块为 485 东部警戒带；模板由 5 个 medium_bm_unit、5 个 ifv_unit、maintenance_company、signal_company、ifv_recon 组成。
+	# 预期结果：在东部警戒带生成 1 个满装备、满人力的中型机甲突击师。
+	division_template = {
+		name = "废墟重拳机甲部队"
+		regiments = {
+			medium_bm_unit = { x = 0 y = 0 }
+			medium_bm_unit = { x = 0 y = 1 }
+			medium_bm_unit = { x = 0 y = 2 }
+			medium_bm_unit = { x = 0 y = 3 }
+			medium_bm_unit = { x = 0 y = 4 }
+			ifv_unit = { x = 1 y = 0 }
+			ifv_unit = { x = 1 y = 1 }
+			ifv_unit = { x = 1 y = 2 }
+			ifv_unit = { x = 1 y = 3 }
+			ifv_unit = { x = 1 y = 4 }
+		}
+		is_locked = yes
+		support = {
+			maintenance_company = { x = 0 y = 0 }
+			signal_company = { x = 0 y = 1 }
+			ifv_recon = { x = 0 y = 2 }
+		}
+	}
+
+	485 = {
+		create_unit = {
+			division = "name = \"废墟重拳机甲部队\" division_template = \"废墟重拳机甲部队\" start_experience_factor = 0.3 start_equipment_factor = 1 start_manpower_factor = 1"
+			owner = ROOT
+			count = 1
+			allow_spawning_on_enemy_provs = no
+		}
+	}
+}
+
+BARE_MIL_Ruins_Reward_Two_Rebuilt_States_effect = {
+	# 2026-07-14 修改：为“废墟开发初见成效”发放两块已完成开发地块的资源收益。
+	# 入口：MIL_we_have_achieved_initial_success 国策完成奖励，在千年国家作用域调用。
+	# 关键变量：MIL_ruins_rewarded_rebuilt_states_temp 记录本次已奖励地块数；四个候选地块为 641、643、640、639。
+	# 预期结果：按固定顺序选择前两个已完成阶段3且未领过该奖励的地块，每块增加 8 电力和 8 常规金属。
+	set_variable = { MIL_ruins_rewarded_rebuilt_states_temp = 0 }
+
+	641 = {
+		if = {
+			limit = {
+				has_state_flag = MIL_ruins_stage_3
+				NOT = { has_state_flag = MIL_ruins_initial_success_resource_rewarded }
+				ROOT = { check_variable = { MIL_ruins_rewarded_rebuilt_states_temp < 2 } }
+			}
+			add_resource = {
+				type = resources_el
+				amount = 8
+			}
+			add_resource = {
+				type = resources_cm
+				amount = 8
+			}
+			set_state_flag = MIL_ruins_initial_success_resource_rewarded
+			ROOT = { add_to_variable = { MIL_ruins_rewarded_rebuilt_states_temp = 1 } }
+		}
+	}
+	643 = {
+		if = {
+			limit = {
+				has_state_flag = MIL_ruins_stage_3
+				NOT = { has_state_flag = MIL_ruins_initial_success_resource_rewarded }
+				ROOT = { check_variable = { MIL_ruins_rewarded_rebuilt_states_temp < 2 } }
+			}
+			add_resource = {
+				type = resources_el
+				amount = 8
+			}
+			add_resource = {
+				type = resources_cm
+				amount = 8
+			}
+			set_state_flag = MIL_ruins_initial_success_resource_rewarded
+			ROOT = { add_to_variable = { MIL_ruins_rewarded_rebuilt_states_temp = 1 } }
+		}
+	}
+	640 = {
+		if = {
+			limit = {
+				has_state_flag = MIL_ruins_stage_3
+				NOT = { has_state_flag = MIL_ruins_initial_success_resource_rewarded }
+				ROOT = { check_variable = { MIL_ruins_rewarded_rebuilt_states_temp < 2 } }
+			}
+			add_resource = {
+				type = resources_el
+				amount = 8
+			}
+			add_resource = {
+				type = resources_cm
+				amount = 8
+			}
+			set_state_flag = MIL_ruins_initial_success_resource_rewarded
+			ROOT = { add_to_variable = { MIL_ruins_rewarded_rebuilt_states_temp = 1 } }
+		}
+	}
+	639 = {
+		if = {
+			limit = {
+				has_state_flag = MIL_ruins_stage_3
+				NOT = { has_state_flag = MIL_ruins_initial_success_resource_rewarded }
+				ROOT = { check_variable = { MIL_ruins_rewarded_rebuilt_states_temp < 2 } }
+			}
+			add_resource = {
+				type = resources_el
+				amount = 8
+			}
+			add_resource = {
+				type = resources_cm
+				amount = 8
+			}
+			set_state_flag = MIL_ruins_initial_success_resource_rewarded
+			ROOT = { add_to_variable = { MIL_ruins_rewarded_rebuilt_states_temp = 1 } }
+		}
+	}
+
+	# 2026-07-18 修复：当前游戏版本不支持 clr_variable，结算后将临时计数显式归零。
+	set_variable = { MIL_ruins_rewarded_rebuilt_states_temp = 0 }
+}
+
+BARE_MIL_Ruins_Grant_Machine_Reward_effect = {
+	# 2026-07-18 修改：结算“解析损坏器械”的四种等概率限时收益。
+	# 入口：战后奖励决议完成，在MIL国家作用域调用。
+	# 关键变量：四种结果各25%；对应民族精神持续360日。
+	# 预期结果：获得科研、建设、机械攻击或机械生产花费中的一种收益，并显示对应结果事件。
+	random_list = {
+		25 = { add_timed_idea = { idea = MIL_ruins_lost_technology_analysis_research days = 360 } country_event = { id = MIL_ruins_reward.1 } }
+		25 = { add_timed_idea = { idea = MIL_ruins_lost_technology_analysis_construction days = 360 } country_event = { id = MIL_ruins_reward.2 } }
+		25 = { add_timed_idea = { idea = MIL_ruins_lost_technology_analysis_mech_attack days = 360 } country_event = { id = MIL_ruins_reward.3 } }
+		25 = { add_timed_idea = { idea = MIL_ruins_lost_technology_analysis_mech_cost days = 360 } country_event = { id = MIL_ruins_reward.4 } }
+	}
+}
+
+BARE_MIL_Ruins_Grant_Helmet_Reward_effect = {
+	# 2026-07-18 修改：结算“审问钢盔团成员”的随机科研卡与专项突破点。
+	# 入口：战后奖励决议完成，在MIL国家作用域调用。
+	# 关键变量：五类50%科研卡等概率；重型器械与精密器械专项突破点等概率。
+	# 预期结果：恰好获得一张科研卡和一点专项突破，并显示汇总事件。
+	random_list = {
+		20 = { add_tech_bonus = { name = MIL_ruins_helmet_interrogation_bonus bonus = 0.50 uses = 1 category = infantry_weapons } }
+		20 = { add_tech_bonus = { name = MIL_ruins_helmet_interrogation_bonus bonus = 0.50 uses = 1 category = armor } }
+		20 = { add_tech_bonus = { name = MIL_ruins_helmet_interrogation_bonus bonus = 0.50 uses = 1 category = fire_support } }
+		20 = { add_tech_bonus = { name = MIL_ruins_helmet_interrogation_bonus bonus = 0.50 uses = 1 category = bm } }
+		20 = { add_tech_bonus = { name = MIL_ruins_helmet_interrogation_bonus bonus = 0.50 uses = 1 category = uav } }
+	}
+	random_list = {
+		50 = { add_breakthrough_points = { specialization = specialization_land value = 1 } }
+		50 = { add_breakthrough_points = { specialization = specialization_air value = 1 } }
+	}
+	country_event = { id = MIL_ruins_reward.5 }
+}
+
+BARE_MIL_Ruins_Grant_Cross_Divine_Reward_effect = {
+	# 2026-07-18 修改：结算“解析十字神明的线索”的360日综合科研收益。
+	# 入口：战后奖励决议完成，在MIL国家作用域调用。
+	# 关键变量：重复获得时由限时民族精神机制刷新持续时间。
+	# 预期结果：获得科研、神秘科技、欧帕兹项目和特殊项目速度收益，并显示结果事件。
+	add_timed_idea = { idea = MIL_ruins_cross_divine_clues days = 360 }
+	country_event = { id = MIL_ruins_reward.6 }
+}
+
+BARE_MIL_Ruins_Check_Great_Game_Restriction_effect = {
+	# 2026-07-13 修改：检查旧校区废墟开发对学园战术演习的临时限制是否可以解除。
+	# 入口：任一废墟地块完成阶段2后，在千年国家作用域调用。
+	# 关键变量：MIL_ruins_great_game_restricted 标记当前限制由废墟开发施加；四个地块均有 MIL_ruins_stage_2 后解除。
+	# 预期结果：4个废墟地块全部通过清理阶段后，解除千年在学园战术演习系统中的全面免战状态。
+	if = {
+		limit = {
+			has_country_flag = MIL_ruins_great_game_restricted
+			BARE_MIL_Ruins_All_Stage_2_Done = yes
+		}
+		Great_Game_lift_total_cease_fire = yes
+		clr_country_flag = MIL_ruins_great_game_restricted
+	}
 }
 
 BARE_MIL_award_ensure_dynamic_modifier_effect = {

@@ -118,3 +118,52 @@ set_popularities = {
 
 
 
+# 2026-07-20 修改：依据开局部队与现有军工配置装备生产线。
+add_equipment_production = {
+	equipment = { type = infantry_equipment_0 }
+	requested_factories = 1
+	progress = 0
+	efficiency = 100
+}
+add_equipment_production = {
+	equipment = { type = transport_plane_equipment_1 }
+	requested_factories = 1
+	progress = 0
+	efficiency = 100
+}
+add_equipment_production = {
+	equipment = { type = light_fire_support_equipment_0 }
+	requested_factories = 1
+	progress = 0
+	efficiency = 100
+}
+add_equipment_production = {
+	equipment = { type = apc_equipment_1 }
+	requested_factories = 1
+	progress = 0
+	efficiency = 100
+}
+add_equipment_production = {
+	equipment = { type = apc_artillery_equipment_1 }
+	requested_factories = 1
+	progress = 0
+	efficiency = 100
+}
+add_equipment_production = {
+	equipment = { type = ifv_equipment_1 }
+	requested_factories = 1
+	progress = 0
+	efficiency = 100
+}
+add_equipment_production = {
+	equipment = { type = light_tank_equipment_1 }
+	requested_factories = 1
+	progress = 0
+	efficiency = 100
+}
+add_equipment_production = {
+	equipment = { type = medium_tank_equipment_1 }
+	requested_factories = 1
+	progress = 0
+	efficiency = 100
+}

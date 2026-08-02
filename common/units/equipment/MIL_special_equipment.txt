@@ -7,8 +7,8 @@ equipments = {
 		picture = archetype_medium_tank_equipment		
 		is_buildable = no
 		is_convertable = yes
-		# 2026-06-29 修改：加入千年战斗机甲装备类别，用于聚合钢铁洪流等机甲装备加成显示。
-		type = { mechanized MIL_bm_equipment_category }
+		# 2026-07-14 修改：自定义装备类别不受当前引擎支持；保留合法机械化类别，聚合加成改由原型列表实现。
+		type = { mechanized }
 		group_by = archetype
 		
 		interface_category = interface_category_armor

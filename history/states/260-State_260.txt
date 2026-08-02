@@ -7,6 +7,7 @@ state={
 	history={
 		buildings = {
 			infrastructure = 2
+			air_base = 5
 		}
 		owner = A31
 		add_core_of=A31

@@ -1,3 +1,4 @@
+# 2026-07-21: 补充当前启用的总部支援连、千禧特殊作战机甲及圣三一地区系统同步 token。
 A45_Don_Alanchino
 A46_Miao_Tian_Wan
 ABY_ayane
@@ -1271,6 +1272,23 @@ HIL_CCC
 HIL_GuiDaoShangDeXueYuan
 HIL_ZhuangJiaJvLong
 home_defence
+hq_air_liaison
+hq_engineer
+hq_field_hospital
+hq_heavy_armor
+hq_infantry
+hq_light_armor
+hq_logistics
+hq_maintenance
+hq_medium_armor
+hq_military_police
+hq_motorized
+hq_naval_liaison
+hq_paratrooper
+hq_recon
+hq_signal
+hq_specops
+hq_support_company
 hunt_and_destroy
 HYA_BGZC_SYZD
 HYA_chise
@@ -1752,6 +1770,7 @@ MIL_hibiki
 MIL_hibiki_hc
 MIL_himari
 MIL_himari_pa
+MIL_Individual_Special_Operations_Mech
 MIL_Individual_Special_Operations_Mech_equipment
 MIL_Individual_Special_Operations_Mech_equipment_1
 MIL_Individual_Special_Operations_Mech_equipment_2
@@ -2576,6 +2595,9 @@ TRI_reforming_administration_system
 TRI_reisa
 TRI_reisa_pa
 TRI_remove_debuff
+TRI_region_culture
+TRI_region_military
+TRI_region_society
 TRI_resistance_movement
 TRI_revolting_justice
 TRI_sakurako
@@ -2672,6 +2694,7 @@ TRI_unity_weekly_change
 TRI_unity_weekly_modifier
 TRI_victory_trust_unity
 TRI_vote_for_the_bill
+TRI_western_campus_region
 TRI_yoshimi
 TRI_yoshimi_pa
 Trinity_1

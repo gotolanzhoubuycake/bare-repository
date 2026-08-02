@@ -9,7 +9,7 @@ state={
 			infrastructure = 5
 			industrial_complex = 4
 			arms_factory = 2
-			air_base = 5
+			air_base = 10
 			anti_air_building = 4
 			heavy_arms_factory = 2
 		}

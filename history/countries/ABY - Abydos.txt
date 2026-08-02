@@ -1,6 +1,6 @@
 capital = 351
 oob = "standard_templates"
-set_air_oob = "ABY_2019_air_legacy"
+# 2026-07-20: 阿拜多斯开局不保有空军，保留既有科技供后续剧情使用。
 set_stability = 0.50
 set_war_support = 0.50
 set_research_slots = 3

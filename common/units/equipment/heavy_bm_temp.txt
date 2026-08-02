@@ -9,8 +9,8 @@ equipments = {
 		is_convertable = yes
 		picture = archetype_heavy_bm_equipment
 		is_buildable = no
-		# 2026-06-29 修改：加入千年战斗机甲装备类别，用于聚合钢铁洪流等机甲装备加成显示。
-		type = { armor MIL_bm_equipment_category }
+		# 2026-07-14 修改：当前引擎不支持脚本自建装备类别，机甲聚合加成改由各装备原型逐项承载。
+		type = { armor }
 		group_by = archetype
 		
 		interface_category = interface_category_armor
@@ -169,8 +169,6 @@ equipments = {
 		type = {
 			armor
 			artillery
-			# 2026-06-29 修改：加入千年战斗机甲装备类别，用于聚合钢铁洪流等机甲装备加成显示。
-			MIL_bm_equipment_category
 		}
 		group_by = archetype
 		
@@ -328,8 +326,6 @@ equipments = {
 		type = {
 			armor
 			anti_tank
-			# 2026-06-29 修改：加入千年战斗机甲装备类别，用于聚合钢铁洪流等机甲装备加成显示。
-			MIL_bm_equipment_category
 		}
 		group_by = archetype
 		
@@ -483,8 +479,6 @@ equipments = {
 		type = {
 			armor
 			anti_air
-			# 2026-06-29 修改：加入千年战斗机甲装备类别，用于聚合钢铁洪流等机甲装备加成显示。
-			MIL_bm_equipment_category
 		}
 		group_by = archetype
 		

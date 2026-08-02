@@ -1,0 +1,726 @@
+# 2026-07-24 修改：千年旧校区废墟开发、特化攻势和战后解析统一使用同一正式决议组。
+
+MIL_ruins_development_decision_category = {
+	MIL_ruins_initial_development_641 = {
+		visible = {
+			641 = {
+				has_state_flag = MIL_ruins_area
+				NOT = { has_state_flag = MIL_ruins_stage_1 }
+			}
+		}
+		available = {
+			BARE_MIL_Ruins_Can_Start_Development = yes
+			num_of_civilian_factories_available_for_projects > 0
+		}
+		cost = 15
+		days_remove = 30
+		modifier = {
+			civilian_factory_use = 1
+		}
+		complete_effect = {
+			hidden_effect = { set_country_flag = MIL_ruins_development_ongoing }
+		}
+		remove_effect = {
+			# 2026-07-20 修改：只向玩家展示阶段结果，内部旗标、状态切换和随机检测全部隐藏。
+			custom_effect_tooltip = MIL_ruins_initial_development_effect_tt
+			hidden_effect = {
+				clr_country_flag = MIL_ruins_development_ongoing
+				641 = {
+					BARE_MIL_Ruins_Run_Stage_1_Detection_effect = yes
+				}
+			}
+		}
+	}
+
+	MIL_ruins_clear_debris_641 = {
+		visible = {
+			641 = {
+				has_state_flag = MIL_ruins_stage_1
+				NOT = { has_state_flag = MIL_ruins_stage_2 }
+			}
+		}
+		available = {
+			BARE_MIL_Ruins_Can_Start_Development = yes
+			num_of_civilian_factories_available_for_projects > 2
+		}
+		cost = 50
+		days_remove = 60
+		modifier = {
+			civilian_factory_use = 3
+		}
+		complete_effect = {
+			hidden_effect = { set_country_flag = MIL_ruins_development_ongoing }
+		}
+		remove_effect = {
+			custom_effect_tooltip = MIL_ruins_clear_debris_effect_tt
+			hidden_effect = {
+				clr_country_flag = MIL_ruins_development_ongoing
+				641 = {
+					BARE_MIL_Ruins_Run_Stage_2_Detection_effect = yes
+				}
+				BARE_MIL_Ruins_Check_Great_Game_Restriction_effect = yes
+			}
+		}
+	}
+
+	MIL_ruins_rebuild_infrastructure_641 = {
+		visible = {
+			641 = {
+				has_state_flag = MIL_ruins_stage_2
+				NOT = { has_state_flag = MIL_ruins_stage_3 }
+			}
+		}
+		available = {
+			BARE_MIL_Ruins_Can_Start_Development = yes
+			num_of_civilian_factories_available_for_projects > 4
+		}
+		cost = 50
+		days_remove = 90
+		modifier = {
+			civilian_factory_use = 5
+		}
+		complete_effect = {
+			hidden_effect = { set_country_flag = MIL_ruins_development_ongoing }
+		}
+		remove_effect = {
+			custom_effect_tooltip = MIL_ruins_rebuild_infrastructure_effect_tt
+			hidden_effect = {
+				clr_country_flag = MIL_ruins_development_ongoing
+				641 = {
+					BARE_MIL_Ruins_Set_Stage_3_effect = yes
+					BARE_MIL_Ruins_Check_Story_Trigger_effect = yes
+				}
+			}
+		}
+	}
+
+	MIL_ruins_initial_development_643 = {
+		visible = {
+			643 = {
+				has_state_flag = MIL_ruins_area
+				NOT = { has_state_flag = MIL_ruins_stage_1 }
+			}
+		}
+		available = {
+			BARE_MIL_Ruins_Can_Start_Development = yes
+			num_of_civilian_factories_available_for_projects > 0
+		}
+		cost = 15
+		days_remove = 30
+		modifier = {
+			civilian_factory_use = 1
+		}
+		complete_effect = {
+			hidden_effect = { set_country_flag = MIL_ruins_development_ongoing }
+		}
+		remove_effect = {
+			custom_effect_tooltip = MIL_ruins_initial_development_effect_tt
+			hidden_effect = {
+				clr_country_flag = MIL_ruins_development_ongoing
+				643 = {
+					BARE_MIL_Ruins_Run_Stage_1_Detection_effect = yes
+				}
+			}
+		}
+	}
+
+	MIL_ruins_clear_debris_643 = {
+		visible = {
+			643 = {
+				has_state_flag = MIL_ruins_stage_1
+				NOT = { has_state_flag = MIL_ruins_stage_2 }
+			}
+		}
+		available = {
+			BARE_MIL_Ruins_Can_Start_Development = yes
+			num_of_civilian_factories_available_for_projects > 2
+		}
+		cost = 50
+		days_remove = 60
+		modifier = {
+			civilian_factory_use = 3
+		}
+		complete_effect = {
+			hidden_effect = { set_country_flag = MIL_ruins_development_ongoing }
+		}
+		remove_effect = {
+			custom_effect_tooltip = MIL_ruins_clear_debris_effect_tt
+			hidden_effect = {
+				clr_country_flag = MIL_ruins_development_ongoing
+				643 = {
+					BARE_MIL_Ruins_Run_Stage_2_Detection_effect = yes
+				}
+				BARE_MIL_Ruins_Check_Great_Game_Restriction_effect = yes
+			}
+		}
+	}
+
+	MIL_ruins_rebuild_infrastructure_643 = {
+		visible = {
+			643 = {
+				has_state_flag = MIL_ruins_stage_2
+				NOT = { has_state_flag = MIL_ruins_stage_3 }
+			}
+		}
+		available = {
+			BARE_MIL_Ruins_Can_Start_Development = yes
+			num_of_civilian_factories_available_for_projects > 4
+		}
+		cost = 50
+		days_remove = 90
+		modifier = {
+			civilian_factory_use = 5
+		}
+		complete_effect = {
+			hidden_effect = { set_country_flag = MIL_ruins_development_ongoing }
+		}
+		remove_effect = {
+			custom_effect_tooltip = MIL_ruins_rebuild_infrastructure_effect_tt
+			hidden_effect = {
+				clr_country_flag = MIL_ruins_development_ongoing
+				643 = {
+					BARE_MIL_Ruins_Set_Stage_3_effect = yes
+					BARE_MIL_Ruins_Check_Story_Trigger_effect = yes
+				}
+			}
+		}
+	}
+
+	MIL_ruins_initial_development_640 = {
+		visible = {
+			640 = {
+				has_state_flag = MIL_ruins_area
+				NOT = { has_state_flag = MIL_ruins_stage_1 }
+			}
+		}
+		available = {
+			BARE_MIL_Ruins_Can_Start_Development = yes
+			num_of_civilian_factories_available_for_projects > 0
+		}
+		cost = 15
+		days_remove = 30
+		modifier = {
+			civilian_factory_use = 1
+		}
+		complete_effect = {
+			hidden_effect = { set_country_flag = MIL_ruins_development_ongoing }
+		}
+		remove_effect = {
+			custom_effect_tooltip = MIL_ruins_initial_development_effect_tt
+			hidden_effect = {
+				clr_country_flag = MIL_ruins_development_ongoing
+				640 = {
+					BARE_MIL_Ruins_Run_Stage_1_Detection_effect = yes
+				}
+			}
+		}
+	}
+
+	MIL_ruins_clear_debris_640 = {
+		visible = {
+			640 = {
+				has_state_flag = MIL_ruins_stage_1
+				NOT = { has_state_flag = MIL_ruins_stage_2 }
+			}
+		}
+		available = {
+			BARE_MIL_Ruins_Can_Start_Development = yes
+			num_of_civilian_factories_available_for_projects > 2
+		}
+		cost = 50
+		days_remove = 60
+		modifier = {
+			civilian_factory_use = 3
+		}
+		complete_effect = {
+			hidden_effect = { set_country_flag = MIL_ruins_development_ongoing }
+		}
+		remove_effect = {
+			custom_effect_tooltip = MIL_ruins_clear_debris_effect_tt
+			hidden_effect = {
+				clr_country_flag = MIL_ruins_development_ongoing
+				640 = {
+					BARE_MIL_Ruins_Run_Stage_2_Detection_effect = yes
+				}
+				BARE_MIL_Ruins_Check_Great_Game_Restriction_effect = yes
+			}
+		}
+	}
+
+	MIL_ruins_rebuild_infrastructure_640 = {
+		visible = {
+			640 = {
+				has_state_flag = MIL_ruins_stage_2
+				NOT = { has_state_flag = MIL_ruins_stage_3 }
+			}
+		}
+		available = {
+			BARE_MIL_Ruins_Can_Start_Development = yes
+			num_of_civilian_factories_available_for_projects > 4
+		}
+		cost = 50
+		days_remove = 90
+		modifier = {
+			civilian_factory_use = 5
+		}
+		complete_effect = {
+			hidden_effect = { set_country_flag = MIL_ruins_development_ongoing }
+		}
+		remove_effect = {
+			custom_effect_tooltip = MIL_ruins_rebuild_infrastructure_effect_tt
+			hidden_effect = {
+				clr_country_flag = MIL_ruins_development_ongoing
+				640 = {
+					BARE_MIL_Ruins_Set_Stage_3_effect = yes
+					BARE_MIL_Ruins_Check_Story_Trigger_effect = yes
+				}
+			}
+		}
+	}
+
+	MIL_ruins_initial_development_639 = {
+		visible = {
+			639 = {
+				has_state_flag = MIL_ruins_area
+				NOT = { has_state_flag = MIL_ruins_stage_1 }
+			}
+		}
+		available = {
+			BARE_MIL_Ruins_Can_Start_Development = yes
+			num_of_civilian_factories_available_for_projects > 0
+		}
+		cost = 15
+		days_remove = 30
+		modifier = {
+			civilian_factory_use = 1
+		}
+		complete_effect = {
+			hidden_effect = { set_country_flag = MIL_ruins_development_ongoing }
+		}
+		remove_effect = {
+			custom_effect_tooltip = MIL_ruins_initial_development_effect_tt
+			hidden_effect = {
+				clr_country_flag = MIL_ruins_development_ongoing
+				639 = {
+					BARE_MIL_Ruins_Run_Stage_1_Detection_effect = yes
+				}
+			}
+		}
+	}
+
+	MIL_ruins_clear_debris_639 = {
+		visible = {
+			639 = {
+				has_state_flag = MIL_ruins_stage_1
+				NOT = { has_state_flag = MIL_ruins_stage_2 }
+			}
+		}
+		available = {
+			BARE_MIL_Ruins_Can_Start_Development = yes
+			num_of_civilian_factories_available_for_projects > 2
+		}
+		cost = 50
+		days_remove = 60
+		modifier = {
+			civilian_factory_use = 3
+		}
+		complete_effect = {
+			hidden_effect = { set_country_flag = MIL_ruins_development_ongoing }
+		}
+		remove_effect = {
+			custom_effect_tooltip = MIL_ruins_clear_debris_effect_tt
+			hidden_effect = {
+				clr_country_flag = MIL_ruins_development_ongoing
+				639 = {
+					BARE_MIL_Ruins_Run_Stage_2_Detection_effect = yes
+				}
+				BARE_MIL_Ruins_Check_Great_Game_Restriction_effect = yes
+			}
+		}
+	}
+
+	MIL_ruins_rebuild_infrastructure_639 = {
+		visible = {
+			639 = {
+				has_state_flag = MIL_ruins_stage_2
+				NOT = { has_state_flag = MIL_ruins_stage_3 }
+			}
+		}
+		available = {
+			BARE_MIL_Ruins_Can_Start_Development = yes
+			num_of_civilian_factories_available_for_projects > 4
+		}
+		cost = 50
+		days_remove = 90
+		modifier = {
+			civilian_factory_use = 5
+		}
+		complete_effect = {
+			hidden_effect = { set_country_flag = MIL_ruins_development_ongoing }
+		}
+		remove_effect = {
+			custom_effect_tooltip = MIL_ruins_rebuild_infrastructure_effect_tt
+			hidden_effect = {
+				clr_country_flag = MIL_ruins_development_ongoing
+				639 = {
+					BARE_MIL_Ruins_Set_Stage_3_effect = yes
+					BARE_MIL_Ruins_Check_Story_Trigger_effect = yes
+				}
+			}
+		}
+	}
+
+# 2026-07-24 修改：废墟特化攻势与三类可累计战后奖励并入废墟开发决议组，并限制同一轮袭击的两类攻势各执行一次。
+# 入口：完成“必须出重拳”后显示；作战决议要求当前敌人活动，战后奖励按待领取次数显示。
+# 关键变量：MIL_ruins_combat_operation_ongoing防止并行作战行动；三类reward_pending变量保存未领取次数。
+# 预期结果：形成敌情分析、针对性压制、战胜敌人和解析战利品的完整闭环。
+	MIL_ruins_analyze_enemy_intelligence = {
+		visible = {
+			has_country_flag = MIL_ruins_enemy_active
+			NOT = { has_country_flag = MIL_ruins_enemy_intelligence_analyzed }
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = MIL_ruins_intelligence_operation_not_used_tt
+				NOT = { has_country_flag = MIL_ruins_intelligence_operation_used }
+			}
+			NOT = { has_country_flag = MIL_ruins_combat_operation_ongoing }
+		}
+		cost = 30
+		days_remove = 30
+		complete_effect = {
+			set_country_flag = MIL_ruins_intelligence_operation_used
+			set_country_flag = MIL_ruins_combat_operation_ongoing
+		}
+		cancel_trigger = { NOT = { has_country_flag = MIL_ruins_enemy_active } }
+		cancel_effect = { clr_country_flag = MIL_ruins_combat_operation_ongoing }
+		remove_effect = {
+			clr_country_flag = MIL_ruins_combat_operation_ongoing
+			custom_effect_tooltip = MIL_ruins_analyze_enemy_intelligence_tt
+			hidden_effect = {
+				if = {
+					limit = { has_country_flag = MIL_ruins_enemy_active }
+					BARE_MIL_Ruins_Analyze_Active_Enemy_effect = yes
+				}
+			}
+		}
+	}
+
+	MIL_ruins_deploy_emp_bombs = {
+		visible = {
+			has_country_flag = MIL_ruins_enemy_active
+			has_country_flag = MIL_ruins_active_enemy_A57
+			has_country_flag = MIL_ruins_enemy_intelligence_analyzed
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = MIL_ruins_special_offensive_not_used_tt
+				NOT = { has_country_flag = MIL_ruins_special_offensive_used }
+			}
+			NOT = { has_country_flag = MIL_ruins_combat_operation_ongoing }
+			num_of_civilian_factories_available_for_projects > 2
+		}
+		days_remove = 45
+		modifier = { civilian_factory_use = 3 }
+		complete_effect = {
+			set_country_flag = MIL_ruins_special_offensive_used
+			set_country_flag = MIL_ruins_combat_operation_ongoing
+		}
+		cancel_trigger = { NOT = { has_country_flag = MIL_ruins_enemy_active } }
+		cancel_effect = { clr_country_flag = MIL_ruins_combat_operation_ongoing }
+		remove_effect = {
+			clr_country_flag = MIL_ruins_combat_operation_ongoing
+			custom_effect_tooltip = MIL_ruins_deploy_emp_bombs_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = MIL_ruins_enemy_active
+						has_country_flag = MIL_ruins_active_enemy_A57
+					}
+					BARE_MIL_Ruins_Clear_Active_Intelligence_effect = yes
+					add_ideas = MIL_ruins_emp_strike
+				}
+			}
+		}
+	}
+
+	MIL_ruins_deploy_heavy_forces = {
+		visible = {
+			has_country_flag = MIL_ruins_enemy_active
+			has_country_flag = MIL_ruins_active_enemy_A56
+			has_country_flag = MIL_ruins_enemy_intelligence_analyzed
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = MIL_ruins_special_offensive_not_used_tt
+				NOT = { has_country_flag = MIL_ruins_special_offensive_used }
+			}
+			NOT = { has_country_flag = MIL_ruins_combat_operation_ongoing }
+		}
+		cost = 50
+		days_remove = 15
+		complete_effect = {
+			set_country_flag = MIL_ruins_special_offensive_used
+			set_country_flag = MIL_ruins_combat_operation_ongoing
+		}
+		cancel_trigger = { NOT = { has_country_flag = MIL_ruins_enemy_active } }
+		cancel_effect = { clr_country_flag = MIL_ruins_combat_operation_ongoing }
+		remove_effect = {
+			clr_country_flag = MIL_ruins_combat_operation_ongoing
+			custom_effect_tooltip = MIL_ruins_deploy_heavy_forces_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = MIL_ruins_enemy_active
+						has_country_flag = MIL_ruins_active_enemy_A56
+					}
+					BARE_MIL_Ruins_Clear_Active_Intelligence_effect = yes
+					add_ideas = MIL_ruins_heavy_assault
+				}
+			}
+		}
+	}
+
+	MIL_ruins_small_scale_mobilization = {
+		visible = {
+			has_country_flag = MIL_ruins_enemy_active
+			has_country_flag = MIL_ruins_active_enemy_A58
+			has_country_flag = MIL_ruins_enemy_intelligence_analyzed
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = MIL_ruins_special_offensive_not_used_tt
+				NOT = { has_country_flag = MIL_ruins_special_offensive_used }
+			}
+			NOT = { has_country_flag = MIL_ruins_combat_operation_ongoing }
+			num_of_civilian_factories_available_for_projects > 14
+		}
+		days_remove = 60
+		modifier = { civilian_factory_use = 15 }
+		complete_effect = {
+			set_country_flag = MIL_ruins_special_offensive_used
+			set_country_flag = MIL_ruins_combat_operation_ongoing
+		}
+		cancel_trigger = { NOT = { has_country_flag = MIL_ruins_enemy_active } }
+		cancel_effect = { clr_country_flag = MIL_ruins_combat_operation_ongoing }
+		remove_effect = {
+			clr_country_flag = MIL_ruins_combat_operation_ongoing
+			custom_effect_tooltip = MIL_ruins_small_scale_mobilization_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = MIL_ruins_enemy_active
+						has_country_flag = MIL_ruins_active_enemy_A58
+					}
+					BARE_MIL_Ruins_Clear_Active_Intelligence_effect = yes
+					add_ideas = MIL_ruins_cross_divine_suppression
+				}
+			}
+		}
+	}
+
+	MIL_ruins_analyze_damaged_machinery = {
+		visible = { check_variable = { MIL_ruins_A57_reward_pending > 0 } }
+		available = {
+			NOT = { has_country_flag = MIL_ruins_reward_operation_ongoing }
+			num_of_civilian_factories_available_for_projects > 4
+		}
+		days_remove = 45
+		modifier = { civilian_factory_use = 5 }
+		complete_effect = { set_country_flag = MIL_ruins_reward_operation_ongoing }
+		remove_effect = {
+			clr_country_flag = MIL_ruins_reward_operation_ongoing
+			custom_effect_tooltip = MIL_ruins_analyze_damaged_machinery_tt
+			hidden_effect = {
+				subtract_from_variable = { MIL_ruins_A57_reward_pending = 1 }
+				BARE_MIL_Ruins_Grant_Machine_Reward_effect = yes
+			}
+		}
+	}
+
+	MIL_ruins_interrogate_helmet_members = {
+		visible = { check_variable = { MIL_ruins_A56_reward_pending > 0 } }
+		available = { NOT = { has_country_flag = MIL_ruins_reward_operation_ongoing } }
+		cost = 30
+		days_remove = 15
+		complete_effect = { set_country_flag = MIL_ruins_reward_operation_ongoing }
+		remove_effect = {
+			clr_country_flag = MIL_ruins_reward_operation_ongoing
+			custom_effect_tooltip = MIL_ruins_interrogate_helmet_members_tt
+			hidden_effect = {
+				subtract_from_variable = { MIL_ruins_A56_reward_pending = 1 }
+				BARE_MIL_Ruins_Grant_Helmet_Reward_effect = yes
+			}
+		}
+	}
+
+	MIL_ruins_analyze_cross_divine_clues = {
+		visible = { check_variable = { MIL_ruins_A58_reward_pending > 0 } }
+		available = {
+			NOT = { has_country_flag = MIL_ruins_reward_operation_ongoing }
+			num_of_civilian_factories_available_for_projects > 14
+		}
+		days_remove = 90
+		modifier = { civilian_factory_use = 15 }
+		complete_effect = { set_country_flag = MIL_ruins_reward_operation_ongoing }
+		remove_effect = {
+			clr_country_flag = MIL_ruins_reward_operation_ongoing
+			custom_effect_tooltip = MIL_ruins_analyze_cross_divine_clues_tt
+			hidden_effect = {
+				subtract_from_variable = { MIL_ruins_A58_reward_pending = 1 }
+				BARE_MIL_Ruins_Grant_Cross_Divine_Reward_effect = yes
+			}
+		}
+	}
+}
+
+# 2026-07-16 修改：新增废墟袭击流程测试决议，供调试模式直接触发四个地块和三类固定敌人。
+MIL_ruins_attack_test_decision_category = {
+	# 2026-07-18 修改：补齐废墟第一阶段各子系统的直接测试入口。
+	MIL_ruins_test_unlock_full_system = {
+		complete_effect = {
+			set_country_flag = MIL_ruins_development_decisions_unlocked
+			set_country_flag = MIL_ruins_special_offensive_decisions_unlocked
+			BARE_MIL_Ruins_Initialize_effect = yes
+		}
+	}
+
+	MIL_ruins_test_surprise_warehouse = { complete_effect = { 641 = { state_event = { id = MIL_ruins_surprise.1 trigger_for = MIL } } } }
+	MIL_ruins_test_surprise_production = { complete_effect = { 641 = { state_event = { id = MIL_ruins_surprise.2 trigger_for = MIL } } } }
+	MIL_ruins_test_surprise_relic = { complete_effect = { 641 = { state_event = { id = MIL_ruins_surprise.3 trigger_for = MIL } } } }
+	MIL_ruins_test_surprise_research = { complete_effect = { 641 = { state_event = { id = MIL_ruins_surprise.4 trigger_for = MIL } } } }
+
+	MIL_ruins_test_story_chain = {
+		complete_effect = {
+			set_country_flag = MIL_ruins_story_started
+			country_event = { id = MIL_ruins_story.1 }
+		}
+	}
+
+	MIL_ruins_test_analyze_current_enemy = {
+		available = { has_country_flag = MIL_ruins_enemy_active }
+		complete_effect = { BARE_MIL_Ruins_Analyze_Active_Enemy_effect = yes }
+	}
+
+	MIL_ruins_test_apply_current_offensive = {
+		available = {
+			has_country_flag = MIL_ruins_enemy_active
+			has_country_flag = MIL_ruins_enemy_intelligence_analyzed
+		}
+		complete_effect = {
+			BARE_MIL_Ruins_Clear_Active_Intelligence_effect = yes
+			if = { limit = { has_country_flag = MIL_ruins_active_enemy_A56 } add_ideas = MIL_ruins_heavy_assault }
+			else_if = { limit = { has_country_flag = MIL_ruins_active_enemy_A57 } add_ideas = MIL_ruins_emp_strike }
+			else_if = { limit = { has_country_flag = MIL_ruins_active_enemy_A58 } add_ideas = MIL_ruins_cross_divine_suppression }
+		}
+	}
+
+	MIL_ruins_test_resolve_enemy_attack = {
+		available = { has_country_flag = MIL_ruins_enemy_active }
+		complete_effect = { BARE_MIL_Ruins_Resolve_Enemy_Attack_effect = yes }
+	}
+
+	MIL_ruins_test_add_machine_reward = {
+		complete_effect = {
+			set_country_flag = MIL_ruins_special_offensive_decisions_unlocked
+			add_to_variable = { MIL_ruins_A57_reward_pending = 1 }
+		}
+	}
+	MIL_ruins_test_add_helmet_reward = {
+		complete_effect = {
+			set_country_flag = MIL_ruins_special_offensive_decisions_unlocked
+			add_to_variable = { MIL_ruins_A56_reward_pending = 1 }
+		}
+	}
+	MIL_ruins_test_add_cross_reward = {
+		complete_effect = {
+			set_country_flag = MIL_ruins_special_offensive_decisions_unlocked
+			add_to_variable = { MIL_ruins_A58_reward_pending = 1 }
+		}
+	}
+
+	MIL_ruins_test_random_attack_643 = {
+		available = { NOT = { has_country_flag = MIL_ruins_enemy_active } }
+		complete_effect = {
+			custom_effect_tooltip = MIL_ruins_test_random_attack_643_tt
+			hidden_effect = { country_event = { id = MIL_ruins_attack.643 } }
+		}
+	}
+
+	MIL_ruins_test_random_attack_641 = {
+		available = { NOT = { has_country_flag = MIL_ruins_enemy_active } }
+		complete_effect = {
+			custom_effect_tooltip = MIL_ruins_test_random_attack_641_tt
+			hidden_effect = { country_event = { id = MIL_ruins_attack.641 } }
+		}
+	}
+
+	MIL_ruins_test_random_attack_640 = {
+		available = { NOT = { has_country_flag = MIL_ruins_enemy_active } }
+		complete_effect = {
+			custom_effect_tooltip = MIL_ruins_test_random_attack_640_tt
+			hidden_effect = { country_event = { id = MIL_ruins_attack.640 } }
+		}
+	}
+
+	MIL_ruins_test_random_attack_639 = {
+		available = { NOT = { has_country_flag = MIL_ruins_enemy_active } }
+		complete_effect = {
+			custom_effect_tooltip = MIL_ruins_test_random_attack_639_tt
+			hidden_effect = { country_event = { id = MIL_ruins_attack.639 } }
+		}
+	}
+
+	MIL_ruins_test_helmet_attack_643 = {
+		available = { NOT = { has_country_flag = MIL_ruins_enemy_active } }
+		complete_effect = {
+			custom_effect_tooltip = MIL_ruins_test_helmet_attack_643_tt
+			hidden_effect = {
+				BARE_MIL_Ruins_Set_Attack_Target_643_effect = yes
+				BARE_MIL_Ruins_Start_Helmet_Attack_effect = yes
+			}
+		}
+	}
+
+	MIL_ruins_test_machine_attack_643 = {
+		available = { NOT = { has_country_flag = MIL_ruins_enemy_active } }
+		complete_effect = {
+			custom_effect_tooltip = MIL_ruins_test_machine_attack_643_tt
+			hidden_effect = {
+				BARE_MIL_Ruins_Set_Attack_Target_643_effect = yes
+				BARE_MIL_Ruins_Start_Machine_Attack_effect = yes
+			}
+		}
+	}
+
+	MIL_ruins_test_cross_divine_attack_643 = {
+		available = { NOT = { has_country_flag = MIL_ruins_enemy_active } }
+		complete_effect = {
+			custom_effect_tooltip = MIL_ruins_test_cross_divine_attack_643_tt
+			hidden_effect = {
+				BARE_MIL_Ruins_Set_Attack_Target_643_effect = yes
+				BARE_MIL_Ruins_Start_Cross_Divine_Attack_effect = yes
+			}
+		}
+	}
+
+	MIL_ruins_test_reset_attack = {
+		available = { has_country_flag = MIL_ruins_enemy_active }
+		complete_effect = {
+			custom_effect_tooltip = MIL_ruins_test_reset_attack_tt
+			hidden_effect = { BARE_MIL_Ruins_Debug_Reset_Enemy_Attack_effect = yes }
+		}
+	}
+
+	MIL_ruins_test_capitulation_fallback = {
+		available = { has_country_flag = MIL_ruins_enemy_active }
+		complete_effect = {
+			custom_effect_tooltip = MIL_ruins_test_capitulation_fallback_tt
+			hidden_effect = {
+				# 2026-07-16 修改：复用正式投降监听的两个效果，直接验证吞并与核心州建筑损坏结果。
+				BARE_MIL_Ruins_Resolve_Enemy_Attack_effect = yes
+				BARE_MIL_Ruins_Damage_All_Core_State_Buildings_effect = yes
+			}
+		}
+	}
+}

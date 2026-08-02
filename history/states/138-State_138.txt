@@ -15,6 +15,7 @@ state={
 			arms_factory = 3
 			opatz_synthesis_center = 2
 			anti_air_building = 4
+			air_base = 10
 		}
 		owner = ARI
 		add_core_of=ARI

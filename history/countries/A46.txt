@@ -101,4 +101,23 @@ set_popularities = {
 	no_ideology = 100
 }
 
-
+# 2026-07-20 修改：依据开局部队与现有军工配置装备生产线。
+# 2026-07-20 调整：按有效装备线均分军工，避免步枪产能过度集中。
+add_equipment_production = {
+	equipment = { type = infantry_equipment_0 }
+	requested_factories = 2
+	progress = 0
+	efficiency = 100
+}
+add_equipment_production = {
+	equipment = { type = light_tank_equipment_1 }
+	requested_factories = 2
+	progress = 0
+	efficiency = 100
+}
+add_equipment_production = {
+	equipment = { type = medium_uav_equipment_1 }
+	requested_factories = 2
+	progress = 0
+	efficiency = 100
+}

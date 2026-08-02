@@ -2,7 +2,8 @@ scripted_gui = {
 	TRI_regions_open_button = {
 		window_name = "TRI_regions_open_button"
 		context_type = selected_state_context
-		parent_window_token = selected_state_view
+		# 2026-07-10: 50建筑槽省份界面改高后，selected_state_view 旧锚点会把入口按钮甩到地图上；改挂 state_info_window 使用面板内坐标。
+		parent_window_name = state_info_window
 		visible = {
 			controller = { 
 				original_tag = TRI 

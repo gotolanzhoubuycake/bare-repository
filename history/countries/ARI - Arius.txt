@@ -1,5 +1,7 @@
 capital = 136
 oob = "ARI_2019"
+# 2026-07-20: 阿里乌斯仅使用凯撒交付的有限无人机，OOB不授予本国生产科技。
+set_air_oob = "ARI_2019_air"
 
 set_stability = 0.50
 set_war_support = 0.50
@@ -220,4 +222,54 @@ resize_array = {
 resize_array = {
 	array = BARE_ARI_Resource_Cost_Array
 	size = 6
+}
+# 2026-07-20 修改：依据开局部队与现有军工配置装备生产线。
+# 2026-07-20 调整：按有效装备线均分军工，避免步枪产能过度集中。
+add_equipment_production = {
+	equipment = { type = infantry_equipment_0 }
+	requested_factories = 2
+	progress = 0
+	efficiency = 100
+}
+add_equipment_production = {
+	equipment = { type = support_equipment_1 }
+	requested_factories = 2
+	progress = 0
+	efficiency = 100
+}
+add_equipment_production = {
+	equipment = { type = light_fire_support_equipment_0 }
+	requested_factories = 2
+	progress = 0
+	efficiency = 100
+}
+add_equipment_production = {
+	equipment = { type = heavy_fire_support_equipment_0 }
+	requested_factories = 2
+	progress = 0
+	efficiency = 100
+}
+add_equipment_production = {
+	equipment = { type = ifv_equipment_1 }
+	requested_factories = 2
+	progress = 0
+	efficiency = 100
+}
+add_equipment_production = {
+	equipment = { type = medium_tank_equipment_1 }
+	requested_factories = 1
+	progress = 0
+	efficiency = 100
+}
+add_equipment_production = {
+	equipment = { type = ifv_artillery_equipment_1 }
+	requested_factories = 1
+	progress = 0
+	efficiency = 100
+}
+add_equipment_production = {
+	equipment = { type = ifv_at_equipment_1 }
+	requested_factories = 1
+	progress = 0
+	efficiency = 100
 }

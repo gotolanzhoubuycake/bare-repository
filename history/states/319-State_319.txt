@@ -15,6 +15,7 @@ state={
 			industrial_complex = 4
 			arms_factory = 3
 			anti_air_building = 3
+			air_base = 10
 		}
 		owner = SHA
 		add_core_of=SHA

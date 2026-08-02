@@ -1,0 +1,54 @@
+# 2026-07-13 修改：新增千年旧校区废墟开发的通用触发器，供国策与决议复用。
+
+BARE_MIL_Ruins_Can_Start_Development = {
+	custom_override_tooltip = {
+		tooltip = MIL_ruins_development_only_one_tt
+		NOT = { has_country_flag = MIL_ruins_development_ongoing }
+	}
+	custom_override_tooltip = {
+		tooltip = MIL_ruins_development_enemy_active_tt
+		NOT = { has_country_flag = MIL_ruins_enemy_active }
+	}
+}
+
+BARE_MIL_Ruins_Has_Enemy_Conflict = {
+	# 2026-07-18 修改：已经遭遇过废墟袭击后仍允许推进应对国策，避免敌人过快投降导致国策线永久锁死。
+	custom_override_tooltip = {
+		tooltip = MIL_ruins_enemy_conflict_tt
+		OR = {
+			has_country_flag = MIL_ruins_enemy_active
+			has_country_flag = MIL_ruins_attack_has_occurred
+			has_war_with = A56
+			has_war_with = A57
+			has_war_with = A58
+		}
+	}
+}
+
+BARE_MIL_Ruins_All_Stage_2_Done = {
+	# 2026-07-14 修改：按当前原版写法使用 custom_override_tooltip 覆盖内部地块计数条件。
+	custom_override_tooltip = {
+		tooltip = MIL_ruins_all_stage_2_done_tt
+		count_triggers = {
+			amount = 4
+			641 = { has_state_flag = MIL_ruins_stage_2 }
+			643 = { has_state_flag = MIL_ruins_stage_2 }
+			640 = { has_state_flag = MIL_ruins_stage_2 }
+			639 = { has_state_flag = MIL_ruins_stage_2 }
+		}
+	}
+}
+
+BARE_MIL_Ruins_Has_Two_Rebuilt_States = {
+	# 2026-07-14 修改：按当前原版写法使用 custom_override_tooltip 覆盖内部地块计数条件。
+	custom_override_tooltip = {
+		tooltip = MIL_ruins_two_rebuilt_states_tt
+		count_triggers = {
+			amount = 2
+			641 = { has_state_flag = MIL_ruins_stage_3 }
+			643 = { has_state_flag = MIL_ruins_stage_3 }
+			640 = { has_state_flag = MIL_ruins_stage_3 }
+			639 = { has_state_flag = MIL_ruins_stage_3 }
+		}
+	}
+}

@@ -1,0 +1,89 @@
+# 2026-07-10 修改：新增千年旧校区废墟开发的地区动态修正底座。
+# 用途：四个旧校区废墟地块的初始负面、阶段缓解、情报缺失和后续重建结果。
+
+MIL_ruins_city_modifier = {
+	icon = "GFX_idea_MIL_ruins_city"
+	enable = { always = yes }
+
+	state_production_speed_buildings_factor = -0.90
+	local_factories = -0.90
+	# 2026-07-20 修复：地区动态修正统一使用MOD现有地区系统采用的 state_resources_factor。
+	state_resources_factor = -0.90
+	local_building_slots_factor = -0.90
+	local_manpower = -1.00
+}
+
+MIL_ruins_city_initial_development_modifier = {
+	icon = "GFX_idea_MIL_ruins_city"
+	enable = { always = yes }
+
+	state_production_speed_buildings_factor = -0.80
+	local_factories = -0.80
+	state_resources_factor = -0.80
+	local_building_slots_factor = -0.80
+	local_manpower = -0.80
+}
+
+MIL_ruins_city_cleared_modifier = {
+	icon = "GFX_idea_MIL_ruins_city"
+	enable = { always = yes }
+
+	state_production_speed_buildings_factor = -0.40
+	local_factories = -0.40
+	state_resources_factor = -0.40
+	local_building_slots_factor = -0.40
+	local_manpower = -0.40
+}
+
+MIL_ruins_excellent_construction_area_modifier = {
+	icon = "GFX_idea_MIL_ruins_city"
+	enable = { always = yes }
+
+	state_production_speed_buildings_factor = 0.15
+	local_building_slots_factor = 0.10
+}
+
+MIL_ruins_lack_of_intelligence_modifier = {
+	icon = "GFX_idea_MIL_ruins_intelligence"
+	enable = { always = yes }
+	# 2026-07-20 修复：参考原版 unplanned_offensive，作为地区攻击方战斗修正生效。
+	attacker_modifier = yes
+
+	army_attack_factor = -0.90
+	army_speed_factor = -0.90
+}
+
+MIL_ruins_lack_of_intelligence_analyzed_modifier = {
+	icon = "GFX_idea_MIL_ruins_intelligence"
+	enable = { always = yes }
+	attacker_modifier = yes
+
+	army_attack_factor = -0.40
+	army_speed_factor = -0.40
+}
+
+MIL_ruins_preserved_city_modifier = {
+	icon = "GFX_idea_MIL_ruins_city"
+	enable = { always = yes }
+
+	state_production_speed_buildings_factor = 0.25
+	local_building_slots_factor = 0.20
+	local_factories = 0.15
+}
+
+MIL_ruins_destroyed_city_modifier = {
+	icon = "GFX_idea_MIL_ruins_city"
+	enable = { always = yes }
+
+	state_production_speed_buildings_factor = -0.50
+	local_building_slots_factor = -0.50
+	local_factories = -0.25
+}
+
+MIL_ruins_new_equipment_modifier = {
+	icon = "GFX_idea_MIL_ruins_industry"
+	enable = { always = yes }
+
+	state_production_speed_buildings_factor = 0.25
+	local_building_slots_factor = 0.25
+}

@@ -1,6 +1,6 @@
 capital = 107
 oob = "A05_2019"
-set_air_oob = "A05_2019_air_legacy"
+# 2026-07-20: 郊区势力开局不保有空军。
 
 set_stability = 0.50
 set_war_support = 0.50
@@ -106,4 +106,17 @@ set_politics = {
 set_popularities = {
 	no_ideology = 100
 }
-
+# 2026-07-20 修改：依据开局部队与现有军工配置装备生产线。
+# 2026-07-20 调整：按有效装备线均分军工，避免步枪产能过度集中。
+add_equipment_production = {
+	equipment = { type = infantry_equipment_0 }
+	requested_factories = 5
+	progress = 0
+	efficiency = 100
+}
+add_equipment_production = {
+	equipment = { type = light_fire_support_equipment_0 }
+	requested_factories = 5
+	progress = 0
+	efficiency = 100
+}

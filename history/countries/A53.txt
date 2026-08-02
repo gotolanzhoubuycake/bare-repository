@@ -1,5 +1,5 @@
 capital = 580
-oob = "A35_2019"
+# oob = "A35_2019"
 
 set_stability = 0.50
 set_war_support = 0.50

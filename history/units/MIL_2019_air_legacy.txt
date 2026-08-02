@@ -1,21 +1,49 @@
-air_wings = {   
-
+# 2026-07-20: 千年开局空军，保留高质量中型与重型主力，并追加小型无人机数量层。
+# 入口：MIL国家历史的 MIL_2019_air_legacy；所有联队仅使用MIL已解锁的具体装备科技。
+air_wings = {
+    337 = {
+        medium_uav_equipment_1 = { owner = "MIL" amount = 100 }
+        medium_uav_equipment_1 = { owner = "MIL" amount = 100 }
+        medium_uav_cas_equipment_1 = { owner = "MIL" amount = 100 }
+        small_uav_equipment_1 = { owner = "MIL" amount = 100 }
+        # 2026-07-20: 追加低成本小型制空与对地无人机，作为主力机队的数量补充。
+        small_uav_equipment_1 = { owner = "MIL" amount = 100 }
+        small_uav_cas_equipment_1 = { owner = "MIL" amount = 100 }
+        heavy_uav_equipment_1 = { owner = "MIL" amount = 25 }
+        heavy_uav_equipment_1 = { owner = "MIL" amount = 25 }
+        heavy_uav_cas_equipment_1 = { owner = "MIL" amount = 25 }
+        heavy_uav_cas_equipment_1 = { owner = "MIL" amount = 25 }
+        small_uav_recon_equipment_1 = { owner = "MIL" amount = 100 }
+        transport_plane_equipment_1 = { owner = "MIL" amount = 25 }
+        transport_plane_equipment_1 = { owner = "MIL" amount = 25 }
+        transport_plane_equipment_1 = { owner = "MIL" amount = 25 }
+        transport_plane_equipment_1 = { owner = "MIL" amount = 25 }
+    }
     336 = {
-        medium_uav_equipment_2 = {
-            owner = "MIL" 
-            amount = 100
-            
-        }
-        medium_uav_equipment_2 = {
-            owner = "MIL" 
-            amount = 100
-            
-        }
-       medium_uav_equipment_2= {
-            owner = "MIL" 
-            amount = 100
-            
-        }
-
+        medium_uav_equipment_1 = { owner = "MIL" amount = 100 }
+        medium_uav_cas_equipment_1 = { owner = "MIL" amount = 100 }
+        small_uav_cas_equipment_1 = { owner = "MIL" amount = 100 }
+    }
+    338 = {
+        medium_uav_equipment_1 = { owner = "MIL" amount = 100 }
+        medium_uav_cas_equipment_1 = { owner = "MIL" amount = 100 }
+    }
+    341 = {
+        medium_uav_equipment_1 = { owner = "MIL" amount = 100 }
+        medium_uav_cas_equipment_1 = { owner = "MIL" amount = 100 }
+    }
+    342 = {
+        medium_uav_equipment_1 = { owner = "MIL" amount = 100 }
+        heavy_uav_equipment_1 = { owner = "MIL" amount = 25 }
+        heavy_uav_equipment_1 = { owner = "MIL" amount = 25 }
+        heavy_uav_cas_equipment_1 = { owner = "MIL" amount = 25 }
+        heavy_uav_cas_equipment_1 = { owner = "MIL" amount = 25 }
+    }
+    339 = {
+        medium_uav_equipment_1 = { owner = "MIL" amount = 100 }
+        transport_plane_equipment_1 = { owner = "MIL" amount = 25 }
+        transport_plane_equipment_1 = { owner = "MIL" amount = 25 }
+        transport_plane_equipment_1 = { owner = "MIL" amount = 25 }
+        transport_plane_equipment_1 = { owner = "MIL" amount = 25 }
     }
 }

@@ -1052,6 +1052,19 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = 100
+			# 2026-07-14 修改：启动旧校区废墟开发线，并用原版覆盖式提示准确说明临时演习限制及解除条件。
+			set_country_flag = MIL_ruins_development_started
+			if = {
+				limit = {
+					NOT = { has_country_flag = MIL_ruins_great_game_restricted }
+					NOT = { is_in_array = { global.Great_Game_cannot_invade = THIS } }
+				}
+				set_country_flag = MIL_ruins_great_game_restricted
+				custom_override_tooltip = {
+					tooltip = MIL_ruins_great_game_restriction_tt
+					Great_Game_total_cease_fire = yes
+				}
+			}
 		}
 	}
 	focus = { #废墟清理方案
@@ -1059,11 +1072,16 @@ focus_tree = {
 		icon = GFX_goal_MIL_Ruin_clearance_plan
 		relative_position_id = MIL_we_need_money
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 3
 		x = 15
 		y = 3
 		prerequisite = {
 			focus = MIL_old_school_redevelopment
+		}
+		completion_reward = {
+			# 2026-07-14 修改：废墟清理方案改为解锁旧校区废墟开发三阶段决议。
+			set_country_flag = MIL_ruins_development_decisions_unlocked
+			unlock_decision_category_tooltip = MIL_ruins_development_decision_category
 		}
 	}
 	focus = { #让我们大干一场吧
@@ -1071,11 +1089,22 @@ focus_tree = {
 		icon = GFX_goal_MIL_Let_go_all_out
 		relative_position_id = MIL_we_need_money
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 3
 		x = 14
 		y = 4
 		prerequisite = {
 			focus = MIL_Ruin_clearance_plan
+		}
+		completion_reward = {
+			# 2026-07-14 修改：提供废墟开发启动期政治点数，并用覆盖式提示展示隐藏的民用工厂捐赠及持续时间。
+			add_political_power = 50
+			custom_override_tooltip = {
+				tooltip = MIL_ruins_civilian_factory_donation_tt
+				add_timed_idea = {
+					idea = MIL_ruins_civilian_factory_donation_hidden
+					days = 365
+				}
+			}
 		}
 	}
 	focus = { #意外惊喜
@@ -1090,13 +1119,17 @@ focus_tree = {
 			focus = MIL_Let_go_all_out
 		}
 		completion_reward = {
-			add_breakthrough_points = {
-				specialization = specialization_land
-				value = 1
-			}
-			add_breakthrough_points = {
-				specialization = specialization_air
-				value = 1
+			# 2026-07-17 修改：保留原定两类科研突破奖励，并用覆盖式提示明确显示各1点。
+			custom_override_tooltip = {
+				tooltip = MIL_Unexpected_surprise_effect_tt
+				add_breakthrough_points = {
+					specialization = specialization_land
+					value = 1
+				}
+				add_breakthrough_points = {
+					specialization = specialization_air
+					value = 1
+				}
 			}
 		}
 	}
@@ -1105,11 +1138,25 @@ focus_tree = {
 		icon = GFX_goal_MIL_it_not_normal
 		relative_position_id = MIL_we_need_money
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 3
 		x = 16
 		y = 4
 		prerequisite = {
 			focus = MIL_Ruin_clearance_plan
+		}
+		available = {
+			BARE_MIL_Ruins_Has_Enemy_Conflict = yes
+		}
+		completion_reward = {
+			# 2026-07-14 修改：与废墟敌人交战后给予安保收益，并用覆盖式提示展示自动机步兵的部署地点和完整编制。
+			add_timed_idea = {
+				idea = MIL_ruins_security_alert
+				days = 360
+			}
+			custom_override_tooltip = {
+				tooltip = MIL_ruins_pin_holder_automech_reinforcement_tt
+				BARE_MIL_Ruins_Spawn_Pin_Holder_Automech_effect = yes
+			}
 		}
 	}
 	focus = { #必须出重拳
@@ -1117,11 +1164,23 @@ focus_tree = {
 		icon = GFX_goal_MIL_we_need_Strong_fight
 		relative_position_id = MIL_we_need_money
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 3
 		x = 16
 		y = 5
 		prerequisite = {
 			focus = MIL_it_not_normal
+		}
+		available = {
+			BARE_MIL_Ruins_Has_Enemy_Conflict = yes
+		}
+		completion_reward = {
+			# 2026-07-24 修改：在既有废墟开发决议组内解锁特化攻势，并保留机甲部队的完整编制提示。
+			set_country_flag = MIL_ruins_special_offensive_decisions_unlocked
+			unlock_decision_category_tooltip = MIL_ruins_development_decision_category
+			custom_override_tooltip = {
+				tooltip = MIL_ruins_heavy_assault_mech_reinforcement_tt
+				BARE_MIL_Ruins_Spawn_Heavy_Assault_Mech_effect = yes
+			}
 		}
 	}
 	focus = { #废墟开发初见成效
@@ -1129,7 +1188,7 @@ focus_tree = {
 		icon = GFX_goal_MIL_we_have_achieved_initial_success
 		relative_position_id = MIL_we_need_money
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		cost = 3
 		x = 15
 		y = 7
 		prerequisite = {
@@ -1138,13 +1197,28 @@ focus_tree = {
 		prerequisite = {
 			focus = MIL_Unexpected_surprise
 		}
+		available = {
+			BARE_MIL_Ruins_Has_Two_Rebuilt_States = yes
+		}
+		completion_reward = {
+			# 2026-07-14 修改：完成两块废墟重建后给予建设收益，并用覆盖式提示准确展示地块资源奖励。
+			add_timed_idea = {
+				idea = MIL_ruins_development_benefits
+				days = 360
+			}
+			custom_override_tooltip = {
+				tooltip = MIL_ruins_initial_success_resources_tt
+				BARE_MIL_Ruins_Reward_Two_Rebuilt_States_effect = yes
+			}
+		}
 	}
 	focus = { #千年发展的新蓝图
 		id = MIL_new_development_plan
 		icon = GFX_goal_MIL_new_development_plan
 		relative_position_id = MIL_we_need_money
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		# 2026-07-14 修改：按工业线文档修正国策时长为 42 天。
+		cost = 6
 		x = 5
 		y = 8
 		prerequisite = {
@@ -1167,8 +1241,32 @@ focus_tree = {
 		}
 		completion_reward = {
 			# 2026-05-20: 完成“千年发展的新蓝图”后，延迟 4 个月触发晄轮大祭筹备事件
+			# 2026-07-01 修改：补齐工业线文档中千年大赏追加收益，并在已有千年大赏任务激活时立即推进结算。
+			add_ideas = MIL_new_blueprint_award_bonus
+			custom_effect_tooltip = MIL_new_development_plan_award_mission_tooltip
 			custom_effect_tooltip = MIL_new_development_plan_sport_event_tooltip
 			hidden_effect = {
+				if = {
+					limit = { has_active_mission = MIL_award_imaginary_number_network_new_invention }
+					add_days_mission_timeout = {
+						mission = MIL_award_imaginary_number_network_new_invention
+						days = -999
+					}
+				}
+				if = {
+					limit = { has_active_mission = MIL_award_engineer_department_new_invention }
+					add_days_mission_timeout = {
+						mission = MIL_award_engineer_department_new_invention
+						days = -999
+					}
+				}
+				if = {
+					limit = { has_active_mission = MIL_award_game_department_new_invention }
+					add_days_mission_timeout = {
+						mission = MIL_award_game_department_new_invention
+						days = -999
+					}
+				}
 				country_event = { id = MIL_sport_event.1 days = 120 }
 			}
 		}
@@ -1178,11 +1276,24 @@ focus_tree = {
 		icon = GFX_goal_MIL_new_progress_possible
 		relative_position_id = MIL_we_need_money
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		# 2026-07-14 修改：按工业线文档修正国策时长为 35 天。
+		cost = 5
 		x = 2
 		y = 9
 		prerequisite = {
 			focus = MIL_new_development_plan
+		}
+		completion_reward = {
+			# 2026-07-01 修改：按工业线文档实现“研讨会的新预算”的确定奖励；事件文本待后续补充时再接入。
+			add_political_power = 50
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = { #推广机动建设技术
@@ -1190,11 +1301,16 @@ focus_tree = {
 		icon = GFX_goal_MIL_Promote_mobile_construction_technology
 		relative_position_id = MIL_we_need_money
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		# 2026-07-14 修改：按工业线文档修正国策时长为 35 天。
+		cost = 5
 		x = 1
 		y = 11
 		prerequisite = {
 			focus = MIL_new_progress_possible
+		}
+		completion_reward = {
+			# 2026-07-01 修改：按工业线文档获得机动建设技术第一阶段收益。
+			add_ideas = MIL_mobile_construction_technology_1
 		}
 	}
 	focus = { #数量摊平成本
@@ -1202,11 +1318,43 @@ focus_tree = {
 		icon = GFX_goal_MIL_high_quantity_low_cost
 		relative_position_id = MIL_we_need_money
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		# 2026-07-14 修改：按工业线文档修正国策时长为 42 天。
+		cost = 6
 		x = 1
 		y = 12
 		prerequisite = {
 			focus = MIL_Promote_mobile_construction_technology
+		}
+		completion_reward = {
+			# 2026-07-01 修改：升级机动建设技术并投放两处民用工业建设收益。
+			swap_ideas = {
+				remove_idea = MIL_mobile_construction_technology_1
+				add_idea = MIL_mobile_construction_technology_2
+			}
+			random_owned_controlled_state = {
+				set_state_flag = MIL_high_quantity_low_cost_selected_state
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					NOT = { has_state_flag = MIL_high_quantity_low_cost_selected_state }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			every_owned_state = {
+				limit = { has_state_flag = MIL_high_quantity_low_cost_selected_state }
+				clr_state_flag = MIL_high_quantity_low_cost_selected_state
+			}
 		}
 	}
 	focus = { #技术保障质量
@@ -1214,11 +1362,19 @@ focus_tree = {
 		icon = GFX_goal_MIL_Technology_guarantees_quality
 		relative_position_id = MIL_we_need_money
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		# 2026-07-14 修改：按工业线文档修正国策时长为 35 天。
+		cost = 5
 		x = 1
 		y = 13
 		prerequisite = {
 			focus = MIL_high_quantity_low_cost
+		}
+		completion_reward = {
+			# 2026-07-01 修改：升级机动建设技术，追加工厂受轰炸易损性降低。
+			swap_ideas = {
+				remove_idea = MIL_mobile_construction_technology_2
+				add_idea = MIL_mobile_construction_technology_3
+			}
 		}
 	}
 	focus = { #升级“虚数”
@@ -1226,7 +1382,8 @@ focus_tree = {
 		icon = GFX_goal_MIL_Upgrade_Imaginary_numbers
 		relative_position_id = MIL_we_need_money
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		# 2026-07-14 修改：按工业线文档修正国策时长为 56 天。
+		cost = 8
 		x = 3
 		y = 10
 		prerequisite = {
@@ -1235,13 +1392,18 @@ focus_tree = {
 		prerequisite = {
 			focus = MIL_Ruin_development
 		}
+		completion_reward = {
+			# 2026-07-01 修改：先实现文档中确定的科研槽奖励；虚数优化次数前置待上游系统完善后补充。
+			add_research_slot = 1
+		}
 	}
 	focus = { #第二座千年之塔
 		id = MIL_the_second_mil_tower
 		icon = GFX_goal_MIL_the_second_mil_tower
 		relative_position_id = MIL_we_need_money
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		# 2026-07-14 修改：按工业线文档修正国策时长为 35 天。
+		cost = 5
 		x = 5
 		y = 10
 
@@ -1251,13 +1413,18 @@ focus_tree = {
 		prerequisite = {
 			focus = MIL_Ruin_development
 		}
+		completion_reward = {
+			# 2026-07-01 修改：开启第二座千年巨塔建设阶段收益。
+			add_ideas = MIL_second_millennium_tower_1
+		}
 	}
 	focus = { #扩建埃里都
 		id = MIL_Expand_Eridu
 		icon = GFX_goal_MIL_Expand_Eridu
 		relative_position_id = MIL_we_need_money
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		# 2026-07-14 修改：按工业线文档修正国策时长为 56 天。
+		cost = 8
 		x = 7
 		y = 10
 		prerequisite = {
@@ -1272,7 +1439,8 @@ focus_tree = {
 		icon = GFX_goal_MIL_Clear_more_debris_areas
 		relative_position_id = MIL_we_need_money
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		# 2026-07-14 修改：按工业线文档修正国策时长为 35 天。
+		cost = 5
 		x = 8
 		y = 9
 		prerequisite = {
@@ -1284,7 +1452,8 @@ focus_tree = {
 		icon = GFX_goal_MIL_Clear_more_debris_areas
 		relative_position_id = MIL_we_need_money
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		# 2026-07-14 修改：按工业线文档修正国策时长为 42 天。
+		cost = 6
 		x = 9
 		y = 11
 		prerequisite = {
@@ -1296,7 +1465,8 @@ focus_tree = {
 		icon = GFX_goal_MIL_Tower_mid_term_Project
 		relative_position_id = MIL_we_need_money
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		# 2026-07-14 修改：按工业线文档修正国策时长为 35 天。
+		cost = 5
 		x = 5
 		y = 11
 		prerequisite = {
@@ -1306,17 +1476,26 @@ focus_tree = {
 			focus = MIL_Expand_Eridu
 			focus = MIL_Upgrade_Imaginary_numbers
 		}
+		completion_reward = {
+			# 2026-07-01 修改：推进巨塔中期工程，降低前期建设压力并开放科研配套收益。
+			add_ideas = MIL_second_millennium_tower_2
+		}
 	}
 	focus = { #更多，更新，更强大的科研设备
 		id = MIL_more_research_equipment
 		icon = GFX_goal_MIL_more_research_equipment
 		relative_position_id = MIL_we_need_money
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		# 2026-07-14 修改：按工业线文档修正国策时长为 35 天。
+		cost = 5
 		x = 4
 		y = 12
 		prerequisite = {
 			focus = MIL_Tower_mid_term_Project
+		}
+		completion_reward = {
+			# 2026-07-01 修改：推进巨塔科研设备阶段；废墟科研设施投放待废墟文档完善后接入。
+			add_ideas = MIL_second_millennium_tower_3
 		}
 	}
 	focus = { #更好，更美，更优异的实验环境
@@ -1324,11 +1503,16 @@ focus_tree = {
 		icon = GFX_goal_MIL_better_Experimental_environment
 		relative_position_id = MIL_we_need_money
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		# 2026-07-14 修改：按工业线文档修正国策时长为 35 天。
+		cost = 5
 		x = 6
 		y = 12
 		prerequisite = {
 			focus = MIL_Tower_mid_term_Project
+		}
+		completion_reward = {
+			# 2026-07-01 修改：推进巨塔实验环境阶段，追加科研与政治点数收益。
+			add_ideas = MIL_second_millennium_tower_4
 		}
 	}
 	focus = { #接近完工的巨塔
@@ -1336,7 +1520,8 @@ focus_tree = {
 		icon = GFX_goal_MIL_nearly_completed_tower
 		relative_position_id = MIL_we_need_money
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		# 2026-07-14 修改：按工业线文档修正国策时长为 35 天。
+		cost = 5
 		x = 5
 		y = 13
 		prerequisite = {
@@ -1348,13 +1533,19 @@ focus_tree = {
 		prerequisite = {
 			focus = MIL_Tower_mid_term_Project
 		}
+		completion_reward = {
+			# 2026-07-01 修改：推进巨塔接近完工阶段，结算政治点并进一步降低建设压力。
+			add_political_power = 50
+			add_ideas = MIL_second_millennium_tower_5
+		}
 	}
 	focus = { #属于一代千年人的智慧结晶
 		id = MIL_mil_wisdom
 		icon = GFX_goal_MIL_wisdom
 		relative_position_id = MIL_we_need_money
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		# 2026-07-14 修改：按工业线文档修正国策时长为 56 天。
+		cost = 8
 		x = 5
 		y = 14
 		prerequisite = {
@@ -1366,13 +1557,25 @@ focus_tree = {
 		prerequisite = {
 			focus = MIL_throw_old_can_get_new
 		}
+		completion_reward = {
+			# 2026-07-01 修改：完成第二座千年巨塔最终阶段，替换为终局工业科研民族精神。
+			hidden_effect = {
+				remove_ideas = MIL_second_millennium_tower_1
+				remove_ideas = MIL_second_millennium_tower_2
+				remove_ideas = MIL_second_millennium_tower_3
+				remove_ideas = MIL_second_millennium_tower_4
+				remove_ideas = MIL_second_millennium_tower_5
+			}
+			add_ideas = MIL_millennium_students_wisdom_crystallization
+		}
 	}
 	focus = { #清理不是破坏
 		id = MIL_clean_not_destory
 		icon = GFX_goal_MIL_clean_not_destory
 		relative_position_id = MIL_we_need_money
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		# 2026-07-14 修改：按工业线文档修正国策时长为 35 天。
+		cost = 5
 		x = 9
 		y = 12
 		prerequisite = {
@@ -1384,7 +1587,8 @@ focus_tree = {
 		icon = GFX_goal_MIL_throw_old_can_get_new
 		relative_position_id = MIL_we_need_money
 		search_filters = { FOCUS_MIL }
-		cost = 10
+		# 2026-07-14 修改：按工业线文档修正国策时长为 35 天。
+		cost = 5
 		x = 9
 		y = 13
 		prerequisite = {
@@ -1960,6 +2164,7 @@ focus_tree = {
 
 
 
+	# 2026-07-24 修改：为军事改革国策树补充 AI 倾向；优先完成已进入的支线，并在满足条件后尽快收束最终国策。
 	focus = { #千年安全委员会防卫改革计划
 		id = MIL_Security_Committee_Defense_Reform_Plan
 		icon = GFX_goal_MIL_Security_Committee_Defense_Reform_Plan
@@ -1967,6 +2172,9 @@ focus_tree = {
 		cost = 2
 		x = 80
 		y = 0
+		ai_will_do = {
+			factor = 2
+		}
 		available = {
 			# 前置要求：财政危机已经缓解
 		}
@@ -1987,6 +2195,9 @@ focus_tree = {
 		cost = 3
 		x = -4
 		y = 1
+		ai_will_do = {
+			factor = 2
+		}
 		prerequisite = { focus = MIL_Security_Committee_Defense_Reform_Plan }
 		available = {
 			OR = {
@@ -2011,7 +2222,13 @@ focus_tree = {
                     MIL_Individual_Special_Operations_Mech = { x = 1 y = 1 }
                 }
             }
-			custom_effect_tooltip = MIL_reorganized_security_department_tt
+			# 2026-07-14 修改：由原生 effect_tooltip 预览限时民族精神，真实添加仍只在 hidden_effect 中执行一次。
+			effect_tooltip = {
+				add_timed_idea = {
+					idea = MIL_reorganized_security_department
+					days = 180
+				}
+			}
 	        set_variable = { MIL_reorg_combat_readiness_bonus = 0 }
 			hidden_effect = {
 				add_timed_idea = {
@@ -2029,6 +2246,9 @@ focus_tree = {
 		cost = 2
 		x = -5
 		y = 2
+		ai_will_do = {
+			factor = 3
+		}
 		prerequisite = {
 			focus = MIL_Integrate_C_and_C
 		}
@@ -2040,7 +2260,17 @@ focus_tree = {
 		}
 		completion_reward = {
 			army_experience = 50
-			custom_effect_tooltip = MIL_Secretary_Help_tt
+			# 2026-07-14 修改：使用变量 tooltip 与原生限时 idea 变化预览，避免手写效果与实际数值、持续时间脱节。
+			effect_tooltip = {
+				add_to_variable = {
+					MIL_reorg_combat_readiness_bonus = 0.15
+					tooltip = MIL_reorg_combat_readiness_bonus_tt
+				}
+				modify_timed_idea = {
+					idea = MIL_reorganized_security_department
+					days = -60
+				}
+			}
 			hidden_effect = {
 				add_to_variable = { MIL_reorg_combat_readiness_bonus = 0.15 }
 				modify_timed_idea = {
@@ -2059,6 +2289,9 @@ focus_tree = {
 		cost = 2
 		x = -3
 		y = 2
+		ai_will_do = {
+			factor = 3
+		}
 		prerequisite = {
 			focus = MIL_Integrate_C_and_C
 		}
@@ -2070,7 +2303,17 @@ focus_tree = {
 		}
 		completion_reward = {
 			army_experience = 50
-			custom_effect_tooltip = MIL_The_three_rules_of_Yuuka_tt
+			# 2026-07-14 修改：与书记官路线共用同一套原生变量和持续时间变化预览。
+			effect_tooltip = {
+				add_to_variable = {
+					MIL_reorg_combat_readiness_bonus = 0.15
+					tooltip = MIL_reorg_combat_readiness_bonus_tt
+				}
+				modify_timed_idea = {
+					idea = MIL_reorganized_security_department
+					days = -60
+				}
+			}
 			hidden_effect = {
 				add_to_variable = { MIL_reorg_combat_readiness_bonus = 0.15 }
 				modify_timed_idea = {
@@ -2089,6 +2332,9 @@ focus_tree = {
 		cost = 6
 		x = -4
 		y = 3
+		ai_will_do = {
+			factor = 3
+		}
 		prerequisite = {
 			focus = MIL_The_three_rules_of_Yuuka
 		}
@@ -2102,10 +2348,8 @@ focus_tree = {
 			army_experience = 50
 			# 2026-06-17 修改：统一结算安保部改革对承平日久动态修正的全部变量变化，并在全数归零时移除动态修正。
 			BARE_MIL_Security_Department_Long_Peace_Reform_Progress_effect = yes
-			#获得民族精神“千年特战部队”
 			force_update_dynamic_modifier = yes
-			add_ideas = MIL_special_ops_force_1 # 获得新精神（暂无加成）
-			custom_effect_tooltip = MIL_Special_Forces_Training_Program_tt
+			# 2026-07-08 修改：该国策不直接改变千年防卫力量数值，避免显示概括性动态修正提示。
 			# effect_tooltip = {
 			# 	swap_ideas = {
 			# 		remove_idea = MIL_security_department_tooltip_3
@@ -2122,34 +2366,17 @@ focus_tree = {
 		cost = 5
 		x = -5
 		y = 4
+		ai_will_do = {
+			factor = 2
+		}
 		prerequisite = {
 			focus = MIL_Special_Forces_Training_Program
 		}
 		completion_reward = {
-			# 2026-06-24 修改：仅在尚未拥有机甲开发对应阶段精神时显示效果提示，避免后续重复显示相同装备加成。
-			if = {
-				limit = {
-					NOT = { has_idea = MIL_special_ops_force_1 }
-					NOT = { has_idea = MIL_special_ops_force_2_training }
-				}
-				custom_effect_tooltip = MIL_Special_Forces_Exoskeleton_Development_tt
-			}
-			# 分支逻辑判断：
-			# 情况A：如果目前是【基础版】，说明还没做训练国策 -> 变为【机甲版】
-			if = {
-				limit = { has_idea = MIL_special_ops_force_1 }
-				swap_ideas = {
-					remove_idea = MIL_special_ops_force_1
-					add_idea = MIL_special_ops_force_2_mech
-				}
-			}
-			# 情况B：如果目前是【训练版】，说明已经做了训练国策 -> 变为【合成版】
-			else_if = {
-				limit = { has_idea = MIL_special_ops_force_2_training }
-				swap_ideas = {
-					remove_idea = MIL_special_ops_force_2_training
-					add_idea = MIL_special_ops_force_3_combined
-				}
+			custom_effect_tooltip = MIL_Special_Forces_Exoskeleton_Development_tt
+			hidden_effect = {
+				# 2026-07-07 修改：特战装备永久收益改由千年防卫力量总动态修正管理。
+				BARE_MIL_Millennium_Defense_Force_Special_Exoskeleton_effect = yes
 			}
 		}
 	}
@@ -2161,25 +2388,17 @@ focus_tree = {
 		cost = 5
 		x = -3
 		y = 4
+		ai_will_do = {
+			factor = 2
+		}
 		prerequisite = {
 			focus = MIL_Special_Forces_Training_Program
 		}
 		completion_reward = {
-			# 分支逻辑判断：
-			# 情况A：如果目前是【基础版】，说明还没做机甲国策 -> 变为【训练版】
-			if = {
-				limit = { has_idea = MIL_special_ops_force_1 }
-				swap_ideas = {
-					remove_idea = MIL_special_ops_force_1
-					add_idea = MIL_special_ops_force_2_training
-				}
-			}
-			# 情况B：如果目前是【机甲版】，说明已经做了机甲国策 -> 变为【合成版】
-			else = {
-				swap_ideas = {
-					remove_idea = MIL_special_ops_force_2_mech
-					add_idea = MIL_special_ops_force_3_combined
-				}
+			custom_effect_tooltip = MIL_Special_Forces_Hell_Training_tt
+			hidden_effect = {
+				# 2026-07-07 修改：特战训练永久收益改由千年防卫力量总动态修正管理。
+				BARE_MIL_Millennium_Defense_Force_Special_Training_effect = yes
 			}
 		}
 	}
@@ -2191,6 +2410,9 @@ focus_tree = {
 		cost = 6
 		x = -4
 		y = 5
+		ai_will_do = {
+			factor = 5
+		}
 		prerequisite = {
 			focus = MIL_Special_Forces_Hell_Training
 		}
@@ -2202,9 +2424,10 @@ focus_tree = {
 			BARE_MIL_Security_Department_Long_Peace_Reform_Progress_effect = yes
 			# 2026-06-29 修改：国策解锁后续工厂建设决议，并使用原生解锁提示展示给玩家。
 			unlock_decision_tooltip = MIL_special_ops_factory_expansion
-			swap_ideas = {
-				remove_idea = MIL_special_ops_force_3_combined
-				add_idea = MIL_special_ops_force_4_final
+			custom_effect_tooltip = MIL_Special_Forces_Hell_Training_Unique_tt
+			hidden_effect = {
+				# 2026-07-07 修改：特战终点永久收益改由千年防卫力量总动态修正管理。
+				BARE_MIL_Millennium_Defense_Force_Special_Final_effect = yes
 			}
 			# effect_tooltip = {
 			# 	swap_ideas = {
@@ -2223,6 +2446,9 @@ focus_tree = {
 		cost = 5
 		x = 0
 		y = 1
+		ai_will_do = {
+			factor = 2
+		}
 		prerequisite = {
 			focus = MIL_Security_Committee_Defense_Reform_Plan
 		}
@@ -2237,9 +2463,8 @@ focus_tree = {
 			BARE_MIL_Security_Department_Long_Peace_Reform_Progress_effect = yes
 			# 2026-06-29 修改：国策解锁改革决议时使用原生解锁提示效果，避免玩家无法从国策效果得知新增决议。
 			unlock_decision_tooltip = MIL_security_reform_experimental_mech_refit
-			hidden_effect = {	add_ideas = steel_torrent_modifier }
 
-        	custom_effect_tooltip = MIL_Mechanical_Built_High_Wall_tt
+			# 2026-07-08 修改：该国策只解锁改革项目并结算承平日久修正，不直接改变千年防卫力量数值。
 			# effect_tooltip = {
 			# 	swap_ideas = {
 			# 		remove_idea = MIL_security_department_tooltip_2
@@ -2257,25 +2482,19 @@ focus_tree = {
 		cost = 5
 		x = -1
 		y = 2
+		ai_will_do = {
+			factor = 2
+		}
 		prerequisite = {
 			focus = MIL_Mechanical_Built_High_Wall
 		}
 		completion_reward = {
 			set_country_flag = MIL_os_upgrade_done
+			# 2026-07-14 修改：科技 formatter 无法展开分类地形修正，改用原版地形国策风格逐项显示实际数值。
 			custom_effect_tooltip = MIL_OS_Upgrade_tt
 			hidden_effect = {
-				# 2026-06-29 修改：操作系统升级的地形适应性仍由隐藏科技承载，但关闭科技弹窗；玩家只通过国策 tooltip 看到实际效果。
-				set_technology = {
-					steel_torrent_os_upgrade_tech = 1
-					popup = no
-				}
-				if = {
-					limit = { has_country_flag = MIL_card_drawing_done }
-					swap_ideas = { remove_idea = steel_torrent_modifier_card add_idea = steel_torrent_modifier_os_card }
-				}
-				else = {
-					swap_ideas = { remove_idea = steel_torrent_modifier add_idea = steel_torrent_modifier_os }
-				}
+				# 2026-07-07 修改：钢铁洪流操作系统永久收益改由千年防卫力量总动态修正管理。
+				BARE_MIL_Millennium_Defense_Force_Mech_OS_effect = yes
 			}
 		}
 	}
@@ -2287,6 +2506,9 @@ focus_tree = {
 		cost = 5
 		x = 1
 		y = 2
+		ai_will_do = {
+			factor = 2
+		}
 		prerequisite = {
 			focus = MIL_Mechanical_Built_High_Wall
 		}
@@ -2294,13 +2516,8 @@ focus_tree = {
 			set_country_flag = MIL_card_drawing_done
 			custom_effect_tooltip = MIL_Card_Drawing_Time_tt
 			hidden_effect = {
-				if = {
-					limit = { has_country_flag = MIL_os_upgrade_done }
-					swap_ideas = { remove_idea = steel_torrent_modifier_os add_idea = steel_torrent_modifier_os_card }
-				}
-				else = {
-					swap_ideas = { remove_idea = steel_torrent_modifier add_idea = steel_torrent_modifier_card }
-				}
+				# 2026-07-07 修改：钢铁洪流抽卡装备永久收益改由千年防卫力量总动态修正管理。
+				BARE_MIL_Millennium_Defense_Force_Mech_Card_effect = yes
 			}
 		}
 	}
@@ -2312,6 +2529,9 @@ focus_tree = {
 		cost = 5
 		x = -1
 		y = 3
+		ai_will_do = {
+			factor = 3
+		}
 		prerequisite = {
 			focus = MIL_Operating_System_Upgrade
 		}
@@ -2335,13 +2555,17 @@ focus_tree = {
 		cost = 5
 		x = 1
 		y = 3
+		ai_will_do = {
+			factor = 3
+		}
 		prerequisite = {
 			focus = MIL_Card_Drawing_Time
 		}
 		completion_reward = {
 			custom_effect_tooltip = MIL_Better_Firepower_tt
 			hidden_effect = {
-				swap_ideas = { remove_idea = steel_torrent_modifier_os_card add_idea = steel_torrent_modifier_firepower }
+				# 2026-07-07 修改：钢铁洪流火力强化永久收益改由千年防卫力量总动态修正管理。
+				BARE_MIL_Millennium_Defense_Force_Mech_Firepower_effect = yes
 			}
 		}
 	}
@@ -2353,6 +2577,9 @@ focus_tree = {
 		cost = 6
 		x = 0
 		y = 5
+		ai_will_do = {
+			factor = 5
+		}
 		prerequisite = {
 			focus = MIL_Stronger_Firepower_Better_Protection
 		}
@@ -2364,7 +2591,8 @@ focus_tree = {
 			unlock_decision_tooltip = MIL_steel_wall_factory_expansion
 			custom_effect_tooltip = MIL_Millennium_Iron_Wall_tt
 			hidden_effect = {
-				swap_ideas = { remove_idea = steel_torrent_modifier_firepower add_idea = steel_torrent_modifier_final }
+				# 2026-07-07 修改：钢铁洪流终点永久收益改由千年防卫力量总动态修正管理。
+				BARE_MIL_Millennium_Defense_Force_Mech_Final_effect = yes
 			}
 		}
 	}
@@ -2376,6 +2604,9 @@ focus_tree = {
 		cost = 10
 		x = 8
 		y = 1
+		ai_will_do = {
+			factor = 2
+		}
 		prerequisite = {
 			focus = MIL_Security_Committee_Defense_Reform_Plan
 		}
@@ -2410,24 +2641,15 @@ focus_tree = {
 		cost = 3
 		x = 5
 		y = 2
+		ai_will_do = {
+			factor = 2
+		}
 		prerequisite = {
 			focus = MIL_Reorganize_the_Security_Department
 		}
 		completion_reward = {
 			air_experience = 100
-			custom_effect_tooltip = MIL_Guard_the_Sky_of_a_Millennium_tt
-			hidden_effect = {
-				# 2026-06-17 修改：按空军线文档接入“千年天空的守护者”动态修正初始状态。
-				set_variable = { MIL_var_sky_guardian_efficiency = 0 }
-				set_variable = { MIL_var_sky_guardian_night_penalty = 0 }
-				set_variable = { MIL_var_sky_guardian_weather_penalty = 0 }
-				set_variable = { MIL_var_sky_guardian_xp_gain = 0 }
-				set_variable = { MIL_var_sky_guardian_daily_air_xp = 0 }
-				set_variable = { MIL_var_sky_guardian_ace_chance = 0 }
-				set_variable = { MIL_var_sky_guardian_air_wing_xp_loss = 0 }
-				add_dynamic_modifier = { modifier = MIL_guardian_of_millennium_sky }
-				force_update_dynamic_modifier = yes
-			}
+			# 2026-07-08 修改：该国策只提供空军经验，不直接改变千年防卫力量数值。
 		}
 	}
 	focus = { #实用化无人机开发
@@ -2438,6 +2660,9 @@ focus_tree = {
 		cost = 5
 		x = 4
 		y = 3
+		ai_will_do = {
+			factor = 2
+		}
 		prerequisite = {
 			focus = MIL_Guard_the_Sky_of_a_Millennium
 		}
@@ -2454,21 +2679,23 @@ focus_tree = {
 		cost = 5
 		x = 4
 		y = 4
+		ai_will_do = {
+			factor = 3
+		}
 		prerequisite = {
 			focus = MIL_Practical_Drone_Development
 		}
 		completion_reward = {
-			custom_effect_tooltip = MIL_Silent_Hunter_tt
-			hidden_effect = {
-				# 2026-06-17 修改：按既有空军线阶段注释接入任务效率、夜间与天气惩罚改善。
-				set_variable = { MIL_var_sky_guardian_efficiency = 0.10 }
-				set_variable = { MIL_var_sky_guardian_night_penalty = -0.10 }
-				set_variable = { MIL_var_sky_guardian_weather_penalty = -0.10 }
-				if = {
-					limit = { NOT = { has_dynamic_modifier = { modifier = MIL_guardian_of_millennium_sky } } }
-					add_dynamic_modifier = { modifier = MIL_guardian_of_millennium_sky }
+			# 2026-07-14 修改：基础空军收益可能已由并行的战术推演补齐，只在本国策仍会产生真实增量时显示。
+			if = {
+				limit = {
+					NOT = { has_completed_focus = MIL_Small_Scale_Air_Tactics }
 				}
-				force_update_dynamic_modifier = yes
+				custom_effect_tooltip = MIL_Silent_Hunter_tt
+			}
+			hidden_effect = {
+				# 2026-07-07 修改：空军线基础永久收益改由千年防卫力量总动态修正管理。
+				BARE_MIL_Millennium_Defense_Force_Air_Base_effect = yes
 			}
 		}
 	}
@@ -2480,32 +2707,25 @@ focus_tree = {
 		cost = 3
 		x = 6
 		y = 3
+		ai_will_do = {
+			factor = 2
+		}
 		prerequisite = {
 			focus = MIL_Guard_the_Sky_of_a_Millennium
 		}
 		completion_reward = {
 			air_experience = 50
+			# 2026-07-14 修改：该国策会补齐悄无声息的猎杀者的基础空军收益，仅在尚未完成对应国策时显示这部分真实增量。
+			if = {
+				limit = {
+					NOT = { has_completed_focus = MIL_Silent_Hunter }
+				}
+				custom_effect_tooltip = MIL_Silent_Hunter_tt
+			}
 			custom_effect_tooltip = MIL_Small_Scale_Air_Tactics_tt
 			hidden_effect = {
-				# 2026-06-17 修改：按既有空军线阶段注释接入训练经验获取；同时补齐左支未完成时的基础飞行修正。
-				if = {
-					limit = { check_variable = { MIL_var_sky_guardian_efficiency < 0.10 } }
-					set_variable = { MIL_var_sky_guardian_efficiency = 0.10 }
-				}
-				if = {
-					limit = { check_variable = { MIL_var_sky_guardian_night_penalty > -0.10 } }
-					set_variable = { MIL_var_sky_guardian_night_penalty = -0.10 }
-				}
-				if = {
-					limit = { check_variable = { MIL_var_sky_guardian_weather_penalty > -0.10 } }
-					set_variable = { MIL_var_sky_guardian_weather_penalty = -0.10 }
-				}
-				set_variable = { MIL_var_sky_guardian_xp_gain = 0.05 }
-				if = {
-					limit = { NOT = { has_dynamic_modifier = { modifier = MIL_guardian_of_millennium_sky } } }
-					add_dynamic_modifier = { modifier = MIL_guardian_of_millennium_sky }
-				}
-				force_update_dynamic_modifier = yes
+				# 2026-07-07 修改：空军战术推演永久收益改由千年防卫力量总动态修正管理。
+				BARE_MIL_Millennium_Defense_Force_Air_Tactics_effect = yes
 			}
 		}
 	}
@@ -2517,31 +2737,17 @@ focus_tree = {
 		cost = 6
 		x = 6
 		y = 4
+		ai_will_do = {
+			factor = 3
+		}
 		prerequisite = {
 			focus = MIL_Small_Scale_Air_Tactics
 		}
 		completion_reward = {
 			custom_effect_tooltip = MIL_Eagle_Strike_Exercise_tt
 			hidden_effect = {
-				# 2026-06-17 修改：按既有空军线阶段注释接入对抗演习最终训练收益。
-				set_variable = { MIL_var_sky_guardian_efficiency = 0.15 }
-				if = {
-					limit = { check_variable = { MIL_var_sky_guardian_night_penalty > -0.10 } }
-					set_variable = { MIL_var_sky_guardian_night_penalty = -0.10 }
-				}
-				if = {
-					limit = { check_variable = { MIL_var_sky_guardian_weather_penalty > -0.10 } }
-					set_variable = { MIL_var_sky_guardian_weather_penalty = -0.10 }
-				}
-				set_variable = { MIL_var_sky_guardian_xp_gain = 0.05 }
-				set_variable = { MIL_var_sky_guardian_daily_air_xp = 0.10 }
-				set_variable = { MIL_var_sky_guardian_ace_chance = 0.10 }
-				set_variable = { MIL_var_sky_guardian_air_wing_xp_loss = -0.25 }
-				if = {
-					limit = { NOT = { has_dynamic_modifier = { modifier = MIL_guardian_of_millennium_sky } } }
-					add_dynamic_modifier = { modifier = MIL_guardian_of_millennium_sky }
-				}
-				force_update_dynamic_modifier = yes
+				# 2026-07-07 修改：空军对抗演习永久收益改由千年防卫力量总动态修正管理。
+				BARE_MIL_Millennium_Defense_Force_Air_Exercise_effect = yes
 			}
 		}
 	}
@@ -2553,6 +2759,9 @@ focus_tree = {
 		cost = 6
 		x = 5
 		y = 5
+		ai_will_do = {
+			factor = 5
+		}
 		prerequisite = {
 			focus = MIL_Eagle_Strike_Exercise
 		}
@@ -2564,11 +2773,8 @@ focus_tree = {
 			unlock_decision_tooltip = MIL_soaring_eagle_factory_expansion
 			custom_effect_tooltip = MIL_Soaring_Sky_Eagle_tt
 			hidden_effect = {
-				# 2026-06-17 修改：空军线最终节点移除阶段动态修正，替换为最终动态修正。
-				remove_dynamic_modifier = { modifier = MIL_guardian_of_millennium_sky }
-				add_dynamic_modifier = { modifier = MIL_soaring_eagle }
-				add_ideas = MIL_soaring_eagle_air_production_hidden
-				force_update_dynamic_modifier = yes
+				# 2026-07-07 修改：空军终点永久收益改由千年防卫力量总动态修正管理。
+				BARE_MIL_Millennium_Defense_Force_Air_Final_effect = yes
 			}
 		}
 	}
@@ -2580,12 +2786,18 @@ focus_tree = {
 		cost = 3
 		x = 10
 		y = 2
+		ai_will_do = {
+			factor = 2
+		}
 		prerequisite = {
 			focus = MIL_Reorganize_the_Security_Department
 		}
 		completion_reward = {
-			add_ideas = MIL_cyber_defense
 			custom_effect_tooltip = MIL_Invisible_Defense_Line_tt
+			hidden_effect = {
+				# 2026-07-07 修改：网络防线基础永久收益改由千年防卫力量总动态修正管理。
+				BARE_MIL_Millennium_Defense_Force_Network_Base_effect = yes
+			}
 		}
 	}
 
@@ -2597,6 +2809,9 @@ focus_tree = {
 		cost = 3
 		x = 9
 		y = 3
+		ai_will_do = {
+			factor = 2
+		}
 		prerequisite = {
 			focus = MIL_Invisible_Defense_Line
 		}
@@ -2604,13 +2819,8 @@ focus_tree = {
 			set_country_flag = MIL_info_security_done
 			custom_effect_tooltip = MIL_Information_Security_tt
 			hidden_effect = {
-				if = {
-					limit = { has_country_flag = MIL_network_weapon_done }
-					swap_ideas = { remove_idea = MIL_cyber_defense_3 add_idea = MIL_cyber_defense_4 }
-				}
-				else = {
-					swap_ideas = { remove_idea = MIL_cyber_defense add_idea = MIL_cyber_defense_2 }
-				}
+				# 2026-07-07 修改：信息安全永久收益改由千年防卫力量总动态修正管理。
+				BARE_MIL_Millennium_Defense_Force_Network_Information_Security_effect = yes
 			}
 		}
 	}
@@ -2623,6 +2833,9 @@ focus_tree = {
 		cost = 3
 		x = 11
 		y = 3
+		ai_will_do = {
+			factor = 2
+		}
 		prerequisite = {
 			focus = MIL_Invisible_Defense_Line
 		}
@@ -2630,13 +2843,8 @@ focus_tree = {
 			set_country_flag = MIL_network_weapon_done
 			custom_effect_tooltip = MIL_Networked_Weapons_tt
 			hidden_effect = {
-				if = {
-					limit = { has_country_flag = MIL_info_security_done }
-					swap_ideas = { remove_idea = MIL_cyber_defense_2 add_idea = MIL_cyber_defense_4 }
-				}
-				else = {
-					swap_ideas = { remove_idea = MIL_cyber_defense add_idea = MIL_cyber_defense_3 }
-				}
+				# 2026-07-07 修改：网络武器永久收益改由千年防卫力量总动态修正管理。
+				BARE_MIL_Millennium_Defense_Force_Network_Weapons_effect = yes
 			}
 		}
 	}
@@ -2649,6 +2857,9 @@ focus_tree = {
 		cost = 3
 		x = 9
 		y = 4
+		ai_will_do = {
+			factor = 3
+		}
 		prerequisite = {
 			focus = MIL_Information_Security
 		}
@@ -2656,13 +2867,8 @@ focus_tree = {
 			set_country_flag = MIL_student_info_done
 			custom_effect_tooltip = MIL_Student_Info_tt
 			hidden_effect = {
-				if = {
-					limit = { has_country_flag = MIL_network_weapon_done }
-					swap_ideas = { remove_idea = MIL_cyber_defense_4 add_idea = MIL_cyber_defense_6 }
-				}
-				else = {
-					swap_ideas = { remove_idea = MIL_cyber_defense_2 add_idea = MIL_cyber_defense_5 }
-				}
+				# 2026-07-07 修改：学生信息系统永久收益改由千年防卫力量总动态修正管理。
+				BARE_MIL_Millennium_Defense_Force_Network_Student_Info_effect = yes
 			}
 		}
 	}
@@ -2675,6 +2881,9 @@ focus_tree = {
 		cost = 3
 		x = 11
 		y = 4
+		ai_will_do = {
+			factor = 3
+		}
 		prerequisite = {
 			focus = MIL_Networked_Weapons
 		}
@@ -2692,6 +2901,9 @@ focus_tree = {
 		cost = 3
 		x = 10
 		y = 5
+		ai_will_do = {
+			factor = 5
+		}
 		prerequisite = {
 			focus = MIL_Networked_Weapons_Necessary
 		}
@@ -2701,7 +2913,8 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = MIL_Impenetrable_Defense_Line_tt
 			hidden_effect = {
-				swap_ideas = { remove_idea = MIL_cyber_defense_6 add_idea = MIL_cyber_defense_final }
+				# 2026-07-07 修改：网络线终点永久收益改由千年防卫力量总动态修正管理。
+				BARE_MIL_Millennium_Defense_Force_Network_Final_effect = yes
 			}
 		}
 	}
@@ -2714,23 +2927,54 @@ focus_tree = {
 		cost = 8
 		x = 1
 		y = 6
+		ai_will_do = {
+			# 2026-07-24 修改：满足四选三和改革完成条件后，提高完成最终国策的倾向，但不压制其他可选国策。
+			factor = 15
+		}
 		prerequisite = {
 			focus = MIL_Impenetrable_Defense_Line
+			focus = MIL_Soaring_Sky_Eagle
+			focus = MIL_Millennium_Steel_Wall
+		}
+		prerequisite = {
+			focus = MIL_Impenetrable_Defense_Line
+			focus = MIL_Soaring_Sky_Eagle
+			focus = MIL_Special_Forces_Hell_Training_Unique
+		}
+		prerequisite = {
+			focus = MIL_Impenetrable_Defense_Line
+			focus = MIL_Millennium_Steel_Wall
+			focus = MIL_Special_Forces_Hell_Training_Unique
+		}
+		prerequisite = {
 			focus = MIL_Soaring_Sky_Eagle
 			focus = MIL_Millennium_Steel_Wall
 			focus = MIL_Special_Forces_Hell_Training_Unique
 		}
 		available = {
-			custom_trigger_tooltip = {
+			# 2026-07-14 修改：按当前原版规范使用 trigger 版 custom_override_tooltip，保留真实条件并覆盖其展示文本。
+			custom_override_tooltip = {
+				tooltip = MIL_Millennium_Stability_Guardian_three_lines_completed_tt
+				# 2026-07-07 修改：最终军事线国策恢复为四条终点国策完成任意三条即可执行。
+				count_triggers = {
+					amount = 3
+					has_completed_focus = MIL_Impenetrable_Defense_Line
+					has_completed_focus = MIL_Soaring_Sky_Eagle
+					has_completed_focus = MIL_Millennium_Steel_Wall
+					has_completed_focus = MIL_Special_Forces_Hell_Training_Unique
+				}
+			}
+			custom_override_tooltip = {
 				tooltip = MIL_Millennium_Stability_Guardian_reform_completed_tt
-				# 2026-07-01 修改：最终军事线国策需要千禧防卫力量改革总进度达到100%后才可执行。
+				# 2026-07-01 修改：最终军事线国策需要千年校园防卫改革总进度达到100%后才可执行。
 				has_country_flag = MIL_security_reform_completed_flag
 			}
 		}
 		completion_reward = {
 			custom_effect_tooltip = MIL_Millennium_Stability_Guardian_tt
+			add_research_slot = 1
 			hidden_effect = {
-				# 2026-07-01 修改：按文档实现最终国策合成效果，将已完成的军事改革成果整合为最终民族精神。
+				# 2026-07-14 修改：最终国策收束旧承载，并把最终网络、空军、特战与机甲奖励追加到千年防卫力量；科研槽由上方原生效果单独发放和显示。
 				BARE_MIL_Millennium_Stability_Guardian_Finalize_effect = yes
 			}
 		}

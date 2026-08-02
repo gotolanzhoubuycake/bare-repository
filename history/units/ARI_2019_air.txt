@@ -1,0 +1,11 @@
+# 2026-07-20: 凯撒交付给阿里乌斯的有限小型无人机。
+# 约束：所有联队归属ARI，但ARI未获得任何无人机装备生产科技，无法自行补充损失。
+air_wings = {
+    138 = {
+        small_uav_equipment_1 = { owner = "ARI" creator = "CAE" amount = 100 }
+        small_uav_cas_equipment_1 = { owner = "ARI" creator = "CAE" amount = 100 }
+    }
+    530 = {
+        small_uav_recon_equipment_1 = { owner = "ARI" creator = "CAE" amount = 100 }
+    }
+}

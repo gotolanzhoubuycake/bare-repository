@@ -259,7 +259,8 @@ buildings = {
 		infrastructure_construction_effect = yes
 		level_cap = {
 			shares_slots = yes
-			state_max = 20
+			# 2026-07-08: 整合50建筑槽MOD，码头单州上限与军工/民工一致提升到25。
+			state_max = 25
 		}
 	}
 

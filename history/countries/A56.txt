@@ -1,0 +1,39 @@
+# 2026-07-13 修改：千年旧校区废墟开发敌人“废墟钢盔团”的基础国家初始化。
+capital = 641
+
+set_stability = 0.50
+set_war_support = 0.50
+set_research_slots = 1
+set_fuel_ratio = 0.5
+set_convoys = 5
+starting_train_buffer = 0.5
+
+set_technology = {
+	T1_infantry_weapon = 1
+	T1_mobile_vehicle = 1
+	T1_assult_vehicle = 1
+	T1_electronic = 1
+	# 2026-07-21 修改：二级工业机器人科技才会解锁自动机装备生产，补齐其电子突破前置。
+	T2_electronic = 1
+	T1_production = 1
+	Industrial_Robots_T1 = 1
+	Industrial_Robots_T2 = 1
+	infantry_weapons_T1 = 1
+	infantry_weapons_upgrade_uniform_T1 = 1
+	infantry_weapons_upgrade_armor_T2 = 1
+	troop_training_T1 = 1
+	fire_support_weapons_T1 = 1
+	support_equipment_T1 = 1
+}
+
+add_ideas = {
+	BARE_Combat_Readiness_Start_Idea
+	BARE_Global_Blockade_Zone
+}
+
+set_politics = {
+	ruling_party = no_ideology
+}
+set_popularities = {
+	no_ideology = 100
+}

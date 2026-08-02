@@ -110,6 +110,12 @@
  Global_Blockade_Zone_Leader_name: "联邦学生会危险区域管制委员会"
  Global_Suburban_Leader_name: "联邦学生会郊区行政管理委员会"
 
+ # 2026-07-24 修改：废墟袭击敌人在情报分析前后的领导人姓名。
+ MIL_ruins_unknown_leader_name: "？"
+ MIL_ruins_A56_leader_name: "钢盔团指挥官"
+ MIL_ruins_A57_leader_name: "暴走机械主控核心"
+ MIL_ruins_A58_leader_name: "十字神明控制中枢"
+
  SRT_yukino_name:0 "七度雪乃"
  SRT_nico_name:0 "妮可"
  SRT_kurumi_name:0 "胡桃"

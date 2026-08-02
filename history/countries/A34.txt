@@ -7,7 +7,7 @@ set_research_slots = 3
 set_fuel_ratio = 0.5
 set_convoys = 20
 starting_train_buffer = 0.5
-set_air_oob = "A34_2019_air_legacy"
+# 2026-07-20: 郊区势力开局不保有空军。
 
 # Starting tech
 set_technology = {
@@ -98,4 +98,10 @@ set_politics = {
 set_popularities = {
 	no_ideology = 100
 }
-
+# 2026-07-20 修改：依据开局部队与现有军工配置装备生产线。
+add_equipment_production = {
+	equipment = { type = infantry_equipment_0 }
+	requested_factories = 1
+	progress = 0
+	efficiency = 100
+}

@@ -1,0 +1,278 @@
+# 2026-07-16 修改：新增千年旧校区废墟袭击事件，按目标地块启动固定TAG敌人和应急边防部队。
+
+add_namespace = MIL_ruins_attack
+add_namespace = MIL_ruins_surprise
+add_namespace = MIL_ruins_intel
+add_namespace = MIL_ruins_reward
+add_namespace = MIL_ruins_story
+
+# 2026-07-17 修改：新增废墟开发检测中的四类“意外收获”地块事件。
+# 入口：废墟地块完成阶段1或阶段2后，由对应检测效果按35%概率触发。
+# 2026-07-24 修改：事件中的奖励效果由玩家选项结算，事件打开前只隐藏预选结果。
+# 预期结果：四类事件各占“意外收获”内部的25%，玩家确认选项后获得明确奖励。
+state_event = {
+	id = MIL_ruins_surprise.1
+	title = MIL_ruins_surprise.1.t
+	desc = MIL_ruins_surprise.1.d
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			# 2026-07-24 修改：保留事件打开前的随机结果预选，避免玩家看到不符合实际的多个奖励选项。
+			random_list = {
+			1 = {
+				random_list = {
+					1 = { set_state_flag = MIL_ruins_surprise_warehouse_fe }
+					1 = { set_state_flag = MIL_ruins_surprise_warehouse_ec }
+					1 = { set_state_flag = MIL_ruins_surprise_warehouse_rm }
+					1 = { set_state_flag = MIL_ruins_surprise_warehouse_cm }
+					1 = { set_state_flag = MIL_ruins_surprise_warehouse_mm }
+					1 = { set_state_flag = MIL_ruins_surprise_warehouse_el }
+				}
+			}
+			1 = { set_state_flag = MIL_ruins_surprise_warehouse_infantry }
+			1 = { set_state_flag = MIL_ruins_surprise_warehouse_support }
+			1 = { set_state_flag = MIL_ruins_surprise_warehouse_artillery }
+		}
+	}
+	}
+
+	option = { name = MIL_ruins_surprise.1.fe trigger = { has_state_flag = MIL_ruins_surprise_warehouse_fe } add_resource = { type = resources_fe amount = 8 } clr_state_flag = MIL_ruins_surprise_warehouse_fe }
+	option = { name = MIL_ruins_surprise.1.ec trigger = { has_state_flag = MIL_ruins_surprise_warehouse_ec } add_resource = { type = resources_ec amount = 8 } clr_state_flag = MIL_ruins_surprise_warehouse_ec }
+	option = { name = MIL_ruins_surprise.1.rm trigger = { has_state_flag = MIL_ruins_surprise_warehouse_rm } add_resource = { type = resources_rm amount = 8 } clr_state_flag = MIL_ruins_surprise_warehouse_rm }
+	option = { name = MIL_ruins_surprise.1.cm trigger = { has_state_flag = MIL_ruins_surprise_warehouse_cm } add_resource = { type = resources_cm amount = 8 } clr_state_flag = MIL_ruins_surprise_warehouse_cm }
+	option = { name = MIL_ruins_surprise.1.mm trigger = { has_state_flag = MIL_ruins_surprise_warehouse_mm } add_resource = { type = resources_mm amount = 8 } clr_state_flag = MIL_ruins_surprise_warehouse_mm }
+	option = { name = MIL_ruins_surprise.1.el trigger = { has_state_flag = MIL_ruins_surprise_warehouse_el } add_resource = { type = resources_el amount = 8 } clr_state_flag = MIL_ruins_surprise_warehouse_el }
+	option = {
+		name = MIL_ruins_surprise.1.infantry
+		trigger = { has_state_flag = MIL_ruins_surprise_warehouse_infantry }
+		MIL = { add_equipment_to_stockpile = { type = infantry_equipment amount = 3000 producer = MIL } }
+		clr_state_flag = MIL_ruins_surprise_warehouse_infantry
+	}
+	option = {
+		name = MIL_ruins_surprise.1.support
+		trigger = { has_state_flag = MIL_ruins_surprise_warehouse_support }
+		MIL = { add_equipment_to_stockpile = { type = support_equipment amount = 750 producer = MIL } }
+		clr_state_flag = MIL_ruins_surprise_warehouse_support
+	}
+	option = {
+		name = MIL_ruins_surprise.1.artillery
+		trigger = { has_state_flag = MIL_ruins_surprise_warehouse_artillery }
+		MIL = { add_equipment_to_stockpile = { type = light_fire_support_equipment amount = 200 producer = MIL } }
+		clr_state_flag = MIL_ruins_surprise_warehouse_artillery
+	}
+}
+
+state_event = {
+	id = MIL_ruins_surprise.2
+	title = MIL_ruins_surprise.2.t
+	desc = MIL_ruins_surprise.2.d
+	is_triggered_only = yes
+
+	immediate = { hidden_effect = { random_list = { 50 = { set_state_flag = MIL_ruins_surprise_line_civilian } 50 = { set_state_flag = MIL_ruins_surprise_line_military } } } }
+	option = {
+		name = MIL_ruins_surprise.2.civilian
+		trigger = { has_state_flag = MIL_ruins_surprise_line_civilian }
+		MIL = { add_offsite_building = { type = industrial_complex level = 1 } }
+		clr_state_flag = MIL_ruins_surprise_line_civilian
+	}
+	option = {
+		name = MIL_ruins_surprise.2.military
+		trigger = { has_state_flag = MIL_ruins_surprise_line_military }
+		MIL = { add_offsite_building = { type = arms_factory level = 1 } }
+		clr_state_flag = MIL_ruins_surprise_line_military
+	}
+}
+
+state_event = {
+	id = MIL_ruins_surprise.3
+	title = MIL_ruins_surprise.3.t
+	desc = MIL_ruins_surprise.3.d
+	is_triggered_only = yes
+
+	immediate = { hidden_effect = { random_list = { 50 = { set_state_flag = MIL_ruins_surprise_relic_pp } 50 = { set_state_flag = MIL_ruins_surprise_relic_stability } } } }
+	option = {
+		name = MIL_ruins_surprise.3.pp
+		trigger = { has_state_flag = MIL_ruins_surprise_relic_pp }
+		MIL = { add_political_power = 100 }
+		clr_state_flag = MIL_ruins_surprise_relic_pp
+	}
+	option = {
+		name = MIL_ruins_surprise.3.stability
+		trigger = { has_state_flag = MIL_ruins_surprise_relic_stability }
+		MIL = { add_stability = 0.05 }
+		clr_state_flag = MIL_ruins_surprise_relic_stability
+	}
+}
+
+state_event = {
+	id = MIL_ruins_surprise.4
+	title = MIL_ruins_surprise.4.t
+	desc = MIL_ruins_surprise.4.d
+	is_triggered_only = yes
+
+	option = {
+		name = MIL_ruins_surprise.4.a
+		MIL = { add_timed_idea = { idea = MIL_ruins_old_research_facility days = 180 } }
+	}
+}
+
+# 2026-07-18 修改：废墟敌情分析事件，只承担身份确认和玩家信息反馈。
+country_event = { id = MIL_ruins_intel.1 title = MIL_ruins_intel.1.t desc = MIL_ruins_intel.1.d is_triggered_only = yes option = { name = MIL_ruins_intel.a } }
+country_event = { id = MIL_ruins_intel.2 title = MIL_ruins_intel.2.t desc = MIL_ruins_intel.2.d is_triggered_only = yes option = { name = MIL_ruins_intel.a } }
+country_event = { id = MIL_ruins_intel.3 title = MIL_ruins_intel.3.t desc = MIL_ruins_intel.3.d is_triggered_only = yes option = { name = MIL_ruins_intel.a } }
+
+# 2026-07-18 修改：三类敌人战后解析结果事件。
+country_event = { id = MIL_ruins_reward.1 title = MIL_ruins_reward.1.t desc = MIL_ruins_reward.1.d is_triggered_only = yes option = { name = MIL_ruins_reward.a } }
+country_event = { id = MIL_ruins_reward.2 title = MIL_ruins_reward.2.t desc = MIL_ruins_reward.2.d is_triggered_only = yes option = { name = MIL_ruins_reward.a } }
+country_event = { id = MIL_ruins_reward.3 title = MIL_ruins_reward.3.t desc = MIL_ruins_reward.3.d is_triggered_only = yes option = { name = MIL_ruins_reward.a } }
+country_event = { id = MIL_ruins_reward.4 title = MIL_ruins_reward.4.t desc = MIL_ruins_reward.4.d is_triggered_only = yes option = { name = MIL_ruins_reward.a } }
+country_event = { id = MIL_ruins_reward.5 title = MIL_ruins_reward.5.t desc = MIL_ruins_reward.5.d is_triggered_only = yes option = { name = MIL_ruins_reward.a } }
+country_event = { id = MIL_ruins_reward.6 title = MIL_ruins_reward.6.t desc = MIL_ruins_reward.6.d is_triggered_only = yes option = { name = MIL_ruins_reward.a } }
+
+# 2026-07-24 修改：四个地块完成基础设施重建后只触发一次的SPTF叙事事件链。
+# 入口：预选地块完成阶段3后触发.1；后续事件按15/30/30/30/7日依次调度。
+# 预期结果：按需求发放15、15、30陆军经验及最终30政治点数，不增加额外分支。
+country_event = {
+	id = MIL_ruins_story.1
+	title = MIL_ruins_story.1.t
+	desc = MIL_ruins_story.1.d
+	is_triggered_only = yes
+	option = {
+		name = MIL_ruins_story.1.a
+		add_timed_idea = { idea = MIL_ruins_hub_hacked days = 15 }
+		country_event = { id = MIL_ruins_story.2 days = 15 }
+	}
+}
+country_event = {
+	id = MIL_ruins_story.2
+	title = MIL_ruins_story.2.t
+	desc = MIL_ruins_story.2.d
+	is_triggered_only = yes
+	option = { name = MIL_ruins_story.2.a country_event = { id = MIL_ruins_story.3 days = 30 } }
+}
+country_event = {
+	id = MIL_ruins_story.3
+	title = MIL_ruins_story.3.t
+	desc = MIL_ruins_story.3.d
+	is_triggered_only = yes
+	option = { name = MIL_ruins_story.3.a army_experience = 15 country_event = { id = MIL_ruins_story.4 days = 30 } }
+}
+country_event = {
+	id = MIL_ruins_story.4
+	title = MIL_ruins_story.4.t
+	desc = MIL_ruins_story.4.d
+	is_triggered_only = yes
+	option = { name = MIL_ruins_story.4.a army_experience = 15 country_event = { id = MIL_ruins_story.5 days = 30 } }
+}
+country_event = {
+	id = MIL_ruins_story.5
+	title = MIL_ruins_story.5.t
+	desc = MIL_ruins_story.5.d
+	is_triggered_only = yes
+	option = { name = MIL_ruins_story.5.a country_event = { id = MIL_ruins_story.6 days = 7 } }
+}
+country_event = {
+	id = MIL_ruins_story.6
+	title = MIL_ruins_story.6.t
+	desc = MIL_ruins_story.6.d
+	is_triggered_only = yes
+	option = {
+		name = MIL_ruins_story.6.a
+		army_experience = 30
+		add_political_power = 30
+		set_country_flag = MIL_ruins_story_completed
+	}
+}
+
+country_event = {
+	id = MIL_ruins_attack.643
+	title = MIL_ruins_attack.643.t
+	desc = MIL_ruins_attack.643.d
+	is_triggered_only = yes
+
+	trigger = {
+		original_tag = MIL
+		NOT = { has_country_flag = MIL_ruins_enemy_active }
+		643 = { NOT = { has_state_flag = MIL_ruins_attack_triggered } }
+	}
+
+	option = {
+		name = MIL_ruins_attack.response
+		ai_chance = { base = 1 }
+		hidden_effect = {
+			# 2026-07-24 修改：将袭击初始化放入玩家选项，隐藏执行地图状态变化。
+			BARE_MIL_Ruins_Set_Attack_Target_643_effect = yes
+			BARE_MIL_Ruins_Start_Random_Enemy_Attack_effect = yes
+		}
+	}
+}
+
+country_event = {
+	id = MIL_ruins_attack.641
+	title = MIL_ruins_attack.641.t
+	desc = MIL_ruins_attack.641.d
+	is_triggered_only = yes
+
+	trigger = {
+		original_tag = MIL
+		NOT = { has_country_flag = MIL_ruins_enemy_active }
+		641 = { NOT = { has_state_flag = MIL_ruins_attack_triggered } }
+	}
+
+	option = {
+		name = MIL_ruins_attack.response
+		ai_chance = { base = 1 }
+		hidden_effect = {
+			# 2026-07-24 修改：将袭击初始化放入玩家选项，隐藏执行地图状态变化。
+			BARE_MIL_Ruins_Set_Attack_Target_641_effect = yes
+			BARE_MIL_Ruins_Start_Random_Enemy_Attack_effect = yes
+		}
+	}
+}
+
+country_event = {
+	id = MIL_ruins_attack.640
+	title = MIL_ruins_attack.640.t
+	desc = MIL_ruins_attack.640.d
+	is_triggered_only = yes
+
+	trigger = {
+		original_tag = MIL
+		NOT = { has_country_flag = MIL_ruins_enemy_active }
+		640 = { NOT = { has_state_flag = MIL_ruins_attack_triggered } }
+	}
+
+	option = {
+		name = MIL_ruins_attack.response
+		ai_chance = { base = 1 }
+		hidden_effect = {
+			# 2026-07-24 修改：将袭击初始化放入玩家选项，隐藏执行地图状态变化。
+			BARE_MIL_Ruins_Set_Attack_Target_640_effect = yes
+			BARE_MIL_Ruins_Start_Random_Enemy_Attack_effect = yes
+		}
+	}
+}
+
+country_event = {
+	id = MIL_ruins_attack.639
+	title = MIL_ruins_attack.639.t
+	desc = MIL_ruins_attack.639.d
+	is_triggered_only = yes
+
+	trigger = {
+		original_tag = MIL
+		NOT = { has_country_flag = MIL_ruins_enemy_active }
+		639 = { NOT = { has_state_flag = MIL_ruins_attack_triggered } }
+	}
+
+	option = {
+		name = MIL_ruins_attack.response
+		ai_chance = { base = 1 }
+		hidden_effect = {
+			# 2026-07-24 修改：将袭击初始化放入玩家选项，隐藏执行地图状态变化。
+			BARE_MIL_Ruins_Set_Attack_Target_639_effect = yes
+			BARE_MIL_Ruins_Start_Random_Enemy_Attack_effect = yes
+		}
+	}
+}
