@@ -728,7 +728,11 @@ focus_tree = {
 		prerequisite = {
 			focus = MIL_more_coffee
 		}
-        completion_reward = {
+		completion_reward = {
+			# 2026-07-27 修改：正式启动基础180天的虚数循环，并挂载永久累积动态修正。
+			set_variable = { MIL_award_imaginary_number_network_duration = 180 }
+			add_dynamic_modifier = { modifier = MIL_Imaginary_System_Upgrade }
+			activate_mission = MIL_award_imaginary_number_network_new_invention
 			country_event = MIL_event.5
 		}
 	}
@@ -926,6 +930,14 @@ focus_tree = {
 				}
 			}
 		}
+		# 2026-07-24 修改：债务清理完成后，AI应优先进入旧校区废墟开发线。
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 50
+				has_completed_focus = MIL_no_debt
+			}
+		}
 	}
 	focus = { #废墟清理方案
 		id = MIL_Ruin_clearance_plan
@@ -942,6 +954,14 @@ focus_tree = {
 			# 2026-07-14 修改：废墟清理方案改为解锁旧校区废墟开发三阶段决议。
 			set_country_flag = MIL_ruins_development_decisions_unlocked
 			unlock_decision_category_tooltip = MIL_ruins_development_decision_category
+		}
+		# 2026-07-24 修改：废墟开发入口开启后，AI大幅提高第一阶段国策优先级。
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 50
+				has_country_flag = MIL_ruins_development_started
+			}
 		}
 	}
 	focus = { #让我们大干一场吧
@@ -964,6 +984,14 @@ focus_tree = {
 					idea = MIL_ruins_civilian_factory_donation_hidden
 					days = 365
 				}
+			}
+		}
+		# 2026-07-24 修改：解锁施工决议后，AI优先取得废墟开发启动资源。
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 50
+				has_completed_focus = MIL_Ruin_clearance_plan
 			}
 		}
 	}
@@ -992,6 +1020,14 @@ focus_tree = {
 				}
 			}
 		}
+		# 2026-07-24 修改：废墟开发启动后，AI优先完成第一阶段常规收益国策。
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 50
+				has_country_flag = MIL_ruins_development_started
+			}
+		}
 	}
 	focus = { #这已经不是一般的钉子户了
 		id = MIL_it_not_normal
@@ -1018,6 +1054,19 @@ focus_tree = {
 				BARE_MIL_Ruins_Spawn_Pin_Holder_Automech_effect = yes
 			}
 		}
+		# 2026-07-24 修改：遭遇废墟袭击时，AI以极高优先级取得应急防卫力量。
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				has_country_flag = MIL_ruins_enemy_active
+			}
+			modifier = {
+				factor = 30
+				has_country_flag = MIL_ruins_attack_has_occurred
+				NOT = { has_country_flag = MIL_ruins_enemy_active }
+			}
+		}
 	}
 	focus = { #必须出重拳
 		id = MIL_we_need_Strong_fight
@@ -1040,6 +1089,19 @@ focus_tree = {
 			custom_override_tooltip = {
 				tooltip = MIL_ruins_heavy_assault_mech_reinforcement_tt
 				BARE_MIL_Ruins_Spawn_Heavy_Assault_Mech_effect = yes
+			}
+		}
+		# 2026-07-24 修改：废墟敌人仍在活动时，AI以极高优先级解锁特化攻势。
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				has_country_flag = MIL_ruins_enemy_active
+			}
+			modifier = {
+				factor = 30
+				has_country_flag = MIL_ruins_attack_has_occurred
+				NOT = { has_country_flag = MIL_ruins_enemy_active }
 			}
 		}
 	}
@@ -1071,6 +1133,14 @@ focus_tree = {
 				BARE_MIL_Ruins_Reward_Two_Rebuilt_States_effect = yes
 			}
 		}
+		# 2026-07-24 修改：两处废墟完成重建后，AI优先收束第一阶段开发线。
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				BARE_MIL_Ruins_Has_Two_Rebuilt_States = yes
+			}
+		}
 	}
 	focus = { #千年发展的新蓝图
 		id = MIL_new_development_plan
@@ -1090,13 +1160,22 @@ focus_tree = {
 		prerequisite = {
 			focus = MIL_best_internet
 		}
+		available = {
+			# 2026-07-27 修改：只有财政危机进入稳定侧80%后，才可采用新发展蓝图。
+			custom_override_tooltip = {
+				tooltip = MIL_new_development_plan_financial_stability_tt
+				power_balance_value = { id = MIL_bp_financial_crisis_balance value < -0.79 }
+			}
+		}
 		completion_reward = {
 			# 2026-05-20: 完成“千年发展的新蓝图”后，延迟 4 个月触发晄轮大祭筹备事件
 			# 2026-07-01 修改：补齐工业线文档中千年大赏追加收益，并在已有千年大赏任务激活时立即推进结算。
 			add_ideas = MIL_new_blueprint_award_bonus
 			custom_effect_tooltip = MIL_new_development_plan_award_mission_tooltip
 			custom_effect_tooltip = MIL_new_development_plan_sport_event_tooltip
+			custom_effect_tooltip = MIL_new_development_plan_bop_tooltip
 			hidden_effect = {
+				BARE_MIL_Start_Development_Resource_Allocation_effect = yes
 				if = {
 					limit = { has_active_mission = MIL_award_imaginary_number_network_new_invention }
 					add_days_mission_timeout = {
@@ -1121,6 +1200,7 @@ focus_tree = {
 				country_event = { id = MIL_sport_event.1 days = 120 }
 			}
 		}
+		ai_will_do = { factor = 100 }
 	}
 	focus = { #更进一步的可能
 		id = MIL_new_progress_possible
@@ -1135,7 +1215,7 @@ focus_tree = {
 			focus = MIL_new_development_plan
 		}
 		completion_reward = {
-			# 2026-07-01 修改：按工业线文档实现“研讨会的新预算”的确定奖励；事件文本待后续补充时再接入。
+			# 2026-07-27 修改：保留既定奖励，并触发无额外效果的“研讨会的新预算”占位事件。
 			add_political_power = 50
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 1
@@ -1145,7 +1225,9 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			country_event = { id = MIL_industrial_phase_2.3 }
 		}
+		ai_will_do = { factor = 100 }
 	}
 	focus = { #推广机动建设技术
 		id = MIL_Promote_mobile_construction_technology
@@ -1163,6 +1245,7 @@ focus_tree = {
 			# 2026-07-01 修改：按工业线文档获得机动建设技术第一阶段收益。
 			add_ideas = MIL_mobile_construction_technology_1
 		}
+		ai_will_do = { factor = 100 }
 	}
 	focus = { #数量摊平成本
 		id = MIL_high_quantity_low_cost
@@ -1207,6 +1290,7 @@ focus_tree = {
 				clr_state_flag = MIL_high_quantity_low_cost_selected_state
 			}
 		}
+		ai_will_do = { factor = 100 }
 	}
 	focus = { #技术保障质量
 		id = MIL_Technology_guarantees_quality
@@ -1227,6 +1311,7 @@ focus_tree = {
 				add_idea = MIL_mobile_construction_technology_3
 			}
 		}
+		ai_will_do = { factor = 100 }
 	}
 	focus = { #升级“虚数”
 		id = MIL_Upgrade_Imaginary_numbers
@@ -1243,10 +1328,18 @@ focus_tree = {
 		prerequisite = {
 			focus = MIL_Ruin_development
 		}
+		available = {
+			# 2026-07-27 修改：升级虚数要求至少完成两轮循环优化。
+			custom_override_tooltip = {
+				tooltip = MIL_Upgrade_Imaginary_numbers_count_tt
+				check_variable = { MIL_award_imaginary_number_network_completed > 1 }
+			}
+		}
 		completion_reward = {
-			# 2026-07-01 修改：先实现文档中确定的科研槽奖励；虚数优化次数前置待上游系统完善后补充。
+			# 2026-07-27 修改：完成至少两轮虚数优化后获得科研槽。
 			add_research_slot = 1
 		}
+		ai_will_do = { factor = 100 }
 	}
 	focus = { #第二座千年之塔
 		id = MIL_the_second_mil_tower
@@ -1268,6 +1361,7 @@ focus_tree = {
 			# 2026-07-01 修改：开启第二座千年巨塔建设阶段收益。
 			add_ideas = MIL_second_millennium_tower_1
 		}
+		ai_will_do = { factor = 100 }
 	}
 	focus = { #扩建埃里都
 		id = MIL_Expand_Eridu
@@ -1284,6 +1378,21 @@ focus_tree = {
 		prerequisite = {
 			focus = MIL_Ruin_development
 		}
+		available = {
+			# 2026-07-27 修改：扩建埃里都只允许在643完成重建且由千年拥有和控制时进行。
+			custom_override_tooltip = {
+				tooltip = MIL_Expand_Eridu_rebuilt_tt
+				643 = {
+					has_state_flag = MIL_ruins_stage_3
+					is_owned_and_controlled_by = ROOT
+				}
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = MIL_Expand_Eridu_effect_tt
+			hidden_effect = { BARE_MIL_Phase_2_Expand_Eridu_effect = yes }
+		}
+		ai_will_do = { factor = 100 }
 	}
 	focus = { #废墟大开发
 		id = MIL_Ruin_development
@@ -1297,6 +1406,27 @@ focus_tree = {
 		prerequisite = {
 			focus = MIL_new_development_plan
 		}
+		available = {
+			# 2026-07-27 修改：四个废墟地块都完成初步开发后，才允许进入统一的大开发阶段。
+			custom_override_tooltip = {
+				tooltip = MIL_Ruin_development_all_ruins_started_tt
+				639 = { has_state_flag = MIL_ruins_stage_1 }
+				640 = { has_state_flag = MIL_ruins_stage_1 }
+				641 = { has_state_flag = MIL_ruins_stage_1 }
+				643 = { has_state_flag = MIL_ruins_stage_1 }
+			}
+		}
+		completion_reward = {
+			# 2026-07-27 修改：废墟大开发开启第二阶段工业、科研设施建设，并沿用现有废墟决议组。
+			set_country_flag = MIL_phase_2_ruins_development_unlocked
+			set_variable = { MIL_phase_2_civilian_facility_duration = 45 }
+			set_variable = { MIL_phase_2_weapons_facility_duration = 45 }
+			unlock_decision_category_tooltip = MIL_ruins_development_decision_category
+			unlock_decision_tooltip = MIL_phase_2_build_civilian_facilities
+			unlock_decision_tooltip = MIL_phase_2_build_weapons_facilities
+			custom_effect_tooltip = MIL_Ruin_development_research_unlock_tt
+		}
+		ai_will_do = { factor = 100 }
 	}
 	focus = { #清理更多废墟区域
 		id = MIL_Clear_more_debris_areas
@@ -1310,6 +1440,18 @@ focus_tree = {
 		prerequisite = {
 			focus = MIL_Ruin_development
 		}
+		available = {
+			# 2026-07-27 修改：清理更多废墟区域要求至少三块废墟完成重建。
+			custom_override_tooltip = {
+				tooltip = MIL_Clear_more_debris_areas_three_states_tt
+				BARE_MIL_Phase_2_Has_Three_Rebuilt_States = yes
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = MIL_Clear_more_debris_areas_effect_tt
+			hidden_effect = { BARE_MIL_Phase_2_Clear_More_Ruins_effect = yes }
+		}
+		ai_will_do = { factor = 100 }
 	}
 	focus = { #巨塔中期工程
 		id = MIL_Tower_mid_term_Project
@@ -1324,13 +1466,21 @@ focus_tree = {
 			focus = MIL_the_second_mil_tower
 		}
 		prerequisite = {
+			# 2026-07-27 修改：扩建埃里都或升级虚数任意完成一个即可进入中期工程。
 			focus = MIL_Expand_Eridu
 			focus = MIL_Upgrade_Imaginary_numbers
+		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = MIL_Tower_mid_term_Project_thresholds_tt
+				BARE_MIL_Phase_2_Tower_Midterm_Thresholds = yes
+			}
 		}
 		completion_reward = {
 			# 2026-07-01 修改：推进巨塔中期工程，降低前期建设压力并开放科研配套收益。
 			add_ideas = MIL_second_millennium_tower_2
 		}
+		ai_will_do = { factor = 100 }
 	}
 	focus = { #更多，更新，更强大的科研设备
 		id = MIL_more_research_equipment
@@ -1344,10 +1494,34 @@ focus_tree = {
 		prerequisite = {
 			focus = MIL_Tower_mid_term_Project
 		}
-		completion_reward = {
-			# 2026-07-01 修改：推进巨塔科研设备阶段；废墟科研设施投放待废墟文档完善后接入。
-			add_ideas = MIL_second_millennium_tower_3
+		available = {
+			custom_override_tooltip = {
+				tooltip = MIL_more_research_equipment_count_tt
+				check_variable = { MIL_award_imaginary_number_network_completed > 3 }
+			}
 		}
+		completion_reward = {
+			# 2026-07-27 修改：推进巨塔科研设备阶段，并在剩余地块免费投放一座玩家选择的科研设施。
+			add_ideas = MIL_second_millennium_tower_3
+			if = {
+				limit = { BARE_MIL_Phase_2_Has_Research_Facility_Target = yes }
+				hidden_effect = {
+					BARE_MIL_Phase_2_Select_Research_Target_effect = yes
+					country_event = { id = MIL_industrial_phase_2.2 }
+				}
+			}
+			else = {
+				custom_effect_tooltip = MIL_more_research_equipment_fallback_tt
+				hidden_effect = {
+					random_owned_controlled_state = {
+						limit = { OR = { state = 639 state = 640 state = 641 state = 643 } has_state_flag = MIL_ruins_stage_3 }
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+					}
+				}
+			}
+		}
+		ai_will_do = { factor = 100 }
 	}
 	focus = { #更好，更美，更优异的实验环境
 		id = MIL_better_Experimental_environment
@@ -1361,10 +1535,17 @@ focus_tree = {
 		prerequisite = {
 			focus = MIL_Tower_mid_term_Project
 		}
+		available = {
+			custom_override_tooltip = {
+				tooltip = MIL_better_Experimental_environment_thresholds_tt
+				BARE_MIL_Phase_2_Experimental_Environment_Thresholds = yes
+			}
+		}
 		completion_reward = {
 			# 2026-07-01 修改：推进巨塔实验环境阶段，追加科研与政治点数收益。
 			add_ideas = MIL_second_millennium_tower_4
 		}
+		ai_will_do = { factor = 100 }
 	}
 	focus = { #接近完工的巨塔
 		id = MIL_nearly_completed_tower
@@ -1389,6 +1570,7 @@ focus_tree = {
 			add_political_power = 50
 			add_ideas = MIL_second_millennium_tower_5
 		}
+		ai_will_do = { factor = 100 }
 	}
 	focus = { #属于一代千年人的智慧结晶
 		id = MIL_mil_wisdom
@@ -1418,7 +1600,10 @@ focus_tree = {
 				remove_ideas = MIL_second_millennium_tower_5
 			}
 			add_ideas = MIL_millennium_students_wisdom_crystallization
+			# 2026-07-27 修改：最终国策触发不附加数值效果的“欢庆时刻”占位事件。
+			country_event = { id = MIL_industrial_phase_2.4 }
 		}
+		ai_will_do = { factor = 100 }
 	}
 	focus = { #清理不是破坏
 		id = MIL_clean_not_destory
@@ -1432,6 +1617,20 @@ focus_tree = {
 		prerequisite = {
 			focus = MIL_Clear_more_debris_areas
 		}
+		bypass = {
+			# 2026-07-27 修改：三次正式科研设施建设均已完成时，优惠已无可用对象，自动跳过本国策。
+			custom_override_tooltip = {
+				tooltip = MIL_clean_not_destory_bypass_tt
+				check_variable = { MIL_phase_2_research_facilities_completed > 2 }
+			}
+		}
+		completion_reward = {
+			# 2026-07-27 修改：提供两次科研设施优惠；只有四个固定落点均占用时才逐次折算。
+			add_to_variable = { MIL_phase_2_research_discount_uses = 2 }
+			custom_effect_tooltip = MIL_clean_not_destory_discount_tt
+			hidden_effect = { BARE_MIL_Phase_2_Convert_All_Research_Discounts_effect = yes }
+		}
+		ai_will_do = { factor = 100 }
 	}
 	focus = { #除旧才能换新
 		id = MIL_throw_old_can_get_new
@@ -1445,6 +1644,12 @@ focus_tree = {
 		prerequisite = {
 			focus = MIL_clean_not_destory
 		}
+		completion_reward = {
+			# 2026-07-27 修改：解锁每个废墟地块各一次的设备更新目标决议。
+			set_country_flag = MIL_phase_2_equipment_update_unlocked
+			unlock_decision_tooltip = MIL_phase_2_update_local_equipment
+		}
+		ai_will_do = { factor = 100 }
 	}
 
 

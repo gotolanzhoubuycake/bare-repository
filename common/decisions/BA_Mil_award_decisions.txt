@@ -69,7 +69,9 @@ MIL_award_debug_decisions = {
     }
 }
 MIL_award_imaginary_number_network_decisions = {
+	# 2026-07-27 修改：旧虚数交互按钮仍属未完成调试内容；正式流程只显示自动循环任务。
     MIL_award_imaginary_number_network_more_money = {
+		visible = { is_debug = yes }
         days_remove = 45
         days_re_enable = 45
         modifier = {
@@ -83,6 +85,7 @@ MIL_award_imaginary_number_network_decisions = {
         }
     }
     MIL_award_imaginary_number_network_more_people = {
+		visible = { is_debug = yes }
         days_remove = 45
         days_re_enable = 45
         modifier = {
@@ -96,9 +99,11 @@ MIL_award_imaginary_number_network_decisions = {
         }
     }
     MIL_award_imaginary_number_network_fix = {
+		visible = { is_debug = yes }
         
     }
     MIL_award_imaginary_number_network_update = {
+		visible = { is_debug = yes }
         cost = 25
         days_remove = 45
         days_re_enable = 45
@@ -118,6 +123,7 @@ MIL_award_imaginary_number_network_decisions = {
         }
     }
     MIL_award_imaginary_number_network_build = {
+		visible = { is_debug = yes }
         cost = 30
         days_remove = 15
         days_re_enable = 15
@@ -147,34 +153,34 @@ MIL_award_imaginary_number_network_decisions = {
         }
     }
     MIL_award_imaginary_number_network_new_invention = {
+		# 2026-07-27 修改：虚数优化由“千年网络，风景独好”启动，永久循环并逐轮延长30天。
         allowed = { tag = MIL }
         available = {
             always = no
         }
         timeout_effect = {
-            randomize_variable = {
-                var = MIL_award_imaginary_number_network_prob
-                distribution = uniform
-                min = 0
-                max = 100
-            }
-            if = {
-                limit = { check_variable = { MIL_award_imaginary_number_network_prob > MIL_award_imaginary_number_network_max } }
-                add_to_variable = { MIL_award_imaginary_number_network_research_speed = 0.03 } 
-            }
-            else_if = {
-                limit = { check_variable = { MIL_award_imaginary_number_network_prob > MIL_award_imaginary_number_network_min } }
-                add_to_variable = { MIL_award_imaginary_number_network_research_speed = 0.02 } 
-            }
-            else_if = {
-                limit = { check_variable = { MIL_award_imaginary_number_network_prob > 0 } }
-                add_to_variable = { MIL_award_imaginary_number_network_research_speed = 0.01 } 
-            }
-            else = {
-
-            }
+			# 入口：180天基础任务或后续延长任务到期。
+			# 关键状态：10%大优化、90%常规优化；两类速度变量永久累积，完成次数供后续国策读取。
+			# 预期结果：两项速度同步增加，任务下一轮增加30天并立即重新启动。
+			custom_effect_tooltip = MIL_award_imaginary_number_network_result_tt
+			hidden_effect = {
+				random_list = {
+					10 = {
+						add_to_variable = { MIL_award_imaginary_number_network_research_speed = 0.02 }
+						add_to_variable = { MIL_award_imaginary_number_network_special_project_speed = 0.02 }
+					}
+					90 = {
+						add_to_variable = { MIL_award_imaginary_number_network_research_speed = 0.01 }
+						add_to_variable = { MIL_award_imaginary_number_network_special_project_speed = 0.01 }
+					}
+				}
+				add_to_variable = { MIL_award_imaginary_number_network_completed = 1 }
+				force_update_dynamic_modifier = yes
+				add_to_variable = { MIL_award_imaginary_number_network_duration = 30 }
+				activate_mission = MIL_award_imaginary_number_network_new_invention
+			}
         }
-        days_mission_timeout = 180
+		days_mission_timeout = var:MIL_award_imaginary_number_network_duration
         is_good = yes
     }
 }

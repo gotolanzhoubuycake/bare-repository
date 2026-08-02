@@ -4174,10 +4174,10 @@ BARE_MIL_Ruins_Set_Stage_2_effect = {
 }
 
 BARE_MIL_Ruins_Set_Stage_3_effect = {
-	# 2026-07-13 修改：旧校区废墟地块完成阶段3“重建基础设施”后的最终状态切换。
+	# 2026-07-27 修改：旧校区废墟地块完成阶段3“重建基础设施”后统一执行最终状态切换与首次改名。
 	# 入口：废墟开发阶段3决议倒计时完成后，在目标地块作用域调用。
-	# 关键变量：目标地块必须已经拥有 MIL_ruins_stage_2；最终状态由 MIL_ruins_stage_3 记录。
-	# 预期结果：移除废墟负面修正，添加“优良建设区域”，并把该地块控制权、拥有权和核心交给千年。
+	# 关键变量：目标地块必须已经拥有 MIL_ruins_stage_2；最终状态由 MIL_ruins_stage_3 记录；地区ID决定首次地区名和胜利点名称。
+	# 预期结果：移除废墟负面修正，添加“优良建设区域”，改为正式园区名称，并把控制权、拥有权和核心交给千年。
 	remove_dynamic_modifier = { modifier = MIL_ruins_city_modifier }
 	remove_dynamic_modifier = { modifier = MIL_ruins_city_initial_development_modifier }
 	remove_dynamic_modifier = { modifier = MIL_ruins_city_cleared_modifier }
@@ -4186,6 +4186,27 @@ BARE_MIL_Ruins_Set_Stage_3_effect = {
 		add_dynamic_modifier = { modifier = MIL_ruins_excellent_construction_area_modifier }
 	}
 	set_state_flag = MIL_ruins_stage_3
+	if = {
+		limit = { state = 639 }
+		set_state_name = "千年松岭科研园"
+		set_province_name = { id = 4833 name = "松岭研究站" }
+	}
+	else_if = {
+		limit = { state = 640 }
+		set_state_name = "千年镜湖工程园"
+		set_province_name = { id = 4719 name = "镜湖工程基地" }
+	}
+	else_if = {
+		limit = { state = 641 }
+		set_state_name = "千年双湖新市镇"
+		set_province_name = { id = 12017 name = "双湖新城" }
+	}
+	else_if = {
+		limit = { state = 643 }
+		set_state_name = "千年南湖技术园"
+		set_province_name = { id = 5599 name = "南湖接入终端" }
+		set_province_name = { id = 12080 name = "无名要塞都市" }
+	}
 	transfer_state_to = MIL
 	add_core_of = MIL
 }

@@ -1,23 +1,9 @@
 objectTypes = {
 
-	# 2026-08-03：原部署星野完整注册备份为 ABY_culture_units.gfx.bak，内容与 Git HEAD 逐字节一致；.bak 扩展名不会被 HOI4读取。
-	# 切换原版时：将当前 .gfx 改为临时非注册扩展名，再将 .gfx.bak 改为 .gfx；恢复第51轮时反向操作。不要让两个 .gfx 同时存在。
-	# 2026-08-03：星野人物模型正式更新。人物使用第51轮已审核mesh；以下MP43定义合并于本学院实体文件，避免把测试注册文件直接作为运行时入口。
-	# 该模型只复用已认证的MP43刚体变换，不新增专用动画，不改变ABY现有54项人物动画链。
 	### ABY_INFANTRY
-	# 2026-08-03：星野正式MP43 mesh；模型路径保持独立，便于按哈希回溯，不复用部署人物几何或权重。
-	pdxmesh = {
-		name = "ABY_hoshino_mp43_mesh"
-		file = "gfx/models/units/infantry/ABY_culture/hoshino_reimport_validation/r51g1/hoshino_round51_mp43.mesh"
-	}
-	# 回退开关（必须成对切换）：每个pdxmesh只能保留一个生效file；恢复原部署星野时，先注释“当前第51轮”file行，再取消对应“原部署版本”file行注释。仅解除注释而不注释当前行会造成重复file定义，不视为有效切换。
-
-	    pdxmesh = {
+    pdxmesh = {
 		name = "ABY_infantry_rifle_mesh"
-		# 当前第51轮正式人物模型（生效）
-		file = "gfx/models/units/infantry/ABY_culture/hoshino_reimport_validation/deployed_size/hoshino_reimport_infantry_round51.mesh"
-		# 原部署星野回退路径（默认注释；SHA-256 6CAA84191F721EC464B3E7E57A48BF374C324C1EED51F6C7D0D3C73C328419A3）
-		# file = "gfx/models/units/infantry/ABY_culture/hoshino_battle/hoshinobattle_infantry.mesh"
+		file = "gfx/models/units/infantry/ABY_culture/hoshino_battle/hoshinobattle_infantry.mesh"
 		
 		animation = { id = "idle"				type = "GER_infantry_rifle_idle_animation" }
 		animation = { id = "attack"				type = "GER_infantry_rifle_attack_animation" }
@@ -50,10 +36,7 @@ objectTypes = {
 
 	pdxmesh = {
 		name = "ABY_infantry_mg_mesh"
-		# 当前第51轮正式人物模型（生效）
-		file = "gfx/models/units/infantry/ABY_culture/hoshino_reimport_validation/deployed_size/hoshino_reimport_infantry_round51.mesh"
-		# 原部署星野回退路径（默认注释；SHA-256 6CAA84191F721EC464B3E7E57A48BF374C324C1EED51F6C7D0D3C73C328419A3）
-		# file = "gfx/models/units/infantry/ABY_culture/hoshino_battle/hoshinobattle_infantry.mesh"
+		file = "gfx/models/units/infantry/ABY_culture/hoshino_battle/hoshinobattle_infantry.mesh"
 		
 		animation = { id = "idle"				type = "GER_infantry_mg_idle_animation" }
 		animation = { id = "attack"				type = "GER_infantry_mg_attack_animation" }

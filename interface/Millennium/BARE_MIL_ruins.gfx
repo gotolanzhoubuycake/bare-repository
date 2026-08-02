@@ -1,0 +1,25 @@
+# 2026-07-10 修改：注册千年旧校区废墟开发系统的临时原版图标引用。
+# 用途：先使用原版图标，后续正式美术只需替换本文件 texturefile。
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_MIL_ruins_city"
+		texturefile = "gfx/interface/state_modifiers/modifiers_generic_construction.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MIL_ruins_intelligence"
+		texturefile = "gfx/interface/state_modifiers/modifiers_generic_resistance.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MIL_ruins_security"
+		texturefile = "gfx/interface/ideas/generic_infantry_bonus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MIL_ruins_research"
+		texturefile = "gfx/interface/ideas/generic_research_bonus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MIL_ruins_industry"
+		texturefile = "gfx/interface/ideas/generic_production_bonus.dds"
+	}
+}

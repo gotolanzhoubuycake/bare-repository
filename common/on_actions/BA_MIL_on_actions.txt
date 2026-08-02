@@ -45,6 +45,14 @@ on_actions = {
                 }
                 BARE_MIL_Sport_AI_Daily_Check_effect = yes
             }
+			# 2026-07-27 修改：643只在千年控制期间累计埃里都工厂转化日期。
+			if = {
+				limit = {
+					original_tag = MIL
+					has_country_flag = MIL_phase_2_eridu_conversion_unlocked
+				}
+				BARE_MIL_Phase_2_Eridu_Daily_Check_effect = yes
+			}
         }
     }
 

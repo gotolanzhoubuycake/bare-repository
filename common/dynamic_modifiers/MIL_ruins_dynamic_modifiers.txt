@@ -82,7 +82,10 @@ MIL_ruins_destroyed_city_modifier = {
 
 MIL_ruins_new_equipment_modifier = {
 	icon = "GFX_idea_MIL_ruins_industry"
-	enable = { always = yes }
+	# 2026-07-27 修改：设备上新永久记录在地块上，但只有千年控制当地时提供效果。
+	enable = {
+		controller = { original_tag = MIL }
+	}
 
 	state_production_speed_buildings_factor = 0.25
 	local_building_slots_factor = 0.25

@@ -479,6 +479,10 @@ spriteTypes = {
 		texturefile = "gfx/leaders/MIL/sumire.dds"
 	}
 	spriteType = {
+		name = "GFX_portrait_MIL_midori"
+		texturefile = "gfx/leaders/MIL/midori.dds"
+	}
+	spriteType = {
 		name = "GFX_portrait_MIL_rio_small"
 		texturefile = "gfx/leaders/MIL/rio_small.dds"
 	}
@@ -496,7 +500,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_portrait_MIL_chihiro_small"
-		texturefile = "gfx/leaders/MIL/chihiro_small.dds"
+		texturefile = "gfx/leaders/MIL/chihoro_small.dds"
 	}
 	spriteType = {
 		name = "GFX_portrait_MIL_maki_small"
@@ -565,6 +569,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_portrait_MIL_sumire_small"
 		texturefile = "gfx/leaders/MIL/sumire_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_MIL_midori_small"
+		texturefile = "gfx/leaders/MIL/midori_small.dds"
 	}
 	
 ### TRI

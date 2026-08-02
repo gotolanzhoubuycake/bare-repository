@@ -1,0 +1,80 @@
+# 2026-07-27 修改：新增千年工业线第二阶段科研设施选择及巨塔叙事占位事件。
+add_namespace = MIL_industrial_phase_2
+
+country_event = {
+	# 2026-07-27 修改：正式科研建设完成后，玩家从尚未使用的设施类型中选择一种。
+	# 入口：BARE_MIL_Phase_2_Complete_Formal_Research_Facility_effect。
+	# 关键状态：正式类型旗标限制各类一次，随机目标旗标固定实际落点。
+	# 预期结果：完成设施建设，并在全部落点占满时折算剩余优惠。
+	id = MIL_industrial_phase_2.1
+	title = MIL_industrial_phase_2.1.t
+	desc = MIL_industrial_phase_2.1.d
+	is_triggered_only = yes
+
+	option = {
+		name = MIL_industrial_phase_2.1.land
+		trigger = { NOT = { has_country_flag = MIL_phase_2_land_facility_used } }
+		custom_effect_tooltip = MIL_industrial_phase_2.1.land_tt
+		hidden_effect = {
+			set_variable = { MIL_phase_2_research_facility_type = 1 }
+			set_country_flag = MIL_phase_2_land_facility_used
+			BARE_MIL_Phase_2_Build_Selected_Research_Facility_effect = yes
+			BARE_MIL_Phase_2_Convert_All_Research_Discounts_effect = yes
+		}
+	}
+	option = {
+		name = MIL_industrial_phase_2.1.air
+		trigger = { NOT = { has_country_flag = MIL_phase_2_air_facility_used } }
+		custom_effect_tooltip = MIL_industrial_phase_2.1.air_tt
+		hidden_effect = {
+			set_variable = { MIL_phase_2_research_facility_type = 2 }
+			set_country_flag = MIL_phase_2_air_facility_used
+			BARE_MIL_Phase_2_Build_Selected_Research_Facility_effect = yes
+			BARE_MIL_Phase_2_Convert_All_Research_Discounts_effect = yes
+		}
+	}
+	option = {
+		name = MIL_industrial_phase_2.1.batech
+		trigger = { NOT = { has_country_flag = MIL_phase_2_batech_facility_used } }
+		custom_effect_tooltip = MIL_industrial_phase_2.1.batech_tt
+		hidden_effect = {
+			set_variable = { MIL_phase_2_research_facility_type = 3 }
+			set_country_flag = MIL_phase_2_batech_facility_used
+			BARE_MIL_Phase_2_Build_Selected_Research_Facility_effect = yes
+			BARE_MIL_Phase_2_Convert_All_Research_Discounts_effect = yes
+		}
+	}
+}
+
+country_event = {
+	# 2026-07-27 修改：巨塔国策提供的免费设施不限制重复类型，也不增加正式建设次数。
+	# 入口：MIL_more_research_equipment完成奖励。
+	# 关键状态：目标已由国策完成效果选定，选项仅决定设施类型。
+	# 预期结果：免费建成一座设施，并在全部落点占满时折算剩余优惠。
+	id = MIL_industrial_phase_2.2
+	title = MIL_industrial_phase_2.2.t
+	desc = MIL_industrial_phase_2.2.d
+	is_triggered_only = yes
+
+	option = { name = MIL_industrial_phase_2.2.land custom_effect_tooltip = MIL_industrial_phase_2.2.land_tt hidden_effect = { set_variable = { MIL_phase_2_research_facility_type = 1 } BARE_MIL_Phase_2_Build_Selected_Research_Facility_effect = yes BARE_MIL_Phase_2_Convert_All_Research_Discounts_effect = yes } }
+	option = { name = MIL_industrial_phase_2.2.air custom_effect_tooltip = MIL_industrial_phase_2.2.air_tt hidden_effect = { set_variable = { MIL_phase_2_research_facility_type = 2 } BARE_MIL_Phase_2_Build_Selected_Research_Facility_effect = yes BARE_MIL_Phase_2_Convert_All_Research_Discounts_effect = yes } }
+	option = { name = MIL_industrial_phase_2.2.batech custom_effect_tooltip = MIL_industrial_phase_2.2.batech_tt hidden_effect = { set_variable = { MIL_phase_2_research_facility_type = 3 } BARE_MIL_Phase_2_Build_Selected_Research_Facility_effect = yes BARE_MIL_Phase_2_Convert_All_Research_Discounts_effect = yes } }
+}
+
+country_event = {
+	# 2026-07-27 修改：更进一步的可能国策使用的单选项叙事占位事件，不附加数值效果。
+	id = MIL_industrial_phase_2.3
+	title = MIL_industrial_phase_2.3.t
+	desc = MIL_industrial_phase_2.3.d
+	is_triggered_only = yes
+	option = { name = MIL_industrial_phase_2.3.a }
+}
+
+country_event = {
+	# 2026-07-27 修改：工业线最终国策使用的单选项叙事占位事件，不附加数值效果。
+	id = MIL_industrial_phase_2.4
+	title = MIL_industrial_phase_2.4.t
+	desc = MIL_industrial_phase_2.4.d
+	is_triggered_only = yes
+	option = { name = MIL_industrial_phase_2.4.a }
+}

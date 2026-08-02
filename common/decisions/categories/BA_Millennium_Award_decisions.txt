@@ -13,7 +13,9 @@ MIL_award_imaginary_number_network_decisions = {
 		original_tag = MIL
 	}
 	visible = {
-		is_debug = yes
+		# 2026-07-27 修改：完成千年网络国策后正式显示虚数优化循环，不再仅限调试模式。
+		original_tag = MIL
+		has_completed_focus = MIL_best_internet
 	}
 }
 MIL_award_engineer_department_decisions = {

@@ -1,0 +1,116 @@
+# 2026-07-27 修改：新增千年工业线第二阶段公共触发器，统一管理废墟大开发与巨塔工程门槛。
+
+BARE_MIL_Phase_2_Has_Three_Rebuilt_States = {
+	# 2026-07-27 修改：
+	# 入口：清理更多废墟区域国策的可用条件。
+	# 关键状态：四个废墟地块的 MIL_ruins_stage_3 地块旗标。
+	# 预期结果：至少三个地块完成第三阶段重建时返回真。
+	count_triggers = {
+		amount = 3
+		639 = { has_state_flag = MIL_ruins_stage_3 }
+		640 = { has_state_flag = MIL_ruins_stage_3 }
+		641 = { has_state_flag = MIL_ruins_stage_3 }
+		643 = { has_state_flag = MIL_ruins_stage_3 }
+	}
+}
+
+BARE_MIL_Phase_2_Has_Industrial_Construction_Target = {
+	# 2026-07-27 修改：
+	# 入口：民用设施建设和武器设施建设决议的可用条件。
+	# 关键状态：候选地块必须完成第三阶段重建，并由千年拥有和控制。
+	# 预期结果：至少存在一个可接受工业建设奖励的废墟地块时返回真。
+	OR = {
+		639 = { has_state_flag = MIL_ruins_stage_3 is_owned_and_controlled_by = ROOT }
+		640 = { has_state_flag = MIL_ruins_stage_3 is_owned_and_controlled_by = ROOT }
+		641 = { has_state_flag = MIL_ruins_stage_3 is_owned_and_controlled_by = ROOT }
+		643 = { has_state_flag = MIL_ruins_stage_3 is_owned_and_controlled_by = ROOT }
+	}
+}
+
+BARE_MIL_Phase_2_Has_Research_Facility_Target = {
+	# 2026-07-27 修改：
+	# 入口：正式科研设施建设决议和巨塔免费科研设施事件。
+	# 关键状态：候选地块完成重建、由千年拥有和控制，且未设置科研设施占位旗标。
+	# 预期结果：至少存在一个可以放置科研设施的固定省份时返回真。
+	OR = {
+		639 = {
+			has_state_flag = MIL_ruins_stage_3
+			is_owned_and_controlled_by = ROOT
+			NOT = { has_state_flag = MIL_phase_2_research_facility_built }
+		}
+		640 = {
+			has_state_flag = MIL_ruins_stage_3
+			is_owned_and_controlled_by = ROOT
+			NOT = { has_state_flag = MIL_phase_2_research_facility_built }
+		}
+		641 = {
+			has_state_flag = MIL_ruins_stage_3
+			is_owned_and_controlled_by = ROOT
+			NOT = { has_state_flag = MIL_phase_2_research_facility_built }
+		}
+		643 = {
+			has_state_flag = MIL_ruins_stage_3
+			is_owned_and_controlled_by = ROOT
+			NOT = { has_state_flag = MIL_phase_2_research_facility_built }
+		}
+	}
+}
+
+BARE_MIL_Phase_2_All_Research_Sites_Occupied = {
+	# 2026-07-27 修改：
+	# 入口：清理不是破坏的剩余优惠折算效果。
+	# 关键状态：四个地块均完成重建，且每个地块已经有一座科研设施。
+	# 预期结果：只有未来也不存在可建设科研设施的废墟地块时返回真，临时失去控制不会触发折算。
+	639 = { has_state_flag = MIL_ruins_stage_3 has_state_flag = MIL_phase_2_research_facility_built }
+	640 = { has_state_flag = MIL_ruins_stage_3 has_state_flag = MIL_phase_2_research_facility_built }
+	641 = { has_state_flag = MIL_ruins_stage_3 has_state_flag = MIL_phase_2_research_facility_built }
+	643 = { has_state_flag = MIL_ruins_stage_3 has_state_flag = MIL_phase_2_research_facility_built }
+}
+
+BARE_MIL_Phase_2_Can_Start_Formal_Research = {
+	# 2026-07-27 修改：
+	# 入口：六个科研设施建设时长变体的公共条件。
+	# 关键状态：正式建设少于三次、90日冷却结束、仍有未使用的设施类型和可用地块。
+	# 预期结果：同一时间只允许显示一个符合当前次数及优惠状态的建设决议。
+	check_variable = { MIL_phase_2_research_facilities_completed < 3 }
+	NOT = { has_country_flag = MIL_phase_2_research_facility_cooldown }
+	OR = {
+		NOT = { has_country_flag = MIL_phase_2_land_facility_used }
+		NOT = { has_country_flag = MIL_phase_2_air_facility_used }
+		NOT = { has_country_flag = MIL_phase_2_batech_facility_used }
+	}
+	BARE_MIL_Phase_2_Has_Research_Facility_Target = yes
+}
+
+BARE_MIL_Phase_2_Can_Update_Target_State = {
+	# 2026-07-27 修改：
+	# 入口：设备更新地块目标决议的 target_trigger。
+	# 关键状态：目标是四个已重建废墟地块之一，由千年拥有和控制，至少有一座民用工厂，且此前未更新。
+	# 预期结果：每个地块只能永久拆除一次民用工厂并获得一次设备更新。
+	OR = { state = 639 state = 640 state = 641 state = 643 }
+	has_state_flag = MIL_ruins_stage_3
+	is_owned_and_controlled_by = ROOT
+	industrial_complex > 0
+	NOT = { has_state_flag = MIL_phase_2_equipment_updated }
+}
+
+BARE_MIL_Phase_2_Tower_Midterm_Thresholds = {
+	# 2026-07-27 修改：
+	# 入口：巨塔中期工程国策的计数门槛。
+	# 关键变量：虚数优化、科研设施、工业设施和设备更新完成次数。
+	# 预期结果：3/2/5/1四项门槛全部达到时返回真。
+	check_variable = { MIL_award_imaginary_number_network_completed > 2 }
+	check_variable = { MIL_phase_2_research_facilities_completed > 1 }
+	check_variable = { MIL_phase_2_industrial_facilities_completed > 4 }
+	check_variable = { MIL_phase_2_equipment_updates_completed > 0 }
+}
+
+BARE_MIL_Phase_2_Experimental_Environment_Thresholds = {
+	# 2026-07-27 修改：
+	# 入口：更好、更美、更优异的实验环境国策的计数门槛。
+	# 关键变量：科研设施、工业设施和设备更新完成次数。
+	# 预期结果：3/7/2三项门槛全部达到时返回真。
+	check_variable = { MIL_phase_2_research_facilities_completed > 2 }
+	check_variable = { MIL_phase_2_industrial_facilities_completed > 6 }
+	check_variable = { MIL_phase_2_equipment_updates_completed > 1 }
+}

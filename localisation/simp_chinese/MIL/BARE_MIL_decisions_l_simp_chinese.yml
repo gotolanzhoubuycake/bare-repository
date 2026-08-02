@@ -203,7 +203,7 @@
  # 旧校区废墟开发
  MIL_ruins_development_decision_category: "旧校区废墟开发"
  # 2026-07-24 修改：统一展示施工进度、废墟攻势和战后解析，并说明袭击会中断当前阶段施工。
- MIL_ruins_development_decision_category_desc: "旧校区仍有大片废墟阻碍千年的后续建设。研讨会可以逐步组织工程队进入这些地块，完成测绘、清理和基础设施重建；安保部也会在此组织敌情分析、针对性攻势和战后解析。全部地块的开发过程中至少会发生一次未知袭击。若某阶段施工期间遭遇袭击，本次施工不计入开发进度；袭击结束后需要重新进行该阶段施工。\n\n§Y开发进度§!\n废弃住宅区 1-1-3：[Get_MIL_Ruins_641_Progress_Text]\n废弃住宅区 1-2-1：[Get_MIL_Ruins_643_Progress_Text]\n废弃城区 4-20-1：[Get_MIL_Ruins_640_Progress_Text]\n废弃城区 1-46-9：[Get_MIL_Ruins_639_Progress_Text]"
+ MIL_ruins_development_decision_category_desc: "旧校区仍有大片废墟阻碍千年的后续建设。研讨会可以逐步组织工程队进入这些地块，完成测绘、清理和基础设施重建；安保部也会在此组织敌情分析、针对性攻势和战后解析。全部地块的开发过程中至少会发生一次未知袭击。若某阶段施工期间遭遇袭击，本次施工不计入开发进度；袭击结束后需要重新进行该阶段施工。\n\n§Y开发进度§!\n废弃住宅区 1-1-3：[Get_MIL_Ruins_641_Progress_Text]\n废弃住宅区 1-2-1：[Get_MIL_Ruins_643_Progress_Text]\n废弃城区 4-20-1：[Get_MIL_Ruins_640_Progress_Text]\n废弃城区 1-46-9：[Get_MIL_Ruins_639_Progress_Text]\n\n§Y废墟大开发统计§!\n民用设施建设：§Y[?MIL_phase_2_civilian_facilities_completed|0]§!次\n武器设施建设：§Y[?MIL_phase_2_weapons_facilities_completed|0]§!次\n科研设施建设：§Y[?MIL_phase_2_research_facilities_completed|0]§!/3次\n设备更新：§Y[?MIL_phase_2_equipment_updates_completed|0]§!次\n可用科研设施优惠：§Y[?MIL_phase_2_research_discount_uses|0]§!次"
  MIL_ruins_progress_stage_0: "§R尚未开始（0/3）§!"
  MIL_ruins_progress_stage_1: "§Y初步开发完成（1/3）§!"
  MIL_ruins_progress_stage_2: "§Y废墟清理完成（2/3）§!"
