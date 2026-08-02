@@ -1,3 +1,4 @@
+# 千年大赏调试分类：只在 debug 模式下显示，用于手动初始化/测试决议变量。
 MIL_award_debug_decisions = {
 	priority = 1001
 	allowed = {
@@ -7,32 +8,47 @@ MIL_award_debug_decisions = {
 		is_debug = yes
 	}
 }
+
+# 千年大赏总览分类：由“千年大赏”国策显示，只放总览、年度结算和动态加成说明。
+MIL_award_decisions = {
+	priority = 200000
+	allowed = {
+		original_tag = MIL
+	}
+	visible = {
+		has_completed_focus = MIL_big_view
+	}
+}
+
+# “虚数”计划分类：由“虚数计划”国策显示。
 MIL_award_imaginary_number_network_decisions = {
-	priority = 100
+	priority = 199999
 	allowed = {
 		original_tag = MIL
 	}
 	visible = {
-		# 2026-07-27 修改：完成千年网络国策后正式显示虚数优化循环，不再仅限调试模式。
-		original_tag = MIL
-		has_completed_focus = MIL_best_internet
+		has_completed_focus = MIL_Imaginary_number_plan
 	}
 }
+
+# 工程师部的新发明分类：由“俺寻思这能行”国策显示。
 MIL_award_engineer_department_decisions = {
-	priority = 101
+	priority = 199998
 	allowed = {
 		original_tag = MIL
 	}
 	visible = {
-		is_debug = yes
+		has_completed_focus = MIL_i_think_it_can
 	}
 }
+
+# 游戏开发部的新游开发分类：由“新的激励计划”国策显示。
 MIL_award_game_development_decisions = {
-	priority = 102
+	priority = 199997
 	allowed = {
 		original_tag = MIL
 	}
 	visible = {
-		is_debug = yes
+		has_completed_focus = MIL_New_incentive_plan
 	}
 }

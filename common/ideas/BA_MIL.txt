@@ -18,6 +18,50 @@ ideas = {
             }
         }
 
+        # 千年大赏通用加速的60日资源代价。两条研发线使用独立idea，允许同时生效。
+        MIL_award_imaginary_number_network_more_money_penalty = {
+            name = MIL_award_imaginary_number_network_more_money_penalty
+            picture = MIL_place_of_pursuing_truth
+            allowed = { original_tag = MIL }
+            modifier = { consumer_goods_factor = 0.20 }
+        }
+
+        MIL_award_imaginary_number_network_more_people_penalty = {
+            name = MIL_award_imaginary_number_network_more_people_penalty
+            picture = MIL_place_of_pursuing_truth
+            allowed = { original_tag = MIL }
+            modifier = { research_speed_factor = -0.05 }
+        }
+
+        MIL_award_engineer_department_more_money_penalty = {
+            name = MIL_award_engineer_department_more_money_penalty
+            picture = MIL_place_of_pursuing_truth
+            allowed = { original_tag = MIL }
+            modifier = { consumer_goods_factor = 0.20 }
+        }
+
+        MIL_award_engineer_department_more_people_penalty = {
+            name = MIL_award_engineer_department_more_people_penalty
+            picture = MIL_place_of_pursuing_truth
+            allowed = { original_tag = MIL }
+            modifier = { research_speed_factor = -0.05 }
+        }
+
+        # 游戏开发部专属决议的30日资源代价，与决议本身的执行时长分开计算。
+        MIL_award_game_development_propaganda_penalty = {
+            name = MIL_award_game_development_propaganda_penalty
+            picture = MIL_place_of_pursuing_truth
+            allowed = { original_tag = MIL }
+            modifier = { consumer_goods_factor = 0.10 }
+        }
+
+        MIL_award_game_development_test_penalty = {
+            name = MIL_award_game_development_test_penalty
+            picture = MIL_place_of_pursuing_truth
+            allowed = { original_tag = MIL }
+            modifier = { political_power_factor = -0.03 }
+        }
+
 
 
         # 过于前卫的飞行器
@@ -274,23 +318,23 @@ ideas = {
             }
         }
 
-        # 2026-07-01 修改：承载千年工业线“千年发展的新蓝图”对千年大赏的确定追加收益。
-        MIL_new_blueprint_award_bonus = {
-            name = MIL_new_blueprint_award_bonus
-            picture = MIL_place_of_pursuing_truth
-            removal_cost = -1
-
-            allowed = {
-                original_tag = MIL
-            }
-
-            modifier = {
-                production_speed_buildings_factor = 0.05
-                industrial_capacity_factory = 0.05
-                production_factory_max_efficiency_factor = 0.05
-                production_factory_efficiency_gain_factor = 0.05
-            }
-        }
+        # 当前禁用：新蓝图加成已合并到动态修正 MIL_Millennium_Award，保留旧民族精神定义供后续核对。
+        # MIL_new_blueprint_award_bonus = {
+        #     name = MIL_new_blueprint_award_bonus
+        #     picture = MIL_place_of_pursuing_truth
+        #     removal_cost = -1
+        #
+        #     allowed = {
+        #         original_tag = MIL
+        #     }
+        #
+        #     modifier = {
+        #         production_speed_buildings_factor = 0.05
+        #         industrial_capacity_factory = 0.05
+        #         production_factory_max_efficiency_factor = 0.05
+        #         production_factory_efficiency_gain_factor = 0.05
+        #     }
+        # }
 
         # 2026-07-01 修改：机动建设技术三阶段民族精神，按后续国策逐步替换升级。
         MIL_mobile_construction_technology_1 = {

@@ -1,36 +1,11 @@
 MIL_bp_financial_crisis_balance = {
 	initial_value = 0.8
-	# 初始偏向右侧80%
-	left_side = MIL_bop_stable
-	right_side = MIL_bop_crisis
+	# 初始偏向右侧80%。
+	left_side = MIL_bop_stable_side
+	right_side = MIL_bop_crisis_side
 	decision_category = MIL_bop_decision_category
-	# 危机已经平息（左侧75%-100%）
-	range = {
-		id = MIL_bop_stable
-		min = -1.0
-		max = -0.75
-		modifier = {
-			# 无特殊效果
-			power_balance_weekly = -0.02
-			# 每周左移2%
-		}
-	}
-	# 危机接近结束（左侧25%-75%）
-	range = {
-		id = MIL_bop_almost_stable
-		min = -0.75
-		max = -0.25
-		modifier = {
-			consumer_goods_factor = 0.15
-			production_speed_buildings_factor = -0.05
-			industrial_capacity_factory = -0.05
-			production_factory_max_efficiency_factor = -0.05
-			production_factory_efficiency_gain_factor = -0.05
-			power_balance_weekly = -0.01
-			# 每周左移1%
-		}
-	}
-	# 危机得到缓解（中间-0.25到0.25）
+
+	# 危机得到缓解（中间-25%到25%）。
 	range = {
 		id = MIL_bop_relief
 		min = -0.25
@@ -43,34 +18,69 @@ MIL_bp_financial_crisis_balance = {
 			production_factory_efficiency_gain_factor = -0.10
 		}
 	}
-	# 危机较为严重（右侧25%-75%）
-	range = {
-		id = MIL_bop_serious
-		min = 0.25
-		max = 0.75
-		modifier = {
-			consumer_goods_factor = 0.45
-			production_speed_buildings_factor = -0.15
-			industrial_capacity_factory = -0.15
-			production_factory_max_efficiency_factor = -0.15
-			production_factory_efficiency_gain_factor = -0.15
-			power_balance_weekly = 0.005
-			# 每周右移0.5%
+
+	side = {
+		id = MIL_bop_stable_side
+		icon = GFX_idea_MIL_security_department_of_long_peace
+
+		# 危机已经平息（左侧75%-100%）。
+		range = {
+			id = MIL_bop_stable
+			min = -1.0
+			max = -0.75
+			modifier = {
+				power_balance_weekly = -0.02
+			}
+		}
+
+		# 危机接近结束（左侧25%-75%）。
+		range = {
+			id = MIL_bop_almost_stable
+			min = -0.75
+			max = -0.25
+			modifier = {
+				consumer_goods_factor = 0.15
+				production_speed_buildings_factor = -0.05
+				industrial_capacity_factory = -0.05
+				production_factory_max_efficiency_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+				power_balance_weekly = -0.01
+			}
 		}
 	}
-	# 危机十分严重（右侧75%-100%）
-	range = {
-		id = MIL_bop_crisis
-		min = 0.75
-		max = 1.0
-		modifier = {
-			consumer_goods_factor = 0.60
-			production_speed_buildings_factor = -0.20
-			industrial_capacity_factory = -0.20
-			production_factory_max_efficiency_factor = -0.20
-			production_factory_efficiency_gain_factor = -0.20
-			power_balance_weekly = 0.01
-			# 每周右移1%
+
+	side = {
+		id = MIL_bop_crisis_side
+		icon = GFX_idea_MIL_shadow_of_financial_crisis
+
+		# 危机较为严重（右侧25%-75%）。
+		range = {
+			id = MIL_bop_serious
+			min = 0.25
+			max = 0.75
+			modifier = {
+				consumer_goods_factor = 0.45
+				production_speed_buildings_factor = -0.15
+				industrial_capacity_factory = -0.15
+				production_factory_max_efficiency_factor = -0.15
+				production_factory_efficiency_gain_factor = -0.15
+				power_balance_weekly = 0.005
+			}
+		}
+
+		# 危机十分严重（右侧75%-100%）。
+		range = {
+			id = MIL_bop_crisis
+			min = 0.75
+			max = 1.0
+			modifier = {
+				consumer_goods_factor = 0.60
+				production_speed_buildings_factor = -0.20
+				industrial_capacity_factory = -0.20
+				production_factory_max_efficiency_factor = -0.20
+				production_factory_efficiency_gain_factor = -0.20
+				power_balance_weekly = 0.01
+			}
 		}
 	}
 }
@@ -144,3 +154,4 @@ MIL_bp_development_resource_allocation = {
 		}
 	}
 }
+

@@ -2,10 +2,11 @@
 MIL_bop_decision_category = {
     icon = generic_research
 
-
+    # 权力平衡开局显示；具体应对决议由各自国策控制可见性。
     visible = {
         original_tag = MIL
     }
+    visible_when_empty = yes
     priority = 1098
 }
 
