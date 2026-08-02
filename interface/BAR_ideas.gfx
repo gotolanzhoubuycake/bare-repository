@@ -839,6 +839,10 @@ spriteTypes = {
         texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_big_view.dds"
     }
     spriteType = {
+        name = "GFX_idea_MIL_New_incentive_plan"
+        texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_New_incentive_plan.dds"
+    }
+    spriteType = {
         name = "GFX_idea_MIL_place_of_pursuing_truth"
         texturefile = "gfx/interface/ideas/MIL/MIL_place_of_pursuing_truth.dds"
     }

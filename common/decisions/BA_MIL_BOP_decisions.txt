@@ -16,7 +16,18 @@ MIL_bop_decision_category = {
 			}
 		}
 		ai_will_do = {
-			base = 2
+			base = 3
+			modifier = {
+				factor = 0.1
+				political_power < 100
+			}
+			modifier = {
+				factor = 3
+				power_balance_value = {
+					id = MIL_bp_financial_crisis_balance
+					value > 0.25
+				}
+			}
 		}
 	}
 	MIL_bop_suspend_unimportant_research = {
@@ -38,6 +49,13 @@ MIL_bop_decision_category = {
 		}
 		ai_will_do = {
 			base = 2
+			modifier = {
+				factor = 3
+				power_balance_value = {
+					id = MIL_bp_financial_crisis_balance
+					value > 0.25
+				}
+			}
 		}
 	}
 	MIL_bop_reduce_research_funding = {
@@ -55,7 +73,18 @@ MIL_bop_decision_category = {
 			}
 		}
 		ai_will_do = {
-			base = 2
+			base = 1
+			modifier = {
+				factor = 0
+				stability < 0.55
+			}
+			modifier = {
+				factor = 3
+				power_balance_value = {
+					id = MIL_bp_financial_crisis_balance
+					value > 0.25
+				}
+			}
 		}
 	}
 	MIL_bop_close_deficit_factory = {
@@ -81,7 +110,18 @@ MIL_bop_decision_category = {
 			}
 		}
 		ai_will_do = {
-			base = 2
+			base = 1
+			modifier = {
+				factor = 0
+				num_of_civilian_factories < 10
+			}
+			modifier = {
+				factor = 4
+				power_balance_value = {
+					id = MIL_bp_financial_crisis_balance
+					value > 0.40
+				}
+			}
 		}
 	}
 	# 二、建设决议：完成“燃烧的经费”后解锁。
@@ -118,6 +158,7 @@ MIL_bop_decision_category = {
 				add_building_construction = {
 					type = heavy_arms_factory
 					level = 1
+					instant_build = yes
 				}
 				add_extra_state_shared_building_slots = 1
 			}
@@ -127,7 +168,18 @@ MIL_bop_decision_category = {
 			}
 		}
 		ai_will_do = {
-			base = 2
+			base = 1
+			modifier = {
+				factor = 0.1
+				num_of_available_civilian_factories < 8
+			}
+			modifier = {
+				factor = 2
+				power_balance_value = {
+					id = MIL_bp_financial_crisis_balance
+					value < 0
+				}
+			}
 		}
 	}
 	MIL_bop_oparts_research = {
@@ -149,10 +201,29 @@ MIL_bop_decision_category = {
 			}
 		}
 		remove_effect = {
-			# 效果待定
+			custom_effect_tooltip = MIL_bop_oparts_research_complete_tt
+			hidden_effect = {
+				335 = {
+					add_resource = {
+						type = resources_mm
+						amount = 4
+					}
+				}
+				add_breakthrough_progress = {
+					specialization = specialization_ba_tech
+					value = 0.10
+				}
+			}
 		}
 		ai_will_do = {
-			base = 2
+			base = 1
+			modifier = {
+				factor = 0.5
+				power_balance_value = {
+					id = MIL_bp_financial_crisis_balance
+					value > 0
+				}
+			}
 		}
 	}
 	MIL_bop_upgrade_network_system = {
@@ -182,6 +253,7 @@ MIL_bop_decision_category = {
 				add_building_construction = {
 					type = infrastructure
 					level = 1
+					instant_build = yes
 				}
 			}
 			add_power_balance_value = {
@@ -191,6 +263,22 @@ MIL_bop_decision_category = {
 		}
 		ai_will_do = {
 			base = 2
+			modifier = {
+				factor = 0
+				NOT = {
+					any_core_state = {
+						is_owned_and_controlled_by = ROOT
+						infrastructure < 5
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				power_balance_value = {
+					id = MIL_bp_financial_crisis_balance
+					value < 0
+				}
+			}
 		}
 	}
 	MIL_bop_upgrade_industrial_facilities = {
@@ -212,26 +300,66 @@ MIL_bop_decision_category = {
 			}
 		}
 		remove_effect = {
-			add_technology_bonus = {
-				category = {
-					industry
-					electronics
-					tools
+			# 从工业、建筑与机床技术中随机获得一张100%研究加成卡。
+			random_list = {
+				1 = {
+					add_tech_bonus = {
+						name = MIL_bop_upgrade_industrial_facilities_tech_bonus
+						bonus = 1.0
+						uses = 1
+						category = industry
+					}
 				}
-				uses = 1
-				bonus = 1.0
-			}
-			add_tech_bonus = {
-				bonus = 1.0
-				category = industry
+				1 = {
+					add_tech_bonus = {
+						name = MIL_bop_upgrade_industrial_facilities_tech_bonus
+						bonus = 1.0
+						uses = 1
+						category = construction_tech
+					}
+				}
+				1 = {
+					add_tech_bonus = {
+						name = MIL_bop_upgrade_industrial_facilities_tech_bonus
+						bonus = 1.0
+						uses = 1
+						technology = Heavy_industry_T1
+						technology = Heavy_industry_T2
+						technology = Heavy_industry_T3
+						technology = Heavy_industry_T4
+					}
+				}
 			}
 			add_power_balance_value = {
 				id = MIL_bp_financial_crisis_balance
 				value = -0.20
 			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = MIL_bop_upgrade_industrial_facilities_first_completed }
+				}
+				set_country_flag = MIL_bop_upgrade_industrial_facilities_first_completed
+				custom_effect_tooltip = MIL_bop_upgrade_industrial_facilities_first_completed_tt
+				hidden_effect = {
+					BARE_MIL_award_ensure_dynamic_modifier_effect = yes
+					add_to_variable = { MIL_award_millennium_power_balance_weekly = -0.005 }
+					force_update_dynamic_modifier = yes
+				}
+			}
 		}
 		ai_will_do = {
-			base = 2
+			base = 5
+			modifier = {
+				factor = 2
+				NOT = { has_country_flag = MIL_bop_upgrade_industrial_facilities_first_completed }
+			}
+			modifier = {
+				factor = 0.5
+				power_balance_value = {
+					id = MIL_bp_financial_crisis_balance
+					value > 0.50
+				}
+			}
 		}
 	}
 
@@ -261,15 +389,24 @@ MIL_bop_decision_category = {
 				set_country_flag = MIL_award_full_virtual_system_access_completed
 				BARE_MIL_award_ensure_dynamic_modifier_effect = yes
 				add_to_variable = { MIL_award_imaginary_number_network_research_speed = 0.05 }
-				set_variable = { MIL_award_millennium_production_factory_max_efficiency_factor = 0.05 }
-				set_variable = { MIL_award_millennium_production_factory_efficiency_gain_factor = 0.05 }
-				set_variable = { MIL_award_millennium_industrial_capacity_factory = 0.05 }
-				set_variable = { MIL_award_millennium_power_balance_weekly = -0.01 }
+				# 当前禁用：覆盖赋值会抹除“千年发展的新蓝图”已经写入的同类加成。
+				# set_variable = { MIL_award_millennium_production_factory_max_efficiency_factor = 0.05 }
+				# set_variable = { MIL_award_millennium_production_factory_efficiency_gain_factor = 0.05 }
+				# set_variable = { MIL_award_millennium_industrial_capacity_factory = 0.05 }
+				# set_variable = { MIL_award_millennium_power_balance_weekly = -0.01 }
+				add_to_variable = { MIL_award_millennium_production_factory_max_efficiency_factor = 0.05 }
+				add_to_variable = { MIL_award_millennium_production_factory_efficiency_gain_factor = 0.05 }
+				add_to_variable = { MIL_award_millennium_industrial_capacity_factory = 0.05 }
+				add_to_variable = { MIL_award_millennium_power_balance_weekly = -0.01 }
 				force_update_dynamic_modifier = yes
 			}
 		}
 		ai_will_do = {
-			base = 2
+			base = 25
+			modifier = {
+				factor = 0.1
+				num_of_available_civilian_factories < 16
+			}
 		}
 	}
 }

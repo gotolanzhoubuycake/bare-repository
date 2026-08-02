@@ -1,31 +1,34 @@
-MIL_Engineering_Department_Equipment_Development = { #工程部装备开发
-    icon = "GFX_idea_unknown"
-    production_speed_buildings_factor = MIL_award_engineer_department_production_speed
-    industrial_capacity_factory = MIL_award_engineer_department_industrial_capacity
-    production_factory_max_efficiency_factor = MIL_award_engineer_department_production_factory_max
-}
-MIL_Game_Development_Department_Game_Development = { #游戏部开发
-    icon = "GFX_idea_unknown"
+# 当前禁用：工程师部的永久收益已统一写入 MIL_Millennium_Award，保留旧定义供后续核对。
+# MIL_Engineering_Department_Equipment_Development = { #工程部装备开发
+#     icon = "GFX_idea_unknown"
+#     production_speed_buildings_factor = MIL_award_engineer_department_production_speed
+#     industrial_capacity_factory = MIL_award_engineer_department_industrial_capacity
+#     production_factory_max_efficiency_factor = MIL_award_engineer_department_production_factory_max
+# }
+MIL_Game_Development_Department_Game_Development = { # 新游评价带来的120日政治点数获取与稳定度奖励
+    icon = "GFX_idea_MIL_New_incentive_plan"
     political_power_factor = MIL_award_game_development_political_power
-    
+    stability_factor = MIL_award_game_development_stability
 }
 
 MIL_Millennium_Award = { #千年大赏统一动态修正
-    icon = "GFX_idea_MIL_Millennium_Award"
+    icon = "GFX_idea_MIL_place_of_pursuing_truth"
     research_speed_factor = MIL_award_imaginary_number_network_research_speed
     special_project_speed_factor = MIL_award_imaginary_number_network_special_project_speed
+    production_speed_buildings_factor = MIL_award_millennium_production_speed_buildings_factor
     production_factory_max_efficiency_factor = MIL_award_millennium_production_factory_max_efficiency_factor
     production_factory_efficiency_gain_factor = MIL_award_millennium_production_factory_efficiency_gain_factor
     industrial_capacity_factory = MIL_award_millennium_industrial_capacity_factory
+    political_power_factor = MIL_award_millennium_political_power_factor
     power_balance_weekly = MIL_award_millennium_power_balance_weekly
 }
 
-# 旧存档兼容定义；正式流程会迁移到 MIL_Millennium_Award。
-MIL_Imaginary_System_Upgrade = {
-    icon = "GFX_idea_unknown"
-    research_speed_factor = MIL_award_imaginary_number_network_research_speed
-    special_project_speed_factor = MIL_award_imaginary_number_network_special_project_speed
-}
+# 当前禁用：旧虚数动态修正的效果已由 MIL_Millennium_Award 统一承载，保留定义供后续核对。
+# MIL_Imaginary_System_Upgrade = {
+#     icon = "GFX_idea_unknown"
+#     research_speed_factor = MIL_award_imaginary_number_network_research_speed
+#     special_project_speed_factor = MIL_award_imaginary_number_network_special_project_speed
+# }
 #新建部门的混乱
 The_chaos_of_the_newly_established_department_modifier = {
 	

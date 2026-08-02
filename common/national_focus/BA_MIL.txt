@@ -508,6 +508,9 @@ focus_tree = {
 				value = -0.02
 			}
 		}
+		ai_will_do = {
+			factor = 20
+		}
 	}
 	focus = { #追查失踪的资金
 		id = MIL_find_money
@@ -616,6 +619,9 @@ focus_tree = {
 			}
 			custom_effect_tooltip = MIL_no_debt_unlock_bop_decisions_tt
 		}
+		ai_will_do = {
+			factor = 25
+		}
 	}
 	focus = { #千年大赏
 		id = MIL_big_view
@@ -632,6 +638,9 @@ focus_tree = {
             add_political_power = 100
 			BARE_MIL_award_ensure_dynamic_modifier_effect = yes
         }
+		ai_will_do = {
+			factor = 20
+		}
 	}
 	focus = { #真理部的理想
 		id = MIL_veritas_dream
@@ -652,6 +661,9 @@ focus_tree = {
         completion_reward = {
             add_political_power = 50
 		}
+		ai_will_do = {
+			factor = 12
+		}
 	}
 	focus = { #虚数计划
 		id = MIL_Imaginary_number_plan
@@ -669,6 +681,9 @@ focus_tree = {
 			hidden_effect = {
 				BARE_MIL_award_imaginary_number_network_start_project_effect = yes
 			}
+		}
+		ai_will_do = {
+			factor = 14
 		}
 	}
 	focus = { #艰巨的开发任务
@@ -696,6 +711,9 @@ focus_tree = {
 			}
 			country_event = { id = MIL_event.3 }
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 	focus = { #我需要更多咖啡因
 		id = MIL_more_coffee
@@ -722,6 +740,9 @@ focus_tree = {
 			}
 			country_event = { id = MIL_event.4 }
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 	focus = { #软件硬件一起上
 		id = MIL_software_and_hardware
@@ -736,6 +757,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = MIL_software_and_hardware_effect_tt
+		}
+		ai_will_do = {
+			factor = 12
 		}
 	}
 	focus = { #工程师部的努力
@@ -825,6 +849,9 @@ focus_tree = {
 				}
 			}
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 	focus = { #“千年网络，风景独好”
 		id = MIL_best_internet
@@ -853,21 +880,28 @@ focus_tree = {
 			}
 			country_event = { id = MIL_event.5 }
 		}
+		ai_will_do = {
+			factor = 30
+		}
 	}
 	focus = { #工程师部的展望
 		id = MIL_outlook_of_the_Engineering_Department
 		icon = GFX_goal_MIL_outlook_of_the_Engineering_Department
 		relative_position_id = MIL_we_need_money
 		search_filters = { FOCUS_MIL }
-		cost = 1000000
+		cost = 2
 		x = 4
 		y = 3
 		prerequisite = {
 			focus = MIL_big_view
 		}
-        completion_reward = {
-            add_political_power = 50
-        }
+		completion_reward = {
+			add_political_power = 50
+			country_event = { id = MIL_event.2 }
+		}
+		ai_will_do = {
+			factor = 12
+		}
 	}
 	focus = { #俺寻思这能行
 		id = MIL_i_think_it_can
@@ -881,7 +915,13 @@ focus_tree = {
 			focus = MIL_outlook_of_the_Engineering_Department
 		}
 		completion_reward = {
-			BARE_MIL_award_engineer_department_start_project_effect = yes
+			custom_effect_tooltip = MIL_i_think_it_can_unlock_tt
+			hidden_effect = {
+				BARE_MIL_award_engineer_department_start_project_effect = yes
+			}
+		}
+		ai_will_do = {
+			factor = 14
 		}
 	}
 	focus = { #你可以质疑大技霸的审美
@@ -894,6 +934,12 @@ focus_tree = {
 		y = 5
 		prerequisite = {
 			focus = MIL_i_think_it_can
+		}
+		completion_reward = {
+			custom_effect_tooltip = MIL_it_ugly_unlock_tt
+		}
+		ai_will_do = {
+			factor = 9
 		}
 	}
 	focus = { #但你就说新设备好不好用吧”
@@ -908,6 +954,7 @@ focus_tree = {
 			focus = MIL_it_ugly
 		}
 		completion_reward = {
+			custom_effect_tooltip = MIL_but_useful_unlock_tt
 			random_owned_controlled_state = {
 				limit = {
 					NOT = {
@@ -955,6 +1002,9 @@ focus_tree = {
 				clr_state_flag = MIL_but_useful_selected_state
 			}
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 	focus = { #研讨会的订单
 		id = MIL_Seminar_order
@@ -968,6 +1018,7 @@ focus_tree = {
 			focus = MIL_i_think_it_can
 		}
 		completion_reward = {
+			custom_effect_tooltip = MIL_Seminar_order_unlock_tt
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -976,6 +1027,9 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+		}
+		ai_will_do = {
+			factor = 10
 		}
 	}
 	focus = { #千年出品，必是精品
@@ -993,12 +1047,21 @@ focus_tree = {
 			focus = MIL_Seminar_order
 		}
 		available = {
-			has_country_flag = MIL_award_engineer_department_first_completed
-			check_variable = { MIL_award_engineer_department_order > 0 }
-			OR = {
-				check_variable = { MIL_award_engineer_department_civilian > 0 }
-				check_variable = { MIL_award_engineer_department_army > 0 }
-				check_variable = { MIL_award_engineer_department_infrast > 0 }
+			custom_trigger_tooltip = {
+				tooltip = MIL_our_product_is_best_first_project_tt
+				has_country_flag = MIL_award_engineer_department_first_completed
+			}
+			custom_trigger_tooltip = {
+				tooltip = MIL_our_product_is_best_order_tt
+				check_variable = { MIL_award_engineer_department_order > 0 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = MIL_our_product_is_best_equipment_tt
+				OR = {
+					check_variable = { MIL_award_engineer_department_civilian > 0 }
+					check_variable = { MIL_award_engineer_department_army > 0 }
+					check_variable = { MIL_award_engineer_department_infrast > 0 }
+				}
 			}
 		}
 		completion_reward = {
@@ -1006,7 +1069,11 @@ focus_tree = {
 				id = MIL_bp_financial_crisis_balance
 				value = -0.2
 			}
+			custom_effect_tooltip = MIL_our_product_is_best_unlock_tt
 			country_event = MIL_event.6
+		}
+		ai_will_do = {
+			factor = 30
 		}
 	}
 	focus = { #新的激励计划
@@ -1021,7 +1088,13 @@ focus_tree = {
 			focus = MIL_big_view
 		}
 		completion_reward = {
-			BARE_MIL_award_game_development_start_project_effect = yes
+			custom_effect_tooltip = MIL_New_incentive_plan_effect_tt
+			hidden_effect = {
+				BARE_MIL_award_game_development_start_project_effect = yes
+			}
+		}
+		ai_will_do = {
+			factor = 12
 		}
 	}
 	focus = { #燃烧的经费
@@ -1036,7 +1109,13 @@ focus_tree = {
 			focus = MIL_New_incentive_plan
 		}
 		completion_reward = {
-			BARE_MIL_award_decisions_initialize_effect = yes
+			custom_effect_tooltip = MIL_money_is_fire_effect_tt
+			hidden_effect = {
+				BARE_MIL_award_decisions_initialize_effect = yes
+			}
+		}
+		ai_will_do = {
+			factor = 15
 		}
 	}
 	focus = { #旧校区废墟开发再利用
@@ -1241,34 +1320,20 @@ focus_tree = {
 		}
 		completion_reward = {
 			# 2026-05-20: 完成“千年发展的新蓝图”后，延迟 4 个月触发晄轮大祭筹备事件
-			# 2026-07-01 修改：补齐工业线文档中千年大赏追加收益，并在已有千年大赏任务激活时立即推进结算。
-			add_ideas = MIL_new_blueprint_award_bonus
+			# 2026-08-02 修改：补齐工业线文档中千年大赏追加收益，并对三条循环研发线各执行一次完整结算。
+			# 当前禁用：旧独立民族精神已合并到 MIL_Millennium_Award。
+			# add_ideas = MIL_new_blueprint_award_bonus
+			custom_effect_tooltip = MIL_new_development_plan_award_bonus_tooltip
 			custom_effect_tooltip = MIL_new_development_plan_award_mission_tooltip
 			custom_effect_tooltip = MIL_new_development_plan_sport_event_tooltip
-			hidden_effect = {
-				if = {
-					limit = { has_active_mission = MIL_award_imaginary_number_network_new_invention }
-					add_days_mission_timeout = {
-						mission = MIL_award_imaginary_number_network_new_invention
-						days = -999
-					}
-				}
-				if = {
-					limit = { has_active_mission = MIL_award_engineer_department_new_invention }
-					add_days_mission_timeout = {
-						mission = MIL_award_engineer_department_new_invention
-						days = -999
-					}
-				}
-				if = {
-					limit = { has_active_mission = MIL_award_game_department_new_invention }
-					add_days_mission_timeout = {
-						mission = MIL_award_game_department_new_invention
-						days = -999
-					}
-				}
+				hidden_effect = {
+				BARE_MIL_award_apply_new_blueprint_effect = yes
+				BARE_MIL_award_complete_all_projects_effect = yes
 				country_event = { id = MIL_sport_event.1 days = 120 }
 			}
+		}
+		ai_will_do = {
+			factor = 50
 		}
 	}
 	focus = { #更进一步的可能

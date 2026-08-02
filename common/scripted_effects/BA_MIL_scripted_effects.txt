@@ -4404,7 +4404,7 @@ BARE_MIL_Ruins_Check_Great_Game_Restriction_effect = {
 }
 
 BARE_MIL_award_ensure_dynamic_modifier_effect = {
-	# 千年大赏统一承载研发线永久收益；旧虚数修正仅用于存档迁移。
+	# 千年大赏统一承载各研发线与后续国策的永久收益。
 	if = {
 		limit = {
 			NOT = { has_country_flag = MIL_award_millennium_modifier_initialized }
@@ -4417,6 +4417,8 @@ BARE_MIL_award_ensure_dynamic_modifier_effect = {
 			set_variable = { MIL_award_imaginary_number_network_research_speed = 0 }
 			set_variable = { MIL_award_imaginary_number_network_special_project_speed = 0 }
 		}
+		set_variable = { MIL_award_millennium_production_speed_buildings_factor = 0 }
+		set_variable = { MIL_award_millennium_political_power_factor = 0 }
 		if = {
 			limit = {
 				NOT = { has_country_flag = MIL_award_full_virtual_system_access_completed }
@@ -4427,16 +4429,62 @@ BARE_MIL_award_ensure_dynamic_modifier_effect = {
 			set_variable = { MIL_award_millennium_power_balance_weekly = 0 }
 		}
 	}
-	if = {
-		limit = { has_dynamic_modifier = { modifier = MIL_Imaginary_System_Upgrade } }
-		remove_dynamic_modifier = { modifier = MIL_Imaginary_System_Upgrade }
-	}
+	# 当前禁用：不再迁移或移除旧虚数动态修正；正式开发阶段不考虑旧存档兼容。
+	# if = {
+	# 	limit = { has_dynamic_modifier = { modifier = MIL_Imaginary_System_Upgrade } }
+	# 	remove_dynamic_modifier = { modifier = MIL_Imaginary_System_Upgrade }
+	# }
 	if = {
 		limit = {
 			NOT = { has_dynamic_modifier = { modifier = MIL_Millennium_Award } }
 		}
 		add_dynamic_modifier = { modifier = MIL_Millennium_Award }
 	}
+}
+
+BARE_MIL_award_apply_new_blueprint_effect = {
+	# “千年发展的新蓝图”将四项确定收益直接累加到统一千年大赏修正。
+	BARE_MIL_award_ensure_dynamic_modifier_effect = yes
+	if = {
+		limit = {
+			NOT = { has_country_flag = MIL_award_new_blueprint_effect_applied }
+		}
+		set_country_flag = MIL_award_new_blueprint_effect_applied
+		add_to_variable = { MIL_award_millennium_production_speed_buildings_factor = 0.05 }
+		add_to_variable = { MIL_award_millennium_industrial_capacity_factory = 0.05 }
+		add_to_variable = { MIL_award_millennium_production_factory_max_efficiency_factor = 0.05 }
+		add_to_variable = { MIL_award_millennium_production_factory_efficiency_gain_factor = 0.05 }
+		force_update_dynamic_modifier = yes
+	}
+}
+
+BARE_MIL_award_complete_all_projects_effect = {
+	# “千年发展的新蓝图”立即完整结算三条千年大赏循环；虚数基础开发不属于结算对象。
+	if = {
+		limit = { has_active_mission = MIL_award_imaginary_number_network_optimize }
+		remove_mission = MIL_award_imaginary_number_network_optimize
+		BARE_MIL_award_imaginary_number_network_optimize_finish_effect = yes
+	}
+	if = {
+		limit = {
+			OR = {
+				has_active_mission = MIL_award_engineer_department_new_invention
+				has_country_flag = MIL_award_engineer_department_time_done
+			}
+		}
+		if = {
+			limit = { has_active_mission = MIL_award_engineer_department_new_invention }
+			remove_mission = MIL_award_engineer_department_new_invention
+		}
+		# 本国策效果无视本轮特殊任务完成度，直接执行一次工程师部完整结算。
+		BARE_MIL_award_engineer_department_finish_effect = yes
+	}
+	if = {
+		limit = { has_active_mission = MIL_award_game_department_new_invention }
+		remove_mission = MIL_award_game_department_new_invention
+		BARE_MIL_award_game_development_finish_effect = yes
+	}
+	# TODO：2.1“年度粪作”恢复循环中断后，需确定暂停期间本效果对游戏开发部的处理方式。
 }
 
 BARE_MIL_award_decisions_initialize_effect = {
@@ -4474,14 +4522,21 @@ BARE_MIL_award_decisions_initialize_effect = {
 			set_variable = { MIL_award_engineer_department_build_progress = 0 }
 			set_variable = { MIL_award_engineer_department_support_progress = 0 }
 			set_variable = { MIL_award_engineer_department_order_progress = 0 }
+			set_variable = { MIL_award_engineer_department_build_total_progress = 0 }
+			set_variable = { MIL_award_engineer_department_support_total_progress = 0 }
+			set_variable = { MIL_award_engineer_department_order_total_progress = 0 }
 			set_variable = { MIL_award_engineer_department_civilian = 0 }
 			set_variable = { MIL_award_engineer_department_army = 0 }
 			set_variable = { MIL_award_engineer_department_infrast = 0 }
 			set_variable = { MIL_award_engineer_department_department = 0 }
 			set_variable = { MIL_award_engineer_department_order = 0 }
-			set_variable = { MIL_award_engineer_department_production_speed = 0 }
-			set_variable = { MIL_award_engineer_department_industrial_capacity = 0 }
-			set_variable = { MIL_award_engineer_department_production_factory_max = 0 }
+			set_variable = { MIL_award_engineer_department_annual_great_success = 0 }
+			set_variable = { MIL_award_engineer_department_annual_success = 0 }
+			set_variable = { MIL_award_engineer_department_annual_unsatisfactory = 0 }
+			# 当前禁用：旧工程师部独立动态修正变量，收益已写入统一千年大赏变量。
+			# set_variable = { MIL_award_engineer_department_production_speed = 0 }
+			# set_variable = { MIL_award_engineer_department_industrial_capacity = 0 }
+			# set_variable = { MIL_award_engineer_department_production_factory_max = 0 }
 		}
 
 		# 游戏开发部新游开发变量。
@@ -4494,19 +4549,82 @@ BARE_MIL_award_decisions_initialize_effect = {
 			set_variable = { MIL_award_game_development_min = 90 }
 			set_variable = { MIL_award_game_development_completed_count = 0 }
 			set_variable = { MIL_award_game_development_political_power = 0 }
+			set_variable = { MIL_award_game_development_stability = 0 }
+			set_variable = { MIL_award_game_development_annual_great_success = 0 }
+			set_variable = { MIL_award_game_development_annual_success = 0 }
+			set_variable = { MIL_award_game_development_annual_neutral = 0 }
 		}
 
-		if = {
-			limit = {
-				NOT = { has_country_flag = MIL_award_full_virtual_system_access_completed }
-			}
-			set_variable = { MIL_award_millennium_production_factory_max_efficiency_factor = 0 }
-			set_variable = { MIL_award_millennium_production_factory_efficiency_gain_factor = 0 }
-			set_variable = { MIL_award_millennium_industrial_capacity_factory = 0 }
-			set_variable = { MIL_award_millennium_power_balance_weekly = 0 }
-		}
+		# 当前禁用：统一千年大赏变量已在首次挂载动态修正时初始化；此处重置会清空国策完成前取得的研发收益。
+		# if = {
+		# 	limit = {
+		# 		NOT = { has_country_flag = MIL_award_full_virtual_system_access_completed }
+		# 		NOT = { has_country_flag = MIL_award_new_blueprint_effect_applied }
+		# 	}
+		# 	set_variable = { MIL_award_millennium_production_speed_buildings_factor = 0 }
+		# 	set_variable = { MIL_award_millennium_production_factory_max_efficiency_factor = 0 }
+		# 	set_variable = { MIL_award_millennium_production_factory_efficiency_gain_factor = 0 }
+		# 	set_variable = { MIL_award_millennium_industrial_capacity_factory = 0 }
+		# 	set_variable = { MIL_award_millennium_power_balance_weekly = 0 }
+		# }
 	}
 	BARE_MIL_award_ensure_dynamic_modifier_effect = yes
+	BARE_MIL_award_start_annual_settlement_effect = yes
+}
+
+BARE_MIL_award_start_annual_settlement_effect = {
+	# “燃烧的经费”先结算并清空此前积累的结果，再启动每365日自动重复的年度任务。
+	if = {
+		limit = {
+			NOT = { has_country_flag = MIL_award_annual_settlement_started }
+		}
+		set_country_flag = MIL_award_annual_settlement_started
+		BARE_MIL_award_annual_settlement_effect = yes
+		if = {
+			limit = {
+				NOT = { has_active_mission = MIL_award_annual_settlement }
+			}
+			activate_mission = MIL_award_annual_settlement
+		}
+	}
+}
+
+BARE_MIL_award_annual_settlement_effect = {
+	# 工程师部按3%/2%/1%折算生产效率上限，游戏开发部按3%/2%/1%折算政治点数获取。
+	BARE_MIL_award_ensure_dynamic_modifier_effect = yes
+	set_temp_variable = { MIL_award_engineer_department_annual_bonus = MIL_award_engineer_department_annual_great_success }
+	multiply_temp_variable = { MIL_award_engineer_department_annual_bonus = 0.03 }
+	set_temp_variable = { MIL_award_engineer_department_annual_success_bonus = MIL_award_engineer_department_annual_success }
+	multiply_temp_variable = { MIL_award_engineer_department_annual_success_bonus = 0.02 }
+	add_to_temp_variable = { MIL_award_engineer_department_annual_bonus = MIL_award_engineer_department_annual_success_bonus }
+	set_temp_variable = { MIL_award_engineer_department_annual_unsatisfactory_bonus = MIL_award_engineer_department_annual_unsatisfactory }
+	multiply_temp_variable = { MIL_award_engineer_department_annual_unsatisfactory_bonus = 0.01 }
+	add_to_temp_variable = { MIL_award_engineer_department_annual_bonus = MIL_award_engineer_department_annual_unsatisfactory_bonus }
+	add_to_variable = { MIL_award_millennium_production_factory_max_efficiency_factor = MIL_award_engineer_department_annual_bonus }
+
+	set_temp_variable = { MIL_award_game_development_annual_bonus = MIL_award_game_development_annual_great_success }
+	multiply_temp_variable = { MIL_award_game_development_annual_bonus = 0.03 }
+	set_temp_variable = { MIL_award_game_development_annual_success_bonus = MIL_award_game_development_annual_success }
+	multiply_temp_variable = { MIL_award_game_development_annual_success_bonus = 0.02 }
+	add_to_temp_variable = { MIL_award_game_development_annual_bonus = MIL_award_game_development_annual_success_bonus }
+	set_temp_variable = { MIL_award_game_development_annual_neutral_bonus = MIL_award_game_development_annual_neutral }
+	multiply_temp_variable = { MIL_award_game_development_annual_neutral_bonus = 0.01 }
+	add_to_temp_variable = { MIL_award_game_development_annual_bonus = MIL_award_game_development_annual_neutral_bonus }
+	add_to_variable = { MIL_award_millennium_political_power_factor = MIL_award_game_development_annual_bonus }
+
+	set_variable = { MIL_award_engineer_department_annual_great_success = 0 }
+	set_variable = { MIL_award_engineer_department_annual_success = 0 }
+	set_variable = { MIL_award_engineer_department_annual_unsatisfactory = 0 }
+	set_variable = { MIL_award_game_development_annual_great_success = 0 }
+	set_variable = { MIL_award_game_development_annual_success = 0 }
+	set_variable = { MIL_award_game_development_annual_neutral = 0 }
+	clear_variable = MIL_award_engineer_department_annual_bonus
+	clear_variable = MIL_award_engineer_department_annual_success_bonus
+	clear_variable = MIL_award_engineer_department_annual_unsatisfactory_bonus
+	clear_variable = MIL_award_game_development_annual_bonus
+	clear_variable = MIL_award_game_development_annual_success_bonus
+	clear_variable = MIL_award_game_development_annual_neutral_bonus
+	force_update_dynamic_modifier = yes
 }
 
 BARE_MIL_award_imaginary_number_network_initialize_infrastructure_tracking_effect = {
@@ -4598,7 +4716,7 @@ BARE_MIL_award_imaginary_number_network_try_complete_effect = {
 }
 
 BARE_MIL_award_imaginary_number_network_start_optimize_effect = {
-	# 2026-07-08：启动上线后的“虚数”系统优化循环。完成“千年网络，风景独好”后调用。
+	# 2026-08-02：启动上线后的“虚数”系统升级循环。完成“千年网络，风景独好”后调用。
 	if = {
 		limit = {
 			has_country_flag = MIL_award_imaginary_number_network_completed
@@ -4641,7 +4759,7 @@ BARE_MIL_award_imaginary_number_network_start_optimize_effect = {
 }
 
 BARE_MIL_award_imaginary_number_network_optimize_finish_effect = {
-	# 2026-07-01：结算一次“虚数”系统优化，并开启下一轮。
+	# 2026-08-02：结算一次“虚数”系统升级，将永久奖励写入 MIL_Millennium_Award 并开启下一轮。
 	randomize_variable = {
 		var = MIL_award_imaginary_number_network_prob
 		distribution = uniform
@@ -4660,11 +4778,9 @@ BARE_MIL_award_imaginary_number_network_optimize_finish_effect = {
 		add_to_variable = { MIL_award_imaginary_number_network_special_project_speed = 0.01 }
 	}
 	add_to_variable = { MIL_award_imaginary_number_network_optimize_count = 1 }
-	clamp_variable = {
-		var = MIL_award_imaginary_number_network_max
-		min = 10
-		max = 90
-	}
+	# “提高产品质量”只影响刚结算的一轮；下一轮恢复10%基础大成功率。
+	set_variable = { MIL_award_imaginary_number_network_min = 0 }
+	set_variable = { MIL_award_imaginary_number_network_max = 90 }
 	force_update_dynamic_modifier = yes
 	BARE_MIL_award_imaginary_number_network_start_optimize_effect = yes
 }
@@ -4683,21 +4799,24 @@ BARE_MIL_award_engineer_department_start_project_effect = {
 		set_variable = { MIL_award_engineer_department_build_progress = 0 }
 		set_variable = { MIL_award_engineer_department_support_progress = 0 }
 		set_variable = { MIL_award_engineer_department_order_progress = 0 }
+		set_variable = { MIL_award_engineer_department_build_total_progress = 0 }
+		set_variable = { MIL_award_engineer_department_support_total_progress = 0 }
+		set_variable = { MIL_award_engineer_department_order_total_progress = 0 }
 		set_variable = { MIL_award_engineer_department_civilian = 0 }
 		set_variable = { MIL_award_engineer_department_army = 0 }
 		set_variable = { MIL_award_engineer_department_infrast = 0 }
 		set_variable = { MIL_award_engineer_department_department = 0 }
 		set_variable = { MIL_award_engineer_department_order = 0 }
-		set_variable = { MIL_award_engineer_department_production_speed = 0 }
-		set_variable = { MIL_award_engineer_department_industrial_capacity = 0 }
-		set_variable = { MIL_award_engineer_department_production_factory_max = 0 }
+		set_variable = { MIL_award_engineer_department_annual_great_success = 0 }
+		set_variable = { MIL_award_engineer_department_annual_success = 0 }
+		set_variable = { MIL_award_engineer_department_annual_unsatisfactory = 0 }
+		# 当前禁用：旧工程师部独立动态修正变量，收益已写入统一千年大赏变量。
+		# set_variable = { MIL_award_engineer_department_production_speed = 0 }
+		# set_variable = { MIL_award_engineer_department_industrial_capacity = 0 }
+		# set_variable = { MIL_award_engineer_department_production_factory_max = 0 }
 	}
-	if = {
-		limit = {
-			NOT = { has_dynamic_modifier = { modifier = MIL_Engineering_Department_Equipment_Development } }
-		}
-		add_dynamic_modifier = { modifier = MIL_Engineering_Department_Equipment_Development }
-	}
+	BARE_MIL_award_ensure_dynamic_modifier_effect = yes
+	BARE_MIL_award_engineer_department_refresh_task_state_effect = yes
 	if = {
 		limit = {
 			NOT = { has_active_mission = MIL_award_engineer_department_new_invention }
@@ -4723,16 +4842,49 @@ BARE_MIL_award_engineer_department_start_project_effect = {
 	}
 }
 
+BARE_MIL_award_engineer_department_refresh_task_state_effect = {
+	# 三类任务分别按“已完成 + 进行中”的总进度锁定；任一已完成进度达到100%即可满足项目结算条件。
+	if = {
+		limit = { check_variable = { MIL_award_engineer_department_build_total_progress > 99 } }
+		set_country_flag = MIL_award_engineer_department_build_locked
+	}
+	else = {
+		clr_country_flag = MIL_award_engineer_department_build_locked
+	}
+	if = {
+		limit = { check_variable = { MIL_award_engineer_department_support_total_progress > 99 } }
+		set_country_flag = MIL_award_engineer_department_support_locked
+	}
+	else = {
+		clr_country_flag = MIL_award_engineer_department_support_locked
+	}
+	if = {
+		limit = { check_variable = { MIL_award_engineer_department_order_total_progress > 99 } }
+		set_country_flag = MIL_award_engineer_department_order_locked
+	}
+	else = {
+		clr_country_flag = MIL_award_engineer_department_order_locked
+	}
+	if = {
+		limit = {
+			OR = {
+				check_variable = { MIL_award_engineer_department_build_progress > 99 }
+				check_variable = { MIL_award_engineer_department_support_progress > 99 }
+				check_variable = { MIL_award_engineer_department_order_progress > 99 }
+			}
+		}
+		set_country_flag = MIL_award_engineer_department_task_done
+	}
+	else = {
+		clr_country_flag = MIL_award_engineer_department_task_done
+	}
+}
+
 BARE_MIL_award_engineer_department_add_order_progress_effect = {
 	# 完成一次研讨会订单。任意三次订单完成后满足工程师部循环的特殊任务要求。
 	add_to_variable = { MIL_award_engineer_department_order = 1 }
 	add_to_variable = { MIL_award_engineer_department_order_progress = 34 }
-	if = {
-		limit = {
-			check_variable = { MIL_award_engineer_department_order_progress > 99 }
-		}
-		set_country_flag = MIL_award_engineer_department_task_done
-	}
+	BARE_MIL_award_engineer_department_refresh_task_state_effect = yes
 	BARE_MIL_award_engineer_department_try_complete_effect = yes
 }
 
@@ -4747,15 +4899,42 @@ BARE_MIL_award_engineer_department_try_complete_effect = {
 	}
 }
 
+BARE_MIL_award_engineer_department_damage_all_slot_buildings_effect = {
+	# “意外的失败”只损坏州内占用共享建筑槽的建筑，不影响基础设施、铁路、空军基地和专项设施。
+	damage_building = { type = arms_factory damage = 100 }
+	damage_building = { type = heavy_arms_factory damage = 100 }
+	damage_building = { type = industrial_complex damage = 100 }
+	damage_building = { type = stronghold_network damage = 100 }
+	damage_building = { type = dockyard damage = 100 }
+	damage_building = { type = synthetic_refinery damage = 100 }
+	damage_building = { type = metal_processing_plant damage = 100 }
+	damage_building = { type = rare_metal_processing_plant damage = 100 }
+	damage_building = { type = electronic_component_factory damage = 100 }
+	damage_building = { type = opatz_synthesis_center damage = 100 }
+	damage_building = { type = resource_distribution_center damage = 100 }
+	damage_building = { type = construction_center damage = 100 }
+	damage_building = { type = thermal_power_station damage = 100 }
+	damage_building = { type = biological_power_station damage = 100 }
+	damage_building = { type = opaz_power_station damage = 100 }
+	damage_building = { type = fuel_silo damage = 100 }
+	damage_building = { type = mega_gun_emplacement damage = 100 }
+	damage_building = { type = rocket_site damage = 100 }
+	damage_building = { type = nuclear_reactor damage = 100 }
+	damage_building = { type = nuclear_reactor_heavy_water damage = 100 }
+	damage_building = { type = commercial_nuclear_reactor damage = 100 }
+}
+
 BARE_MIL_award_engineer_department_finish_effect = {
 	# 结算一次工程师部开发，并启动下一轮。
+	BARE_MIL_award_ensure_dynamic_modifier_effect = yes
 	if = {
 		limit = {
 			NOT = { has_country_flag = MIL_award_engineer_department_first_completed }
 		}
 		set_country_flag = MIL_award_engineer_department_first_completed
-		add_to_variable = { MIL_award_engineer_department_production_speed = 0.05 }
-		add_to_variable = { MIL_award_engineer_department_industrial_capacity = 0.05 }
+		add_to_variable = { MIL_award_millennium_production_speed_buildings_factor = 0.05 }
+		add_to_variable = { MIL_award_millennium_industrial_capacity_factory = 0.05 }
+		add_to_variable = { MIL_award_engineer_department_annual_great_success = 1 }
 	}
 	else = {
 		randomize_variable = {
@@ -4768,31 +4947,34 @@ BARE_MIL_award_engineer_department_finish_effect = {
 			limit = {
 				check_variable = { MIL_award_engineer_department_prob > MIL_award_engineer_department_max }
 			}
-			add_to_variable = { MIL_award_engineer_department_production_speed = 0.05 }
-			add_to_variable = { MIL_award_engineer_department_industrial_capacity = 0.05 }
+			add_to_variable = { MIL_award_millennium_production_speed_buildings_factor = 0.05 }
+			add_to_variable = { MIL_award_millennium_industrial_capacity_factory = 0.05 }
+			add_to_variable = { MIL_award_engineer_department_annual_great_success = 1 }
 		}
 		else_if = {
 			limit = {
 				check_variable = { MIL_award_engineer_department_prob > MIL_award_engineer_department_min }
 			}
 			random_list = {
-				50 = { add_to_variable = { MIL_award_engineer_department_production_speed = 0.05 } }
-				50 = { add_to_variable = { MIL_award_engineer_department_industrial_capacity = 0.05 } }
+				1 = { add_to_variable = { MIL_award_millennium_production_speed_buildings_factor = 0.05 } }
+				1 = { add_to_variable = { MIL_award_millennium_industrial_capacity_factory = 0.05 } }
 			}
+			add_to_variable = { MIL_award_engineer_department_annual_success = 1 }
 		}
 		else_if = {
 			limit = {
-				check_variable = { MIL_award_engineer_department_prob > 0.01 }
+				OR = {
+					check_variable = { MIL_award_engineer_department_prob > 0.01 }
+					has_country_flag = MIL_award_engineer_department_failure_happened
+				}
 			}
 			random_list = {
-				50 = { add_to_variable = { MIL_award_engineer_department_production_speed = 0.025 } }
-				50 = { add_to_variable = { MIL_award_engineer_department_industrial_capacity = 0.025 } }
+				1 = { add_to_variable = { MIL_award_millennium_production_speed_buildings_factor = 0.025 } }
+				1 = { add_to_variable = { MIL_award_millennium_industrial_capacity_factory = 0.025 } }
 			}
+			add_to_variable = { MIL_award_engineer_department_annual_unsatisfactory = 1 }
 		}
-		else_if = {
-			limit = {
-				NOT = { has_country_flag = MIL_award_engineer_department_failure_happened }
-			}
+		else = {
 			set_country_flag = MIL_award_engineer_department_failure_happened
 			random_state = {
 				limit = {
@@ -4803,35 +4985,32 @@ BARE_MIL_award_engineer_department_finish_effect = {
 						state = 654
 					}
 				}
-				damage_building = {
-					type = industrial_complex
-					damage = 4
-				}
-				damage_building = {
-					type = arms_factory
-					damage = 4
-				}
-				damage_building = {
-					type = heavy_arms_factory
-					damage = 2
-				}
+				BARE_MIL_award_engineer_department_damage_all_slot_buildings_effect = yes
 			}
+			country_event = { id = MIL_award_engineer.5 }
 		}
 	}
 	add_to_variable = { MIL_award_engineer_department_project_count = 1 }
 	clr_country_flag = MIL_award_engineer_department_time_done
-	clr_country_flag = MIL_award_engineer_department_task_done
+	# 已完成进度清零；进行中决议的预留进度保留到下一轮。
+	subtract_from_variable = { MIL_award_engineer_department_build_total_progress = MIL_award_engineer_department_build_progress }
+	subtract_from_variable = { MIL_award_engineer_department_support_total_progress = MIL_award_engineer_department_support_progress }
+	subtract_from_variable = { MIL_award_engineer_department_order_total_progress = MIL_award_engineer_department_order_progress }
+	clamp_variable = { var = MIL_award_engineer_department_build_total_progress min = 0 max = 999 }
+	clamp_variable = { var = MIL_award_engineer_department_support_total_progress min = 0 max = 999 }
+	clamp_variable = { var = MIL_award_engineer_department_order_total_progress min = 0 max = 999 }
 	set_variable = { MIL_award_engineer_department_build_progress = 0 }
 	set_variable = { MIL_award_engineer_department_support_progress = 0 }
 	set_variable = { MIL_award_engineer_department_order_progress = 0 }
 	set_variable = { MIL_award_engineer_department_min = 40 }
 	set_variable = { MIL_award_engineer_department_max = 85 }
+	BARE_MIL_award_engineer_department_refresh_task_state_effect = yes
 	force_update_dynamic_modifier = yes
 	BARE_MIL_award_engineer_department_start_project_effect = yes
 }
 
 BARE_MIL_award_game_development_start_project_effect = {
-	# 启动游戏开发部循环。第一次 180 日，废部危机重启后第二次 60 日，第三次起 210 日并逐轮 +30 日。
+	# 启动游戏开发部循环。前两次各 180 日，第三次起 210 日并逐轮 +30 日。
 	if = {
 		limit = {
 			NOT = { has_country_flag = MIL_award_game_development_project_started }
@@ -4842,28 +5021,17 @@ BARE_MIL_award_game_development_start_project_effect = {
 		set_variable = { MIL_award_game_development_min = 90 }
 		set_variable = { MIL_award_game_development_completed_count = 0 }
 		set_variable = { MIL_award_game_development_political_power = 0 }
-	}
-	if = {
-		limit = {
-			NOT = { has_dynamic_modifier = { modifier = MIL_Game_Development_Department_Game_Development } }
-		}
-		add_dynamic_modifier = { modifier = MIL_Game_Development_Department_Game_Development }
+		set_variable = { MIL_award_game_development_stability = 0 }
+		set_variable = { MIL_award_game_development_annual_great_success = 0 }
+		set_variable = { MIL_award_game_development_annual_success = 0 }
+		set_variable = { MIL_award_game_development_annual_neutral = 0 }
 	}
 	if = {
 		limit = {
 			NOT = { has_active_mission = MIL_award_game_department_new_invention }
-			NOT = { has_country_flag = MIL_award_game_development_crisis_active }
 		}
 		activate_mission = MIL_award_game_department_new_invention
 		if = {
-			limit = { has_country_flag = MIL_award_game_development_restart_short }
-			add_days_mission_timeout = {
-				mission = MIL_award_game_department_new_invention
-				days = -120
-			}
-			clr_country_flag = MIL_award_game_development_restart_short
-		}
-		else_if = {
 			limit = {
 				check_variable = { MIL_award_game_development_completed_count > 1 }
 			}
@@ -4886,7 +5054,7 @@ BARE_MIL_award_game_development_start_project_effect = {
 }
 
 BARE_MIL_award_game_development_improve_chance_effect = {
-	# 第三次开发起的专属决议：若“不温不火”概率已归零，则改为提高大受欢迎概率。
+	# 第三次开发起：通常令大受欢迎+5%、多半好评+10%；不温不火归零后改为大受欢迎+10%。
 	if = {
 		limit = {
 			check_variable = { MIL_award_game_development_min < 1 }
@@ -4895,7 +5063,7 @@ BARE_MIL_award_game_development_improve_chance_effect = {
 	}
 	else = {
 		add_to_variable = { MIL_award_game_development_max = -5 }
-		add_to_variable = { MIL_award_game_development_min = -10 }
+		add_to_variable = { MIL_award_game_development_min = -15 }
 	}
 	clamp_variable = {
 		var = MIL_award_game_development_min
@@ -4925,26 +5093,28 @@ BARE_MIL_award_game_development_apply_bonus_effect = {
 }
 
 BARE_MIL_award_game_development_finish_effect = {
-	# 第一次必定年度粪作并暂停；第二次必定大受欢迎；第三次起按概率结算并自动循环。
+	# 第一次年度粪作暂不结算事件或奖励，直接进入 180 日第二轮；第二次必定大受欢迎；第三次起按概率结算并自动循环。
 	if = {
 		limit = {
 			check_variable = { MIL_award_game_development_completed_count < 1 }
 		}
 		add_to_variable = { MIL_award_game_development_completed_count = 1 }
-		set_country_flag = MIL_award_game_development_crisis_active
-		country_event = { id = MIL_award_game.1 days = 15 }
+		BARE_MIL_award_game_development_start_project_effect = yes
 	}
 	else_if = {
 		limit = {
 			check_variable = { MIL_award_game_development_completed_count < 2 }
 		}
 		add_political_power = 200
-		add_stability = 0.05
 		set_variable = { MIL_award_game_development_political_power = 0.20 }
+		set_variable = { MIL_award_game_development_stability = 0.05 }
 		BARE_MIL_award_game_development_apply_bonus_effect = yes
+		add_to_variable = { MIL_award_game_development_annual_great_success = 1 }
 		add_to_variable = { MIL_award_game_development_completed_count = 1 }
 		set_variable = { MIL_award_game_development_max = 100 }
 		set_variable = { MIL_award_game_development_min = 90 }
+		country_event = { id = MIL_award_game.10 }
+		country_event = { id = MIL_award_game.9 }
 		BARE_MIL_award_game_development_start_project_effect = yes
 	}
 	else = {
@@ -4959,8 +5129,10 @@ BARE_MIL_award_game_development_finish_effect = {
 				check_variable = { MIL_award_game_development_prob > MIL_award_game_development_max }
 			}
 			add_political_power = 200
-			add_stability = 0.05
 			set_variable = { MIL_award_game_development_political_power = 0.20 }
+			set_variable = { MIL_award_game_development_stability = 0.05 }
+			add_to_variable = { MIL_award_game_development_annual_great_success = 1 }
+			country_event = { id = MIL_award_game.10 }
 		}
 		else_if = {
 			limit = {
@@ -4968,10 +5140,16 @@ BARE_MIL_award_game_development_finish_effect = {
 			}
 			add_political_power = 150
 			set_variable = { MIL_award_game_development_political_power = 0.10 }
+			set_variable = { MIL_award_game_development_stability = 0 }
+			add_to_variable = { MIL_award_game_development_annual_success = 1 }
+			country_event = { id = MIL_award_game.11 }
 		}
 		else = {
 			add_political_power = 100
 			set_variable = { MIL_award_game_development_political_power = 0.05 }
+			set_variable = { MIL_award_game_development_stability = 0 }
+			add_to_variable = { MIL_award_game_development_annual_neutral = 1 }
+			country_event = { id = MIL_award_game.12 }
 		}
 		BARE_MIL_award_game_development_apply_bonus_effect = yes
 		add_to_variable = { MIL_award_game_development_completed_count = 1 }

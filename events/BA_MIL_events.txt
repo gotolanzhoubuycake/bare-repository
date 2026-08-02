@@ -22,123 +22,6 @@ country_event = {
     }
 }
 
-# 游戏开发部“废部危机”事件链：第一次新游开发完成后触发，最后解锁“重启征程”决议。
-country_event = {
-    id = MIL_award_game.1
-    title = MIL_award_game.1.t
-    desc = MIL_award_game.1.d
-
-    is_triggered_only = yes
-    fire_only_once = yes
-
-    option = {
-        name = MIL_award_game.1.a
-        hidden_effect = {
-            add_manpower = 20000
-            country_event = { id = MIL_award_game.2 days = 15 }
-        }
-        ai_chance = {
-            base = 1
-        }
-    }
-}
-
-country_event = {
-    id = MIL_award_game.2
-    title = MIL_award_game.2.t
-    desc = MIL_award_game.2.d
-
-    is_triggered_only = yes
-    fire_only_once = yes
-
-    option = {
-        name = MIL_award_game.2.a
-        hidden_effect = {
-            country_event = { id = MIL_award_game.3 days = 15 }
-        }
-        ai_chance = {
-            base = 1
-        }
-    }
-}
-
-country_event = {
-    id = MIL_award_game.3
-    title = MIL_award_game.3.t
-    desc = MIL_award_game.3.d
-
-    is_triggered_only = yes
-    fire_only_once = yes
-
-    option = {
-        name = MIL_award_game.3.a
-        hidden_effect = {
-            country_event = { id = MIL_award_game.4 days = 6 }
-        }
-        ai_chance = {
-            base = 1
-        }
-    }
-}
-
-country_event = {
-    id = MIL_award_game.4
-    title = MIL_award_game.4.t
-    desc = MIL_award_game.4.d
-
-    is_triggered_only = yes
-    fire_only_once = yes
-
-    option = {
-        name = MIL_award_game.4.a
-        hidden_effect = {
-            country_event = { id = MIL_award_game.5 days = 12 }
-        }
-        ai_chance = {
-            base = 1
-        }
-    }
-}
-
-country_event = {
-    id = MIL_award_game.5
-    title = MIL_award_game.5.t
-    desc = MIL_award_game.5.d
-
-    is_triggered_only = yes
-    fire_only_once = yes
-
-    option = {
-        name = MIL_award_game.5.a
-        hidden_effect = {
-            country_event = { id = MIL_award_game.6 days = 6 }
-        }
-        ai_chance = {
-            base = 1
-        }
-    }
-}
-
-country_event = {
-    id = MIL_award_game.6
-    title = MIL_award_game.6.t
-    desc = MIL_award_game.6.d
-
-    is_triggered_only = yes
-    fire_only_once = yes
-
-    option = {
-        name = MIL_award_game.6.a
-        hidden_effect = {
-            add_army_experience = 15
-            set_country_flag = MIL_award_game_development_restart_available
-        }
-        ai_chance = {
-            base = 1
-        }
-    }
-}
-
 country_event = {
     id = MIL_award_game.7
     title = MIL_award_game.7.t
@@ -148,6 +31,69 @@ country_event = {
 
     option = {
         name = MIL_award_game.7.a
+        ai_chance = {
+            base = 1
+        }
+    }
+}
+
+# 第二次新游开发必定大受欢迎，结算后触发叙事事件“千年大赏”。
+country_event = {
+    id = MIL_award_game.9
+    title = MIL_award_game.9.t
+    desc = MIL_award_game.9.d
+
+    is_triggered_only = yes
+    fire_only_once = yes
+
+    option = {
+        name = MIL_award_game.9.a
+        ai_chance = {
+            base = 1
+        }
+    }
+}
+
+# 第三轮起的新游开发通用结算事件；三种评价结果均可重复触发。
+country_event = {
+    id = MIL_award_game.10
+    title = MIL_award_game.10.t
+    desc = MIL_award_game.10.d
+
+    is_triggered_only = yes
+
+    option = {
+        name = MIL_award_game.10.a
+        ai_chance = {
+            base = 1
+        }
+    }
+}
+
+country_event = {
+    id = MIL_award_game.11
+    title = MIL_award_game.11.t
+    desc = MIL_award_game.11.d
+
+    is_triggered_only = yes
+
+    option = {
+        name = MIL_award_game.11.a
+        ai_chance = {
+            base = 1
+        }
+    }
+}
+
+country_event = {
+    id = MIL_award_game.12
+    title = MIL_award_game.12.t
+    desc = MIL_award_game.12.d
+
+    is_triggered_only = yes
+
+    option = {
+        name = MIL_award_game.12.a
         ai_chance = {
             base = 1
         }
@@ -164,6 +110,7 @@ country_event = {
 
     option = {
         name = MIL_award_engineer.1.a
+        trigger = { has_tech = infantry_weapons_T1 }
         add_equipment_to_stockpile = {
             type = infantry_equipment
             amount = 3000
@@ -269,6 +216,7 @@ country_event = {
 
     option = {
         name = MIL_award_engineer.2.opt_special
+        trigger = { has_tech = individual_special_operations_mech_equipment_tech }
         add_equipment_to_stockpile = {
             type = MIL_Individual_Special_Operations_Mech_equipment
             amount = 16
@@ -394,6 +342,22 @@ country_event = {
         }
     }
 }
+
+country_event = {
+    id = MIL_award_engineer.5
+    title = MIL_award_engineer.5.t
+    desc = MIL_award_engineer.5.d
+
+    is_triggered_only = yes
+    fire_only_once = yes
+
+    option = {
+        name = MIL_award_engineer.5.a
+        ai_chance = {
+            base = 1
+        }
+    }
+}
 country_event = {
     id = MIL_event.1
     title = MIL_event.1.t
@@ -435,14 +399,15 @@ country_event = {
 
     option = {
 		name = MIL_event.2.a
-			if = {
-				limit = {
-					not = {
-						has_completed_focus = MIL_outlook_of_the_Engineering_Department
-					}
-				}
-				complete_national_focus = MIL_outlook_of_the_Engineering_Department
-			}
+		# 当前禁用：旧框架由事件反向完成国策；现改为国策完成后触发本叙事事件。
+		# if = {
+		# 	limit = {
+		# 		not = {
+		# 			has_completed_focus = MIL_outlook_of_the_Engineering_Department
+		# 		}
+		# 	}
+		# 	complete_national_focus = MIL_outlook_of_the_Engineering_Department
+		# }
  
 		ai_chance = {
 			base = 1
