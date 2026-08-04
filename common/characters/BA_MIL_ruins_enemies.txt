@@ -1,0 +1,53 @@
+characters = {
+	# 2026-08-03 修改：补齐三个废墟袭击TAG的默认国家领导人；袭击前由运行时效果改为问号姓名和不明头像，分析后恢复这里的正式资料。
+	# 入口：A56、A57、A58历史文件中的recruit_character。
+	# 关键状态：三个角色的正式姓名和头像；每个国家只招募对应的一名国家领导人。
+	# 预期结果：敌人国家在未分析和已分析状态下都存在可切换的真实领导人对象。
+	MIL_ruins_A56_leader = {
+		name = MIL_ruins_A56_leader_name
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_gkt_1
+				small = GFX_Portrait_gkt_1_small
+			}
+		}
+		country_leader = {
+			ideology = no_ideology_type
+			traits = { }
+			expire = "9999.1.1.1"
+			id = -1
+		}
+	}
+
+	MIL_ruins_A57_leader = {
+		name = MIL_ruins_A57_leader_name
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_szsm_1
+				small = GFX_Portrait_szsm_1_small
+			}
+		}
+		country_leader = {
+			ideology = no_ideology_type
+			traits = { }
+			expire = "9999.1.1.1"
+			id = -1
+		}
+	}
+
+	MIL_ruins_A58_leader = {
+		name = MIL_ruins_A58_leader_name
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_szsm_1
+				small = GFX_Portrait_szsm_1_small
+			}
+		}
+		country_leader = {
+			ideology = no_ideology_type
+			traits = { }
+			expire = "9999.1.1.1"
+			id = -1
+		}
+	}
+}

@@ -46,37 +46,45 @@ BARE_MIL_Start_Development_Resource_Allocation_effect = {
 }
 
 BARE_MIL_Phase_2_Grant_Civilian_Facility_effect = {
-	# 2026-07-27 修改：
+	# 2026-08-03 修改：为民用设施结算增加最终目标检查。
 	# 入口：民用设施建设决议完成。
 	# 关键状态：从已完成第三阶段且由千年拥有和控制的四个废墟地块中随机选择一个。
-	# 预期结果：目标地块增加一座民用工厂和一个建筑槽，并累计民用及工业设施建设次数。
-	random_owned_controlled_state = {
-		limit = {
-			OR = { state = 639 state = 640 state = 641 state = 643 }
-			has_state_flag = MIL_ruins_stage_3
+	# 预期结果：仍存在合格目标时增加工厂、建筑槽和次数；完成瞬间失去全部目标时不错误累计。
+	if = {
+		limit = { BARE_MIL_Phase_2_Has_Industrial_Construction_Target = yes }
+		random_owned_controlled_state = {
+			limit = {
+				OR = { state = 639 state = 640 state = 641 state = 643 }
+				has_state_flag = MIL_ruins_stage_3
+				is_owned_and_controlled_by = ROOT
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
 		}
-		add_extra_state_shared_building_slots = 1
-		add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+		add_to_variable = { MIL_phase_2_civilian_facilities_completed = 1 }
+		add_to_variable = { MIL_phase_2_industrial_facilities_completed = 1 }
 	}
-	add_to_variable = { MIL_phase_2_civilian_facilities_completed = 1 }
-	add_to_variable = { MIL_phase_2_industrial_facilities_completed = 1 }
 }
 
 BARE_MIL_Phase_2_Grant_Weapons_Facility_effect = {
-	# 2026-07-27 修改：
+	# 2026-08-03 修改：为武器设施结算增加最终目标检查。
 	# 入口：武器设施建设决议完成。
 	# 关键状态：从已完成第三阶段且由千年拥有和控制的四个废墟地块中随机选择一个。
-	# 预期结果：目标地块增加一座军用工厂和一个建筑槽，并累计武器及工业设施建设次数。
-	random_owned_controlled_state = {
-		limit = {
-			OR = { state = 639 state = 640 state = 641 state = 643 }
-			has_state_flag = MIL_ruins_stage_3
+	# 预期结果：仍存在合格目标时增加工厂、建筑槽和次数；完成瞬间失去全部目标时不错误累计。
+	if = {
+		limit = { BARE_MIL_Phase_2_Has_Industrial_Construction_Target = yes }
+		random_owned_controlled_state = {
+			limit = {
+				OR = { state = 639 state = 640 state = 641 state = 643 }
+				has_state_flag = MIL_ruins_stage_3
+				is_owned_and_controlled_by = ROOT
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = arms_factory level = 1 instant_build = yes }
 		}
-		add_extra_state_shared_building_slots = 1
-		add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+		add_to_variable = { MIL_phase_2_weapons_facilities_completed = 1 }
+		add_to_variable = { MIL_phase_2_industrial_facilities_completed = 1 }
 	}
-	add_to_variable = { MIL_phase_2_weapons_facilities_completed = 1 }
-	add_to_variable = { MIL_phase_2_industrial_facilities_completed = 1 }
 }
 
 BARE_MIL_Phase_2_Select_Research_Target_effect = {
@@ -150,22 +158,42 @@ BARE_MIL_Phase_2_Build_Selected_Research_Facility_effect = {
 }
 
 BARE_MIL_Phase_2_Complete_Formal_Research_Facility_effect = {
-	# 2026-07-27 修改：
+	# 2026-08-03 修改：为正式科研设施结算增加最终目标检查，防止完成瞬间失去控制后仍消耗次数和优惠。
 	# 入口：正式科研设施建设决议倒计时完成。
-	# 关键状态：建设次数决定后续时长，优惠次数由清理不是破坏国策提供，90日冷却使用限时国家旗标。
-	# 预期结果：锁定随机目标、累计正式建设次数、消耗一次可用优惠并打开设施类型选择事件。
-	BARE_MIL_Phase_2_Select_Research_Target_effect = yes
-	add_to_variable = { MIL_phase_2_research_facilities_completed = 1 }
+	# 关键状态：至少存在一个仍由千年拥有和控制的空闲科研落点，才允许累计次数、消耗优惠并进入选择事件。
+	# 预期结果：正常完成时锁定目标并结算；目标失效时只清理本轮临时状态，不错误发放设施。
 	if = {
-		limit = {
-			has_country_flag = MIL_phase_2_research_current_used_discount
-			check_variable = { MIL_phase_2_research_discount_uses > 0 }
+		limit = { BARE_MIL_Phase_2_Has_Research_Facility_Target = yes }
+		BARE_MIL_Phase_2_Select_Research_Target_effect = yes
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = MIL_phase_2_research_target_639
+					has_country_flag = MIL_phase_2_research_target_640
+					has_country_flag = MIL_phase_2_research_target_641
+					has_country_flag = MIL_phase_2_research_target_643
+				}
+			}
+			add_to_variable = { MIL_phase_2_research_facilities_completed = 1 }
+			if = {
+				limit = {
+					has_country_flag = MIL_phase_2_research_current_used_discount
+					check_variable = { MIL_phase_2_research_discount_uses > 0 }
+				}
+				add_to_variable = { MIL_phase_2_research_discount_uses = -1 }
+			}
+			set_country_flag = { flag = MIL_phase_2_research_facility_cooldown days = 90 }
+			country_event = { id = MIL_industrial_phase_2.1 }
 		}
-		add_to_variable = { MIL_phase_2_research_discount_uses = -1 }
+	}
+	else = {
+		# 2026-08-03 修改：最终检查失败时清除可能遗留的目标，避免下一次建设误用旧落点。
+		clr_country_flag = MIL_phase_2_research_target_639
+		clr_country_flag = MIL_phase_2_research_target_640
+		clr_country_flag = MIL_phase_2_research_target_641
+		clr_country_flag = MIL_phase_2_research_target_643
 	}
 	clr_country_flag = MIL_phase_2_research_current_used_discount
-	set_country_flag = { flag = MIL_phase_2_research_facility_cooldown days = 90 }
-	country_event = { id = MIL_industrial_phase_2.1 }
 }
 
 BARE_MIL_Phase_2_Convert_One_Research_Discount_effect = {
@@ -197,50 +225,56 @@ BARE_MIL_Phase_2_Convert_All_Research_Discounts_effect = {
 }
 
 BARE_MIL_Phase_2_Clear_More_Ruins_effect = {
-	# 2026-07-27 修改：
+	# 2026-08-03 修改：在国策完成瞬间重新确认三块受控重建地块，避免奖励数量不足。
 	# 入口：清理更多废墟区域国策完成奖励。
 	# 关键状态：从已重建且由千年控制的废墟地块中抽取三个不同目标，临时地块旗标防止重复。
-	# 预期结果：三个地块各获得一座民用工厂和一个建筑槽，并沿12080至11949铺设5级铁路。
-	random_owned_controlled_state = {
-		limit = { OR = { state = 639 state = 640 state = 641 state = 643 } has_state_flag = MIL_ruins_stage_3 }
-		set_state_flag = MIL_phase_2_clear_more_selected_temp
-		add_extra_state_shared_building_slots = 1
-		add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
-	}
-	random_owned_controlled_state = {
-		limit = { OR = { state = 639 state = 640 state = 641 state = 643 } has_state_flag = MIL_ruins_stage_3 NOT = { has_state_flag = MIL_phase_2_clear_more_selected_temp } }
-		set_state_flag = MIL_phase_2_clear_more_selected_temp
-		add_extra_state_shared_building_slots = 1
-		add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
-	}
-	random_owned_controlled_state = {
-		limit = { OR = { state = 639 state = 640 state = 641 state = 643 } has_state_flag = MIL_ruins_stage_3 NOT = { has_state_flag = MIL_phase_2_clear_more_selected_temp } }
-		set_state_flag = MIL_phase_2_clear_more_selected_temp
-		add_extra_state_shared_building_slots = 1
-		add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
-	}
-	every_owned_state = {
-		limit = { has_state_flag = MIL_phase_2_clear_more_selected_temp }
-		clr_state_flag = MIL_phase_2_clear_more_selected_temp
-	}
-	build_railway = {
-		level = 5
-		path = { 12080 7937 4509 3779 827 5144 6696 1514 12029 5379 1517 2784 8146 2775 4884 375 7771 11949 }
+	# 预期结果：完成时条件仍成立才向三个不同地块发奖并铺设铁路；条件失效时不执行残缺结算。
+	if = {
+		limit = { BARE_MIL_Phase_2_Has_Three_Rebuilt_States = yes }
+		random_owned_controlled_state = {
+			limit = { OR = { state = 639 state = 640 state = 641 state = 643 } has_state_flag = MIL_ruins_stage_3 is_owned_and_controlled_by = ROOT }
+			set_state_flag = MIL_phase_2_clear_more_selected_temp
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+		}
+		random_owned_controlled_state = {
+			limit = { OR = { state = 639 state = 640 state = 641 state = 643 } has_state_flag = MIL_ruins_stage_3 is_owned_and_controlled_by = ROOT NOT = { has_state_flag = MIL_phase_2_clear_more_selected_temp } }
+			set_state_flag = MIL_phase_2_clear_more_selected_temp
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+		}
+		random_owned_controlled_state = {
+			limit = { OR = { state = 639 state = 640 state = 641 state = 643 } has_state_flag = MIL_ruins_stage_3 is_owned_and_controlled_by = ROOT NOT = { has_state_flag = MIL_phase_2_clear_more_selected_temp } }
+			set_state_flag = MIL_phase_2_clear_more_selected_temp
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+		}
+		every_owned_state = {
+			limit = { has_state_flag = MIL_phase_2_clear_more_selected_temp }
+			clr_state_flag = MIL_phase_2_clear_more_selected_temp
+		}
+		build_railway = {
+			level = 5
+			path = { 12080 7937 4509 3779 827 5144 6696 1514 12029 5379 1517 2784 8146 2775 4884 375 7771 11949 }
+		}
 	}
 }
 
 BARE_MIL_Phase_2_Expand_Eridu_effect = {
-	# 2026-07-27 修改：
-	# 入口：扩建埃里都国策完成奖励。
-	# 关键状态：所有奖励固定作用于已重建且由千年控制的643地块。
-	# 预期结果：643增加两座民用工厂、一座重工厂和三个建筑槽，并开启90日工厂转化计时。
-	643 = {
-		add_extra_state_shared_building_slots = 3
-		add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
-		add_building_construction = { type = heavy_arms_factory level = 1 instant_build = yes }
+	# 2026-08-03 修复：国策完成时再次确认643仍由千年拥有并控制，避免国策执行期间失去控制后奖励落到敌方地区。
+	# 入口：MIL_Expand_Eridu 国策完成奖励。
+	# 关键状态：643的第三阶段重建旗标和当前控制权。
+	# 预期结果：条件满足时，643获得固定工业奖励并开启90日工厂转化计时；条件不满足时不发放该奖励。
+	if = {
+		limit = { 643 = { has_state_flag = MIL_ruins_stage_3 is_owned_and_controlled_by = ROOT } }
+		643 = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+			add_building_construction = { type = heavy_arms_factory level = 1 instant_build = yes }
+		}
+		set_country_flag = MIL_phase_2_eridu_conversion_unlocked
+		set_variable = { MIL_phase_2_eridu_controlled_days = 0 }
 	}
-	set_country_flag = MIL_phase_2_eridu_conversion_unlocked
-	set_variable = { MIL_phase_2_eridu_controlled_days = 0 }
 }
 
 BARE_MIL_Phase_2_Eridu_Daily_Check_effect = {

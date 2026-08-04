@@ -1,12 +1,5 @@
 on_actions = {
-    # 2026-07-20 修复：开局监听必须切换到千年国家作用域；地块初始修正和旗标由千年国家历史文件直接建立。
-    on_startup = {
-        effect = {
-            MIL = {
-                BARE_MIL_Ruins_Initialize_effect = yes
-            }
-        }
-    }
+    # 2026-08-03 修改：废墟地块初始修正和阶段旗标唯一由 history/countries/MIL - Millennium.txt 建立；开局不再重复重置状态。
 
     # 2026-05-20: 接入晄轮大祭月度循环；剩余月份归零后进入待结算状态，不再执行月更
     on_monthly_MIL = {
@@ -58,11 +51,6 @@ on_actions = {
                     original_tag = MIL
                     has_completed_focus = MIL_big_view
                     NOT = { has_dynamic_modifier = { modifier = MIL_Millennium_Award } }
-                    # 当前禁用：旧存档迁移条件；正式开发阶段不再检测 MIL_Imaginary_System_Upgrade。
-                    # OR = {
-                    #     NOT = { has_dynamic_modifier = { modifier = MIL_Millennium_Award } }
-                    #     has_dynamic_modifier = { modifier = MIL_Imaginary_System_Upgrade }
-                    # }
                 }
                 BARE_MIL_award_ensure_dynamic_modifier_effect = yes
             }

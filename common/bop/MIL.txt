@@ -87,42 +87,13 @@ MIL_bp_financial_crisis_balance = {
 
 # 2026-07-27 修改：千年发展的新蓝图完成后，以从中间开始的资源调度取代财政危机权力平衡。
 MIL_bp_development_resource_allocation = {
+	# 2026-08-03 修改：补齐发展资源调度的左右阵营定义，确保国策切换后权力平衡能够正常显示两侧名称和图标。
 	initial_value = 0.0
 	left_side = MIL_bop_resource_conservation
 	right_side = MIL_bop_resource_expansion
 	decision_category = MIL_bop_decision_category
 
-	# 资源严重不足：财政危机时期的保守调度惯性仍会拖累工业，但每周快速回到中间。
-	range = {
-		id = MIL_bop_resource_severe_shortage
-		min = -1.0
-		max = -0.75
-		modifier = {
-			consumer_goods_factor = 0.15
-			production_speed_buildings_factor = -0.05
-			industrial_capacity_factory = -0.05
-			production_factory_max_efficiency_factor = -0.05
-			production_factory_efficiency_gain_factor = -0.05
-			power_balance_weekly = 0.02
-		}
-	}
-
-	# 资源偏紧：负面效果减半，并以较慢速度回到中间。
-	range = {
-		id = MIL_bop_resource_tight
-		min = -0.75
-		max = -0.25
-		modifier = {
-			consumer_goods_factor = 0.075
-			production_speed_buildings_factor = -0.025
-			industrial_capacity_factory = -0.025
-			production_factory_max_efficiency_factor = -0.025
-			production_factory_efficiency_gain_factor = -0.025
-			power_balance_weekly = 0.01
-		}
-	}
-
-	# 调度平衡：不提供额外效果，也不自动移动。
+	# 2026-08-03 修复：按HOI4权力平衡结构把中心档放在顶层、左右档放回对应阵营。
 	range = {
 		id = MIL_bop_resource_balanced
 		min = -0.25
@@ -130,27 +101,67 @@ MIL_bp_development_resource_allocation = {
 		modifier = { }
 	}
 
-	# 资源投入偏高：工业运转获得小幅收益，每周缓慢回到中间。
-	range = {
-		id = MIL_bop_resource_abundant
-		min = 0.25
-		max = 0.75
-		modifier = {
-			industrial_capacity_factory = 0.05
-			production_factory_efficiency_gain_factor = 0.05
-			power_balance_weekly = -0.005
+	side = {
+		id = MIL_bop_resource_conservation
+		icon = GFX_idea_MIL_security_department_of_long_peace
+
+		# 资源严重不足：财政危机时期的保守调度惯性仍会拖累工业，但每周快速回到中间。
+		range = {
+			id = MIL_bop_resource_severe_shortage
+			min = -1.0
+			max = -0.75
+			modifier = {
+				consumer_goods_factor = 0.15
+				production_speed_buildings_factor = -0.05
+				industrial_capacity_factory = -0.05
+				production_factory_max_efficiency_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+				power_balance_weekly = 0.02
+			}
+		}
+
+		# 资源偏紧：负面效果减半，并以较慢速度回到中间。
+		range = {
+			id = MIL_bop_resource_tight
+			min = -0.75
+			max = -0.25
+			modifier = {
+				consumer_goods_factor = 0.075
+				production_speed_buildings_factor = -0.025
+				industrial_capacity_factory = -0.025
+				production_factory_max_efficiency_factor = -0.025
+				production_factory_efficiency_gain_factor = -0.025
+				power_balance_weekly = 0.01
+			}
 		}
 	}
 
-	# 资源集中投入：工业收益达到最高档，每周向中间回正1%。
-	range = {
-		id = MIL_bop_resource_saturated
-		min = 0.75
-		max = 1.0
-		modifier = {
-			industrial_capacity_factory = 0.10
-			production_factory_efficiency_gain_factor = 0.10
-			power_balance_weekly = -0.01
+	side = {
+		id = MIL_bop_resource_expansion
+		icon = GFX_idea_MIL_shadow_of_financial_crisis
+
+		# 资源投入偏高：工业运转获得小幅收益，每周缓慢回到中间。
+		range = {
+			id = MIL_bop_resource_abundant
+			min = 0.25
+			max = 0.75
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				power_balance_weekly = -0.005
+			}
+		}
+
+		# 资源集中投入：工业收益达到最高档，每周向中间回正1%。
+		range = {
+			id = MIL_bop_resource_saturated
+			min = 0.75
+			max = 1.0
+			modifier = {
+				industrial_capacity_factory = 0.10
+				production_factory_efficiency_gain_factor = 0.10
+				power_balance_weekly = -0.01
+			}
 		}
 	}
 }

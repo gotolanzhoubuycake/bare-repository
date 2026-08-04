@@ -3161,92 +3161,23 @@ BARE_MIL_Millennium_Stability_Guardian_Finalize_effect = {
 	force_update_dynamic_modifier = yes
 }
 
-BARE_MIL_Ruins_Initialize_effect = {
-	# 2026-07-10 修改：初始化千年旧校区废墟开发系统的四个废墟地块。
-	# 2026-07-13 修改：同步初始化三类固定废墟敌人 TAG，避免使用不可取消科技作为敌人类型开关。
-	# 入口：开局 on_startup 调用；调试决议也可复用本效果进行初始化。
-	# 关键变量：四个固定废墟地块 641、643、640、639；固定敌人 TAG A56/A57/A58；各地块状态旗标记录开发阶段。
-	# 预期结果：四个废墟地块获得“废墟城市”地区动态修正，并标记为未开发废墟；三类废墟敌人获得类型旗标与可移除画像。
-	641 = {
-		if = {
-			limit = {
-				NOT = { has_dynamic_modifier = { modifier = MIL_ruins_city_modifier } }
-				NOT = { has_dynamic_modifier = { modifier = MIL_ruins_city_initial_development_modifier } }
-				NOT = { has_dynamic_modifier = { modifier = MIL_ruins_city_cleared_modifier } }
-				NOT = { has_dynamic_modifier = { modifier = MIL_ruins_excellent_construction_area_modifier } }
-			}
-			add_dynamic_modifier = { modifier = MIL_ruins_city_modifier }
+BARE_MIL_Ruins_Select_Story_Target_effect = {
+	# 2026-08-03 修改：废墟开发线正式启动时一次性确定SPTF事件链目标，不再依赖开局初始化或旧存档迁移。
+	# 入口：MIL_old_school_redevelopment完成奖励的hidden_effect，当前为千年国家作用域。
+	# 关键状态：四个MIL_ruins_story_target_*旗标；仅在四个旗标都不存在时执行随机选择。
+	# 预期结果：后续首次完成目标地块第三阶段时触发一次SPTF事件链，其他地块不会重复触发。
+	if = {
+		limit = {
+			NOT = { has_country_flag = MIL_ruins_story_target_641 }
+			NOT = { has_country_flag = MIL_ruins_story_target_643 }
+			NOT = { has_country_flag = MIL_ruins_story_target_640 }
+			NOT = { has_country_flag = MIL_ruins_story_target_639 }
 		}
-		set_state_flag = MIL_ruins_area
-		set_state_flag = MIL_ruins_stage_0
-		set_state_flag = MIL_ruins_residential_area
-	}
-	643 = {
-		if = {
-			limit = {
-				NOT = { has_dynamic_modifier = { modifier = MIL_ruins_city_modifier } }
-				NOT = { has_dynamic_modifier = { modifier = MIL_ruins_city_initial_development_modifier } }
-				NOT = { has_dynamic_modifier = { modifier = MIL_ruins_city_cleared_modifier } }
-				NOT = { has_dynamic_modifier = { modifier = MIL_ruins_excellent_construction_area_modifier } }
-			}
-			add_dynamic_modifier = { modifier = MIL_ruins_city_modifier }
-		}
-		set_state_flag = MIL_ruins_area
-		set_state_flag = MIL_ruins_stage_0
-		set_state_flag = MIL_ruins_residential_area
-	}
-	640 = {
-		if = {
-			limit = {
-				NOT = { has_dynamic_modifier = { modifier = MIL_ruins_city_modifier } }
-				NOT = { has_dynamic_modifier = { modifier = MIL_ruins_city_initial_development_modifier } }
-				NOT = { has_dynamic_modifier = { modifier = MIL_ruins_city_cleared_modifier } }
-				NOT = { has_dynamic_modifier = { modifier = MIL_ruins_excellent_construction_area_modifier } }
-			}
-			add_dynamic_modifier = { modifier = MIL_ruins_city_modifier }
-		}
-		set_state_flag = MIL_ruins_area
-		set_state_flag = MIL_ruins_stage_0
-		set_state_flag = MIL_ruins_urban_area
-	}
-	639 = {
-		if = {
-			limit = {
-				NOT = { has_dynamic_modifier = { modifier = MIL_ruins_city_modifier } }
-				NOT = { has_dynamic_modifier = { modifier = MIL_ruins_city_initial_development_modifier } }
-				NOT = { has_dynamic_modifier = { modifier = MIL_ruins_city_cleared_modifier } }
-				NOT = { has_dynamic_modifier = { modifier = MIL_ruins_excellent_construction_area_modifier } }
-			}
-			add_dynamic_modifier = { modifier = MIL_ruins_city_modifier }
-		}
-		set_state_flag = MIL_ruins_area
-		set_state_flag = MIL_ruins_stage_0
-		set_state_flag = MIL_ruins_urban_area
-	}
-	A56 = {
-		set_country_flag = MIL_ruins_enemy_helmet_tag
-	}
-	A57 = {
-		set_country_flag = MIL_ruins_enemy_machine_tag
-	}
-	A58 = {
-		set_country_flag = MIL_ruins_enemy_cross_divine_tag
-	}
-	MIL = {
-		# 2026-07-18 修改：开局等概率选定一个废墟地块，其首次开发完成时启动SPTF叙事事件链。
-		if = {
-			limit = {
-				NOT = { has_country_flag = MIL_ruins_story_target_641 }
-				NOT = { has_country_flag = MIL_ruins_story_target_643 }
-				NOT = { has_country_flag = MIL_ruins_story_target_640 }
-				NOT = { has_country_flag = MIL_ruins_story_target_639 }
-			}
-			random_list = {
-				25 = { set_country_flag = MIL_ruins_story_target_641 }
-				25 = { set_country_flag = MIL_ruins_story_target_643 }
-				25 = { set_country_flag = MIL_ruins_story_target_640 }
-				25 = { set_country_flag = MIL_ruins_story_target_639 }
-			}
+		random_list = {
+			25 = { set_country_flag = MIL_ruins_story_target_641 }
+			25 = { set_country_flag = MIL_ruins_story_target_643 }
+			25 = { set_country_flag = MIL_ruins_story_target_640 }
+			25 = { set_country_flag = MIL_ruins_story_target_639 }
 		}
 	}
 }
@@ -4450,11 +4381,6 @@ BARE_MIL_award_ensure_dynamic_modifier_effect = {
 			set_variable = { MIL_award_millennium_power_balance_weekly = 0 }
 		}
 	}
-	# 当前禁用：不再迁移或移除旧虚数动态修正；正式开发阶段不考虑旧存档兼容。
-	# if = {
-	# 	limit = { has_dynamic_modifier = { modifier = MIL_Imaginary_System_Upgrade } }
-	# 	remove_dynamic_modifier = { modifier = MIL_Imaginary_System_Upgrade }
-	# }
 	if = {
 		limit = {
 			NOT = { has_dynamic_modifier = { modifier = MIL_Millennium_Award } }

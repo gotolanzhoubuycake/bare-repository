@@ -1,4 +1,6 @@
 MIL_bop_decision_category = {
+	# 2026-08-03 修改：财政危机决议的权力平衡位移统一转交BARE_MIL_Adjust_Current_Industrial_Balance_effect，保持跨阶段结算一致。
+	# 2026-08-03 修改：可用条件和AI判断通过公共触发器兼容旧财政危机与新发展资源调度。
 	# 一、节流决议：完成“债务清除一揽子计划”后解锁。
 	MIL_bop_cut_useless_clubs = {
 		cost = 50
@@ -10,10 +12,8 @@ MIL_bop_decision_category = {
 		available = {
 		}
 		remove_effect = {
-			add_power_balance_value = {
-				id = MIL_bp_financial_crisis_balance
-				value = -0.05
-			}
+			set_variable = { MIL_phase_2_bop_adjustment_code = 1 }
+			BARE_MIL_Adjust_Current_Industrial_Balance_effect = yes
 		}
 		ai_will_do = {
 			base = 3
@@ -23,10 +23,7 @@ MIL_bop_decision_category = {
 			}
 			modifier = {
 				factor = 3
-				power_balance_value = {
-					id = MIL_bp_financial_crisis_balance
-					value > 0.25
-				}
+				BARE_MIL_Industrial_Balance_Greater_025 = yes
 			}
 		}
 	}
@@ -42,19 +39,14 @@ MIL_bop_decision_category = {
 			research_speed_factor = -0.05
 		}
 		remove_effect = {
-			add_power_balance_value = {
-				id = MIL_bp_financial_crisis_balance
-				value = -0.05
-			}
+			set_variable = { MIL_phase_2_bop_adjustment_code = 1 }
+			BARE_MIL_Adjust_Current_Industrial_Balance_effect = yes
 		}
 		ai_will_do = {
 			base = 2
 			modifier = {
 				factor = 3
-				power_balance_value = {
-					id = MIL_bp_financial_crisis_balance
-					value > 0.25
-				}
+				BARE_MIL_Industrial_Balance_Greater_025 = yes
 			}
 		}
 	}
@@ -67,10 +59,8 @@ MIL_bop_decision_category = {
 		}
 		complete_effect = {
 			add_stability = -0.05
-			add_power_balance_value = {
-				id = MIL_bp_financial_crisis_balance
-				value = -0.05
-			}
+			set_variable = { MIL_phase_2_bop_adjustment_code = 1 }
+			BARE_MIL_Adjust_Current_Industrial_Balance_effect = yes
 		}
 		ai_will_do = {
 			base = 1
@@ -80,10 +70,7 @@ MIL_bop_decision_category = {
 			}
 			modifier = {
 				factor = 3
-				power_balance_value = {
-					id = MIL_bp_financial_crisis_balance
-					value > 0.25
-				}
+				BARE_MIL_Industrial_Balance_Greater_025 = yes
 			}
 		}
 	}
@@ -104,10 +91,8 @@ MIL_bop_decision_category = {
 					level = 1
 				}
 			}
-			add_power_balance_value = {
-				id = MIL_bp_financial_crisis_balance
-				value = -0.10
-			}
+			set_variable = { MIL_phase_2_bop_adjustment_code = 2 }
+			BARE_MIL_Adjust_Current_Industrial_Balance_effect = yes
 		}
 		ai_will_do = {
 			base = 1
@@ -117,10 +102,7 @@ MIL_bop_decision_category = {
 			}
 			modifier = {
 				factor = 4
-				power_balance_value = {
-					id = MIL_bp_financial_crisis_balance
-					value > 0.40
-				}
+				BARE_MIL_Industrial_Balance_Greater_040 = yes
 			}
 		}
 	}
@@ -132,19 +114,14 @@ MIL_bop_decision_category = {
 			has_completed_focus = MIL_money_is_fire
 		}
 		available = {
-			power_balance_value = {
-				id = MIL_bp_financial_crisis_balance
-				value < 0.25
-			}
+			BARE_MIL_Industrial_Balance_Less_025 = yes
 		}
 		modifier = {
 			civilian_factory_use = 5
 		}
 		complete_effect = {
-			add_power_balance_value = {
-				id = MIL_bp_financial_crisis_balance
-				value = 0.20
-			}
+			set_variable = { MIL_phase_2_bop_adjustment_code = 8 }
+			BARE_MIL_Adjust_Current_Industrial_Balance_effect = yes
 		}
 		remove_effect = {
 			random_owned_state = {
@@ -162,10 +139,8 @@ MIL_bop_decision_category = {
 				}
 				add_extra_state_shared_building_slots = 1
 			}
-			add_power_balance_value = {
-				id = MIL_bp_financial_crisis_balance
-				value = -0.15
-			}
+			set_variable = { MIL_phase_2_bop_adjustment_code = 7 }
+			BARE_MIL_Adjust_Current_Industrial_Balance_effect = yes
 		}
 		ai_will_do = {
 			base = 1
@@ -175,10 +150,7 @@ MIL_bop_decision_category = {
 			}
 			modifier = {
 				factor = 2
-				power_balance_value = {
-					id = MIL_bp_financial_crisis_balance
-					value < 0
-				}
+				BARE_MIL_Industrial_Balance_Less_000 = yes
 			}
 		}
 	}
@@ -189,16 +161,11 @@ MIL_bop_decision_category = {
 			has_completed_focus = MIL_money_is_fire
 		}
 		available = {
-			power_balance_value = {
-				id = MIL_bp_financial_crisis_balance
-				value < 0.25
-			}
+			BARE_MIL_Industrial_Balance_Less_025 = yes
 		}
 		complete_effect = {
-			add_power_balance_value = {
-				id = MIL_bp_financial_crisis_balance
-				value = 0.10
-			}
+			set_variable = { MIL_phase_2_bop_adjustment_code = 6 }
+			BARE_MIL_Adjust_Current_Industrial_Balance_effect = yes
 		}
 		remove_effect = {
 			custom_effect_tooltip = MIL_bop_oparts_research_complete_tt
@@ -219,10 +186,7 @@ MIL_bop_decision_category = {
 			base = 1
 			modifier = {
 				factor = 0.5
-				power_balance_value = {
-					id = MIL_bp_financial_crisis_balance
-					value > 0
-				}
+				BARE_MIL_Industrial_Balance_Greater_000 = yes
 			}
 		}
 	}
@@ -233,16 +197,11 @@ MIL_bop_decision_category = {
 			has_completed_focus = MIL_money_is_fire
 		}
 		available = {
-			power_balance_value = {
-				id = MIL_bp_financial_crisis_balance
-				value < 0.75
-			}
+			BARE_MIL_Industrial_Balance_Less_075 = yes
 		}
 		complete_effect = {
-			add_power_balance_value = {
-				id = MIL_bp_financial_crisis_balance
-				value = 0.10
-			}
+			set_variable = { MIL_phase_2_bop_adjustment_code = 6 }
+			BARE_MIL_Adjust_Current_Industrial_Balance_effect = yes
 		}
 		remove_effect = {
 			random_owned_state = {
@@ -256,10 +215,8 @@ MIL_bop_decision_category = {
 					instant_build = yes
 				}
 			}
-			add_power_balance_value = {
-				id = MIL_bp_financial_crisis_balance
-				value = -0.05
-			}
+			set_variable = { MIL_phase_2_bop_adjustment_code = 1 }
+			BARE_MIL_Adjust_Current_Industrial_Balance_effect = yes
 		}
 		ai_will_do = {
 			base = 2
@@ -274,10 +231,7 @@ MIL_bop_decision_category = {
 			}
 			modifier = {
 				factor = 2
-				power_balance_value = {
-					id = MIL_bp_financial_crisis_balance
-					value < 0
-				}
+				BARE_MIL_Industrial_Balance_Less_000 = yes
 			}
 		}
 	}
@@ -288,16 +242,11 @@ MIL_bop_decision_category = {
 			has_completed_focus = MIL_our_product_is_best
 		}
 		available = {
-			power_balance_value = {
-				id = MIL_bp_financial_crisis_balance
-				value < 0.75
-			}
+			BARE_MIL_Industrial_Balance_Less_075 = yes
 		}
 		complete_effect = {
-			add_power_balance_value = {
-				id = MIL_bp_financial_crisis_balance
-				value = 0.15
-			}
+			set_variable = { MIL_phase_2_bop_adjustment_code = 7 }
+			BARE_MIL_Adjust_Current_Industrial_Balance_effect = yes
 		}
 		remove_effect = {
 			# 从工业、建筑与机床技术中随机获得一张100%研究加成卡。
@@ -330,10 +279,8 @@ MIL_bop_decision_category = {
 					}
 				}
 			}
-			add_power_balance_value = {
-				id = MIL_bp_financial_crisis_balance
-				value = -0.20
-			}
+			set_variable = { MIL_phase_2_bop_adjustment_code = 4 }
+			BARE_MIL_Adjust_Current_Industrial_Balance_effect = yes
 			if = {
 				limit = {
 					NOT = { has_country_flag = MIL_bop_upgrade_industrial_facilities_first_completed }
@@ -355,10 +302,7 @@ MIL_bop_decision_category = {
 			}
 			modifier = {
 				factor = 0.5
-				power_balance_value = {
-					id = MIL_bp_financial_crisis_balance
-					value > 0.50
-				}
+				BARE_MIL_Industrial_Balance_Greater_050 = yes
 			}
 		}
 	}
@@ -375,16 +319,12 @@ MIL_bop_decision_category = {
 		}
 		complete_effect = {
 			custom_effect_tooltip = MIL_bop_full_virtual_system_access_tooltip
-			add_power_balance_value = {
-				id = MIL_bp_financial_crisis_balance
-				value = -0.20
-			}
+			set_variable = { MIL_phase_2_bop_adjustment_code = 4 }
+			BARE_MIL_Adjust_Current_Industrial_Balance_effect = yes
 		}
 		remove_effect = {
-			add_power_balance_value = {
-				id = MIL_bp_financial_crisis_balance
-				value = -0.30
-			}
+			set_variable = { MIL_phase_2_bop_adjustment_code = 5 }
+			BARE_MIL_Adjust_Current_Industrial_Balance_effect = yes
 			hidden_effect = {
 				set_country_flag = MIL_award_full_virtual_system_access_completed
 				BARE_MIL_award_ensure_dynamic_modifier_effect = yes

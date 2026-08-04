@@ -37,3 +37,6 @@ set_politics = {
 set_popularities = {
 	no_ideology = 100
 }
+
+# 2026-08-03 修改：为暴走机械招募默认国家领导人，正式头像使用十字神明头像组。
+recruit_character = MIL_ruins_A57_leader

@@ -50,6 +50,11 @@ ideologies = {
 				}
 			}
 
+			##进步哲学 - 研讨会
+			PGM_MIL_SEM_type  = {
+				can_be_randomly_selected = no
+			}
+
 			##进步哲学 - 大渚教
 			PGM_TRI_Nagisa_type  = {
 				can_be_randomly_selected = no

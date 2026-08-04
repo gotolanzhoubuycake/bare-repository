@@ -1131,8 +1131,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = 100
-			# 2026-07-14 修改：启动旧校区废墟开发线，并用原版覆盖式提示准确说明临时演习限制及解除条件。
+			# 2026-08-03 修改：正式启动废墟开发线时确定一次SPTF目标；地块初始状态由千年历史文件负责。
 			set_country_flag = MIL_ruins_development_started
+			hidden_effect = { BARE_MIL_Ruins_Select_Story_Target_effect = yes }
 			if = {
 				limit = {
 					NOT = { has_country_flag = MIL_ruins_great_game_restricted }
@@ -1387,12 +1388,15 @@ focus_tree = {
 		completion_reward = {
 			# 2026-05-20: 完成“千年发展的新蓝图”后，延迟 4 个月触发晄轮大祭筹备事件
 			# 2026-08-02 修改：补齐工业线文档中千年大赏追加收益，并对三条循环研发线各执行一次完整结算。
+			# 2026-08-03 修改：完成新蓝图时移除财政危机并从中间位置启动发展资源调度权力平衡。
 			# 当前禁用：旧独立民族精神已合并到 MIL_Millennium_Award。
 			# add_ideas = MIL_new_blueprint_award_bonus
+			custom_effect_tooltip = MIL_new_development_plan_bop_tooltip
 			custom_effect_tooltip = MIL_new_development_plan_award_bonus_tooltip
 			custom_effect_tooltip = MIL_new_development_plan_award_mission_tooltip
 			custom_effect_tooltip = MIL_new_development_plan_sport_event_tooltip
-				hidden_effect = {
+			hidden_effect = {
+				BARE_MIL_Start_Development_Resource_Allocation_effect = yes
 				BARE_MIL_award_apply_new_blueprint_effect = yes
 				BARE_MIL_award_complete_all_projects_effect = yes
 				country_event = { id = MIL_sport_event.1 days = 120 }
@@ -1532,7 +1536,7 @@ focus_tree = {
 			# 2026-07-27 修改：升级虚数要求至少完成两轮循环优化。
 			custom_override_tooltip = {
 				tooltip = MIL_Upgrade_Imaginary_numbers_count_tt
-				check_variable = { MIL_award_imaginary_number_network_completed > 1 }
+				check_variable = { MIL_award_imaginary_number_network_optimize_count > 1 }
 			}
 		}
 		completion_reward = {
@@ -1666,9 +1670,11 @@ focus_tree = {
 			focus = MIL_the_second_mil_tower
 		}
 		prerequisite = {
-			# 2026-07-27 修改：扩建埃里都或升级虚数任意完成一个即可进入中期工程。
-			focus = MIL_Expand_Eridu
-			focus = MIL_Upgrade_Imaginary_numbers
+			# 2026-08-03 修复：巨塔中期工程的两条工业准备路线为二选一，而不是同时要求完成。
+			OR = {
+				focus = MIL_Expand_Eridu
+				focus = MIL_Upgrade_Imaginary_numbers
+			}
 		}
 		available = {
 			custom_override_tooltip = {
@@ -1697,7 +1703,14 @@ focus_tree = {
 		available = {
 			custom_override_tooltip = {
 				tooltip = MIL_more_research_equipment_count_tt
-				check_variable = { MIL_award_imaginary_number_network_completed > 3 }
+				check_variable = { MIL_award_imaginary_number_network_optimize_count > 3 }
+			}
+		}
+		bypass = {
+			# 2026-08-03 修改：四个固定科研落点都已完成时，不再重复推进免费科研设施国策。
+			custom_override_tooltip = {
+				tooltip = MIL_more_research_equipment_bypass_tt
+				BARE_MIL_Phase_2_All_Research_Sites_Built = yes
 			}
 		}
 		completion_reward = {
@@ -1714,7 +1727,6 @@ focus_tree = {
 				custom_effect_tooltip = MIL_more_research_equipment_fallback_tt
 				hidden_effect = {
 					random_owned_controlled_state = {
-						limit = { OR = { state = 639 state = 640 state = 641 state = 643 } has_state_flag = MIL_ruins_stage_3 }
 						add_extra_state_shared_building_slots = 2
 						add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
 					}

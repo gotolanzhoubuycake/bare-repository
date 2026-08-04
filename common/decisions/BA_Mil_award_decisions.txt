@@ -165,6 +165,11 @@ MIL_award_imaginary_number_network_decisions = {
                 factor = 2
                 political_power > 200
             }
+            modifier = {
+                # 2026-08-03 修改：工业线国策被虚数优化次数阻挡时，AI最高优先缩短当前循环。
+                factor = 100
+                BARE_MIL_Phase_2_AI_Needs_Imaginary_Optimization = yes
+            }
         }
     }
 
@@ -201,6 +206,11 @@ MIL_award_imaginary_number_network_decisions = {
             modifier = {
                 factor = 2
                 political_power > 200
+            }
+            modifier = {
+                # 2026-08-03 修改：工业线国策被虚数优化次数阻挡时，AI最高优先缩短当前循环。
+                factor = 100
+                BARE_MIL_Phase_2_AI_Needs_Imaginary_Optimization = yes
             }
         }
     }
@@ -242,6 +252,11 @@ MIL_award_imaginary_number_network_decisions = {
             modifier = {
                 factor = 0.1
                 political_power < 150
+            }
+            modifier = {
+                # 2026-08-03 修改：工业线国策被虚数优化次数阻挡时，AI提高集中研发决议优先级。
+                factor = 100
+                BARE_MIL_Phase_2_AI_Needs_Imaginary_Optimization = yes
             }
         }
     }

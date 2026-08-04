@@ -10,7 +10,7 @@ characters = {###千禧年MIL 开始###
 		}
 
         country_leader = {
-			ideology = no_ideology_type
+			ideology = PGM_MIL_SEM_type
 			traits = { master_of_seminar }
 			expire = "9999.1.1.1"
 			id = -1
@@ -28,7 +28,7 @@ characters = {###千禧年MIL 开始###
 		}
 
         country_leader = {
-			ideology = no_ideology_type
+			ideology = PGM_MIL_SEM_type
 			traits = { cold_calculator }
 			expire = "9999.1.1.1"
 			id = -1

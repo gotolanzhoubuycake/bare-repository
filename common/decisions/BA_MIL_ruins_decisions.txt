@@ -733,9 +733,13 @@ MIL_ruins_development_decision_category = {
 		ai_will_do = {
 			factor = 20
 			modifier = {
-				factor = 100
+				factor = 10
 				has_completed_focus = MIL_new_development_plan
-				check_variable = { MIL_phase_2_industrial_facilities_completed < 7 }
+			}
+			modifier = {
+				# 2026-08-03 修改：巨塔国策缺少工业设施次数时，将本决议提高到最高优先级。
+				factor = 100
+				BARE_MIL_Phase_2_AI_Needs_Industrial_Facilities = yes
 			}
 		}
 	}
@@ -761,9 +765,13 @@ MIL_ruins_development_decision_category = {
 		ai_will_do = {
 			factor = 20
 			modifier = {
-				factor = 100
+				factor = 10
 				has_completed_focus = MIL_new_development_plan
-				check_variable = { MIL_phase_2_industrial_facilities_completed < 7 }
+			}
+			modifier = {
+				# 2026-08-03 修改：巨塔国策缺少工业设施次数时，将本决议提高到最高优先级。
+				factor = 100
+				BARE_MIL_Phase_2_AI_Needs_Industrial_Facilities = yes
 			}
 		}
 	}
@@ -782,7 +790,11 @@ MIL_ruins_development_decision_category = {
 		modifier = { civilian_factory_use = 10 }
 		complete_effect = { set_country_flag = MIL_phase_2_research_construction_ongoing set_country_flag = MIL_phase_2_research_current_used_discount }
 		remove_effect = { custom_effect_tooltip = MIL_phase_2_research_facility_complete_tt hidden_effect = { clr_country_flag = MIL_phase_2_research_construction_ongoing BARE_MIL_Phase_2_Complete_Formal_Research_Facility_effect = yes } }
-		ai_will_do = { factor = 50 modifier = { factor = 100 check_variable = { MIL_phase_2_research_facilities_completed < 3 } } }
+		ai_will_do = {
+			factor = 50
+			modifier = { factor = 10 has_completed_focus = MIL_new_development_plan }
+			modifier = { factor = 100 BARE_MIL_Phase_2_AI_Needs_Research_Facilities = yes }
+		}
 	}
 
 	MIL_phase_2_research_facility_discount_2 = {
@@ -798,7 +810,11 @@ MIL_ruins_development_decision_category = {
 		modifier = { civilian_factory_use = 10 }
 		complete_effect = { set_country_flag = MIL_phase_2_research_construction_ongoing set_country_flag = MIL_phase_2_research_current_used_discount }
 		remove_effect = { custom_effect_tooltip = MIL_phase_2_research_facility_complete_tt hidden_effect = { clr_country_flag = MIL_phase_2_research_construction_ongoing BARE_MIL_Phase_2_Complete_Formal_Research_Facility_effect = yes } }
-		ai_will_do = { factor = 50 modifier = { factor = 100 check_variable = { MIL_phase_2_research_facilities_completed < 3 } } }
+		ai_will_do = {
+			factor = 50
+			modifier = { factor = 10 has_completed_focus = MIL_new_development_plan }
+			modifier = { factor = 100 BARE_MIL_Phase_2_AI_Needs_Research_Facilities = yes }
+		}
 	}
 
 	MIL_phase_2_research_facility_discount_3 = {
@@ -814,7 +830,11 @@ MIL_ruins_development_decision_category = {
 		modifier = { civilian_factory_use = 10 }
 		complete_effect = { set_country_flag = MIL_phase_2_research_construction_ongoing set_country_flag = MIL_phase_2_research_current_used_discount }
 		remove_effect = { custom_effect_tooltip = MIL_phase_2_research_facility_complete_tt hidden_effect = { clr_country_flag = MIL_phase_2_research_construction_ongoing BARE_MIL_Phase_2_Complete_Formal_Research_Facility_effect = yes } }
-		ai_will_do = { factor = 50 modifier = { factor = 100 check_variable = { MIL_phase_2_research_facilities_completed < 3 } } }
+		ai_will_do = {
+			factor = 50
+			modifier = { factor = 10 has_completed_focus = MIL_new_development_plan }
+			modifier = { factor = 100 BARE_MIL_Phase_2_AI_Needs_Research_Facilities = yes }
+		}
 	}
 
 	MIL_phase_2_research_facility_normal_1 = {
@@ -830,7 +850,11 @@ MIL_ruins_development_decision_category = {
 		modifier = { civilian_factory_use = 20 }
 		complete_effect = { set_country_flag = MIL_phase_2_research_construction_ongoing }
 		remove_effect = { custom_effect_tooltip = MIL_phase_2_research_facility_complete_tt hidden_effect = { clr_country_flag = MIL_phase_2_research_construction_ongoing BARE_MIL_Phase_2_Complete_Formal_Research_Facility_effect = yes } }
-		ai_will_do = { factor = 35 modifier = { factor = 100 check_variable = { MIL_phase_2_research_facilities_completed < 3 } } }
+		ai_will_do = {
+			factor = 35
+			modifier = { factor = 10 has_completed_focus = MIL_new_development_plan }
+			modifier = { factor = 100 BARE_MIL_Phase_2_AI_Needs_Research_Facilities = yes }
+		}
 	}
 
 	MIL_phase_2_research_facility_normal_2 = {
@@ -846,7 +870,11 @@ MIL_ruins_development_decision_category = {
 		modifier = { civilian_factory_use = 20 }
 		complete_effect = { set_country_flag = MIL_phase_2_research_construction_ongoing }
 		remove_effect = { custom_effect_tooltip = MIL_phase_2_research_facility_complete_tt hidden_effect = { clr_country_flag = MIL_phase_2_research_construction_ongoing BARE_MIL_Phase_2_Complete_Formal_Research_Facility_effect = yes } }
-		ai_will_do = { factor = 35 modifier = { factor = 100 check_variable = { MIL_phase_2_research_facilities_completed < 3 } } }
+		ai_will_do = {
+			factor = 35
+			modifier = { factor = 10 has_completed_focus = MIL_new_development_plan }
+			modifier = { factor = 100 BARE_MIL_Phase_2_AI_Needs_Research_Facilities = yes }
+		}
 	}
 
 	MIL_phase_2_research_facility_normal_3 = {
@@ -862,7 +890,11 @@ MIL_ruins_development_decision_category = {
 		modifier = { civilian_factory_use = 20 }
 		complete_effect = { set_country_flag = MIL_phase_2_research_construction_ongoing }
 		remove_effect = { custom_effect_tooltip = MIL_phase_2_research_facility_complete_tt hidden_effect = { clr_country_flag = MIL_phase_2_research_construction_ongoing BARE_MIL_Phase_2_Complete_Formal_Research_Facility_effect = yes } }
-		ai_will_do = { factor = 35 modifier = { factor = 100 check_variable = { MIL_phase_2_research_facilities_completed < 3 } } }
+		ai_will_do = {
+			factor = 35
+			modifier = { factor = 10 has_completed_focus = MIL_new_development_plan }
+			modifier = { factor = 100 BARE_MIL_Phase_2_AI_Needs_Research_Facilities = yes }
+		}
 	}
 
 	MIL_phase_2_update_local_equipment = {
@@ -875,20 +907,28 @@ MIL_ruins_development_decision_category = {
 		remove_effect = {
 			custom_effect_tooltip = MIL_phase_2_update_local_equipment_effect_tt
 			hidden_effect = {
-				FROM = {
-					remove_building = { type = industrial_complex level = 1 }
-					set_state_flag = MIL_phase_2_equipment_updated
-					add_dynamic_modifier = { modifier = MIL_ruins_new_equipment_modifier }
+				# 2026-08-03 修改：完成瞬间再次核对目标，失去控制或工厂不足时不拆厂、不累计次数。
+				if = {
+					limit = { FROM = { BARE_MIL_Phase_2_Can_Update_Target_State = yes } }
+					FROM = {
+						remove_building = { type = industrial_complex level = 1 }
+						set_state_flag = MIL_phase_2_equipment_updated
+						add_dynamic_modifier = { modifier = MIL_ruins_new_equipment_modifier }
+					}
+					add_to_variable = { MIL_phase_2_equipment_updates_completed = 1 }
 				}
-				add_to_variable = { MIL_phase_2_equipment_updates_completed = 1 }
 			}
 		}
 		ai_will_do = {
 			factor = 30
 			modifier = {
+				factor = 10
+				has_completed_focus = MIL_new_development_plan
+			}
+			modifier = {
+				# 2026-08-03 修改：巨塔国策缺少设备更新次数时，将目标决议提高到最高优先级。
 				factor = 100
-				check_variable = { MIL_phase_2_equipment_updates_completed < 2 }
-				NOT = { has_completed_focus = MIL_better_Experimental_environment }
+				BARE_MIL_Phase_2_AI_Needs_Equipment_Updates = yes
 			}
 		}
 	}
@@ -901,7 +941,7 @@ MIL_ruins_attack_test_decision_category = {
 		complete_effect = {
 			set_country_flag = MIL_ruins_development_decisions_unlocked
 			set_country_flag = MIL_ruins_special_offensive_decisions_unlocked
-			BARE_MIL_Ruins_Initialize_effect = yes
+			# 2026-08-03 修改：调试入口只解锁决议，不重置历史文件提供的废墟阶段、修正或SPTF目标。
 		}
 	}
 
@@ -973,7 +1013,8 @@ MIL_ruins_attack_test_decision_category = {
 			set_variable = { MIL_phase_2_weapons_facility_duration = 45 }
 		}
 	}
-	MIL_phase_2_test_add_imaginary_count = { complete_effect = { add_to_variable = { MIL_award_imaginary_number_network_completed = 1 } } }
+	# 2026-08-03 修改：虚数调试入口只增加实际优化循环计数，不再修改基础项目完成旗标。
+	MIL_phase_2_test_add_imaginary_count = { complete_effect = { add_to_variable = { MIL_award_imaginary_number_network_optimize_count = 1 } } }
 	MIL_phase_2_test_add_industrial_count = { complete_effect = { add_to_variable = { MIL_phase_2_industrial_facilities_completed = 1 } } }
 	MIL_phase_2_test_add_research_count = { complete_effect = { add_to_variable = { MIL_phase_2_research_facilities_completed = 1 } } }
 	MIL_phase_2_test_add_equipment_count = { complete_effect = { add_to_variable = { MIL_phase_2_equipment_updates_completed = 1 } } }
@@ -1016,7 +1057,7 @@ MIL_ruins_attack_test_decision_category = {
 	}
 	MIL_phase_2_test_set_tower_thresholds = {
 		complete_effect = {
-			set_variable = { MIL_award_imaginary_number_network_completed = 4 }
+			set_variable = { MIL_award_imaginary_number_network_optimize_count = 4 }
 			set_variable = { MIL_phase_2_research_facilities_completed = 3 }
 			set_variable = { MIL_phase_2_industrial_facilities_completed = 7 }
 			set_variable = { MIL_phase_2_equipment_updates_completed = 2 }

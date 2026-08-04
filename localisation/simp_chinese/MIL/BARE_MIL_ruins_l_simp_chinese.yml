@@ -1,5 +1,6 @@
 ﻿l_simp_chinese:
- # 旧校区废墟袭击事件
+# 2026-08-03: 统一千年本地化键值为顶层格式，集中维护废墟系统调试与事件文本。
+# 旧校区废墟袭击事件
  MIL_ruins_attack.643.t: "废弃住宅区 1-2-1 遭到袭击"
  MIL_ruins_attack.643.d: "工程队刚刚完成主要废墟的清理，潜伏在街区深处的武装力量便突然发动进攻，并迅速接管了废弃住宅区 1-2-1。安保部已在周边部署临时边防部队，为千年争取组织反击的时间。\n\n如果千年在这场战斗中停止抵抗，袭击者仍会被清除，目标地块也会被收回，但千年全部核心地区的建筑都将遭到严重破坏。"
  MIL_ruins_attack.641.t: "废弃住宅区 1-1-3 遭到袭击"
@@ -10,7 +11,7 @@
  MIL_ruins_attack.639.d: "工程队刚刚完成主要废墟的清理，潜伏在街区深处的武装力量便突然发动进攻，并迅速接管了废弃城区 1-46-9。安保部已在周边部署临时边防部队，为千年争取组织反击的时间。\n\n如果千年在这场战斗中停止抵抗，袭击者仍会被清除，目标地块也会被收回，但千年全部核心地区的建筑都将遭到严重破坏。"
  MIL_ruins_attack.response: "立即组织反击！"
 
- # 废墟袭击调试决议
+# 废墟袭击调试决议
  MIL_ruins_attack_test_decision_category: "旧校区废墟袭击测试"
  MIL_ruins_attack_test_decision_category_desc: "用于直接检查废墟袭击的目标地块、敌人类型、部队生成和投降结算。"
  MIL_ruins_test_random_attack_643: "测试随机袭击：住宅区 1-2-1"
@@ -41,7 +42,7 @@
  MIL_ruins_test_capitulation_fallback_desc: "按千年在废墟袭击战争中停止抵抗的情况直接结算，用于检查敌人吞并、部队复员和核心地区建筑损坏。"
  MIL_ruins_test_capitulation_fallback_tt: "按千年停止抵抗结算：§G吞并当前袭击者并收回目标地块§!，随后使§R全部核心地区的建筑严重受损§!"
 
- # 2026-07-18 修改：废墟第一阶段扩展调试入口。
+# 2026-07-18 修改：废墟第一阶段扩展调试入口。
  MIL_ruins_test_unlock_full_system: "测试：解锁废墟第一阶段"
  MIL_ruins_test_unlock_full_system_desc: "初始化四个废墟地块，并解锁施工、特化攻势和战后解析决议组。"
  MIL_ruins_test_surprise_warehouse: "测试意外收获：旧仓库"
@@ -66,3 +67,54 @@
  MIL_ruins_test_add_helmet_reward_desc: "增加一次可领取的审问钢盔团成员奖励。"
  MIL_ruins_test_add_cross_reward: "测试：添加十字神明奖励"
  MIL_ruins_test_add_cross_reward_desc: "增加一次可领取的解析十字神明线索奖励。"
+
+# 2026-08-03: 从理念文件迁移废墟系统理念、动态修正与提示，集中按废墟系统维护。
+ MIL_ruins_great_game_restriction_tt: "在全部§Y4个旧校区废墟地块§!完成§Y清理废墟§!前，§Y千禧科技学园§!无法发起学园战术演习，也无法成为演习目标；正在进行或准备中的演习将立即终止。"
+ MIL_ruins_civilian_factory_donation_tt: "获得持续§Y365日§!的废墟开发民工捐赠：\n$MODIFIER_INDUSTRIAL_FACTORY_DONATIONS$：§G+10§!"
+ MIL_ruins_pin_holder_automech_reinforcement_tt: "在§Y$STATE_485$§!部署§G3个§!§Y废墟警戒自动机步兵师§!。\n每个师包含§Y6个$infantry_am$§!，以及§Y1个$recon$§!和§Y1个$engineer$§!，生成时满员且满装备。"
+ MIL_ruins_heavy_assault_mech_reinforcement_tt: "在§Y$STATE_485$§!部署§G1个§!§Y废墟重拳机甲部队§!。\n该师包含§Y5个$medium_bm_unit$§!、§Y5个$ifv_unit$§!，以及§Y1个$maintenance_company$§!、§Y1个$signal_company$§!和§Y1个$ifv_recon$§!，生成时满员且满装备。"
+ MIL_ruins_initial_success_resources_tt: "在两个已完成§Y基础设施重建§!且尚未获得本奖励的旧校区地块中，各增加：\n$state_resource_resources_el$：§G+8§!\n$state_resource_resources_cm$：§G+8§!"
+ MIL_ruins_city_modifier: "废墟城市"
+ MIL_ruins_city_modifier_desc: "旧校区的大片街区仍处在废弃状态。坍塌建筑、断裂道路、失效管线和未清点的危险物共同阻碍着这里的一切建设、资源回收、工业利用和人口恢复。"
+ MIL_ruins_city_initial_development_modifier: "初步开发的废墟城市"
+ MIL_ruins_city_initial_development_modifier_desc: "工程队已经完成了初步测绘和通路清理，但这片地区仍远未恢复正常。废墟带来的建设、资源、人力和地区最大工业值损失仍然十分明显。"
+ MIL_ruins_city_cleared_modifier: "已清理的废墟城市"
+ MIL_ruins_city_cleared_modifier_desc: "大部分危险废墟已经被清理，基础通行和施工条件有所恢复。这里仍需要进一步重建，但已经不再像最初那样完全无法利用。"
+ MIL_ruins_excellent_construction_area_modifier: "优良建设区域"
+ MIL_ruins_excellent_construction_area_modifier_desc: "旧校区清理完成后，宽阔的空地、完整的规划基础和重新接入的基础设施让这里成为适合大规模建设的新区域。"
+ MIL_ruins_lack_of_intelligence_modifier: "情报缺失"
+ MIL_ruins_lack_of_intelligence_modifier_desc: "废墟中的道路、建筑和地下结构远比预想复杂。缺乏可靠情报会严重拖慢部队行动，并让前线作战变得格外困难。"
+ MIL_ruins_lack_of_intelligence_analyzed_modifier: "已分析的废墟敌情"
+ MIL_ruins_lack_of_intelligence_analyzed_modifier_desc: "对敌人行动模式和废墟地形的分析已经初见成效。这里仍然危险，但部队终于不再完全被未知环境牵着走。"
+ MIL_ruins_preserved_city_modifier: "保存完好的城市"
+ MIL_ruins_preserved_city_modifier_desc: "这片城区比预想中保存得更好。许多基础结构仍可修复利用，让重建工作获得了难得的起点。"
+ MIL_ruins_destroyed_city_modifier: "被完全破坏的城市"
+ MIL_ruins_destroyed_city_modifier_desc: "激烈冲突让这片城区几乎失去了继续利用的基础。重建必须从清理瓦砾和重新铺设基础设施开始。"
+ MIL_ruins_new_equipment_modifier: "设备上新"
+ MIL_ruins_new_equipment_modifier_desc: "新设备投入后，废墟重建的测绘、运输、拆除和施工流程都获得了明显改善。"
+ MIL_ruins_security_alert: "安保部废墟警戒"
+ MIL_ruins_security_alert_desc: "旧校区废墟中的袭击证明这里并不安全。安保部提高了警戒等级，并开始以实战标准护卫开发队伍。"
+ MIL_ruins_development_benefits: "废墟开发的收益"
+ MIL_ruins_development_benefits_desc: "旧校区开发已经开始带来回报。清理出的道路、材料和可复用设施正在反过来推动千年的建设工程。"
+ MIL_ruins_emp_strike: "EMP打击"
+ MIL_ruins_emp_strike_desc: "针对暴走机械的电磁压制方案已经部署。只要能让敌人的行动出现短暂迟滞，安保部就能抓住战机解决问题。"
+ MIL_ruins_heavy_assault: "重拳出击"
+ MIL_ruins_heavy_assault_desc: "对付盘踞废墟的顽固敌人，温和手段已经不再合适。安保部将集中火力，迅速打垮对方的据点。"
+ MIL_ruins_cross_divine_suppression: "剿灭十字神明"
+ MIL_ruins_cross_divine_suppression_desc: "废墟中的异常敌人已经威胁到开发计划本身。研讨会授权安保部采取更强硬的压制行动。"
+ MIL_ruins_lost_technology_analysis: "遗落科技解析"
+ MIL_ruins_lost_technology_analysis_desc: "废墟中发现的旧设备和残留资料仍有研究价值。真理部、工程师部和安保部都能从这些碎片中找到可用的成果。"
+ MIL_ruins_old_research_facility: "旧科研设施资料"
+ MIL_ruins_old_research_facility_desc: "工程队在废墟中回收了一批旧实验设备和研究资料。对这些遗留成果的整理将暂时加快千年的科研进度。"
+ MIL_ruins_cross_divine_clues: "解析十字神明"
+ MIL_ruins_cross_divine_clues_desc: "对十字神明相关线索的解析揭示了更多异常技术痕迹。这些资料将帮助千年推进科研和特殊项目。"
+ MIL_ruins_enemy_helmet_profile: "废墟钢盔团"
+ MIL_ruins_enemy_helmet_profile_desc: "这支钢盔团长期盘踞在旧校区废墟外围，熟悉破败街区中的通路、掩体和伏击点。"
+ MIL_ruins_enemy_machine_profile: "暴走机械"
+ MIL_ruins_enemy_machine_profile_desc: "失控的机械单位在废墟中持续游荡。它们缺乏正常指挥，却拥有危险的突击能力和极强的行动惯性。"
+ MIL_ruins_enemy_cross_divine_profile: "十字神明"
+ MIL_ruins_enemy_cross_divine_profile_desc: "废墟深处出现的异常敌人，其行动模式和技术来源都难以用常规经验解释。"
+ MIL_ruins_enemy_intelligence_blackout: "情报封锁"
+ MIL_ruins_enemy_intelligence_blackout_desc: "这支突然出现的力量没有留下可供分析的公开记录，其组织、装备与行动目标都处在严密遮蔽之中。"
+ MIL_ruins_hub_hacked: "Hub遭到入侵"
+ MIL_ruins_hub_hacked_desc: "废墟开发使用的施工Hub遭到不明程序入侵。基础设施施工必须等待系统隔离和调度网络恢复。"

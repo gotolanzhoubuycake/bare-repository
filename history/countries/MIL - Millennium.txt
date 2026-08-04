@@ -242,11 +242,11 @@ recruit_character = MIL_toki
 recruit_character = MIL_sumire
 
 set_politics = {
-	ruling_party = no_ideology
+	ruling_party = Progressivism_ideology
 
 }
 set_popularities = {
-	no_ideology = 100
+	Progressivism_ideology = 100
 }
 
 set_variable = {

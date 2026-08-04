@@ -1,16 +1,117 @@
 # 2026-07-27 修改：新增千年工业线第二阶段公共触发器，统一管理废墟大开发与巨塔工程门槛。
 
+BARE_MIL_Industrial_Balance_Greater_025 = {
+	# 2026-08-03 修改：财政危机决议在新蓝图前后共用的权力平衡判断。
+	# 入口：BA_MIL_BOP_decisions.txt中的可用条件和AI权重。
+	# 关键状态：旧财政危机或新发展资源调度任一权力平衡处于指定区间。
+	# 预期结果：切换权力平衡后，原财政危机决议仍按原来的数值门槛工作。
+	OR = {
+		AND = {
+			has_power_balance = { id = MIL_bp_financial_crisis_balance }
+			power_balance_value = { id = MIL_bp_financial_crisis_balance value > 0.25 }
+		}
+		AND = {
+			has_power_balance = { id = MIL_bp_development_resource_allocation }
+			power_balance_value = { id = MIL_bp_development_resource_allocation value > 0.25 }
+		}
+	}
+}
+
+BARE_MIL_Industrial_Balance_Greater_040 = {
+	# 2026-08-03 修改：统一判断工业线权力平衡是否超过40%门槛。
+	OR = {
+		AND = {
+			has_power_balance = { id = MIL_bp_financial_crisis_balance }
+			power_balance_value = { id = MIL_bp_financial_crisis_balance value > 0.40 }
+		}
+		AND = {
+			has_power_balance = { id = MIL_bp_development_resource_allocation }
+			power_balance_value = { id = MIL_bp_development_resource_allocation value > 0.40 }
+		}
+	}
+}
+
+BARE_MIL_Industrial_Balance_Greater_000 = {
+	# 2026-08-03 修改：统一判断工业线权力平衡是否位于中间值右侧。
+	OR = {
+		AND = {
+			has_power_balance = { id = MIL_bp_financial_crisis_balance }
+			power_balance_value = { id = MIL_bp_financial_crisis_balance value > 0 }
+		}
+		AND = {
+			has_power_balance = { id = MIL_bp_development_resource_allocation }
+			power_balance_value = { id = MIL_bp_development_resource_allocation value > 0 }
+		}
+	}
+}
+
+BARE_MIL_Industrial_Balance_Less_000 = {
+	# 2026-08-03 修改：统一判断工业线权力平衡是否位于中间值左侧。
+	OR = {
+		AND = {
+			has_power_balance = { id = MIL_bp_financial_crisis_balance }
+			power_balance_value = { id = MIL_bp_financial_crisis_balance value < 0 }
+		}
+		AND = {
+			has_power_balance = { id = MIL_bp_development_resource_allocation }
+			power_balance_value = { id = MIL_bp_development_resource_allocation value < 0 }
+		}
+	}
+}
+
+BARE_MIL_Industrial_Balance_Greater_050 = {
+	# 2026-08-03 修改：统一判断工业线权力平衡是否超过50%门槛。
+	OR = {
+		AND = {
+			has_power_balance = { id = MIL_bp_financial_crisis_balance }
+			power_balance_value = { id = MIL_bp_financial_crisis_balance value > 0.50 }
+		}
+		AND = {
+			has_power_balance = { id = MIL_bp_development_resource_allocation }
+			power_balance_value = { id = MIL_bp_development_resource_allocation value > 0.50 }
+		}
+	}
+}
+
+BARE_MIL_Industrial_Balance_Less_025 = {
+	# 2026-08-03 修改：统一判断工业线权力平衡是否低于25%门槛。
+	OR = {
+		AND = {
+			has_power_balance = { id = MIL_bp_financial_crisis_balance }
+			power_balance_value = { id = MIL_bp_financial_crisis_balance value < 0.25 }
+		}
+		AND = {
+			has_power_balance = { id = MIL_bp_development_resource_allocation }
+			power_balance_value = { id = MIL_bp_development_resource_allocation value < 0.25 }
+		}
+	}
+}
+
+BARE_MIL_Industrial_Balance_Less_075 = {
+	# 2026-08-03 修改：统一判断工业线权力平衡是否低于75%门槛。
+	OR = {
+		AND = {
+			has_power_balance = { id = MIL_bp_financial_crisis_balance }
+			power_balance_value = { id = MIL_bp_financial_crisis_balance value < 0.75 }
+		}
+		AND = {
+			has_power_balance = { id = MIL_bp_development_resource_allocation }
+			power_balance_value = { id = MIL_bp_development_resource_allocation value < 0.75 }
+		}
+	}
+}
+
 BARE_MIL_Phase_2_Has_Three_Rebuilt_States = {
-	# 2026-07-27 修改：
-	# 入口：清理更多废墟区域国策的可用条件。
-	# 关键状态：四个废墟地块的 MIL_ruins_stage_3 地块旗标。
-	# 预期结果：至少三个地块完成第三阶段重建时返回真。
+	# 2026-08-03 修复：清理更多废墟区域必须使用仍由千年拥有并控制的重建地块。
+	# 入口：MIL_Clear_more_debris_areas 国策的可用条件。
+	# 关键状态：四个废墟地块的第三阶段旗标，以及当前控制权。
+	# 预期结果：至少三个地块完成第三阶段重建且仍由千年拥有并控制时返回真。
 	count_triggers = {
 		amount = 3
-		639 = { has_state_flag = MIL_ruins_stage_3 }
-		640 = { has_state_flag = MIL_ruins_stage_3 }
-		641 = { has_state_flag = MIL_ruins_stage_3 }
-		643 = { has_state_flag = MIL_ruins_stage_3 }
+		639 = { has_state_flag = MIL_ruins_stage_3 is_owned_and_controlled_by = ROOT }
+		640 = { has_state_flag = MIL_ruins_stage_3 is_owned_and_controlled_by = ROOT }
+		641 = { has_state_flag = MIL_ruins_stage_3 is_owned_and_controlled_by = ROOT }
+		643 = { has_state_flag = MIL_ruins_stage_3 is_owned_and_controlled_by = ROOT }
 	}
 }
 
@@ -57,10 +158,21 @@ BARE_MIL_Phase_2_Has_Research_Facility_Target = {
 }
 
 BARE_MIL_Phase_2_All_Research_Sites_Occupied = {
-	# 2026-07-27 修改：
+	# 2026-08-03 修改：补充四个固定科研落点当前均由千年拥有和控制的条件，避免失去控制时提前折算优惠。
 	# 入口：清理不是破坏的剩余优惠折算效果。
 	# 关键状态：四个地块均完成重建，且每个地块已经有一座科研设施。
 	# 预期结果：只有未来也不存在可建设科研设施的废墟地块时返回真，临时失去控制不会触发折算。
+	639 = { has_state_flag = MIL_ruins_stage_3 has_state_flag = MIL_phase_2_research_facility_built is_owned_and_controlled_by = ROOT }
+	640 = { has_state_flag = MIL_ruins_stage_3 has_state_flag = MIL_phase_2_research_facility_built is_owned_and_controlled_by = ROOT }
+	641 = { has_state_flag = MIL_ruins_stage_3 has_state_flag = MIL_phase_2_research_facility_built is_owned_and_controlled_by = ROOT }
+	643 = { has_state_flag = MIL_ruins_stage_3 has_state_flag = MIL_phase_2_research_facility_built is_owned_and_controlled_by = ROOT }
+}
+
+BARE_MIL_Phase_2_All_Research_Sites_Built = {
+	# 2026-08-03 修改：为“更多科研设备”提供不依赖当前控制权的科研落点完成判断。
+	# 入口：MIL_more_research_equipment国策的自动跳过条件。
+	# 关键状态：四个固定科研落点均已完成第三阶段重建并设置科研设施旗标。
+	# 预期结果：科研设施已经全部建成时跳过不再需要的免费设施选项；控制权条件只保留给优惠折算。
 	639 = { has_state_flag = MIL_ruins_stage_3 has_state_flag = MIL_phase_2_research_facility_built }
 	640 = { has_state_flag = MIL_ruins_stage_3 has_state_flag = MIL_phase_2_research_facility_built }
 	641 = { has_state_flag = MIL_ruins_stage_3 has_state_flag = MIL_phase_2_research_facility_built }
@@ -99,7 +211,7 @@ BARE_MIL_Phase_2_Tower_Midterm_Thresholds = {
 	# 入口：巨塔中期工程国策的计数门槛。
 	# 关键变量：虚数优化、科研设施、工业设施和设备更新完成次数。
 	# 预期结果：3/2/5/1四项门槛全部达到时返回真。
-	check_variable = { MIL_award_imaginary_number_network_completed > 2 }
+	check_variable = { MIL_award_imaginary_number_network_optimize_count > 2 }
 	check_variable = { MIL_phase_2_research_facilities_completed > 1 }
 	check_variable = { MIL_phase_2_industrial_facilities_completed > 4 }
 	check_variable = { MIL_phase_2_equipment_updates_completed > 0 }
@@ -113,4 +225,101 @@ BARE_MIL_Phase_2_Experimental_Environment_Thresholds = {
 	check_variable = { MIL_phase_2_research_facilities_completed > 2 }
 	check_variable = { MIL_phase_2_industrial_facilities_completed > 6 }
 	check_variable = { MIL_phase_2_equipment_updates_completed > 1 }
+}
+
+BARE_MIL_Phase_2_AI_Needs_Imaginary_Optimization = {
+	# 2026-08-03 修改：为AI识别当前被虚数优化次数阻挡的工业线国策。
+	# 入口：虚数循环加速决议的ai_will_do。
+	# 关键状态：升级虚数、巨塔中期工程和更多科研设备分别需要2、3、4次优化。
+	# 预期结果：任一已推进到的国策因优化次数不足而无法选择时返回真。
+	OR = {
+		AND = {
+			has_completed_focus = MIL_new_progress_possible
+			NOT = { has_completed_focus = MIL_Upgrade_Imaginary_numbers }
+			check_variable = { MIL_award_imaginary_number_network_optimize_count < 2 }
+		}
+		AND = {
+			has_completed_focus = MIL_the_second_mil_tower
+			OR = {
+				has_completed_focus = MIL_Expand_Eridu
+				has_completed_focus = MIL_Upgrade_Imaginary_numbers
+			}
+			NOT = { has_completed_focus = MIL_Tower_mid_term_Project }
+			check_variable = { MIL_award_imaginary_number_network_optimize_count < 3 }
+		}
+		AND = {
+			has_completed_focus = MIL_Tower_mid_term_Project
+			NOT = { has_completed_focus = MIL_more_research_equipment }
+			check_variable = { MIL_award_imaginary_number_network_optimize_count < 4 }
+		}
+	}
+}
+
+BARE_MIL_Phase_2_AI_Needs_Industrial_Facilities = {
+	# 2026-08-03 修改：为AI识别巨塔国策尚缺的工业设施次数。
+	# 入口：第二阶段民用和武器设施建设决议的ai_will_do。
+	# 关键状态：巨塔中期需要5次，实验环境需要7次工业设施建设。
+	# 预期结果：对应国策已经推进到门槛前且工业设施次数不足时返回真。
+	OR = {
+		AND = {
+			has_completed_focus = MIL_the_second_mil_tower
+			OR = {
+				has_completed_focus = MIL_Expand_Eridu
+				has_completed_focus = MIL_Upgrade_Imaginary_numbers
+			}
+			NOT = { has_completed_focus = MIL_Tower_mid_term_Project }
+			check_variable = { MIL_phase_2_industrial_facilities_completed < 5 }
+		}
+		AND = {
+			has_completed_focus = MIL_Tower_mid_term_Project
+			NOT = { has_completed_focus = MIL_better_Experimental_environment }
+			check_variable = { MIL_phase_2_industrial_facilities_completed < 7 }
+		}
+	}
+}
+
+BARE_MIL_Phase_2_AI_Needs_Research_Facilities = {
+	# 2026-08-03 修改：为AI识别巨塔国策尚缺的科研设施次数。
+	# 入口：第二阶段六个科研设施建设决议的ai_will_do。
+	# 关键状态：巨塔中期需要2次，实验环境需要3次正式科研设施建设。
+	# 预期结果：对应国策已经推进到门槛前且科研设施次数不足时返回真。
+	OR = {
+		AND = {
+			has_completed_focus = MIL_the_second_mil_tower
+			OR = {
+				has_completed_focus = MIL_Expand_Eridu
+				has_completed_focus = MIL_Upgrade_Imaginary_numbers
+			}
+			NOT = { has_completed_focus = MIL_Tower_mid_term_Project }
+			check_variable = { MIL_phase_2_research_facilities_completed < 2 }
+		}
+		AND = {
+			has_completed_focus = MIL_Tower_mid_term_Project
+			NOT = { has_completed_focus = MIL_better_Experimental_environment }
+			check_variable = { MIL_phase_2_research_facilities_completed < 3 }
+		}
+	}
+}
+
+BARE_MIL_Phase_2_AI_Needs_Equipment_Updates = {
+	# 2026-08-03 修改：为AI识别巨塔国策尚缺的设备更新次数。
+	# 入口：第二阶段地块设备更新决议的ai_will_do。
+	# 关键状态：巨塔中期需要1次，实验环境需要2次设备更新。
+	# 预期结果：对应国策已经推进到门槛前且设备更新次数不足时返回真。
+	OR = {
+		AND = {
+			has_completed_focus = MIL_the_second_mil_tower
+			OR = {
+				has_completed_focus = MIL_Expand_Eridu
+				has_completed_focus = MIL_Upgrade_Imaginary_numbers
+			}
+			NOT = { has_completed_focus = MIL_Tower_mid_term_Project }
+			check_variable = { MIL_phase_2_equipment_updates_completed < 1 }
+		}
+		AND = {
+			has_completed_focus = MIL_Tower_mid_term_Project
+			NOT = { has_completed_focus = MIL_better_Experimental_environment }
+			check_variable = { MIL_phase_2_equipment_updates_completed < 2 }
+		}
+	}
 }

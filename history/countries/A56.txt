@@ -37,3 +37,6 @@ set_politics = {
 set_popularities = {
 	no_ideology = 100
 }
+
+# 2026-08-03 修改：为废墟钢盔团招募默认国家领导人，供袭击前后的身份显示切换。
+recruit_character = MIL_ruins_A56_leader
