@@ -919,6 +919,19 @@ leader_traits = {
 		research_speed_factor = 0.2
 		political_power_gain = 0.25
 	}
+	# 莉音失踪后短暂接管学院的混乱研讨会。
+	MIL_chaotic_seminar_leader_trait = {
+		random = no
+		political_power_factor = -0.20
+		stability_factor = -0.20
+		stability_weekly = -0.005
+	}
+	# 研讨会恢复运转后，由优香代理学生会长。
+	MIL_yuuka_acting_chair_trait = {
+		random = no
+		political_power_factor = -0.05
+		consumer_goods_factor = -0.30
+	}
 	#冷酷的计算使
 	cold_calculator = {
 		random = no

@@ -1,5 +1,5 @@
 focus_tree = {
-	id = MIL
+	id = MIL_opening
 	country = {
 		factor = 0
 		modifier = {
@@ -8,6 +8,337 @@ focus_tree = {
 		}
 	}
 	default = no
+	initial_show_position = {
+		x = 8
+		y = 0
+	}
+
+	# 开局政治线：完成两组国策后切换到正式千年国策树。
+	focus = { #研讨会的平常一天
+		id = MIL_seminar_ordinary_day
+		icon = GFX_goal_MIL_placeholder
+		search_filters = { FOCUS_MIL }
+		cost = 0.5 # 3天；游戏界面实测值。
+		x = 3
+		y = 0
+		completion_reward = {
+			add_political_power = 25
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	focus = { #研讨会例行周会议
+		id = MIL_seminar_weekly_meeting
+		icon = GFX_goal_MIL_placeholder
+		relative_position_id = MIL_seminar_ordinary_day
+		search_filters = { FOCUS_MIL }
+		cost = 0.5 # 3天；游戏界面实测值。
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = MIL_seminar_ordinary_day
+		}
+		completion_reward = {
+			add_political_power = 25
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	focus = { #缺席的会长
+		id = MIL_absent_president
+		icon = GFX_goal_MIL_placeholder
+		relative_position_id = MIL_seminar_ordinary_day
+		search_filters = { FOCUS_MIL }
+		cost = 0.5 # 3天；游戏界面实测值。
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = MIL_seminar_weekly_meeting
+		}
+		completion_reward = {
+			add_stability = -0.01
+			add_political_power = 50
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	focus = { #千年的崭新一周
+		id = MIL_new_week
+		icon = GFX_goal_MIL_placeholder
+		relative_position_id = MIL_seminar_ordinary_day
+		search_filters = { FOCUS_MIL }
+		cost = 10
+		x = 0
+		y = 3
+		prerequisite = {
+			focus = MIL_absent_president
+		}
+		select_effect = {
+			# 国策开始 7 日后触发“书记官的紧急通讯”，并由事件完成右侧紧急会议国策。
+			country_event = {
+				id = MIL_opening.1
+				days = 7
+			}
+		}
+		completion_reward = {
+			add_political_power = 200
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	# 开局政治线：莉音失踪支线。“研讨会紧急会议”仅由事件自动完成。
+	focus = { #研讨会紧急会议
+		id = MIL_seminar_emergency_meeting
+		icon = GFX_goal_MIL_placeholder
+		search_filters = { FOCUS_MIL }
+		cost = 0
+		x = 9
+		y = 0
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = MIL_seminar_emergency_meeting_event_only_tt
+				always = no
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = MIL_seminar_emergency_meeting_effect_tt
+			hidden_effect = {
+				recruit_character = MIL_chaotic_seminar
+				promote_character = MIL_chaotic_seminar
+				retire_character = MIL_rio
+
+				set_variable = { MIL_missing_president_stability_factor = -0.10 }
+				set_variable = { MIL_missing_president_industrial_capacity_factory = -0.20 }
+				set_variable = { MIL_missing_president_production_speed_buildings_factor = -0.20 }
+				set_variable = { MIL_missing_president_research_speed_factor = -0.20 }
+				set_variable = { MIL_missing_president_production_factory_max_efficiency_factor = -0.20 }
+				set_variable = { MIL_missing_president_production_factory_efficiency_gain_factor = -0.20 }
+				add_dynamic_modifier = {
+					modifier = MIL_missing_student_council_president
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	focus = { #莉音会长不见了
+		id = MIL_rio_is_missing
+		icon = GFX_goal_MIL_placeholder
+		relative_position_id = MIL_seminar_emergency_meeting
+		search_filters = { FOCUS_MIL }
+		cost = 1
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = MIL_seminar_emergency_meeting
+		}
+		completion_reward = {
+			country_event = { id = MIL_opening.2 }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	focus = { #寻找会长
+		id = MIL_search_for_rio
+		icon = GFX_goal_MIL_placeholder
+		relative_position_id = MIL_seminar_emergency_meeting
+		search_filters = { FOCUS_MIL }
+		cost = 0.5 # 3天；游戏界面实测值。
+		x = -2
+		y = 2
+		prerequisite = {
+			focus = MIL_rio_is_missing
+		}
+		completion_reward = {
+			country_event = { id = MIL_opening.3 }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	focus = { #研讨会应急处置办法
+		id = MIL_seminar_emergency_response
+		icon = GFX_goal_MIL_placeholder
+		relative_position_id = MIL_seminar_emergency_meeting
+		search_filters = { FOCUS_MIL }
+		cost = 0.5 # 3天；游戏界面实测值。
+		x = 2
+		y = 2
+		prerequisite = {
+			focus = MIL_rio_is_missing
+		}
+		completion_reward = {
+			country_event = { id = MIL_opening.4 }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	focus = { #没有学生会长的第一天
+		id = MIL_first_day_without_president
+		icon = GFX_goal_MIL_placeholder
+		relative_position_id = MIL_seminar_emergency_meeting
+		search_filters = { FOCUS_MIL }
+		cost = 1
+		x = 0
+		y = 3
+		prerequisite = {
+			focus = MIL_search_for_rio
+		}
+		prerequisite = {
+			focus = MIL_seminar_emergency_response
+		}
+		completion_reward = {
+			# “莉音会长的信息”由前一个事件的选项立即触发。
+			country_event = { id = MIL_opening.5 }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	focus = { #接手莉音权限
+		id = MIL_take_over_rio_authority
+		icon = GFX_goal_MIL_placeholder
+		relative_position_id = MIL_seminar_emergency_meeting
+		search_filters = { FOCUS_MIL }
+		cost = 1
+		x = -4
+		y = 4
+		prerequisite = {
+			focus = MIL_first_day_without_president
+		}
+		completion_reward = {
+			custom_effect_tooltip = MIL_take_over_rio_authority_effect_tt
+			hidden_effect = {
+				add_to_variable = { MIL_missing_president_industrial_capacity_factory = -0.05 }
+				add_to_variable = { MIL_missing_president_production_speed_buildings_factor = -0.05 }
+				add_to_variable = { MIL_missing_president_research_speed_factor = -0.05 }
+				add_to_variable = { MIL_missing_president_production_factory_max_efficiency_factor = -0.05 }
+				add_to_variable = { MIL_missing_president_production_factory_efficiency_gain_factor = -0.05 }
+				force_update_dynamic_modifier = yes
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	focus = { #封锁会长消息
+		id = MIL_suppress_president_news
+		icon = GFX_goal_MIL_placeholder
+		relative_position_id = MIL_seminar_emergency_meeting
+		search_filters = { FOCUS_MIL }
+		cost = 1
+		x = 0
+		y = 4
+		prerequisite = {
+			focus = MIL_first_day_without_president
+		}
+		completion_reward = {
+			custom_effect_tooltip = MIL_suppress_president_news_effect_tt
+			hidden_effect = {
+				add_to_variable = { MIL_missing_president_industrial_capacity_factory = 0.05 }
+				add_to_variable = { MIL_missing_president_production_speed_buildings_factor = -0.05 }
+				add_to_variable = { MIL_missing_president_research_speed_factor = -0.05 }
+				add_to_variable = { MIL_missing_president_production_factory_max_efficiency_factor = -0.05 }
+				add_to_variable = { MIL_missing_president_production_factory_efficiency_gain_factor = -0.05 }
+				force_update_dynamic_modifier = yes
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	focus = { #恢复日常运行
+		id = MIL_restore_daily_operations
+		icon = GFX_goal_MIL_placeholder
+		relative_position_id = MIL_seminar_emergency_meeting
+		search_filters = { FOCUS_MIL }
+		cost = 1
+		x = 4
+		y = 4
+		prerequisite = {
+			focus = MIL_first_day_without_president
+		}
+		completion_reward = {
+			custom_effect_tooltip = MIL_restore_daily_operations_effect_tt
+			hidden_effect = {
+				add_to_variable = { MIL_missing_president_industrial_capacity_factory = -0.05 }
+				add_to_variable = { MIL_missing_president_production_speed_buildings_factor = -0.05 }
+				add_to_variable = { MIL_missing_president_research_speed_factor = -0.05 }
+				add_to_variable = { MIL_missing_president_production_factory_max_efficiency_factor = -0.05 }
+				add_to_variable = { MIL_missing_president_production_factory_efficiency_gain_factor = -0.05 }
+				force_update_dynamic_modifier = yes
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	focus = { #重新运转的研讨会
+		id = MIL_restarted_seminar
+		icon = GFX_goal_MIL_placeholder
+		relative_position_id = MIL_seminar_emergency_meeting
+		search_filters = { FOCUS_MIL }
+		cost = 3
+		x = 0
+		y = 5
+		prerequisite = {
+			focus = MIL_take_over_rio_authority
+		}
+		prerequisite = {
+			focus = MIL_suppress_president_news
+		}
+		prerequisite = {
+			focus = MIL_restore_daily_operations
+		}
+		completion_reward = {
+			custom_effect_tooltip = MIL_restarted_seminar_effect_tt
+			hidden_effect = {
+				promote_character = MIL_yuuka
+				retire_character = MIL_chaotic_seminar
+				remove_dynamic_modifier = { modifier = MIL_missing_student_council_president }
+				clear_variable = MIL_missing_president_stability_factor
+				clear_variable = MIL_missing_president_industrial_capacity_factory
+				clear_variable = MIL_missing_president_production_speed_buildings_factor
+				clear_variable = MIL_missing_president_research_speed_factor
+				clear_variable = MIL_missing_president_production_factory_max_efficiency_factor
+				clear_variable = MIL_missing_president_production_factory_efficiency_gain_factor
+				load_focus_tree = MIL
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+}
+
+# 正式千年国策树仅由“重新运转的研讨会”完成后显式加载。
+focus_tree = {
+	id = MIL
+	country = {
+		factor = 0
+	}
+	default = no
+
 	focus = { #研讨会会计的意外发现
 		id = MIL_unexpected_discovery
 		icon = GFX_goal_MIL_unexpected_discovery

@@ -1,4 +1,10 @@
 spriteTypes = {
+	spriteType = {
+		name = "GFX_goal_MIL_placeholder"
+		texturefile = "gfx/interface/goals/goal_unknown.dds"
+		legacy_lazy_load = no
+	}
+
 		spriteType = {
 		name = "GFX_goal_MIL_unexpected_discovery"
 		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_unexpected_discovery.dds"

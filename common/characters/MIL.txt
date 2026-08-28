@@ -18,6 +18,24 @@ characters = {###千禧年MIL 开始###
 
 	}
 
+	# 莉音失踪期间临时代表失去统一领导的研讨会。
+	MIL_chaotic_seminar = {
+		name = MIL_chaotic_seminar_name
+		portraits = {
+			civilian = {
+				large = GFX_portrait_MIL_noa
+				small = GFX_portrait_MIL_noa_small
+			}
+		}
+
+		country_leader = {
+			ideology = PGM_MIL_SEM_type
+			traits = { MIL_chaotic_seminar_leader_trait }
+			expire = "9999.1.1.1"
+			id = -1
+		}
+	}
+
     MIL_yuuka ={ 
 		name=MIL_yuuka_name 
 		portraits={
@@ -29,7 +47,7 @@ characters = {###千禧年MIL 开始###
 
         country_leader = {
 			ideology = PGM_MIL_SEM_type
-			traits = { cold_calculator }
+			traits = { MIL_yuuka_acting_chair_trait }
 			expire = "9999.1.1.1"
 			id = -1
 		}
