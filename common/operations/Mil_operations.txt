@@ -216,8 +216,7 @@ MIL_operation_box_weapon = {
         }
     }
 
-    risk_execute = { }
-
+    
     phases = {
         MIL_box_weapon_phase_infiltration = { base = 50 }
         MIL_box_weapon_phase_infiltration_network = {

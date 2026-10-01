@@ -2183,7 +2183,7 @@ focus_tree = {
         add_tech_bonus = {
 			bonus = 1
 			uses = 2
-			category = infantry_equipment
+			category = infantry_weapons
 		}
         # custom_effect_tooltip = GEH_People_oriented_skip_tt
         # show_ideas_tooltip = GEH_iori
