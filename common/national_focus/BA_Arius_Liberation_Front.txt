@@ -2129,7 +2129,7 @@ focus_tree = {
             add_mastery = {
                 amount = 75
                 # FILTERS:
-                folder = land
+                folder = baland
             }
             #add_doctrine_cost_reduction = {
             #	cost_reduction = 0.5
@@ -2199,7 +2199,7 @@ focus_tree = {
             add_mastery = {
                 amount = 75
                 # FILTERS:
-                folder = land
+                folder = baland
             }
             #add_doctrine_cost_reduction = {
             #	cost_reduction = 0.5
