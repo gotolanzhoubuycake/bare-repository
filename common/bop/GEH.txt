@@ -3,26 +3,6 @@ GEH_bp_between_chaos_and_order = {
 	left_side = GEH_bp_order #左侧名称
 	right_side = GEH_bp_chaos #右侧名称
 
-	range = { #check ranges for is_power_balance_in_range (top-level only)
-		id = GEH_bp_chk_order_full
-		min = -1
-		max = -0.6
-	}
-	range = {
-		id = GEH_bp_chk_order
-		min = -0.6
-		max = -0.2
-	}
-	range = {
-		id = GEH_bp_chk_chaos
-		min = 0.2
-		max = 0.6
-	}
-	range = {
-		id = GEH_bp_chk_chaos_full
-		min = 0.6
-		max = 1
-	}
 	decision_category = GEH_bop_decision_category #下面决议的大类别，决议和普通决议一样
 	range = { #中间点范围
 		id = GEH_bp_mid

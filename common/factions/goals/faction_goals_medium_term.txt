@@ -113,15 +113,15 @@ faction_goal_industrial_research = {
 	group = FOCUS_FILTER_RESEARCH
 	visible = {
 		any_allied_country = {
-			NOT = { has_tech = construction4 }
+			NOT = { has_tech = Industrial_construction_T4 }
 		}
 	}
 	completed = {
 		ROOT = {
-			has_tech = construction4
+			has_tech = Industrial_construction_T4
 		}
 		all_allied_country = {
-			has_tech = construction4
+			has_tech = Industrial_construction_T4
 		}
 
 		collection_size = {
