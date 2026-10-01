@@ -287,3 +287,82 @@ faction_goal_aggressive_defense = {
 }
 
 
+faction_goal_air_superiority = {
+	name = air_superiority_goal_name
+	description = air_superiority_goal_desc
+	category = medium_term
+	group = FOCUS_FILTER_AIR_XP
+	available = {
+
+	}
+	completed = {
+		count_in_collection = {
+			collection = {
+				input = game:scope
+				operators = { faction_members }
+				name = FACTION
+			}
+			unit = fighter
+			size > 999
+		}
+	}
+	complete_effect = {
+		add_faction_power_projection = 100
+		custom_effect_tooltip = generic_skip_one_line_tt
+		every_collection_element = {
+			input = {
+				input = game:scope
+				operators = { 
+					faction_members 
+					limit = {
+						has_deployed_air_force_size = {
+							size > 249
+							type = fighter
+						}
+					}
+				}
+				name = ALL_FACTION_MEMBERS_WITH_250_FIGHTERS
+			}
+			IF = {
+				limit = { NOT = { has_completed_goal = faction_goal_air_superiority } }
+				air_experience = 50
+				add_mastery = {
+					amount = 100
+					track = fighter_aircraft
+				}
+			}
+		}
+		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = ALL_FACTION_MEMBERS
+		every_faction_member = {
+			IF = {
+				limit = { NOT = { has_completed_goal = faction_goal_air_superiority } }
+				add_tech_bonus = {
+					name = air_superiority_tech_bonus
+					bonus = 0.5
+					uses = 1
+					category = fight_uav
+				}
+			}
+		}
+	}
+	ai_will_do = {
+		base = 0
+		modifier = {
+			add = 1 # Powers with few military factories should probably not care about expensive planes
+			num_of_military_factories > 39
+		}
+		modifier = {
+			add = 1 # Factions with decent number of military factories should probably start caring a lot about contesting air superiority - because they can
+			count_in_collection = {
+				collection = {
+					input = game:scope
+					operators = { faction_members }
+					name = FACTION_NAME
+				}
+				buildings = { arms_factory }
+				size > 149
+			}
+		}
+	}
+}

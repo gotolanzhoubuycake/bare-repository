@@ -161,7 +161,13 @@ MIL_operation_box_weapon = {
     }
 
     equipment = {
-        civilian_factories = 15
+        # 2026-10-02 修复：operations 中 civilian_factories 必须为 { amount/days } 块
+        # （照原版 00_operations.txt 协作政府决议写法），标量写法导致解析在闭合括号处报
+        # "Amount of factories needs to be greater than zero"。
+        civilian_factories = {
+            amount = 15
+            days = 30
+        }
     }
 
     risk_chance = 0.40

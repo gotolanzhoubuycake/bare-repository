@@ -445,7 +445,7 @@ CAE_war_produce_category = {
         }
         ai_will_do = {
             base = 5
-        }``
+        }
     }
 
     # 招募主战装甲部队

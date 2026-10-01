@@ -17,3 +17,22 @@ BARE_is_surrender_trigger = {
 		}
 	}
 }
+
+# 2026-10-02 回补：原版 1.19.3 common/scripted_triggers/00_scripted_triggers.txt 中的 SF 第二软轨触发器。
+# 本 mod replace_path 了 common/scripted_triggers，而原版 common/doctrines/tracks/special_forces_tracks.txt:23 仍会加载并引用它，
+# 缺失则报 "Unknown trigger-type: can_unlock_second_track_of_sf_doctrine"。定义逐字对照原版。
+can_unlock_second_track_of_sf_doctrine = {
+	if = {
+		limit = { check_variable = { sf_trees > 1 } }
+		custom_trigger_tooltip = {
+			tooltip = can_unlock_second_track_special_forces_doctrine_yes
+			check_variable = { sf_trees > 1 }
+		}
+	}
+	else = {
+		custom_trigger_tooltip = {
+			tooltip = can_unlock_second_track_special_forces_doctrine_no
+			always = no
+		}
+	}
+}

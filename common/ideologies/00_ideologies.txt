@@ -44,10 +44,6 @@ ideologies = {
 		types = {
 			##进步哲学 - 默认
 			PGM_default_type  = {
-				war_impact_on_world_tension = 1
-				rules = {
-
-				}
 			}
 
 			##进步哲学 - 研讨会

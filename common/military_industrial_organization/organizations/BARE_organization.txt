@@ -787,7 +787,7 @@ BA_Design_tank_Organization_Producter = {
 		available = {
 			has_mio_size > 3
 		}
-		porganization_modifier = {
+		organization_modifier = {
 			military_industrial_organization_funds_gain = 0.05
 			military_industrial_organization_size_up_requirement = -0.05
 		}
@@ -1471,7 +1471,7 @@ BA_Design_mecha_Organization_Producter = {
 			BA_design_organization_producter_mecha5
 			BA_design_organization_producter_mecha3
 		}
-		porganization_modifier = {
+		organization_modifier = {
 			military_industrial_organization_funds_gain = 0.05
 			military_industrial_organization_size_up_requirement = -0.05
 		}

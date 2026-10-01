@@ -945,10 +945,10 @@ MIL_ruins_attack_test_decision_category = {
 		}
 	}
 
-	MIL_ruins_test_surprise_warehouse = { complete_effect = { 641 = { state_event = { id = MIL_ruins_surprise.1 trigger_for = MIL } } } }
-	MIL_ruins_test_surprise_production = { complete_effect = { 641 = { state_event = { id = MIL_ruins_surprise.2 trigger_for = MIL } } } }
-	MIL_ruins_test_surprise_relic = { complete_effect = { 641 = { state_event = { id = MIL_ruins_surprise.3 trigger_for = MIL } } } }
-	MIL_ruins_test_surprise_research = { complete_effect = { 641 = { state_event = { id = MIL_ruins_surprise.4 trigger_for = MIL } } } }
+	MIL_ruins_test_surprise_warehouse = { complete_effect = { 641 = { state_event = { id = MIL_ruins_surprise.1 trigger_for = prev } } } }
+	MIL_ruins_test_surprise_production = { complete_effect = { 641 = { state_event = { id = MIL_ruins_surprise.2 trigger_for = prev } } } }
+	MIL_ruins_test_surprise_relic = { complete_effect = { 641 = { state_event = { id = MIL_ruins_surprise.3 trigger_for = prev } } } }
+	MIL_ruins_test_surprise_research = { complete_effect = { 641 = { state_event = { id = MIL_ruins_surprise.4 trigger_for = prev } } } }
 
 	MIL_ruins_test_story_chain = {
 		complete_effect = {

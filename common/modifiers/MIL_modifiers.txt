@@ -1,13 +1,13 @@
 MIL_box_weapon_success_targeted = {
-    targeted_civilian_intel_factor = 0.10
-    targeted_army_intel_factor = 0.10
-    targeted_navy_intel_factor = 0.10
-    targeted_airforce_intel_factor = 0.10
+    civilian_intel_to_others = 10
+    army_intel_to_others = 10
+    navy_intel_to_others = 10
+    airforce_intel_to_others = 10
 }
 
 MIL_box_weapon_great_success_targeted = {
-    targeted_civilian_intel_factor = 0.40
-    targeted_army_intel_factor = 0.40
-    targeted_navy_intel_factor = 0.40
-    targeted_airforce_intel_factor = 0.40
+    civilian_intel_to_others = 40
+    army_intel_to_others = 40
+    navy_intel_to_others = 40
+    airforce_intel_to_others = 40
 }

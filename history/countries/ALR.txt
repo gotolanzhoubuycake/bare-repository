@@ -1,62 +1,55 @@
-# capital = 139
-# oob = "standard_templates"
+# 2026-10-02 fix: 修复 run1 日志 "ALR - is missing a history file."。
+# 原文件全部内容被注释，游戏视为无历史文件。按作者原注释内容恢复（仅剔除已不存在的 ARI_special_force_1）。
+capital = 139
 
-# set_stability = 0.2
-# set_war_support = 0.8
-# set_research_slots = 2
-# set_fuel_ratio = 0.1
-# set_convoys = 0
-# starting_train_buffer = 0.5
+set_stability = 0.2
+set_war_support = 0.8
+set_research_slots = 2
+set_fuel_ratio = 0.1
+set_convoys = 0
+starting_train_buffer = 0.5
 
-# # Starting tech
-# set_technology = {
-# }
+set_politics = {
+	ruling_party = no_ideology
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	no_ideology = 100
+}
+add_ideas = {
+	ALR_no_administrative_experience
+	ALR_industry_0
+	ALR_resistance_refugee_0
+	ALR_resistance_illiterate_0
+	ALR_isolated_resistors
+}
+##地图界面用变量
+	add_to_array = { ARI_states = 136 }
+	add_to_array = { ARI_states_x = 56 }
+	add_to_array = { ARI_states_y = 27 }
 
-# #recruit_character = 
+	add_to_array = { ARI_states = 137 }
+	add_to_array = { ARI_states_x = 194 }
+	add_to_array = { ARI_states_y = 71 }
 
-# set_politics = {
-# 	ruling_party = no_ideology
-# 	last_election = "1936.1.1"
-# 	election_frequency = 48
-# 	elections_allowed = yes
-# }
-# set_popularities = {
-# 	no_ideology = 100
-# }
-# add_ideas = {
-# 	ALR_no_administrative_experience
-# 	ALR_industry_0
-# 	ALR_resistance_refugee_0
-# 	ALR_resistance_illiterate_0
-# 	ARI_special_force_1
-# 	ALR_isolated_resistors
-# }
-# ##地图界面用变量
-# 	add_to_array = { ARI_states = 136 }
-# 	add_to_array = { ARI_states_x = 56 }
-# 	add_to_array = { ARI_states_y = 27 }
+	add_to_array = { ARI_states = 138 }
+	add_to_array = { ARI_states_x = 194 }
+	add_to_array = { ARI_states_y = 29 }
 
-# 	add_to_array = { ARI_states = 137 }
-# 	add_to_array = { ARI_states_x = 194 }
-# 	add_to_array = { ARI_states_y = 71 }
+	add_to_array = { ARI_states = 139 }
+	add_to_array = { ARI_states_x = 272 }
+	add_to_array = { ARI_states_y = 28 }
 
-# 	add_to_array = { ARI_states = 138 }
-# 	add_to_array = { ARI_states_x = 194 }
-# 	add_to_array = { ARI_states_y = 29 }
+	add_to_array = { ARI_states = 530 }
+	add_to_array = { ARI_states_x = 246 }
+	add_to_array = { ARI_states_y = 1 }
 
-# 	add_to_array = { ARI_states = 139 }
-# 	add_to_array = { ARI_states_x = 272 }
-# 	add_to_array = { ARI_states_y = 28 }
+	add_to_array = { ARI_states = 531 }
+	add_to_array = { ARI_states_x = 1 }
+	add_to_array = { ARI_states_y = 15 }
 
-# 	add_to_array = { ARI_states = 530 }
-# 	add_to_array = { ARI_states_x = 246 }
-# 	add_to_array = { ARI_states_y = 1 }
-
-# 	add_to_array = { ARI_states = 531 }
-# 	add_to_array = { ARI_states_x = 1 }
-# 	add_to_array = { ARI_states_y = 15 }
-
-# 	add_to_array = { ARI_states = 532 }
-# 	add_to_array = { ARI_states_x = 144 }
-# 	add_to_array = { ARI_states_y = 12 }
-# #
+	add_to_array = { ARI_states = 532 }
+	add_to_array = { ARI_states_x = 144 }
+	add_to_array = { ARI_states_y = 12 }

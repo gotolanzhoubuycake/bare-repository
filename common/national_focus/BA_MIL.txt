@@ -1671,10 +1671,10 @@ focus_tree = {
 		}
 		prerequisite = {
 			# 2026-08-03 修复：巨塔中期工程的两条工业准备路线为二选一，而不是同时要求完成。
-			OR = {
-				focus = MIL_Expand_Eridu
-				focus = MIL_Upgrade_Imaginary_numbers
-			}
+			# 2026-10-02 修复：prerequisite 块内多个 focus 条目本身即为"任一完成"（OR）语义，
+			# 原版语法不允许在块内再嵌套 OR = {}（d703442f 引入导致本焦点解析失败并级联损坏后续焦点）。
+			focus = MIL_Expand_Eridu
+			focus = MIL_Upgrade_Imaginary_numbers
 		}
 		available = {
 			custom_override_tooltip = {

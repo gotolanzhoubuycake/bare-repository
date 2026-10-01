@@ -5,7 +5,6 @@
 # 2026-08-03：星野MP43正式模型更新。实体定义合并到ABY正式asset，保留原版MP43事件/locator链，不改变人物动画类型或特效。
 entity = {
 	name = "ABY_hoshino_mp43_right_entity"
-	clone = "generic_mp43_weapon_right_entity"
 	pdxmesh = "ABY_hoshino_mp43_mesh"
 }
 

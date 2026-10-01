@@ -7,6 +7,12 @@ default_unit_production = {
 			original_tag = GEH
 		}
 	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
 
 	ai_strategy = {
 		type = role_ratio

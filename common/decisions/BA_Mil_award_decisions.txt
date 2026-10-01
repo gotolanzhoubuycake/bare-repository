@@ -159,11 +159,11 @@ MIL_award_imaginary_number_network_decisions = {
             base = 2
             modifier = {
                 factor = 0.1
-                political_power < 100
+                has_political_power < 100
             }
             modifier = {
                 factor = 2
-                political_power > 200
+                has_political_power > 200
             }
             modifier = {
                 # 2026-08-03 修改：工业线国策被虚数优化次数阻挡时，AI最高优先缩短当前循环。
@@ -201,11 +201,11 @@ MIL_award_imaginary_number_network_decisions = {
             base = 2
             modifier = {
                 factor = 0.1
-                political_power < 100
+                has_political_power < 100
             }
             modifier = {
                 factor = 2
-                political_power > 200
+                has_political_power > 200
             }
             modifier = {
                 # 2026-08-03 修改：工业线国策被虚数优化次数阻挡时，AI最高优先缩短当前循环。
@@ -251,7 +251,7 @@ MIL_award_imaginary_number_network_decisions = {
             base = 1
             modifier = {
                 factor = 0.1
-                political_power < 150
+                has_political_power < 150
             }
             modifier = {
                 # 2026-08-03 修改：工业线国策被虚数优化次数阻挡时，AI提高集中研发决议优先级。
@@ -293,11 +293,11 @@ MIL_award_imaginary_number_network_decisions = {
             base = 1
             modifier = {
                 factor = 0.1
-                political_power < 150
+                has_political_power < 150
             }
             modifier = {
                 factor = 2
-                political_power > 250
+                has_political_power > 250
             }
         }
     }
@@ -393,7 +393,7 @@ MIL_award_imaginary_number_network_decisions = {
             }
             modifier = {
                 factor = 0.1
-                political_power < 80
+                has_political_power < 80
             }
             modifier = {
                 factor = 0.25
@@ -492,11 +492,11 @@ MIL_award_engineer_department_decisions = {
             base = 2
             modifier = {
                 factor = 0.1
-                political_power < 100
+                has_political_power < 100
             }
             modifier = {
                 factor = 2
-                political_power > 200
+                has_political_power > 200
             }
         }
     }
@@ -528,11 +528,11 @@ MIL_award_engineer_department_decisions = {
             base = 2
             modifier = {
                 factor = 0.1
-                political_power < 100
+                has_political_power < 100
             }
             modifier = {
                 factor = 2
-                political_power > 200
+                has_political_power > 200
             }
         }
     }
@@ -572,7 +572,7 @@ MIL_award_engineer_department_decisions = {
             base = 1
             modifier = {
                 factor = 0.1
-                political_power < 150
+                has_political_power < 150
             }
         }
     }
@@ -614,11 +614,11 @@ MIL_award_engineer_department_decisions = {
             base = 1
             modifier = {
                 factor = 0.1
-                political_power < 150
+                has_political_power < 150
             }
             modifier = {
                 factor = 2
-                political_power > 250
+                has_political_power > 250
             }
         }
     }
@@ -680,7 +680,7 @@ MIL_award_engineer_department_decisions = {
             base = 15
             modifier = {
                 factor = 0.1
-                political_power < 100
+                has_political_power < 100
             }
             modifier = {
                 factor = 0.25
@@ -746,7 +746,7 @@ MIL_award_engineer_department_decisions = {
             base = 12
             modifier = {
                 factor = 0.1
-                political_power < 80
+                has_political_power < 80
             }
             modifier = {
                 factor = 0.25
@@ -857,7 +857,7 @@ MIL_award_engineer_department_decisions = {
             base = 10
             modifier = {
                 factor = 0.1
-                political_power < 80
+                has_political_power < 80
             }
             modifier = {
                 factor = 0.25
@@ -946,7 +946,7 @@ MIL_award_engineer_department_decisions = {
             base = 5
             modifier = {
                 factor = 0.1
-                political_power < 150
+                has_political_power < 150
             }
             modifier = {
                 factor = 0.25
@@ -1322,11 +1322,11 @@ MIL_award_game_development_decisions = {
             base = 2
             modifier = {
                 factor = 0.1
-                political_power < 100
+                has_political_power < 100
             }
             modifier = {
                 factor = 2
-                political_power > 200
+                has_political_power > 200
             }
         }
     }
@@ -1357,11 +1357,11 @@ MIL_award_game_development_decisions = {
             base = 2
             modifier = {
                 factor = 0.1
-                political_power < 100
+                has_political_power < 100
             }
             modifier = {
                 factor = 2
-                political_power > 200
+                has_political_power > 200
             }
         }
     }
@@ -1385,11 +1385,11 @@ MIL_award_game_development_decisions = {
             base = 2
             modifier = {
                 factor = 0.1
-                political_power < 100
+                has_political_power < 100
             }
             modifier = {
                 factor = 2
-                political_power > 200
+                has_political_power > 200
             }
         }
     }
