@@ -26,7 +26,6 @@ BA_TRI_can_purge_administration = {
 			}
 			BA_TRI_character_can_be_purged = yes
 		}
-		NOT = { has_idea = BA_TRI_inspected_administration }
 		TRI_nagisa = { NOT = { has_trait = BA_TRI_nagisa_paranoid } }
 	}
 }
@@ -43,13 +42,9 @@ BA_TRI_can_purge_army = {
 			}
 			BA_TRI_character_can_be_purged = yes
 		}
-		NOT = { has_idea = BA_TRI_inspected_army }
-		NOT = { has_idea = BA_TRI_training_activities_curtailed }
 	}
 }
 BA_TRI_can_purge_airforce = {
-	OR = {
-		NOT = { has_idea = BA_TRI_inspected_airforce }
-		NOT = { has_idea = BA_TRI_ground_based_training }
-	}
+	#原 NOT 条件引用改名前的旧 idea（BA_TRI_inspected_airforce / BA_TRI_ground_based_training），
+	#这两个 idea 不存在，为死逻辑，已删除；本文件整体已被 BA_TRI_scripted_triggers.txt 的同名触发器覆盖。
 }

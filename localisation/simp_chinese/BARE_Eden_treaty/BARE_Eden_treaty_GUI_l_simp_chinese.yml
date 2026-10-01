@@ -87,7 +87,6 @@ Eden_cathedral_war_goes_on_TRI_GEH: "冲突继续……"
  
  Eden_cathedral_war_progress_collector: "进展：阿里乌斯复仇战争"
  Eden_cathedral_war_progress_collector_desc: "参谋部已经评估了对各个地区的攻击与防御计划，并制定了作战任务。完成作战任务将有利于赢得胜利。"
- ECW_mission_controls_priority_target_306: "占领§R重要目标§!：风纪委员会总部"
  ECW_ally_with_enemy_tt: "已接到停火命令"
 
  ECW_State_mission_key_sl_enemystate: "§R关键目标§!：§O占领§!§Y「[THIS.GetName]」§!"

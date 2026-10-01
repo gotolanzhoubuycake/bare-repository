@@ -85,7 +85,6 @@ on_actions = {
 
 	on_state_control_changed = {
 		effect = {
-			log = "change effect"
 			every_state = {
 				BARE_Combat_Readiness_count_State = yes
 			}

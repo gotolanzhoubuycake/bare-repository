@@ -334,7 +334,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_idea_GEH_army_factory_cooperation"
-		texturefile = "gfx/interface/ideas/GEH/GEH_army_factory_cooperation.dds"
+		texturefile = "gfx/interface/ideas/GEH/GEH_war_industry_modifier.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_GEH_army_in_chaos"
@@ -366,7 +366,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_idea_GEH_ideas_conference_support_1"
-		texturefile = "gfx/interface/ideas/GEH/GEH_ideas_conference_support_1.dds"
+		texturefile = "gfx/interface/ideas/GEH/GEH_ideas_conference_support_2.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_GEH_ideas_conference_support_2"
@@ -436,7 +436,7 @@ spriteTypes = {
 	### TRI
 	spriteType = {
 		name = "GFX_idea_advisor_TRI_nagisa"
-		texturefile = "gfx/interface/ideas/TRI/nagisa.dds"
+		texturefile = "gfx/interface/ideas/TRI/old_advisors/nagisa.dds"
 	}
 	SpriteType = {
 		name = "GFX_idea_eden_treaty_step_4_modifier"
@@ -806,7 +806,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_idea_ba_trinity_tea_chain"
-		texturefile = "gfx/interface/ideas/industrial/ ba_trinity_tea_chain.dds"
+		texturefile = "gfx/interface/ideas/industrial/ba_trinity_tea_chain.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_ba_millennium_engineering_construction"

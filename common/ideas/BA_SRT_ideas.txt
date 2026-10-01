@@ -1,7 +1,7 @@
 ideas = {
 	country = {
 		SRT_TeBieFanYingBuDui = { #特别反应部队
-			picture = unkown
+			picture = unknown
 
 			modifier = {
 				army_strength_factor = 0.25 #陆军生命值
@@ -13,7 +13,7 @@ ideas = {
 		}
 
 		SRT_FeiXiaoDeYinYing = { #废校的阴影
-			picture = unkown
+			picture = unknown
 
 			modifier = {
 				stability_factor = -0.2 #稳定度

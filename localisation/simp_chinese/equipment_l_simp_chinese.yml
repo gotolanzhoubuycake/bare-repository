@@ -18,7 +18,6 @@ GEH_infantry_equipment_0_desc: "由格黑娜的萨拉曼德-霍伦福伊尔（Sa
 GEH_infantry_equipment_1: "S.H. G3A3战斗步枪"
 GEH_infantry_equipment_1_desc: "G3A3是G3战斗步枪的改进型号，采用合成材料替换了原本的木质枪托，减轻了质量的同时进一步增加了步枪的耐用程度，刺刀座也比原本的版本更加牢靠。\n\n虽然在性能上与原型号没有太大差别，但由于更为现代化的外观和更好的耐用性，以及更低的流水线成本，G3A3成为了格黑娜最受欢迎的步枪之一，在外贸市场上也有着不错的销量。"
 GEH_infantry_equipment_2: "S.H. G36突击步枪"
-GEH_infantry_equipment_2_desc: ""
 GEH_infantry_equipment_3: "S.H. G36K突击步枪"
 GEH_infantry_equipment_2_desc: "G36K突击步枪是G36突击步枪的紧凑型号，枪管比标准型G36缩短了162毫米，配备折叠枪托，枪托折叠后全枪长度缩短至615毫米，可适应战斗车辆的狭窄舱室\n\n由于其定位设计，G36K无法安装下挂枪榴弹或步枪刺刀。为应对相关问题，该枪亦拥有使用铝合金护木，以及导轨护木的改良型号，可提升耐用性，并为各类战术配备提供安装位置。不过，这些改良型号并未被列入格黑娜标准装备序列，因此需要自费购买。"
 GEH_infantry_equipment_4: "S.H. M416突击步枪"
@@ -199,10 +198,6 @@ SHJ_ifv_equipment_3: "ZBD04A 步兵战车" #山海经
 SHJ_ifv_equipment_3_desc: "多种武器带来的是多种选择，并且这辆车的空调非常环保！"
 CEN_ifv_equipment_3: "CV90/30 步兵战车" #联邦学生会
 CEN_ifv_equipment_3_desc: "你可以开着它去追飙车的不良，还可以把她们的车打坏，但并不能提高你的休假时间。"
-SRT_ifv_equipment_2: "KAFV 25 步兵战车" #SRT 用联邦学生会
-SRT_ifv_equipment_2_desc: "你可以开着它去追飙车的不良，还可以把她们的车打坏，但并不能提高你的休假时间。"
-VAL_ifv_equipment_2: "KAFV 25 步兵战车" #瓦尔基里 用联邦学生会
-VAL_ifv_equipment_2_desc: "你可以开着它去追飙车的不良，还可以把她们的车打坏，但并不能提高你的休假时间。"
 CAE_ifv_equipment_3: "CV90/30 步兵战车" #凯撒势力
 CAE_ifv_equipment_3_desc: "事实证明，大口径机炮能有效提升作战单位的存活率"
 CAP_ifv_equipment_3: "CV90/30 步兵战车" #凯撒势力
@@ -2259,7 +2254,6 @@ mech_opaz_engine_desc: "消耗额外的欧帕兹资源来大幅提升防御和�
 mech_opaz_gun_upgrade: "欧帕兹攻击"
 mech_opaz_gun_upgrade_desc: "消耗额外的欧帕兹资源来大幅提升攻击属性，每升级一次装备将额外消耗1个欧帕兹。$upgrade_tech_text$"
 mech_armor_upgrade: "装甲"
-mech_armor_upgrade_desc: "以可靠性和造价为代价提升步战车的生存能力。$upgrade_tech_text$"
 mech_gun_upgrade: "武备"
 mech_gun_upgrade_desc: "以可靠性和造价为代价提升步战车的攻击能力。$upgrade_tech_text$"
 mech_reliability_upgrade: "可靠性"
@@ -2290,7 +2284,6 @@ mech_engine_upgrade_desc: "更强的机动性给你更多的战略和战术优�
 ac_engine_upgrade: "引擎"
 ac_engine_upgrade_desc: "更好的机动性会给你带来战略和战术优势，不但允许装备更厚的装甲而且不会显著降低速度。$upgrade_tech_text$"
 
-mech_armor_upgrade: "装甲"
 mech_armor_upgrade_desc: "超过敌人穿甲能力的装甲会让你的部队获得巨大的优势，但也会使它们速度更慢。$upgrade_tech_text$"
 
 

@@ -635,7 +635,7 @@ ideas = {
 		# 阶段 0：初始获得 (无效果)
 		MIL_sky_guardian_tooltip_0 = {
 			name = "千年天空的守护者"
-			picture = GFX_idea_MIL_sky_guardian
+			picture = MIL_sky_guardian
 			removal_cost = -1
 			modifier = { }
 		}
@@ -644,7 +644,7 @@ ideas = {
 		# 效果：效率+10%，恶劣天气-10%，夜间-10%
 		MIL_sky_guardian_tooltip_1 = {
 			name = "千年天空的守护者"
-			picture = GFX_idea_MIL_sky_guardian
+			picture = MIL_sky_guardian
 			removal_cost = -1
 			modifier = {
 				air_mission_efficiency = 0.10
@@ -657,7 +657,7 @@ ideas = {
 		# 累计效果：效率+10%，天气/夜间-10% | 经验获取+5%
 		MIL_sky_guardian_tooltip_2 = {
 			name = "千年天空的守护者"
-			picture = GFX_idea_MIL_sky_guardian
+			picture = MIL_sky_guardian
 			removal_cost = -1
 			modifier = {
 				air_mission_efficiency = 0.10
@@ -672,7 +672,7 @@ ideas = {
 		# 累计效果：效率+15%(10+5)，天气/夜间-10%，经验获取+5% | 每日经验+0.1，王牌+10%，战损经验减少-25%
 		MIL_sky_guardian_tooltip_3 = {
 			name = "千年天空的守护者"
-			picture = GFX_idea_MIL_sky_guardian
+			picture = MIL_sky_guardian
 			removal_cost = -1
 			modifier = {
 				air_mission_efficiency = 0.15 # 10% + 5%
@@ -681,7 +681,7 @@ ideas = {
 				air_training_xp_gain_factor = 0.05
 				
 				# 追加效果
-				air_experience_gain = 0.1
+				experience_gain_air = 0.1
 				air_ace_generation_chance_factor = 0.10
 				air_wing_xp_loss_when_killed_factor = -0.25
 			}
@@ -692,14 +692,14 @@ ideas = {
         # 基础版（机械筑起的高墙）
         steel_torrent_modifier = {
             allowed = { always = no }
-            picture = GFX_idea_steel_torrent
+            picture = steel_torrent
             modifier = { }
         }
 
         # 只完成操作系统升级
         steel_torrent_modifier_os = {
             allowed = { always = no }
-            picture = GFX_idea_steel_torrent
+            picture = steel_torrent
             # 2026-07-14 修改：自动机使用 auto_mech，战斗机甲使用 cat_eq_all_bm，数值同步但类别分离。
             equipment_bonus = {
                 auto_mech = { maximum_speed = 0.05 instant = yes }
@@ -710,7 +710,7 @@ ideas = {
         # 只完成抽卡时间到
         steel_torrent_modifier_card = {
             allowed = { always = no }
-            picture = GFX_idea_steel_torrent
+            picture = steel_torrent
             # 2026-07-14 修改：自动机使用 auto_mech，战斗机甲使用 cat_eq_all_bm，数值同步但类别分离。
             equipment_bonus = {
                 auto_mech = { defense = 0.05 reliability = 0.05 instant = yes }
@@ -721,7 +721,7 @@ ideas = {
         # 两个都完成
         steel_torrent_modifier_os_card = {
             allowed = { always = no }
-            picture = GFX_idea_steel_torrent
+            picture = steel_torrent
             # 2026-07-14 修改：自动机使用 auto_mech，战斗机甲使用 cat_eq_all_bm，数值同步但类别分离。
             equipment_bonus = {
                 auto_mech = { maximum_speed = 0.05 defense = 0.05 reliability = 0.05 instant = yes }
@@ -732,7 +732,7 @@ ideas = {
         # 更强火力（在os_card基础上追加）
         steel_torrent_modifier_firepower = {
             allowed = { always = no }
-            picture = GFX_idea_steel_torrent
+            picture = steel_torrent
             # 2026-07-14 修改：自动机使用 auto_mech，战斗机甲使用 cat_eq_all_bm，数值同步但类别分离。
             equipment_bonus = {
                 # 2026-07-14 修改：完整火力阶段分别写入自动机与战斗机甲装备目标。
@@ -744,7 +744,7 @@ ideas = {
         # 千年的钢铁长城（最终版）
         steel_torrent_modifier_final = {
             allowed = { always = no }
-            picture = GFX_idea_steel_torrent
+            picture = steel_torrent
             # 2026-07-14 修改：自动机使用 auto_mech，战斗机甲使用 cat_eq_all_bm，数值同步但类别分离。
             equipment_bonus = {
                 # 2026-07-14 修改：钢铁长城最终收益分别写入自动机与战斗机甲装备目标。
@@ -755,7 +755,7 @@ ideas = {
 
 		MIL_reorganized_security_department = {
 			allowed = { always = no }
-			picture = GFX_idea_MIL_reorganized_security_department
+			picture = MIL_reorganized_security_department
 
 			modifier = {
 				combat_readiness_factor = -0.50
@@ -766,7 +766,7 @@ ideas = {
         # 2026-07-14 修改：网络防线旧阶段定义同步迁移到当前原版合法的 decryption_factor 与 intelligence_agency_defense，避免解析未知 modifier。
         MIL_cyber_defense = {
             allowed = { always = no }
-            picture = GFX_idea_MIL_cyber_defense
+            picture = MIL_cyber_defense
             modifier = {
                 encryption = 1
                 decryption_factor = 0.10
@@ -776,7 +776,7 @@ ideas = {
         # +信息安全大于天
         MIL_cyber_defense_2 = {
             allowed = { always = no }
-            picture = GFX_idea_MIL_cyber_defense
+            picture = MIL_cyber_defense
             modifier = {
                 encryption = 1
                 decryption_factor = 0.10
@@ -790,7 +790,7 @@ ideas = {
         # +网络中的武器（没先点信息安全）
         MIL_cyber_defense_3 = {
             allowed = { always = no }
-            picture = GFX_idea_MIL_cyber_defense
+            picture = MIL_cyber_defense
             modifier = {
                 encryption = 1
                 decryption_factor = 0.10
@@ -804,7 +804,7 @@ ideas = {
         # +信息安全 +网络武器
         MIL_cyber_defense_4 = {
             allowed = { always = no }
-            picture = GFX_idea_MIL_cyber_defense
+            picture = MIL_cyber_defense
             modifier = {
                 encryption = 1
                 decryption_factor = 0.10
@@ -822,7 +822,7 @@ ideas = {
         # +信息安全 +学生信息系统
         MIL_cyber_defense_5 = {
             allowed = { always = no }
-            picture = GFX_idea_MIL_cyber_defense
+            picture = MIL_cyber_defense
             modifier = {
                 encryption = 1
                 decryption_factor = 0.10
@@ -837,7 +837,7 @@ ideas = {
         # +信息安全 +学生信息系统 +网络武器
         MIL_cyber_defense_6 = {
             allowed = { always = no }
-            picture = GFX_idea_MIL_cyber_defense
+            picture = MIL_cyber_defense
             modifier = {
                 encryption = 1
                 decryption_factor = 0.10
@@ -856,7 +856,7 @@ ideas = {
         # 最终版（坚不可摧）
         MIL_cyber_defense_final = {
             allowed = { always = no }
-            picture = GFX_idea_MIL_cyber_defense
+            picture = MIL_cyber_defense
             modifier = {
                 encryption = 1
                 decryption_factor = 0.10
@@ -876,7 +876,7 @@ ideas = {
 
         MIL_box_weapon_success_idea = {
             allowed = { always = no }
-            picture = GFX_idea_MIL_box_weapon
+            picture = MIL_box_weapon
 
             modifier = {
                 civilian_intel_to_others = 0.10
@@ -888,7 +888,7 @@ ideas = {
 
         MIL_box_weapon_great_success_idea = {
             allowed = { always = no }
-            picture = GFX_idea_MIL_box_weapon
+            picture = MIL_box_weapon
 
             modifier = {
                 civilian_intel_to_others = 0.40
@@ -973,7 +973,7 @@ ideas = {
         MIL_ruins_security_alert = {
 			# 2026-07-20 修改：按最新口径恢复为全局陆军攻击与防御加成。
             name = MIL_ruins_security_alert
-            picture = GFX_idea_MIL_ruins_security
+            picture = MIL_ruins_security
 
             allowed = {
                 original_tag = MIL
@@ -987,7 +987,7 @@ ideas = {
 
         MIL_ruins_development_benefits = {
             name = MIL_ruins_development_benefits
-            picture = GFX_idea_MIL_ruins_industry
+            picture = MIL_ruins_industry
 
             allowed = {
                 original_tag = MIL
@@ -1001,7 +1001,7 @@ ideas = {
         MIL_ruins_emp_strike = {
 			# 2026-07-18 修改：EMP打击只针对暴走机械A57生效。
             name = MIL_ruins_emp_strike
-            picture = GFX_idea_MIL_ruins_security
+            picture = MIL_ruins_security
 
             allowed = {
                 original_tag = MIL
@@ -1013,7 +1013,7 @@ ideas = {
         MIL_ruins_heavy_assault = {
 			# 2026-07-18 修改：重拳出击只针对废墟钢盔团A56生效。
             name = MIL_ruins_heavy_assault
-            picture = GFX_idea_MIL_ruins_security
+            picture = MIL_ruins_security
 
             allowed = {
                 original_tag = MIL
@@ -1025,7 +1025,7 @@ ideas = {
         MIL_ruins_cross_divine_suppression = {
 			# 2026-07-18 修改：剿灭十字神明只针对A58生效。
             name = MIL_ruins_cross_divine_suppression
-            picture = GFX_idea_MIL_ruins_security
+            picture = MIL_ruins_security
 
             allowed = {
                 original_tag = MIL
@@ -1036,7 +1036,7 @@ ideas = {
 
         MIL_ruins_lost_technology_analysis_research = {
             name = MIL_ruins_lost_technology_analysis
-            picture = GFX_idea_MIL_ruins_research
+            picture = MIL_ruins_research
 
             allowed = {
                 original_tag = MIL
@@ -1049,7 +1049,7 @@ ideas = {
 
         MIL_ruins_lost_technology_analysis_construction = {
             name = MIL_ruins_lost_technology_analysis
-            picture = GFX_idea_MIL_ruins_industry
+            picture = MIL_ruins_industry
 
             allowed = {
                 original_tag = MIL
@@ -1062,7 +1062,7 @@ ideas = {
 
         MIL_ruins_lost_technology_analysis_mech_attack = {
             name = MIL_ruins_lost_technology_analysis
-            picture = GFX_idea_MIL_ruins_research
+            picture = MIL_ruins_research
 
             allowed = {
                 original_tag = MIL
@@ -1076,7 +1076,7 @@ ideas = {
 
         MIL_ruins_lost_technology_analysis_mech_cost = {
             name = MIL_ruins_lost_technology_analysis
-            picture = GFX_idea_MIL_ruins_industry
+            picture = MIL_ruins_industry
 
             allowed = {
                 original_tag = MIL
@@ -1095,7 +1095,7 @@ ideas = {
             # 关键变量：无；重复发现时按原版限时民族精神规则刷新持续时间，不叠加数值。
             # 预期结果：千年获得持续180天的5%科研速度加成。
             name = MIL_ruins_old_research_facility
-            picture = GFX_idea_MIL_ruins_research
+            picture = MIL_ruins_research
 
             allowed = {
                 original_tag = MIL
@@ -1109,7 +1109,7 @@ ideas = {
         MIL_ruins_cross_divine_clues = {
 			# 2026-07-18 修改：按需求补齐神秘科技、欧帕兹项目和全部特殊项目速度，不再误加重型器械项目速度。
             name = MIL_ruins_cross_divine_clues
-            picture = GFX_idea_MIL_ruins_research
+            picture = MIL_ruins_research
 
             allowed = {
                 original_tag = MIL
@@ -1129,7 +1129,7 @@ ideas = {
 			# 2026-07-18 修改：SPTF事件链开端的15日基础设施施工停滞。
 			# 入口：MIL_ruins_story.1；预期结果：15日内基础设施建造速度降低100%。
 			name = MIL_ruins_hub_hacked
-			picture = GFX_idea_MIL_ruins_security
+			picture = MIL_ruins_security
 			allowed = { original_tag = MIL }
 			modifier = { production_speed_infrastructure_factor = -1.00 }
 		}

@@ -1,14 +1,14 @@
 ideas = {
 	country = {
 		WLH_YiShuYuZiWo = { #艺术与自我
-			picture = unkown
+			picture = unknown
 			modifier = {
 				political_power_factor = 0.1 #政治点百分比加成%
 			}
 		}
 
 		WLH_MeiShuCeZhanRen = { #美术策展人
-			picture = unkown
+			picture = unknown
 			modifier = {
 				opinion_gain_monthly_factor = 0.1 #民工捐赠
 				industrial_factory_donations = 2 #改善关系速度

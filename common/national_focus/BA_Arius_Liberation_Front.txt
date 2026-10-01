@@ -3254,7 +3254,7 @@ focus_tree = {
         bypass = {
             has_country_flag = ALF_GBO_begins_flag
         }
-        cancel_trigger = {
+        cancel = {
             has_country_flag = ALF_GBO_begins_flag
         }
         cancelable = no

@@ -1,11 +1,16 @@
 
-#music_station = "base_music"
+music_station = "base_music"
 
-#music = {
-	#song = "maintheme"
-	#chance = {
-		#modifier = {
-			#factor = 0.5
-		#}		
-	#}
-#}
+music = {
+	song = "maintheme"
+	chance = {
+		factor = 1
+	}
+}
+
+music = {
+	song = "Hifumi Daisuki"
+	chance = {
+		factor = 1
+	}
+}

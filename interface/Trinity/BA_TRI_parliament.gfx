@@ -115,7 +115,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_TRI_parliament_focus_0"
-		texturefile = "gfx/event_pictures/Trinity/TRI_parliament_focus_0.png"
+		texturefile = "gfx/event_pictures/Trinity/TRI_parliament_focus_0.dds"
 	}
 	spriteType = {
 		name = "TRI_parliament_position_bg"

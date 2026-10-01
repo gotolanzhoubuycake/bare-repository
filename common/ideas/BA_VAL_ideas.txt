@@ -1,7 +1,7 @@
 ideas = {
 	country = {
 		VAL_NinDeDunPai = { #您的盾牌
-			picture = unkown
+			picture = unknown
 
 			modifier = {
 				combat_readiness_factor = 0.2 #战备上限
@@ -12,7 +12,7 @@ ideas = {
 		}
 
 		VAL_RenShouJinQue = { #人手不足
-			picture = unkown
+			picture = unknown
 
 			modifier = {
 				custom_modifier_tooltip = VAL_RenShouJinQue_Y
@@ -20,7 +20,7 @@ ideas = {
 		}
 
 		VAL_YouXinWuLi = { #有心无力
-			picture = unkown
+			picture = unknown
 
 			modifier = {
 				army_speed_factor = -0.1 #陆军速度

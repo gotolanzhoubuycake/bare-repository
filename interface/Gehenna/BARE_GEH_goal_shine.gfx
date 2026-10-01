@@ -1921,10 +1921,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_GEH_Guerrilla_Hero_shine"
-		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Guerrilla_Hero.dds"
+		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Hundred_Battles.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Guerrilla_Hero.dds"
+			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Hundred_Battles.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -1937,7 +1937,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Guerrilla_Hero.dds"
+			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Hundred_Battles.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -1953,10 +1953,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_GEH_The_Fire_Rises_shine"
-		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_The_Fire_Rises.dds"
+		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_War_breaks_out.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_The_Fire_Rises.dds"
+			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_War_breaks_out.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -1969,7 +1969,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_The_Fire_Rises.dds"
+			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_War_breaks_out.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -4033,10 +4033,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_GEH_Ministry_of_Foreign_Affairs_of_Gehenna_shine"
-		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Ministry_of_Foreign_Affairs_of_Gehenna.dds"
+		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Negotiation_with_Trinity.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Ministry_of_Foreign_Affairs_of_Gehenna.dds"
+			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Negotiation_with_Trinity.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -4049,7 +4049,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Ministry_of_Foreign_Affairs_of_Gehenna.dds"
+			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Negotiation_with_Trinity.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -4065,10 +4065,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_GEH_Buy_American_Technology_shine"
-		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Buy_American_Technology.dds"
+		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_merge_outside_technology.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Buy_American_Technology.dds"
+			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_merge_outside_technology.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -4081,7 +4081,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Buy_American_Technology.dds"
+			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_merge_outside_technology.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -4097,10 +4097,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_GEH_Right_of_way_issues_shine"
-		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Right_of_way_issues.dds"
+		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Transportation_Industry.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Right_of_way_issues.dds"
+			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Transportation_Industry.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -4113,7 +4113,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Right_of_way_issues.dds"
+			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Transportation_Industry.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -4129,10 +4129,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_GEH_Desert_Investment_shine"
-		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Desert_Investment.dds"
+		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_invite_investment.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Desert_Investment.dds"
+			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_invite_investment.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -4145,7 +4145,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Desert_Investment.dds"
+			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_invite_investment.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -4161,10 +4161,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_GEH_Adult_shine"
-		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Adult.dds"
+		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Mature_design.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Adult.dds"
+			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Mature_design.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -4177,7 +4177,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Adult.dds"
+			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Mature_design.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -4193,10 +4193,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_GEH_Seek_help_from_Xialai_shine"
-		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Seek_help_from_Xialai.dds"
+		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Support_allies.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Seek_help_from_Xialai.dds"
+			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Support_allies.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -4209,7 +4209,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Seek_help_from_Xialai.dds"
+			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Support_allies.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -4225,10 +4225,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_GEH_Construction_guidance_shine"
-		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Construction_guidance.dds"
+		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_infrastructure_built.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Construction_guidance.dds"
+			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_infrastructure_built.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -4241,7 +4241,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Construction_guidance.dds"
+			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_infrastructure_built.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -4257,10 +4257,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_GEH_Relaxation_communication_shine"
-		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Relaxation_communication.dds"
+		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Restarting_talks.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Relaxation_communication.dds"
+			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Restarting_talks.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -4273,7 +4273,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Relaxation_communication.dds"
+			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Restarting_talks.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -4289,10 +4289,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_GEH_sports_meet_coming_shine"
-		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_sports_meet_coming.dds"
+		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Strengthening_exercises.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_sports_meet_coming.dds"
+			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Strengthening_exercises.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -4305,7 +4305,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_sports_meet_coming.dds"
+			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Strengthening_exercises.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -4321,10 +4321,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_GEH_Recruiting_elites_shine"
-		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Recruiting_elites.dds"
+		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Gather_the_troops.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Recruiting_elites.dds"
+			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Gather_the_troops.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -4337,7 +4337,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Recruiting_elites.dds"
+			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Gather_the_troops.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -4353,10 +4353,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_GEH_Strengthening_discipline_shine"
-		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Strengthening_discipline.dds"
+		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Strengthening_law_enforcement.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Strengthening_discipline.dds"
+			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Strengthening_law_enforcement.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -4369,7 +4369,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Strengthening_discipline.dds"
+			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Strengthening_law_enforcement.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -4385,10 +4385,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_GEH_Increase_medical_team_shine"
-		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Increase_medical_team.dds"
+		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Training_in_medical_knowledge.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Increase_medical_team.dds"
+			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Training_in_medical_knowledge.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -4401,7 +4401,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Increase_medical_team.dds"
+			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_Training_in_medical_knowledge.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -4417,10 +4417,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_GEH_deploy_hina_shine"
-		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_deploy_hina.dds"
+		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_decision_from_hina.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_deploy_hina.dds"
+			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_decision_from_hina.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -4433,7 +4433,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_deploy_hina.dds"
+			animationmaskfile = "gfx/interface/goals/Gehenna/focus_GEH_decision_from_hina.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no

@@ -1,0 +1,242 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_SRT_angel_24_cleanup"
+		texturefile = "gfx/interface/goals/goal_unknown.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_black_market_trading"
+		texturefile = "gfx/interface/goals/focus_generic_arms_trade.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_burning_and_liberating"
+		texturefile = "gfx/interface/goals/goal_unknown.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_clover_action"
+		texturefile = "gfx/interface/goals/focus_generic_army_attack.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_electronic_warfare_training"
+		texturefile = "gfx/interface/goals/focus_generic_radio_communication.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_elite_equipment_maintenance"
+		texturefile = "gfx/interface/goals/focus_generic_license_production.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_emergency_transfer_of_equipment"
+		texturefile = "gfx/interface/goals/focus_generic_reinforcing_the_supply_network.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_everyone_in_rabbit_team"
+		texturefile = "gfx/interface/goals/focus_generic_diverse_army.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_expanded_research_of_electrony"
+		texturefile = "gfx/interface/goals/focus_generic_radio_communication.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_expanded_research_of_guns"
+		texturefile = "gfx/interface/goals/focus_generic_military_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_expanded_research_of_heavy_weapons"
+		texturefile = "gfx/interface/goals/focus_generic_army_tanks2.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_expanded_research_of_supporting_equipment"
+		texturefile = "gfx/interface/goals/focus_generic_industry_2.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_find_rescue_in_desperate_circumstances"
+		texturefile = "gfx/interface/goals/focus_generic_field_hostpital.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_fox_fire_boundless"
+		texturefile = "gfx/interface/goals/focus_generic_army_attack.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_fresh_water_into_the_canal"
+		texturefile = "gfx/interface/goals/goal_unknown.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_grass_operation"
+		texturefile = "gfx/interface/goals/focus_generic_jungle_training.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_guarantee_military_training"
+		texturefile = "gfx/interface/goals/focus_generic_military_academy.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_heavy_rain_warning"
+		texturefile = "gfx/interface/goals/goal_unknown.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_infantry_skills_training"
+		texturefile = "gfx/interface/goals/focus_generic_commonwealth_build_infantry.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_intelligence_warfare"
+		texturefile = "gfx/interface/goals/goal_generic_intelligence_exchange.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_knight_of_Kivotos"
+		texturefile = "gfx/interface/goals/goal_unknown.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_late_justice"
+		texturefile = "gfx/interface/goals/goal_unknown.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_operation_aoba"
+		texturefile = "gfx/interface/goals/focus_generic_army_attack.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_operation_cafe"
+		texturefile = "gfx/interface/goals/focus_generic_army_attack.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_operation_carrot"
+		texturefile = "gfx/interface/goals/focus_generic_army_attack.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_operation_clover"
+		texturefile = "gfx/interface/goals/focus_generic_army_attack.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_operation_knife2"
+		texturefile = "gfx/interface/goals/focus_generic_army_attack.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_operation_nest_grass_plant"
+		texturefile = "gfx/interface/goals/focus_generic_jungle_training.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_operation_shiratori"
+		texturefile = "gfx/interface/goals/focus_generic_army_attack.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_operation_shrimp_trap"
+		texturefile = "gfx/interface/goals/focus_generic_army_attack.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_pancakes_as_prison"
+		texturefile = "gfx/interface/goals/goal_unknown.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_plan_ahead"
+		texturefile = "gfx/interface/goals/goal_unknown.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_poficient_in_guns"
+		texturefile = "gfx/interface/goals/focus_generic_diverse_army.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_proficient_in_drone"
+		texturefile = "gfx/interface/goals/focus_generic_pilot_training.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_proficient_in_supporting_equipment"
+		texturefile = "gfx/interface/goals/focus_generic_money_for_equipment.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_protective_umbrella_of_the_black_market"
+		texturefile = "gfx/interface/goals/focus_generic_arms_trade.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_rabbit_fights_the_eagle"
+		texturefile = "gfx/interface/goals/focus_generic_army_attack.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_rabbit_team_of_the_aoba"
+		texturefile = "gfx/interface/goals/focus_generic_diverse_army.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_rabbit_team_of_the_business"
+		texturefile = "gfx/interface/goals/focus_generic_diverse_army.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_rabbit_team_of_the_shiratori"
+		texturefile = "gfx/interface/goals/focus_generic_diverse_army.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_secret_conversation_with_kaya"
+		texturefile = "gfx/interface/goals/goal_unknown.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_shadow_of_the_walk"
+		texturefile = "gfx/interface/goals/goal_unknown.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_sharp_knife_operation"
+		texturefile = "gfx/interface/goals/focus_generic_army_attack.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_special_military_training"
+		texturefile = "gfx/interface/goals/focus_generic_mountain_training.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_survival_in_the_wild"
+		texturefile = "gfx/interface/goals/focus_generic_desert_training.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_temporary_camp_of_the_rabbit"
+		texturefile = "gfx/interface/goals/focus_generic_field_hostpital.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_the_defense_of_rabbit"
+		texturefile = "gfx/interface/goals/focus_AUS_defence_of_the_homeland.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_the_determination_to_protect"
+		texturefile = "gfx/interface/goals/goal_unknown.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_the_final_test"
+		texturefile = "gfx/interface/goals/goal_unknown.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_the_game_of_the_brave"
+		texturefile = "gfx/interface/goals/goal_unknown.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_the_great_rain"
+		texturefile = "gfx/interface/goals/goal_unknown.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_the_most_detestable_adult"
+		texturefile = "gfx/interface/goals/goal_unknown.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_the_rabbit_hole_of_carbanno"
+		texturefile = "gfx/interface/goals/goal_unknown.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_the_value_of_justice"
+		texturefile = "gfx/interface/goals/goal_unknown.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_unknown_furture"
+		texturefile = "gfx/interface/goals/goal_unknown.dds"
+	}
+	spriteType = {
+		name = "GFX_SRT_white_horse_from_the_sky"
+		texturefile = "gfx/interface/goals/goal_unknown.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_ARI_share_highest_knowledge"
+		texturefile = "gfx/interface/goals/Arius/focus_ARI_research_trinity_books.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_TRI_Bill_of_carrot_cake"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_Bill_of_copper_olive.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_TRI_conspiracy_against_conspiracy"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_shadow_scheme.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_TRI_the_story_of_girls"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_love_for_students.dds"
+	}
+}

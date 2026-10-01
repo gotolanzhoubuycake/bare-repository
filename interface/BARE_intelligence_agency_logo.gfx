@@ -36,7 +36,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_bare_intelligence_agency_logo_alr"
-		texturefile = "gfx/interface/operatives/agencies/intelligence_agency_logo_arl.dds"
+		texturefile = "gfx/interface/operatives/agencies/intelligence_agency_logo_alr.dds"
 		noOfFrames = 2
 	}
 	spriteType = {
@@ -86,4 +86,9 @@ spriteTypes = {
 	}
 	
 
+	spriteType = {
+		name = "GFX_bare_intelligence_agency_logo_prc"
+		texturefile = "gfx/interface/operatives/agencies/intelligence_agency_logo_generic_1.dds"
+		noOfFrames = 2
+	}
 }

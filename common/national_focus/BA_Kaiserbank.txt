@@ -1,13 +1,14 @@
 focus_tree = {
-	id = Kaiserfactory_base
+	id = Kaiserfactory_base_CAO
 	country = {
 		factor = 0
 		modifier = {
-			add = 0
+			add = 10
 			tag = CAO
 		}
 	}
 	default = no
+	shared_focus = CAE_inspect_subsidiaries_planning
 	##以下为序章剧情线
 	focus = {
 		id = CAO_year_plan #章鱼银行财年计划

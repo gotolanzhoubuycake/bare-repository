@@ -3,11 +3,12 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 0
+			add = 10
 			tag = CAP
 		}
 	}
 	default = no
+	shared_focus = CAE_inspect_subsidiaries_planning
 	##以下为序章剧情线
 	focus = {
 		id = CAP_businessPlan #PMC经营计划

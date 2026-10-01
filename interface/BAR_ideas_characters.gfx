@@ -96,7 +96,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_portrait_ABY_serika_small"
-		texturefile = "gfx/leaders/ABY/serika_small.dds"
+		texturefile = "gfx/leaders/ABY/serika.dds"
 	}
 
 ### ARI 夫人无肖像
@@ -148,7 +148,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_portrait_ARI_beatrice_small"
-		texturefile = "gfx/leaders/ARI/ARI_beatrice_small.dds"
+		texturefile = "gfx/leaders/ARI/ARI_beatrice.dds"
 	}
 
 ###凯撒无肖像
@@ -196,11 +196,11 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_portrait_CEN_kaya_small"
-		texturefile = "gfx/leaders/CEN/kaya_small.dds"
+		texturefile = "gfx/leaders/CEN/kaya.dds"
 	}
 	spriteType = {
 		name = "GFX_portrait_CEN_kaijo_small"
-		texturefile = "gfx/leaders/CEN/kaijo_small.dds"
+		texturefile = "gfx/leaders/CEN/kaijo.dds"
 	}
 	
 ### GEH
@@ -382,7 +382,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_portrait_GEH_erika_small"
-		texturefile = "gfx/leaders/GEH/erika_small.dds"
+		texturefile = "gfx/leaders/GEH/erika.dds"
 	}
 	spriteType = {
 		name = "GFX_portrait_GEH_kirara_small"
@@ -528,7 +528,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_portrait_MIL_alice_small"
-		texturefile = "gfx/leaders/MIL/alice_small.dds"
+		texturefile = "gfx/leaders/MIL/alice.dds"
 	}
 	spriteType = {
 		name = "GFX_portrait_MIL_momoi_small"
@@ -654,7 +654,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_portrait_TRI_azusa_small"
-		texturefile = "gfx/leaders/TRI/azusa_small.dds"
+		texturefile = "gfx/leaders/TRI/azusa.dds"
 	}
 	spriteType = {
 		name = "GFX_portrait_TRI_hanako"
@@ -946,11 +946,11 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_portrait_RWT_takane_small"
-		texturefile = "gfx/leaders/RWT/takane_small.dds"
+		texturefile = "gfx/leaders/RWT/takane.dds"
 	}
 	spriteType = {
 		name = "GFX_portrait_RWT_yakumo_small"
-		texturefile = "gfx/leaders/RWT/yakumo_small.dds"
+		texturefile = "gfx/leaders/RWT/yakumo.dds"
 	}
 	
 ### HYA 紫、莲华、桔梗无肖像
@@ -1016,11 +1016,11 @@ spriteTypes = {
 	}
 		spriteType = {
 		name = "GFX_portrait_HYA_niya_small"
-		texturefile = "gfx/leaders/HYA/niya_small.dds"
+		texturefile = "gfx/leaders/HYA/niya.dds"
 	}
 	spriteType = {
 		name = "GFX_portrait_HYA_nagusa_small"
-		texturefile = "gfx/leaders/HYA/nagusa_small.dds"
+		texturefile = "gfx/leaders/HYA/nagusa.dds"
 	}
 	spriteType = {
 		name = "GFX_portrait_HYA_chise_small"
@@ -1028,7 +1028,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_portrait_HYA_kaho_small"
-		texturefile = "gfx/leaders/HYA/kaho_small.dds"
+		texturefile = "gfx/leaders/HYA/kaho.dds"
 	}
 	spriteType = {
 		name = "GFX_portrait_HYA_tsubaki_small"
@@ -1056,7 +1056,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_portrait_HYA_umika_small"
-		texturefile = "gfx/leaders/HYA/umika_small.dds"
+		texturefile = "gfx/leaders/HYA/umika.dds"
 	}
 	spriteType = {
 		name = "GFX_portrait_HYA_pina_small"
@@ -1072,7 +1072,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_portrait_HYA_kuzuha_small"
-		texturefile = "gfx/leaders/HYA/kuzuha_small.dds"
+		texturefile = "gfx/leaders/HYA/kuzuha.dds"
 	}
 	
 ### SHA
@@ -1118,7 +1118,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_portrait_SHA_reijou_small"
-		texturefile = "gfx/leaders/SHA/reijou_small.dds"
+		texturefile = "gfx/leaders/SHA/reijou.dds"
 	}
 	spriteType = {
 		name = "GFX_portrait_SHA_rumi_small"
@@ -1138,7 +1138,27 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_portrait_SHA_kai_small"
-		texturefile = "gfx/leaders/SHA/kai_small.dds"
+		texturefile = "gfx/leaders/SHA/kai.dds"
 	}
 	
+	spriteType = {
+		name = "GFX_portrait_GEH_JingJiZhuangTaiWeiYuanHui_small"
+		texturefile = "gfx/leaders/GEH/GEH_JingJiZhuangTaiWeiYuanHui.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_SCH_sensei_small"
+		texturefile = "gfx/leaders/SCH/sensei.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_ARI_NoGovMode_small"
+		texturefile = "gfx/leaders/ARI/阿里乌斯-无政府状态.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_ARI_hiyuri_small"
+		texturefile = "gfx/leaders/ARI/hiyori_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_TRI_commission_of_air_ground_small"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_air_ground_integration.dds"
+	}
 }

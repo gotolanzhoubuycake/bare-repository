@@ -1,7 +1,7 @@
 ideas = {
 	country = {
 		CAB_ZiBenZhiXin = { #资本之心
-			picture = unkown
+			picture = unknown
 
 			modifier = {
 				stability_factor = -0.05 #稳定度
@@ -10,7 +10,7 @@ ideas = {
 		}
 
 		CAB_JvanZengMinYongGongChang = { #捐赠民用工厂
-			picture = unkown
+			picture = unknown
 
 			modifier = {
 				production_speed_industrial_complex_factor = 0.15 #民工建造速度加成
@@ -19,7 +19,7 @@ ideas = {
 		}
 
 		CAB_WuJinDeFanRong = { #无尽的繁荣
-			picture = unkown
+			picture = unknown
 
 			modifier = {
 				custom_modifier_tooltip = CAB_WuJinDeFanRong_R

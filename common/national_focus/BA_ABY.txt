@@ -16,7 +16,9 @@ focus_tree = {
         x = 0
         y = 0
         available = { always = yes }
-        custom_effect_tooltip = ABY_set_conflict_tt
+        completion_reward = {
+            custom_effect_tooltip = ABY_set_conflict_tt
+        }
     }
 
     focus = { #舔舐伤口
@@ -26,7 +28,9 @@ focus_tree = {
         x = 0
         y = 1
         prerequisite = { focus = ABY_set_conflict }
-        custom_effect_tooltip = ABY_lick_wounds_tt
+        completion_reward = {
+            custom_effect_tooltip = ABY_lick_wounds_tt
+        }
     }
 
     focus = { #余烬中的星火
@@ -36,7 +40,9 @@ focus_tree = {
         x = 0
         y = 2
         prerequisite = { focus = ABY_lick_wounds }
-        custom_effect_tooltip = ABY_spark_in_embers_tt
+        completion_reward = {
+            custom_effect_tooltip = ABY_spark_in_embers_tt
+        }
     }
 
     focus = { #片刻喘息
@@ -46,7 +52,9 @@ focus_tree = {
         x = 0
         y = 3
         prerequisite = { focus = ABY_spark_in_embers }
-        custom_effect_tooltip = ABY_a_moment_of_breath_tt
+        completion_reward = {
+            custom_effect_tooltip = ABY_a_moment_of_breath_tt
+        }
     }
 
     focus = { #每一位顽强不屈的勇士
@@ -74,7 +82,9 @@ focus_tree = {
         x = 2
         y = 4
         prerequisite = { focus = ABY_a_moment_of_breath }
-        custom_effect_tooltip = ABY_every_defensive_weapon_tt
+        completion_reward = {
+            custom_effect_tooltip = ABY_every_defensive_weapon_tt
+        }
     }
 
     focus = { #联邦学生会的回应
@@ -92,6 +102,8 @@ focus_tree = {
         prerequisite = {
             focus = ABY_every_defensive_weapon
         }
-        custom_effect_tooltip = ABY_gsc_response_tt
+        completion_reward = {
+            custom_effect_tooltip = ABY_gsc_response_tt
+        }
     }
 }

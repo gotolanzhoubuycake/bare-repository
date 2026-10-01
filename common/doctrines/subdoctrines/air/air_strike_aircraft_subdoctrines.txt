@@ -14,15 +14,6 @@ air_subdoctrine_flying_artillery = {
     ai_will_do = {
 
         base = 1
-        modifier = {
-            factor = 75
-            OR = {
-                original_tag = ENG
-                original_tag = FRA
-                original_tag = ITA
-                original_tag = SOV
-            }
-        }
     }
 
     # EFFECTS
@@ -69,10 +60,6 @@ air_subdoctrine_dive_bombers = {
     ai_will_do = {
 
         base = 1
-        modifier = {
-            factor = 75
-            original_tag = GER
-        }
     }
 
     # EFFECTS

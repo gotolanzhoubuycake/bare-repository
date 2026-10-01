@@ -1,7 +1,7 @@
 ideas = {
 	country = {
 		CAP_SiRenJvnShiChengBaoShang = { #私人军事承包商
-			picture = unkown
+			picture = unknown
 
 			modifier = {
 				industrial_capacity_factory = 0.1 #工厂产出
@@ -11,7 +11,7 @@ ideas = {
 			}
 		}
 		CAP_JingRuiGuYongBing = { #精锐雇佣兵
-			picture = unkown
+			picture = unknown
 			
 			modifier = {
 				army_org_factor = 0.15 #陆军组织度
@@ -20,7 +20,7 @@ ideas = {
 			}
 		}
 		CAP_ShaMoZhiYang = { #沙漠之疡
-			picture = unkown
+			picture = unknown
 
 			modifier = {
 				stability_factor = -0.05 #稳定度

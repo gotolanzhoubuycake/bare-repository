@@ -5,7 +5,7 @@ country_event = { #古圣堂遭受聚变打击 #去兰州买烧饼：废弃事�
 	title = LS_GST.1.t
 	desc = LS_GST.1.d
 	is_triggered_only = yes
-	picture = TRI_news_event_25
+	picture = GFX_TRI_event_25
 
 	timeout_days = 14
 
@@ -168,7 +168,7 @@ country_event = { #古圣堂遭受聚变打击(无核弹)
 	title = LS_GST.2.t
 	desc = LS_GST.2.d
 	is_triggered_only = yes
-	picture = TRI_news_event_25
+	picture = GFX_TRI_event_25
 
 	timeout_days = 14
 
@@ -208,7 +208,7 @@ country_event = { #初次袭击简报
 		}
 	} 
 	is_triggered_only = yes
-	picture = TRI_news_event_25
+	picture = GFX_TRI_event_25
 
 	timeout_days = 2
 	immediate = {
@@ -416,7 +416,7 @@ news_event = { #古圣堂之战
 	title = LG_GST.4.t
 	desc = LS_GST.4.d
 	is_triggered_only = yes
-	picture = TRI_news_event_20
+	picture = GFX_TRI_event_20
 
 	option = {
 		trigger = {
@@ -445,7 +445,7 @@ country_event = { #行动报告
 	id = LS_GST.5
 	title = LS_GST.5.t
 	is_triggered_only = yes
-	picture = TRI_news_event_20
+	picture = GFX_TRI_event_20
 
 	timeout_days = 7
 
@@ -492,7 +492,7 @@ country_event = { #反戈一击
 	desc = LS_GST.6.d
 
 	is_triggered_only = yes
-	picture = TRI_news_event_20
+	picture = GFX_TRI_event_20
 
 	immediate = {
 		hidden_effect = {
@@ -514,7 +514,7 @@ country_event = { #关于叛徒的报告
 	title = LS_GST.7.t
 	desc = LS_GST.7.d
 	is_triggered_only = yes
-	picture = TRI_news_event_21
+	picture = GFX_TRI_event_21
 
 	timeout_days = 3
 	immediate = {
@@ -570,7 +570,7 @@ country_event = { #僵局
 	}
 	desc = LS_GST.8.d.b
 	is_triggered_only = yes
-	picture = TRI_news_event_21
+	picture = GFX_TRI_event_21
 
 	immediate = {
 		hidden_effect = {
@@ -616,7 +616,7 @@ country_event = { #僵局
 
 	desc = LS_GST.9.d.b
 	is_triggered_only = yes
-	picture = TRI_news_event_21
+	picture = GFX_TRI_event_21
 
 	option = {
 		name = LS_GST.9.a
@@ -866,6 +866,8 @@ news_event = { #联邦学生会介入
 	picture = GFX_news_event_gsc_union
 
 	is_triggered_only = yes
+
+	major = yes
 
 	option = {
 		trigger = {

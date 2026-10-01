@@ -397,9 +397,18 @@ Great_Game_invade_succeeded = {
 				}
 			}
 			clear_array = Great_Game_temp_allies
-			remove_from_array = {
-				array = BA_trusteeship_areas
-				value = var:Great_Game_invade_target
+			#守卫：目标可能不在防守方托管地区数组中（超时/目标非该盟主任托管区时），避免无效移除
+			if = {
+				limit = {
+					is_in_array = {
+						array = BA_trusteeship_areas
+						value = var:Great_Game_invade_target
+					}
+				}
+				remove_from_array = {
+					array = BA_trusteeship_areas
+					value = var:Great_Game_invade_target
+				}
 			}
 			
 			clr_country_flag = involved_in_Great_Game_as_defender
@@ -598,9 +607,18 @@ Great_Game_ally_leave = {
 	clear_variable = Great_Game_invade_target_overlord
 	clear_variable = Great_Game_enemy
 	var:Great_Game_ally_leader = {
-		remove_from_array = {
-			array = Great_Game_temp_allies
-			value = ROOT
+		#守卫：演习结算路径可能已 clear_array，盟友未必仍在盟主数组中
+		if = {
+			limit = {
+				is_in_array = {
+					array = Great_Game_temp_allies
+					value = ROOT
+				}
+			}
+			remove_from_array = {
+				array = Great_Game_temp_allies
+				value = ROOT
+			}
 		}
 	}
 	clear_variable = Great_Game_ally_leader

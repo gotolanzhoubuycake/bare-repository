@@ -74,7 +74,6 @@ focus_tree = {
     focus = {
         id = GEH_Discipline_Committee
         icon = GFX_goal_GEH_Discipline_Committee
-        relative_position_id = GEH_Looking_back_insid
         cost = 4
         x = -2
         y = 2
@@ -98,7 +97,6 @@ focus_tree = {
     focus = {
         id = GEH_Wehrmacht_First
         icon = GFX_goal_GEH_Wehrmacht_First
-        relative_position_id = GEH_Looking_back_insid
         cost = 4
         x = 2
         y = 2
@@ -172,11 +170,11 @@ focus_tree = {
             if = {
                 limit = {
                     has_power_balance = {
-                        id = GEH_bp_between_chaos_and_order_balance_new
+                        id = GEH_bp_between_chaos_and_order
                     }
                 }
                 add_power_balance_value = {
-                    id = GEH_bp_between_chaos_and_order_balance_new
+                    id = GEH_bp_between_chaos_and_order
                     value = 0.1
                 }
             }else = {
@@ -2788,8 +2786,8 @@ focus_tree = {
         relative_position_id =  GEH_The_First_Eden_Treaty
 
         prerequisite = {  focus =  GEH_The_First_Eden_Treaty }
-        unlock_decision_category_tooltip = GEH_societies_dec_category
         completion_reward = {
+            unlock_decision_category_tooltip = GEH_societies_dec_category
             set_country_flag = GEH_societies_start
             set_variable = {
                 GEH_discipline_committee_ability = 20
@@ -4022,7 +4020,7 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_ECO }
 
         prerequisite = { focus = GEH_Ministry_of_Foreign_Affairs_of_Gehenna }
-        prerequisite = { focus = GEH_Automatic_Adult }
+        prerequisite = { focus = GEH_Adult }
         completion_reward = {}
     }
 

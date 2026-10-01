@@ -11,7 +11,6 @@ NDefines.NFrontend.CAMERA_MAX_HEIGHT = 3000.0
 NDefines.NGraphics.PROVINCE_NAME_DRAW_DISTANCE = 500.0 			-- Remove province names beyond this distance
 
 NDefines.NGame.MAP_SCALE_PIXEL_TO_KM = 3.25
-NDefines.NGame.SAVE_VERSION = 7
 NDefines.NGame.MAX_EFFECT_ITERATION = 15000                     --
 
 NDefines.NMilitary.LAND_SPEED_MODIFIER = 0.15
@@ -42,7 +41,6 @@ NDefines.NNavy.NAVAL_RANGE_TO_INGAME_DISTANCE = 0.24							-- Scale the ship sta
 
 NDefines.NGraphics.MINIMUM_PROVINCE_SIZE_IN_PIXELS = 4
 NDefines.NMilitary.MIN_DIVISION_BRIGADE_HEIGHT = 5
-NDefines.NGraphics.MINIMUM_PROVINCE_SIZE_IN_PIXELS = 4
 
 NDefines.NGraphics.COUNTRY_FLAG_LARGE_STRIPE_MAX_HEIGHT = 24000        -- VANILLA: 8192
 NDefines.NGraphics.COUNTRY_FLAG_SMALL_TEX_MAX_SIZE = 512            -- VANILLA: 64

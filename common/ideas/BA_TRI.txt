@@ -258,7 +258,7 @@ ideas = {
         }
         #圣三一航空训练计划
         TRI_aeronautics_training = {
-            picture = GFX_idea_TRI_aeronautics_training
+            picture = TRI_aeronautics_training
             modifier = {
                 experience_gain_air = 0.05
                 experience_gain_air_factor = 0.1
@@ -267,7 +267,7 @@ ideas = {
             }
         }
         TRI_aeronautics_training_1_1 = {
-            picture = GFX_idea_TRI_aeronautics_training
+            picture = TRI_aeronautics_training
             modifier = {
                 experience_gain_air = 0.05
                 experience_gain_air_factor = 0.1
@@ -277,7 +277,7 @@ ideas = {
             }
         }
         TRI_aeronautics_training_1_2 = {
-            picture = GFX_idea_TRI_aeronautics_training
+            picture = TRI_aeronautics_training
             modifier = {
                 experience_gain_air = 0.05
                 experience_gain_air_factor = 0.1
@@ -295,7 +295,7 @@ ideas = {
             }
         }
         TRI_aeronautics_training_2 = {
-            picture = GFX_idea_TRI_aeronautics_training
+            picture = TRI_aeronautics_training
             modifier = {
                 experience_gain_air = 0.05
                 experience_gain_air_factor = 0.1
@@ -476,7 +476,7 @@ ideas = {
         }
         #友谊，光荣与未来！
         TRI_friendship_glory_future = {
-            picture = GFX_idea_eden_treaty_step_normal_modifier
+            picture = eden_treaty_step_normal_modifier
 
             allowed = {
                 original_tag = TRI
@@ -522,8 +522,6 @@ ideas = {
                 political_power_cost = 0.25
                 stability_factor = -0.15
                 political_advisor_cost_factor = -0.15
-                army_advisor_cost_factor = -0.15
-                air_advisor_cost_factor = -0.15
                 army_chief_cost_factor = -0.15
                 air_chief_cost_factor = -0.15
             }

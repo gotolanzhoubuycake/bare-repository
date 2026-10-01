@@ -154,10 +154,6 @@ ideologies = {
 		}
 
 		modifiers = {
-			
-		}
-
-		modifiers = {
 			##情报##
 			##神秘主义在办大事之前不希望泄漏情报
 			civilian_intel_to_others = 10.0
@@ -259,10 +255,6 @@ ideologies = {
 		}
 
 		modifiers = {
-			
-		}
-
-		modifiers = {
 			##情报##
 			##神秘主义在办大事之前不希望泄漏情报
 			civilian_intel_to_others = 10.0
@@ -336,9 +328,6 @@ ideologies = {
 			embargo_cost_factor = -0.5
 		}
 
-		modifiers = {
-			
-		}
 		faction_modifiers = {
 		}
 

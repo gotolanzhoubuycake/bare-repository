@@ -326,7 +326,16 @@ BA_TRI_remove_paranoia_system = {
 		limit = { has_country_flag = TRI_paranoia_system_active }
 		custom_effect_tooltip = BA_TRI_remove_paranoia_system_tt
 		hidden_effect = {
-			remove_from_array = { Root.topbar_array = token:TRI_kirifuji_nagisa_paranoia_level } 
+			#守卫：动态顶栏允许右键移除条目，flag 存续期间该 token 可能已不在数组中
+			if = {
+				limit = {
+					is_in_array = {
+						array = Root.topbar_array
+						value = token:TRI_kirifuji_nagisa_paranoia_level
+					}
+				}
+				remove_from_array = { Root.topbar_array = token:TRI_kirifuji_nagisa_paranoia_level }
+			}
 			clear_array = TRI_paranoia_association
 			clr_country_flag = TRI_paranoia_system_active
 			clear_variable = TRI_paranoia_change

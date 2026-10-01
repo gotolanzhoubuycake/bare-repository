@@ -1,0 +1,14 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_FOCUS_FILTER_ECO"
+		texturefile = "gfx/interface/focusview/filter/industry_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_FOCUS_FILTER_ARMY"
+		texturefile = "gfx/interface/focusview/filter/pol_power_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_category_end_bg"
+		texturefile = "gfx/interface/decisionview/category_header_bg.dds"
+	}
+}
