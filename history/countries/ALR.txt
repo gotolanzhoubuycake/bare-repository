@@ -18,10 +18,6 @@ set_politics = {
 set_popularities = {
 	no_ideology = 100
 }
-add_ideas = {
-	ALR_industry_0
-	ALR_isolated_resistors
-}
 ##地图界面用变量
 	add_to_array = { ARI_states = 136 }
 	add_to_array = { ARI_states_x = 56 }

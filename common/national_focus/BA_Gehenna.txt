@@ -822,63 +822,6 @@ focus_tree = {
         }
 	}
 
-    #迫在眉睫
-    focus = {
-		id = GEH_Imminent
-        icon = GFX_goal_GEH_Imminent
-	    relative_position_id = GEH_Support_allies
-        cost = 4
-        x = 0
-        y = 1
-        prerequisite = {  focus = GEH_Support_allies }
-        search_filters = { FOCUS_FILTER_POLITICAL }
-
-
-        bypass = {
-            hidden_trigger = {
-                has_global_flag =  BA_2st_eden_pact_end
-            }
-        }
-
-        completion_reward = {
-            add_stability = -0.025
-
-            add_to_variable = {
-                GEH_hot_spring_destructive = -20
-            }
-            add_to_variable = {
-                GEH_gourmet_research_destructive = -20
-            }
-
-            
-            add_to_variable = {
-                GEH_gourmet_research_activity = -20
-            }
-            add_to_variable = {
-                GEH_hot_spring_activity = -20
-            }
-
-            add_to_variable = {
-                GEH_food_service_efficiency = 5
-            }
-
-             add_to_variable = {
-                GEH_discipline_committee_ability = 10
-            }
-
-            hidden_effect = {
-                GEH_food_service_and_gourmet_research_calc = yes
-                GEH_hot_spring_calc = yes
-                GEH_discipline_committee_calc = yes
-            }
-
-            custom_effect_tooltip = GEH_Imminent_tooltip
-            
-        }
-        ai_will_do = {
-            factor = 3
-        }
-	}
     #和平将至
     focus = {
 		id = GEH_peace_at_hand
@@ -1083,6 +1026,63 @@ focus_tree = {
         }
 	}
 
+    #迫在眉睫
+    focus = {
+		id = GEH_Imminent
+        icon = GFX_goal_GEH_Imminent
+	    relative_position_id = GEH_Support_allies
+        cost = 4
+        x = 0
+        y = 1
+        prerequisite = {  focus = GEH_Support_allies }
+        search_filters = { FOCUS_FILTER_POLITICAL }
+
+
+        bypass = {
+            hidden_trigger = {
+                has_global_flag =  BA_2st_eden_pact_end
+            }
+        }
+
+        completion_reward = {
+            add_stability = -0.025
+
+            add_to_variable = {
+                GEH_hot_spring_destructive = -20
+            }
+            add_to_variable = {
+                GEH_gourmet_research_destructive = -20
+            }
+
+            
+            add_to_variable = {
+                GEH_gourmet_research_activity = -20
+            }
+            add_to_variable = {
+                GEH_hot_spring_activity = -20
+            }
+
+            add_to_variable = {
+                GEH_food_service_efficiency = 5
+            }
+
+             add_to_variable = {
+                GEH_discipline_committee_ability = 10
+            }
+
+            hidden_effect = {
+                GEH_food_service_and_gourmet_research_calc = yes
+                GEH_hot_spring_calc = yes
+                GEH_discipline_committee_calc = yes
+            }
+
+            custom_effect_tooltip = GEH_Imminent_tooltip
+            
+        }
+        ai_will_do = {
+            factor = 3
+        }
+	}
     #必要的容忍
     focus = {
 		id = GEH_Necessary_Patience
