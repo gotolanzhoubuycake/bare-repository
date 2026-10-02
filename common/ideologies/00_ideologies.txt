@@ -91,8 +91,10 @@ ideologies = {
 
 			##进步主义者希望影响世界局势
 			embargo_cost_factor = -0.5
-			send_volunteer_factor = 0.3
-			air_volunteer_cap = 100
+			# [fix 2026-10-02] rule validation does not recognize this entry; the original value has been commented out
+#			send_volunteer_factor = 0.3
+			# [fix 2026-10-02] rule validation does not recognize this entry; the original value has been commented out
+#			air_volunteer_cap = 100
 		}
 		faction_modifiers = {
 			faction_trade_opinion_factor = 0.50
