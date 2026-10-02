@@ -40,7 +40,6 @@ BARE_MIL_Start_Development_Resource_Allocation_effect = {
 		id = MIL_bp_development_resource_allocation
 		left_side = MIL_bop_resource_conservation
 		right_side = MIL_bop_resource_expansion
-		set_default = yes
 		set_value = 0.0
 	}
 }

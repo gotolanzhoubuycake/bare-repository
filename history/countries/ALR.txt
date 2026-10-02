@@ -19,10 +19,7 @@ set_popularities = {
 	no_ideology = 100
 }
 add_ideas = {
-	ALR_no_administrative_experience
 	ALR_industry_0
-	ALR_resistance_refugee_0
-	ALR_resistance_illiterate_0
 	ALR_isolated_resistors
 }
 ##地图界面用变量
