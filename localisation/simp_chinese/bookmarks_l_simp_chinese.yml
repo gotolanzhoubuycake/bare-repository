@@ -19,3 +19,5 @@ ARI_liberation_path_tt: "§Y归乡漫途§!\n-----------------\n\n\n\n\n£ARI_li
 
 # 2026-08-03: 恢复千年书签路线提示；前端界面仍然引用该键。
 MIL_friendship_path_tt: "§Y开启属于梦想的时代§!\n-----------------\n\n\n\n\n£GFX_MIL_friendship_path_picture\n\n\n\n\n\n友谊是魔法\n\n§L勇者不向神明祈祷\n因其知晓这样的真实之理：\n文明是人所造的光辉\n即便神明也无法完成此等杰作§!\n\n§C巴别塔从来没有存在过§!"
+ COUNTRY_SELECTION_CHARACTER_DESC_NAME: "$NAME|Y$"
+ COUNTRY_SELECTION_CHARACTER_DESC: "$NAME|Y$$DESC|$\n$TRAITS_DESC|$"
