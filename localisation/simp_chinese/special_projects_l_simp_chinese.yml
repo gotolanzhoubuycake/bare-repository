@@ -1306,3 +1306,5 @@
  sp_ba_T3_opaz_project_desc: "T3级神秘技术突破项目"
  sp_ba_T4_opaz_project_desc: "T4级神秘技术突破项目"
  sp_ba_T5_opaz_project_desc: "T5级神秘技术突破项目"
+ sp_naval_escort_carrier: "护航航母"
+ sp_land_large_caliber_kinetic_energy_sabot: "大口径动能脱壳穿甲弹"

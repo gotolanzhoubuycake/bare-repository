@@ -1662,3 +1662,7 @@
  FIN_support_for_east_karealian_independence_big: "支持东卡累利阿战争"
  FIN_support_for_east_karealian_independence_small: "支持东卡累利阿独立"
  DIPLOMACY_FACTION_UNAVAILABLE_THEY_CAPITULATED: "已停止抵抗势力不可用"
+ DIPLOMACY_ASKSTATECONTROL_NOT_AT_WAR_WITH_OWNER: "£trigger_no£§R未与地区拥有者交战时，无法索要地区控制权§!"
+ DIPLOMACY_GIVESTATECONTROL_NOT_AT_WAR_WITH_OWNER: "£trigger_no£§R无法将地区控制权移交给未与该地区拥有者交战的国家§!"
+ DR_DIFFERENT_IDEOLOGY: "§Y$THEM|U$§!有着不同的意识形态："
+ DR_LEND_LEASE_CONVOY_OVERCOMMIT: "运输船超负荷："

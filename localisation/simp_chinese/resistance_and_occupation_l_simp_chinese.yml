@@ -179,3 +179,6 @@
  non_core_controller_desc: "这个地区被无核心的势力控制"
  independent_rule: "独立治理"
  princely_subjugation: "降服土邦"
+ sabotage_coal: "破坏煤炭资源"
+ sabotage_commercial_nuclear_reactor: "破坏商用核反应堆"
+ sabotage_nuclear_reactor_heavy_water: "破坏核反应堆"
