@@ -146,7 +146,7 @@ flying_batteries = {
 		modifier = {
 			factor = 0
 			NOT = {
-				has_tech = rocket_artillery
+				always = no # [fix 2026-10-02] mod has no rocket_artillery tech; original condition was permanently false
 			}
 		}
 	}

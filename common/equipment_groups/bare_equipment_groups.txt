@@ -40,7 +40,6 @@ cat_eq_all_ifv = { #Includes Super Heavy Tank Chassis
 }
 cat_eq_all_fire_support = { #Includes Super Heavy Tank Chassis
 	equipment_type = {
-		fire_support_equipment
 		light_fire_support_equipment
 		heavy_fire_support_equipment
 		special_fire_support_equipment
