@@ -147,7 +147,8 @@ ideologies = {
 			##专制主义者随心所欲
 			# [fix 2026-10-02] rule validation does not recognize this entry; the original value has been commented out
 #			send_volunteer_factor = 0.1
-			air_volunteer_cap = 100
+			# [fix 2026-10-02] rule validation does not recognize this entry; the original value has been commented out
+#			air_volunteer_cap = 100
 
 			##保独功能要日后重新定义
 			can_guarantee_other_ideologies = no

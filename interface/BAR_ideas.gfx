@@ -858,4 +858,24 @@ spriteTypes = {
         name = "GFX_idea_MIL_shadow_of_financial_crisis"
         texturefile = "gfx/interface/ideas/MIL/MIL_shadow_of_financial_crisis.dds"
     }
+    spriteType = {
+        name = "GFX_idea_MIL_sky_guardian"
+        texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Guard_the_Sky_of_a_Millennium.dds"
+    }
+    spriteType = {
+        name = "GFX_idea_steel_torrent"
+        texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Impenetrable_Defense_Line.dds"
+    }
+    spriteType = {
+        name = "GFX_idea_MIL_cyber_defense"
+        texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Information_Security.dds"
+    }
+    spriteType = {
+        name = "GFX_idea_MIL_box_weapon"
+        texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Networked_Weapons.dds"
+    }
+    spriteType = {
+        name = "GFX_idea_MIL_reorganized_security_department"
+        texturefile = "gfx/interface/ideas/MIL/MIL_security_department_of_long_peace.dds"
+    }
 }

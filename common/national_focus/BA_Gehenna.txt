@@ -822,6 +822,79 @@ focus_tree = {
         }
 	}
 
+    #抚镇骚乱
+    focus = {
+		id = GEH_Suppressing_riots
+        icon = GFX_goal_GEH_Suppressing_riots
+	    relative_position_id =  GEH_Restarting_talks
+        cost = 4
+        x = 0
+        y = 1
+        prerequisite = {  focus =  GEH_Restarting_talks }
+        search_filters = { FOCUS_FILTER_POLITICAL }
+
+
+        available = {
+            has_completed_focus = GEH_Internal_publicity
+        }
+
+        
+        allow_branch = {
+            has_global_flag = BA_2st_eden_pact_begin
+        }
+
+
+        bypass = {
+            hidden_trigger = {
+                 has_global_flag =  BA_2st_eden_pact_end
+            }
+        }
+
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = GEH_ideas_conference_support_2 
+                add_idea = GEH_ideas_conference_support_3 
+            }
+        }
+        ai_will_do = {
+            factor = 3
+        }
+	}
+    #对内宣传
+    focus = {
+		id = GEH_Internal_publicity
+        icon = GFX_goal_GEH_Internal_publicity
+	    relative_position_id = GEH_Restarting_talks
+        cost = 4
+        x = 2
+        y = 1
+        prerequisite = {  focus = GEH_Restarting_talks }
+        search_filters = { FOCUS_FILTER_POLITICAL }
+
+        
+        allow_branch = {
+            has_global_flag = BA_2st_eden_pact_begin
+        }
+
+        bypass = {
+            hidden_trigger = {
+                has_global_flag =  BA_2st_eden_pact_end
+            }
+        }
+
+        
+
+
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = GEH_ideas_conference_support_1 
+                add_idea = GEH_ideas_conference_support_2 
+            }
+        }
+        ai_will_do = {
+            factor = 3
+        }
+	}
     #打击越境不良
     focus = {
 		id = GEH_Fighting_crime
@@ -1004,80 +1077,9 @@ focus_tree = {
         }
 	}
 
-    #抚镇骚乱
-    focus = {
-		id = GEH_Suppressing_riots
-        icon = GFX_goal_GEH_Suppressing_riots
-	    relative_position_id =  GEH_Restarting_talks
-        cost = 4
-        x = 0
-        y = 1
-        prerequisite = {  focus =  GEH_Restarting_talks }
-        search_filters = { FOCUS_FILTER_POLITICAL }
 
 
-        available = {
-            has_completed_focus = GEH_Internal_publicity
-        }
 
-        
-        allow_branch = {
-            has_global_flag = BA_2st_eden_pact_begin
-        }
-
-
-        bypass = {
-            hidden_trigger = {
-                 has_global_flag =  BA_2st_eden_pact_end
-            }
-        }
-
-        completion_reward = {
-            swap_ideas = {
-                remove_idea = GEH_ideas_conference_support_2 
-                add_idea = GEH_ideas_conference_support_3 
-            }
-        }
-        ai_will_do = {
-            factor = 3
-        }
-	}
-
-    #对内宣传
-    focus = {
-		id = GEH_Internal_publicity
-        icon = GFX_goal_GEH_Internal_publicity
-	    relative_position_id = GEH_Restarting_talks
-        cost = 4
-        x = 2
-        y = 1
-        prerequisite = {  focus = GEH_Restarting_talks }
-        search_filters = { FOCUS_FILTER_POLITICAL }
-
-        
-        allow_branch = {
-            has_global_flag = BA_2st_eden_pact_begin
-        }
-
-        bypass = {
-            hidden_trigger = {
-                has_global_flag =  BA_2st_eden_pact_end
-            }
-        }
-
-        
-
-
-        completion_reward = {
-            swap_ideas = {
-                remove_idea = GEH_ideas_conference_support_1 
-                add_idea = GEH_ideas_conference_support_2 
-            }
-        }
-        ai_will_do = {
-            factor = 3
-        }
-	}
 
 
 
@@ -1446,7 +1448,7 @@ focus_tree = {
             custom_effect_tooltip = GEH_United_front_tooltip
             add_command_power = -5
             add_equipment_to_stockpile = {
-                type = infantry_weapons
+                type = infantry_equipment
                 amount = -100
             }
             hidden_effect = {

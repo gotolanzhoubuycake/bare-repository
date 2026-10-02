@@ -522,6 +522,8 @@ ideas = {
                 political_power_cost = 0.25
                 stability_factor = -0.15
                 political_advisor_cost_factor = -0.15
+                army_advisor_cost_factor = -0.15
+                air_advisor_cost_factor = -0.15
                 army_chief_cost_factor = -0.15
                 air_chief_cost_factor = -0.15
             }

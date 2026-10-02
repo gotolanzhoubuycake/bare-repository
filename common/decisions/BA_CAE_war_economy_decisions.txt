@@ -216,7 +216,7 @@ CAE_war_propaganda_category = {
                 limit = {
                     NOT = { has_country_flag = CAE_seize_assets_first_done }
                 }
-                country_event = { id = CAE_hunt_guerrilla.1 }
+                news_event = { id = CAE_hunt_guerrilla.1 }
                 set_country_flag = CAE_seize_assets_first_done
             }
             clr_country_flag = CAE_war_propaganda_active

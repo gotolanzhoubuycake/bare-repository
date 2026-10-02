@@ -637,7 +637,8 @@
 
  ALF_technology_left_behind: "技术断层"
  ALF_technology_left_behind_1: "弥补技术断层"
- ALF_technology_left_behind_desc: "流亡者正在致力于改善其技术研究能力，但这依然需要相当漫长的时间才能完成。"
+ ALF_technology_left_behind_desc: "长久的与世隔绝与残酷的内战已经占据了流亡者的全部精力。除非情况稳定下来，否则流亡者难以改善这个问题。"
+ ALF_technology_left_behind_1_desc: "流亡者正在致力于改善其技术研究能力，但这依然需要相当漫长的时间才能完成。"
  LF_technology_left_behind_removed_flag: "问题已§G得到改善§!"
 
  ecolaws_ALF_command_economic: "指令经济"

@@ -19,6 +19,9 @@ news_event = {
 
     # 14天后自动关闭
     timeout_days = 14
+    option = {
+        name = OK
+    }
 }
 
 # 新闻事件：搜捕游击队
@@ -37,4 +40,7 @@ news_event = {
 
     # 14天后自动关闭
     timeout_days = 14
+    option = {
+        name = OK
+    }
 }
