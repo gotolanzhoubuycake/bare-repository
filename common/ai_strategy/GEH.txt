@@ -1,4 +1,5 @@
 GEH_unit_production = {
+	# 2026-08-19：补充 APC 对应的 motorized 生产倾向；空军仅保留 MOD 有效的 fighter/cas 类型。
 
 	allowed = {	original_tag = GEH }
 	enable = {
@@ -63,6 +64,11 @@ GEH_unit_production = {
 		type = equipment_production_factor
 		id = mechanized
 		value = 30
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = motorized
+		value = 25
 	}
 	ai_strategy = {
 		type = equipment_production_factor

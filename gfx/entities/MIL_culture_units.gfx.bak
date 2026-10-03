@@ -1,11 +1,10 @@
 objectTypes = {
 
-	# 2026-08-09：优香人工通过组合转为无批次正式注册；人物mesh与同语义人物动画保持审核字节不变。
-	# 武器、音效、特效、动画种类及未定制动作继续使用原注册链；原学院注册保存在MIL_culture_units.gfx.bak。
+	# 2026-08-07：优香第25轮游戏验证注册；使用正式MIL资源名，只替换MG攻击/冲锋射击为同类型人物侧持枪动画，武器、音效与特效不变。
 	### MIL Yuuka Infantry
 	pdxmesh = {
 		name = "MIL_infantry_rifle_mesh"
-		file = "gfx/models/units/infantry/MIL_culture/yuuka/MIL_yuuka_infantry.mesh"
+		file = "gfx/models/units/infantry/MIL_culture/yuuka_reimport_validation/deployed_size/MIL_yuuka_infantry.mesh"
 
 		animation = { id = "idle"                type = "GER_infantry_rifle_idle_animation" }
 		animation = { id = "attack"              type = "GER_infantry_rifle_attack_animation" }
@@ -38,14 +37,14 @@ objectTypes = {
 
 	pdxmesh = {
 		name = "MIL_infantry_mg_mesh"
-		file = "gfx/models/units/infantry/MIL_culture/yuuka/MIL_yuuka_infantry.mesh"
+		file = "gfx/models/units/infantry/MIL_culture/yuuka_reimport_validation/deployed_size/MIL_yuuka_infantry.mesh"
 
-		animation = { id = "idle"                type = "BARE_MIL_yuuka_mg_idle_animation" }
+		animation = { id = "idle"                type = "GER_infantry_mg_idle_animation" }
 		animation = { id = "attack"              type = "BARE_MIL_yuuka_mg_attack_animation" }
-		animation = { id = "support_attack"      type = "BARE_MIL_yuuka_mg_support_attack_animation" }
-		animation = { id = "charge_mg"           type = "BARE_MIL_yuuka_mg_charge_animation" }
+		animation = { id = "support_attack"      type = "GER_infantry_mg_support_attack_animation" }
+		animation = { id = "charge_mg"           type = "GER_infantry_mg_charge_animation" }
 		animation = { id = "charge_mg_shoot"     type = "BARE_MIL_yuuka_mg_charge_shoot_animation" }
-		animation = { id = "move"                type = "BARE_MIL_yuuka_mg_move_animation" }
+		animation = { id = "move"                type = "GER_infantry_mg_moving_animation" }
 		animation = { id = "march_move"          type = "GER_infantry_mg_march_animation" }
 		animation = { id = "retreat"             type = "GER_infantry_mg_retreat_animation" }
 		animation = { id = "death"               type = "GER_infantry_mg_death_animation" }

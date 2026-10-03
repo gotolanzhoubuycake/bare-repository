@@ -1,0 +1,30 @@
+# 2026-08-09：注册优香人工通过的同语义人物动画，使用稳定正式名称且不改变武器、音效、特效或动画种类。
+animation = {
+	name = "BARE_MIL_yuuka_mg_attack_animation"
+	file = "MIL_culture/yuuka/MIL_yuuka_mg_attack.anim"
+}
+
+animation = {
+	name = "BARE_MIL_yuuka_mg_charge_animation"
+	file = "MIL_culture/yuuka/MIL_yuuka_mg_charge.anim"
+}
+
+animation = {
+	name = "BARE_MIL_yuuka_mg_charge_shoot_animation"
+	file = "MIL_culture/yuuka/MIL_yuuka_mg_charge_shoot.anim"
+}
+
+animation = {
+	name = "BARE_MIL_yuuka_mg_idle_animation"
+	file = "MIL_culture/yuuka/MIL_yuuka_mg_idle.anim"
+}
+
+animation = {
+	name = "BARE_MIL_yuuka_mg_move_animation"
+	file = "MIL_culture/yuuka/MIL_yuuka_mg_move.anim"
+}
+
+animation = {
+	name = "BARE_MIL_yuuka_mg_support_attack_animation"
+	file = "MIL_culture/yuuka/MIL_yuuka_mg_support_attack.anim"
+}

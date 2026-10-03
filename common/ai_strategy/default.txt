@@ -1,10 +1,12 @@
 default_unit_production = {
+	# 2026-08-19：清理无效空军类型，并将 MIL 交给专属生产策略，避免通用策略叠加。
 	# If adding country-unique ones, bear in mind that they STACK unless excluding countries in the enable
 	allowed = {
 		NOT = {
 			original_tag = ARI
 			original_tag = TRI
 			original_tag = GEH
+			original_tag = MIL
 		}
 	}
 
@@ -54,36 +56,6 @@ default_unit_production = {
 		value = 10
 	}
 
-	ai_strategy = {
-		type = unit_ratio
-		id = tactical_bomber
-		value = 10
-	}
-
-	ai_strategy = {
-		type = unit_ratio
-		id = strategic_bomber
-		value = 5
-	}
-
-	ai_strategy = {
-		type = unit_ratio
-		id = naval_bomber
-		value = 10
-	}
-
-	ai_strategy = {
-		type = equipment_production_factor
-		id = heavy_fighter
-		value = -40 #Just build a few slowly
-	}
-
-	ai_strategy = {
-		type = unit_ratio
-		id = heavy_fighter
-		value = 20
-	}
-
 	#不会造船
 	ai_strategy = {
 		type = unit_ratio
@@ -112,6 +84,10 @@ default_unit_production = {
 }
 
 default_surplus_management = {
+	# 2026-08-19：MIL 使用专属库存管理，避免通用 surplus 与机甲/无人机生产线重复计算。
+	allowed = {
+		NOT = { original_tag = MIL }
+	}
 	# If we manage to get all equipment we want, keep producing more stuff according to this
 	enable = {
 		always = yes  # For now, applies to everyone
@@ -151,6 +127,13 @@ default_surplus_management = {
 }
 
 bba_air_prod_1 = {
+	# 2026-08-19：仅保留 MOD 实际使用的战斗机、攻击机和侦察机类型；GEH/MIL 使用专属空军策略。
+	allowed = {
+		NOT = {
+			original_tag = GEH
+			original_tag = MIL
+		}
+	}
 	enable = {
 		always = yes
 	}
@@ -196,37 +179,19 @@ bba_air_prod_1 = {
 
 	ai_strategy = {
 		type = unit_ratio
-		id = tactical_bomber
+		id = scout_plane
 		value = 5
 	}
 
 	ai_strategy = {
 		type = equipment_production_factor
-		id = tactical_bomber
+		id = scout_plane
 		value = 5
 	}
 
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = tactical_bomber
-		value = 0
-	}
-
-	ai_strategy = {
-		type = unit_ratio
-		id =  heavy_fighter
-		value = 1
-	}
-
-	ai_strategy = {
-		type = equipment_production_factor
-		id = heavy_fighter
-		value = 1
-	}
-
-	ai_strategy = {
-		type = equipment_production_min_factories
-		id = heavy_fighter
+		id = scout_plane
 		value = 0
 	}
 }
@@ -271,6 +236,7 @@ default_garrison_production = {
 			original_tag = ARI
 			original_tag = TRI
 			original_tag = GEH
+			original_tag = MIL
 		}
 		ai_wants_divisions >  12 #Massively decreasing the amount of garrison and suppression the AI wants
 		is_major = yes
@@ -293,6 +259,7 @@ default_mobile_production = {
 			original_tag = ARI
 			original_tag = TRI
 			original_tag = GEH
+			original_tag = MIL
 		}
 		ai_wants_divisions > 11
 	}
@@ -313,6 +280,7 @@ default_armored_production = {
 			original_tag = ARI
 			original_tag = TRI
 			original_tag = GEH
+			original_tag = MIL
 		}
 		ai_wants_divisions > 49
 	}
@@ -333,6 +301,7 @@ highered_armored_production = {
 			original_tag = ARI
 			original_tag = TRI
 			original_tag = GEH
+			original_tag = MIL
 		}
 		num_of_military_factories > 69
 	}
@@ -476,11 +445,13 @@ default_market_stockpile_management_if_at_war = {
 }
 
 DEFAULT_early_template_design = {
+	# 2026-08-19：MIL 由 templates_MIL.txt 管理，不使用通用编制优先级。
 	allowed = {
 		NOT = {
 			original_tag = ARI
 			original_tag = TRI
 			original_tag = GEH
+			original_tag = MIL
 		}
 	}
 	enable = {
@@ -534,11 +505,13 @@ DEFAULT_early_template_design = {
 }
 
 DEFAULT_midlate_template_design = {
+	# 2026-08-19：MIL 由 templates_MIL.txt 管理，不使用通用编制优先级。
 	enable = {
 		NOT = {
 			original_tag = ARI
 			original_tag = TRI
 			original_tag = GEH
+			original_tag = MIL
 		}
 		date > 1940.1.1
 	}

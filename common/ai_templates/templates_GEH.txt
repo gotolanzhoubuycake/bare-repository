@@ -1,109 +1,58 @@
-armor_GEH = {
-
-	available_for = {
-		GEH
-	}
-	
+# 2026-08-19：将 GEH 原先的中重坦混编拆为独立中坦/重坦升级路线，中坦略高优先级。
+medium_armor_GEH = {
+	available_for = { GEH }
 	role = armor
-
-	upgrade_prio = {
-		factor = 2
-
-	}
+	upgrade_prio = { factor = 2.1 }
 
 	medium_armor_1_GEH = {
-	
-		upgrade_prio = {
-			factor = 2
-		}
-
+		upgrade_prio = { factor = 1.5 }
 		target_template = {
-			
 			support = {
 				engineer = 1
 				maintenance_company = 1
 				logistics_company = 1
 			}
-			
 			regiments = {
-				medium_armor = 2
-				heavy_armor = 2
+				medium_armor = 4
 				apc_unit = 4
 			}
 		}
-		
 		reinforce_prio = 2
 		replace_at_match = 0.7
 		replace_with = medium_armor_2_GEH
 		target_min_match = 0.7
 	}
 	medium_armor_2_GEH = {
-	
 		upgrade_prio = {
-			factor = 1
-
-			modifier = {
-				factor = 1.5
-				has_tech = heavy_bm_artillery_MK1
-			}
-			modifier = {
-				factor = 1.5
-				has_tech = heavy_bm_aa_MK1
-			}
-
-			modifier = {
-				factor = 0.1
-				num_of_military_factories < 60
-			}
+			factor = 1.5
+			modifier = { factor = 3 has_tech = medium_tank_MK2 }
+			modifier = { factor = 0.1 num_of_military_factories < 60 }
 		}
-		
 		target_template = {
-			
 			support = {
 				engineer = 1
 				maintenance_company = 1
 				mbt_recon = 1
 				helicopter_logistics_company = 1
 			}
-			
 			regiments = {
-				heavy_armor = 2
-				heavy_sp_artillery_brigade = 1
-				heavy_sp_anti_air_brigade = 1
-				ifv_unit = 4
+				medium_armor = 5
+				medium_sp_artillery_brigade = 2
+				ifv_unit = 5
 			}
 		}
 		reinforce_prio = 2
 		replace_at_match = 0.8
 		replace_with = medium_armor_3_GEH
 		target_min_match = 0.7
-		
 	}
 	medium_armor_3_GEH = {
-	
 		upgrade_prio = {
-			factor = 1
-
-			modifier = {
-				factor = 3
-				num_of_military_factories > 100
-			}
-			modifier = {
-				factor = 0
-				NOT = {
-					has_tech = General_helicopter_T2
-				}
-			}
-			modifier = {
-				factor = 0
-				NOT = {
-					has_tech = special_fire_support_weapons_T1
-				}
-			}
+			factor = 1.5
+			modifier = { factor = 3 num_of_military_factories > 100 }
+			modifier = { factor = 0 NOT = { has_tech = medium_tank_MK3 } }
 		}
-		
 		target_template = {
-			
 			support = {
 				engineer = 1
 				maintenance_company = 1
@@ -111,18 +60,92 @@ armor_GEH = {
 				helicopter_logistics_company = 1
 				fire_support_team_su_sa = 1
 			}
-			
 			regiments = {
-				heavy_armor = 5
-				heavy_sp_artillery_brigade = 3
-				heavy_sp_anti_air_brigade = 1
-				ifv_unit = 6
+				medium_armor = 6
+				medium_sp_artillery_brigade = 2
+				medium_tank_destroyer_brigade = 1
+				medium_sp_anti_air_brigade = 1
+				ifv_unit = 5
 			}
 		}
 		reinforce_prio = 2
 		replace_at_match = 0.8
 		target_min_match = 0.7
-		
+	}
+}
+
+heavy_armor_GEH = {
+	available_for = { GEH }
+	role = armor
+	upgrade_prio = { factor = 2.0 }
+
+	heavy_armor_1_GEH = {
+		upgrade_prio = { factor = 1.4 }
+		target_template = {
+			support = {
+				engineer = 1
+				maintenance_company = 1
+				logistics_company = 1
+			}
+			regiments = {
+				heavy_armor = 3
+				ifv_unit = 4
+			}
+		}
+		reinforce_prio = 2
+		replace_at_match = 0.7
+		replace_with = heavy_armor_2_GEH
+		target_min_match = 0.7
+	}
+	heavy_armor_2_GEH = {
+		upgrade_prio = {
+			factor = 1.4
+			modifier = { factor = 3 has_tech = heavy_tank_MK2 }
+			modifier = { factor = 0.1 num_of_military_factories < 70 }
+		}
+		target_template = {
+			support = {
+				engineer = 1
+				maintenance_company = 1
+				mbt_recon = 1
+				helicopter_logistics_company = 1
+			}
+			regiments = {
+				heavy_armor = 4
+				heavy_sp_artillery_brigade = 2
+				ifv_unit = 4
+			}
+		}
+		reinforce_prio = 2
+		replace_at_match = 0.8
+		replace_with = heavy_armor_3_GEH
+		target_min_match = 0.7
+	}
+	heavy_armor_3_GEH = {
+		upgrade_prio = {
+			factor = 1.4
+			modifier = { factor = 3 num_of_military_factories > 100 }
+			modifier = { factor = 0 NOT = { has_tech = heavy_tank_MK3 } }
+		}
+		target_template = {
+			support = {
+				engineer = 1
+				maintenance_company = 1
+				mbt_recon = 1
+				helicopter_logistics_company = 1
+				fire_support_team_su_sa = 1
+			}
+			regiments = {
+				heavy_armor = 5
+				heavy_sp_artillery_brigade = 2
+				heavy_tank_destroyer_brigade = 1
+				heavy_sp_anti_air_brigade = 1
+				ifv_unit = 4
+			}
+		}
+		reinforce_prio = 2
+		replace_at_match = 0.8
+		target_min_match = 0.7
 	}
 }
 mobile_GEH = {
