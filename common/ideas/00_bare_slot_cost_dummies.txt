@@ -1,0 +1,52 @@
+# I9 fix: slot-existence dummies for <slot>_cost_factor evaluation order.
+# Per official Idea_modding wiki: a <slot>_cost_factor modifier only works if the slot
+# already has ideas/characters defined when the file using it is parsed. Characters load
+# later than ideas, and this mod's law files (_economic.txt/_manpower.txt) and vanilla's
+# load after the uppercase BA_*.txt idea files, so the slots must be pre-created here.
+# This filename sorts before every other ideas file (digits < capitals < '_' < lowercase).
+# Character-slot dummies are never shown or added to any country; law-slot dummies are
+# allowed/visible = no so they never appear in the government laws UI.
+ideas = {
+	political_advisor = {
+		BA_slot_dummy_political_advisor = {
+			allowed = { always = no }
+			visible = { always = no }
+		}
+	}
+	army_chief = {
+		BA_slot_dummy_army_chief = {
+			allowed = { always = no }
+			visible = { always = no }
+		}
+	}
+	air_chief = {
+		BA_slot_dummy_air_chief = {
+			allowed = { always = no }
+			visible = { always = no }
+		}
+	}
+	high_command = {
+		BA_slot_dummy_high_command = {
+			allowed = { always = no }
+			visible = { always = no }
+		}
+	}
+	economy = {
+		BA_slot_dummy_economy = {
+			allowed = { always = no }
+			visible = { always = no }
+		}
+	}
+	trade_laws = {
+		BA_slot_dummy_trade_laws = {
+			allowed = { always = no }
+			visible = { always = no }
+		}
+	}
+	mobilization_laws = {
+		BA_slot_dummy_mobilization_laws = {
+			allowed = { always = no }
+			visible = { always = no }
+		}
+	}
+}

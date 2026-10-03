@@ -1,7 +1,7 @@
 ideas = {
 	country = {
 		trusteeship_of_CEN_SRT_yes = { #联邦学生会托管地区
-			picture = unkown
+			picture = unknown
 			targeted_modifier = {
 				tag = VAL
 				mic_to_target_factor = 0.5
@@ -33,7 +33,7 @@ ideas = {
 			}
 		}
 		trusteeship_of_CEN_SRT_no = { #联邦学生会托管地区-SRT脱队
-			picture = unkown
+			picture = unknown
 			targeted_modifier = {
 				tag = VAL
 				mic_to_target_factor = 0.7
@@ -61,7 +61,7 @@ ideas = {
 			}
 		}
 		CEN_LianBangXueShengHuiQuanWei_SuoShengWuJi = { #联邦学生会的权威——所剩无几
-			picture = unkown
+			picture = unknown
 
 			modifier = {
 				political_power_factor = -0.5 #政治点数加成%
@@ -71,7 +71,7 @@ ideas = {
 		}
 
 		CEN_ShenShengZhiTa = { #神圣之塔
-			picture = unkown
+			picture = unknown
 
 			modifier = {
 				political_power_factor = 0.4 #政治点数加成%

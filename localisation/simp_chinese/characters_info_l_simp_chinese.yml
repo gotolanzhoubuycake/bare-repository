@@ -90,6 +90,8 @@
  SCH_miku_name:0 "初音未来"
  SCH_mikoto:0 "御坂美琴"
  SCH_ruiko:0 "佐天泪子"
+ SCH_mikoto_name:0 "御坂美琴"
+ SCH_ruiko_name:0 "佐天泪子"
  SCH_misaki_name:0 "食蜂操祈"
 
  CEN_LBXSH_NAME:0 "联邦学生会"
@@ -273,7 +275,9 @@
  ABY_ayane_name:0 "奥空绫音"
  ABY_ayane_trait:0 "委员会会计"
  ABY_shiroko_name:0 "砂狼白子"
+ ABY_shiroko_terror_name:0 "砂狼白子＊＊"
  ABY_shiroko_trait:0 "（抢）银行爱好者"
+ ABY_yume_name:0 "栀子梦"
  ABY_serika_name:0 "黑见芹香"
  ABY_serika_trait:0 "委员会书记"
  ABY_nonomi_name:0 "十六夜野宫"

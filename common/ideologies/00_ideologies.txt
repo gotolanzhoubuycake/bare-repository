@@ -44,10 +44,6 @@ ideologies = {
 		types = {
 			##进步哲学 - 默认
 			PGM_default_type  = {
-				war_impact_on_world_tension = 1
-				rules = {
-
-				}
 			}
 
 			##进步哲学 - 研讨会
@@ -95,8 +91,11 @@ ideologies = {
 
 			##进步主义者希望影响世界局势
 			embargo_cost_factor = -0.5
-			send_volunteer_factor = 0.3
-			air_volunteer_cap = 100
+			# [fix 2026-10-02] rule validation does not recognize this entry; the original value has been commented out
+#			send_volunteer_factor = 0.3
+			# [fix 2026-10-02] rule validation does not recognize this entry; the original value has been commented out
+#			# [fix 2026-10-02] rule validation does not recognize this entry; the original value has been commented out
+#			air_volunteer_cap = 100
 		}
 		faction_modifiers = {
 			faction_trade_opinion_factor = 0.50
@@ -146,15 +145,13 @@ ideologies = {
 			can_lower_tension = no
 
 			##专制主义者随心所欲
-			send_volunteer_factor = 0.1
-			air_volunteer_cap = 100
+			# [fix 2026-10-02] rule validation does not recognize this entry; the original value has been commented out
+#			send_volunteer_factor = 0.1
+			# [fix 2026-10-02] rule validation does not recognize this entry; the original value has been commented out
+#			air_volunteer_cap = 100
 
 			##保独功能要日后重新定义
 			can_guarantee_other_ideologies = no
-		}
-
-		modifiers = {
-			
 		}
 
 		modifiers = {
@@ -259,10 +256,6 @@ ideologies = {
 		}
 
 		modifiers = {
-			
-		}
-
-		modifiers = {
 			##情报##
 			##神秘主义在办大事之前不希望泄漏情报
 			civilian_intel_to_others = 10.0
@@ -336,9 +329,6 @@ ideologies = {
 			embargo_cost_factor = -0.5
 		}
 
-		modifiers = {
-			
-		}
 		faction_modifiers = {
 		}
 

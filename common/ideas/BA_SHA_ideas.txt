@@ -1,7 +1,7 @@
 ideas = {
 	country = {
 		SHA_ShanHaiJing = { #山海经
-			picture = unkown
+			picture = unknown
 
 			modifier = {
 				stability_factor = 0.1 #稳定度
@@ -12,7 +12,7 @@ ideas = {
 			}
 		}
 		SHA_YuanYuanLiuChangDeGuoQu = { #源远流长的过去
-			picture = unkown
+			picture = unknown
 
 			modifier = {
 				production_speed_buildings_factor = 0.05 #建造速度
@@ -21,7 +21,7 @@ ideas = {
 		}
 
 		SHA_GeWuPingShengDeXianZhuang = { #歌舞升平的现状
-			picture = unkown
+			picture = unknown
 
 			modifier = {
 				custom_modifier_tooltip = SHA_GeWuPingShengDeXianZhuang_R
@@ -29,7 +29,7 @@ ideas = {
 		}
 
 		SHA_MiWuZhongDeWeiLai = { #迷雾之中的未来
-			picture = unkown
+			picture = unknown
 
 			modifier = {
 				political_power_factor = -0.1 #政治点数加成%

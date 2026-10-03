@@ -402,9 +402,9 @@ GEH_monthly_random_daily_event = {
 	}
 	if = {
 		limit = {
-			power_balance_value = {
-				id = GEH_bp_order
-				value < -0.6 
+			is_power_balance_in_range = {
+				id = GEH_bp_between_chaos_and_order
+				range = GEH_bp_completely_order
 			}
 		}
 		set_temp_variable = {
@@ -412,9 +412,9 @@ GEH_monthly_random_daily_event = {
 		}
 	}else_if = {
 		limit = {
-			power_balance_value = {
-				id = GEH_bp_order
-				value < -0.2 
+			is_power_balance_in_range = {
+				id = GEH_bp_between_chaos_and_order
+				range = GEH_bp_someways_order
 			}
 		}
 		set_temp_variable = {
@@ -423,9 +423,9 @@ GEH_monthly_random_daily_event = {
 
 	}else_if = {
 		limit = {
-			power_balance_value = {
-				id = GEH_bp_order
-				value < 0.2 
+			is_power_balance_in_range = {
+				id = GEH_bp_between_chaos_and_order
+				range = GEH_bp_mid
 			}
 		}
 		set_temp_variable = {
@@ -433,9 +433,9 @@ GEH_monthly_random_daily_event = {
 		}
 	}else_if = {
 		limit = {
-			power_balance_value = {
-				id = GEH_bp_order
-				value < 0.6 
+			is_power_balance_in_range = {
+				id = GEH_bp_between_chaos_and_order
+				range = GEH_bp_someways_chaos
 			}
 		}
 		set_temp_variable = {
@@ -443,9 +443,9 @@ GEH_monthly_random_daily_event = {
 		}
 	}else_if = {
 		limit = {
-			power_balance_value = {
-				id = GEH_bp_order
-				value < 1
+			is_power_balance_in_range = {
+				id = GEH_bp_between_chaos_and_order
+				range = GEH_bp_completely_chaos
 			}
 		}
 		set_temp_variable = {

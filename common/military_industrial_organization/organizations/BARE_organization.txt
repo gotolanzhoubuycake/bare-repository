@@ -787,7 +787,7 @@ BA_Design_tank_Organization_Producter = {
 		available = {
 			has_mio_size > 3
 		}
-		porganization_modifier = {
+		organization_modifier = {
 			military_industrial_organization_funds_gain = 0.05
 			military_industrial_organization_size_up_requirement = -0.05
 		}
@@ -998,7 +998,7 @@ BA_Design_truck_Organization_Producter = {
 		#优化列车设计图
 		token = BA_design_truck_organization_producter_truck
 		name = BA_design_truck_organization_producter_truck
-		icon = GFX_generic_mio_department_icon_train
+		icon = GFX_generic_mio_department_icon_motorized
 		position = {
 			x = 9
 			y = 0
@@ -1471,7 +1471,7 @@ BA_Design_mecha_Organization_Producter = {
 			BA_design_organization_producter_mecha5
 			BA_design_organization_producter_mecha3
 		}
-		porganization_modifier = {
+		organization_modifier = {
 			military_industrial_organization_funds_gain = 0.05
 			military_industrial_organization_size_up_requirement = -0.05
 		}
@@ -2051,7 +2051,7 @@ BA_Design_plane_Organization_Producter = {
 		#多用途运输机
 		token = BA_Design_plane_Organization_Producter19
 		name = BA_Design_plane_Organization_Producter19
-		icon = GFX_generic_mio_department_icon_air_transport_engine
+		icon = GFX_generic_mio_department_icon_air_transport_production
 		position = {
 			x = 9
 			y = 2

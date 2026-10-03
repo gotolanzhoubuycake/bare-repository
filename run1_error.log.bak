@@ -1,0 +1,1328 @@
+[06:29:20][no_game_date][dlc.cpp:142]: incorrect checksum for DLC
+[06:29:20][no_game_date][dlc.cpp:218]: Invalid supported_version in  file: mod/ugc_1633055329.mod line: 11
+[06:29:20][no_game_date][dlc.cpp:218]: Invalid supported_version in  file: mod/ugc_1862018480.mod line: 8
+[06:29:20][no_game_date][dlc.cpp:218]: Invalid supported_version in  file: mod/ugc_2243912940.mod line: 10
+[06:29:20][no_game_date][dlc.cpp:218]: Invalid supported_version in  file: mod/ugc_2259896874.mod line: 13
+[06:29:20][no_game_date][dlc.cpp:218]: Invalid supported_version in  file: mod/ugc_2349247855.mod line: 11
+[06:29:20][no_game_date][dlc.cpp:218]: Invalid supported_version in  file: mod/ugc_2404689961.mod line: 7
+[06:29:20][no_game_date][dlc.cpp:218]: Invalid supported_version in  file: mod/ugc_2445956833.mod line: 8
+[06:29:20][no_game_date][dlc.cpp:218]: Invalid supported_version in  file: mod/ugc_2610774092.mod line: 22
+[06:29:20][no_game_date][persistent.cpp:67]: Error: "Unexpected token: thumbnail, near line: 7" in file: "mod/ugc_2671396187.mod" near line: 7
+[06:29:20][no_game_date][dlc.cpp:218]: Invalid supported_version in  file: mod/ugc_2781363716.mod line: 10
+[06:29:20][no_game_date][dlc.cpp:218]: Invalid supported_version in  file: mod/ugc_2795212119.mod line: 15
+[06:29:20][no_game_date][dlc.cpp:218]: Invalid supported_version in  file: mod/ugc_2813718431.mod line: 15
+[06:29:20][no_game_date][dlc.cpp:218]: Invalid supported_version in  file: mod/ugc_2923180765.mod line: 6
+[06:29:20][no_game_date][dlc.cpp:218]: Invalid supported_version in  file: mod/ugc_2953753075.mod line: 8
+[06:29:20][no_game_date][dlc.cpp:218]: Invalid supported_version in  file: mod/ugc_2977114459.mod line: 8
+[06:29:20][no_game_date][dlc.cpp:218]: Invalid supported_version in  file: mod/ugc_3012479903.mod line: 7
+[06:29:20][no_game_date][dlc.cpp:218]: Invalid supported_version in  file: mod/ugc_3057730113.mod line: 11
+[06:29:20][no_game_date][persistent.cpp:67]: Error: "Unexpected token: thumbnail, near line: 9" in file: "mod/ugc_3243611664.mod" near line: 9
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_001' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_001.wav' in  file: sound/ww_vo.asset line: 506
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_002' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_002.wav' in  file: sound/ww_vo.asset line: 507
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_003' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_003.wav' in  file: sound/ww_vo.asset line: 508
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_004' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_004.wav' in  file: sound/ww_vo.asset line: 509
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_005' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_005.wav' in  file: sound/ww_vo.asset line: 510
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_006' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_006.wav' in  file: sound/ww_vo.asset line: 511
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_007' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_007.wav' in  file: sound/ww_vo.asset line: 512
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_008' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_008.wav' in  file: sound/ww_vo.asset line: 513
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_009' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_009.wav' in  file: sound/ww_vo.asset line: 514
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_010' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_010.wav' in  file: sound/ww_vo.asset line: 515
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_011' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_011.wav' in  file: sound/ww_vo.asset line: 516
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_012' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_012.wav' in  file: sound/ww_vo.asset line: 517
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_013' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_013.wav' in  file: sound/ww_vo.asset line: 518
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_014' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_014.wav' in  file: sound/ww_vo.asset line: 519
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_015' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_015.wav' in  file: sound/ww_vo.asset line: 520
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_016' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_016.wav' in  file: sound/ww_vo.asset line: 521
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_017' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_017.wav' in  file: sound/ww_vo.asset line: 522
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_018' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_018.wav' in  file: sound/ww_vo.asset line: 523
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_019' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_019.wav' in  file: sound/ww_vo.asset line: 524
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_020' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_020.wav' in  file: sound/ww_vo.asset line: 525
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_021' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_021.wav' in  file: sound/ww_vo.asset line: 526
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_022' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_022.wav' in  file: sound/ww_vo.asset line: 527
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_023' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_023.wav' in  file: sound/ww_vo.asset line: 528
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_024' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_024.wav' in  file: sound/ww_vo.asset line: 529
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_025' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_025.wav' in  file: sound/ww_vo.asset line: 530
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_026' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_026.wav' in  file: sound/ww_vo.asset line: 531
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_027' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_027.wav' in  file: sound/ww_vo.asset line: 532
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_retreat_001' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_retreat_001.wav' in  file: sound/ww_vo.asset line: 533
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_retreat_002' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_retreat_002.wav' in  file: sound/ww_vo.asset line: 534
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_retreat_003' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_retreat_003.wav' in  file: sound/ww_vo.asset line: 535
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_retreat_004' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_retreat_004.wav' in  file: sound/ww_vo.asset line: 536
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_retreat_005' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_retreat_005.wav' in  file: sound/ww_vo.asset line: 537
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_retreat_006' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_retreat_006.wav' in  file: sound/ww_vo.asset line: 538
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_retreat_007' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_retreat_007.wav' in  file: sound/ww_vo.asset line: 539
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_retreat_008' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_retreat_008.wav' in  file: sound/ww_vo.asset line: 540
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_retreat_009' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_retreat_009.wav' in  file: sound/ww_vo.asset line: 541
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_retreat_010' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_retreat_010.wav' in  file: sound/ww_vo.asset line: 542
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_retreat_011' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_retreat_011.wav' in  file: sound/ww_vo.asset line: 543
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_retreat_012' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_retreat_012.wav' in  file: sound/ww_vo.asset line: 544
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_retreat_013' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_retreat_013.wav' in  file: sound/ww_vo.asset line: 545
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_retreat_014' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_retreat_014.wav' in  file: sound/ww_vo.asset line: 546
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_retreat_015' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_retreat_015.wav' in  file: sound/ww_vo.asset line: 547
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_retreat_016' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_retreat_016.wav' in  file: sound/ww_vo.asset line: 548
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_retreat_017' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_retreat_017.wav' in  file: sound/ww_vo.asset line: 549
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_retreat_018' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_retreat_018.wav' in  file: sound/ww_vo.asset line: 550
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_retreat_016_alt' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_retreat_016_alt.wav' in  file: sound/ww_vo.asset line: 551
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_retreat_017_alt' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_retreat_017_alt.wav' in  file: sound/ww_vo.asset line: 552
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_retreat_018_alt' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_retreat_018_alt.wav' in  file: sound/ww_vo.asset line: 553
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_001' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_001.wav' in  file: sound/ww_vo.asset line: 554
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_002' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_002.wav' in  file: sound/ww_vo.asset line: 555
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_003' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_003.wav' in  file: sound/ww_vo.asset line: 556
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_004' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_004.wav' in  file: sound/ww_vo.asset line: 557
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_005' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_005.wav' in  file: sound/ww_vo.asset line: 558
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_006' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_006.wav' in  file: sound/ww_vo.asset line: 559
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_007' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_007.wav' in  file: sound/ww_vo.asset line: 560
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_008' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_008.wav' in  file: sound/ww_vo.asset line: 561
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_009' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_009.wav' in  file: sound/ww_vo.asset line: 562
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_010' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_010.wav' in  file: sound/ww_vo.asset line: 563
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_011' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_011.wav' in  file: sound/ww_vo.asset line: 564
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_012' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_012.wav' in  file: sound/ww_vo.asset line: 565
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_013' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_013.wav' in  file: sound/ww_vo.asset line: 566
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_014' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_014.wav' in  file: sound/ww_vo.asset line: 567
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_015' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_015.wav' in  file: sound/ww_vo.asset line: 568
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_016' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_016.wav' in  file: sound/ww_vo.asset line: 569
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_017' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_017.wav' in  file: sound/ww_vo.asset line: 570
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_018' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_018.wav' in  file: sound/ww_vo.asset line: 571
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_019' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_019.wav' in  file: sound/ww_vo.asset line: 572
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_020' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_020.wav' in  file: sound/ww_vo.asset line: 573
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_021' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_021.wav' in  file: sound/ww_vo.asset line: 574
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_019_alt' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_019_alt.wav' in  file: sound/ww_vo.asset line: 575
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_020_alt' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_020_alt.wav' in  file: sound/ww_vo.asset line: 576
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_021_alt' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_021_alt.wav' in  file: sound/ww_vo.asset line: 577
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_001' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_001.wav' in  file: sound/ww_vo.asset line: 578
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_002' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_002.wav' in  file: sound/ww_vo.asset line: 579
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_003' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_003.wav' in  file: sound/ww_vo.asset line: 580
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_004' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_004.wav' in  file: sound/ww_vo.asset line: 581
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_005' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_005.wav' in  file: sound/ww_vo.asset line: 582
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_006' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_006.wav' in  file: sound/ww_vo.asset line: 583
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_007' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_007.wav' in  file: sound/ww_vo.asset line: 584
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_008' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_008.wav' in  file: sound/ww_vo.asset line: 585
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_009' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_009.wav' in  file: sound/ww_vo.asset line: 586
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_010' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_010.wav' in  file: sound/ww_vo.asset line: 587
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_011' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_011.wav' in  file: sound/ww_vo.asset line: 588
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_012' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_012.wav' in  file: sound/ww_vo.asset line: 589
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_013' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_013.wav' in  file: sound/ww_vo.asset line: 590
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_014' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_014.wav' in  file: sound/ww_vo.asset line: 591
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_015' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_015.wav' in  file: sound/ww_vo.asset line: 592
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_016' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_016.wav' in  file: sound/ww_vo.asset line: 593
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_017' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_017.wav' in  file: sound/ww_vo.asset line: 594
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_018' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_018.wav' in  file: sound/ww_vo.asset line: 595
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_019' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_019.wav' in  file: sound/ww_vo.asset line: 596
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_020' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_020.wav' in  file: sound/ww_vo.asset line: 597
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_021' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_021.wav' in  file: sound/ww_vo.asset line: 598
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_022' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_022.wav' in  file: sound/ww_vo.asset line: 599
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_023' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_023.wav' in  file: sound/ww_vo.asset line: 600
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_024' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_024.wav' in  file: sound/ww_vo.asset line: 601
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_001' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_001.wav' in  file: sound/ww_vo.asset line: 605
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_002' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_002.wav' in  file: sound/ww_vo.asset line: 606
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_003' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_003.wav' in  file: sound/ww_vo.asset line: 607
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_004' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_004.wav' in  file: sound/ww_vo.asset line: 608
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_005' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_005.wav' in  file: sound/ww_vo.asset line: 609
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_006' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_006.wav' in  file: sound/ww_vo.asset line: 610
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_007' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_007.wav' in  file: sound/ww_vo.asset line: 611
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_008' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_008.wav' in  file: sound/ww_vo.asset line: 612
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_009' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_009.wav' in  file: sound/ww_vo.asset line: 613
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_010' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_010.wav' in  file: sound/ww_vo.asset line: 614
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_011' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_011.wav' in  file: sound/ww_vo.asset line: 615
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_012' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_012.wav' in  file: sound/ww_vo.asset line: 616
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_013' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_013.wav' in  file: sound/ww_vo.asset line: 617
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_014' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_014.wav' in  file: sound/ww_vo.asset line: 618
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_015' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_015.wav' in  file: sound/ww_vo.asset line: 619
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_016' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_016.wav' in  file: sound/ww_vo.asset line: 620
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_017' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_017.wav' in  file: sound/ww_vo.asset line: 621
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_018' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_018.wav' in  file: sound/ww_vo.asset line: 622
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_019' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_019.wav' in  file: sound/ww_vo.asset line: 623
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_020' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_020.wav' in  file: sound/ww_vo.asset line: 624
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_021' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_021.wav' in  file: sound/ww_vo.asset line: 625
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_022' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_022.wav' in  file: sound/ww_vo.asset line: 626
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_023' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_023.wav' in  file: sound/ww_vo.asset line: 627
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_024' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_024.wav' in  file: sound/ww_vo.asset line: 628
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_025' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_025.wav' in  file: sound/ww_vo.asset line: 629
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_026' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_026.wav' in  file: sound/ww_vo.asset line: 630
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_027' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_027.wav' in  file: sound/ww_vo.asset line: 631
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_retreat_001' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_retreat_001.wav' in  file: sound/ww_vo.asset line: 632
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_retreat_002' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_retreat_002.wav' in  file: sound/ww_vo.asset line: 633
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_retreat_003' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_retreat_003.wav' in  file: sound/ww_vo.asset line: 634
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_retreat_004' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_retreat_004.wav' in  file: sound/ww_vo.asset line: 635
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_retreat_005' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_retreat_005.wav' in  file: sound/ww_vo.asset line: 636
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_retreat_006' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_retreat_006.wav' in  file: sound/ww_vo.asset line: 637
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_retreat_007' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_retreat_007.wav' in  file: sound/ww_vo.asset line: 638
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_retreat_008' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_retreat_008.wav' in  file: sound/ww_vo.asset line: 639
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_retreat_009' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_retreat_009.wav' in  file: sound/ww_vo.asset line: 640
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_retreat_010' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_retreat_010.wav' in  file: sound/ww_vo.asset line: 641
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_retreat_011' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_retreat_011.wav' in  file: sound/ww_vo.asset line: 642
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_retreat_012' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_retreat_012.wav' in  file: sound/ww_vo.asset line: 643
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_retreat_013' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_retreat_013.wav' in  file: sound/ww_vo.asset line: 644
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_retreat_014' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_retreat_014.wav' in  file: sound/ww_vo.asset line: 645
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_retreat_015' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_retreat_015.wav' in  file: sound/ww_vo.asset line: 646
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_retreat_016' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_retreat_016.wav' in  file: sound/ww_vo.asset line: 647
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_retreat_017' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_retreat_017.wav' in  file: sound/ww_vo.asset line: 648
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_retreat_018' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_retreat_018.wav' in  file: sound/ww_vo.asset line: 649
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_retreat_016_alt' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_retreat_016_alt.wav' in  file: sound/ww_vo.asset line: 650
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_retreat_017_alt' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_retreat_017_alt.wav' in  file: sound/ww_vo.asset line: 651
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_retreat_018_alt' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_retreat_018_alt.wav' in  file: sound/ww_vo.asset line: 652
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_001' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_001.wav' in  file: sound/ww_vo.asset line: 653
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_002' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_002.wav' in  file: sound/ww_vo.asset line: 654
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_003' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_003.wav' in  file: sound/ww_vo.asset line: 655
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_004' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_004.wav' in  file: sound/ww_vo.asset line: 656
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_005' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_005.wav' in  file: sound/ww_vo.asset line: 657
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_006' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_006.wav' in  file: sound/ww_vo.asset line: 658
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_007' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_007.wav' in  file: sound/ww_vo.asset line: 659
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_008' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_008.wav' in  file: sound/ww_vo.asset line: 660
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_009' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_009.wav' in  file: sound/ww_vo.asset line: 661
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_010' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_010.wav' in  file: sound/ww_vo.asset line: 662
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_011' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_011.wav' in  file: sound/ww_vo.asset line: 663
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_012' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_012.wav' in  file: sound/ww_vo.asset line: 664
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_013' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_013.wav' in  file: sound/ww_vo.asset line: 665
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_014' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_014.wav' in  file: sound/ww_vo.asset line: 666
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_015' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_015.wav' in  file: sound/ww_vo.asset line: 667
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_016' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_016.wav' in  file: sound/ww_vo.asset line: 668
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_017' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_017.wav' in  file: sound/ww_vo.asset line: 669
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_018' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_018.wav' in  file: sound/ww_vo.asset line: 670
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_019' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_019.wav' in  file: sound/ww_vo.asset line: 671
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_020' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_020.wav' in  file: sound/ww_vo.asset line: 672
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_021' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_021.wav' in  file: sound/ww_vo.asset line: 673
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_019_alt' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_019_alt.wav' in  file: sound/ww_vo.asset line: 674
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_020_alt' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_020_alt.wav' in  file: sound/ww_vo.asset line: 675
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_021_alt' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_021_alt.wav' in  file: sound/ww_vo.asset line: 676
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_001' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_001.wav' in  file: sound/ww_vo.asset line: 677
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_002' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_002.wav' in  file: sound/ww_vo.asset line: 678
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_003' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_003.wav' in  file: sound/ww_vo.asset line: 679
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_004' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_004.wav' in  file: sound/ww_vo.asset line: 680
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_005' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_005.wav' in  file: sound/ww_vo.asset line: 681
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_006' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_006.wav' in  file: sound/ww_vo.asset line: 682
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_007' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_007.wav' in  file: sound/ww_vo.asset line: 683
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_008' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_008.wav' in  file: sound/ww_vo.asset line: 684
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_009' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_009.wav' in  file: sound/ww_vo.asset line: 685
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_010' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_010.wav' in  file: sound/ww_vo.asset line: 686
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_011' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_011.wav' in  file: sound/ww_vo.asset line: 687
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_012' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_012.wav' in  file: sound/ww_vo.asset line: 688
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_013' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_013.wav' in  file: sound/ww_vo.asset line: 689
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_014' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_014.wav' in  file: sound/ww_vo.asset line: 690
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_015' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_015.wav' in  file: sound/ww_vo.asset line: 691
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_016' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_016.wav' in  file: sound/ww_vo.asset line: 692
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_017' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_017.wav' in  file: sound/ww_vo.asset line: 693
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_018' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_018.wav' in  file: sound/ww_vo.asset line: 694
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_019' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_019.wav' in  file: sound/ww_vo.asset line: 695
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_020' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_020.wav' in  file: sound/ww_vo.asset line: 696
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_021' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_021.wav' in  file: sound/ww_vo.asset line: 697
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_022' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_022.wav' in  file: sound/ww_vo.asset line: 698
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_023' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_023.wav' in  file: sound/ww_vo.asset line: 699
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_024' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_024.wav' in  file: sound/ww_vo.asset line: 700
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'ui_raid_mapmode_01' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/ui_raid_mapmode_01.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 43
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'ui_special_project_started_sound_01' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/ui_special_project_started_sound_01.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 48
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'ui_special_project_finished_sound_01' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/ui_special_project_finished_sound_01.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 53
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'ui_special_project_start_dismantling_facility_sound_01' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/ui_special_project_start_dismantling_facility_sound_01.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 58
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'ui_special_project_abort_dismantling_facility_sound_01' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/ui_special_project_abort_dismantling_facility_sound_01.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 63
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'ui_finished_dismantling_sound_01' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/ui_finished_dismantling_sound_01.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 68
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'ui_alert_special_project_available_sound_01' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/ui_alert_special_project_available_sound_01.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 73
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_create_01' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_create_01.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 78
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_launch_air_01' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_launch_air_01.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 82
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_launch_air_02' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_launch_air_02.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 86
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_launch_air_03' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_launch_air_03.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 90
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_launch_paratrooper_01' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_launch_paratrooper_01.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 94
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_launch_paratrooper_02' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_launch_paratrooper_02.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 98
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_launch_paratrooper_03' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_launch_paratrooper_03.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 102
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_launch_marine_01' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_launch_marine_01.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 106
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_launch_marine_02' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_launch_marine_02.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 110
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_launch_marine_03' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_launch_marine_03.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 114
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_launch_nuclear_strike_01' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_launch_nuclear_strike_01.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 118
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_launch_nuclear_strike_02' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_launch_nuclear_strike_02.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 122
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_launch_nuclear_missile_01' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_launch_nuclear_missile_01.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 126
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_launch_nuclear_missile_02' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_launch_nuclear_missile_02.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 130
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_launch_nuclear_missile_03' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_launch_nuclear_missile_03.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 134
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_result_failure_01' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_result_failure_01.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 138
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_result_failure_02' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_result_failure_02.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 142
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_result_limited_success_01' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_result_limited_success_01.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 146
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_result_limited_success_02' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_result_limited_success_02.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 150
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_result_success_01' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_result_success_01.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 154
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_result_success_02' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_result_success_02.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 158
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_result_success_03' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_result_success_03.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 162
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_result_success_04' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_result_success_04.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 166
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_result_critical_success_01' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_result_critical_success_01.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 170
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_result_critical_success_02' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_result_critical_success_02.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 174
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_result_critical_success_03' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_result_critical_success_03.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 178
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_result_critical_success_04' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_result_critical_success_04.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 182
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'alert_raid_available_sound_01' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/alert_raid_available_sound_01.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 218
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'alert_raid_available_sound_02' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/alert_raid_available_sound_02.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 222
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'alert_raid_launchable_sound_01' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/alert_raid_launchable_sound_01.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 226
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'alert_raid_launchable_sound_02' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/alert_raid_launchable_sound_02.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 230
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'alert_raid_launchable_sound_03' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/alert_raid_launchable_sound_03.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 234
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'alert_raid_detected_sound_01' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/alert_raid_detected_sound_01.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 238
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'alert_raid_detected_sound_02' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/alert_raid_detected_sound_02.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 242
+[06:29:21][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'alert_raid_detected_sound_03' already added
+[06:29:21][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/alert_raid_detected_sound_03.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 246
+[06:29:21][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'BEL_infantry_idle' already added
+[06:29:21][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'BEL_infantry_retreat' already added
+[06:29:21][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'BEL_infantry_neutral_combat' already added
+[06:29:21][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'BEL_infantry_positive_combat' already added
+[06:29:21][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'BEL_infantry_move_out' already added
+[06:29:21][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'COG_infantry_idle' already added
+[06:29:21][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'COG_infantry_retreat' already added
+[06:29:21][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'COG_infantry_neutral_combat' already added
+[06:29:21][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'COG_infantry_positive_combat' already added
+[06:29:21][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'COG_infantry_move_out' already added
+[06:29:21][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'AUS_infantry_idle' already added
+[06:29:21][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'AUS_infantry_retreat' already added
+[06:29:21][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'AUS_infantry_neutral_combat' already added
+[06:29:21][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'AUS_infantry_positive_combat' already added
+[06:29:21][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'AUS_infantry_move_out' already added
+[06:29:21][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'ui_raid_mapmode' already added
+[06:29:21][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'ui_special_project_start_dismantling_facility_sound' already added
+[06:29:21][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'ui_special_project_abort_dismantling_facility_sound' already added
+[06:29:21][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'ui_special_project_finished_sound' already added
+[06:29:21][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'ui_special_project_started_sound' already added
+[06:29:21][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'ui_finished_dismantling_sound' already added
+[06:29:21][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'ui_alert_program_unassigned_scientist_sound' already added
+[06:29:21][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'ui_alert_special_project_available_sound' already added
+[06:29:21][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'raid_create' already added
+[06:29:21][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'raid_launch_air' already added
+[06:29:21][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'raid_launch_paratrooper' already added
+[06:29:21][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'raid_launch_marine' already added
+[06:29:21][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'raid_launch_nuclear_strike' already added
+[06:29:21][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'raid_launch_nuclear_missile' already added
+[06:29:21][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'raid_result_failure' already added
+[06:29:21][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'raid_result_limited_success' already added
+[06:29:21][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'raid_result_success' already added
+[06:29:21][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'raid_result_critical_success' already added
+[06:29:21][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'raid_result_success_nuclear' already added
+[06:29:21][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'raid_result_critical_success_nuclear' already added
+[06:29:21][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'alert_raid_available_sound' already added
+[06:29:21][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'alert_raid_launchable_sound' already added
+[06:29:21][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'alert_raid_detected_sound' already added
+[06:29:21][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'BEL_infantry_idle' already has category 'Voices', old category will be overwritten
+[06:29:21][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'BEL_infantry_retreat' already has category 'Voices', old category will be overwritten
+[06:29:21][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'BEL_infantry_neutral_combat' already has category 'Voices', old category will be overwritten
+[06:29:21][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'BEL_infantry_positive_combat' already has category 'Voices', old category will be overwritten
+[06:29:21][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'BEL_infantry_move_out' already has category 'Voices', old category will be overwritten
+[06:29:21][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'COG_infantry_idle' already has category 'Voices', old category will be overwritten
+[06:29:21][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'COG_infantry_retreat' already has category 'Voices', old category will be overwritten
+[06:29:21][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'COG_infantry_neutral_combat' already has category 'Voices', old category will be overwritten
+[06:29:21][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'COG_infantry_positive_combat' already has category 'Voices', old category will be overwritten
+[06:29:21][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'COG_infantry_move_out' already has category 'Voices', old category will be overwritten
+[06:29:21][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'AUS_infantry_idle' already has category 'Voices', old category will be overwritten
+[06:29:21][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'AUS_infantry_retreat' already has category 'Voices', old category will be overwritten
+[06:29:21][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'AUS_infantry_neutral_combat' already has category 'Voices', old category will be overwritten
+[06:29:21][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'AUS_infantry_positive_combat' already has category 'Voices', old category will be overwritten
+[06:29:21][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'AUS_infantry_move_out' already has category 'Voices', old category will be overwritten
+[06:29:21][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'ui_raid_mapmode' already has category 'UI', old category will be overwritten
+[06:29:21][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'ui_special_project_finished_sound' already has category 'UI', old category will be overwritten
+[06:29:21][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'ui_special_project_started_sound' already has category 'UI', old category will be overwritten
+[06:29:21][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'ui_special_project_start_dismantling_facility_sound' already has category 'UI', old category will be overwritten
+[06:29:21][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'ui_special_project_abort_dismantling_facility_sound' already has category 'UI', old category will be overwritten
+[06:29:21][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'ui_finished_dismantling_sound' already has category 'UI', old category will be overwritten
+[06:29:21][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'ui_alert_program_unassigned_scientist_sound' already has category 'UI', old category will be overwritten
+[06:29:21][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'ui_alert_special_project_available_sound' already has category 'UI', old category will be overwritten
+[06:29:21][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'raid_create' already has category 'UI', old category will be overwritten
+[06:29:21][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'raid_launch_marine' already has category 'UI', old category will be overwritten
+[06:29:21][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'raid_launch_air' already has category 'UI', old category will be overwritten
+[06:29:21][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'raid_launch_paratrooper' already has category 'UI', old category will be overwritten
+[06:29:21][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'raid_launch_nuclear_strike' already has category 'UI', old category will be overwritten
+[06:29:21][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'raid_launch_nuclear_missile' already has category 'UI', old category will be overwritten
+[06:29:21][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'raid_result_failure' already has category 'UI', old category will be overwritten
+[06:29:21][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'raid_result_limited_success' already has category 'UI', old category will be overwritten
+[06:29:21][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'raid_result_success' already has category 'UI', old category will be overwritten
+[06:29:21][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'raid_result_critical_success' already has category 'UI', old category will be overwritten
+[06:29:21][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'raid_result_success_nuclear' already has category 'UI', old category will be overwritten
+[06:29:21][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'raid_result_critical_success_nuclear' already has category 'UI', old category will be overwritten
+[06:29:21][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'alert_raid_available_sound' already has category 'UI', old category will be overwritten
+[06:29:21][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'alert_raid_launchable_sound' already has category 'UI', old category will be overwritten
+[06:29:21][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'alert_raid_detected_sound' already has category 'UI', old category will be overwritten
+[06:29:27][no_game_date][gfx_dds_loader.cpp:325]: Expected more data in the texture mipmaps than was actually present in file "gfx//interface//tiles//tiled_bg.dds"
+[06:29:27][no_game_date][gfx_dds_loader.cpp:325]: Expected more data in the texture mipmaps than was actually present in file "gfx//interface//button_261x34.dds"
+[06:29:28][no_game_date][gfx_dds_loader.cpp:325]: Expected more data in the texture mipmaps than was actually present in file "gfx/interface/decisions/sgui_component/bare_progress_bar_blue.dds"
+[06:29:28][no_game_date][gfx_dds_loader.cpp:325]: Expected more data in the texture mipmaps than was actually present in file "gfx/interface/decisions/sgui_component/bare_progress_bar_background.dds"
+[06:29:28][no_game_date][gfx_dds_loader.cpp:325]: Expected more data in the texture mipmaps than was actually present in file "gfx/interface/decisions/sgui_component/bare_progress_bar_red.dds"
+[06:29:28][no_game_date][persistent.cpp:67]: Error: "Unexpected token: //, near line: 1" in file: "gfx/FX/progress_vertical.shader" near line: 1
+[06:29:28][no_game_date][persistent.cpp:67]: Error: "Unexpected token: 修改：新增自下而上的进度裁切, near line: 1" in file: "gfx/FX/progress_vertical.shader" near line: 1
+[06:29:28][no_game_date][persistent.cpp:67]: Error: "Unexpected token: MOD, near line: 1" in file: "gfx/FX/progress_vertical.shader" near line: 1
+[06:29:28][no_game_date][persistent.cpp:67]: Error: "Unexpected token: //, near line: 2" in file: "gfx/FX/progress_vertical.shader" near line: 2
+[06:29:28][no_game_date][persistent.cpp:67]: Error: "Unexpected token: /, near line: 2" in file: "gfx/FX/progress_vertical.shader" near line: 2
+[06:29:28][no_game_date][persistent.cpp:67]: Error: "Unexpected token: //, near line: 3" in file: "gfx/FX/progress_vertical.shader" near line: 3
+[06:29:28][no_game_date][persistent.cpp:67]: Error: "Unexpected token: 取值, near line: 3" in file: "gfx/FX/progress_vertical.shader" near line: 3
+[06:29:28][no_game_date][persistent.cpp:67]: Error: "Unexpected token: //, near line: 4" in file: "gfx/FX/progress_vertical.shader" near line: 4
+[06:29:28][no_game_date][persistent.cpp:67]: Error: "Unexpected token: 越大，前景覆盖范围越高。, near line: 6" in file: "gfx/FX/progress_vertical.shader" near line: 6
+[06:29:28][no_game_date][persistent.cpp:67]: Error: "Unexpected token: =, near line: 6" in file: "gfx/FX/progress_vertical.shader" near line: 7
+[06:29:28][no_game_date][gfx_dds_loader.cpp:325]: Expected more data in the texture mipmaps than was actually present in file "gfx//interface//production_win_bottom.dds"
+[06:29:28][no_game_date][gfx_dds_loader.cpp:325]: Expected more data in the texture mipmaps than was actually present in file "gfx/interface/government_in_exile/division_designer_button.dds"
+[06:29:28][no_game_date][gfx_dds_loader.cpp:325]: Expected more data in the texture mipmaps than was actually present in file "gfx/interface/diplo_filter_entry.dds"
+[06:29:29][no_game_date][gfx_dds_loader.cpp:325]: Expected more data in the texture mipmaps than was actually present in file "gfx//interface//header_bg.dds"
+[06:29:29][no_game_date][pdxassetutil.cpp:1098]: Duplicate texture 'GER_paratrooper_diffuse.dds' found (current path 'gfx/models/units/special_forces/GER_paratrooper_diffuse.dds', previous path 'gfx/models/units/GER_paratrooper_diffuse.dds')
+[06:29:29][no_game_date][pdxassetutil.cpp:1098]: Duplicate texture 'GER_paratrooper_normal.dds' found (current path 'gfx/models/units/special_forces/GER_paratrooper_normal.dds', previous path 'gfx/models/units/GER_paratrooper_normal.dds')
+[06:29:29][no_game_date][pdxassetutil.cpp:1098]: Duplicate texture 'GER_paratrooper_snow_diffuse.dds' found (current path 'gfx/models/units/special_forces/GER_paratrooper_snow_diffuse.dds', previous path 'gfx/models/units/GER_paratrooper_snow_diffuse.dds')
+[06:29:29][no_game_date][pdxassetutil.cpp:1098]: Duplicate texture 'GER_paratrooper_snow_normal.dds' found (current path 'gfx/models/units/special_forces/GER_paratrooper_snow_normal.dds', previous path 'gfx/models/units/GER_paratrooper_snow_normal.dds')
+[06:29:29][no_game_date][pdxassetutil.cpp:1098]: Duplicate texture 'GER_paratrooper_snow_specular.dds' found (current path 'gfx/models/units/special_forces/GER_paratrooper_snow_specular.dds', previous path 'gfx/models/units/GER_paratrooper_snow_specular.dds')
+[06:29:29][no_game_date][pdxassetutil.cpp:1098]: Duplicate texture 'GER_paratrooper_specular.dds' found (current path 'gfx/models/units/special_forces/GER_paratrooper_specular.dds', previous path 'gfx/models/units/GER_paratrooper_specular.dds')
+[06:29:29][no_game_date][pdxassetutil.cpp:1098]: Duplicate texture 'face.dds' found (current path 'gfx/models/units/infantry/PSC_culture/Shiranui_Kaya/face.dds', previous path 'gfx/models/units/infantry/Arius_culture/eleano_franzel_infantry/face.dds')
+[06:29:29][no_game_date][strategic_region_database.cpp:215]: map/weatherpositions.txt is empty.
+[06:29:31][no_game_date][pdxassetutil.cpp:1138]: Failed to find texture 'back hair_Base_color.png'
+[06:29:31][no_game_date][pdxassetutil.cpp:1138]: Failed to find texture 'back hair_Base_color.png'
+[06:29:31][no_game_date][pdxassetutil.cpp:1138]: Failed to find texture 'B_Base_color.png'
+[06:29:31][no_game_date][pdxassetutil.cpp:1138]: Failed to find texture 'B_Base_color.png'
+[06:29:31][no_game_date][pdxassetutil.cpp:1138]: Failed to find texture 'cloth_2D_View.png'
+[06:29:31][no_game_date][pdxassetutil.cpp:1138]: Failed to find texture 'bag_2D_View.png'
+[06:29:31][no_game_date][pdxassetutil.cpp:1138]: Failed to find texture 'bag_2D_View.png'
+[06:29:31][no_game_date][pdxassetutil.cpp:1138]: Failed to find texture 'Vest_2D_View.png'
+[06:29:31][no_game_date][pdxassetutil.cpp:1138]: Failed to find texture 'suit_2D_View.png'
+[06:29:31][no_game_date][pdxassetutil.cpp:1138]: Failed to find texture 'accessory_2D_View.png'
+[06:29:31][no_game_date][pdxassetutil.cpp:1138]: Failed to find texture 'face.png'
+[06:29:31][no_game_date][pdxassetutil.cpp:1138]: Failed to find texture 'face.png'
+[06:29:31][no_game_date][pdxassetutil.cpp:1138]: Failed to find texture 'face.png'
+[06:29:31][no_game_date][pdxassetutil.cpp:1138]: Failed to find texture 'face.png'
+[06:29:31][no_game_date][pdxassetutil.cpp:1138]: Failed to find texture '2.png'
+[06:29:31][no_game_date][pdxassetutil.cpp:1138]: Failed to find texture 'face.png'
+[06:29:31][no_game_date][pdxassetutil.cpp:1138]: Failed to find texture 'face.png'
+[06:29:31][no_game_date][pdxassetutil.cpp:1138]: Failed to find texture 'face.png'
+[06:29:31][no_game_date][pdxassetutil.cpp:1138]: Failed to find texture 'face.png'
+[06:29:31][no_game_date][pdxassetutil.cpp:1138]: Failed to find texture 'accessory_2D_View.png'
+[06:29:31][no_game_date][pdxassetutil.cpp:340]: Failed to create material with shader 
+[06:29:32][no_game_date][pdxassetutil.cpp:1138]: Failed to find texture 'back hair_Base_color.png'
+[06:29:32][no_game_date][pdxassetutil.cpp:1138]: Failed to find texture 'back hair_Base_color.png'
+[06:29:32][no_game_date][pdxassetutil.cpp:1138]: Failed to find texture 'B_Base_color.png'
+[06:29:32][no_game_date][pdxassetutil.cpp:1138]: Failed to find texture 'B_Base_color.png'
+[06:29:32][no_game_date][pdxassetutil.cpp:1138]: Failed to find texture 'cloth_2D_View.png'
+[06:29:32][no_game_date][pdxassetutil.cpp:1138]: Failed to find texture 'bag_2D_View.png'
+[06:29:32][no_game_date][pdxassetutil.cpp:1138]: Failed to find texture 'bag_2D_View.png'
+[06:29:32][no_game_date][pdxassetutil.cpp:1138]: Failed to find texture 'Vest_2D_View.png'
+[06:29:32][no_game_date][pdxassetutil.cpp:1138]: Failed to find texture 'suit_2D_View.png'
+[06:29:32][no_game_date][pdxassetutil.cpp:1138]: Failed to find texture 'accessory_2D_View.png'
+[06:29:32][no_game_date][pdxassetutil.cpp:1138]: Failed to find texture 'face.png'
+[06:29:32][no_game_date][pdxassetutil.cpp:1138]: Failed to find texture 'face.png'
+[06:29:32][no_game_date][pdxassetutil.cpp:1138]: Failed to find texture 'face.png'
+[06:29:32][no_game_date][pdxassetutil.cpp:1138]: Failed to find texture 'face.png'
+[06:29:32][no_game_date][pdxassetutil.cpp:1138]: Failed to find texture '2.png'
+[06:29:32][no_game_date][pdxassetutil.cpp:1138]: Failed to find texture 'face.png'
+[06:29:32][no_game_date][pdxassetutil.cpp:1138]: Failed to find texture 'face.png'
+[06:29:32][no_game_date][pdxassetutil.cpp:1138]: Failed to find texture 'face.png'
+[06:29:32][no_game_date][pdxassetutil.cpp:1138]: Failed to find texture 'face.png'
+[06:29:32][no_game_date][pdxassetutil.cpp:1138]: Failed to find texture 'accessory_2D_View.png'
+[06:29:32][no_game_date][assetfactory.cpp:876]: Couldn't find parent clone entity generic_mp43_weapon_right_entity, in file "gfx/entities/ABY_culture_units.asset", near line 10
+[06:29:32][no_game_date][pdx_entity.cpp:228]: Could not find animation "elephantry_move" for state "retreat" in entity "RAJ_infantry_elephant_rider_entity"
+[06:29:32][no_game_date][pdx_entity.cpp:228]: Could not find animation "elephantry_idle" for state "idle" in entity "RAJ_infantry_elephant_rider_entity"
+[06:29:32][no_game_date][pdx_entity.cpp:228]: Could not find animation "elephantry_move" for state "move" in entity "RAJ_infantry_elephant_rider_entity"
+[06:29:32][no_game_date][pdx_entity.cpp:228]: Could not find animation "elephantry_move" for state "retreat" in entity "RAJ_infantry_mg_elephant_rider_entity"
+[06:29:32][no_game_date][pdx_entity.cpp:228]: Could not find animation "elephantry_idle" for state "idle" in entity "RAJ_infantry_mg_elephant_rider_entity"
+[06:29:32][no_game_date][pdx_entity.cpp:228]: Could not find animation "elephantry_move" for state "move" in entity "RAJ_infantry_mg_elephant_rider_entity"
+[06:29:32][no_game_date][pdx_entity.cpp:2172]: Duplicate of TRI_small_uav_equipment_1_entity added to entity system
+[06:29:32][no_game_date][pdx_entity.cpp:2277]: Duplicate of TRI_small_uav_equipment_1_entity added to entity system
+[06:29:32][no_game_date][pdx_entity.cpp:2277]: Duplicate of TRI_small_uav_equipment_1_entity added to entity system
+[06:29:32][no_game_date][pdx_entity.cpp:2277]: Duplicate of TRI_small_uav_equipment_1_entity added to entity system
+[06:29:32][no_game_date][pdx_entity.cpp:2172]: Duplicate of TRI_medium_uav_equipment_1_entity added to entity system
+[06:29:32][no_game_date][pdx_entity.cpp:2277]: Duplicate of TRI_medium_uav_equipment_1_entity added to entity system
+[06:29:32][no_game_date][pdx_entity.cpp:2277]: Duplicate of TRI_medium_uav_equipment_1_entity added to entity system
+[06:29:32][no_game_date][pdx_entity.cpp:2277]: Duplicate of TRI_medium_uav_equipment_1_entity added to entity system
+[06:29:32][no_game_date][pdx_entity.cpp:2172]: Duplicate of TRI_small_plane_entity added to entity system
+[06:29:32][no_game_date][pdx_entity.cpp:2172]: Duplicate of TRI_heavy_plane_entity added to entity system
+[06:29:32][no_game_date][pdx_entity.cpp:2172]: Duplicate of TRI_small_uav_recon_equipment_1_entity added to entity system
+[06:29:32][no_game_date][pdx_entity.cpp:2277]: Duplicate of TRI_small_uav_recon_equipment_1_entity added to entity system
+[06:29:32][no_game_date][pdx_entity.cpp:2277]: Duplicate of TRI_small_uav_recon_equipment_1_entity added to entity system
+[06:29:32][no_game_date][pdx_entity.cpp:2277]: Duplicate of TRI_small_uav_recon_equipment_1_entity added to entity system
+[06:29:32][no_game_date][pdx_entity.cpp:2172]: Duplicate of TRI_transport_plane_equipment_1_entity added to entity system
+[06:29:32][no_game_date][pdx_entity.cpp:2277]: Duplicate of TRI_transport_plane_equipment_1_entity added to entity system
+[06:29:32][no_game_date][pdx_entity.cpp:2172]: Duplicate of TRI_transport_plane_equipment_3_entity added to entity system
+[06:29:32][no_game_date][pdx_entity.cpp:2277]: Duplicate of TRI_transport_plane_equipment_3_entity added to entity system
+[06:29:32][no_game_date][pdx_entity.cpp:2172]: Duplicate of TRI_small_uav_equipment_1_entity added to entity system
+[06:29:32][no_game_date][pdx_entity.cpp:2277]: Duplicate of TRI_small_uav_equipment_1_entity added to entity system
+[06:29:32][no_game_date][pdx_entity.cpp:2277]: Duplicate of TRI_small_uav_equipment_1_entity added to entity system
+[06:29:32][no_game_date][pdx_entity.cpp:2277]: Duplicate of TRI_small_uav_equipment_1_entity added to entity system
+[06:29:32][no_game_date][pdx_entity.cpp:2172]: Duplicate of TRI_medium_uav_equipment_1_entity added to entity system
+[06:29:32][no_game_date][pdx_entity.cpp:2277]: Duplicate of TRI_medium_uav_equipment_1_entity added to entity system
+[06:29:32][no_game_date][pdx_entity.cpp:2277]: Duplicate of TRI_medium_uav_equipment_1_entity added to entity system
+[06:29:32][no_game_date][pdx_entity.cpp:2277]: Duplicate of TRI_medium_uav_equipment_1_entity added to entity system
+[06:29:32][no_game_date][pdx_entity.cpp:2172]: Duplicate of TRI_small_plane_entity added to entity system
+[06:29:32][no_game_date][pdx_entity.cpp:2172]: Duplicate of TRI_heavy_plane_entity added to entity system
+[06:29:32][no_game_date][pdx_entity.cpp:2172]: Duplicate of TRI_small_uav_recon_equipment_1_entity added to entity system
+[06:29:32][no_game_date][pdx_entity.cpp:2277]: Duplicate of TRI_small_uav_recon_equipment_1_entity added to entity system
+[06:29:32][no_game_date][pdx_entity.cpp:2277]: Duplicate of TRI_small_uav_recon_equipment_1_entity added to entity system
+[06:29:32][no_game_date][pdx_entity.cpp:2277]: Duplicate of TRI_small_uav_recon_equipment_1_entity added to entity system
+[06:29:32][no_game_date][pdx_entity.cpp:2172]: Duplicate of TRI_transport_plane_equipment_1_entity added to entity system
+[06:29:32][no_game_date][pdx_entity.cpp:2277]: Duplicate of TRI_transport_plane_equipment_1_entity added to entity system
+[06:29:32][no_game_date][pdx_entity.cpp:2172]: Duplicate of TRI_transport_plane_equipment_3_entity added to entity system
+[06:29:32][no_game_date][pdx_entity.cpp:2277]: Duplicate of TRI_transport_plane_equipment_3_entity added to entity system
+[06:29:32][no_game_date][pdx_entity.cpp:2172]: Duplicate of AST_fighter_equipment_1_entity added to entity system
+[06:29:32][no_game_date][pdx_entity.cpp:2071]: Couldn't find mesh "ENG_artillery_mesh" (or ENG_artillery_mesh is not of 'pdxmesh' type) [ENG_artillery_gun_entity]
+[06:29:32][no_game_date][pdx_entity.cpp:2071]: Couldn't find mesh "ENG_anti_tank_mesh" (or ENG_anti_tank_mesh is not of 'pdxmesh' type) [ENG_anti_tank_gun_entity]
+[06:29:32][no_game_date][pdx_entity.cpp:2071]: Couldn't find mesh "JAP_anti_tank_type_97_mesh" (or JAP_anti_tank_type_97_mesh is not of 'pdxmesh' type) [JAP_anti_tank_gun_entity]
+[06:29:33][no_game_date][pdx_entity.cpp:324]: Failed to find entity "ABY_hoshino_mp43_right_entity" for attachment in rifle1
+[06:29:33][no_game_date][pdx_entity.cpp:324]: Failed to find entity "ABY_hoshino_mp43_right_entity" for attachment in rifle1
+[06:29:33][no_game_date][pdx_entity.cpp:324]: Failed to find entity "CZE_bicycle_vehicle_entity" for attachment in bicycle
+[06:29:33][no_game_date][pdx_entity.cpp:324]: Failed to find entity "CZE_bicycle_vehicle_entity" for attachment in bicycle
+[06:29:33][no_game_date][pdx_entity.cpp:324]: Failed to find entity "CZE_bicycle_vehicle_entity" for attachment in bicycle
+[06:29:33][no_game_date][pdx_entity.cpp:324]: Failed to find entity "CZE_bicycle_vehicle_entity" for attachment in bicycle
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Unknown modifier: war_impact_on_world_tension, near line: 47" in file: "common/ideologies/00_ideologies.txt" near line: 47
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Unknown modifier: rules, near line: 48" in file: "common/ideologies/00_ideologies.txt" near line: 50
+[06:29:33][no_game_date][rule.cpp:172]: unknown rule 'send_volunteer_factor' in file common/ideologies/00_ideologies.txt
+[06:29:33][no_game_date][rule.cpp:172]: unknown rule 'air_volunteer_cap' in file common/ideologies/00_ideologies.txt
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Unknown modifier: targeted_civilian_intel_factor, near line: 2" in file: "common/modifiers/MIL_modifiers.txt" near line: 2
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Unknown modifier: targeted_army_intel_factor, near line: 3" in file: "common/modifiers/MIL_modifiers.txt" near line: 3
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Unknown modifier: targeted_navy_intel_factor, near line: 4" in file: "common/modifiers/MIL_modifiers.txt" near line: 4
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Unknown modifier: targeted_airforce_intel_factor, near line: 5" in file: "common/modifiers/MIL_modifiers.txt" near line: 5
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Unknown modifier: targeted_civilian_intel_factor, near line: 9" in file: "common/modifiers/MIL_modifiers.txt" near line: 9
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Unknown modifier: targeted_army_intel_factor, near line: 10" in file: "common/modifiers/MIL_modifiers.txt" near line: 10
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Unknown modifier: targeted_navy_intel_factor, near line: 11" in file: "common/modifiers/MIL_modifiers.txt" near line: 11
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Unknown modifier: targeted_airforce_intel_factor, near line: 12" in file: "common/modifiers/MIL_modifiers.txt" near line: 12
+[06:29:33][no_game_date][strategic_resource_database.cpp:97]: No oil resource defined.
+[06:29:33][no_game_date][scopedvariable.cpp:597]: sp:sp_naval_anechoic_tiles does not match any Special Project in database
+[06:29:33][no_game_date][scopedvariable.cpp:597]: sp:sp_naval_aip_engine does not match any Special Project in database
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Invalid equipment type: mechanized_equipment, near line: 11" in file: "common/units/MIL_special.txt" near line: 11
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Invalid subunit category: category_mobile_and_mobile_combat_sup, near line: 28" in file: "common/units/MIL_special.txt" near line: 29
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Invalid subunit category: category_divisional_support_battalions, near line: 20" in file: "common/units/hq_support.txt" near line: 22
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Invalid subunit category: category_divisional_support_battalions, near line: 72" in file: "common/units/hq_support.txt" near line: 74
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Invalid subunit category: category_divisional_support_battalions, near line: 131" in file: "common/units/hq_support.txt" near line: 134
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Invalid subunit category: category_divisional_support_battalions, near line: 191" in file: "common/units/hq_support.txt" near line: 193
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Invalid subunit category: category_divisional_support_battalions, near line: 243" in file: "common/units/hq_support.txt" near line: 245
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Invalid subunit category: category_divisional_support_battalions, near line: 296" in file: "common/units/hq_support.txt" near line: 298
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Invalid subunit category: category_divisional_support_battalions, near line: 352" in file: "common/units/hq_support.txt" near line: 354
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Invalid subunit category: category_divisional_support_battalions, near line: 406" in file: "common/units/hq_support.txt" near line: 408
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Invalid subunit category: category_divisional_support_battalions, near line: 459" in file: "common/units/hq_support.txt" near line: 461
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Invalid subunit category: category_divisional_support_battalions, near line: 511" in file: "common/units/hq_support.txt" near line: 513
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Invalid subunit category: category_divisional_support_battalions, near line: 563" in file: "common/units/hq_support.txt" near line: 565
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Invalid subunit category: category_vehicle_infantry, near line: 660" in file: "common/units/hq_support.txt" near line: 661
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Unexpected token: porganization_modifier, near line: 790" in file: "common/military_industrial_organization/organizations/BARE_organization.txt" near line: 793
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Unexpected token: porganization_modifier, near line: 1474" in file: "common/military_industrial_organization/organizations/BARE_organization.txt" near line: 1477
+[06:29:33][no_game_date][trigger.cpp:700]: Invalid trigger 'can_unlock_second_track_of_sf_doctrine' in common/doctrines/tracks/special_forces_tracks.txt line : 23
+[06:29:33][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: can_unlock_second_track_of_sf_doctrine, near line: 23" in file: "common/doctrines/tracks/special_forces_tracks.txt" near line: 24
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Unexpected token: mountaineers, near line: 73" in file: "common/doctrines/subdoctrines/special_forces/special_forces_subdoctrines.txt" near line: 75
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Unexpected token: mountaineers, near line: 150" in file: "common/doctrines/subdoctrines/special_forces/special_forces_subdoctrines.txt" near line: 163
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Unexpected token: unit_mountaineers_design_cost_factor, near line: 170" in file: "common/doctrines/subdoctrines/special_forces/special_forces_subdoctrines.txt" near line: 170
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Unexpected token: artillery, near line: 175" in file: "common/doctrines/subdoctrines/special_forces/special_forces_subdoctrines.txt" near line: 180
+[06:29:33][no_game_date][pdx_parser.h:1203]: Error: "Invalid subunit category: categories, near line: 217" in file: "common/doctrines/subdoctrines/special_forces/special_forces_subdoctrines.txt" near line: 218
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Unexpected token: pioneer_support, near line: 249" in file: "common/doctrines/subdoctrines/special_forces/special_forces_subdoctrines.txt" near line: 255
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Unexpected token: unit_marine_design_cost_factor, near line: 269" in file: "common/doctrines/subdoctrines/special_forces/special_forces_subdoctrines.txt" near line: 269
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Unexpected token: marine, near line: 270" in file: "common/doctrines/subdoctrines/special_forces/special_forces_subdoctrines.txt" near line: 272
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Unexpected token: marine_commando, near line: 276" in file: "common/doctrines/subdoctrines/special_forces/special_forces_subdoctrines.txt" near line: 278
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Unexpected token: amphibious_mechanized, near line: 294" in file: "common/doctrines/subdoctrines/special_forces/special_forces_subdoctrines.txt" near line: 298
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Unexpected token: pioneer_support, near line: 300" in file: "common/doctrines/subdoctrines/special_forces/special_forces_subdoctrines.txt" near line: 306
+[06:29:33][no_game_date][pdx_parser.h:1203]: Error: "Invalid subunit category: categories, near line: 325" in file: "common/doctrines/subdoctrines/special_forces/special_forces_subdoctrines.txt" near line: 326
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Unexpected token: pioneer_support, near line: 354" in file: "common/doctrines/subdoctrines/special_forces/special_forces_subdoctrines.txt" near line: 360
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Unexpected token: pioneer_support, near line: 374" in file: "common/doctrines/subdoctrines/special_forces/special_forces_subdoctrines.txt" near line: 380
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Unexpected token: artillery, near line: 381" in file: "common/doctrines/subdoctrines/special_forces/special_forces_subdoctrines.txt" near line: 386
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Unexpected token: anti_air, near line: 388" in file: "common/doctrines/subdoctrines/special_forces/special_forces_subdoctrines.txt" near line: 393
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Unexpected token: anti_tank, near line: 395" in file: "common/doctrines/subdoctrines/special_forces/special_forces_subdoctrines.txt" near line: 400
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Unexpected token: marine, near line: 404" in file: "common/doctrines/subdoctrines/special_forces/special_forces_subdoctrines.txt" near line: 407
+[06:29:33][no_game_date][pdx_parser.h:1203]: Error: "Invalid subunit category: categories, near line: 623" in file: "common/doctrines/subdoctrines/special_forces/special_forces_subdoctrines.txt" near line: 624
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Unexpected token: ranger_battalion, near line: 653" in file: "common/doctrines/subdoctrines/special_forces/special_forces_subdoctrines.txt" near line: 660
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Unexpected token: category_rangers, near line: 665" in file: "common/doctrines/subdoctrines/special_forces/special_forces_subdoctrines.txt" near line: 669
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Unexpected token: artillery, near line: 681" in file: "common/doctrines/subdoctrines/special_forces/special_forces_subdoctrines.txt" near line: 687
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Unexpected token: category_rangers, near line: 698" in file: "common/doctrines/subdoctrines/special_forces/special_forces_subdoctrines.txt" near line: 701
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Unexpected token: ranger_battalion, near line: 703" in file: "common/doctrines/subdoctrines/special_forces/special_forces_subdoctrines.txt" near line: 709
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Unexpected token: ranger_battalion, near line: 713" in file: "common/doctrines/subdoctrines/special_forces/special_forces_subdoctrines.txt" near line: 717
+[06:29:33][no_game_date][pdx_parser.h:1203]: Error: "Invalid subunit category: categories, near line: 736" in file: "common/doctrines/subdoctrines/special_forces/special_forces_subdoctrines.txt" near line: 737
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Unexpected token: ranger_battalion, near line: 765" in file: "common/doctrines/subdoctrines/special_forces/special_forces_subdoctrines.txt" near line: 772
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Unexpected token: category_rangers, near line: 792" in file: "common/doctrines/subdoctrines/special_forces/special_forces_subdoctrines.txt" near line: 796
+[06:29:33][no_game_date][persistent.cpp:67]: Error: "Unexpected token: ranger_battalion, near line: 800" in file: "common/doctrines/subdoctrines/special_forces/special_forces_subdoctrines.txt" near line: 802
+[06:29:33][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/collections/collections.txt line: 26 democratic. use var:var_name to explicitly use variables in effects/triggers
+[06:29:33][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/collections/collections.txt line: 37 democratic. use var:var_name to explicitly use variables in effects/triggers
+[06:29:33][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/collections/collections.txt line: 49 democratic. use var:var_name to explicitly use variables in effects/triggers
+[06:29:33][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/collections/collections.txt line: 60 democratic. use var:var_name to explicitly use variables in effects/triggers
+[06:29:33][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/collections/collections.txt line: 85 communism. use var:var_name to explicitly use variables in effects/triggers
+[06:29:33][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/collections/collections.txt line: 95 communism. use var:var_name to explicitly use variables in effects/triggers
+[06:29:33][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/collections/collections.txt line: 105 communism. use var:var_name to explicitly use variables in effects/triggers
+[06:29:33][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/collections/collections.txt line: 116 neutrality. use var:var_name to explicitly use variables in effects/triggers
+[06:29:33][no_game_date][trigger.cpp:700]: Invalid trigger 'WTT_is_chinese_country' in common/collections/collections.txt line : 127
+[06:29:33][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: WTT_is_chinese_country, near line: 127" in file: "common/collections/collections.txt" near line: 128
+[06:29:33][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/collections/collections.txt line: 152 communism. use var:var_name to explicitly use variables in effects/triggers
+[06:29:33][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/collections/collections.txt line: 164 communism. use var:var_name to explicitly use variables in effects/triggers
+[06:29:33][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/collections/collections.txt line: 167 communism. use var:var_name to explicitly use variables in effects/triggers
+[06:29:33][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/collections/collections.txt line: 201 fascism. use var:var_name to explicitly use variables in effects/triggers
+[06:29:33][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/collections/collections.txt line: 546 fascism. use var:var_name to explicitly use variables in effects/triggers
+[06:29:33][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/collections/collections.txt line: 555 communism. use var:var_name to explicitly use variables in effects/triggers
+[06:29:33][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/collections/collections.txt line: 564 democratic. use var:var_name to explicitly use variables in effects/triggers
+[06:29:33][no_game_date][trigger.cpp:700]: Invalid trigger 'CHI_northern_mandate_states' in common/collections/collections.txt line : 586
+[06:29:33][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: CHI_northern_mandate_states, near line: 586" in file: "common/collections/collections.txt" near line: 587
+[06:29:33][no_game_date][trigger.cpp:700]: Invalid trigger 'CHI_southern_mandate_states' in common/collections/collections.txt line : 596
+[06:29:33][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: CHI_southern_mandate_states, near line: 596" in file: "common/collections/collections.txt" near line: 597
+[06:29:33][no_game_date][trigger.cpp:700]: Invalid trigger 'CHI_greater_game_states' in common/collections/collections.txt line : 606
+[06:29:33][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: CHI_greater_game_states, near line: 606" in file: "common/collections/collections.txt" near line: 607
+[06:29:33][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/collections/collections.txt line: 620 communism. use var:var_name to explicitly use variables in effects/triggers
+[06:29:33][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/collections/collections.txt line: 643 communism. use var:var_name to explicitly use variables in effects/triggers
+[06:29:33][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/collections/collections.txt line: 658 fascism. use var:var_name to explicitly use variables in effects/triggers
+[06:29:33][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/collections/collections.txt line: 673 fascism. use var:var_name to explicitly use variables in effects/triggers
+[06:29:33][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/collections/collections.txt line: 674 democratic. use var:var_name to explicitly use variables in effects/triggers
+[06:29:33][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/collections/collections.txt line: 689 communism. use var:var_name to explicitly use variables in effects/triggers
+[06:29:33][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/collections/collections.txt line: 690 democratic. use var:var_name to explicitly use variables in effects/triggers
+[06:29:33][no_game_date][script_collection_input_impl.h:358]: Could not find constant category state_groups
+[06:29:33][no_game_date][gameitemdatabase.h:882]: Error: "Collection input type is empty: }, near line: 705" in file: "common/collections/collections.txt" near line: 705
+[06:29:33][no_game_date][script_collection_input_impl.h:358]: Could not find constant category state_groups
+[06:29:33][no_game_date][gameitemdatabase.h:882]: Error: "Collection input type is empty: }, near line: 715" in file: "common/collections/collections.txt" near line: 715
+[06:29:33][no_game_date][script_collection_input_impl.h:358]: Could not find constant category state_groups
+[06:29:33][no_game_date][gameitemdatabase.h:882]: Error: "Collection input type is empty: }, near line: 721" in file: "common/collections/collections.txt" near line: 721
+[06:29:33][no_game_date][script_collection_input_impl.h:358]: Could not find constant category state_groups
+[06:29:33][no_game_date][gameitemdatabase.h:882]: Error: "Collection input type is empty: }, near line: 740" in file: "common/collections/collections.txt" near line: 740
+[06:29:33][no_game_date][script_collection_input_impl.h:358]: Could not find constant category country_groups
+[06:29:33][no_game_date][gameitemdatabase.h:882]: Error: "Collection input type is empty: }, near line: 886" in file: "common/collections/collections.txt" near line: 886
+[06:29:33][no_game_date][script_collection_input_impl.h:358]: Could not find constant category country_groups
+[06:29:33][no_game_date][gameitemdatabase.h:882]: Error: "Collection input type is empty: }, near line: 900" in file: "common/collections/collections.txt" near line: 900
+[06:29:33][no_game_date][script_collection_input_impl.h:358]: Could not find constant category state_groups
+[06:29:33][no_game_date][gameitemdatabase.h:882]: Error: "Collection input type is empty: }, near line: 907" in file: "common/collections/collections.txt" near line: 907
+[06:29:33][no_game_date][script_collection_input_impl.h:358]: Could not find constant category state_groups
+[06:29:33][no_game_date][gameitemdatabase.h:882]: Error: "Collection input type is empty: }, near line: 917" in file: "common/collections/collections.txt" near line: 917
+[06:29:33][no_game_date][script_collection_input_impl.h:358]: Could not find constant category state_groups
+[06:29:33][no_game_date][gameitemdatabase.h:882]: Error: "Collection input type is empty: }, near line: 922" in file: "common/collections/collections.txt" near line: 922
+[06:29:33][no_game_date][script_collection_input_impl.h:358]: Could not find constant category state_groups
+[06:29:33][no_game_date][gameitemdatabase.h:882]: Error: "Collection input type is empty: }, near line: 932" in file: "common/collections/collections.txt" near line: 932
+[06:29:33][no_game_date][script_collection_input_impl.h:358]: Could not find constant category state_groups
+[06:29:33][no_game_date][gameitemdatabase.h:882]: Error: "Collection input type is empty: }, near line: 940" in file: "common/collections/collections.txt" near line: 940
+[06:29:34][no_game_date][autonomousstate.cpp:97]: There is no localization for the autonomous state name: autonomy_BlackMarket_subject
+[06:29:34][no_game_date][subunit_definition_database.cpp:58]: Invalid sub unit/category in modifier: modifier_army_sub_unit_light_tank_recon_attack_factor
+[06:29:34][no_game_date][subunit_definition_database.cpp:58]: Invalid sub unit/category in modifier: modifier_army_sub_unit_light_tank_recon_defence_factor
+[06:29:34][no_game_date][subunit_definition_database.cpp:58]: Invalid sub unit/category in modifier: modifier_army_sub_unit_light_tank_recon_speed_factor
+[06:29:34][no_game_date][subunit_definition_database.cpp:58]: Invalid sub unit/category in modifier: modifier_army_sub_unit_light_tank_recon_max_org_factor
+[06:29:34][no_game_date][operationresources.cpp:89]: Invalid equipment type ( has to be an archetype ) in operation resources: small_plane_airframe
+[06:29:34][no_game_date][operationphase.cpp:68]: Operation phases references a phase that does not exist: resistance_contacts_radio_circuits
+[06:29:34][no_game_date][persistent.cpp:67]: Error: "Amount of factories needs to be greater than zero: }, near line: 165" in file: "common/operations/Mil_operations.txt" near line: 165
+[06:29:34][no_game_date][operationresources.cpp:89]: Invalid equipment type ( has to be an archetype ) in operation resources: risk_chance
+[06:29:34][no_game_date][operationresources.cpp:89]: Invalid equipment type ( has to be an archetype ) in operation resources: outcome_extra_chance
+[06:29:34][no_game_date][operationresources.cpp:89]: Invalid equipment type ( has to be an archetype ) in operation resources: risk_modifiers
+[06:29:34][no_game_date][operationresources.cpp:89]: Invalid equipment type ( has to be an archetype ) in operation resources: operation_risk
+[06:29:34][no_game_date][operationresources.cpp:89]: Invalid equipment type ( has to be an archetype ) in operation resources: outcome_modifiers
+[06:29:34][no_game_date][operationresources.cpp:89]: Invalid equipment type ( has to be an archetype ) in operation resources: operation_outcome
+[06:29:34][no_game_date][operationresources.cpp:89]: Invalid equipment type ( has to be an archetype ) in operation resources: cost_modifiers
+[06:29:34][no_game_date][operationresources.cpp:89]: Invalid equipment type ( has to be an archetype ) in operation resources: operation_cost
+[06:29:34][no_game_date][operationresources.cpp:89]: Invalid equipment type ( has to be an archetype ) in operation resources: awarded_tokens
+[06:29:34][no_game_date][operationresources.cpp:89]: Invalid equipment type ( has to be an archetype ) in operation resources: MIL_token_box_weapon_success
+[06:29:34][no_game_date][operationresources.cpp:89]: Invalid equipment type ( has to be an archetype ) in operation resources: outcome_execute
+[06:29:34][no_game_date][operationresources.cpp:89]: Invalid equipment type ( has to be an archetype ) in operation resources: ROOT
+[06:29:34][no_game_date][operationresources.cpp:89]: Invalid equipment type ( has to be an archetype ) in operation resources: add_operation_token
+[06:29:34][no_game_date][operationresources.cpp:89]: Invalid equipment type ( has to be an archetype ) in operation resources: tag
+[06:29:34][no_game_date][operationresources.cpp:89]: Invalid equipment type ( has to be an archetype ) in operation resources: token
+[06:29:34][no_game_date][operation.cpp:529]: Operation: MIL_operation_box_weapon has an outcome_chance of 0 but also has an outcome defined
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unknown modifier: planning_factor, near line: 507" in file: "common/ideas/BA_MIL.txt" near line: 507
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unknown modifier: planning_factor, near line: 519" in file: "common/ideas/BA_MIL.txt" near line: 519
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unknown modifier: planning_factor, near line: 531" in file: "common/ideas/BA_MIL.txt" near line: 531
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unknown modifier: planning_factor, near line: 543" in file: "common/ideas/BA_MIL.txt" near line: 543
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unknown modifier: operation_coup_government_risk, near line: 1813
+Unknown modifier: operation_coup_government_cost, near line: 1814" in file: "common/unit_leader/00_traits.txt" near line: 1816
+[06:29:35][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/factions/rules/dismissal_rules.txt line: 15 democratic. use var:var_name to explicitly use variables in effects/triggers
+[06:29:35][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/factions/rules/war_declaration_rules.txt line: 137 neutrality. use var:var_name to explicitly use variables in effects/triggers
+[06:29:35][no_game_date][database_scoped_variables.cpp:63]: invalid database object for effect/trigger:  file: common/factions/goals/faction_goals_long_term.txt line: 371 artillery_equipment. use var:var_name to explicitly use variables in effects/triggers
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unknown modifier: communism_drift, near line: 44" in file: "common/factions/goals/faction_manifests.txt" near line: 44
+[06:29:35][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/factions/templates/generic_factions.txt line: 11 democratic. use var:var_name to explicitly use variables in effects/triggers
+[06:29:35][no_game_date][faction_template.cpp:77]: Default rule 'joining_rule_has_no_offensive_war' did not match any of the rule groups in 'faction_template_generic'
+[06:29:35][no_game_date][faction_template.cpp:77]: Default rule 'dismissal_rule_offensive_war' did not match any of the rule groups in 'faction_template_generic'
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unable to find item with id: faction_goal_air_superiority: , near line: 53" in file: "common/factions/templates/generic_factions.txt" near line: 54
+[06:29:35][no_game_date][faction_template.cpp:34]: Faction goal not found in the database: faction_manifest_strategic_resource_control
+[06:29:35][no_game_date][faction_template.cpp:77]: Default rule 'joining_rule_same_ideology' did not match any of the rule groups in 'faction_template_industrial_focus'
+[06:29:35][no_game_date][faction_template.cpp:77]: Default rule 'joining_rule_has_no_war' did not match any of the rule groups in 'faction_template_industrial_focus'
+[06:29:35][no_game_date][faction_template.cpp:77]: Default rule 'faction_peace_rule_ideology_focus' did not match any of the rule groups in 'faction_template_industrial_focus'
+[06:29:35][no_game_date][faction_template.cpp:77]: Default rule 'joining_rule_has_no_offensive_war' did not match any of the rule groups in 'faction_template_gsc'
+[06:29:35][no_game_date][faction_template.cpp:77]: Default rule 'dismissal_rule_offensive_war' did not match any of the rule groups in 'faction_template_gsc'
+[06:29:35][no_game_date][effect.cpp:435]: Invalid scope type for effect set_character_flag in common/decisions/BA_ARI_decisions.txt line : 1816
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: ``, near line: 449" in file: "common/decisions/BA_CAE_war_economy_decisions.txt" near line: 449
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: CAE_medium_armor_army, near line: 453" in file: "common/decisions/BA_CAE_war_economy_decisions.txt" near line: 497
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: CAE_heavy_armor_army, near line: 501" in file: "common/decisions/BA_CAE_war_economy_decisions.txt" near line: 545
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: CAE_produce_infantry_equipment, near line: 548" in file: "common/decisions/BA_CAE_war_economy_decisions.txt" near line: 584
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: CAE_produce_fire_support_equipment, near line: 587" in file: "common/decisions/BA_CAE_war_economy_decisions.txt" near line: 623
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: CAE_produce_truck_equipment, near line: 626" in file: "common/decisions/BA_CAE_war_economy_decisions.txt" near line: 648
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: CAE_produce_infantry_vehicle_equipment, near line: 650" in file: "common/decisions/BA_CAE_war_economy_decisions.txt" near line: 679
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: CAE_produce_light_vehicle_equipment, near line: 681" in file: "common/decisions/BA_CAE_war_economy_decisions.txt" near line: 702
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: CAE_produce_medium_vehicle_equipment, near line: 704" in file: "common/decisions/BA_CAE_war_economy_decisions.txt" near line: 737
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: CAE_produce_heavy_vehicle_equipment, near line: 739" in file: "common/decisions/BA_CAE_war_economy_decisions.txt" near line: 772
+[06:29:35][no_game_date][decision.cpp:4529]: Duplicate decision. GEH_dualHeaded_makoto_send_away_hina is a duplicate.
+[06:29:35][no_game_date][decision.cpp:4529]: Duplicate decision. GEH_dualHeaded_hina_let_makoto is a duplicate.
+[06:29:35][no_game_date][decision.cpp:4529]: Duplicate decision. GST_TRI_they_shall_not_pass is a duplicate.
+[06:29:35][no_game_date][database_scoped_variables.cpp:63]: invalid database object for effect/trigger:  file: common/decisions/BA_Great_Game_decisions.txt line: 725 small_uav_recon_equipment. use var:var_name to explicitly use variables in effects/triggers
+[06:29:35][no_game_date][trigger.cpp:700]: Invalid trigger 'political_power' in common/decisions/BA_MIL_BOP_decisions.txt line : 22
+[06:29:35][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: political_power, near line: 22" in file: "common/decisions/BA_MIL_BOP_decisions.txt" near line: 23
+[06:29:35][no_game_date][trigger.cpp:700]: Invalid trigger 'stability' in common/decisions/BA_MIL_BOP_decisions.txt line : 69
+[06:29:35][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: stability, near line: 69" in file: "common/decisions/BA_MIL_BOP_decisions.txt" near line: 70
+[06:29:35][no_game_date][trigger.cpp:700]: Invalid trigger 'is_core' in common/decisions/BA_MIL_BOP_decisions.txt line : 209
+[06:29:35][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: is_core, near line: 209" in file: "common/decisions/BA_MIL_BOP_decisions.txt" near line: 211
+[06:29:35][no_game_date][trigger.cpp:700]: Invalid trigger 'political_power' in common/decisions/BA_Mil_award_decisions.txt line : 162
+[06:29:35][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: political_power, near line: 162" in file: "common/decisions/BA_Mil_award_decisions.txt" near line: 163
+[06:29:35][no_game_date][trigger.cpp:700]: Invalid trigger 'political_power' in common/decisions/BA_Mil_award_decisions.txt line : 166
+[06:29:35][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: political_power, near line: 166" in file: "common/decisions/BA_Mil_award_decisions.txt" near line: 167
+[06:29:35][no_game_date][trigger.cpp:700]: Invalid trigger 'political_power' in common/decisions/BA_Mil_award_decisions.txt line : 204
+[06:29:35][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: political_power, near line: 204" in file: "common/decisions/BA_Mil_award_decisions.txt" near line: 205
+[06:29:35][no_game_date][trigger.cpp:700]: Invalid trigger 'political_power' in common/decisions/BA_Mil_award_decisions.txt line : 208
+[06:29:35][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: political_power, near line: 208" in file: "common/decisions/BA_Mil_award_decisions.txt" near line: 209
+[06:29:35][no_game_date][trigger.cpp:700]: Invalid trigger 'political_power' in common/decisions/BA_Mil_award_decisions.txt line : 254
+[06:29:35][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: political_power, near line: 254" in file: "common/decisions/BA_Mil_award_decisions.txt" near line: 255
+[06:29:35][no_game_date][trigger.cpp:700]: Invalid trigger 'political_power' in common/decisions/BA_Mil_award_decisions.txt line : 296
+[06:29:35][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: political_power, near line: 296" in file: "common/decisions/BA_Mil_award_decisions.txt" near line: 297
+[06:29:35][no_game_date][trigger.cpp:700]: Invalid trigger 'political_power' in common/decisions/BA_Mil_award_decisions.txt line : 300
+[06:29:35][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: political_power, near line: 300" in file: "common/decisions/BA_Mil_award_decisions.txt" near line: 301
+[06:29:35][no_game_date][trigger.cpp:700]: Invalid trigger 'political_power' in common/decisions/BA_Mil_award_decisions.txt line : 396
+[06:29:35][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: political_power, near line: 396" in file: "common/decisions/BA_Mil_award_decisions.txt" near line: 397
+[06:29:35][no_game_date][trigger.cpp:700]: Invalid trigger 'political_power' in common/decisions/BA_Mil_award_decisions.txt line : 495
+[06:29:35][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: political_power, near line: 495" in file: "common/decisions/BA_Mil_award_decisions.txt" near line: 496
+[06:29:35][no_game_date][trigger.cpp:700]: Invalid trigger 'political_power' in common/decisions/BA_Mil_award_decisions.txt line : 499
+[06:29:35][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: political_power, near line: 499" in file: "common/decisions/BA_Mil_award_decisions.txt" near line: 500
+[06:29:35][no_game_date][trigger.cpp:700]: Invalid trigger 'political_power' in common/decisions/BA_Mil_award_decisions.txt line : 531
+[06:29:35][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: political_power, near line: 531" in file: "common/decisions/BA_Mil_award_decisions.txt" near line: 532
+[06:29:35][no_game_date][trigger.cpp:700]: Invalid trigger 'political_power' in common/decisions/BA_Mil_award_decisions.txt line : 535
+[06:29:35][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: political_power, near line: 535" in file: "common/decisions/BA_Mil_award_decisions.txt" near line: 536
+[06:29:35][no_game_date][trigger.cpp:700]: Invalid trigger 'political_power' in common/decisions/BA_Mil_award_decisions.txt line : 575
+[06:29:35][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: political_power, near line: 575" in file: "common/decisions/BA_Mil_award_decisions.txt" near line: 576
+[06:29:35][no_game_date][trigger.cpp:700]: Invalid trigger 'political_power' in common/decisions/BA_Mil_award_decisions.txt line : 617
+[06:29:35][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: political_power, near line: 617" in file: "common/decisions/BA_Mil_award_decisions.txt" near line: 618
+[06:29:35][no_game_date][trigger.cpp:700]: Invalid trigger 'political_power' in common/decisions/BA_Mil_award_decisions.txt line : 621
+[06:29:35][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: political_power, near line: 621" in file: "common/decisions/BA_Mil_award_decisions.txt" near line: 622
+[06:29:35][no_game_date][trigger.cpp:700]: Invalid trigger 'political_power' in common/decisions/BA_Mil_award_decisions.txt line : 683
+[06:29:35][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: political_power, near line: 683" in file: "common/decisions/BA_Mil_award_decisions.txt" near line: 684
+[06:29:35][no_game_date][trigger.cpp:700]: Invalid trigger 'political_power' in common/decisions/BA_Mil_award_decisions.txt line : 749
+[06:29:35][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: political_power, near line: 749" in file: "common/decisions/BA_Mil_award_decisions.txt" near line: 750
+[06:29:35][no_game_date][trigger.cpp:700]: Invalid trigger 'political_power' in common/decisions/BA_Mil_award_decisions.txt line : 860
+[06:29:35][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: political_power, near line: 860" in file: "common/decisions/BA_Mil_award_decisions.txt" near line: 861
+[06:29:35][no_game_date][trigger.cpp:700]: Invalid trigger 'political_power' in common/decisions/BA_Mil_award_decisions.txt line : 949
+[06:29:35][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: political_power, near line: 949" in file: "common/decisions/BA_Mil_award_decisions.txt" near line: 950
+[06:29:35][no_game_date][trigger.cpp:700]: Invalid trigger 'political_power' in common/decisions/BA_Mil_award_decisions.txt line : 1325
+[06:29:35][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: political_power, near line: 1325" in file: "common/decisions/BA_Mil_award_decisions.txt" near line: 1326
+[06:29:35][no_game_date][trigger.cpp:700]: Invalid trigger 'political_power' in common/decisions/BA_Mil_award_decisions.txt line : 1329
+[06:29:35][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: political_power, near line: 1329" in file: "common/decisions/BA_Mil_award_decisions.txt" near line: 1330
+[06:29:35][no_game_date][trigger.cpp:700]: Invalid trigger 'political_power' in common/decisions/BA_Mil_award_decisions.txt line : 1360
+[06:29:35][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: political_power, near line: 1360" in file: "common/decisions/BA_Mil_award_decisions.txt" near line: 1361
+[06:29:35][no_game_date][trigger.cpp:700]: Invalid trigger 'political_power' in common/decisions/BA_Mil_award_decisions.txt line : 1364
+[06:29:35][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: political_power, near line: 1364" in file: "common/decisions/BA_Mil_award_decisions.txt" near line: 1365
+[06:29:35][no_game_date][trigger.cpp:700]: Invalid trigger 'political_power' in common/decisions/BA_Mil_award_decisions.txt line : 1388
+[06:29:35][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: political_power, near line: 1388" in file: "common/decisions/BA_Mil_award_decisions.txt" near line: 1389
+[06:29:35][no_game_date][trigger.cpp:700]: Invalid trigger 'political_power' in common/decisions/BA_Mil_award_decisions.txt line : 1392
+[06:29:35][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: political_power, near line: 1392" in file: "common/decisions/BA_Mil_award_decisions.txt" near line: 1393
+[06:29:35][no_game_date][decision.cpp:488]: Decision scripted with modifier, but no days_remove duration. ID: TRI_invest_in_region_factory_1
+[06:29:35][no_game_date][decision.cpp:488]: Decision scripted with modifier, but no days_remove duration. ID: TRI_invest_in_region_factory_1
+[06:29:35][no_game_date][decision.cpp:488]: Decision scripted with modifier, but no days_remove duration. ID: TRI_invest_in_region_factory_2
+[06:29:35][no_game_date][decision.cpp:488]: Decision scripted with modifier, but no days_remove duration. ID: TRI_invest_in_region_factory_2
+[06:29:35][no_game_date][scopedvariable.cpp:560]: Token resources_hic is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[06:29:35][no_game_date][effect.cpp:358]: Error: "Invalid database item: land: land, near line: 2132" in file: "common/national_focus/BA_Arius_Liberation_Front.txt" near line: 2133
+[06:29:35][no_game_date][effect.cpp:358]: Error: "Invalid database item: land: land, near line: 2202" in file: "common/national_focus/BA_Arius_Liberation_Front.txt" near line: 2203
+[06:29:35][no_game_date][nationalfocus.cpp:620]: Error in focus: GEH_peace_at_hand (common/national_focus/BA_Gehenna.txt:826 )
+relative_focus_id: GEH_Imminent does not exist. Relative focus must be scripted before this.
+[06:29:35][no_game_date][database_scoped_variables.cpp:63]: invalid database object for effect/trigger:  file: common/national_focus/BA_Gehenna.txt line: 1447 infantry_weapons. use var:var_name to explicitly use variables in effects/triggers
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: available, near line: 1679" in file: "common/national_focus/BA_MIL.txt" near line: 1684
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: completion_reward, near line: 1685" in file: "common/national_focus/BA_MIL.txt" near line: 1688
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: ai_will_do, near line: 1689" in file: "common/national_focus/BA_MIL.txt" near line: 1689
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 1691" in file: "common/national_focus/BA_MIL.txt" near line: 1737
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 1738" in file: "common/national_focus/BA_MIL.txt" near line: 1761
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 1762" in file: "common/national_focus/BA_MIL.txt" near line: 1786
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 1787" in file: "common/national_focus/BA_MIL.txt" near line: 1819
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 1820" in file: "common/national_focus/BA_MIL.txt" near line: 1846
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 1847" in file: "common/national_focus/BA_MIL.txt" near line: 1865
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 1869" in file: "common/national_focus/BA_MIL.txt" near line: 1896
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 1897" in file: "common/national_focus/BA_MIL.txt" near line: 1940
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 1941" in file: "common/national_focus/BA_MIL.txt" near line: 1977
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 1978" in file: "common/national_focus/BA_MIL.txt" near line: 2011
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 2012" in file: "common/national_focus/BA_MIL.txt" near line: 2049
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 2050" in file: "common/national_focus/BA_MIL.txt" near line: 2092
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 2093" in file: "common/national_focus/BA_MIL.txt" near line: 2123
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 2124" in file: "common/national_focus/BA_MIL.txt" near line: 2171
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 2172" in file: "common/national_focus/BA_MIL.txt" near line: 2219
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 2220" in file: "common/national_focus/BA_MIL.txt" near line: 2254
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 2255" in file: "common/national_focus/BA_MIL.txt" near line: 2288
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 2289" in file: "common/national_focus/BA_MIL.txt" near line: 2320
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 2321" in file: "common/national_focus/BA_MIL.txt" near line: 2351
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 2352" in file: "common/national_focus/BA_MIL.txt" near line: 2397
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 2398" in file: "common/national_focus/BA_MIL.txt" near line: 2412
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 2413" in file: "common/national_focus/BA_MIL.txt" near line: 2427
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 2436" in file: "common/national_focus/BA_MIL.txt" near line: 2457
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 2458" in file: "common/national_focus/BA_MIL.txt" near line: 2508
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 2509" in file: "common/national_focus/BA_MIL.txt" near line: 2551
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 2552" in file: "common/national_focus/BA_MIL.txt" near line: 2594
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 2595" in file: "common/national_focus/BA_MIL.txt" near line: 2628
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 2629" in file: "common/national_focus/BA_MIL.txt" near line: 2650
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 2651" in file: "common/national_focus/BA_MIL.txt" near line: 2672
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 2673" in file: "common/national_focus/BA_MIL.txt" near line: 2708
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 2709" in file: "common/national_focus/BA_MIL.txt" near line: 2744
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 2745" in file: "common/national_focus/BA_MIL.txt" near line: 2768
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 2769" in file: "common/national_focus/BA_MIL.txt" near line: 2791
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 2792" in file: "common/national_focus/BA_MIL.txt" near line: 2817
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 2818" in file: "common/national_focus/BA_MIL.txt" near line: 2839
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 2840" in file: "common/national_focus/BA_MIL.txt" near line: 2866
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 2867" in file: "common/national_focus/BA_MIL.txt" near line: 2903
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 2904" in file: "common/national_focus/BA_MIL.txt" near line: 2922
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 2923" in file: "common/national_focus/BA_MIL.txt" near line: 2941
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 2942" in file: "common/national_focus/BA_MIL.txt" near line: 2969
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 2970" in file: "common/national_focus/BA_MIL.txt" near line: 2999
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 3000" in file: "common/national_focus/BA_MIL.txt" near line: 3021
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 3022" in file: "common/national_focus/BA_MIL.txt" near line: 3048
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 3049" in file: "common/national_focus/BA_MIL.txt" near line: 3070
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 3072" in file: "common/national_focus/BA_MIL.txt" near line: 3094
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 3096" in file: "common/national_focus/BA_MIL.txt" near line: 3118
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 3120" in file: "common/national_focus/BA_MIL.txt" near line: 3142
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 3144" in file: "common/national_focus/BA_MIL.txt" near line: 3162
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 3164" in file: "common/national_focus/BA_MIL.txt" near line: 3188
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Unexpected token: focus, near line: 3190" in file: "common/national_focus/BA_MIL.txt" near line: 3250
+[06:29:35][no_game_date][nationalfocus.cpp:2472]: MIL_Tower_mid_term_Project: Couldn't find dependency { 
+[06:29:35][no_game_date][history.cpp:279]: ALR - is missing a history file.
+[06:29:35][no_game_date][history.cpp:279]: AUR - is missing a history file.
+[06:29:35][no_game_date][ai_strategy.cpp:6907]: common/ai_strategy/GEH.txt:1 AI strategy GEH_unit_production with missing or empty abort condition, possibly a scripting mistake. If you intend to have no abort condition, add an 'abort = { always = no }' statement to suppress this error message. Otherwise, consider using 'abort_when_not_enabled = yes'.
+[06:29:35][no_game_date][ai_strategy.cpp:6907]: common/ai_strategy/TRI.txt:1 AI strategy TRI_unit_production with missing or empty abort condition, possibly a scripting mistake. If you intend to have no abort condition, add an 'abort = { always = no }' statement to suppress this error message. Otherwise, consider using 'abort_when_not_enabled = yes'.
+[06:29:35][no_game_date][ai_strategy.cpp:6900]: common/ai_strategy/default.txt:1 AI strategy default_unit_production with missing or empty enable trigger, possibly a scripting mistake. If you intend for the AI strategy to always be enabled, add an 'enable = { always = yes }' statement to suppress this error message.
+[06:29:35][no_game_date][ai_strategy.cpp:6907]: common/ai_strategy/default.txt:1 AI strategy default_unit_production with missing or empty abort condition, possibly a scripting mistake. If you intend to have no abort condition, add an 'abort = { always = no }' statement to suppress this error message. Otherwise, consider using 'abort_when_not_enabled = yes'.
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "invalid modifier: land_mastery_gain_factor, near line: 65" in file: "common/dynamic_modifiers/MIL_award_dec_dynamic_modifiers.txt" near line: 65
+[06:29:35][no_game_date][persistent.cpp:67]: Error: "Not a valid value: common/scripted_effects/BARE_commont_scripted_effects.txt:28: upgrade_naval_department, near line: 28" in file: "common/scripted_effects/BARE_commont_scripted_effects.txt" near line: 28
+[06:29:35][no_game_date][effect.cpp:358]: Error: "Malformed token: var:ally, near line: 206" in file: "common/scripted_effects/BA_Great_Game_scripted_effects.txt" near line: 209
+[06:29:35][no_game_date][effect.cpp:358]: Error: "Malformed token: var:ally, near line: 211" in file: "common/scripted_effects/BA_Great_Game_scripted_effects.txt" near line: 214
+[06:29:35][no_game_date][effect.cpp:358]: Error: "Malformed token: var:ally, near line: 218" in file: "common/scripted_effects/BA_Great_Game_scripted_effects.txt" near line: 221
+[06:29:35][no_game_date][effect.cpp:358]: Error: "Malformed token: var:ally, near line: 223" in file: "common/scripted_effects/BA_Great_Game_scripted_effects.txt" near line: 226
+[06:29:35][no_game_date][effect.cpp:358]: Error: "Unexpected token: enemy, near line: 295" in file: "common/scripted_effects/BA_Great_Game_scripted_effects.txt" near line: 296
+[06:29:35][no_game_date][scopedvariable.cpp:560]: Token resources_fe is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[06:29:35][no_game_date][scopedvariable.cpp:560]: Token resources_ec is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[06:29:35][no_game_date][scopedvariable.cpp:560]: Token resources_pm is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[06:29:35][no_game_date][scopedvariable.cpp:560]: Token resources_rm is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[06:29:35][no_game_date][scopedvariable.cpp:560]: Token resources_cm is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[06:29:35][no_game_date][scopedvariable.cpp:560]: Token resources_mm is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[06:29:36][no_game_date][effect.cpp:445]: Invalid effect 'add_temporary_buff_to_units' in common/abilities/generic_leader_abilities.txt line : 39
+[06:29:36][no_game_date][effect.cpp:358]: Error: "Unknown effect-type: add_temporary_buff_to_units, near line: 39" in file: "common/abilities/generic_leader_abilities.txt" near line: 50
+[06:29:36][no_game_date][effect.cpp:445]: Invalid effect 'add_temporary_buff_to_units' in common/abilities/generic_leader_abilities.txt line : 70
+[06:29:36][no_game_date][effect.cpp:358]: Error: "Unknown effect-type: add_temporary_buff_to_units, near line: 70" in file: "common/abilities/generic_leader_abilities.txt" near line: 81
+[06:29:36][no_game_date][ability_database.cpp:80]: SubUnit <hq_engineer> attempts to unlock ability deeper_dig_in, which doesn't exist.
+[06:29:36][no_game_date][ability_database.cpp:80]: SubUnit <hq_recon> attempts to unlock ability defense_in_depth, which doesn't exist.
+[06:29:36][no_game_date][ability_database.cpp:80]: SubUnit <hq_field_hospital> attempts to unlock ability extra_medics, which doesn't exist.
+[06:29:36][no_game_date][ability_database.cpp:80]: SubUnit <hq_logistics> attempts to unlock ability front_overrun, which doesn't exist.
+[06:29:36][no_game_date][ability_database.cpp:80]: SubUnit <hq_signal> attempts to unlock ability rotating_reserves, which doesn't exist.
+[06:29:36][no_game_date][ai_strategy_database.cpp:311]: common/ai_strategy_plans/TRI_historical_strategy_plan.txt: Duplicate AI strategy plan id 'ARI_historical_plan'
+[06:29:36][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: gfx/army_icons/army_icons.txt line: 405 democratic. use var:var_name to explicitly use variables in effects/triggers
+[06:29:36][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: gfx/army_icons/army_icons.txt line: 414 fascism. use var:var_name to explicitly use variables in effects/triggers
+[06:29:36][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: gfx/army_icons/army_icons.txt line: 423 neutrality. use var:var_name to explicitly use variables in effects/triggers
+[06:29:36][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: gfx/army_icons/army_icons.txt line: 481 fascism. use var:var_name to explicitly use variables in effects/triggers
+[06:29:36][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: gfx/army_icons/army_icons.txt line: 490 communism. use var:var_name to explicitly use variables in effects/triggers
+[06:29:36][no_game_date][occupationlawdatabase.cpp:286]: no missing garrison law is defined. Using default law
+[06:29:36][no_game_date][countrytag.cpp:135]: ENG - is not in the tag list
+[06:29:36][no_game_date][countrytag.cpp:135]: GER - is not in the tag list
+[06:29:36][no_game_date][countrytag.cpp:135]: JAP - is not in the tag list
+[06:29:36][no_game_date][countrytag.cpp:135]: SOV - is not in the tag list
+[06:29:36][no_game_date][countrytag.cpp:135]: USA - is not in the tag list
+[06:29:36][no_game_date][faction_rule.cpp:53]: Peace action modifier 'faction_rule_modifier_encourage_puppet' referenced in 'faction_peace_rule_puppeting_focus' is missing or is not a faction modifier (NOTE: peace action modifiers used by faction rules must use 'faction_modifier = yes')
+[06:29:36][no_game_date][faction_rule.cpp:53]: Peace action modifier 'faction_rule_modifier_discourage_puppet' referenced in 'faction_peace_rule_no_puppeting' is missing or is not a faction modifier (NOTE: peace action modifiers used by faction rules must use 'faction_modifier = yes')
+[06:29:36][no_game_date][faction_rule.cpp:53]: Peace action modifier 'faction_rule_modifier_encourage_liberate' referenced in 'faction_peace_rule_liberation_focus' is missing or is not a faction modifier (NOTE: peace action modifiers used by faction rules must use 'faction_modifier = yes')
+[06:29:36][no_game_date][faction_rule.cpp:53]: Peace action modifier 'faction_rule_modifier_encourage_take_states' referenced in 'faction_peace_rule_conquest_focus' is missing or is not a faction modifier (NOTE: peace action modifiers used by faction rules must use 'faction_modifier = yes')
+[06:29:36][no_game_date][faction_rule.cpp:53]: Peace action modifier 'faction_rule_modifier_encourage_take_claimed_states' referenced in 'faction_peace_take_claimed_focus' is missing or is not a faction modifier (NOTE: peace action modifiers used by faction rules must use 'faction_modifier = yes')
+[06:29:36][no_game_date][unit_stats.cpp:312]: carrier_sub_detection is an equipment stat (cf. EQUIPMENT_STATS_META in code) but is not listed in script enum script_enum_equipment_stat
+[06:29:36][no_game_date][unit_stats.cpp:312]: carrier_surface_detection is an equipment stat (cf. EQUIPMENT_STATS_META in code) but is not listed in script enum script_enum_equipment_stat
+[06:29:36][no_game_date][unit_stats.cpp:312]: submarine_carrier_size is an equipment stat (cf. EQUIPMENT_STATS_META in code) but is not listed in script enum script_enum_equipment_stat
+[06:29:36][no_game_date][equipment_category.cpp:364]: support_ship is an equipment stat (cf. EQUIPMENT_CATEGORY_META in code) but is not listed in script enum script_enum_equipment_category
+[06:29:36][no_game_date][equipment_database.cpp:656]: support_ship is an equipment type or equipment category but is not in script enum script_enum_equipment_bonus_type. This script enum is used as documentation and should be updated at the same time as either game/common/units/equipment or the equipment categories (hardcoded in code).
+[06:29:36][no_game_date][equipment_database.cpp:649]: air_defense_weapons is in script enum script_enum_equipment_bonus_type but is not an equipment type (cf. game/common/units/equipment) nor an equipment category (cf. script_enum_equipment_category)
+[06:29:36][no_game_date][event.cpp:362]: CAE_forced_labor.1 non-hidden event with no options defined
+[06:29:36][no_game_date][eventmanager.cpp:559]: events/BA_CAE_events.txt:8: CAE_forced_labor.1: Event has no options.
+[06:29:36][no_game_date][event.cpp:362]: CAE_hunt_guerrilla.1 non-hidden event with no options defined
+[06:29:36][no_game_date][eventmanager.cpp:559]: events/BA_CAE_events.txt:26: CAE_hunt_guerrilla.1: Event has no options.
+[06:29:36][no_game_date][event.cpp:362]: MIL_event.7 non-hidden event with no options defined
+[06:29:36][no_game_date][eventmanager.cpp:559]: events/BA_MIL_events.txt:491: MIL_event.7: Event has no options.
+[06:29:36][no_game_date][event.cpp:362]: MIL_event.8 non-hidden event with no options defined
+[06:29:36][no_game_date][eventmanager.cpp:559]: events/BA_MIL_events.txt:501: MIL_event.8: Event has no options.
+[06:29:36][no_game_date][event.cpp:362]: MIL_event.9 non-hidden event with no options defined
+[06:29:36][no_game_date][eventmanager.cpp:559]: events/BA_MIL_events.txt:518: MIL_event.9: Event has no options.
+[06:29:36][no_game_date][event.cpp:362]: MIL_event.10 non-hidden event with no options defined
+[06:29:36][no_game_date][eventmanager.cpp:559]: events/BA_MIL_events.txt:536: MIL_event.10: Event has no options.
+[06:29:36][no_game_date][event.cpp:362]: MIL_event.11 non-hidden event with no options defined
+[06:29:36][no_game_date][eventmanager.cpp:559]: events/BA_MIL_events.txt:559: MIL_event.11: Event has no options.
+[06:29:36][no_game_date][event.cpp:362]: MIL_event.12 non-hidden event with no options defined
+[06:29:36][no_game_date][eventmanager.cpp:559]: events/BA_MIL_events.txt:567: MIL_event.12: Event has no options.
+[06:29:36][no_game_date][scopedvariable.cpp:560]: Token resources_hic is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[06:29:36][no_game_date][database_scoped_variables.cpp:267]: invalid database object for effect/trigger: rocket_artillery. use var:var_name to explicitly use variables in effects/triggers
+[06:29:36][no_game_date][database_scoped_variables.cpp:267]: invalid database object for effect/trigger: tech_mountaineers. use var:var_name to explicitly use variables in effects/triggers
+[06:29:36][no_game_date][database_scoped_variables.cpp:267]: invalid database object for effect/trigger: tech_mountaineers. use var:var_name to explicitly use variables in effects/triggers
+[06:29:36][no_game_date][database_scoped_variables.cpp:267]: invalid database object for effect/trigger: marines. use var:var_name to explicitly use variables in effects/triggers
+[06:29:36][no_game_date][database_scoped_variables.cpp:267]: invalid database object for effect/trigger: marines. use var:var_name to explicitly use variables in effects/triggers
+[06:29:36][no_game_date][database_scoped_variables.cpp:267]: invalid database object for effect/trigger: paratroopers. use var:var_name to explicitly use variables in effects/triggers
+[06:29:36][no_game_date][database_scoped_variables.cpp:267]: invalid database object for effect/trigger: paratroopers. use var:var_name to explicitly use variables in effects/triggers
+[06:29:36][no_game_date][database_scoped_variables.cpp:267]: invalid database object for effect/trigger: rangers_tech. use var:var_name to explicitly use variables in effects/triggers
+[06:29:36][no_game_date][database_scoped_variables.cpp:267]: invalid database object for effect/trigger: rangers_tech. use var:var_name to explicitly use variables in effects/triggers
+[06:29:36][no_game_date][database_scoped_variables.cpp:267]: invalid database object for effect/trigger: construction4. use var:var_name to explicitly use variables in effects/triggers
+[06:29:36][no_game_date][database_scoped_variables.cpp:267]: invalid database object for effect/trigger: construction4. use var:var_name to explicitly use variables in effects/triggers
+[06:29:36][no_game_date][database_scoped_variables.cpp:267]: invalid database object for effect/trigger: construction4. use var:var_name to explicitly use variables in effects/triggers
+[06:29:36][no_game_date][database_scoped_variables.cpp:267]: invalid database object for effect/trigger: mechanical_computing. use var:var_name to explicitly use variables in effects/triggers
+[06:29:36][no_game_date][database_scoped_variables.cpp:267]: invalid database object for effect/trigger: mechanical_computing. use var:var_name to explicitly use variables in effects/triggers
+[06:29:36][no_game_date][database_scoped_variables.cpp:267]: invalid database object for effect/trigger: fighting_drone_MK1. use var:var_name to explicitly use variables in effects/triggers
+[06:29:36][no_game_date][triggerimplementation.cpp:10339]: Failed to find autonomy_state: autonomy_dominion for has_autonomy_state trigger.
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/collections/collections.txt:64: has_autonomy_state
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_Networked_Weapons_Necessary (common/operations/Mil_operations.txt:152: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/operations/Mil_operations.txt:152: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_Networked_Weapons_Necessary (common/operations/Mil_operations.txt:160: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/operations/Mil_operations.txt:160: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_Special_Forces_Hell_Training_Unique (common/decisions/categories/BA_MIL_decisions.txt:106: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/categories/BA_MIL_decisions.txt:106: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_Millennium_Steel_Wall (common/decisions/categories/BA_MIL_decisions.txt:110: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/categories/BA_MIL_decisions.txt:110: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_Soaring_Sky_Eagle (common/decisions/categories/BA_MIL_decisions.txt:114: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/categories/BA_MIL_decisions.txt:114: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_build_grand_festival_work (common/decisions/BA_MIL_Sport_decisions.txt:10: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_Sport_decisions.txt:10: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:12401]: Invalid decision in has_active_timed_decision trigger: has_active_mission = MIL_Sport_Constructing_Sports_Venues
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_Sport_decisions.txt:127: has_active_mission
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_build_grand_festival_work (common/decisions/BA_MIL_Sport_decisions.txt:165: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_Sport_decisions.txt:165: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:12401]: Invalid decision in has_active_timed_decision trigger: has_active_mission = MIL_Sport_Expand_Executive_Committee
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_Sport_decisions.txt:259: has_active_mission
+[06:29:36][no_game_date][triggerimplementation.cpp:12401]: Invalid decision in has_active_timed_decision trigger: has_active_mission = MIL_Sport_Connect_Imaginary_Automation
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_Sport_decisions.txt:270: has_active_mission
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_build_grand_festival_work (common/decisions/BA_MIL_Sport_decisions.txt:307: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_Sport_decisions.txt:307: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_yuuka_unhappy (common/decisions/BA_MIL_Sport_decisions.txt:419: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_Sport_decisions.txt:419: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_yuuka_unhappy (common/decisions/BA_MIL_Sport_decisions.txt:570: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_Sport_decisions.txt:570: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_The_power_of_Technology (common/decisions/BA_MIL_Sport_decisions.txt:654: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_Sport_decisions.txt:654: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_opposition_hidden_in_the_dark (common/decisions/BA_MIL_Sport_decisions.txt:729: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_Sport_decisions.txt:729: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:12401]: Invalid decision in has_active_timed_decision trigger: has_active_mission = MIL_Sport_Constructing_Sports_Venues
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_Sport_decisions.txt:784: has_active_mission
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_build_grand_festival_work (common/decisions/BA_MIL_Sport_decisions.txt:818: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_Sport_decisions.txt:818: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:12401]: Invalid decision in has_active_timed_decision trigger: has_active_mission = MIL_Sport_Constructing_Sports_Venues
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_Sport_decisions.txt:875: has_active_mission
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_The_construction_work_is_in_full_swing (common/decisions/BA_MIL_Sport_decisions.txt:910: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_Sport_decisions.txt:910: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:12401]: Invalid decision in has_active_timed_decision trigger: has_active_mission = MIL_Sport_Constructing_Sports_Venues
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_Sport_decisions.txt:967: has_active_mission
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_make_more_money (common/decisions/BA_MIL_Sport_decisions.txt:996: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_Sport_decisions.txt:996: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_The_eve_of_the_grand_festival (common/decisions/BA_MIL_Sport_decisions.txt:1062: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_Sport_decisions.txt:1062: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_yuuka_unhappy (common/decisions/BA_MIL_Sport_decisions.txt:1073: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_Sport_decisions.txt:1073: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_make_more_money (common/decisions/BA_MIL_Sport_decisions.txt:1074: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_Sport_decisions.txt:1074: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_reduce_cost (common/decisions/BA_MIL_Sport_decisions.txt:1075: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_Sport_decisions.txt:1075: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_need_help (common/decisions/BA_MIL_Sport_decisions.txt:1077: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_Sport_decisions.txt:1077: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_we_can_do_it_by_ourselves (common/decisions/BA_MIL_Sport_decisions.txt:1078: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_Sport_decisions.txt:1078: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_build_grand_festival_work (common/decisions/BA_MIL_Sport_decisions.txt:1080: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_Sport_decisions.txt:1080: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_opposition_hidden_in_the_dark (common/decisions/BA_MIL_Sport_decisions.txt:1081: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_Sport_decisions.txt:1081: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_The_power_of_Technology (common/decisions/BA_MIL_Sport_decisions.txt:1082: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_Sport_decisions.txt:1082: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_noas_Strive (common/decisions/BA_MIL_Sport_decisions.txt:1083: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_Sport_decisions.txt:1083: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_The_construction_work_is_in_full_swing (common/decisions/BA_MIL_Sport_decisions.txt:1084: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_Sport_decisions.txt:1084: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_The_Increasingly_refined_preparations (common/decisions/BA_MIL_Sport_decisions.txt:1085: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_Sport_decisions.txt:1085: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_build_grand_festival_work (common/decisions/BA_MIL_Sport_decisions.txt:1120: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_Sport_decisions.txt:1120: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:12401]: Invalid decision in has_active_timed_decision trigger: has_active_mission = MIL_Sport_Constructing_Sports_Venues
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_Sport_decisions.txt:1172: has_active_mission
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_build_grand_festival_work (common/decisions/BA_MIL_Sport_decisions.txt:1199: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_Sport_decisions.txt:1199: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:12401]: Invalid decision in has_active_timed_decision trigger: has_active_mission = MIL_Sport_Constructing_Sports_Venues
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_Sport_decisions.txt:1251: has_active_mission
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_need_help (common/decisions/BA_MIL_Sport_decisions.txt:1278: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_Sport_decisions.txt:1278: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_need_help (common/decisions/BA_MIL_Sport_decisions.txt:1325: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_Sport_decisions.txt:1325: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_need_help (common/decisions/BA_MIL_Sport_decisions.txt:1372: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_Sport_decisions.txt:1372: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_need_help (common/decisions/BA_MIL_Sport_decisions.txt:1419: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_Sport_decisions.txt:1419: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_need_help (common/decisions/BA_MIL_Sport_decisions.txt:1466: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_Sport_decisions.txt:1466: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_The_power_of_Technology (common/decisions/BA_MIL_Sport_decisions.txt:1690: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_Sport_decisions.txt:1690: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_make_more_money (common/decisions/BA_MIL_Sport_decisions.txt:1764: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_Sport_decisions.txt:1764: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_reduce_cost (common/decisions/BA_MIL_Sport_decisions.txt:1846: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_Sport_decisions.txt:1846: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_we_can_do_it_by_ourselves (common/decisions/BA_MIL_Sport_decisions.txt:1928: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_Sport_decisions.txt:1928: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_Mechanical_Built_High_Wall (common/decisions/BA_MIL_security_reform_decisions.txt:113: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_security_reform_decisions.txt:113: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_Integrate_C_and_C (common/decisions/BA_MIL_security_reform_decisions.txt:139: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_security_reform_decisions.txt:139: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_Practical_Drone_Development (common/decisions/BA_MIL_security_reform_decisions.txt:215: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_security_reform_decisions.txt:215: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_Special_Forces_Hell_Training_Unique (common/decisions/BA_MIL_security_reform_decisions.txt:370: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_security_reform_decisions.txt:370: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_Millennium_Steel_Wall (common/decisions/BA_MIL_security_reform_decisions.txt:401: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_security_reform_decisions.txt:401: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_Soaring_Sky_Eagle (common/decisions/BA_MIL_security_reform_decisions.txt:432: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/decisions/BA_MIL_security_reform_decisions.txt:432: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_yuuka_unhappy (common/scripted_localisation/BA_MIL_Sport_scripted_localisation.txt:8: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_localisation/BA_MIL_Sport_scripted_localisation.txt:8: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_opposition_hidden_in_the_dark (common/scripted_localisation/BA_MIL_Sport_scripted_localisation.txt:21: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_localisation/BA_MIL_Sport_scripted_localisation.txt:21: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_The_power_of_Technology (common/scripted_localisation/BA_MIL_Sport_scripted_localisation.txt:34: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_localisation/BA_MIL_Sport_scripted_localisation.txt:34: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_Special_Forces_Exoskeleton_Development (common/scripted_localisation/BA_MIL_military_scripted_localisation.txt:8: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_localisation/BA_MIL_military_scripted_localisation.txt:8: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_Millennium_Steel_Wall (common/scripted_localisation/BA_MIL_military_scripted_localisation.txt:24: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_localisation/BA_MIL_military_scripted_localisation.txt:24: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_Stronger_Firepower_Better_Protection (common/scripted_localisation/BA_MIL_military_scripted_localisation.txt:29: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_localisation/BA_MIL_military_scripted_localisation.txt:29: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_Operating_System_Upgrade (common/scripted_localisation/BA_MIL_military_scripted_localisation.txt:30: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_localisation/BA_MIL_military_scripted_localisation.txt:30: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_Stronger_Firepower_Better_Protection (common/scripted_localisation/BA_MIL_military_scripted_localisation.txt:36: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_localisation/BA_MIL_military_scripted_localisation.txt:36: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_Operating_System_Upgrade (common/scripted_localisation/BA_MIL_military_scripted_localisation.txt:41: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_localisation/BA_MIL_military_scripted_localisation.txt:41: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_Card_Drawing_Time (common/scripted_localisation/BA_MIL_military_scripted_localisation.txt:42: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_localisation/BA_MIL_military_scripted_localisation.txt:42: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_Operating_System_Upgrade (common/scripted_localisation/BA_MIL_military_scripted_localisation.txt:47: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_localisation/BA_MIL_military_scripted_localisation.txt:47: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_Card_Drawing_Time (common/scripted_localisation/BA_MIL_military_scripted_localisation.txt:51: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_localisation/BA_MIL_military_scripted_localisation.txt:51: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_Soaring_Sky_Eagle (common/scripted_localisation/BA_MIL_military_scripted_localisation.txt:66: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_localisation/BA_MIL_military_scripted_localisation.txt:66: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_Millennium_Stability_Guardian (common/scripted_localisation/BA_MIL_military_scripted_localisation.txt:82: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_localisation/BA_MIL_military_scripted_localisation.txt:82: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_Operating_System_Upgrade (common/scripted_localisation/BA_MIL_military_scripted_localisation.txt:98: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_localisation/BA_MIL_military_scripted_localisation.txt:98: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_more_research_equipment (common/scripted_triggers/BA_MIL_industrial_phase_2_scripted_triggers.txt:252: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_triggers/BA_MIL_industrial_phase_2_scripted_triggers.txt:252: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_better_Experimental_environment (common/scripted_triggers/BA_MIL_industrial_phase_2_scripted_triggers.txt:275: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_triggers/BA_MIL_industrial_phase_2_scripted_triggers.txt:275: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_better_Experimental_environment (common/scripted_triggers/BA_MIL_industrial_phase_2_scripted_triggers.txt:298: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_triggers/BA_MIL_industrial_phase_2_scripted_triggers.txt:298: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_better_Experimental_environment (common/scripted_triggers/BA_MIL_industrial_phase_2_scripted_triggers.txt:321: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_triggers/BA_MIL_industrial_phase_2_scripted_triggers.txt:321: has_completed_focus
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_effects/BA_GEH_scripted_effects.txt:405: power_balance_value
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_effects/BA_GEH_scripted_effects.txt:415: power_balance_value
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_effects/BA_GEH_scripted_effects.txt:426: power_balance_value
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_effects/BA_GEH_scripted_effects.txt:436: power_balance_value
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_effects/BA_GEH_scripted_effects.txt:446: power_balance_value
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_The_construction_work_is_in_full_swing (common/scripted_effects/BA_MIL_scripted_effects.txt:500: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_effects/BA_MIL_scripted_effects.txt:500: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_yuuka_unhappy (common/scripted_effects/BA_MIL_scripted_effects.txt:672: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_effects/BA_MIL_scripted_effects.txt:672: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_opposition_hidden_in_the_dark (common/scripted_effects/BA_MIL_scripted_effects.txt:719: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_effects/BA_MIL_scripted_effects.txt:719: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_The_power_of_Technology (common/scripted_effects/BA_MIL_scripted_effects.txt:768: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_effects/BA_MIL_scripted_effects.txt:768: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_need_help (common/scripted_effects/BA_MIL_scripted_effects.txt:846: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_effects/BA_MIL_scripted_effects.txt:846: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_we_can_do_it_by_ourselves (common/scripted_effects/BA_MIL_scripted_effects.txt:853: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_effects/BA_MIL_scripted_effects.txt:853: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:12401]: Invalid decision in has_active_timed_decision trigger: has_active_mission = MIL_Sport_Expand_Executive_Committee
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_effects/BA_MIL_scripted_effects.txt:976: has_active_mission
+[06:29:36][no_game_date][triggerimplementation.cpp:12401]: Invalid decision in has_active_timed_decision trigger: has_active_mission = MIL_Sport_Expand_Executive_Committee
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_effects/BA_MIL_scripted_effects.txt:985: has_active_mission
+[06:29:36][no_game_date][triggerimplementation.cpp:12401]: Invalid decision in has_active_timed_decision trigger: has_active_mission = MIL_Sport_Connect_Imaginary_Automation
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_effects/BA_MIL_scripted_effects.txt:1003: has_active_mission
+[06:29:36][no_game_date][triggerimplementation.cpp:12401]: Invalid decision in has_active_timed_decision trigger: has_active_mission = MIL_Sport_Connect_Imaginary_Automation
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_effects/BA_MIL_scripted_effects.txt:1012: has_active_mission
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_we_can_do_it_by_ourselves (common/scripted_effects/BA_MIL_scripted_effects.txt:2115: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_effects/BA_MIL_scripted_effects.txt:2115: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_Stronger_Firepower_Better_Protection (common/scripted_effects/BA_MIL_scripted_effects.txt:2924: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_effects/BA_MIL_scripted_effects.txt:2924: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_yuuka_unhappy (common/scripted_guis/BA_MIL_Sport_scripted_guis.txt:62: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_guis/BA_MIL_Sport_scripted_guis.txt:62: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_yuuka_unhappy (common/scripted_guis/BA_MIL_Sport_scripted_guis.txt:74: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_guis/BA_MIL_Sport_scripted_guis.txt:74: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_opposition_hidden_in_the_dark (common/scripted_guis/BA_MIL_Sport_scripted_guis.txt:86: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_guis/BA_MIL_Sport_scripted_guis.txt:86: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_opposition_hidden_in_the_dark (common/scripted_guis/BA_MIL_Sport_scripted_guis.txt:98: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_guis/BA_MIL_Sport_scripted_guis.txt:98: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_The_power_of_Technology (common/scripted_guis/BA_MIL_Sport_scripted_guis.txt:110: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_guis/BA_MIL_Sport_scripted_guis.txt:110: has_completed_focus
+[06:29:36][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_The_power_of_Technology (common/scripted_guis/BA_MIL_Sport_scripted_guis.txt:122: has_completed_focus)
+[06:29:36][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_guis/BA_MIL_Sport_scripted_guis.txt:122: has_completed_focus
+[06:29:36][no_game_date][effectbase.cpp:696]: Unsupported target in state_event: trigger_for = MIL
+[06:29:36][no_game_date][effectbase.cpp:696]: Unsupported target in state_event: trigger_for = MIL
+[06:29:36][no_game_date][effectbase.cpp:696]: Unsupported target in state_event: trigger_for = MIL
+[06:29:36][no_game_date][effectbase.cpp:696]: Unsupported target in state_event: trigger_for = MIL
+[06:29:36][no_game_date][effect.cpp:813]: common/national_focus/BA_Gehenna.txt:2183: add_tech_bonus: Unknown technology category infantry_equipment
+[06:29:36][no_game_date][effectimplementation.cpp:14171]: Invalid Decision ID for unlock_decision_tooltip SRT_training_decisions
+[06:29:36][no_game_date][effectimplementation.cpp:14171]: Invalid Decision ID for unlock_decision_tooltip SRT_shiratori_decisions
+[06:29:36][no_game_date][effectimplementation.cpp:14171]: Invalid Decision ID for unlock_decision_tooltip SRT_aoba_decisions
+[06:29:36][no_game_date][effectimplementation.cpp:14171]: Invalid Decision ID for unlock_decision_tooltip SRT_business_decisions
+[06:29:36][no_game_date][power_balance_effects.cpp:104]: common/scripted_effects/BA_MIL_industrial_phase_2_scripted_effects.txt:39: set_power_balance: both set_default and set_value are specified, will use set_value!
+[06:29:36][no_game_date][effectbase.cpp:696]: Unsupported target in state_event: trigger_for = MIL
+[06:29:36][no_game_date][effectbase.cpp:696]: Unsupported target in state_event: trigger_for = MIL
+[06:29:36][no_game_date][effectbase.cpp:696]: Unsupported target in state_event: trigger_for = MIL
+[06:29:36][no_game_date][effectbase.cpp:696]: Unsupported target in state_event: trigger_for = MIL
+[06:29:36][no_game_date][effectbase.cpp:696]: Unsupported target in state_event: trigger_for = MIL
+[06:29:36][no_game_date][effectbase.cpp:696]: Unsupported target in state_event: trigger_for = MIL
+[06:29:36][no_game_date][effectbase.cpp:696]: Unsupported target in state_event: trigger_for = MIL
+[06:29:36][no_game_date][effectbase.cpp:696]: Unsupported target in state_event: trigger_for = MIL
+[06:29:37][no_game_date][persistent.cpp:67]: Error: "Not a valid value: common/scripted_effects/BARE_commont_scripted_effects.txt:28: upgrade_naval_department, near line: 28" in file: "common/scripted_effects/BARE_commont_scripted_effects.txt" near line: 28
+[06:29:37][no_game_date][effect.cpp:358]: Error: "Malformed token: var:ally, near line: 206" in file: "common/scripted_effects/BA_Great_Game_scripted_effects.txt" near line: 209
+[06:29:37][no_game_date][effect.cpp:358]: Error: "Malformed token: var:ally, near line: 211" in file: "common/scripted_effects/BA_Great_Game_scripted_effects.txt" near line: 214
+[06:29:37][no_game_date][effect.cpp:358]: Error: "Malformed token: var:ally, near line: 218" in file: "common/scripted_effects/BA_Great_Game_scripted_effects.txt" near line: 221
+[06:29:37][no_game_date][effect.cpp:358]: Error: "Malformed token: var:ally, near line: 223" in file: "common/scripted_effects/BA_Great_Game_scripted_effects.txt" near line: 226
+[06:29:37][no_game_date][effect.cpp:358]: Error: "Unexpected token: enemy, near line: 295" in file: "common/scripted_effects/BA_Great_Game_scripted_effects.txt" near line: 296
+[06:29:37][no_game_date][scopedvariable.cpp:560]: Token resources_fe is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[06:29:37][no_game_date][scopedvariable.cpp:560]: Token resources_ec is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[06:29:37][no_game_date][scopedvariable.cpp:560]: Token resources_pm is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[06:29:37][no_game_date][scopedvariable.cpp:560]: Token resources_rm is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[06:29:37][no_game_date][scopedvariable.cpp:560]: Token resources_cm is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[06:29:37][no_game_date][scopedvariable.cpp:560]: Token resources_mm is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[06:29:37][no_game_date][gameitemdatabase.h:324]: 12 errors.
+[06:29:37][no_game_date][gameitemdatabase.h:336]: =============================
+[06:29:37][no_game_date][gfx_dds_loader.cpp:325]: Expected more data in the texture mipmaps than was actually present in file "gfx/interface/generic_bg.dds"
+[06:29:38][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_effects/BA_GEH_scripted_effects.txt:405: power_balance_value
+[06:29:38][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_effects/BA_GEH_scripted_effects.txt:415: power_balance_value
+[06:29:38][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_effects/BA_GEH_scripted_effects.txt:426: power_balance_value
+[06:29:38][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_effects/BA_GEH_scripted_effects.txt:436: power_balance_value
+[06:29:38][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_effects/BA_GEH_scripted_effects.txt:446: power_balance_value
+[06:29:38][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_The_construction_work_is_in_full_swing (common/scripted_effects/BA_MIL_scripted_effects.txt:500: has_completed_focus)
+[06:29:38][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_effects/BA_MIL_scripted_effects.txt:500: has_completed_focus
+[06:29:38][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_yuuka_unhappy (common/scripted_effects/BA_MIL_scripted_effects.txt:672: has_completed_focus)
+[06:29:38][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_effects/BA_MIL_scripted_effects.txt:672: has_completed_focus
+[06:29:38][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_opposition_hidden_in_the_dark (common/scripted_effects/BA_MIL_scripted_effects.txt:719: has_completed_focus)
+[06:29:38][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_effects/BA_MIL_scripted_effects.txt:719: has_completed_focus
+[06:29:38][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_The_power_of_Technology (common/scripted_effects/BA_MIL_scripted_effects.txt:768: has_completed_focus)
+[06:29:38][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_effects/BA_MIL_scripted_effects.txt:768: has_completed_focus
+[06:29:38][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_need_help (common/scripted_effects/BA_MIL_scripted_effects.txt:846: has_completed_focus)
+[06:29:38][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_effects/BA_MIL_scripted_effects.txt:846: has_completed_focus
+[06:29:38][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_we_can_do_it_by_ourselves (common/scripted_effects/BA_MIL_scripted_effects.txt:853: has_completed_focus)
+[06:29:38][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_effects/BA_MIL_scripted_effects.txt:853: has_completed_focus
+[06:29:38][no_game_date][triggerimplementation.cpp:12401]: Invalid decision in has_active_timed_decision trigger: has_active_mission = MIL_Sport_Expand_Executive_Committee
+[06:29:38][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_effects/BA_MIL_scripted_effects.txt:976: has_active_mission
+[06:29:38][no_game_date][triggerimplementation.cpp:12401]: Invalid decision in has_active_timed_decision trigger: has_active_mission = MIL_Sport_Expand_Executive_Committee
+[06:29:38][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_effects/BA_MIL_scripted_effects.txt:985: has_active_mission
+[06:29:38][no_game_date][triggerimplementation.cpp:12401]: Invalid decision in has_active_timed_decision trigger: has_active_mission = MIL_Sport_Connect_Imaginary_Automation
+[06:29:38][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_effects/BA_MIL_scripted_effects.txt:1003: has_active_mission
+[06:29:38][no_game_date][triggerimplementation.cpp:12401]: Invalid decision in has_active_timed_decision trigger: has_active_mission = MIL_Sport_Connect_Imaginary_Automation
+[06:29:38][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_effects/BA_MIL_scripted_effects.txt:1012: has_active_mission
+[06:29:38][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_we_can_do_it_by_ourselves (common/scripted_effects/BA_MIL_scripted_effects.txt:2115: has_completed_focus)
+[06:29:38][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_effects/BA_MIL_scripted_effects.txt:2115: has_completed_focus
+[06:29:38][no_game_date][triggerimplementation.cpp:3617]: Invalid focus scripted in trigger. has_completed_focus = MIL_Stronger_Firepower_Better_Protection (common/scripted_effects/BA_MIL_scripted_effects.txt:2924: has_completed_focus)
+[06:29:38][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/scripted_effects/BA_MIL_scripted_effects.txt:2924: has_completed_focus
+[06:29:38][no_game_date][power_balance_effects.cpp:104]: common/scripted_effects/BA_MIL_industrial_phase_2_scripted_effects.txt:39: set_power_balance: both set_default and set_value are specified, will use set_value!
+[06:29:41][no_game_date][gameapplication.cpp:866]: The game has loc key collisions. Check logs/text.log for more details
+[06:29:42][2019.01.01.12][history.cpp:279]: ALR - is missing a history file.
+[06:29:42][2019.01.01.12][history.cpp:279]: AUR - is missing a history file.
+[06:29:42][2019.01.01.12][equipmentvariant.cpp:1112]: Country "CAP" does not have any equipment variant for type "light_tank_equipment_1" (selecting latest version) created by "CAP".
+[06:29:42][2019.01.01.12][equipmentvariant.cpp:1112]: Country "A45" does not have any equipment variant for type "apc_equipment_1" (selecting latest version) created by "A45".
+[06:29:42][2019.01.01.12][equipmentvariant.cpp:1112]: Country "A46" does not have any equipment variant for type "medium_uav_equipment_1" (selecting latest version) created by "A46".
+[06:29:48][2019.01.01.12][gui.cpp:931]: Undefined GUI_TYPE: change_background - This will most likely crash the game
+[06:29:48][2019.01.01.12][gui.cpp:409]: Error: Failed to create containerWindowType "change_background".
+[06:29:48][2019.01.01.12][containerwindow.cpp:991]:  (line -1 ): Could not find "background_selection" in window 
+[06:29:48][2019.01.01.12][containerwindow.cpp:991]:  (line -1 ): Could not find "background_selection_list" in window 
+[06:29:48][2019.01.01.12][containerwindow.cpp:983]:  (line -1 ): Could not find "available_backgrounds" in window 
+[06:29:48][2019.01.01.12][containerwindow.cpp:927]:  (line -1 ): Could not find "select_all_checkbox" in window 
+[06:29:48][2019.01.01.12][containerwindow.cpp:1026]:  (line -1 ): Could not find "change_background_button" in window 
+[06:29:48][2019.01.01.12][gfx_dds_loader.cpp:325]: Expected more data in the texture mipmaps than was actually present in file "gfx/interface/bookmark/MIL_intro.dds"
+[06:29:48][2019.01.01.12][containerwindow.cpp:816]: interface/frontendgamesetupview.gui (line 604 ): Could not find "more_countries" in window gamesetup_interesting_countries_window
+[06:29:48][2019.01.01.12][containerwindow.cpp:856]: interface/frontendgamesetupview.gui (line 604 ): Could not find "filters" in window gamesetup_interesting_countries_window
+[06:29:48][2019.01.01.12][gui.cpp:931]: Undefined GUI_TYPE: country_filter - This will most likely crash the game
+[06:29:48][2019.01.01.12][standardlistbox.cpp:26]: gui element 'country_filter' does not exist.
+[06:29:48][2019.01.01.12][gui.cpp:931]: Undefined GUI_TYPE: country_filter - This will most likely crash the game
+[06:29:48][2019.01.01.12][standardlistbox.cpp:26]: gui element 'country_filter' does not exist.

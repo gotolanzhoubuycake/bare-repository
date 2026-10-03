@@ -4256,7 +4256,7 @@ focus_tree = {
 			}
 			#解锁T2小型无人机科技
 			set_technology = {
-				fighting_drone_MK1 = 1
+				fighting_drone = 1
 			}
 			set_technology = {
 				fighting_drone_MK2 = 1

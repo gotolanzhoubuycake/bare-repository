@@ -62,7 +62,13 @@ MIL_security_department_of_long_peace = {
     air_chief_cost_factor = MIL_security_department_air_chief_cost
     high_command_cost_factor = MIL_security_department_high_command_cost
     # 2026-06-17 修改：长期和平导致学说实践停滞。陆军参考原版 SOV_the_red_army_mastery_loss_factor 的 land_mastery_gain_factor 写法；空军参考原版 air_crew_surveys_spirit 的四轨道精通度写法。
-    land_mastery_gain_factor = MIL_security_department_land_mastery_gain_factor
+    # 2026-10-02 修复：运行时（1.19.3）在动态修正中拒绝 folder 级 land_mastery_gain_factor（log: invalid modifier），
+    # 改用官方文档 <Doctrine>_track_mastery_gain_factor 的陆军四轨道（infantry/combat_support/armor/operations）
+    # 逐条生效，与下方空军四轨道写法对称；复用原变量，原 folder 级数值语义不变。
+    infantry_track_mastery_gain_factor = MIL_security_department_land_mastery_gain_factor
+    combat_support_track_mastery_gain_factor = MIL_security_department_land_mastery_gain_factor
+    armor_track_mastery_gain_factor = MIL_security_department_land_mastery_gain_factor
+    operations_track_mastery_gain_factor = MIL_security_department_land_mastery_gain_factor
     fighter_aircraft_track_mastery_gain_factor = MIL_security_department_fighter_mastery_gain_factor
     strike_aircraft_track_mastery_gain_factor = MIL_security_department_strike_mastery_gain_factor
     medium_aircraft_track_mastery_gain_factor = MIL_security_department_medium_mastery_gain_factor

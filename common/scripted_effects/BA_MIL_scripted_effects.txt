@@ -973,7 +973,7 @@ BARE_MIL_Sport_AI_Monthly_Plan_effect = {
 			limit = {
 				check_variable = { BARE_MIL_sport_AI_Next_Budget_Cost_Var < 1 }
 				NOT = { has_country_flag = BARE_MIL_sport_Executive_Committee_Expanded_flag }
-				NOT = { has_active_mission = MIL_Sport_Expand_Executive_Committee }
+				NOT = { has_decision = MIL_Sport_Expand_Executive_Committee }
 			}
 			set_country_flag = BARE_MIL_sport_AI_critical_one_shots_unfinished_flag
 			set_country_flag = BARE_MIL_sport_AI_construction_priority_unfinished_flag
@@ -982,7 +982,7 @@ BARE_MIL_Sport_AI_Monthly_Plan_effect = {
 		if = {
 			limit = {
 				NOT = { has_country_flag = BARE_MIL_sport_Executive_Committee_Expanded_flag }
-				has_active_mission = MIL_Sport_Expand_Executive_Committee
+				has_decision = MIL_Sport_Expand_Executive_Committee
 			}
 			set_country_flag = BARE_MIL_sport_AI_critical_one_shots_unfinished_flag
 			set_country_flag = BARE_MIL_sport_AI_construction_priority_unfinished_flag
@@ -1000,7 +1000,7 @@ BARE_MIL_Sport_AI_Monthly_Plan_effect = {
 			limit = {
 				check_variable = { BARE_MIL_sport_AI_Next_Budget_Cost_Var < 1 }
 				NOT = { has_country_flag = BARE_MIL_sport_Imaginary_Automation_Active_flag }
-				NOT = { has_active_mission = MIL_Sport_Connect_Imaginary_Automation }
+				NOT = { has_decision = MIL_Sport_Connect_Imaginary_Automation }
 			}
 			set_country_flag = BARE_MIL_sport_AI_critical_one_shots_unfinished_flag
 			set_country_flag = BARE_MIL_sport_AI_construction_priority_unfinished_flag
@@ -1009,7 +1009,7 @@ BARE_MIL_Sport_AI_Monthly_Plan_effect = {
 		if = {
 			limit = {
 				NOT = { has_country_flag = BARE_MIL_sport_Imaginary_Automation_Active_flag }
-				has_active_mission = MIL_Sport_Connect_Imaginary_Automation
+				has_decision = MIL_Sport_Connect_Imaginary_Automation
 			}
 			set_country_flag = BARE_MIL_sport_AI_critical_one_shots_unfinished_flag
 			set_country_flag = BARE_MIL_sport_AI_construction_priority_unfinished_flag
@@ -3993,10 +3993,10 @@ BARE_MIL_Ruins_Run_Stage_1_Detection_effect = {
 		}
 		35 = {
 			random_list = {
-				25 = { state_event = { id = MIL_ruins_surprise.1 trigger_for = MIL } }
-				25 = { state_event = { id = MIL_ruins_surprise.2 trigger_for = MIL } }
-				25 = { state_event = { id = MIL_ruins_surprise.3 trigger_for = MIL } }
-				25 = { state_event = { id = MIL_ruins_surprise.4 trigger_for = MIL } }
+				25 = { state_event = { id = MIL_ruins_surprise.1 trigger_for = prev } }
+				25 = { state_event = { id = MIL_ruins_surprise.2 trigger_for = prev } }
+				25 = { state_event = { id = MIL_ruins_surprise.3 trigger_for = prev } }
+				25 = { state_event = { id = MIL_ruins_surprise.4 trigger_for = prev } }
 			}
 		}
 	}
@@ -4060,10 +4060,10 @@ BARE_MIL_Ruins_Run_Stage_2_Detection_effect = {
 			}
 			35 = {
 				random_list = {
-					25 = { state_event = { id = MIL_ruins_surprise.1 trigger_for = MIL } }
-					25 = { state_event = { id = MIL_ruins_surprise.2 trigger_for = MIL } }
-					25 = { state_event = { id = MIL_ruins_surprise.3 trigger_for = MIL } }
-					25 = { state_event = { id = MIL_ruins_surprise.4 trigger_for = MIL } }
+					25 = { state_event = { id = MIL_ruins_surprise.1 trigger_for = prev } }
+					25 = { state_event = { id = MIL_ruins_surprise.2 trigger_for = prev } }
+					25 = { state_event = { id = MIL_ruins_surprise.3 trigger_for = prev } }
+					25 = { state_event = { id = MIL_ruins_surprise.4 trigger_for = prev } }
 				}
 			}
 		}

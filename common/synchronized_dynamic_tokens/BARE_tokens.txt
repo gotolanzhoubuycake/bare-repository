@@ -2723,3 +2723,12 @@ view_non_against
 weight
 WLH_MeiShuCeZhanRen
 WLH_YiShuYuZiWo
+
+# dynamic resource tokens (engine OOS warning 2026-10-02 run4)
+resources_cm
+resources_ec
+resources_fe
+resources_hic
+resources_mm
+resources_pm
+resources_rm

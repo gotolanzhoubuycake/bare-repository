@@ -9,6 +9,12 @@ default_unit_production = {
 			original_tag = MIL
 		}
 	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
 
 	ai_strategy = {
 		type = role_ratio

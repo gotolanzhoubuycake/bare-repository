@@ -2,6 +2,7 @@ GEH_bp_between_chaos_and_order = {
 	initial_value = 0.3 #初始位置
 	left_side = GEH_bp_order #左侧名称
 	right_side = GEH_bp_chaos #右侧名称
+
 	decision_category = GEH_bop_decision_category #下面决议的大类别，决议和普通决议一样
 	range = { #中间点范围
 		id = GEH_bp_mid

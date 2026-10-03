@@ -265,7 +265,6 @@
  ALF_optimize_factory_output: "启动工业动员"
  ALF_extra_armed_force: "呼叫预备役"
  ALF_warno: "预先号令"
- ALF_integrate_DCA: "整合收债人协会区域"
  ALF_target_blackmarket: "§Y格里高利行动§!"
  ALF_difficult_situation: "状况复杂"
  ALF_enlarge_air_force: "扩大空军"
@@ -425,7 +424,7 @@
  ALF_mrd_trainning_improve_tt: "武装部队训练等级：§G+1§!\n§Y阿里乌斯武装力量§!追加效果：\n陆军连组织度：§G+5%§!\n移动中组织度损失：§G-5%§!"
 
  ALF_mrd_artillery_improve_decision: "改善§Y火力投送能力§!"
- ALF_mrd_artillery_improve_decision_trigger_tt: "§Y火力投送能力§!未达到现代化水平"\
+ ALF_mrd_artillery_improve_decision_trigger_tt: "§Y火力投送能力§!未达到现代化水平"
  ALF_mrd_artillery_improve_tt: "火力投送能力等级：§G+1§!\n§Y阿里乌斯武装力量§!追加效果：\n炮兵攻击：§G+5%§!\n协同性：§G+5%§!"
 
  ALF_Livability_for_mrd_speed_decision: "强化§Y军事改革效率§!"
@@ -637,16 +636,15 @@
  ALF_defeated_in_civil_war_desc: "“夫人”胜利了，逃亡到此地的，只是一群屡战屡败的输家。在这片远离故乡热土的地方，许多人都觉得，这趟惊心动魄的旅行应当就此结束——毫无疑问，从失败中重新崛起需要勇气，而这样的勇气总是绝无仅有。"
 
  ALF_technology_left_behind: "技术断层"
- ALF_technology_left_behind_desc: "长久的与世隔绝与残酷的内战已经占据了流亡者的全部精力。除非情况稳定下来，否则流亡者难以改善这个问题。"
  ALF_technology_left_behind_1: "弥补技术断层"
- ALF_technology_left_behind_desc: "流亡者正在致力于改善其技术研究能力，但这依然需要相当漫长的时间才能完成。"
+ ALF_technology_left_behind_desc: "长久的与世隔绝与残酷的内战已经占据了流亡者的全部精力。除非情况稳定下来，否则流亡者难以改善这个问题。"
+ ALF_technology_left_behind_1_desc: "流亡者正在致力于改善其技术研究能力，但这依然需要相当漫长的时间才能完成。"
  LF_technology_left_behind_removed_flag: "问题已§G得到改善§!"
 
  ecolaws_ALF_command_economic: "指令经济"
  ecolaws_ALF_command_economic_desc: "生产与建设计划直接由学园管理层规划，并由行政机构负责监督执行的经济模式。优势和缺点都极为明显，可以被视为一种常态化的紧急措施。"
 
  ecolaws_ALF_total_war_economic: "总体战"
- ecolaws_ALF_command_economic_desc: "§R将一切投入战争的熔炉……§!"
  
  ALF_Special_trade: "重视贸易"
 
@@ -675,7 +673,6 @@
  ALF_day_of_judgement: "审判之日"
  ALF_day_of_judgement_desc: "“夫人”的§R末日§!到了。"
 
- ALF_customized_the_supplyline: "针对性后勤设计"
  ALF_speed_and_breakthrough: "强袭作战"
 
  ALF_ARI_striked: "刀刺在背"

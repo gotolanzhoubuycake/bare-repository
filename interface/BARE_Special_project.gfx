@@ -133,7 +133,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_sp_ba_T2_electronic_project"
-		texturefile = "gfx/interface/special_project/project_icons/sp_ba_T2_electronic_project.dds"
+		texturefile = "gfx/interface/special_project/project_icons/sp_ba_T2_electronic_project_project.dds"
 	}
 	spriteType = {
 		name = "GFX_sp_ba_T3_electronic_project"

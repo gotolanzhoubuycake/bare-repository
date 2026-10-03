@@ -10,7 +10,7 @@ state={
 		}
 		owner = A43
 		add_core_of=A43
-		victory_points = {8069 25}
+		victory_points = {9425 25}
     }
 	manpower= 80
 		state_category = rural

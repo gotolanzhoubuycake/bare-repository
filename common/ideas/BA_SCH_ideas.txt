@@ -1,7 +1,7 @@
 ideas = {
 	country = {
 		SCH_QiGuaiDeDaRen = { #奇怪的大人
-			picture = unkown
+			picture = unknown
 
 			modifier = {
 				custom_modifier_tooltip = SCH_WuJinDeFanRong_R
@@ -10,7 +10,7 @@ ideas = {
 		}
 
 		SCH_TeBieQuanLi = { #特别权利
-			picture = unkown
+			picture = unknown
 
 			modifier = {
 				custom_modifier_tooltip = SCH_WuJinDeFanRong_QL

@@ -594,6 +594,7 @@ TRI_BOP_system = {
 		}
 
 		days_mission_timeout = 180
+		days_remove = 0
 		is_good = no
 		modifier = {
 			consumer_goods_factor = 0.05
@@ -667,6 +668,7 @@ TRI_BOP_system = {
 		}
 
 		days_mission_timeout = 180
+		days_remove = 0
 		is_good = no
 		modifier = {
 			consumer_goods_factor = 0.15

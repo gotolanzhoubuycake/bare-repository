@@ -503,11 +503,11 @@ on_actions = {
 
 			# 熊猫公园
 			407 = {
-				add_to_array = { 
-					global.state_with_lore = THIS.id 
+				add_to_array = {
+					global.state_with_lore = THIS.id
 				}
 			}
-			add_to_array = { 406.lore_entries = 63 }
+			add_to_array = { 407.lore_entries = 63 }
 
 			# 炼丹术研究所
 			162 = {

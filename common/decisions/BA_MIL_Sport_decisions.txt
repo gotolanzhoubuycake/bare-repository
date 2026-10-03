@@ -124,7 +124,7 @@ MIL_Sport_decision_category = {
 			modifier = {
 				# 2026-06-06: 场馆可建且路线目标未达成时，基础设施强降权但不硬封锁，避免重复决议完全不可选。
 				factor = 0.05
-				NOT = { has_active_mission = MIL_Sport_Constructing_Sports_Venues }
+				NOT = { has_decision = MIL_Sport_Constructing_Sports_Venues }
 				check_variable = {
 					var = BARE_MIL_sport_Building_Score_Var
 					value = BARE_MIL_sport_AI_Venue_Target_Var
@@ -256,7 +256,7 @@ MIL_Sport_decision_category = {
 					}
 					AND = {
 						NOT = { has_country_flag = BARE_MIL_sport_Executive_Committee_Expanded_flag }
-						NOT = { has_active_mission = MIL_Sport_Expand_Executive_Committee }
+						NOT = { has_decision = MIL_Sport_Expand_Executive_Committee }
 						check_variable = { BARE_MIL_sport_Fee_Have_Var > 39 }
 						has_political_power > 99
 					}
@@ -267,7 +267,7 @@ MIL_Sport_decision_category = {
 					}
 					AND = {
 						NOT = { has_country_flag = BARE_MIL_sport_Imaginary_Automation_Active_flag }
-						NOT = { has_active_mission = MIL_Sport_Connect_Imaginary_Automation }
+						NOT = { has_decision = MIL_Sport_Connect_Imaginary_Automation }
 						check_variable = { BARE_MIL_sport_Fee_Have_Var > 19 }
 					}
 				}
@@ -781,7 +781,7 @@ MIL_Sport_decision_category = {
 			modifier = {
 				# 2026-06-06: 场馆可建且路线目标未达成时，安保保护强降权但不硬封锁。
 				factor = 0.05
-				NOT = { has_active_mission = MIL_Sport_Constructing_Sports_Venues }
+				NOT = { has_decision = MIL_Sport_Constructing_Sports_Venues }
 				check_variable = {
 					var = BARE_MIL_sport_Building_Score_Var
 					value = BARE_MIL_sport_AI_Venue_Target_Var
@@ -872,7 +872,7 @@ MIL_Sport_decision_category = {
 			modifier = {
 				# 2026-06-06: 场馆可建且路线目标未达成时，志愿者决议强降权但不硬封锁。
 				factor = 0.05
-				NOT = { has_active_mission = MIL_Sport_Constructing_Sports_Venues }
+				NOT = { has_decision = MIL_Sport_Constructing_Sports_Venues }
 				check_variable = {
 					var = BARE_MIL_sport_Building_Score_Var
 					value = BARE_MIL_sport_AI_Venue_Target_Var
@@ -964,7 +964,7 @@ MIL_Sport_decision_category = {
 			modifier = {
 				# 2026-06-06: 场馆可建且路线目标未达成时，压力测试强降权但不硬封锁。
 				factor = 0.05
-				NOT = { has_active_mission = MIL_Sport_Constructing_Sports_Venues }
+				NOT = { has_decision = MIL_Sport_Constructing_Sports_Venues }
 				check_variable = {
 					var = BARE_MIL_sport_Building_Score_Var
 					value = BARE_MIL_sport_AI_Venue_Target_Var
@@ -1169,7 +1169,7 @@ MIL_Sport_decision_category = {
 			modifier = {
 				# 2026-06-06: 场馆可建且路线目标未达成时，资源互换强降权但不硬封锁。
 				factor = 0.05
-				NOT = { has_active_mission = MIL_Sport_Constructing_Sports_Venues }
+				NOT = { has_decision = MIL_Sport_Constructing_Sports_Venues }
 				check_variable = {
 					var = BARE_MIL_sport_Building_Score_Var
 					value = BARE_MIL_sport_AI_Venue_Target_Var
@@ -1248,7 +1248,7 @@ MIL_Sport_decision_category = {
 			modifier = {
 				# 2026-06-06: 场馆可建且路线目标未达成时，资源互换强降权但不硬封锁。
 				factor = 0.05
-				NOT = { has_active_mission = MIL_Sport_Constructing_Sports_Venues }
+				NOT = { has_decision = MIL_Sport_Constructing_Sports_Venues }
 				check_variable = {
 					var = BARE_MIL_sport_Building_Score_Var
 					value = BARE_MIL_sport_AI_Venue_Target_Var

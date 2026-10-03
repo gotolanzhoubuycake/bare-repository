@@ -1,8 +1,3 @@
-// 2026-06-17 修改：新增自下而上的进度裁切 FX，供 MOD 内竖向进度条复用。
-// 入口说明：progress_vertical.lua / progress_vertical.shader。
-// 关键变量：CurrentState 取值 0~1，决定底部向顶部的显示比例。
-// 预期结果：CurrentState 越大，前景覆盖范围越高。
-
 Includes = {
 }
 
@@ -58,7 +53,7 @@ VertexShader =
 {
 	MainCode VertexShader
 	[[
-		// 顶点入口：传递坐标与 UV，并保留原版的 Y 翻转处理，保证 GUI 贴图方向一致。
+		// Vertex entry: pass through position and UV, keep vanilla Y flip for GUI orientation.
 		VS_OUTPUT main( const VS_INPUT v )
 		{
 			VS_OUTPUT Out;
@@ -74,7 +69,7 @@ PixelShader =
 {
 	MainCode PixelColor
 	[[
-		// 颜色模式：先把原版翻转后的 Y 坐标还原为 0~1，再让底部 CurrentState 比例显示前景色。
+		// Color mode: restore Y to 0~1, show first color for the bottom CurrentState fraction.
 		float4 main( VS_OUTPUT v ) : PDX_COLOR
 		{
 			float vVerticalProgress = -v.vTexCoord0.y;
@@ -87,7 +82,7 @@ PixelShader =
 
 	MainCode PixelTexture
 	[[
-		// 贴图模式：先把原版翻转后的 Y 坐标还原为 0~1，再让底部 CurrentState 比例显示前景贴图。
+		// Texture mode: restore Y to 0~1, show TextureOne for the bottom CurrentState fraction.
 		float4 main( VS_OUTPUT v ) : PDX_COLOR
 		{
 			float vVerticalProgress = -v.vTexCoord0.y;

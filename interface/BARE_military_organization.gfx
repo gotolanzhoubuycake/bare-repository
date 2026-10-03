@@ -1,39 +1,39 @@
 spriteTypes = {
 	spriteType = {
 		name = "GFX_military_industrial_organization_special_infantry_equipment"
-		textureFile = "gfx/interface/military_organization/special_infantry_equipment.dds"
+		textureFile = "gfx/interface/military_industrial_organization/department_icons/special_infantry_equipment.dds"
 	}
 	spriteType = {
 		name = "GFX_cat_eq_all_apc"
-		textureFile = "gfx/interface/military_organization/generic_mio_department_icon_light_tank.dds"
+		textureFile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_light_tank.dds"
 	}
     spriteType = {
 		name = "GFX_cat_eq_all_ifv"
-		textureFile = "gfx/interface/military_organization/generic_mio_department_icon_armored_car.dds"
+		textureFile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_armored_car.dds"
 	}
     spriteType = {
 		name = "GFX_cat_eq_all_fire_support"
-		textureFile = "gfx/interface/military_organization/fire_support_weapons.dds"
+		textureFile = "gfx/interface/military_industrial_organization/department_icons/support_engineer_equipment.dds"
 	}
     spriteType = {
 		name = "GFX_cat_eq_all_bm"
-		textureFile = "gfx/interface/military_organization/bm_equipment.dds"
+		textureFile = "gfx/interface/military_industrial_organization/department_icons/bm_equipment.dds"
 	}
 	spriteType = {
 		name = "GFX_mio_cat_eq_all_support_equipment"
-		textureFile = "gfx/interface/military_organization/generic_mio_department_icon_support_equipment.dds"
+		textureFile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_support_equipment.dds"
 	}
 	spriteType = {
 		name = "GFX_military_industrial_organization_infantry_anti_air_equipment"
-		textureFile = "gfx/interface/military_organization/generic_mio_department_icon_anti_air.dds"
+		textureFile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_anti_air.dds"
 	}
 	spriteType = {
 		name = "GFX_military_industrial_organization_attack_helicopter_equipment"
-		textureFile = "gfx/interface/military_organization/generic_mio_department_icon_plane_general_combat.dds"
+		textureFile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_plane_general_combat.dds"
 	}
 	spriteType = {
 		name = "GFX_cat_eq_all_uav"
-		textureFile = "gfx/interface/military_organization/generic_mio_department_icon_plane_fighter.dds"
+		textureFile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_plane_fighter.dds"
 	}
 	
 }

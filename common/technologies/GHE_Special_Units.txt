@@ -4,7 +4,7 @@ technologies = {
         start_year = 2024
 
         enable_subunits = {
-            Field_Artillery_units
+            field_artillery_units
         }
 
         allow = {
@@ -17,7 +17,7 @@ technologies = {
         start_year = 2024
 
         enable_subunits = {
-            Assault_Engineer_units
+            assault_engineer_units
         }
 
         allow = {

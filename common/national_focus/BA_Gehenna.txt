@@ -74,7 +74,6 @@ focus_tree = {
     focus = {
         id = GEH_Discipline_Committee
         icon = GFX_goal_GEH_Discipline_Committee
-        relative_position_id = GEH_Looking_back_insid
         cost = 4
         x = -2
         y = 2
@@ -98,7 +97,6 @@ focus_tree = {
     focus = {
         id = GEH_Wehrmacht_First
         icon = GFX_goal_GEH_Wehrmacht_First
-        relative_position_id = GEH_Looking_back_insid
         cost = 4
         x = 2
         y = 2
@@ -172,11 +170,11 @@ focus_tree = {
             if = {
                 limit = {
                     has_power_balance = {
-                        id = GEH_bp_between_chaos_and_order_balance_new
+                        id = GEH_bp_between_chaos_and_order
                     }
                 }
                 add_power_balance_value = {
-                    id = GEH_bp_between_chaos_and_order_balance_new
+                    id = GEH_bp_between_chaos_and_order
                     value = 0.1
                 }
             }else = {
@@ -824,33 +822,6 @@ focus_tree = {
         }
 	}
 
-    #和平将至
-    focus = {
-		id = GEH_peace_at_hand
-        icon = GFX_goal_GEH_peace_at_hand
-	    relative_position_id = GEH_Imminent
-        cost = 4
-        x = 0
-        y = 1
-        prerequisite = {  focus = GEH_Imminent }
-        prerequisite = {  focus = GEH_Necessary_Patience }
-        prerequisite = {  focus = GEH_Material_preparation }
-        search_filters = { FOCUS_FILTER_POLITICAL }
-
-        bypass = {
-            # hidden_trigger = {
-            #      has_global_flag =  BA_2st_eden_pact_end
-            # }
-        }
-
-        completion_reward = {
-            add_ideas = GEH_ideas_peace_at_hand
-        }
-        ai_will_do = {
-            factor = 3
-        }
-	}
-
     #抚镇骚乱
     focus = {
 		id = GEH_Suppressing_riots
@@ -889,7 +860,6 @@ focus_tree = {
             factor = 3
         }
 	}
-
     #对内宣传
     focus = {
 		id = GEH_Internal_publicity
@@ -925,7 +895,37 @@ focus_tree = {
             factor = 3
         }
 	}
+    #打击越境不良
+    focus = {
+		id = GEH_Fighting_crime
+        icon = GFX_goal_GEH_Fighting_crime
+	    relative_position_id = GEH_Suppressing_riots
+        cost = 4
+        x = 0
+        y = 1
+        prerequisite = {  focus = GEH_Suppressing_riots }
+        prerequisite = {
+            focus = GEH_Negotiation_with_Trinity
+        }
+        search_filters = { FOCUS_FILTER_POLITICAL }
 
+        bypass = {
+            hidden_trigger = {
+                 has_global_flag =  BA_2st_eden_pact_end
+            }
+        }
+
+        completion_reward = {
+             swap_ideas = {
+                remove_idea = GEH_ideas_conference_support_3 
+                add_idea = GEH_ideas_conference_support_4 
+            }
+            unlock_decision_tooltip = GEH_bop_patrol_in_gehnna
+        }
+        ai_will_do = {
+            factor = 3
+        }
+	}
     #物质筹备
     focus = {
 		id = GEH_Material_preparation
@@ -957,7 +957,6 @@ focus_tree = {
             factor = 3
         }
 	}
-
     #声援茶会
     focus = {
 		id = GEH_Support_allies
@@ -989,39 +988,6 @@ focus_tree = {
                     add_ideas = TRI_gehenna_dip_support
                 }
             }
-        }
-        ai_will_do = {
-            factor = 3
-        }
-	}
-
-    
-    #打击越境不良
-    focus = {
-		id = GEH_Fighting_crime
-        icon = GFX_goal_GEH_Fighting_crime
-	    relative_position_id = GEH_Suppressing_riots
-        cost = 4
-        x = 0
-        y = 1
-        prerequisite = {  focus = GEH_Suppressing_riots }
-        prerequisite = {
-            focus = GEH_Negotiation_with_Trinity
-        }
-        search_filters = { FOCUS_FILTER_POLITICAL }
-
-        bypass = {
-            hidden_trigger = {
-                 has_global_flag =  BA_2st_eden_pact_end
-            }
-        }
-
-        completion_reward = {
-             swap_ideas = {
-                remove_idea = GEH_ideas_conference_support_3 
-                add_idea = GEH_ideas_conference_support_4 
-            }
-            unlock_decision_tooltip = GEH_bop_patrol_in_gehnna
         }
         ai_will_do = {
             factor = 3
@@ -1084,6 +1050,42 @@ focus_tree = {
             factor = 3
         }
 	}
+    #和平将至
+    focus = {
+		id = GEH_peace_at_hand
+        icon = GFX_goal_GEH_peace_at_hand
+	    relative_position_id = GEH_Imminent
+        cost = 4
+        x = 0
+        y = 1
+        prerequisite = {  focus = GEH_Imminent }
+        prerequisite = {  focus = GEH_Necessary_Patience }
+        prerequisite = {  focus = GEH_Material_preparation }
+        search_filters = { FOCUS_FILTER_POLITICAL }
+
+        bypass = {
+            # hidden_trigger = {
+            #      has_global_flag =  BA_2st_eden_pact_end
+            # }
+        }
+
+        completion_reward = {
+            add_ideas = GEH_ideas_peace_at_hand
+        }
+        ai_will_do = {
+            factor = 3
+        }
+	}
+
+
+
+
+
+
+
+
+    
+
 
     #必要的容忍
     focus = {
@@ -1446,7 +1448,7 @@ focus_tree = {
             custom_effect_tooltip = GEH_United_front_tooltip
             add_command_power = -5
             add_equipment_to_stockpile = {
-                type = infantry_weapons
+                type = infantry_equipment
                 amount = -100
             }
             hidden_effect = {
@@ -2185,7 +2187,7 @@ focus_tree = {
         add_tech_bonus = {
 			bonus = 1
 			uses = 2
-			category = infantry_equipment
+			category = infantry_weapons
 		}
         # custom_effect_tooltip = GEH_People_oriented_skip_tt
         # show_ideas_tooltip = GEH_iori
@@ -2788,8 +2790,8 @@ focus_tree = {
         relative_position_id =  GEH_The_First_Eden_Treaty
 
         prerequisite = {  focus =  GEH_The_First_Eden_Treaty }
-        unlock_decision_category_tooltip = GEH_societies_dec_category
         completion_reward = {
+            unlock_decision_category_tooltip = GEH_societies_dec_category
             set_country_flag = GEH_societies_start
             set_variable = {
                 GEH_discipline_committee_ability = 20
@@ -4022,7 +4024,7 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_ECO }
 
         prerequisite = { focus = GEH_Ministry_of_Foreign_Affairs_of_Gehenna }
-        prerequisite = { focus = GEH_Automatic_Adult }
+        prerequisite = { focus = GEH_Adult }
         completion_reward = {}
     }
 

@@ -1,5 +1,5 @@
 spriteTypes = {
-		spriteType = {
+	spriteType = {
 		name = "GFX_goal_MIL_unexpected_discovery"
 		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_unexpected_discovery.dds"
 	}
@@ -351,127 +351,7 @@ spriteTypes = {
 		name = "GFX_goal_MIL_Hidden_Dreams"
 		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Hidden_Dreams.dds"
 	}
-	spriteType = {
-		name = "GFX_goal_MIL_Reports_that_have_not_yet_been_submitted"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Reports_that_have_not_yet_been_submitted.dds"
-	}
-	spriteType = {
-		name = "GFX_goal_MIL_The_relationship_with_the_GSC"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_The_relationship_with_the_GSC.dds"
-	}
-	spriteType = {
-		name = "GFX_goal_MIL_The_adult"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_The_adult.dds"
-	}
-	spriteType = {
-		name = "GFX_goal_MIL_Contact_with_schale"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Contact_with_schale.dds"
-	}
-	spriteType = {
-		name = "GFX_goal_MIL_invite_sensei"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_invite_sensei.dds"
-	}
-	spriteType = {
-		name = "GFX_goal_MIL_our_forever_sensei"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_our_forever_sensei.dds"
-	}
-	spriteType = {
-		name = "GFX_goal_MIL_Cant_without_GSC	"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Cant_without_GSC	.dds"
-	}
-	spriteType = {
-		name = "GFX_goal_MIL_help_GSC"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_help_GSC.dds"
-	}
-	spriteType = {
-		name = "GFX_goal_MIL_Funds_voluntarily_surrendered"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Funds_voluntarily_surrendered.dds"
-	}
-	spriteType = {
-		name = "GFX_goal_MIL_Provide_IT_Support_to_Valkyrie"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Provide_IT_Support_to_Valkyrie.dds"
-	}
-	spriteType = {
-		name = "GFX_goal_MIL_A_proposal_to_the_administrator"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_A_proposal_to_the_administrator.dds"
-	}
-	spriteType = {
-		name = "GFX_goal_MIL_The_communication_with_Valkyrie"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_The_communication_with_Valkyrie.dds"
-	}
-	spriteType = {
-		name = "GFX_goal_MIL_The_communication_with_other_colleges"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_The_communication_with_other_colleges.dds"
-	}
-	spriteType = {
-		name = "GFX_goal_MIL_The_two_sides_of_the_Treaty_of_Eden"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_The_two_sides_of_the_Treaty_of_Eden.dds"
-	}
-	spriteType = {
-		name = "GFX_goal_MIL_The_trade_agreement_with_Trinity"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_The_trade_agreement_with_Trinity.dds"
-	}
-	spriteType = {
-		name = "GFX_goal_MIL_The_Swiss_rolls_that_are_the_favorite_of_the_big_shots_at_tea_parties"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_The_Swiss_rolls_that_are_the_favorite_of_the_big_shots_at_tea_parties.dds"
-	}
-	spriteType = {
-		name = "GFX_goal_MIL_Lets_have_an_afternoon_tea_together"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Lets_have_an_afternoon_tea_together.dds"
-	}
-	spriteType = {
-		name = "GFX_goal_MILitary_exchanges_with_Geh"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MILitary_exchanges_with_Geh.dds"
-	}
-	spriteType = {
-		name = "GFX_goal_MIL_The_Hall_of_Ten_Thousand_Demons_is_still_the_Discipline_Inspection_Committee"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_The_Hall_of_Ten_Thousand_Demons_is_still_the_Discipline_Inspection_Committee.dds"
-	}
-	spriteType = {
-		name = "GFX_goal_MIL_A_strangely_styled_cooperative_communication"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_A_strangely_styled_cooperative_communication.dds"
-	}
-	spriteType = {
-		name = "GFX_goal_MIL_A_broader_perspective"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_A_broader_perspective.dds"
-	}
-	spriteType = {
-		name = "GFX_goal_MIL_Hot_spring_treatment_in_red_winter"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Hot_spring_treatment_in_red_winter.dds"
-	}
-	spriteType = {
-		name = "GFX_goal_MIL_Unexpected_pudding"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Unexpected_pudding.dds"
-	}
-	spriteType = {
-		name = "GFX_goal_MIL_Expansion_of_the_Polar_Routes"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Expansion_of_the_Polar_Routes.dds"
-	}
-	spriteType = {
-		name = "GFX_goal_MIL_The_Gourmet_Banquet_of_the_Shanhai_Classic"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_The_Gourmet_Banquet_of_the_Shanhai_Classic.dds"
-	}
-	spriteType = {
-		name = "GFX_goal_MIL_The_Important_Figures_of_Xuanlongmen"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_The_Important_Figures_of_Xuanlongmen.dds"
-	}
-	spriteType = {
-		name = "GFX_goal_MIL_Cooperation_and_winning_together_is_the_right_path"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Cooperation_and_winning_together_is_the_right_path.dds"
-	}
-	spriteType = {
-		name = "GFX_goal_MIL_The_Transportation_Training_Course_of_Hailand"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_The_Transportation_Training_Course_of_Hailand.dds"
-	}
-	spriteType = {
-		name = "GFX_goal_MIL_The_High_Speed_Railway_Acceleration_Experiment"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_The_High_Speed_Railway_Acceleration_Experiment.dds"
-	}
-	spriteType = {
-		name = "GFX_goal_MIL_More_better_and_faster_railways"
-		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_More_better_and_faster_railways.dds"
-	}
-	spriteType = {
+																															spriteType = {
 		name = "GFX_goal_MIL_Security_Committee_Defense_Reform_Plan"
 		texturefile = "gfx/interface/goals/Millennium/GFX_goal_MIL_Security_Committee_Defense_Reform_Plan.dds"
 	}

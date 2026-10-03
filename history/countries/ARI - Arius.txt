@@ -89,6 +89,7 @@ add_ideas = {
 }
 recruit_character = ARI_beatrice
 recruit_character = ARI_NO_GOV_MODE
+recruit_character = ARI_YTY_WHBD
 recruit_character = ARI_atsuko
 recruit_character = ARI_saori
 recruit_character = ARI_hiyori

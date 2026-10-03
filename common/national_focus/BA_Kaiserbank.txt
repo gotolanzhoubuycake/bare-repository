@@ -1,5 +1,5 @@
 focus_tree = {
-	id = Kaiserfactory_base
+	id = Kaiserfactory_base_CAO
 	country = {
 		factor = 0
 		modifier = {

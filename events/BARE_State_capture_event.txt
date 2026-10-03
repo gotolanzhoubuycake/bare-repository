@@ -7,7 +7,14 @@ news_event = {
 
     major = yes
     is_triggered_only = yes
-    fire_only_once = yes
+    trigger = {
+        NOT = { has_global_flag = BASCE_99_broadcast }
+    }
+    immediate = {
+        hidden_effect = {
+            set_global_flag = BASCE_99_broadcast
+        }
+    }
 
 	option = {
 		name = BASCE.99.a
@@ -23,7 +30,14 @@ news_event = {
 
     major = yes
     is_triggered_only = yes
-    fire_only_once = yes
+    trigger = {
+        NOT = { has_global_flag = BASCE_1_broadcast }
+    }
+    immediate = {
+        hidden_effect = {
+            set_global_flag = BASCE_1_broadcast
+        }
+    }
 
 	option = {
 		name = BASCE.1.a
@@ -39,7 +53,14 @@ news_event = {
 
     major = yes
     is_triggered_only = yes
-    fire_only_once = yes
+    trigger = {
+        NOT = { has_global_flag = BASCE_2_broadcast }
+    }
+    immediate = {
+        hidden_effect = {
+            set_global_flag = BASCE_2_broadcast
+        }
+    }
     
 
 	option = {
@@ -56,7 +77,14 @@ news_event = {
 
     major = yes
     is_triggered_only = yes
-    fire_only_once = yes
+    trigger = {
+        NOT = { has_global_flag = BASCE_3_broadcast }
+    }
+    immediate = {
+        hidden_effect = {
+            set_global_flag = BASCE_3_broadcast
+        }
+    }
 
 	option = {
 		name = BASCE.3.a
@@ -72,7 +100,14 @@ news_event = {
 
     major = yes
     is_triggered_only = yes
-    fire_only_once = yes
+    trigger = {
+        NOT = { has_global_flag = BASCE_4_broadcast }
+    }
+    immediate = {
+        hidden_effect = {
+            set_global_flag = BASCE_4_broadcast
+        }
+    }
 
 	option = {
 		name = BASCE.4.a
@@ -88,7 +123,14 @@ news_event = {
 
     major = yes
     is_triggered_only = yes
-    fire_only_once = yes
+    trigger = {
+        NOT = { has_global_flag = BASCE_5_broadcast }
+    }
+    immediate = {
+        hidden_effect = {
+            set_global_flag = BASCE_5_broadcast
+        }
+    }
 
 	option = {
 		name = BASCE.5.a
@@ -104,7 +146,14 @@ news_event = {
 
     major = yes
     is_triggered_only = yes
-    fire_only_once = yes
+    trigger = {
+        NOT = { has_global_flag = BASCE_6_broadcast }
+    }
+    immediate = {
+        hidden_effect = {
+            set_global_flag = BASCE_6_broadcast
+        }
+    }
 
 	option = {
 		name = BASCE.6.a
@@ -120,7 +169,14 @@ news_event = {
 
     major = yes
     is_triggered_only = yes
-    fire_only_once = yes
+    trigger = {
+        NOT = { has_global_flag = BASCE_7_broadcast }
+    }
+    immediate = {
+        hidden_effect = {
+            set_global_flag = BASCE_7_broadcast
+        }
+    }
 
 	option = {
 		name = BASCE.7.a
@@ -136,7 +192,14 @@ news_event = {
 
     major = yes
     is_triggered_only = yes
-    fire_only_once = yes
+    trigger = {
+        NOT = { has_global_flag = BASCE_8_broadcast }
+    }
+    immediate = {
+        hidden_effect = {
+            set_global_flag = BASCE_8_broadcast
+        }
+    }
 
 	option = {
 		name = BASCE.8.a
@@ -152,7 +215,14 @@ news_event = {
 
     major = yes
     is_triggered_only = yes
-    fire_only_once = yes
+    trigger = {
+        NOT = { has_global_flag = BASCE_9_broadcast }
+    }
+    immediate = {
+        hidden_effect = {
+            set_global_flag = BASCE_9_broadcast
+        }
+    }
 
 	option = {
 		name = BASCE.9.a
@@ -168,7 +238,14 @@ news_event = {
 
     major = yes
     is_triggered_only = yes
-    fire_only_once = yes
+    trigger = {
+        NOT = { has_global_flag = BASCE_10_broadcast }
+    }
+    immediate = {
+        hidden_effect = {
+            set_global_flag = BASCE_10_broadcast
+        }
+    }
 
 	option = {
 		name = BASCE.10.a
@@ -184,7 +261,14 @@ news_event = {
 
     major = yes
     is_triggered_only = yes
-    fire_only_once = yes
+    trigger = {
+        NOT = { has_global_flag = BASCE_11_broadcast }
+    }
+    immediate = {
+        hidden_effect = {
+            set_global_flag = BASCE_11_broadcast
+        }
+    }
 
 	option = {
 		name = BASCE.11.a
@@ -200,7 +284,14 @@ news_event = {
 
     major = yes
     is_triggered_only = yes
-    fire_only_once = yes
+    trigger = {
+        NOT = { has_global_flag = BASCE_12_broadcast }
+    }
+    immediate = {
+        hidden_effect = {
+            set_global_flag = BASCE_12_broadcast
+        }
+    }
 
 	option = {
 		name = BASCE.12.a
@@ -216,7 +307,14 @@ news_event = {
 
     major = yes
     is_triggered_only = yes
-    fire_only_once = yes
+    trigger = {
+        NOT = { has_global_flag = BASCE_13_broadcast }
+    }
+    immediate = {
+        hidden_effect = {
+            set_global_flag = BASCE_13_broadcast
+        }
+    }
 
 	option = {
 		name = BASCE.13.a
@@ -232,7 +330,14 @@ news_event = {
 
     major = yes
     is_triggered_only = yes
-    fire_only_once = yes
+    trigger = {
+        NOT = { has_global_flag = BASCE_14_broadcast }
+    }
+    immediate = {
+        hidden_effect = {
+            set_global_flag = BASCE_14_broadcast
+        }
+    }
 
 	option = {
 		name = BASCE.14.a
@@ -248,7 +353,14 @@ news_event = {
 
     major = yes
     is_triggered_only = yes
-    fire_only_once = yes
+    trigger = {
+        NOT = { has_global_flag = BASCE_15_broadcast }
+    }
+    immediate = {
+        hidden_effect = {
+            set_global_flag = BASCE_15_broadcast
+        }
+    }
 
 	option = {
 		name = BASCE.15.a
@@ -264,7 +376,14 @@ news_event = {
 
     major = yes
     is_triggered_only = yes
-    fire_only_once = yes
+    trigger = {
+        NOT = { has_global_flag = BASCE_16_broadcast }
+    }
+    immediate = {
+        hidden_effect = {
+            set_global_flag = BASCE_16_broadcast
+        }
+    }
 
 	option = {
 		name = BASCE.16.a
@@ -280,7 +399,14 @@ news_event = {
 
     major = yes
     is_triggered_only = yes
-    fire_only_once = yes
+    trigger = {
+        NOT = { has_global_flag = BASCE_17_broadcast }
+    }
+    immediate = {
+        hidden_effect = {
+            set_global_flag = BASCE_17_broadcast
+        }
+    }
 
 	option = {
 		name = BASCE.17.a
@@ -296,7 +422,14 @@ news_event = {
 
     major = yes
     is_triggered_only = yes
-    fire_only_once = yes
+    trigger = {
+        NOT = { has_global_flag = BASCE_18_broadcast }
+    }
+    immediate = {
+        hidden_effect = {
+            set_global_flag = BASCE_18_broadcast
+        }
+    }
 
 	option = {
 		name = BASCE.18.a
@@ -312,7 +445,14 @@ news_event = {
 
     major = yes
     is_triggered_only = yes
-    fire_only_once = yes
+    trigger = {
+        NOT = { has_global_flag = BASCE_19_broadcast }
+    }
+    immediate = {
+        hidden_effect = {
+            set_global_flag = BASCE_19_broadcast
+        }
+    }
 
 	option = {
 		name = BASCE.19.a
@@ -327,7 +467,14 @@ news_event = {
 
     major = yes
     is_triggered_only = yes
-    fire_only_once = yes
+    trigger = {
+        NOT = { has_global_flag = BASCE_20_broadcast }
+    }
+    immediate = {
+        hidden_effect = {
+            set_global_flag = BASCE_20_broadcast
+        }
+    }
 
 	option = {
 		name = BASCE.20.a
@@ -343,7 +490,14 @@ news_event = {
 
     major = yes
     is_triggered_only = yes
-    fire_only_once = yes
+    trigger = {
+        NOT = { has_global_flag = BASCE_21_broadcast }
+    }
+    immediate = {
+        hidden_effect = {
+            set_global_flag = BASCE_21_broadcast
+        }
+    }
 
 	option = {
 		name = BASCE.21.a
@@ -359,7 +513,14 @@ news_event = {
 
     major = yes
     is_triggered_only = yes
-    fire_only_once = yes
+    trigger = {
+        NOT = { has_global_flag = BASCE_22_broadcast }
+    }
+    immediate = {
+        hidden_effect = {
+            set_global_flag = BASCE_22_broadcast
+        }
+    }
 
 	option = {
 		name = BASCE.22.a
@@ -380,7 +541,14 @@ news_event = {
 
     major = yes
     is_triggered_only = yes
-    fire_only_once = yes
+    trigger = {
+        NOT = { has_global_flag = BASCE_23_broadcast }
+    }
+    immediate = {
+        hidden_effect = {
+            set_global_flag = BASCE_23_broadcast
+        }
+    }
 
 	option = {
 		name = BASCE.23.a
@@ -396,7 +564,14 @@ news_event = {
 
     major = yes
     is_triggered_only = yes
-    fire_only_once = yes
+    trigger = {
+        NOT = { has_global_flag = BASCE_24_broadcast }
+    }
+    immediate = {
+        hidden_effect = {
+            set_global_flag = BASCE_24_broadcast
+        }
+    }
 
 	option = {
 		name = BASCE.24.a
@@ -412,7 +587,14 @@ news_event = {
 
     major = yes
     is_triggered_only = yes
-    fire_only_once = yes
+    trigger = {
+        NOT = { has_global_flag = BASCE_25_broadcast }
+    }
+    immediate = {
+        hidden_effect = {
+            set_global_flag = BASCE_25_broadcast
+        }
+    }
 
 	option = {
 		name = BASCE.25.a
@@ -428,7 +610,14 @@ news_event = {
 
     major = yes
     is_triggered_only = yes
-    fire_only_once = yes
+    trigger = {
+        NOT = { has_global_flag = BASCE_26_broadcast }
+    }
+    immediate = {
+        hidden_effect = {
+            set_global_flag = BASCE_26_broadcast
+        }
+    }
 
 	option = {
 		name = BASCE.26.a
@@ -444,7 +633,14 @@ news_event = {
 
     major = yes
     is_triggered_only = yes
-    fire_only_once = yes
+    trigger = {
+        NOT = { has_global_flag = BASCE_27_broadcast }
+    }
+    immediate = {
+        hidden_effect = {
+            set_global_flag = BASCE_27_broadcast
+        }
+    }
 
 	option = {
 		name = BASCE.27.a
@@ -460,7 +656,14 @@ news_event = {
 
     major = yes
     is_triggered_only = yes
-    fire_only_once = yes
+    trigger = {
+        NOT = { has_global_flag = BASCE_28_broadcast }
+    }
+    immediate = {
+        hidden_effect = {
+            set_global_flag = BASCE_28_broadcast
+        }
+    }
 
 	option = {
 		name = BASCE.28.a
@@ -476,7 +679,14 @@ news_event = {
 
     major = yes
     is_triggered_only = yes
-    fire_only_once = yes
+    trigger = {
+        NOT = { has_global_flag = BASCE_29_broadcast }
+    }
+    immediate = {
+        hidden_effect = {
+            set_global_flag = BASCE_29_broadcast
+        }
+    }
 
 	option = {
 		name = BASCE.29.a
@@ -492,7 +702,14 @@ news_event = {
 
     major = yes
     is_triggered_only = yes
-    fire_only_once = yes
+    trigger = {
+        NOT = { has_global_flag = BASCE_30_broadcast }
+    }
+    immediate = {
+        hidden_effect = {
+            set_global_flag = BASCE_30_broadcast
+        }
+    }
 
 	option = {
 		name = BASCE.30.a
@@ -508,7 +725,14 @@ news_event = {
 
     major = yes
     is_triggered_only = yes
-    fire_only_once = yes
+    trigger = {
+        NOT = { has_global_flag = BASCE_31_broadcast }
+    }
+    immediate = {
+        hidden_effect = {
+            set_global_flag = BASCE_31_broadcast
+        }
+    }
 
 	option = {
 		name = BASCE.31.a
@@ -524,7 +748,14 @@ news_event = {
 
     major = yes
     is_triggered_only = yes
-    fire_only_once = yes
+    trigger = {
+        NOT = { has_global_flag = BASCE_32_broadcast }
+    }
+    immediate = {
+        hidden_effect = {
+            set_global_flag = BASCE_32_broadcast
+        }
+    }
 
 	option = {
 		name = BASCE.32.a
@@ -540,7 +771,14 @@ news_event = {
 
     major = yes
     is_triggered_only = yes
-    fire_only_once = yes
+    trigger = {
+        NOT = { has_global_flag = BASCE_33_broadcast }
+    }
+    immediate = {
+        hidden_effect = {
+            set_global_flag = BASCE_33_broadcast
+        }
+    }
 
 	option = {
 		name = BASCE.33.a
@@ -556,7 +794,14 @@ news_event = {
 
     major = yes
     is_triggered_only = yes
-    fire_only_once = yes
+    trigger = {
+        NOT = { has_global_flag = BASCE_34_broadcast }
+    }
+    immediate = {
+        hidden_effect = {
+            set_global_flag = BASCE_34_broadcast
+        }
+    }
 
 	option = {
 		name = BASCE.34.a
@@ -572,7 +817,14 @@ news_event = {
 
     major = yes
     is_triggered_only = yes
-    fire_only_once = yes
+    trigger = {
+        NOT = { has_global_flag = BASCE_35_broadcast }
+    }
+    immediate = {
+        hidden_effect = {
+            set_global_flag = BASCE_35_broadcast
+        }
+    }
 
 	option = {
 		name = BASCE.35.a
@@ -588,7 +840,14 @@ news_event = {
 
     major = yes
     is_triggered_only = yes
-    fire_only_once = yes
+    trigger = {
+        NOT = { has_global_flag = BASCE_36_broadcast }
+    }
+    immediate = {
+        hidden_effect = {
+            set_global_flag = BASCE_36_broadcast
+        }
+    }
 
 	option = {
 		name = BASCE.36.a
@@ -604,7 +863,14 @@ news_event = {
 
     major = yes
     is_triggered_only = yes
-    fire_only_once = yes
+    trigger = {
+        NOT = { has_global_flag = BASCE_37_broadcast }
+    }
+    immediate = {
+        hidden_effect = {
+            set_global_flag = BASCE_37_broadcast
+        }
+    }
 
 	option = {
 		name = BASCE.37.a
@@ -621,7 +887,14 @@ news_event = {
 
     major = yes
     is_triggered_only = yes
-    fire_only_once = yes
+    trigger = {
+        NOT = { has_global_flag = BASCE_38_broadcast }
+    }
+    immediate = {
+        hidden_effect = {
+            set_global_flag = BASCE_38_broadcast
+        }
+    }
 
 	option = {
 		name = BASCE.38.a
@@ -637,7 +910,14 @@ news_event = {
 
     major = yes
     is_triggered_only = yes
-    fire_only_once = yes
+    trigger = {
+        NOT = { has_global_flag = BASCE_39_broadcast }
+    }
+    immediate = {
+        hidden_effect = {
+            set_global_flag = BASCE_39_broadcast
+        }
+    }
 
 	option = {
 		name = BASCE.39.a
@@ -653,7 +933,14 @@ news_event = {
 
     major = yes
     is_triggered_only = yes
-    fire_only_once = yes
+    trigger = {
+        NOT = { has_global_flag = BASCE_40_broadcast }
+    }
+    immediate = {
+        hidden_effect = {
+            set_global_flag = BASCE_40_broadcast
+        }
+    }
 
 	option = {
 		name = BASCE.40.a
@@ -669,7 +956,14 @@ news_event = {
 
     major = yes
     is_triggered_only = yes
-    fire_only_once = yes
+    trigger = {
+        NOT = { has_global_flag = BASCE_41_broadcast }
+    }
+    immediate = {
+        hidden_effect = {
+            set_global_flag = BASCE_41_broadcast
+        }
+    }
 
 	option = {
 		name = BASCE.41.a
@@ -685,7 +979,14 @@ news_event = {
 
     major = yes
     is_triggered_only = yes
-    fire_only_once = yes
+    trigger = {
+        NOT = { has_global_flag = BASCE_42_broadcast }
+    }
+    immediate = {
+        hidden_effect = {
+            set_global_flag = BASCE_42_broadcast
+        }
+    }
 
 	option = {
 		name = BASCE.42.a
@@ -701,7 +1002,14 @@ news_event = {
 
     major = yes
     is_triggered_only = yes
-    fire_only_once = yes
+    trigger = {
+        NOT = { has_global_flag = BASCE_43_broadcast }
+    }
+    immediate = {
+        hidden_effect = {
+            set_global_flag = BASCE_43_broadcast
+        }
+    }
 
 	option = {
 		name = BASCE.43.a
@@ -717,7 +1025,14 @@ news_event = {
 
     major = yes
     is_triggered_only = yes
-    fire_only_once = yes
+    trigger = {
+        NOT = { has_global_flag = BASCE_44_broadcast }
+    }
+    immediate = {
+        hidden_effect = {
+            set_global_flag = BASCE_44_broadcast
+        }
+    }
 
 	option = {
 		name = BASCE.44.a

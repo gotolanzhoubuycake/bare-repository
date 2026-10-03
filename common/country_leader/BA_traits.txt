@@ -805,6 +805,10 @@ leader_traits = {
 		political_power_factor = 0.2
 		stability_factor = 0.1
 	}
+	#沙勒 大人的责任（占位定义：SCH_sensei 原引用拼写 responsebility_of_adult 无定义，按正确语义补占位 trait）
+	responsibility_of_adult = {
+		random = no
+	}
 	###百鬼夜行###
 	#风一般的少女
 	girl_like_wind = {

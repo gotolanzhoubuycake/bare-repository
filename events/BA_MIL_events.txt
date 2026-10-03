@@ -495,6 +495,9 @@ country_event = {
 
     is_triggered_only = yes
 
+    option = {
+        name = OK
+    }
 }
 
 # 真理部的新任务
@@ -512,6 +515,9 @@ country_event = {
         }
     }
 
+    option = {
+        name = OK
+    }
 }
 
 # 真理部的发现
@@ -530,6 +536,9 @@ country_event = {
         }
     }
 
+    option = {
+        name = OK
+    }
 }
 
 # 凯撒的交涉意见
@@ -554,6 +563,9 @@ country_event = {
         }
     }
 
+    option = {
+        name = OK
+    }
 }
 
 country_event = {
@@ -562,6 +574,9 @@ country_event = {
     desc = MIL_event.11.d
 
     is_triggered_only = yes
+    option = {
+        name = OK
+    }
 }
 
 country_event = {
@@ -570,6 +585,9 @@ country_event = {
     desc = MIL_event.12.d
 
     is_triggered_only = yes
+    option = {
+        name = OK
+    }
 }
 
 ### 与凯撒战争相关事件 ###
