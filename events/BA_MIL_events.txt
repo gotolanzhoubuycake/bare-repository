@@ -667,7 +667,9 @@ country_event = {
     immediate = {
         # 2026-05-25: immediate内效果统一隐藏，避免事件弹窗显示即时效果。
         hidden_effect = {
-            # 设置全局标志，解锁凯撒战时宣传决策组和启动经济调整系统
+            # 2026-10-08：战争期间将凯撒总部及子公司设为主要国家，防止子公司投降提前结束阵营战争。
+            BARE_MIL_CAE_war_force_major_effect = yes
+            # 设置战争旗标，解锁凯撒战时决议组并启动经济调整系统。
             CAE = {
                 set_country_flag = CAE_MIL_war_started
                 declare_war_on = {
@@ -801,6 +803,40 @@ country_event = {
 
     option = {
         name = MIL_cae_war.12.a
+        ai_chance = {
+            base = 1
+        }
+    }
+}
+
+# 2026-10-08：新增凯撒击溃千年后的战果事件，由统一凯撒胜利效果触发。
+country_event = {
+    id = MIL_cae_war.13
+    title = MIL_cae_war.13.t
+    desc = MIL_cae_war.13.d
+
+    is_triggered_only = yes
+    fire_only_once = yes
+
+    option = {
+        name = MIL_cae_war.13.a
+        ai_chance = {
+            base = 1
+        }
+    }
+}
+
+# 事件14：来自千年的问候
+# 2026-10-08：由“最终攻势”国策触发，用于承接最终决战叙事。
+country_event = {
+    id = MIL_cae_war.14
+    title = MIL_cae_war.14.t
+    desc = MIL_cae_war.14.d
+
+    is_triggered_only = yes
+
+    option = {
+        name = MIL_cae_war.14.a
         ai_chance = {
             base = 1
         }

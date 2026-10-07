@@ -2,8 +2,24 @@
 on_actions = {
     on_capitulation_immediate = {
         effect = {
-            ############################古圣堂之战#####################################
+            ############################千年-凯撒战争#####################################
+            # 2026-10-08：千年投降按凯撒胜利结算，凯撒总部投降按千年胜利结算。
             if = {
+                limit = {
+                    original_tag = MIL
+                    has_country_flag = CAE_MIL_war_started
+                }
+                BARE_MIL_CAE_war_cae_victory_effect = yes
+            }
+            else_if = {
+                limit = {
+                    original_tag = CAE
+                    has_country_flag = CAE_MIL_war_started
+                }
+                BARE_MIL_CAE_war_mil_victory_effect = yes
+            }
+            ############################古圣堂之战#####################################
+            else_if = {
                 limit = {
                     has_global_flag = ECW_active_global_flag					#古圣堂之战 开始
                     not = {

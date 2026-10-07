@@ -50,6 +50,13 @@
  MIL_investigate_success: "审查大获成功"
  MIL_till_the_last_man_standing: "死战到底"
  MIL_fierce_resistance: "激烈的抵抗"
+ MIL_fierce_resistance_desc: "千年抵抗组织持续破坏凯撒的占领体系。"
+ MIL_counterattack_against_cae: "针锋相对"
+ MIL_counterattack_against_cae_desc: "凯撒的入侵必须用最坚决的反击回应。"
+ MIL_efficient_planning: "高效计划"
+ MIL_efficient_planning_desc: "依靠算力和情报优势，千年可以快速制定并执行作战计划。"
+ MIL_final_battle_against_cae: "决战凯撒"
+ MIL_final_battle_against_cae_desc: "千年已经准备好发动决定战争走向的最后攻势。"
 
  MIL_security_department_name: "承平日久的安保部"
 # 2026-06-24 修改：按实际剩余变量拆分承平日久的安保部修正变化提示；第3/4次调用不再显示已归零的花费与精通度项目。

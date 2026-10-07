@@ -111,7 +111,8 @@ CAE_war_propaganda_category = {
 
         available = {
             NOT = { has_country_flag = CAE_war_propaganda_active }
-            any_owned_state = {
+            # 2026-10-08：战争开始只改变控制权，必须检查控制中的千年核心省份。
+            any_controlled_state = {
                 is_core_of = MIL
             }
         }
@@ -128,7 +129,7 @@ CAE_war_propaganda_category = {
             # 初始化计数器
             set_temp_variable = { CAE_MIL_state_counter = 0 }
             # 计算控制的千年省份数量
-            every_owned_state = {
+            every_controlled_state = {
                 limit = {
                     is_core_of = MIL
                 }
@@ -139,7 +140,7 @@ CAE_war_propaganda_category = {
                 global.cae_economic_situation = CAE_MIL_state_counter
             }
             # 占领区效果
-            every_owned_state = {
+            every_controlled_state = {
                 limit = {
                     is_core_of = MIL
                 }
@@ -175,7 +176,8 @@ CAE_war_propaganda_category = {
 
         available = {
             NOT = { has_country_flag = CAE_war_propaganda_active }
-            any_owned_state = {
+            # 2026-10-08：战争开始只改变控制权，必须检查控制中的千年核心省份。
+            any_controlled_state = {
                 is_core_of = MIL
             }
         }
@@ -192,7 +194,7 @@ CAE_war_propaganda_category = {
             # 初始化计数器
             set_temp_variable = { CAE_MIL_state_counter_2 = 0 }
             # 计算控制的千年省份数量
-            every_owned_state = {
+            every_controlled_state = {
                 limit = {
                     is_core_of = MIL
                 }
@@ -204,7 +206,7 @@ CAE_war_propaganda_category = {
                 global.cae_economic_situation = CAE_MIL_state_counter_2
             }
             # 占领区效果
-            every_owned_state = {
+            every_controlled_state = {
                 limit = {
                     is_core_of = MIL
                 }

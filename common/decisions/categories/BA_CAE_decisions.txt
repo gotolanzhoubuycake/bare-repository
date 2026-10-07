@@ -16,9 +16,12 @@ CAE_war_propaganda_category = {
 CAE_war_produce_category = {
     visible = {
         original_tag = CAE
+        # 2026-10-08：征兵决议仅在千年-凯撒战争期间开放。
+        has_country_flag = CAE_MIL_war_started
         has_country_flag = FUCK_COMPLETE
         has_country_flag = CC_COMPLETE
-        # is_ai = yes # 测试的时候关闭
+        # 2026-10-08：该征兵类别仅供凯撒 AI 使用，避免玩家绕过战争节奏直接刷兵。
+        is_ai = yes
     }
     visible_when_empty = yes
     priority = 1000

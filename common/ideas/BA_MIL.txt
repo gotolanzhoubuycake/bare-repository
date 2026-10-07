@@ -291,6 +291,102 @@ ideas = {
             }
         }
 
+        # 2026-10-08：补齐凯撒战争国策使用的抵抗、反击、计划和决战民族精神。
+        MIL_fierce_resistance_resistance = {
+            name = MIL_fierce_resistance
+            picture = unknown
+            modifier = {
+                resistance_growth = 0.15
+                required_garrison_factor = 0.10
+                local_factories = -0.05
+            }
+        }
+
+        MIL_fierce_resistance_compliance = {
+            name = MIL_fierce_resistance
+            picture = unknown
+            modifier = {
+                compliance_growth = -0.15
+                required_garrison_factor = 0.10
+                local_factories = -0.05
+            }
+        }
+
+        MIL_fierce_resistance_both = {
+            name = MIL_fierce_resistance
+            picture = unknown
+            modifier = {
+                resistance_growth = 0.15
+                compliance_growth = -0.15
+                required_garrison_factor = 0.10
+                local_factories = -0.05
+            }
+        }
+
+        MIL_fierce_resistance_final = {
+            name = MIL_fierce_resistance
+            picture = unknown
+            modifier = {
+                resistance_growth = 0.25
+                compliance_growth = -0.25
+                required_garrison_factor = 0.20
+                local_factories = -0.15
+            }
+        }
+
+        MIL_counterattack_against_cae = {
+            name = MIL_counterattack_against_cae
+            picture = unknown
+            modifier = {
+                army_org_regain = 0.10
+                experience_loss_factor = 0.25
+            }
+            targeted_modifier = {
+                tag = CAE
+                attack_bonus_against = 0.05
+            }
+        }
+
+        MIL_efficient_planning = {
+            name = MIL_efficient_planning
+            picture = unknown
+            modifier = {
+                max_planning_factor = 0.15
+                planning_speed = 0.25
+                terrain_penalty_reduction = 0.05
+            }
+        }
+
+        MIL_efficient_planning_steel_torrent = {
+            name = MIL_efficient_planning
+            picture = unknown
+            modifier = {
+                max_planning_factor = 0.15
+                planning_speed = 0.25
+                terrain_penalty_reduction = 0.05
+                modifier_army_sub_unit_infantry_am_attack_factor = 0.10
+                modifier_army_sub_unit_infantry_am_defence_factor = 0.10
+                modifier_army_sub_unit_category_bm_attack_factor = 0.10
+                modifier_army_sub_unit_category_bm_defence_factor = 0.10
+                supply_consumption_factor = -0.10
+                supply_node_range = 0.10
+            }
+        }
+
+        MIL_final_battle_against_cae = {
+            name = MIL_final_battle_against_cae
+            picture = unknown
+            modifier = {
+                army_org_factor = 0.10
+                army_strength_factor = 0.10
+            }
+            targeted_modifier = {
+                tag = CAE
+                attack_bonus_against = 0.15
+                defense_bonus_against = 0.15
+            }
+        }
+
         # 永远飘扬的光辉旗帜
         MIL_glorious_banner_forever = {
             name = MIL_glorious_banner_forever

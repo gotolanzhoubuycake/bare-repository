@@ -348,6 +348,14 @@ focus_tree = {
 		prerequisite = {
 			focus = MIL_protect_mil
 		}
+
+		completion_reward = {
+			# 2026-10-08：补回“死战到底”战时精神，持续180日。
+			add_timed_idea = {
+				idea = MIL_till_the_last_man_standing
+				days = 180
+			}
+		}
 	}
 	focus = { #无处不在的自动机
 		id = MIL_everwhever_machine
@@ -360,6 +368,27 @@ focus_tree = {
 		prerequisite = {
 			focus = MIL_protect_land
 		}
+
+		completion_reward = {
+			# 2026-10-08：自动机抵抗提高凯撒占领区抵抗，并降低其经济状况。
+			CAE = {
+				remove_ideas = {
+					MIL_fierce_resistance_resistance
+					MIL_fierce_resistance_compliance
+					MIL_fierce_resistance_both
+					MIL_fierce_resistance_final
+				}
+				add_ideas = MIL_fierce_resistance_resistance
+			}
+			subtract_from_variable = { global.cae_economic_situation = 10 }
+			# 2026-10-08：仅对当前仍由凯撒控制的千年核心州施加即时抵抗度。
+			CAE = {
+				every_controlled_state = {
+					limit = { is_core_of = MIL }
+					add_resistance = 15
+				}
+			}
+		}
 	}
 	focus = { #神出鬼没的猎杀者
 		id = MIL_unexpected_killer
@@ -371,6 +400,27 @@ focus_tree = {
 		y = 7
 		prerequisite = {
 			focus = MIL_protect_land
+		}
+
+		completion_reward = {
+			# 2026-10-08：抵抗组织降低凯撒占领区顺从，并降低其经济状况。
+			CAE = {
+				if = {
+					limit = { has_idea = MIL_fierce_resistance_resistance }
+					remove_ideas = MIL_fierce_resistance_resistance
+					add_ideas = MIL_fierce_resistance_both
+				}
+				else = {
+					add_ideas = MIL_fierce_resistance_compliance
+				}
+			}
+			subtract_from_variable = { global.cae_economic_situation = 10 }
+			CAE = {
+				every_controlled_state = {
+					limit = { is_core_of = MIL }
+					add_compliance = -15
+				}
+			}
 		}
 	}
 	focus = { #我们熟悉的地方
@@ -387,6 +437,25 @@ focus_tree = {
 		prerequisite = {
 			focus = MIL_everwhever_machine
 		}
+
+		completion_reward = {
+			# 2026-10-08：熟悉战场后强化凯撒占领修正，并同步降低占领区顺从与经济状况。
+			CAE = {
+				remove_ideas = {
+					MIL_fierce_resistance_resistance
+					MIL_fierce_resistance_compliance
+					MIL_fierce_resistance_both
+					MIL_fierce_resistance_final
+				}
+				add_ideas = MIL_fierce_resistance_final
+				every_controlled_state = {
+					limit = { is_core_of = MIL }
+					add_resistance = 10
+					add_compliance = -10
+				}
+			}
+			subtract_from_variable = { global.cae_economic_situation = 10 }
+		}
 	}
 	focus = { #里应外合，重点打击
 		id = MIL_Cooperate
@@ -399,6 +468,8 @@ focus_tree = {
 		prerequisite = {
 			focus = MIL_all_kown_land
 		}
+
+		# 2026-10-08：参考文档要求的“游击队突袭”决议尚无仓库定义，暂不写入虚假的解锁 ID。
 	}
 	focus = { #将入侵者赶出学院
 		id = MIL_fuck_Enemy
@@ -410,6 +481,11 @@ focus_tree = {
 		y = 6
 		prerequisite = {
 			focus = MIL_protect_mil
+		}
+
+		completion_reward = {
+			# 2026-10-08：补回针对凯撒的进攻精神。
+			add_ideas = MIL_counterattack_against_cae
 		}
 	}
 	focus = { #发挥我们的优势
@@ -423,6 +499,11 @@ focus_tree = {
 		prerequisite = {
 			focus = MIL_fuck_Enemy	
 		}
+
+		completion_reward = {
+			# 2026-10-08：补回计划上限、计划速度和地形适应加成。
+			add_ideas = MIL_efficient_planning
+		}
 	}
 	focus = { #一个公司最害怕的事情
 		id = MIL_scared_company
@@ -434,6 +515,12 @@ focus_tree = {
 		y = 7
 		prerequisite = {
 			focus = MIL_fuck_Enemy
+		}
+
+		completion_reward = {
+			# 2026-10-08：解锁现有的凯撒商品抵制与网络攻击决议。
+			unlock_decision_tooltip = MIL_boycott_CAE_products
+			unlock_decision_tooltip = MIL_cyber_attack_CAE
 		}
 	}
 	focus = { #炮火开路，钢铁突击
@@ -447,6 +534,12 @@ focus_tree = {
 		prerequisite = {
 			focus = MIL_use_advantage
 		}
+
+		completion_reward = {
+			# 2026-10-08：将“高效计划”升级为包含自动机、机甲和补给强化的版本。
+			remove_ideas = MIL_efficient_planning
+			add_ideas = MIL_efficient_planning_steel_torrent
+		}
 	}
 	focus = { #不给凯撒提供一分收益
 		id = MIL_no_money_to_kaiser
@@ -458,6 +551,11 @@ focus_tree = {
 		y = 8
 		prerequisite = {
 			focus = MIL_scared_company
+		}
+
+		completion_reward = {
+			# 2026-10-08：解锁现有的全面禁用凯撒商品决议。
+			unlock_decision_tooltip = MIL_ban_all_CAE_products
 		}
 	}
 	focus = { #打谈结合，攻心为上
@@ -474,6 +572,12 @@ focus_tree = {
 		prerequisite = {
 			focus = MIL_use_cannon
 		}
+
+		completion_reward = {
+			# 2026-10-08：解锁谈判信息决议并直接削弱凯撒经济状况。
+			unlock_decision_tooltip = MIL_release_negotiation_info
+			subtract_from_variable = { global.cae_economic_situation = 20 }
+		}
 	}
 	focus = { #最终攻势
 		id = MIL_end_attack
@@ -488,6 +592,12 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = MIL_attack_and_conversation
+		}
+
+		completion_reward = {
+			# 2026-10-08：补回最终决战精神，并触发“来自千年的问候”事件。
+			add_ideas = MIL_final_battle_against_cae
+			country_event = { id = MIL_cae_war.14 }
 		}
 	}
 

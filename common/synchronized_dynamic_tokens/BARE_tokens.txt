@@ -1764,6 +1764,15 @@ MIL_cyber_defense_final
 MIL_eimi
 MIL_eimi_hc
 MIL_glorious_banner_forever
+# 2026-10-08：登记凯撒战争新增民族精神，确保联机同步和动态名称解析。
+MIL_counterattack_against_cae
+MIL_efficient_planning
+MIL_efficient_planning_steel_torrent
+MIL_final_battle_against_cae
+MIL_fierce_resistance_both
+MIL_fierce_resistance_compliance
+MIL_fierce_resistance_final
+MIL_fierce_resistance_resistance
 MIL_hare
 MIL_hare_pa
 MIL_hibiki

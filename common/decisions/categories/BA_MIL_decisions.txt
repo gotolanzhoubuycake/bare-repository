@@ -81,6 +81,8 @@ MIL_cae_war_decision_category = {
     visible = {
         original_tag = MIL
         has_completed_focus = MIL_protect_mil
+        # 2026-10-08：战争结束后隐藏千年侧战争决议，避免重复执行战时操作。
+        has_country_flag = CAE_MIL_war_started
     }
 
     scripted_gui = BARE_MIL_cae_war_GUI_SG
