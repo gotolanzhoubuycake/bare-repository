@@ -1,5 +1,8 @@
 ﻿l_simp_chinese:
 # 2026-08-03: 统一千年本地化键值为顶层格式，按国家理念与修正分组维护。
+ MIL_missing_student_council_president: "失踪的学生会长"
+ MIL_missing_student_council_president_desc: "莉音会长突然失踪，研讨会既无法确认她的下落，也没有做好接管全部权限的准备。领导真空正在持续干扰千年的科研、生产和日常行政。"
+
  MIL_Millennium_Award: "千年大赏"
  MIL_Millennium_Award_desc: "千年大赏汇总了千年各研发部门取得的长期成果，并将已经投入实际应用的技术转化为持续收益。"
  MIL_Game_Development_Department_Game_Development: "新游热度"

@@ -1,0 +1,88 @@
+add_namespace = MIL_opening
+
+# “千年的崭新一周”开始 7 日后触发，并自动完成“研讨会紧急会议”。
+country_event = {
+	id = MIL_opening.1
+	title = MIL_opening.1.t
+	desc = MIL_opening.1.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = MIL_opening.1.a
+		if = {
+			limit = {
+				NOT = { has_completed_focus = MIL_seminar_emergency_meeting }
+			}
+			complete_national_focus = MIL_seminar_emergency_meeting
+		}
+		ai_chance = { base = 1 }
+	}
+}
+
+country_event = {
+	id = MIL_opening.2
+	title = MIL_opening.2.t
+	desc = MIL_opening.2.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = MIL_opening.2.a
+		ai_chance = { base = 1 }
+	}
+}
+
+country_event = {
+	id = MIL_opening.3
+	title = MIL_opening.3.t
+	desc = MIL_opening.3.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = MIL_opening.3.a
+		ai_chance = { base = 1 }
+	}
+}
+
+country_event = {
+	id = MIL_opening.4
+	title = MIL_opening.4.t
+	desc = MIL_opening.4.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = MIL_opening.4.a
+		ai_chance = { base = 1 }
+	}
+}
+
+# 该事件的选项会立即触发“莉音会长的信息”。
+country_event = {
+	id = MIL_opening.5
+	title = MIL_opening.5.t
+	desc = MIL_opening.5.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = MIL_opening.5.a
+		country_event = MIL_opening.6
+		ai_chance = { base = 1 }
+	}
+}
+
+country_event = {
+	id = MIL_opening.6
+	title = MIL_opening.6.t
+	desc = MIL_opening.6.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = MIL_opening.6.a
+		ai_chance = { base = 1 }
+	}
+}
