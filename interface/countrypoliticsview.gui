@@ -936,7 +936,8 @@ guiTypes = {
         size = { width = 231 height = 74 }
         clipping = no
 
-        background = {
+        # 2026-11-08  恢复顾问卡片的原生点击类型，保留网格卡片尺寸和贴图。
+        buttonType = {
             name = "idea_entry_bg"
             position = { x = 3 y = 0 }
             spriteType = "GFX_idea_entry_bg_2"
@@ -1018,7 +1019,8 @@ guiTypes = {
         size = { width = 462 height = 74 }
         clipping = no
 
-        background = {
+        # 2026-11-08  列表卡片使用同一原生点击绑定。
+        buttonType = {
             name = "idea_entry_bg"
             position = { x = 3 y = 0 }
             spriteType = "GFX_idea_entry_bg_3"

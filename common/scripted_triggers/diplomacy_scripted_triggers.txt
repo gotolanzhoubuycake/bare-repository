@@ -305,6 +305,25 @@ DIPLOMACY_KICK_FROM_FACTION_ENABLE_TRIGGER = {
 		always = no
 	}
 }
+# 2026-11-08  恢复引擎为召回志愿军调用的原生外交检查。
+DIPLOMACY_RECALL_VOLUNTEERS_ENABLE_TRIGGER = {
+	# 当前国家为外交行动发起方，FROM 为外交对象。
+	# 沿用原版规则和志愿军条件，撤离与冷却交由引擎处理。
+	if = {
+		limit = {
+			has_game_rule = {
+				rule = allow_volunteers
+				option = ALWAYS_FREE
+			}
+		}
+		if = {
+			limit = {
+				has_volunteers = from
+			}
+		}
+	}
+}
+
 DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 	#给他派嘛
 	# custom_override_tooltip = {

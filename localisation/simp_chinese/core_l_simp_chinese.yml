@@ -2320,3 +2320,6 @@
  USE_DEFAULT_MODEL_TOOLTIP: "使用最常见的装备型号" #Remove in >= 1.18.0.0
  coal_desc: "煤炭是驱动工业生产的一种资源。"
  the_great_wall: "长城"
+
+ # 2026-11-08  补齐召回志愿军外交行动标题。
+ DIPLOMACY_RECALL_VOLUNTEERS_TITLE: "召回志愿军"

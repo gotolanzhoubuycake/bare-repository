@@ -171,6 +171,13 @@ spriteTypes = {
 		noOfFrames = 2
 	}
 
+	# 2026-11-08  补齐启动时原版多人界面引用的显示按钮图集。
+	spriteType = {
+		name = "GFX_privacy_reveal_eye"
+		texturefile = "gfx/interface/privacy_reveal_eye.dds"
+		noOfFrames = 2
+	}
+
 	spriteType = {
 		name = "GFX_header_bg"
 		texturefile = "gfx/interface/header_bg.dds"
@@ -185,6 +192,12 @@ spriteTypes = {
 		name = "GFX_resources_strip"
 		texturefile = "gfx/interface/resources_strip.dds"
 		noOfFrames = 8
+	}
+
+	# 2026-11-08  注册短缺资源点击区使用的原版贴图。
+	spriteType = {
+		name = "resource_item_background"
+		texturefile = "gfx/interface/resource_item_bg.dds"
 	}
 
 	spriteType = {
