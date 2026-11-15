@@ -798,7 +798,11 @@ news_event = {
 	desc = BARE_World_News.18.desc
 	is_triggered_only = yes
 	major = yes
-	
+	immediate = {
+		hidden_effect = {
+			BSE_Fire_Super_Event_index_3 = yes
+		}
+	}
 	#有趣
 	option = {
 		name = BARE_World_News.18.a
@@ -806,10 +810,7 @@ news_event = {
 			OR = {
 				tag = TRI
 				tag = GEH
-			}	
-		}
-		hidden_effect = {
-			BSE_Fire_Super_Event_index_3 = yes
+			}
 		}
 	}
 	option = {
@@ -820,14 +821,27 @@ news_event = {
 				tag = GEH
 			}
 		}
-		hidden_effect = {
-			BSE_Fire_Super_Event_index_3 = yes
-		}
 	}
 }
 
-
-
+###米卡政变失败####
+news_event = {
+	id = BARE_World_News.19
+	picture = GFX_BA_news_18
+	title = BARE_World_News.19.t
+	desc = BARE_World_News.19.desc
+	is_triggered_only = yes
+	major = yes
+	immediate = {
+		hidden_effect = {
+			BARE_SuperEvent_2_effect_6 = yes
+		}
+	}
+	#有趣
+	option = {
+		name = BARE_World_News.19.a
+	}
+}
 
 add_namespace = ALF_news_event
 ##公司战争结束-流亡者大胜
@@ -838,7 +852,6 @@ news_event = {
 	desc = ALF_news_event.1.desc
 	is_triggered_only = yes
 	major = yes
-	
 	option = {
 		name = ALF_news_event.1.a
 	}
@@ -852,7 +865,6 @@ news_event = {
 	desc = ALF_news_event.2.desc
 	is_triggered_only = yes
 	major = yes
-
 	option = {
 		name = ALF_news_event.2.a
 	}
@@ -866,10 +878,13 @@ news_event = {
 	desc = ALF_news_event.3.desc
 	is_triggered_only = yes
 	major = yes
-
+	immediate = {
+		hidden_effect = {
+			BARE_SuperEvent_2_effect_11 = yes
+		}
+	}
 	option = {
 		name = ALF_news_event.3.a
-		BARE_SuperEvent_2_effect_11 = yes
 	}
 }
 
@@ -881,7 +896,6 @@ news_event = {
 	desc = ALF_news_event.4.desc
 	is_triggered_only = yes
 	major = yes
-
 	option = {
 		name = ALF_news_event.4.a
 	}
@@ -895,7 +909,6 @@ news_event = {
 	desc = ALF_news_event.5.desc
 	is_triggered_only = yes
 	major = yes
-
 	option = {
 		name = ALF_news_event.5.a
 	}
@@ -909,7 +922,6 @@ news_event = {
 	desc = ALF_news_event.6.desc
 	is_triggered_only = yes
 	major = yes
-
 	option = {
 		name = ALF_news_event.6.a
 	}
@@ -923,7 +935,6 @@ news_event = {
 	desc = ALF_news_event.7.desc
 	is_triggered_only = yes
 	major = yes
-
 	option = {
 		name = ALF_news_event.7.a
 	}
@@ -937,7 +948,6 @@ news_event = {
 	desc = ALF_news_event.8.desc
 	is_triggered_only = yes
 	major = yes
-
 	option = {
 		name = ALF_news_event.8.a
 	}
@@ -951,10 +961,14 @@ news_event = {
 	desc = ALF_news_event.9.desc
 	is_triggered_only = yes
 	major = yes
-
+	immediate = {
+		hidden_effect = {
+			BSE_Fire_Super_Event_index_9 = yes
+		}
+	}
 	option = {
 		name = ALF_news_event.9.a
-		BSE_Fire_Super_Event_index_9 = yes
+		
 	}
 }
 
@@ -966,10 +980,14 @@ news_event = {
 	desc = ALF_news_event.10.desc
 	is_triggered_only = yes
 	major = yes
-
+	immediate = {
+		hidden_effect = {
+			BSE_Fire_Super_Event_index_7 = yes
+		}
+	}
 	option = {
 		name = ALF_news_event.10.a
-		BSE_Fire_Super_Event_index_7 = yes
+		
 	}
 }
 
@@ -981,10 +999,8 @@ news_event = {
 	desc = ALF_news_event.11.desc
 	is_triggered_only = yes
 	major = yes
-
 	option = {
 		name = ALF_news_event.11.a
-
 	}
 }
 
@@ -996,9 +1012,12 @@ news_event = {
 	desc = ALF_news_event.12.desc
 	is_triggered_only = yes
 	major = yes
-
+	immediate = {
+		hidden_effect = {
+			BSE_Fire_Super_Event_index_11 = yes
+		}
+	}
 	option = {
 		name = ALF_news_event.12.a
-		BSE_Fire_Super_Event_index_11 = yes
 	}
 }

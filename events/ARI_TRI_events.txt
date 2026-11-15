@@ -356,7 +356,10 @@ country_event = { #旅者”行动总结-部分成功
             
         }
         hidden_effect = {
-	        BARE_SuperEvent_2_effect_6 = yes
+	        country_event = {
+                id = ALF.69
+            }
+            #BARE_SuperEvent_2_effect_6 = yes
         }
     }
 }
@@ -1023,7 +1026,10 @@ country_event = { #“旅者”行动总结-基本失败
             }
         }
         hidden_effect = {
-	        BARE_SuperEvent_2_effect_6 = yes
+            country_event = {
+                id = ALF.69
+            }
+	        #BARE_SuperEvent_2_effect_6 = yes
         }
     }
 }

@@ -175,7 +175,7 @@ BARE_SuperEvent_2_effect_10 = {
 
 ##公司战争##
 BARE_SuperEvent_2_effect_11 = {
-	if = {
+	every_country = {
 		limit = {
 			is_ai = no
 		}
@@ -210,12 +210,17 @@ BSE_Fire_Super_Event_index_2 = {
 
 ##伊甸条约凯旋：圣三一
 BSE_Fire_Super_Event_index_3 = {
-	set_variable = {
-		barexp_super_event_index = 3
-	}
-	hidden_effect = {
-		scoped_sound_effect = BARE_SuperEvent_Sound_Eden_Treaty_wins_piano_motion
-		scoped_play_song = "BARE_SuperEvent_Sound_Block_2m"
+	every_country = {
+		limit = {
+			is_ai = no
+		}
+		set_variable = {
+			barexp_super_event_index = 3
+		}
+		hidden_effect = {
+			scoped_sound_effect = BARE_SuperEvent_Sound_Eden_Treaty_wins_piano_motion
+			scoped_play_song = "BARE_SuperEvent_Sound_Block_2m"
+		}
 	}
 }
 
@@ -249,50 +254,75 @@ BSE_Fire_Super_Event_index_6 = {
 
 ##光复战争##
 BSE_Fire_Super_Event_index_7 = {
-	set_variable = {
-		barexp_super_event_index = 7
-	}
-	hidden_effect = {
-		scoped_play_song = "BARE_SuperEvent_Sound_Pain_is_Salvation"
+	every_country = {
+		limit = {
+			is_ai = no
+		}
+		set_variable = {
+			barexp_super_event_index = 7
+		}
+		hidden_effect = {
+			scoped_play_song = "BARE_SuperEvent_Sound_Pain_is_Salvation"
+		}
 	}
 }
 
 BSE_Fire_Super_Event_index_8 = {
-	set_variable = {
-		barexp_super_event_index = 8
-	}
-	hidden_effect = {
-		scoped_sound_effect = BARE_SuperEvent_Sound_GEH_TRI_Total_War
-		scoped_play_song = "BARE_SuperEvent_Sound_Block_2m"
+	every_country = {
+		limit = {
+			is_ai = no
+		}
+		set_variable = {
+			barexp_super_event_index = 8
+		}
+		hidden_effect = {
+			scoped_sound_effect = BARE_SuperEvent_Sound_GEH_TRI_Total_War
+			scoped_play_song = "BARE_SuperEvent_Sound_Block_2m"
+		}
 	}
 }
 
 BSE_Fire_Super_Event_index_9 = {
-	set_variable = {
-		barexp_super_event_index = 9
-	}
-	hidden_effect = {
-		scoped_sound_effect = BARE_SuperEvent_Sound_Eden_Treaty_wins_piano_motion
-		scoped_play_song = "BARE_SuperEvent_Sound_Block_2m"
+	every_country = {
+		limit = {
+			is_ai = no
+		}
+		set_variable = {
+			barexp_super_event_index = 9
+		}
+		hidden_effect = {
+			scoped_sound_effect = BARE_SuperEvent_Sound_Eden_Treaty_wins_piano_motion
+			scoped_play_song = "BARE_SuperEvent_Sound_Block_2m"
+		}
 	}
 }
 
 BSE_Fire_Super_Event_index_10 = {
-	set_variable = {
-		barexp_super_event_index = 10
-	}
-	hidden_effect = {
-		scoped_sound_effect = BARE_SuperEvent_Sound_GEH_TRI_Total_War
-		scoped_play_song = "BARE_SuperEvent_Sound_Block_2m"
+	every_country = {
+		limit = {
+			is_ai = no
+		}
+		set_variable = {
+			barexp_super_event_index = 10
+		}
+		hidden_effect = {
+			scoped_sound_effect = BARE_SuperEvent_Sound_GEH_TRI_Total_War
+			scoped_play_song = "BARE_SuperEvent_Sound_Block_2m"
+		}
 	}
 }
 
 BSE_Fire_Super_Event_index_11 = {
-	set_variable = {
-		barexp_super_event_index = 11
-	}
-	hidden_effect = {
-		scoped_play_song = BARE_SuperEvent_Sound_lap_time
+	every_country = {
+		limit = {
+			is_ai = no
+		}
+		set_variable = {
+			barexp_super_event_index = 11
+		}
+		hidden_effect = {
+			scoped_play_song = BARE_SuperEvent_Sound_lap_time
+		}
 	}
 }
 

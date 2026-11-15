@@ -35,10 +35,16 @@ objectTypes = {
 		file = "gfx/models/units/weapons/G3A3/G3A3.mesh"
 	}
 
+	##模型爆了，我还不知道原因##
 	####HK G36####
+	#pdxmesh = {
+	#	name = "generic_HK_G36_weapon_mesh"
+	#file = "gfx/models/units/weapons/HK_G36/HK_G36.mesh"
+	#}
+
 	pdxmesh = {
 		name = "generic_HK_G36_weapon_mesh"
-		file = "gfx/models/units/weapons/HK_G36/HK_G36.mesh"
+		file = "gfx/models/units/weapons/HK416/HK416.mesh"
 	}
 
 	####HK 416####

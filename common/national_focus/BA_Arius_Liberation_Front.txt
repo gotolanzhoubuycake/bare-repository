@@ -2289,7 +2289,7 @@ focus_tree = {
     focus = {
         ##命运在召唤
         id = ALF_fate_calls
-        icon = GFX_goal_unknown
+        icon = GFX_focus_generic_escort_efficiency
         cost = 4
         x = 28
         y = 11
@@ -2305,7 +2305,7 @@ focus_tree = {
     }
     focus = {
         id = ALF_target_DCA
-        icon = GFX_goal_unknown
+        icon = GFX_focus_RAJ_war_taxes
         relative_position_id = ALF_fate_calls
         prerequisite = {
             focus = ALF_fate_calls
@@ -2354,7 +2354,7 @@ focus_tree = {
     }
     focus = {
         id = ALF_target_KHG
-        icon = GFX_goal_unknown
+        icon = GFX_focus_generic_conspiracy
         relative_position_id = ALF_fate_calls
         prerequisite = {
             focus = ALF_fate_calls
@@ -2478,7 +2478,7 @@ focus_tree = {
     }
     focus = {
         id = ALF_target_blackmarket
-        icon = GFX_goal_unknown
+        icon = GFX_focus_generic_cryptologic_bomb
         relative_position_id = ALF_warno
         prerequisite = {
             focus = ALF_warno
@@ -2532,7 +2532,7 @@ focus_tree = {
         id = ALF_enlarge_air_force
         icon = GFX_focus_ARI_open_the_curtain
         relative_position_id = ALF_difficult_situation
-        cost = 3
+        cost = 2
         x = -2
         y = 1
         prerequisite = {
@@ -2582,9 +2582,9 @@ focus_tree = {
     ##对空高度警戒
     focus = {
         id = ALF_air_alert
-        icon = GFX_focus_ARI_open_the_curtain
+        icon = GFX_focus_PRC_anti_air_effort
         relative_position_id = ALF_enlarge_air_force
-        cost = 2
+        cost = 1
         x = 0
         y = 2
         prerequisite = {
@@ -2637,7 +2637,7 @@ focus_tree = {
         id = ALF_integrate_black_market_cores
         icon = GFX_focus_ARI_open_the_curtain
         relative_position_id = ALF_difficult_situation
-        cost = 3
+        cost = 2
         x = 0
         y = 1
         prerequisite = {
@@ -2689,8 +2689,8 @@ focus_tree = {
         id = ALF_restore_new_area_production
         icon = GFX_focus_ARI_open_the_curtain
         relative_position_id = ALF_integrate_black_market_cores
-        cost = 2
-        x = -1
+        cost = 1
+        x = 0
         y = 1
         prerequisite = {
             focus = ALF_integrate_black_market_cores
@@ -2714,7 +2714,7 @@ focus_tree = {
                     add_extra_state_shared_building_slots = 2
                     add_building_construction = {
                         type = heavy_arms_factory
-                        level = 2
+                        level = 1
                         instant_build = yes
                     }
                 }
@@ -2744,7 +2744,7 @@ focus_tree = {
                     add_extra_state_shared_building_slots = 2
                     add_building_construction = {
                         type = arms_factory
-                        level = 2
+                        level = 1
                         instant_build = yes
                     }
                 }
@@ -2759,36 +2759,10 @@ focus_tree = {
                     add_extra_state_shared_building_slots = 2
                     add_building_construction = {
                         type = industrial_complex
-                        level = 2
+                        level = 1
                         instant_build = yes
                     }
                 }
-            }
-        }
-    }
-    ##动员政治
-    focus = {
-        id = ALF_politic_mobilization
-        icon = GFX_focus_ARI_open_the_curtain
-        relative_position_id = ALF_integrate_black_market_cores
-        cost = 2
-        x = 1
-        y = 1
-        prerequisite = {
-            focus = ALF_integrate_black_market_cores
-        }
-        available = {
-            NOT = {
-                has_global_flag = EPW_ENDS_global_flag
-            }
-        }
-        bypass = {
-            has_global_flag = EPW_ENDS_global_flag
-        }
-        completion_reward = {
-            add_timed_idea = {
-                idea = ALF_we_can_do_this_idea
-                days = 270
             }
         }
     }
@@ -2796,13 +2770,10 @@ focus_tree = {
     focus = {
         id = ALF_united_as_one
         icon = GFX_focus_ARI_open_the_curtain
-        relative_position_id = ALF_politic_mobilization
-        cost = 2
-        x = -1
+        relative_position_id = ALF_restore_new_area_production
+        cost = 1
+        x = 0
         y = 1
-        prerequisite = {
-            focus = ALF_politic_mobilization
-        }
         prerequisite = {
             focus = ALF_restore_new_area_production
         }
@@ -2819,6 +2790,10 @@ focus_tree = {
                 idea = ALF_united_as_on_idea
                 days = 270
             }
+            add_timed_idea = {
+                idea = ALF_we_can_do_this_idea
+                days = 270
+            }
         }
     }
     ##对敌战术分析
@@ -2826,7 +2801,7 @@ focus_tree = {
         id = ALF_enemy_tactic_analysis
         icon = GFX_focus_ARI_open_the_curtain
         relative_position_id = ALF_difficult_situation
-        cost = 3
+        cost = 1
         x = 2
         y = 1
         prerequisite = {
@@ -2894,9 +2869,9 @@ focus_tree = {
     ##米迦勒行动
     focus = {
         id = ALF_operation_michael
-        icon = GFX_focus_ARI_open_the_curtain
+        icon = GFX_focus_generic_tank_assembly
         relative_position_id = ALF_united_as_one
-        cost = 2
+        cost = 0.5
         x = 0
         y = 1
         prerequisite = {
@@ -4025,7 +4000,7 @@ focus_tree = {
     focus = {
         ##条约同盟
         id = ALF_eden_alliance
-        icon = GFX_focus_ARI_open_the_curtain
+        icon = GFX_focus_generic_diverse_army
         cost = 3
         x = 0
         y = 1
@@ -4076,6 +4051,24 @@ focus_tree = {
                 }
                 TRT = {
                     add_ideas = ALF_the_battle_with_no_step_back
+                }
+                every_possible_country = {
+                    limit = {
+                        OR = {
+                            tag = ABY
+                            is_ally_with = ABY
+                        }
+                    }
+                    add_ideas = ALF_volunteers_from_farway
+                }
+                every_possible_country = {
+                    limit = {
+                        OR = {
+                            tag = RWT
+                            is_ally_with = RWT
+                        }
+                    }
+                    add_ideas = ALF_volunteers_from_farway
                 }
             }
         }
@@ -4193,24 +4186,6 @@ focus_tree = {
         completion_reward = {
             custom_effect_tooltip = ALF_ask_for_support_tt
             hidden_effect = {
-                every_possible_country = {
-                    limit = {
-                        OR = {
-                            tag = ABY
-                            is_ally_with = ABY
-                        }
-                    }
-                    add_ideas = ALF_volunteers_from_farway
-                }
-                every_possible_country = {
-                    limit = {
-                        OR = {
-                            tag = RWT
-                            is_ally_with = RWT
-                        }
-                    }
-                    add_ideas = ALF_volunteers_from_farway
-                }
                 every_possible_country = {
                     limit = {
                         OR = {

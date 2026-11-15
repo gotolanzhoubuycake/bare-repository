@@ -248,7 +248,7 @@ ALF_stage_2_war_plan = {
         ALF_enemy_tactic_analysis
         ALF_strike_at_weakness
         ALF_restore_new_area_production
-        ALF_politic_mobilization
+        #ALF_politic_mobilization
         ALF_united_as_one
         ALF_operation_michael
         ##
