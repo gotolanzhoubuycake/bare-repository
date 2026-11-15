@@ -1,1 +1,6 @@
-color = { 204 33 64  }
+# 2026-07-13 修改：千年旧校区废墟开发敌人“废墟钢盔团”的基础国家外观。
+graphical_culture = western_european_gfx
+graphical_culture_2d = western_european_2d
+
+color = rgb { 47 79 79 }
+color_ui = rgb { 47 79 79 }

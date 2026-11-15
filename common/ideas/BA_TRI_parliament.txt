@@ -2,7 +2,7 @@ ideas = {
 	country = {
 		#鹰派主导
 		TRI_main_faction_BOP_hardliner_1 = {
-			picture = unkown
+			picture = unknown
 			modifier = {
 				stability_factor = -0.05
 				war_support_factor = 0.1
@@ -28,7 +28,7 @@ ideas = {
 			}
 		}
 		TRI_main_faction_BOP_hardliner_2 = {
-			picture = unkown
+			picture = unknown
 			modifier = {
 				stability_factor = -0.1
 				war_support_factor = 0.15
@@ -58,7 +58,7 @@ ideas = {
 			}
 		}
 		TRI_main_faction_BOP_hardliner_3 = {
-			picture = unkown
+			picture = unknown
 			modifier = {
 				stability_factor = -0.15
 				war_support_factor = 0.25
@@ -91,7 +91,7 @@ ideas = {
 		}
 		#中立派主导
 		TRI_main_faction_BOP_conservative_1 = {
-			picture = unkown
+			picture = unknown
 			modifier = {
 				political_power_gain = 0.1
 				stability_factor = 0.05
@@ -108,7 +108,7 @@ ideas = {
 			}
 		}
 		TRI_main_faction_BOP_conservative_2 = {
-			picture = unkown
+			picture = unknown
 			modifier = {
 				political_power_gain = 0.25
 				stability_factor = 0.1
@@ -127,7 +127,7 @@ ideas = {
 			}
 		}
 		TRI_main_faction_BOP_conservative_3 = {
-			picture = unkown
+			picture = unknown
 			modifier = {
 				political_power_gain = 0.5
 				stability_factor = 0.15
@@ -148,7 +148,7 @@ ideas = {
 		}
 		#鸽派主导
 		TRI_main_faction_BOP_moderate_1 = {
-			picture = unkown
+			picture = unknown
 			modifier = {
 				stability_factor = 0.1
 				war_support_factor = -0.05
@@ -178,7 +178,7 @@ ideas = {
 			}
 		}
 		TRI_main_faction_BOP_moderate_2 = {
-			picture = unkown
+			picture = unknown
 			modifier = {
 				stability_factor = 0.15
 				war_support_factor = -0.1
@@ -210,7 +210,7 @@ ideas = {
 			}
 		}
 		TRI_main_faction_BOP_moderate_3 = {
-			picture = unkown
+			picture = unknown
 			modifier = {
 				stability_factor = 0.25
 				war_support_factor = -0.2
@@ -243,43 +243,43 @@ ideas = {
 			}
 		}
 		TRI_BOP_appease_association_1 = { #安抚社团成员——低投入
-			picture = unkown
+			picture = unknown
 			modifier = {
 				consumer_goods_factor = 0.1
 			}
 		}
 		TRI_BOP_appease_association_2 = { #安抚社团成员——中投入
-			picture = unkown
+			picture = unknown
 			modifier = {
 				consumer_goods_factor = 0.2
 			}
 		}
 		TRI_BOP_appease_association_3 = { #安抚社团成员——高投入
-			picture = unkown
+			picture = unknown
 			modifier = {
 				consumer_goods_factor = 0.35
 			}
 		}
 		TRI_BOP_association_stability_modifier = { #稳定社团关系
-			picture = unkown
+			picture = unknown
 			modifier = {
 				consumer_goods_factor = 0.2
 			}
 		}
 		TRI_BOP_school_stability_1 = { #维持学院内稳定——低投入
-			picture = unkown
+			picture = unknown
 			modifier = {
 				consumer_goods_factor = 0.1
 			}
 		}
 		TRI_BOP_school_stability_2 = { #维持学院内稳定——中投入
-			picture = unkown
+			picture = unknown
 			modifier = {
 				consumer_goods_factor = 0.2
 			}
 		}
 		TRI_BOP_school_stability_3 = { #维持学院内稳定——高投入
-			picture = unkown
+			picture = unknown
 			modifier = {
 				consumer_goods_factor = 0.3
 			}

@@ -41,7 +41,7 @@ faction_manifest_suppress_regional_communism = {
 		completed_amount_collection = collection:non_communist_controlled_states_on_my_continent
 		
 		scale = {
-			communism_drift = -0.05
+			Egalitarianism_ideology_drift = -0.05
 		}
 		
 		progress_sections = {
@@ -138,6 +138,37 @@ faction_manifest_protector_of_peace = {
 				modifier = { 
 					trade_opinion_factor = 0.2
 				}			
+			}
+		}
+	}
+}
+faction_manifest_strategic_resource_control = {
+	name = strategic_resource_control_goal_name
+	description = strategic_resource_control_goal_desc
+	is_manifest = yes
+	ratio_progress = {
+		completed_amount_custom_tooltip = FACTION_RESOURCE_EXTRACTED_TOTAL_DESC
+		total_amount_custom_tooltip = GLOBAL_RESOURCE_EXTRACTED_TOTAL_DESC
+
+		total_amount = global.global_resource_extracted_total # All the units in the world
+		completed_amount = faction_resource_extracted_total # resources controlled by Faction Members
+
+		range = { 
+			max = 0.30 # goal is to have at least 30% 
+		}
+		
+		scale = {
+			industrial_capacity_dockyard = 0.1
+			industrial_capacity_factory = 0.1
+		}
+		
+		progress_sections = {
+			manifest_fulfilled = {
+				min = @manifest_fulfilled_value
+	
+				modifier = { 
+					production_speed_buildings_factor = 0.1
+				}
 			}
 		}
 	}

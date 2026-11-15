@@ -15,7 +15,7 @@ division_template = {
 
 
 division_template = {
-	name = "研讨会核心卫护中队"		
+	name = "研讨会核心护卫中队"		
 
 	regiments = {
 		infantry = {x = 1 y = 1}
@@ -65,27 +65,28 @@ division_template = {
 }
 
 
-division_template = {
-	name = "装甲战斗小组"		
+# division_template = {
+# 	name = "装甲战斗小组"		
 
-	regiments = {
-		ifv_unit  = {x = 1 y = 1}
-		ifv_unit  = {x = 1 y = 0}
-		medium_armor  = {x = 0 y = 1}
-		medium_armor  = {x = 0 y = 0}
-		medium_armor  = {x = 0 y = 2}
-	}
-	support = {
-		fire_support_team_su_la = {x=0 y=0}
-		engineer = {x=0 y=1}
-	}
-}
+# 	regiments = {
+# 		ifv_unit  = {x = 1 y = 1}
+# 		ifv_unit  = {x = 1 y = 0}
+# 		medium_armor  = {x = 0 y = 1}
+# 		medium_armor  = {x = 0 y = 0}
+# 		medium_armor  = {x = 0 y = 2}
+# 	}
+# 	support = {
+# 		fire_support_team_su_la = {x=0 y=0}
+# 		engineer = {x=0 y=1}
+# 	}
+# }
 
 
 division_template = {
 	name = "机甲战斗小组"		
 
 	regiments = {
+		ifv_unit = {x = 1 y = 2}
 		ifv_unit = {x = 1 y = 1}
 		ifv_unit = {x = 1 y = 0}
 		light_bm_unit = {x = 0 y = 1}
@@ -98,6 +99,51 @@ division_template = {
 	}
 }
 
+division_template = {
+	name = "巨塔守护中队"		
+
+	regiments = {
+		ifv_unit = {x = 3 y = 3}
+		ifv_unit = {x = 3 y = 2}
+		ifv_unit = {x = 3 y = 1}
+		ifv_unit = {x = 3 y = 0}
+		ifv_unit = {x = 2 y = 3}
+		ifv_unit = {x = 2 y = 2}
+		ifv_unit = {x = 2 y = 1}
+		ifv_unit = {x = 2 y = 0}
+		medium_bm_unit = {x = 0 y = 0}
+		medium_bm_unit = {x = 0 y = 1}
+		medium_bm_unit = {x = 0 y = 2}
+		medium_bm_unit = {x = 0 y = 3}
+		heavy_bm_unit = {x = 1 y = 0}
+		heavy_bm_unit = {x = 1 y = 1}
+		heavy_bm_unit = {x = 1 y = 2}
+		heavy_bm_unit = {x = 1 y = 3}
+	}
+	support = {
+		fire_support_team_su_la = {x=0 y=0}
+		engineer = {x=0 y=1}
+		helicopter_recon = {x=0 y=2}
+		maintenance_company = {x=0 y=3}
+		logistics_company = {x=0 y=4}
+	}
+}
+
+division_template = {
+	name = "C&C快速反应部队"		
+
+	regiments = {
+		air_assest_unit = {x = 0 y = 0}
+		air_assest_unit = {x = 0 y = 1}
+		air_assest_unit = {x = 0 y = 2}
+		air_attack_unit = {x = 1 y = 0}
+		air_attack_unit = {x = 1 y = 1}
+		air_attack_unit = {x = 1 y = 2}
+	}
+	support = {
+		helicopter_recon = {x=0 y=0}
+	}
+}
 
 division_template = {
 	name = "治安中队"		
@@ -307,6 +353,33 @@ units = {
 
 
 	division= {
+		name = "千年第16治安小队"
+		location = 3064
+		division_template = "治安小队" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+
+	division= {
+		name = "千年第17治安小队"
+		location = 12182
+		division_template = "治安小队" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+
+	division= {
+		name = "千年第18治安小队"
+		location = 6679
+		division_template = "治安小队" #这个师用的编制的名字
+		start_experience_factor = 0.2 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+
+	division= {
 		name = "千年第1治安中队"
 		location = 11860
 		division_template = "治安中队" #这个师用的编制的名字
@@ -391,19 +464,28 @@ units = {
 		start_manpower_factor = 1 #初始人力 0-1
 	}
 
+	division= {
+		name = "千年第4“螺母”自动机巡逻队"
+		location = 6462
+		division_template = "自动机巡逻队" #这个师用的编制的名字
+		start_experience_factor = 0.5 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+
 
 	division= {
-		name = "千年第1“发动机”装甲战斗小组"
+		name = "千年第1“发动机”机甲战斗小组"
 		location = 4295
-		division_template = "装甲战斗小组" #这个师用的编制的名字
+		division_template = "机甲战斗小组" #这个师用的编制的名字
 		start_experience_factor = 0.6 #初始经验0-1 ,0.2为银牌
 		start_equipment_factor = 1 #初始装备 0-1
 		start_manpower_factor = 1 #初始人力 0-1
 	}
 	division= {
-		name = "千年第2“炮塔”装甲战斗小组"
+		name = "千年第2“炮塔”机甲战斗小组"
 		location = 2450
-		division_template = "装甲战斗小组" #这个师用的编制的名字
+		division_template = "机甲战斗小组" #这个师用的编制的名字
 		start_experience_factor = 0.6 #初始经验0-1 ,0.2为银牌
 		start_equipment_factor = 1 #初始装备 0-1
 		start_manpower_factor = 1 #初始人力 0-1
@@ -411,12 +493,43 @@ units = {
 
 
 	division= {
-		name = "千年第1“铁拳”机甲小队"
+		name = "千年第3“铁拳”机甲小队"
 		location = 3078
 		division_template = "机甲战斗小组" #这个师用的编制的名字
 		start_experience_factor = 0.6 #初始经验0-1 ,0.2为银牌
 		start_equipment_factor = 1 #初始装备 0-1
 		start_manpower_factor = 1 #初始人力 0-1
 	}
+
+	division= {
+		name = "千年第4“蓝牙”机甲小队"
+		location = 3927
+		division_template = "机甲战斗小组" #这个师用的编制的名字
+		start_experience_factor = 0.6 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+
+	division= {
+		name = "巨塔守护中队"
+		location = 11949
+		division_template = "巨塔守护中队" #这个师用的编制的名字
+		start_experience_factor = 1 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+
+
+	
+	division= {
+		name = "C&C快速反应部队"
+		location = 8123
+		division_template = "C&C快速反应部队" #这个师用的编制的名字
+		start_experience_factor = 1 #初始经验0-1 ,0.2为银牌
+		start_equipment_factor = 1 #初始装备 0-1
+		start_manpower_factor = 1 #初始人力 0-1
+	}
+
+	
 
 }

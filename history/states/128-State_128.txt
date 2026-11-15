@@ -9,6 +9,7 @@ state={
 			infrastructure = 5
 			industrial_complex = 2
 			electronic_component_factory = 2
+			air_base = 6
 		}
 		owner = TRI
 		add_core_of=TRI

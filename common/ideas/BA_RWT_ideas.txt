@@ -1,7 +1,7 @@
 ideas = {
 	country = {
 		RWT_BuWenDingZhengJv = { #不稳定政局
-			picture = unkown
+			picture = unknown
 
 			modifier = {
 				stability_factor = -0.3 #稳定度
@@ -10,7 +10,7 @@ ideas = {
 		}
 
 		RWT_JiTiZhuYiZhiHun = { #集体主义之魂
-			picture = unkown
+			picture = unknown
 
 			modifier = {
 				winter_attrition_factor = -0.15 #冬季损耗百分比修正

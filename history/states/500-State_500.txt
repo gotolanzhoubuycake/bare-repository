@@ -10,7 +10,6 @@ state={
 		}
 		owner = A43
 		add_core_of=A43
-		victory_points = {5996 5}
     }
 	manpower= 3260
 	state_category = city

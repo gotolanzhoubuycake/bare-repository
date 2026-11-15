@@ -1,9 +1,21 @@
 objectTypes = {
 
+	# 2026-08-09：星野人工通过候选转为无批次正式资产；原部署完整注册仍保存在同目录.bak文件中。
+	# 当前正式模型保持已审核人物与MP43字节，只规范运行时路径和纹理basename，不改变ABY现有54项人物动画链。
 	### ABY_INFANTRY
-    pdxmesh = {
+	# 2026-08-09：星野正式MP43 mesh；只更改稳定文件名，不改变已审核刚体或locator。
+	pdxmesh = {
+		name = "ABY_hoshino_mp43_mesh"
+		file = "gfx/models/units/infantry/ABY_culture/hoshino/ABY_hoshino_mp43.mesh"
+	}
+	# 回退开关（必须成对切换）：每个pdxmesh只能保留一个生效file；恢复原部署星野时，先注释当前正式file，再取消原部署file注释。
+
+	    pdxmesh = {
 		name = "ABY_infantry_rifle_mesh"
-		file = "gfx/models/units/infantry/ABY_culture/hoshino_battle/hoshinobattle_infantry.mesh"
+		# 当前正式人物模型（生效）
+		file = "gfx/models/units/infantry/ABY_culture/hoshino/ABY_hoshino_infantry.mesh"
+		# 原部署星野回退路径（默认注释；SHA-256 6CAA84191F721EC464B3E7E57A48BF374C324C1EED51F6C7D0D3C73C328419A3）
+		# file = "gfx/models/units/infantry/ABY_culture/hoshino_battle/hoshinobattle_infantry.mesh"
 		
 		animation = { id = "idle"				type = "GER_infantry_rifle_idle_animation" }
 		animation = { id = "attack"				type = "GER_infantry_rifle_attack_animation" }
@@ -36,7 +48,10 @@ objectTypes = {
 
 	pdxmesh = {
 		name = "ABY_infantry_mg_mesh"
-		file = "gfx/models/units/infantry/ABY_culture/hoshino_battle/hoshinobattle_infantry.mesh"
+		# 当前正式人物模型（生效）
+		file = "gfx/models/units/infantry/ABY_culture/hoshino/ABY_hoshino_infantry.mesh"
+		# 原部署星野回退路径（默认注释；SHA-256 6CAA84191F721EC464B3E7E57A48BF374C324C1EED51F6C7D0D3C73C328419A3）
+		# file = "gfx/models/units/infantry/ABY_culture/hoshino_battle/hoshinobattle_infantry.mesh"
 		
 		animation = { id = "idle"				type = "GER_infantry_mg_idle_animation" }
 		animation = { id = "attack"				type = "GER_infantry_mg_attack_animation" }

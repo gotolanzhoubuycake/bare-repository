@@ -2,8 +2,9 @@ guiTypes = {
 	containerWindowType = {
 		name = "TRI_regions_open_button"
 		size = { width = 80 height = 80 }
-		position = { x = 5 y = -569 }
-		orientation = lower_left
+		# 2026-07-10: 与 state_info_window 对齐，放入左侧信息栏下部，避免跟随旧 selected_state_view 锚点跑到地图上。
+		position = { x = 27 y = 548 }
+		orientation = upper_left
 
 		background = {
 			name = "Background"

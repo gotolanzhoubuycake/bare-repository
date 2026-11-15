@@ -10,7 +10,7 @@ characters = {
 
         country_leader = {
 			ideology = no_ideology_type
-			traits = { responsebility_of_adult }
+			traits = { responsibility_of_adult }
 			expire = "9999.1.1.1"
 			id = -1
 		}

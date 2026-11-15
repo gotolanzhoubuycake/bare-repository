@@ -1,0 +1,13 @@
+state_categories={
+	large_island = {
+		# 2026-07-08: 整合50建筑槽MOD，补回 replace_path 下缺失的大型岛屿州类别。
+		local_building_slots = 3
+
+		buildings_max_level = {
+			naval_base = 8
+			air_base = 6
+		}
+
+		color = { 200 160 0 }
+	}
+}

@@ -50,7 +50,6 @@
  port_scanning_8: "扫描端口：端口8可用"
  port_scanning_8_desc: "我们可以通过8端口尝试[From.GetNameDef]政府系统的http端口进行访问"
  port_scanning_8_outcome: "8端口访问成功，对系统进行漏洞扫描"
- vulnerability_penetration: "漏洞渗透"
  vulnerability_penetration_desc: "通过对所搜索到漏洞的种类，我们可以精准的利用漏洞进行渗透"
  vulnerability_penetration_outcome: "漏洞渗透成功，可以进行进一步操作"
  transport_trojans: "安装木马"

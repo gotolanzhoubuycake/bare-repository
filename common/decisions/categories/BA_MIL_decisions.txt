@@ -2,10 +2,11 @@
 MIL_bop_decision_category = {
     icon = generic_research
 
-
+    # 权力平衡开局显示；具体应对决议由各自国策控制可见性。
     visible = {
         original_tag = MIL
     }
+    visible_when_empty = yes
     priority = 1098
 }
 
@@ -33,6 +34,46 @@ MIL_Sport_decision_test_category = {
     priority = 1098
 }
 
+# 2026-07-24 修改：千年旧校区废墟开发、特化攻势和战后解析统一使用同一正式决议组。
+MIL_ruins_development_decision_category = {
+    icon = generic_research
+
+    allowed = {
+        original_tag = MIL
+    }
+
+    visible = {
+        original_tag = MIL
+        OR = {
+			# 2026-07-27 修改：第二阶段废墟大开发和设备更新继续显示在同一正式决议组。
+            has_country_flag = MIL_ruins_development_decisions_unlocked
+            has_country_flag = MIL_ruins_special_offensive_decisions_unlocked
+			has_country_flag = MIL_phase_2_ruins_development_unlocked
+			has_country_flag = MIL_phase_2_equipment_update_unlocked
+        }
+    }
+
+    visible_when_empty = yes
+    priority = 1099
+}
+
+# 2026-07-16 修改：新增仅在调试模式显示的废墟袭击测试决议组。
+MIL_ruins_attack_test_decision_category = {
+    icon = generic_research
+
+    allowed = {
+        original_tag = MIL
+    }
+
+    visible = {
+        original_tag = MIL
+        is_debug = yes
+    }
+
+    visible_when_empty = yes
+    priority = 1200
+}
+
 # 与凯撒的冲突决议组 -- 千年侧
 MIL_cae_war_decision_category = {
     icon = generic_research
@@ -40,6 +81,8 @@ MIL_cae_war_decision_category = {
     visible = {
         original_tag = MIL
         has_completed_focus = MIL_protect_mil
+        # 2026-10-08：战争结束后隐藏千年侧战争决议，避免重复执行战时操作。
+        has_country_flag = CAE_MIL_war_started
     }
 
     scripted_gui = BARE_MIL_cae_war_GUI_SG

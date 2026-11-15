@@ -201,7 +201,7 @@ spriteTypes = {
     }
 	SpriteType = {
 		name = "GFX_GEH_fuuka_working_dec"
-		texturefile = "gfx/interface/GEH_societies/GEH_fuuka_working_dec.dds"
+		texturefile = "gfx/interface/GEH_societies/GEH_fuuka_working.dds"
         noOfFrames = 1
         effectFile = "gfx/FX/buttonstate.shader"
     }

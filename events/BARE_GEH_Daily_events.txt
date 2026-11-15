@@ -578,19 +578,19 @@ country_event = { # 捷足先登 #好事件
 
 
 
-country_event = { # 捷足先登 #好事件
-    id = GEH_daily.30
-    title = GEH_daily.30.t
-    desc = GEH_daily.30.desc
+country_event = { # 平安日 #好事件
+    id = GEH_daily.31
+    title = GEH_daily.31.t
+    desc = GEH_daily.31.desc
     picture = GFX_GEH_daily_news_event_3
-    
+
     is_triggered_only = yes
     option = {
-        name = GEH_daily.30.a
+        name = GEH_daily.31.a
         add_power_balance_value = {
             id = GEH_bp_between_chaos_and_order
             value = -0.05
         }
-        
+
     }
 }

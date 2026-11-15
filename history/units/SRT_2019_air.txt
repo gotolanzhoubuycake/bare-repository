@@ -1,0 +1,15 @@
+# 2026-07-20: SRT精锐重型空军。
+# 入口：SRT国家历史的 SRT_2019_air；重型机队为主，侦察与运输机完成特战投送链。
+air_wings = {
+    72 = {
+        heavy_uav_equipment_1 = { owner = "SRT" amount = 25 }
+        heavy_uav_equipment_1 = { owner = "SRT" amount = 25 }
+        heavy_uav_equipment_1 = { owner = "SRT" amount = 25 }
+        heavy_uav_cas_equipment_1 = { owner = "SRT" amount = 25 }
+        heavy_uav_cas_equipment_1 = { owner = "SRT" amount = 25 }
+        heavy_uav_cas_equipment_1 = { owner = "SRT" amount = 25 }
+        small_uav_recon_equipment_1 = { owner = "SRT" amount = 100 }
+        transport_plane_equipment_1 = { owner = "SRT" amount = 25 }
+        transport_plane_equipment_1 = { owner = "SRT" amount = 25 }
+    }
+}

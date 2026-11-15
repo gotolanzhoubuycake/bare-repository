@@ -137,8 +137,7 @@ script_enum_equipment_category = {
 	anti_tank
 	rocket
 	flame
-	# 2026-06-29 修改：新增千年战斗机甲装备类别，用于聚合钢铁洪流等机甲装备加成的显示。
-	MIL_bm_equipment_category
+	# 2026-07-14 修改：当前引擎不支持通过装备 type 自建类别；战斗机甲聚合效果改由 equipment_groups 实现。
 	land_cruiser
 	emplacement_gun_ammo
 	ballistic_missile
@@ -189,9 +188,7 @@ script_enum_equipment_bonus_type = {
 	anti_tank
 	rocket
 	flame
-	# 2026-06-29 修改：允许钢铁洪流等装备加成直接引用千年战斗机甲装备类别，避免逐个底盘展开显示。
-	MIL_bm_equipment_category
-
+	# 2026-07-14 修改：不再注册无效的战斗机甲伪类别；装备组无需写入本枚举。
 	# Equipment archetypes & types
 	infantry_equipment
 	convoy_1
@@ -256,6 +253,12 @@ script_enum_equipment_bonus_type = {
 	auto_mech
 	auto_mech_1
 	auto_mech_2
+	# 2026-07-14 修改：注册千年特战机甲原型及各级装备，供装备加成与装备数据库校验使用。
+	MIL_Individual_Special_Operations_Mech_equipment
+	MIL_Individual_Special_Operations_Mech_equipment_1
+	MIL_Individual_Special_Operations_Mech_equipment_2
+	MIL_Individual_Special_Operations_Mech_equipment_3
+	MIL_Individual_Special_Operations_Mech_equipment_4
 	heavy_bm_chassis
 	heavy_bm_equipment_1
 	heavy_bm_equipment_2

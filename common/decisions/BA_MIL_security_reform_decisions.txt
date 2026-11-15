@@ -1,4 +1,6 @@
 # 2026-06-29 修改：重构为千禧防卫力量共用改革进度；可重复训练受单军种75%上限限制，一次性项目不再因上限关闭。
+# 2026-07-14 修改：所有以陆军/空军经验为启动成本的改革决议统一使用 custom_cost_trigger 与 custom_cost_text；实际扣除仍只在 complete_effect 执行一次。
+# 2026-07-24 修改：一次性改革项目适度优先于可重复训练，避免 AI 长期停留在低收益训练循环或压制其他决议。
 MIL_security_reform_decision_category = {
 
     MIL_security_reform_automaton_operation_training = {
@@ -8,9 +10,12 @@ MIL_security_reform_decision_category = {
             NOT = { has_country_flag = MIL_security_reform_completed_flag }
         }
         available = {
-            has_army_experience > 29
             check_variable = { MIL_security_reform_army_decision_progress_var < 75 }
         }
+        custom_cost_trigger = {
+            has_army_experience > 29
+        }
+        custom_cost_text = MIL_decision_cost_ArmXP_30
         cost = 0
         days_remove = 60
         days_re_enable = 1
@@ -26,13 +31,15 @@ MIL_security_reform_decision_category = {
                 amount = 0.4
                 days = 60
                 name = MIL_security_reform_automaton_operation_training
-                folder = land
+                # 2026-07-14 修改：使用本项目陆军学说文件夹 ID，避免 land 被解析为无效数据库项。
+                folder = baland
             }
         }
         remove_effect = {
             BARE_MIL_Security_Reform_Add_Army_Progress_5_effect = yes
         }
-        ai_will_do = { base = 2 }
+        # 2026-07-24 修改：自动机操作训练为可重复项目，仅在没有一次性改革可执行时参与选择。
+        ai_will_do = { base = 1 }
     }
 
     MIL_security_reform_drone_operation_training = {
@@ -42,9 +49,12 @@ MIL_security_reform_decision_category = {
             NOT = { has_country_flag = MIL_security_reform_completed_flag }
         }
         available = {
-            has_air_experience > 29
             check_variable = { MIL_security_reform_air_decision_progress_var < 75 }
         }
+        custom_cost_trigger = {
+            has_air_experience > 29
+        }
+        custom_cost_text = MIL_decision_cost_AirXP_30
         cost = 0
         days_remove = 60
         days_re_enable = 1
@@ -60,13 +70,15 @@ MIL_security_reform_decision_category = {
                 amount = 0.4
                 days = 60
                 name = MIL_security_reform_drone_operation_training
-                folder = air
+                # 2026-07-14 修改：使用本项目空军学说文件夹 ID，避免 air 被解析为无效数据库项。
+                folder = baair
             }
         }
         remove_effect = {
             BARE_MIL_Security_Reform_Add_Air_Progress_5_effect = yes
         }
-        ai_will_do = { base = 2 }
+        # 2026-07-24 修改：无人机操作训练为可重复项目，仅在没有一次性改革可执行时参与选择。
+        ai_will_do = { base = 1 }
     }
 
     MIL_security_reform_ground_tactics_improvement = {
@@ -75,9 +87,10 @@ MIL_security_reform_decision_category = {
             has_country_flag = MIL_security_reform_system_unlocked_flag
             NOT = { has_country_flag = MIL_security_reform_completed_flag }
         }
-        available = {
+        custom_cost_trigger = {
             has_army_experience > 99
         }
+        custom_cost_text = MIL_decision_cost_ArmXP_100
         cost = 0
         days_remove = 180
         fire_only_once = yes
@@ -90,7 +103,7 @@ MIL_security_reform_decision_category = {
             BARE_MIL_Security_Reform_Ground_Tactics_Improvement_Bonus_effect = yes
             BARE_MIL_Security_Reform_Add_Army_Progress_10_effect = yes
         }
-        ai_will_do = { base = 1 }
+        ai_will_do = { base = 10 }
     }
 
     MIL_security_reform_experimental_mech_refit = {
@@ -100,9 +113,10 @@ MIL_security_reform_decision_category = {
             has_completed_focus = MIL_Mechanical_Built_High_Wall
             NOT = { has_country_flag = MIL_security_reform_completed_flag }
         }
-        available = {
+        custom_cost_trigger = {
             has_army_experience > 99
         }
+        custom_cost_text = MIL_decision_cost_ArmXP_100
         cost = 0
         days_remove = 180
         fire_only_once = yes
@@ -115,7 +129,7 @@ MIL_security_reform_decision_category = {
             BARE_MIL_Security_Reform_Experimental_Mech_Refit_Bonus_effect = yes
             BARE_MIL_Security_Reform_Add_Army_Progress_10_effect = yes
         }
-        ai_will_do = { base = 1 }
+        ai_will_do = { base = 10 }
     }
 
     MIL_security_reform_special_ops_system_upgrade = {
@@ -125,9 +139,10 @@ MIL_security_reform_decision_category = {
             has_completed_focus = MIL_Integrate_C_and_C
             NOT = { has_country_flag = MIL_security_reform_completed_flag }
         }
-        available = {
+        custom_cost_trigger = {
             has_army_experience > 149
         }
+        custom_cost_text = MIL_decision_cost_ArmXP_150
         cost = 0
         days_remove = 270
         fire_only_once = yes
@@ -140,7 +155,7 @@ MIL_security_reform_decision_category = {
             BARE_MIL_Security_Reform_Special_Ops_System_Upgrade_Bonus_effect = yes
             BARE_MIL_Security_Reform_Add_Army_Progress_10_effect = yes
         }
-        ai_will_do = { base = 1 }
+        ai_will_do = { base = 10 }
     }
 
     MIL_security_reform_update_drone_manual = {
@@ -149,9 +164,10 @@ MIL_security_reform_decision_category = {
             has_country_flag = MIL_security_reform_system_unlocked_flag
             NOT = { has_country_flag = MIL_security_reform_completed_flag }
         }
-        available = {
+        custom_cost_trigger = {
             has_air_experience > 99
         }
+        custom_cost_text = MIL_decision_cost_AirXP_100
         cost = 0
         days_remove = 180
         fire_only_once = yes
@@ -164,7 +180,7 @@ MIL_security_reform_decision_category = {
             BARE_MIL_Security_Reform_Update_Drone_Manual_Bonus_effect = yes
             BARE_MIL_Security_Reform_Add_Air_Progress_10_effect = yes
         }
-        ai_will_do = { base = 1 }
+        ai_will_do = { base = 10 }
     }
 
     MIL_security_reform_optimize_ground_crew = {
@@ -173,9 +189,10 @@ MIL_security_reform_decision_category = {
             has_country_flag = MIL_security_reform_system_unlocked_flag
             NOT = { has_country_flag = MIL_security_reform_completed_flag }
         }
-        available = {
+        custom_cost_trigger = {
             has_air_experience > 99
         }
+        custom_cost_text = MIL_decision_cost_AirXP_100
         cost = 0
         days_remove = 180
         fire_only_once = yes
@@ -188,7 +205,7 @@ MIL_security_reform_decision_category = {
             BARE_MIL_Security_Reform_Optimize_Ground_Crew_Bonus_effect = yes
             BARE_MIL_Security_Reform_Add_Air_Progress_10_effect = yes
         }
-        ai_will_do = { base = 1 }
+        ai_will_do = { base = 10 }
     }
 
     MIL_security_reform_practical_aircraft_design = {
@@ -198,9 +215,10 @@ MIL_security_reform_decision_category = {
             has_completed_focus = MIL_Practical_Drone_Development
             NOT = { has_country_flag = MIL_security_reform_completed_flag }
         }
-        available = {
+        custom_cost_trigger = {
             has_air_experience > 99
         }
+        custom_cost_text = MIL_decision_cost_AirXP_100
         cost = 0
         days_remove = 360
         fire_only_once = yes
@@ -219,7 +237,7 @@ MIL_security_reform_decision_category = {
             set_country_flag = MIL_aircraft_design_route_unlocked_flag
             BARE_MIL_Security_Reform_Add_Air_Progress_10_effect = yes
         }
-        ai_will_do = { base = 1 }
+        ai_will_do = { base = 8 }
     }
 
     MIL_aircraft_design_standardize_airframe = {
@@ -230,9 +248,10 @@ MIL_security_reform_decision_category = {
             NOT = { has_country_flag = MIL_aircraft_design_standardize_airframe_completed_flag }
             has_idea = MIL_overly_advanced_aircraft_reviewed
         }
-        available = {
+        custom_cost_trigger = {
             has_air_experience > 49
         }
+        custom_cost_text = MIL_decision_cost_AirXP_50
         cost = 0
         days_remove = 90
         fire_only_once = yes
@@ -248,7 +267,7 @@ MIL_security_reform_decision_category = {
             }
             set_country_flag = MIL_aircraft_design_standardize_airframe_completed_flag
         }
-        ai_will_do = { base = 1 }
+        ai_will_do = { base = 10 }
     }
 
     MIL_aircraft_design_mass_production_review = {
@@ -259,9 +278,10 @@ MIL_security_reform_decision_category = {
             NOT = { has_country_flag = MIL_aircraft_design_mass_production_review_completed_flag }
             has_idea = MIL_overly_advanced_aircraft_practical_1
         }
-        available = {
+        custom_cost_trigger = {
             has_air_experience > 74
         }
+        custom_cost_text = MIL_decision_cost_AirXP_75
         cost = 0
         days_remove = 120
         fire_only_once = yes
@@ -279,7 +299,7 @@ MIL_security_reform_decision_category = {
             }
             set_country_flag = MIL_aircraft_design_mass_production_review_completed_flag
         }
-        ai_will_do = { base = 1 }
+        ai_will_do = { base = 10 }
     }
 
     MIL_aircraft_design_expand_experimental_specs = {
@@ -290,9 +310,10 @@ MIL_security_reform_decision_category = {
             NOT = { has_country_flag = MIL_aircraft_design_expand_experimental_specs_completed_flag }
             has_idea = MIL_overly_advanced_aircraft_reviewed
         }
-        available = {
+        custom_cost_trigger = {
             has_air_experience > 49
         }
+        custom_cost_text = MIL_decision_cost_AirXP_50
         cost = 0
         days_remove = 90
         fire_only_once = yes
@@ -308,7 +329,7 @@ MIL_security_reform_decision_category = {
             }
             set_country_flag = MIL_aircraft_design_expand_experimental_specs_completed_flag
         }
-        ai_will_do = { base = 1 }
+        ai_will_do = { base = 10 }
     }
 
     MIL_aircraft_design_high_performance_platform = {
@@ -319,9 +340,10 @@ MIL_security_reform_decision_category = {
             NOT = { has_country_flag = MIL_aircraft_design_high_performance_platform_completed_flag }
             has_idea = MIL_overly_advanced_aircraft_vanguard_1
         }
-        available = {
+        custom_cost_trigger = {
             has_air_experience > 74
         }
+        custom_cost_text = MIL_decision_cost_AirXP_75
         cost = 0
         days_remove = 120
         fire_only_once = yes
@@ -339,7 +361,7 @@ MIL_security_reform_decision_category = {
             }
             set_country_flag = MIL_aircraft_design_high_performance_platform_completed_flag
         }
-        ai_will_do = { base = 1 }
+        ai_will_do = { base = 10 }
     }
 
     MIL_special_ops_factory_expansion = {
@@ -370,7 +392,7 @@ MIL_security_reform_decision_category = {
             }
             set_country_flag = MIL_special_ops_factory_decision_completed_flag
         }
-        ai_will_do = { base = 1 }
+        ai_will_do = { base = 10 }
     }
 
     MIL_steel_wall_factory_expansion = {
@@ -401,7 +423,7 @@ MIL_security_reform_decision_category = {
             }
             set_country_flag = MIL_steel_wall_factory_decision_completed_flag
         }
-        ai_will_do = { base = 1 }
+        ai_will_do = { base = 10 }
     }
 
     MIL_soaring_eagle_factory_expansion = {
@@ -432,6 +454,6 @@ MIL_security_reform_decision_category = {
             }
             set_country_flag = MIL_soaring_eagle_factory_decision_completed_flag
         }
-        ai_will_do = { base = 1 }
+        ai_will_do = { base = 10 }
     }
 }

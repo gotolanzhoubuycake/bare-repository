@@ -1,0 +1,388 @@
+# 2026-08-19：千年专属 AI 生产策略。按国策/军工阶段切换动员步兵、自动机、APC 与机甲生产。
+
+MIL_unit_production = {
+	allowed = {
+		original_tag = MIL
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		BARE_MIL_AI_Mid_Phase_Enabled = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = pp_spend_priority
+		id = decision
+		value = 150
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = garrison
+		value = 3
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = 70
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = mobile
+		value = 20
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 7
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = infantry
+		value = 50
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = support
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = artillery
+		value = 15
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = armor
+		value = 20
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = motorized
+		value = 25
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = mechanized
+		value = 10
+	}
+
+	# 保持此前确定的战斗无人机/攻击无人机比例，不引入原版轰炸机类型。
+	ai_strategy = {
+		type = unit_ratio
+		id = fighter
+		value = 60
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = cas
+		value = 30
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = scout_plane
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = 15
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = cas
+		value = 10
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = scout_plane
+		value = 5
+	}
+}
+
+MIL_mid_unit_production = {
+	allowed = {
+		original_tag = MIL
+	}
+	enable = {
+		BARE_MIL_AI_Mid_Phase_Enabled = yes
+	}
+	abort = {
+		BARE_MIL_AI_Late_Phase_Enabled = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = role_ratio
+		id = garrison
+		value = 2
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = 55
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = mobile
+		value = 20
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 23
+	}
+	ai_strategy = {
+		type = build_army
+		id = armor
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = infantry
+		value = 70
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = armor
+		value = 45
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = motorized
+		value = 40
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = mechanized
+		value = 25
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = 25
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = cas
+		value = 15
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = scout_plane
+		value = 5
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = fighter
+		value = 60
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = cas
+		value = 30
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = scout_plane
+		value = 5
+	}
+
+	# 中期保底生产线：自动机、APC、轻/中/重型机甲底盘开始形成稳定供应。
+	ai_strategy = {
+		type = equipment_production_min_factories_archetype
+		id = auto_mech
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories_archetype
+		id = apc_equipment
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories_archetype
+		id = light_bm_chassis
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories_archetype
+		id = medium_bm_chassis
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories_archetype
+		id = heavy_bm_chassis
+		value = 1
+	}
+}
+
+MIL_late_unit_production = {
+	allowed = {
+		original_tag = MIL
+	}
+	enable = {
+		BARE_MIL_AI_Late_Phase_Enabled = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = role_ratio
+		id = garrison
+		value = 3
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = 45
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = mobile
+		value = 12
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 40
+	}
+	ai_strategy = {
+		type = build_army
+		id = armor
+		value = 8
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = infantry
+		value = 80
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = armor
+		value = 70
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = motorized
+		value = 30
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = mechanized
+		value = 25
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = 35
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = cas
+		value = 20
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = scout_plane
+		value = 5
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = fighter
+		value = 60
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = cas
+		value = 30
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = scout_plane
+		value = 5
+	}
+
+	# 后期保底生产线：自动机和中重型机甲优先，APC/直升机保持机动支援能力。
+	ai_strategy = {
+		type = equipment_production_min_factories_archetype
+		id = auto_mech
+		value = 4
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories_archetype
+		id = apc_equipment
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories_archetype
+		id = light_bm_chassis
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories_archetype
+		id = medium_bm_chassis
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories_archetype
+		id = heavy_bm_chassis
+		value = 2
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories_archetype
+		id = helicopter_equipment
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories_archetype
+		id = attack_helicopter_equipment
+		value = 1
+	}
+}
+
+MIL_surplus_management = {
+	allowed = {
+		original_tag = MIL
+	}
+	enable = {
+		always = yes
+	}
+	abort_when_not_enabled = yes
+
+	# MIL 专属 surplus：关键底盘和空中支援库存充足后仍保持少量持续生产。
+	ai_strategy = {
+		type = equipment_production_surplus_management
+		id = auto_mech
+		value = 10
+	}
+	ai_strategy = {
+		type = equipment_production_surplus_management
+		id = light_bm_chassis
+		value = 4
+	}
+	ai_strategy = {
+		type = equipment_production_surplus_management
+		id = medium_bm_chassis
+		value = 8
+	}
+	ai_strategy = {
+		type = equipment_production_surplus_management
+		id = heavy_bm_chassis
+		value = 6
+	}
+	ai_strategy = {
+		type = equipment_production_surplus_management
+		id = apc_equipment
+		value = 6
+	}
+	ai_strategy = {
+		type = equipment_production_surplus_management
+		id = helicopter_equipment
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_production_surplus_management
+		id = attack_helicopter_equipment
+		value = 3
+	}
+}

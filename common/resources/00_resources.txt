@@ -1,5 +1,13 @@
 resources = {
 
+	# 2026-10-02 fix: 引擎硬性要求 oil 资源定义（run1 日志 strategic_resource_database.cpp:97
+	# "No oil resource defined."）。mod 地图/省份未投放 oil，仅补定义，icon_frame 复用 1（无界面影响）。
+	oil = {
+		icon_frame = 1
+		cic = 0.125
+		convoys = 0.1
+	}
+
 	resources_fe = {
 		icon_frame = 1
 		cic = 0.1

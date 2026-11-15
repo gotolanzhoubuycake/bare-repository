@@ -3,6 +3,7 @@
 ##land_doctrine_cost_factor = -0.25
 @tier1 = 15
 leader_traits = {
+	# 2026-11-08  sprite 对应原生顾问分类图标，按主要职能归类，通用与混合特质归入政治。
 	#模板
 	#    my_trait = {
 	#        random = no #领导人是否能随机到这个特性
@@ -60,6 +61,7 @@ leader_traits = {
 	###圣三一###
 	#难解的预言家
 	obscure_prophet = {
+		sprite = 14
 		random = no
 		#菲利乌斯派支持度+20%
 		#随机给予预言
@@ -115,6 +117,7 @@ leader_traits = {
 	}
 	#天真的公主
 	innocent_princess = {
+		sprite = 5
 		random = no
 		#帕特尔派支持度+20%
 		custom_modifier_tooltip = innocent_princess_tt
@@ -133,11 +136,13 @@ leader_traits = {
 	}
 	#图书馆的管家
 	butler_of_great_library = {
+		sprite = 14
 		random = no
 		research_speed_factor = 0.1
 	}
 	#阴暗的图书领域高手
 	master_of_great_library = {
+		sprite = 14
 		random = no
 		research_speed_factor = 0.2
 		local_resources_factor = 0.1
@@ -146,6 +151,7 @@ leader_traits = {
 	}
 	#圣三一的正义闪光
 	white_flash_of_trinity = {
+		sprite = 13
 		random = no
 		#所有下议院社团支持度+5%
 		custom_modifier_tooltip = white_flash_of_trinity_tt
@@ -159,6 +165,7 @@ leader_traits = {
 	}
 	#有活力的笨蛋
 	energetic_baka = {
+		sprite = 13
 		random = no
 		stability_factor = 0.1
 		political_power_factor = 0.1
@@ -211,6 +218,7 @@ leader_traits = {
 	}
 	#可爱的笨蛋
 	cute_baka_of_trinity = {
+		sprite = 13
 		random = no
 		#正义委支持率+10%
 		custom_modifier_tooltip = cute_baka_of_trinity_tt
@@ -219,6 +227,7 @@ leader_traits = {
 	}
 	#不计代价的拯救者
 	savior_at_any_cost = {
+		sprite = 13
 		random = no
 		#救护骑士团支持度+15%
 		custom_modifier_tooltip = savior_at_any_cost_tt
@@ -234,6 +243,7 @@ leader_traits = {
 	}
 	#元气满满的小护士
 	energetic_nurse = {
+		sprite = 13
 		random = no
 		stability_factor = -0.05
 		monthly_population = 0.1
@@ -241,6 +251,7 @@ leader_traits = {
 	}
 	#温柔体贴的小护士
 	sweet_nurse = {
+		sprite = 13
 		random = no
 		stability_factor = 0.05
 		monthly_population = 0.1
@@ -289,6 +300,7 @@ leader_traits = {
 	}
 	#"浪漫"的思索者
 	thinker_of_romantic = {
+		sprite = 10
 		random = no
 		industrial_factory_donations = 4
 		stability_factor = -0.05
@@ -303,6 +315,7 @@ leader_traits = {
 	}
 	#薄荷冰淇淋
 	mint_icecream = {
+		sprite = 13
 		random = no
 		land_reinforce_rate = 0.01
 		stability_factor = 0.1
@@ -311,6 +324,7 @@ leader_traits = {
 	}
 	#稀有甜品猎人
 	rare_sweet_hunter = {
+		sprite = 10
 		random = no
 		industrial_factory_donations = 5
 		consumer_goods_factor = -0.1
@@ -318,6 +332,7 @@ leader_traits = {
 	}
 	#凯西帕鲁格的传说
 	legend_of_kathy_paruge = {
+		sprite = 7
 		random = no
 		army_attack_factor = 0.05
 		consumer_goods_factor = -0.1
@@ -334,6 +349,7 @@ leader_traits = {
 	}
 	#广受欢迎的修女小姐
 	hightly_welcomed_sister = {
+		sprite = 13
 		random = no
 		#修女会支持度+5%，所有社团支持度+5%
 		custom_modifier_tooltip = hightly_welcomed_sister_tt
@@ -341,6 +357,7 @@ leader_traits = {
 	}
 	#虔信的守密人
 	devout_secret_keeper = {
+		sprite = 10
 		random = no
 		#修女会支持度+20%
 		custom_modifier_tooltip = devout_secret_keeper_tt
@@ -393,6 +410,7 @@ leader_traits = {
 	}
 	#委员长的左手
 	left_hand_of_hina = {
+		sprite = 13
 		random = no
 		political_power_factor = 0.2
 		consumer_goods_factor = -0.05
@@ -430,6 +448,7 @@ leader_traits = {
 	}
 	#懒散的中层管理者
 	leisurely_manager = {
+		sprite = 8
 		random = no
 		political_power_gain = 0.3
 		armor_factor = 0.05
@@ -525,6 +544,7 @@ leader_traits = {
 	}
 	#美食的探求者
 	seeker_of_real_food = {
+		sprite = 10
 		random = no
 		industrial_factory_donations = 4
 		consumer_goods_factor = -0.25
@@ -544,6 +564,7 @@ leader_traits = {
 	}
 	#食髓知味
 	eat_marrow_and_know_taste = {
+		sprite = 10
 		random = no
 		production_factory_efficiency_gain_factor = 0.1
 		production_factory_max_efficiency_factor = 0.1
@@ -556,12 +577,14 @@ leader_traits = {
 	}
 	#大火龙
 	giant_fire_dragon = {
+		sprite = 10
 		random = no
 		local_resources_factor = 0.25
 		consumer_goods_factor = 0.1
 	}
 	#温泉狂热
 	spring_frenzy = {
+		sprite = 10
 		random = no
 		local_resources_factor = 0.5
 		consumer_goods_factor = 0.2
@@ -569,6 +592,7 @@ leader_traits = {
 	}
 	#闪耀格黑娜少女
 	sparking_girl = {
+		sprite = 13
 		random = no
 		political_power_factor = 0.2
 		consumer_goods_factor = 0.1
@@ -629,6 +653,7 @@ leader_traits = {
 	}
 	#阿里乌斯的公主
 	princess_of_arius = {
+		sprite = 13
 		random = no
 		stability_factor = 0.1
 		political_power_factor = 0.2
@@ -651,6 +676,7 @@ leader_traits = {
 	}
 	#范围轰炸专家
 	master_of_massive_bombing = {
+		sprite = 16
 		random = no
 		army_artillery_attack_factor = 0.2
 		army_artillery_defence_factor = 0.2
@@ -723,6 +749,7 @@ leader_traits = {
 	}
 	#年轻的阿努比斯
 	young_anubis = {
+		sprite = 10
 		random = no
 		consumer_goods_factor = -0.2
 		political_power_gain = -0.25
@@ -742,6 +769,7 @@ leader_traits = {
 	}
 	#唯一的常识者
 	only_normal_girl = {
+		sprite = 13
 		random = no
 		stability_factor = 0.1
 		political_power_gain = 0.05
@@ -754,6 +782,7 @@ leader_traits = {
 	}
 	#奈芙蒂斯千金
 	princess_of_nephthys = {
+		sprite = 10
 		random = no
 		production_speed_buildings_factor = 0.2
 		production_factory_max_efficiency_factor = 0.2
@@ -766,12 +795,14 @@ leader_traits = {
 	}
 	#打工的公主
 	working_princess = {
+		sprite = 10
 		random = no
 		consumer_goods_factor = -0.1
 		industrial_capacity_factory = 0.1
 	}
 	#旧日之影
 	old_days_shadow = {
+		sprite = 13
 		random = no
 		stability_factor = 0.25
 	}
@@ -793,6 +824,7 @@ leader_traits = {
 	}
 	#阿努比斯化身
 	avatar_of_anubis_pa = {
+		sprite = 13
 		random = no
 		political_power_factor = 0.5
 		stability_factor = 1
@@ -804,6 +836,10 @@ leader_traits = {
 		random = no
 		political_power_factor = 0.2
 		stability_factor = 0.1
+	}
+	#沙勒 大人的责任（占位定义：SCH_sensei 原引用拼写 responsebility_of_adult 无定义，按正确语义补占位 trait）
+	responsibility_of_adult = {
+		random = no
 	}
 	###百鬼夜行###
 	#风一般的少女
@@ -833,17 +869,20 @@ leader_traits = {
 	}
 	#百花缭乱的领导者
 	true_leader_of_hyakaryuran = {
+		sprite = 13
 		random = no
 		political_power_factor = 0.2
 		stability_factor = 0.1
 	}
 	#可爱的吉祥物
 	cute_fujuo = {
+		sprite = 13
 		random = no
 		stability_weekly = 0.005
 	}
 	#千世应援会头子
 	fan_of_chise = {
+		sprite = 10
 		random = no
 		consumer_goods_factor = -0.05
 		political_power_gain = 0.1
@@ -856,6 +895,7 @@ leader_traits = {
 	}
 	#睡美人
 	sleep_beauty = {
+		sprite = 10
 		random = no
 		consumer_goods_factor = 0.05
 		production_factory_max_efficiency_factor = 0.1
@@ -863,11 +903,13 @@ leader_traits = {
 	}
 	#小小的新娘修行
 	bride_in_learning = {
+		sprite = 10
 		random = no
 		consumer_goods_factor = -0.1
 	}
 	#修行少女
 	practicing_girl = {
+		sprite = 14
 		random = no
 		research_speed_factor = 0.15
 		consumer_goods_factor = 0.05
@@ -880,6 +922,7 @@ leader_traits = {
 	}
 	#潜入大师
 	infiltration_expert = {
+		sprite = 15
 		random = no
 		encryption = 1
 		decryption = 1
@@ -892,6 +935,7 @@ leader_traits = {
 	}
 	#庆典主办者
 	great_festival_holder = {
+		sprite = 10
 		random = no
 		consumer_goods_factor = 0.1
 		production_speed_industrial_complex_factor = 0.25
@@ -919,6 +963,19 @@ leader_traits = {
 		research_speed_factor = 0.2
 		political_power_gain = 0.25
 	}
+	# 莉音失踪后短暂接管学院的混乱研讨会。
+	MIL_chaotic_seminar_leader_trait = {
+		random = no
+		political_power_factor = -0.20
+		stability_factor = -0.20
+		stability_weekly = -0.005
+	}
+	# 研讨会恢复运转后，由优香代理学生会长。
+	MIL_yuuka_acting_chair_trait = {
+		random = no
+		political_power_factor = -0.05
+		consumer_goods_factor = -0.30
+	}
 	#冷酷的计算使
 	cold_calculator = {
 		random = no
@@ -927,6 +984,7 @@ leader_traits = {
 	}
 	#预算控制专家
 	budget_controller = {
+		sprite = 10
 		random = no
 		consumer_goods_factor = -0.25
 		production_speed_buildings_factor = -0.1
@@ -934,12 +992,14 @@ leader_traits = {
 	}
 	#研讨会的书记
 	secretary_of_seminar = {
+		sprite = 13
 		random = no
 		political_power_factor = 0.2
 		opinion_gain_monthly_factor = 0.2
 	}
 	#阿戈洛上的兔女郎
 	bunny_girl_on_argo = {
+		sprite = 10
 		random = no
 		consumer_goods_factor = -0.2
 		production_factory_efficiency_gain_factor = -0.05
@@ -947,6 +1007,7 @@ leader_traits = {
 	}
 	#真理之声
 	sound_of_truth = {
+		sprite = 15
 		random = no
 		intel_network_gain_factor = 0.5
 		agency_upgrade_time = -0.25
@@ -959,18 +1020,21 @@ leader_traits = {
 	}
 	#魔爪依赖
 	energy_drink_love = {
+		sprite = 14
 		random = no
 		research_speed_factor = 0.2
 		consumer_goods_factor = 0.1
 	}
 	#隔墙之耳
 	ears_in_dark = {
+		sprite = 15
 		random = no
 		decryption = 2
 		encryption = 2
 	}
 	#天才黑客
 	genius_hacker = {
+		sprite = 15
 		random = no
 		decryption = 2
 		decryption_factor = 0.25
@@ -996,12 +1060,14 @@ leader_traits = {
 	}
 	#开发者代号：桃
 	game_developer_momoi = {
+		sprite = 10
 		random = no
 		production_speed_buildings_factor = 0.1
 		production_factory_max_efficiency_factor = 0.1
 	}
 	#开发者代号：绿
 	game_developer_midori = {
+		sprite = 10
 		random = no
 		production_factory_start_efficiency_factor = 0.1
 		production_speed_buildings_factor = 0.1
@@ -1014,6 +1080,7 @@ leader_traits = {
 	}
 	#机器人工程师
 	auto_robot_engineer = {
+		sprite = 10
 		random = no
 		research_speed_factor = 0.05
 		industrial_capacity_factory = 0.1
@@ -1066,6 +1133,7 @@ leader_traits = {
 	###赤冬联邦学园###
 	#漫画爱好者
 	comic_lover = {
+		sprite = 13
 		random = no
 		stability_factor = 0.1
 		political_power_factor = -0.1
@@ -1073,6 +1141,7 @@ leader_traits = {
 	}
 	#无所顾忌的二创画师
 	leader_of_liberity_frontier = {
+		sprite = 13
 		random = no
 		stability_factor = -0.1
 		political_power_factor = -0.1
@@ -1087,6 +1156,7 @@ leader_traits = {
 	}
 	#首席理论家
 	chief_secretary = {
+		sprite = 13
 		random = no
 		political_power_factor = 0.2
 		stability_factor = 0.1
@@ -1100,6 +1170,7 @@ leader_traits = {
 	}
 	#赤冬劳工领袖
 	leader_of_labour_frontier = {
+		sprite = 10
 		random = no
 		consumer_goods_factor = 0.2
 		production_speed_buildings_factor = 0.2
@@ -1108,12 +1179,14 @@ leader_traits = {
 	}
 	#出版策展人
 	rw_sponsor_of_books = {
+		sprite = 14
 		random = no
 		political_power_gain = 0.25
 		research_speed_factor = 0.05
 	}
 	#专业作家
 	great_writer = {
+		sprite = 14
 		random = no
 		research_speed_factor = 0.1
 		drift_defence_factor = 0.2
@@ -1147,12 +1220,14 @@ leader_traits = {
 	}
 	#第一帮厨
 	first_kitchen_helper = {
+		sprite = 10
 		random = no
 		consumer_goods_factor = -0.1
 		industrial_capacity_factory = 0.05
 	}
 	#朱雀商会首席大厨
 	magic_cook = {
+		sprite = 13
 		random = no
 		political_power_factor = -0.2
 		consumer_goods_factor = -0.2
@@ -1161,6 +1236,7 @@ leader_traits = {
 	}
 	#梅花园的看护者
 	caretaker_of_plum_blossom_garden = {
+		sprite = 14
 		random = no
 		research_speed_factor = 0.1
 		monthly_population = 0.2
@@ -1175,6 +1251,7 @@ leader_traits = {
 	}
 	#小小淑女
 	little_lady = {
+		sprite = 13
 		random = no
 		stability_factor = 0.15
 	}
@@ -1186,6 +1263,7 @@ leader_traits = {
 	}
 	#炼金术研究者
 	great_alchemy_master = {
+		sprite = 14
 		random = no
 		research_speed_factor = 0.2
 		stability_factor = -0.1
@@ -1193,6 +1271,7 @@ leader_traits = {
 	}
 	#劳动部长
 	labor_minister = {
+		sprite = 10
 		random = no
 		stability_factor = -0.05
 		industrial_capacity_factory = 0.1
@@ -1201,6 +1280,7 @@ leader_traits = {
 	}
 	#情报协调者
 	intelligence_coordinator = {
+		sprite = 15
 		random = no
 		operative_slot = 1
 		agency_upgrade_time = -0.2
@@ -1275,6 +1355,7 @@ leader_traits = {
 	}
 	#领袖-实干家
 	ALF_silent_hardworker = {
+		sprite = 13
 		random = no
 		political_power_factor = 0.1
 		stability_factor = 0.1
@@ -1288,12 +1369,14 @@ leader_traits = {
 	}
 	##实地测绘员
 	ALF_field_Surveyor = {
+		sprite = 10
 		random = no
 		production_speed_buildings_factor = 0.1
 		industry_free_repair_factor = 0.1
 	}
 	##分析员
 	ALF_intelligence_analyst = {
+		sprite = 15
 		random = no
 		resistance_growth = -0.05
 		civilian_intel_to_others = -10
@@ -1304,6 +1387,7 @@ leader_traits = {
 	}
 	##宣传干事
 	ALF_propaganda_expert = {
+		sprite = 13
 		random = no
 		war_support_factor = 0.1
 		drift_defence_factor = 0.1
@@ -1311,6 +1395,7 @@ leader_traits = {
 	}
 	##工业队长
 	ALF_industrial_captain = {
+		sprite = 10
 		random = no
 		production_speed_buildings_factor = 0.1
 		truck_attrition_factor = -0.2

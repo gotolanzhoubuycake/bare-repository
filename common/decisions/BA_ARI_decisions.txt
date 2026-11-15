@@ -1813,7 +1813,6 @@ ARI_foreign_operations_decisions = {
 				limit = {
 					has_country_flag = ARI_beatrice_operations_20
 				}
-				set_character_flag = ARI_beatrice_operations_20
 				country_event = ARI_beatrice_operations.20
 			}
 			set_temp_variable = { intelligence_change = 10 }

@@ -53,7 +53,7 @@ country_event = {
 	title = ARI_ZJ.3.t
 	desc = ARI_ZJ.3.d
 	is_triggered_only = yes
-	picture = TRI_news_event_28
+	picture = GFX_TRI_event_28
 
 
 	option = {
@@ -185,7 +185,7 @@ country_event = {
 	title = TRI_ZJ.2.t
 	desc = TRI_ZJ.2.d
 	is_triggered_only = yes
-	picture = TRI_news_event_14
+	picture = GFX_TRI_event_14
 
 	option = {
 		name = TRI_ZJ.2.a
@@ -217,7 +217,7 @@ country_event = {
 	title = ARI_ZJ.7.t
 	desc = ARI_ZJ.7.d
 	is_triggered_only = yes
-	picture = TRI_news_event_13
+	picture = GFX_TRI_event_13
 
 	option = {
 		name = ARI_ZJ.7.a
@@ -239,7 +239,7 @@ country_event = {
 	title = ARI_ZJ.8.t
 	desc = ARI_ZJ.8.d
 	is_triggered_only = yes
-	picture = TRI_news_event_13
+	picture = GFX_TRI_event_13
 
 	option = {
 		name = ARI_ZJ.8.a
@@ -266,7 +266,7 @@ country_event = {
 	title = TRI_ZJ.3.t
 	desc = TRI_ZJ.3.d
 	is_triggered_only = yes
-	picture = TRI_news_event_14
+	picture = GFX_TRI_event_14
 
 	option = {
 		name = TRI_ZJ.3.a
@@ -278,7 +278,7 @@ country_event = {
 	title = ARI_ZJ.9.t
 	desc = ARI_ZJ.9.d
 	is_triggered_only = yes
-	picture = TRI_news_event_14
+	picture = GFX_TRI_event_14
 
 	option = {
 		name = ARI_ZJ.9.a

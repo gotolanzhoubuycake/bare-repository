@@ -1,0 +1,262 @@
+# 2026-10-08：集中维护千年-凯撒战争的胜负结算、主要国家保护和战后清理。
+
+# 入口：战争事件开始时调用；将凯撒总部及所有子公司暂时设为主要国家。
+# 关键变量：*_CAE_MIL_war_forced_major 记录战前是否为非主要国家。
+# 预期结果：战争期间任何凯撒参战方投降都不会因非主要国家身份提前结束阵营战争。
+BARE_MIL_CAE_war_force_major_effect = {
+    CAE = {
+        if = {
+            limit = { NOT = { is_major = yes } }
+            set_country_flag = CAE_CAE_MIL_war_forced_major
+        }
+        set_major = yes
+    }
+    CAP = {
+        if = {
+            limit = { NOT = { is_major = yes } }
+            set_country_flag = CAP_CAE_MIL_war_forced_major
+        }
+        set_major = yes
+    }
+    CAB = {
+        if = {
+            limit = { NOT = { is_major = yes } }
+            set_country_flag = CAB_CAE_MIL_war_forced_major
+        }
+        set_major = yes
+    }
+    CAH = {
+        if = {
+            limit = { NOT = { is_major = yes } }
+            set_country_flag = CAH_CAE_MIL_war_forced_major
+        }
+        set_major = yes
+    }
+    CAO = {
+        if = {
+            limit = { NOT = { is_major = yes } }
+            set_country_flag = CAO_CAE_MIL_war_forced_major
+        }
+        set_major = yes
+    }
+}
+
+# 入口：任意战争胜负效果完成后调用。
+# 关键变量：战争旗标、临时决议旗标、动态修正和全局 GUI/经济变量。
+# 预期结果：停止月度经济结算，移除战时精神与修正，并恢复战前主要国家身份。
+BARE_MIL_CAE_war_cleanup_effect = {
+    CAE = {
+        clr_country_flag = CAE_MIL_war_started
+        clr_country_flag = CAE_war_propaganda_active
+        clr_country_flag = CAE_confiscate_resources_first_done
+        clr_country_flag = CAE_seize_assets_first_done
+        clr_country_flag = CAE_NOT_FIRST_ZAYU
+        clr_country_flag = CAE_NOT_FIRST_NORMAL
+        clr_country_flag = CAE_NOT_FIRST_ADVANCED
+        clr_country_flag = CAE_NOT_FIRST_LIGHT_ARMOR
+        clr_country_flag = CAE_NOT_FIRST_MEDIUM_ARMOR
+        clr_country_flag = CAE_NOT_FIRST_HEAVY_ARMOR
+        remove_dynamic_modifier = { modifier = CAE_economic_status }
+        remove_ideas = {
+            CAE_armed_invasion_MIL
+            CAE_network_paralysis
+            MIL_fierce_resistance_resistance
+            MIL_fierce_resistance_compliance
+            MIL_fierce_resistance_both
+            MIL_fierce_resistance_final
+        }
+        if = {
+            limit = { has_country_flag = CAE_CAE_MIL_war_forced_major }
+            set_major = no
+            clr_country_flag = CAE_CAE_MIL_war_forced_major
+        }
+    }
+    MIL = {
+        clr_country_flag = CAE_MIL_war_started
+        clr_country_flag = MIL_cae_eco_weekly_minus_1
+        clr_country_flag = MIL_cae_eco_weekly_minus_1_5
+        clr_country_flag = MIL_boycott_CAE_products_done
+        clr_country_flag = MIL_ban_all_CAE_products_done
+        clr_country_flag = MIL_cyber_attack_first_done
+        clr_country_flag = MIL_seek_CEN_support_done
+        clr_country_flag = mil_cae_war_is_finding_support
+        remove_dynamic_modifier = { modifier = MIL_fight_against_cae }
+        # 2026-10-08：清除战争国策产生的临时防守、进攻、计划和决战精神。
+        remove_ideas = {
+            MIL_till_the_last_man_standing
+            MIL_counterattack_against_cae
+            MIL_efficient_planning
+            MIL_efficient_planning_steel_torrent
+            MIL_final_battle_against_cae
+        }
+        if = {
+            limit = { has_country_flag = MIL_CAE_MIL_war_forced_major }
+            set_major = no
+            clr_country_flag = MIL_CAE_MIL_war_forced_major
+        }
+    }
+    CAP = {
+        clr_country_flag = CAE_MIL_war_started
+        if = {
+            limit = { has_country_flag = CAP_CAE_MIL_war_forced_major }
+            set_major = no
+            clr_country_flag = CAP_CAE_MIL_war_forced_major
+        }
+    }
+    CAB = {
+        clr_country_flag = CAE_MIL_war_started
+        if = {
+            limit = { has_country_flag = CAB_CAE_MIL_war_forced_major }
+            set_major = no
+            clr_country_flag = CAB_CAE_MIL_war_forced_major
+        }
+    }
+    CAH = {
+        clr_country_flag = CAE_MIL_war_started
+        if = {
+            limit = { has_country_flag = CAH_CAE_MIL_war_forced_major }
+            set_major = no
+            clr_country_flag = CAH_CAE_MIL_war_forced_major
+        }
+    }
+    CAO = {
+        clr_country_flag = CAE_MIL_war_started
+        if = {
+            limit = { has_country_flag = CAO_CAE_MIL_war_forced_major }
+            set_major = no
+            clr_country_flag = CAO_CAE_MIL_war_forced_major
+        }
+    }
+
+    # 清除战争专用的全局数值，避免战后 GUI 或其他修正读取上一场战争数据。
+    clear_variable = global.cae_economic_situation
+    clear_variable = global.cae_final_economic_situation
+    clear_variable = global.cae_economic_progress_frame
+    clear_variable = global.cae_add_economic_situation
+    clear_variable = global.cae_last_add_eco
+    clear_variable = global.cae_predicted_monthly_change
+    clear_variable = global.cae_recruit_equipment_factor
+    clear_variable = global.MIL_cae_war_consumer_goods
+    clear_variable = global.MIL_cae_war_war_support
+    clear_variable = global.MIL_cae_war_cae_army_attack_factor
+    clear_variable = global.MIL_cae_war_cae_army_defence_factor
+    clear_variable = global.MIL_cae_war_cae_army_org_factor
+    clear_variable = global.MIL_cae_war_cae_army_org_regain
+    clear_variable = global.MIL_cae_war_cae_air_mission_efficiency
+    clear_variable = global.MIL_cae_war_GUI_CAE_factory_count
+    clear_variable = global.MIL_cae_war_GUI_CAE_deployed_manpower
+    clear_variable = global.MIL_cae_war_GUI_CAE_casualties
+    clear_variable = global.MIL_cae_war_GUI_CAE_occupied_state_count
+    clear_variable = global.MIL_cae_war_GUI_CAE_remaining_core_state_count
+    clear_variable = global.MIL_cae_war_GUI_MIL_factory_count
+    clear_variable = global.MIL_cae_war_GUI_MIL_deployed_manpower
+    clear_variable = global.MIL_cae_war_GUI_MIL_casualties
+    clear_variable = global.MIL_cae_war_GUI_MIL_occupied_state_count
+    clear_variable = global.MIL_cae_war_GUI_MIL_remaining_core_state_count
+}
+
+# 2026-10-08：两种胜利共用停战步骤，避免各结算入口重复维护参战方名单。
+BARE_MIL_CAE_war_white_peace_effect = {
+    # 入口：由任一胜利效果在国家作用域调用；固定切换至 MIL 执行双方停战。
+    # 关键条件：仅对仍与 MIL 交战的凯撒总部和子公司执行 white_peace。
+    # 预期结果：终止 MIL 与 CAE/CAP/CAB/CAH/CAO 的战争；奖励、拆分和清理由调用方执行。
+    MIL = {
+        # 同一场战争中的前一次白和平可能已使其他参战方停战，因此逐个重新检查。
+        if = {
+            limit = { has_war_with = CAE }
+            white_peace = CAE
+        }
+        if = {
+            limit = { has_war_with = CAP }
+            white_peace = CAP
+        }
+        if = {
+            limit = { has_war_with = CAB }
+            white_peace = CAB
+        }
+        if = {
+            limit = { has_war_with = CAH }
+            white_peace = CAH
+        }
+        if = {
+            limit = { has_war_with = CAO }
+            white_peace = CAO
+        }
+    }
+}
+
+# 入口：千年投降或凯撒经济达到200时调用。
+# 关键变量：CAE_MIL_war_cae_victory 记录结算结果，战争控制权转移到 CAE。
+# 预期结果：凯撒取得战争胜利、收回占领区、白和平并统一清理战时状态。
+BARE_MIL_CAE_war_cae_victory_effect = {
+    if = {
+        limit = {
+            NOT = { has_global_flag = CAE_MIL_war_cae_victory }
+            NOT = { has_global_flag = CAE_MIL_war_cae_defeated }
+        }
+        set_global_flag = CAE_MIL_war_cae_victory
+
+        CAE = {
+            # 战争开始时占领的千年核心省份归凯撒控制。
+            transfer_state = 31
+            transfer_state = 471
+            transfer_state = 32
+            transfer_state = 730
+            transfer_state = 33
+            transfer_state = 731
+            transfer_state = 473
+            transfer_state = 320
+            transfer_state = 733
+            transfer_state = 321
+            transfer_state = 322
+            transfer_state = 732
+            transfer_state = 323
+            transfer_state = 333
+            transfer_state = 341
+            transfer_state = 331
+            transfer_state = 477
+            transfer_state = 745
+            transfer_state = 746
+            transfer_state = 476
+            country_event = { id = MIL_cae_war.13 days = 1 }
+        }
+        # 2026-10-08：停战共用效果执行完毕后，统一清理临时战争状态。
+        BARE_MIL_CAE_war_white_peace_effect = yes
+        BARE_MIL_CAE_war_cleanup_effect = yes
+    }
+}
+
+# 入口：凯撒总部投降或凯撒经济降至0时调用。
+# 关键变量：CAE_MIL_war_cae_defeated 记录凯撒失败结果。
+# 预期结果：千年取得战争胜利，保留既有战后奖励事件，并解散凯撒战时集团。
+BARE_MIL_CAE_war_mil_victory_effect = {
+    if = {
+        limit = {
+            NOT = { has_global_flag = CAE_MIL_war_cae_victory }
+            NOT = { has_global_flag = CAE_MIL_war_cae_defeated }
+        }
+        set_global_flag = CAE_MIL_war_cae_defeated
+
+        MIL = {
+            add_ideas = MIL_glorious_banner_forever
+            country_event = { id = MIL_cae_war.10 days = 1 }
+            country_event = { id = MIL_cae_war.11 days = 2 }
+            country_event = { id = MIL_cae_war.12 days = 3 }
+        }
+        # 2026-10-08：先通过共用效果停战，再解散凯撒战时集团，最后清理临时状态。
+        BARE_MIL_CAE_war_white_peace_effect = yes
+        CAE = {
+            add_ideas = CAE_worst_investment_ever
+            add_ideas = CAE_collapsed_corporate_system
+            release_puppet = CAP
+            release_puppet = CAB
+            release_puppet = CAH
+            release_puppet = CAO
+        }
+        CAP = { leave_faction = yes }
+        CAB = { leave_faction = yes }
+        CAH = { leave_faction = yes }
+        CAO = { leave_faction = yes }
+        BARE_MIL_CAE_war_cleanup_effect = yes
+    }
+}

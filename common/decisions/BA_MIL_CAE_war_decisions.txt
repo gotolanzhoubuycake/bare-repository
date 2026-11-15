@@ -24,7 +24,8 @@ MIL_cae_war_decision_category = {
             set_country_flag = MIL_boycott_CAE_products_done
             # 追加民族精神效果
             add_to_variable = { global.MIL_cae_war_consumer_goods = 0.1 }
-            add_to_variable = { MIL_cae_war_war_support = 0.05 }
+            # 2026-10-08：动态修正读取全局战争变量，保持与全面禁用凯撒商品决议一致。
+            add_to_variable = { global.MIL_cae_war_war_support = 0.05 }
             # 设置每月经济状况减少的flag
             set_country_flag = MIL_cae_eco_weekly_minus_1
         }

@@ -1,0 +1,6 @@
+# 2026-07-20: 凯撒重工直属对地无人机队，用于工业区火力支援。
+air_wings = {
+    220 = {
+        medium_uav_cas_equipment_1 = { owner = "CAH" amount = 100 }
+    }
+}

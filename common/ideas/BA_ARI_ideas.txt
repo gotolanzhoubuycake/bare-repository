@@ -13,7 +13,7 @@ ideas = {
 		
 		#结束了
 		ARI_JSL = {
-			picture = unkown
+			picture = unknown
 			modifier = {
 				army_attack_factor = -0.5
 				army_defence_factor = -0.5
@@ -26,7 +26,7 @@ ideas = {
 
 		#缺乏目标
 		ARI_unclear_target = {
-			#picture = unkown
+			#picture = unknown
 			modifier = {
 				stability_factor = -0.15
 				war_support_factor = -0.3
@@ -228,7 +228,7 @@ ideas = {
 		}
 		#合作愉快
 		ARI_Pleasant_cooperation = {
-			#picture = unkown
+			#picture = unknown
 			modifier = {
 				industrial_capacity_factory = 0.25
 			}
@@ -238,7 +238,7 @@ ideas = {
 		}
 		#改进奖惩方法
 		ARI_improving_reward_and_punishment = {
-			#picture = unkown
+			#picture = unknown
 			modifier = {
 				political_power_factor = -0.15
 			}
@@ -248,7 +248,7 @@ ideas = {
 		}
 		#强化复仇教育
 		ARI_revanchism_education = {
-			#picture = unkown
+			#picture = unknown
 			modifier = {
 				research_speed_factor = -0.1
 			}
@@ -285,7 +285,7 @@ ideas = {
 		}
 		#驰车式主战坦克
 		ARI_merkava_main_battle_tank = {
-			picture = unkown
+			picture = unknown
 			modifier = {
 				army_armor_defence_factor = -0.1
 			}
@@ -302,7 +302,7 @@ ideas = {
 			}
 		}
 		ARI_merkava_main_battle_tank_1 = {
-			picture = unkown
+			picture = unknown
 			modifier = {
 				army_armor_defence_factor = -0.1
 			}
@@ -320,7 +320,7 @@ ideas = {
 			}
 		}
 		ARI_merkava_main_battle_tank_2 = {
-			picture = unkown
+			picture = unknown
 			modifier = {
 				army_armor_defence_factor = -0.1
 			}
@@ -363,7 +363,7 @@ ideas = {
 		}
 		#阿里乌斯掌握程度
 		ARI_control_rank_1 = {
-			picture = unkown
+			picture = unknown
 			modifier = {
 				stability_factor = -0.2
 				war_support_factor = -0.2
@@ -390,7 +390,7 @@ ideas = {
 			}
 		}
 		ARI_control_rank_2 = {
-			picture = unkown
+			picture = unknown
 			cancel = {
 				has_global_flag = ARI_remove_old_modifier_flag
 			}
@@ -398,7 +398,7 @@ ideas = {
 			
 		}
 		ARI_control_rank_3 = {
-			picture = unkown
+			picture = unknown
 			modifier = {
 				stability_factor = 0.2
 			}
@@ -409,7 +409,7 @@ ideas = {
 		
 		#数秘术成员
 		# ARI_Gematria_member = {
-		# 	picture = unkown
+		# 	picture = unknown
 		# 	modifier = {
 		# 		research_speed_factor = 0.05
 		# 		custom_modifier_tooltip = ARI_Gematria_member_tt
@@ -417,7 +417,7 @@ ideas = {
 		# }
 		#红冬炮火压制
 		# ARI_red_winter_overwhelming_fire = {
-		# 	picture = unkown
+		# 	picture = unknown
 		# 	allowed = {
 		# 		RWT = { exists = yes }
 		# 	}
@@ -431,7 +431,7 @@ ideas = {
 		# }
 		#被不对称作战袭扰
 		# ARI_asymmetric_warfare = {
-		# 	picture = unkown
+		# 	picture = unknown
 		# 	allowed = {
 		# 		ALR = { exists = yes }
 		# 	}

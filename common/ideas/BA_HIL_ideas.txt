@@ -1,7 +1,7 @@
 ideas = {
 	country = {
 		HIL_GuiDaoShangDeXueYuan = { #轨道上的学园
-			picture = unkown
+			picture = unknown
 
 			modifier = {
 				production_speed_rail_way_factor = 0.2 #铁路建造速度
@@ -9,7 +9,7 @@ ideas = {
 		}
 
 		HIL_ZhuangJiaJvLong = { #装甲巨龙
-			picture = unkown
+			picture = unknown
 
 			equipment_bonus = {
 				train_equipment = {

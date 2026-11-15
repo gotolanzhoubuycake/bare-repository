@@ -67,6 +67,8 @@ set_technology = {
 	#Train_T2 = 1
 
 	#空军（无人机）
+	# 2026-07-20: 对应开局运输无人机联队，允许其在损失后按现有工业能力补充。
+	transport_drone = 1
 	recon_drone = 1
 	light_fighting_drone = 1
 	light_attack_drone = 1
@@ -154,4 +156,42 @@ set_politics = {
 }
 set_popularities = {
 	no_ideology = 100
+}
+# 2026-07-20 修改：依据开局部队与现有军工配置装备生产线。
+add_equipment_production = {
+	equipment = { type = infantry_equipment_0 }
+	requested_factories = 1
+	progress = 0
+	efficiency = 100
+}
+add_equipment_production = {
+	equipment = { type = special_infantry_equipment_0 }
+	requested_factories = 1
+	progress = 0
+	efficiency = 100
+}
+add_equipment_production = {
+	equipment = { type = support_equipment_1 }
+	requested_factories = 1
+	progress = 0
+	efficiency = 100
+}
+add_equipment_production = {
+	equipment = { type = transport_plane_equipment_1 }
+	requested_factories = 1
+	progress = 0
+	efficiency = 100
+}
+add_equipment_production = {
+	equipment = { type = light_fire_support_equipment_0 }
+	requested_factories = 1
+	progress = 0
+	efficiency = 100
+}
+# 2026-07-20 修改：为开局神秘火炮营补足剩余军工生产线。
+add_equipment_production = {
+	equipment = { type = special_fire_support_equipment_0 }
+	requested_factories = 1
+	progress = 0
+	efficiency = 100
 }

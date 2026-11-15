@@ -4887,9 +4887,10 @@ guiTypes = {
 		size = { width = 70 height = 30 }
 		clipping = no
 
-		background = {
-			name = "bg"
-			quadTextureSprite ="GFX_mini_tooltip"
+		# 2026-11-08  恢复资源条原生点击区，保留 BARE 图标和资源顺序。
+		buttonType = {
+			name = "button"
+			quadTextureSprite ="resource_item_background"
 		}
 
 		iconType = {
@@ -4898,10 +4899,11 @@ guiTypes = {
 			position = { x = 5 y = 5 }
 		}
 
-		buttonType = {
+		iconType = {
 			name = "icon"
 			position = { x=4 y=2 }
 			spriteType = "GFX_resources_strip"
+			alwaystransparent = yes
 		}
 		
 		instantTextboxType = {
@@ -4914,6 +4916,7 @@ guiTypes = {
 			maxHeight = 30
 			format = left
 			orientation = "UPPER_LEFT"
+			alwaystransparent = yes
 		}	
 
 	}

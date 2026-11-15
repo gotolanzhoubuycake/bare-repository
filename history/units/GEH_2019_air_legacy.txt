@@ -1,45 +1,27 @@
-air_wings = {   
-
+# 2026-07-20: 格黑娜开局空军，以中型主力配合额外小型无人机蜂群。
+air_wings = {
+    305 = {
+        medium_uav_equipment_1 = { owner = "GEH" amount = 100 }
+        medium_uav_equipment_1 = { owner = "GEH" amount = 100 }
+        medium_uav_equipment_1 = { owner = "GEH" amount = 100 }
+        medium_uav_cas_equipment_1 = { owner = "GEH" amount = 100 }
+        medium_uav_cas_equipment_1 = { owner = "GEH" amount = 100 }
+        small_uav_equipment_1 = { owner = "GEH" amount = 100 }
+        small_uav_equipment_1 = { owner = "GEH" amount = 100 }
+        small_uav_cas_equipment_1 = { owner = "GEH" amount = 100 }
+        # 2026-07-20: 追加低成本小型制空与对地无人机，作为主力机队的数量补充。
+        small_uav_equipment_1 = { owner = "GEH" amount = 100 }
+        small_uav_cas_equipment_1 = { owner = "GEH" amount = 100 }
+        small_uav_recon_equipment_1 = { owner = "GEH" amount = 100 }
+    }
+    172 = { medium_uav_equipment_1 = { owner = "GEH" amount = 100 } medium_uav_cas_equipment_1 = { owner = "GEH" amount = 100 } }
+    173 = { medium_uav_equipment_1 = { owner = "GEH" amount = 100 } medium_uav_cas_equipment_1 = { owner = "GEH" amount = 100 } }
+    175 = { medium_uav_equipment_1 = { owner = "GEH" amount = 100 } medium_uav_cas_equipment_1 = { owner = "GEH" amount = 100 } small_uav_cas_equipment_1 = { owner = "GEH" amount = 100 } }
+    184 = { medium_uav_equipment_1 = { owner = "GEH" amount = 100 } medium_uav_cas_equipment_1 = { owner = "GEH" amount = 100 } }
     141 = {
-        medium_uav_equipment_1 = {
-            owner = "GEH" 
-            amount = 100
-            
-        }
-
-        medium_uav_equipment_1 = {
-            owner = "GEH" 
-            amount = 100
-            
-        }
-
-        medium_uav_equipment_1 = {
-            owner = "GEH" 
-            amount = 100
-            
-        }
-
-        medium_uav_equipment_1 = {
-            owner = "GEH" 
-            amount = 100
-            
-        }
-
-        medium_uav_equipment_1 = {
-            owner = "GEH" 
-            amount = 100
-            
-        }
-
-        medium_uav_equipment_1 = {
-            owner = "GEH" 
-            amount = 100
-            
-        }
-
-        small_uav_cas_equipment_1 = {
-            owner = "GEH"
-            amount = 100
-        }        
+        transport_plane_equipment_1 = { owner = "GEH" amount = 25 }
+        transport_plane_equipment_1 = { owner = "GEH" amount = 25 }
+        transport_plane_equipment_1 = { owner = "GEH" amount = 25 }
+        transport_plane_equipment_1 = { owner = "GEH" amount = 25 }
     }
 }

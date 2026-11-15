@@ -156,7 +156,6 @@
  TRIGGER_HAS_NOT_TRUCE_WITH: "与@$TAG$$COUNTRY|H$没有停战协定"
  TRIGGER_HAS_TRUCE_WITH: "与@$TAG$$COUNTRY|H$有停战协定"
  TRIGGER_IS_FRIEND: "是@$TAG$$OTHER|H$的盟友"
- TRIGGER_IS_FRIEND: "是@$TAG$$OTHER|H$的盟友"
  TRIGGER_IS_NOT_FRIEND: "不是@$TAG$$OTHER|H$的盟友"
  TRIGGER_HAS_NOT_WAR_TOGETHER_WITH: "与@$TAG$$COUNTRY|H$没有在战争同一方共同作战"
  TRIGGER_HAS_WAR_TOGETHER_WITH: "与@$TAG$$COUNTRY|H$在战争同一方共同作战"
@@ -1008,3 +1007,5 @@
  GOAL_T_TRIGGER_A: "阵营的已知科技（$LEFT|0H$）高于$RIGHT|0H$"
  GOAL_T_TRIGGER_B: "阵营陆军师（$LEFT|0H$）多于$RIGHT|0H$"
  TRIGGER_EQUIPMENT_CURRENT_VALUE: "（当前储备：$CURRENT|H$）"
+ can_unlock_second_track_special_forces_doctrine_yes: "特种部队§H分支专业化§!条件满足"
+ can_unlock_second_track_special_forces_doctrine_no: "需要额外特种部队§H分支专业化§!"

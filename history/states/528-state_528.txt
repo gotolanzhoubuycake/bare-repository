@@ -10,7 +10,6 @@ state={
 		}
 		owner = A45
 		add_core_of=A45
-		victory_points = {7726 5}
 		victory_points = {2586 5}
 		victory_points = {5548 5}
     }

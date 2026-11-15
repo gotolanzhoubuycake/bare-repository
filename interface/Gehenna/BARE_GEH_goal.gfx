@@ -217,7 +217,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_goal_ GEH_People_oriented"
-		texturefile = "gfx/interface/goals/Gehenna/focus_ GEH_People_oriented.dds"
+		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_People_oriented.dds"
 	}
 	spriteType = {
 		name = "GFX_goal_GEH_Towering_mountain"
@@ -241,11 +241,11 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_goal_GEH_Guerrilla_Hero"
-		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Guerrilla_Hero.dds"
+		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Hundred_Battles.dds"
 	}
 	spriteType = {
 		name = "GFX_goal_GEH_The_Fire_Rises"
-		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_The_Fire_Rises.dds"
+		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_War_breaks_out.dds"
 	}
 	spriteType = {
 		name = "GFX_goal_GEH_Conquer_the_sky"
@@ -505,55 +505,55 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_goal_GEH_Ministry_of_Foreign_Affairs_of_Gehenna"
-		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Ministry_of_Foreign_Affairs_of_Gehenna.dds"
+		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Negotiation_with_Trinity.dds"
 	}
 	spriteType = {
 		name = "GFX_goal_GEH_Buy_American_Technology"
-		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Buy_American_Technology.dds"
+		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_merge_outside_technology.dds"
 	}
 	spriteType = {
 		name = "GFX_goal_GEH_Right_of_way_issues"
-		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Right_of_way_issues.dds"
+		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Transportation_Industry.dds"
 	}
 	spriteType = {
 		name = "GFX_goal_GEH_Desert_Investment"
-		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Desert_Investment.dds"
+		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_invite_investment.dds"
 	}
 	spriteType = {
 		name = "GFX_goal_GEH_Adult"
-		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Adult.dds"
+		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Mature_design.dds"
 	}
 	spriteType = {
 		name = "GFX_goal_GEH_Seek_help_from_Xialai"
-		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Seek_help_from_Xialai.dds"
+		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Support_allies.dds"
 	}
 	spriteType = {
 		name = "GFX_goal_GEH_Construction_guidance"
-		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Construction_guidance.dds"
+		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_infrastructure_built.dds"
 	}
 	spriteType = {
 		name = "GFX_goal_GEH_Relaxation_communication"
-		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Relaxation_communication.dds"
+		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Restarting_talks.dds"
 	}
 	spriteType = {
 		name = "GFX_goal_GEH_sports_meet_coming"
-		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_sports_meet_coming.dds"
+		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Strengthening_exercises.dds"
 	}
 	spriteType = {
 		name = "GFX_goal_GEH_Recruiting_elites"
-		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Recruiting_elites.dds"
+		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Gather_the_troops.dds"
 	}
 	spriteType = {
 		name = "GFX_goal_GEH_Strengthening_discipline"
-		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Strengthening_discipline.dds"
+		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Strengthening_law_enforcement.dds"
 	}
 	spriteType = {
 		name = "GFX_goal_GEH_Increase_medical_team"
-		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Increase_medical_team.dds"
+		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_Training_in_medical_knowledge.dds"
 	}
 	spriteType = {
 		name = "GFX_goal_GEH_deploy_hina"
-		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_deploy_hina.dds"
+		texturefile = "gfx/interface/goals/Gehenna/focus_GEH_decision_from_hina.dds"
 	}
 	spriteType = {
 		name = "GFX_goal_GEH_People_oriented"

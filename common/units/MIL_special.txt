@@ -8,7 +8,10 @@ sub_units = {
         marines = no
         mountaineers = no
         can_be_parachuted = yes
-		transport = mechanized_equipment
+		# 2026-10-02 修复：原版 1.19.3 的 mechanized_equipment 原型位于 common/units/equipment/mechanized.txt，
+		# 本 mod replace_path 了 common/units/equipment，该原型不存在导致 "Invalid equipment type"。
+		# 参照本 mod 直升机单位自带动力的写法（transport = 自身装备原型），改指向特战机甲自身原型。
+		transport = MIL_Individual_Special_Operations_Mech_equipment
 
 		priority = 3000 
 		ai_priority = 3000 

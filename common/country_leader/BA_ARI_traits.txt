@@ -1,5 +1,6 @@
 @tier1 = 15
 leader_traits = {
+    # 2026-11-08  sprite 对应原生顾问分类图标，按主要职能归类，通用与混合特质归入政治。
     arbitrary_supervisor = { #残酷的监工
         random = no
         industrial_capacity_factory = 0.1
@@ -36,6 +37,7 @@ leader_traits = {
     
     # 江口-恋 力图拯救
     saviour_spirit = {
+        sprite = 13
         random = no
         stability_weekly = 0.002
         political_power_factor = -0.05

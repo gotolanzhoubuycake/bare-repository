@@ -219,3 +219,6 @@
  FE_INTERESTING_MINORS: "有趣的次要势力"
  FE_OTHER_COUNTRIES: "其他势力"
  FE_RANDOM_COUNTRY_ERROR_NO_COUNTRIES: "无有效势力"
+ SM_EVENT_SOUNDS: "事件音效"
+ SM_EVENT_SOUNDS_DESC: "允许通过脚本触发的音效和音乐。建议在使用模组进行游戏时开启。"
+ achievement_steiner_reached_surrender: "在1941年6月22日后，投降进度超过30%"

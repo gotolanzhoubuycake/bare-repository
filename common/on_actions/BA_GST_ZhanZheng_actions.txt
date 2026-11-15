@@ -33,7 +33,6 @@ on_actions = {
 			add_to_array = { global.GST_JS_ZBH = 169 }
 			add_to_array = { global.GST_JS_ZBH = 170 }
 			add_to_array = { global.GST_JS_ZBH = 171 }
-			add_to_array = { global.GST_JS_ZBH = 172 }
 
 			#古圣堂之战 - 受害者名单
 			#我受够了，直接写se吧

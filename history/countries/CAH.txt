@@ -1,6 +1,8 @@
 ﻿capital = 220
 
 oob = "CAH_2019"
+# 2026-07-20: 凯撒重工直属对地机队使用独立OOB维护。
+set_air_oob = "CAH_2019_air"
 
 set_research_slots = 2
 
@@ -111,5 +113,17 @@ set_popularities = {
 }
 
 
-
-
+# 2026-07-20 修改：依据开局部队与现有军工配置装备生产线。
+# 2026-07-20 调整：按有效装备线均分军工，避免步枪产能过度集中。
+add_equipment_production = {
+	equipment = { type = infantry_equipment_0 }
+	requested_factories = 4
+	progress = 0
+	efficiency = 100
+}
+add_equipment_production = {
+	equipment = { type = medium_uav_cas_equipment_1 }
+	requested_factories = 3
+	progress = 0
+	efficiency = 100
+}

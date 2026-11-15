@@ -68,6 +68,10 @@ every_possible_country = {
 		NOT = {
 			TAG = HIL
 			TAG = KRO
+			# 2026-07-24 修改：三个废墟敌人使用各自头像池和专属默认领袖，排除通用封锁区头像。
+			TAG = A56
+			TAG = A57
+			TAG = A58
 		}
 		has_idea = BARE_Global_Blockade_Zone
 	}
@@ -87,4 +91,7 @@ every_possible_country = {
 		}
 	}
 }
+
+# 2026-08-03 修改：A56、A57、A58改由专属角色文件和国家历史各招募一名领导人，不再在通用历史中重复生成。
+# 袭击开始效果会把该领导人临时改为问号姓名和不明头像，情报分析后再恢复正式资料。
 

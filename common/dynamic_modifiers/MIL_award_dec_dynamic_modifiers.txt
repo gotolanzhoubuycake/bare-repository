@@ -1,18 +1,34 @@
-MIL_Engineering_Department_Equipment_Development = { #工程部装备开发
-    icon = "GFX_idea_unknown"
-    production_speed_buildings_factor = MIL_award_engineer_department_production_speed
-    industrial_capacity_factory = MIL_award_engineer_department_industrial_capacity
-    production_factory_max_efficiency_factor = MIL_award_engineer_department_production_factory_max
-}
-MIL_Game_Development_Department_Game_Development = { #游戏部开发
-    icon = "GFX_idea_unknown"
+# 当前禁用：工程师部的永久收益已统一写入 MIL_Millennium_Award，保留旧定义供后续核对。
+# MIL_Engineering_Department_Equipment_Development = { #工程部装备开发
+#     icon = "GFX_idea_unknown"
+#     production_speed_buildings_factor = MIL_award_engineer_department_production_speed
+#     industrial_capacity_factory = MIL_award_engineer_department_industrial_capacity
+#     production_factory_max_efficiency_factor = MIL_award_engineer_department_production_factory_max
+# }
+MIL_Game_Development_Department_Game_Development = { # 新游评价带来的120日政治点数获取与稳定度奖励
+    icon = "GFX_idea_MIL_New_incentive_plan"
     political_power_factor = MIL_award_game_development_political_power
-    
+    stability_factor = MIL_award_game_development_stability
 }
-MIL_Imaginary_System_Upgrade = { #虚数系统
-    icon = "GFX_idea_unknown"
+
+MIL_Millennium_Award = { #千年大赏统一动态修正
+    icon = "GFX_idea_MIL_place_of_pursuing_truth"
     research_speed_factor = MIL_award_imaginary_number_network_research_speed
+    special_project_speed_factor = MIL_award_imaginary_number_network_special_project_speed
+    production_speed_buildings_factor = MIL_award_millennium_production_speed_buildings_factor
+    production_factory_max_efficiency_factor = MIL_award_millennium_production_factory_max_efficiency_factor
+    production_factory_efficiency_gain_factor = MIL_award_millennium_production_factory_efficiency_gain_factor
+    industrial_capacity_factory = MIL_award_millennium_industrial_capacity_factory
+    political_power_factor = MIL_award_millennium_political_power_factor
+    power_balance_weekly = MIL_award_millennium_power_balance_weekly
 }
+
+# 当前禁用：旧虚数动态修正的效果已由 MIL_Millennium_Award 统一承载，保留定义供后续核对。
+# MIL_Imaginary_System_Upgrade = {
+#     icon = "GFX_idea_unknown"
+#     research_speed_factor = MIL_award_imaginary_number_network_research_speed
+#     special_project_speed_factor = MIL_award_imaginary_number_network_special_project_speed
+# }
 #新建部门的混乱
 The_chaos_of_the_newly_established_department_modifier = {
 	
@@ -46,7 +62,13 @@ MIL_security_department_of_long_peace = {
     air_chief_cost_factor = MIL_security_department_air_chief_cost
     high_command_cost_factor = MIL_security_department_high_command_cost
     # 2026-06-17 修改：长期和平导致学说实践停滞。陆军参考原版 SOV_the_red_army_mastery_loss_factor 的 land_mastery_gain_factor 写法；空军参考原版 air_crew_surveys_spirit 的四轨道精通度写法。
-    land_mastery_gain_factor = MIL_security_department_land_mastery_gain_factor
+    # 2026-10-02 修复：运行时（1.19.3）在动态修正中拒绝 folder 级 land_mastery_gain_factor（log: invalid modifier），
+    # 改用官方文档 <Doctrine>_track_mastery_gain_factor 的陆军四轨道（infantry/combat_support/armor/operations）
+    # 逐条生效，与下方空军四轨道写法对称；复用原变量，原 folder 级数值语义不变。
+    infantry_track_mastery_gain_factor = MIL_security_department_land_mastery_gain_factor
+    combat_support_track_mastery_gain_factor = MIL_security_department_land_mastery_gain_factor
+    armor_track_mastery_gain_factor = MIL_security_department_land_mastery_gain_factor
+    operations_track_mastery_gain_factor = MIL_security_department_land_mastery_gain_factor
     fighter_aircraft_track_mastery_gain_factor = MIL_security_department_fighter_mastery_gain_factor
     strike_aircraft_track_mastery_gain_factor = MIL_security_department_strike_mastery_gain_factor
     medium_aircraft_track_mastery_gain_factor = MIL_security_department_medium_mastery_gain_factor
@@ -90,7 +112,7 @@ MIL_soaring_eagle = {
     air_agility_factor = 0.05
 }
 
-# 2026-06-29 修改：千禧防卫力量承载共用改革进度的连续奖励，并统一接收改革决议的一次性项目奖励。
+# 2026-07-06 修改：该动态修正改为只承载校园防卫改革进度奖励，最终军事线永久成果转入 `MIL_millennium_defense_force`。
 MIL_security_reform_progress_modifier = {
     icon = GFX_idea_MIL_reorganized_security_department
     enable = { always = yes }
@@ -111,6 +133,47 @@ MIL_security_reform_progress_modifier = {
     terrain_penalty_reduction = MIL_security_reform_special_ops_terrain_penalty_reduction_var
     special_forces_training_time_factor = MIL_security_reform_special_ops_training_time_factor_var
     air_superiority_efficiency = MIL_security_reform_drone_manual_air_superiority_efficiency_var
+}
+
+# 2026-07-14 修改：千年防卫力量从改革计划开始持有，持续汇总整条军事线的永久加成。
+MIL_millennium_defense_force = {
+    icon = GFX_idea_MIL_reorganized_security_department
+    enable = { always = yes }
+
+    encryption = MIL_millennium_defense_force_encryption_var
+    # 2026-07-14 修改：使用当前原版合法的解密比例修正；decryption_speed 已不属于当前原版 modifier。
+    decryption_factor = MIL_millennium_defense_force_decryption_speed_var
+    civilian_intel_to_others = MIL_millennium_defense_force_civilian_intel_to_others_var
+    army_intel_to_others = MIL_millennium_defense_force_army_intel_to_others_var
+    navy_intel_to_others = MIL_millennium_defense_force_navy_intel_to_others_var
+    airforce_intel_to_others = MIL_millennium_defense_force_airforce_intel_to_others_var
+    civilian_intel_factor = MIL_millennium_defense_force_civilian_intel_factor_var
+    army_intel_factor = MIL_millennium_defense_force_army_intel_factor_var
+    airforce_intel_factor = MIL_millennium_defense_force_airforce_intel_factor_var
+    # 2026-07-14 修改：使用当前原版反间谍修正，保留原变量记录的绝对增量。
+    intelligence_agency_defense = MIL_millennium_defense_force_counter_intelligence_var
+    planning_speed = MIL_millennium_defense_force_planning_speed_var
+    air_detection = MIL_millennium_defense_force_air_detection_var
+    air_mission_efficiency = MIL_millennium_defense_force_air_mission_efficiency_var
+    air_night_penalty = MIL_millennium_defense_force_air_night_penalty_var
+    air_weather_penalty = MIL_millennium_defense_force_air_weather_penalty_var
+    air_training_xp_gain_factor = MIL_millennium_defense_force_air_training_xp_gain_factor_var
+    experience_gain_air = MIL_millennium_defense_force_experience_gain_air_var
+    air_ace_generation_chance_factor = MIL_millennium_defense_force_air_ace_generation_chance_factor_var
+    air_wing_xp_loss_when_killed_factor = MIL_millennium_defense_force_air_wing_xp_loss_when_killed_factor_var
+    air_agility_factor = MIL_millennium_defense_force_air_agility_factor_var
+    air_cas_efficiency = MIL_millennium_defense_force_air_cas_efficiency_var
+    special_forces_training_time_factor = MIL_millennium_defense_force_special_forces_training_time_factor_var
+    special_forces_cap = MIL_millennium_defense_force_special_forces_cap_var
+    terrain_penalty_reduction = MIL_millennium_defense_force_terrain_penalty_reduction_var
+    special_forces_attack_factor = MIL_millennium_defense_force_special_forces_attack_factor_var
+    special_forces_defence_factor = MIL_millennium_defense_force_special_forces_defence_factor_var
+    modifier_army_sub_unit_infantry_am_attack_factor = MIL_millennium_defense_force_infantry_am_attack_factor_var
+    modifier_army_sub_unit_infantry_am_defence_factor = MIL_millennium_defense_force_infantry_am_defence_factor_var
+    modifier_army_sub_unit_category_bm_attack_factor = MIL_millennium_defense_force_category_bm_attack_factor_var
+    modifier_army_sub_unit_category_bm_defence_factor = MIL_millennium_defense_force_category_bm_defence_factor_var
+
+    custom_modifier_tooltip = MIL_millennium_defense_force_equipment_tt
 }
 
 BARE_MIL_sport_Student_Support_Modifier = {

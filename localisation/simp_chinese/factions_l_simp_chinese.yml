@@ -843,9 +843,6 @@
  RECRUITABILITY_SORT: "可招募性"
  INFLUENCE_SORT: "影响力"
  FACTION_INVITE_BUTTON: "发送邀请"
- FACTION_GOAL_RULE_TT: "§H阵营规则§!规定了谁可以添加§H目标§!："
- goals_only_faction_leader: "阵营领袖决定目标"
- faction_set_goal_rules: "目标设定"
  FACTION_MEMBER_LIST_TITLE: "阵营成员"
  FACTION_INVITE_SHOW_UNAVAILABLE: "显示不可用国家"
  CREATE_FACTION_INVITE_ALL: "邀请所有会同意的国家"
@@ -1069,3 +1066,4 @@
  gsc_faction: "联邦学生会"
  cae_faction: "凯撒集团"
 
+ industrial_powerhouse_faction: "工业宪章"

@@ -12,6 +12,10 @@ state={
 		owner = RWT
 		add_core_of=RWT
 		victory_points = {8681 15}
+		buildings = {
+			infrastructure = 3
+			air_base = 6
+		}
 	}
 	manpower= 3028
 	state_category = rural

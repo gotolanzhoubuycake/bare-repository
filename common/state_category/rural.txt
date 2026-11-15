@@ -1,6 +1,7 @@
 state_categories={
 	rural = {
-		local_building_slots = 2
+		# 2026-07-08: 整合50建筑槽MOD，提升乡村基础共享建筑槽。
+		local_building_slots = 4
 	
 		color = { 240 120 0 }
 

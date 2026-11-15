@@ -1,6 +1,7 @@
 state_categories={
 	megalopolis = {
-		local_building_slots = 12
+		# 2026-07-08: 整合50建筑槽MOD，提升巨型都市基础共享建筑槽。
+		local_building_slots = 24
 	
 			color = { 0 240 240 }
 

@@ -3073,10 +3073,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_TRI_advance_exploration_shine"
-		texturefile = "gfx/interface/goals/Trinity/focus_TRI_advance_exploration.dds"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_exploring_the_truth.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Trinity/focus_TRI_advance_exploration.dds"
+			animationmaskfile = "gfx/interface/goals/Trinity/focus_TRI_exploring_the_truth.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -3089,7 +3089,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Trinity/focus_TRI_advance_exploration.dds"
+			animationmaskfile = "gfx/interface/goals/Trinity/focus_TRI_exploring_the_truth.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -3105,10 +3105,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_TRI_awareness_of_responsibility_shine"
-		texturefile = "gfx/interface/goals/Trinity/focus_TRI_awareness_of_responsibility.dds"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_answer_for_thecreed.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Trinity/focus_TRI_awareness_of_responsibility.dds"
+			animationmaskfile = "gfx/interface/goals/Trinity/focus_TRI_answer_for_thecreed.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -3121,7 +3121,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Trinity/focus_TRI_awareness_of_responsibility.dds"
+			animationmaskfile = "gfx/interface/goals/Trinity/focus_TRI_answer_for_thecreed.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -3137,10 +3137,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_TRI_draw_a_blueprint_shine"
-		texturefile = "gfx/interface/goals/Trinity/focus_TRI_draw_a_blueprint.dds"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_shadow_scheme.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Trinity/focus_TRI_draw_a_blueprint.dds"
+			animationmaskfile = "gfx/interface/goals/Trinity/focus_TRI_shadow_scheme.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -3153,7 +3153,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Trinity/focus_TRI_draw_a_blueprint.dds"
+			animationmaskfile = "gfx/interface/goals/Trinity/focus_TRI_shadow_scheme.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -3169,10 +3169,10 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_TRI_emergency_rescue_shine"
-		texturefile = "gfx/interface/goals/Trinity/focus_TRI_emergency_rescue.dds"
+		texturefile = "gfx/interface/goals/Trinity/focus_TRI_calling_for_Schale.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Trinity/focus_TRI_emergency_rescue.dds"
+			animationmaskfile = "gfx/interface/goals/Trinity/focus_TRI_calling_for_Schale.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -3185,7 +3185,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Trinity/focus_TRI_emergency_rescue.dds"
+			animationmaskfile = "gfx/interface/goals/Trinity/focus_TRI_calling_for_Schale.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)

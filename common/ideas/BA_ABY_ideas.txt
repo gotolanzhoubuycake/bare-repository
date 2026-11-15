@@ -1,7 +1,7 @@
 ideas = { #相关本地化文件位于_BA_ABY_ideas_l_simp_chinese.yml
 	country = {
 		ABY_RongGuangBuZai = { #荣光不在
-			picture = unkown
+			picture = unknown
 			modifier = {
 				political_power_factor = -0.1 #政治点数获得-10%
 				stability_factor = -0.1 #稳定度-10%
@@ -9,7 +9,7 @@ ideas = { #相关本地化文件位于_BA_ABY_ideas_l_simp_chinese.yml
 		}
 
 		ABY_DuiCeWeiYuanHui = { #对策委员会
-			picture = unkown
+			picture = unknown
 			modifier = {
 				army_attack_factor = 0.2 #陆军攻击
 				army_defence_factor = 0.2 #陆军防御
@@ -24,14 +24,14 @@ ideas = { #相关本地化文件位于_BA_ABY_ideas_l_simp_chinese.yml
 		}
 
 		ABY_JingJiXiaoTiao = { #经济萧条
-			picture = unkown
+			picture = unknown
 			modifier = {
 				production_speed_buildings_factor = -0.3 #建造速度
 				industrial_capacity_factory = -0.3 #工厂产出
 			}
 		}
 		ABY_GaoErZhaiWu = { #高额债务
-			picture = unkown
+			picture = unknown
 			modifier = {
 				consumer_goods_expected_value = 1 #期望的生活消费品
 			}

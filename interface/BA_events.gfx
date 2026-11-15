@@ -22,11 +22,11 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_GEH_event_1"
-		texturefile = "gfx/event_pictures/Gehenna/GFX_GEH_event_1.dds"			
+		texturefile = "gfx/event_pictures/Gehenna/GFX_GEH_event_1.png"			
 	}
 	SpriteType = {
 		name = "GFX_GEH_event_2"
-		texturefile = "gfx/event_pictures/Gehenna/GFX_GEH_event_2.dds"			
+		texturefile = "gfx/event_pictures/Gehenna/GFX_GEH_event_2.jpg"			
 	}
 
 	SpriteType = {
@@ -37,6 +37,124 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_GEH_discipline_committee_events_9"
 		texturefile = "gfx/event_pictures/Gehenna/GFX_GEH_discipline_committee_events_9.dds"			
+	}
+
+	#### bug-hunt: register missing event pictures (point to existing textures of the same/nearest series) ####
+	# 风纪委员会系列：缺号指向同系列已存在的 9/11 号贴图（奇数->9，偶数->11）
+	SpriteType = {
+		name = "GFX_GEH_discipline_committee_events_1"
+		texturefile = "gfx/event_pictures/Gehenna/GFX_GEH_discipline_committee_events_9.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEH_discipline_committee_events_2"
+		texturefile = "gfx/event_pictures/Gehenna/GFX_GEH_discipline_committee_events_11.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEH_discipline_committee_events_3"
+		texturefile = "gfx/event_pictures/Gehenna/GFX_GEH_discipline_committee_events_9.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEH_discipline_committee_events_4"
+		texturefile = "gfx/event_pictures/Gehenna/GFX_GEH_discipline_committee_events_11.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEH_discipline_committee_events_6"
+		texturefile = "gfx/event_pictures/Gehenna/GFX_GEH_discipline_committee_events_11.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEH_discipline_committee_events_7"
+		texturefile = "gfx/event_pictures/Gehenna/GFX_GEH_discipline_committee_events_9.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEH_discipline_committee_events_8"
+		texturefile = "gfx/event_pictures/Gehenna/GFX_GEH_discipline_committee_events_11.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEH_discipline_committee_events_10"
+		texturefile = "gfx/event_pictures/Gehenna/GFX_GEH_discipline_committee_events_11.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEH_discipline_committee_events_12"
+		texturefile = "gfx/event_pictures/Gehenna/GFX_GEH_discipline_committee_events_11.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEH_discipline_committee_events_13"
+		texturefile = "gfx/event_pictures/Gehenna/GFX_GEH_discipline_committee_events_9.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEH_discipline_committee_events_14"
+		texturefile = "gfx/event_pictures/Gehenna/GFX_GEH_discipline_committee_events_11.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEH_discipline_committee_events_15"
+		texturefile = "gfx/event_pictures/Gehenna/GFX_GEH_discipline_committee_events_9.dds"
+	}
+	# 温泉系列：该系列仅有 GEH_hot_spring_events.7.dds 一张贴图
+	SpriteType = {
+		name = "GFX_GEH_hot_spring_events_1"
+		texturefile = "gfx/event_pictures/Gehenna/GEH_hot_spring_events.7.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEH_hot_spring_events_2"
+		texturefile = "gfx/event_pictures/Gehenna/GEH_hot_spring_events.7.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEH_hot_spring_events_3"
+		texturefile = "gfx/event_pictures/Gehenna/GEH_hot_spring_events.7.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEH_hot_spring_events_4"
+		texturefile = "gfx/event_pictures/Gehenna/GEH_hot_spring_events.7.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEH_hot_spring_events_5"
+		texturefile = "gfx/event_pictures/Gehenna/GEH_hot_spring_events.7.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEH_hot_spring_events_6"
+		texturefile = "gfx/event_pictures/Gehenna/GEH_hot_spring_events.7.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEH_hot_spring_events_7"
+		texturefile = "gfx/event_pictures/Gehenna/GEH_hot_spring_events.7.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEH_hot_spring_events_8"
+		texturefile = "gfx/event_pictures/Gehenna/GEH_hot_spring_events.7.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEH_hot_spring_events_9"
+		texturefile = "gfx/event_pictures/Gehenna/GEH_hot_spring_events.7.dds"
+	}
+	# 美食研究部系列：无该系列贴图，循环使用格黑娜通用新闻图 1-4
+	SpriteType = {
+		name = "GFX_GEH_gourmet_research_events_1"
+		texturefile = "gfx/event_pictures/Gehenna/GFX_daily_news_event_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEH_gourmet_research_events_2"
+		texturefile = "gfx/event_pictures/Gehenna/GFX_daily_news_event_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEH_gourmet_research_events_3"
+		texturefile = "gfx/event_pictures/Gehenna/GFX_daily_news_event_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEH_gourmet_research_events_4"
+		texturefile = "gfx/event_pictures/Gehenna/GFX_daily_news_event_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEH_gourmet_research_events_5"
+		texturefile = "gfx/event_pictures/Gehenna/GFX_daily_news_event_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEH_gourmet_research_events_6"
+		texturefile = "gfx/event_pictures/Gehenna/GFX_daily_news_event_2.dds"
+	}
+	# 社团系列：无该系列贴图，使用格黑娜通用新闻图 1
+	SpriteType = {
+		name = "GFX_GEH_societies_events_1"
+		texturefile = "gfx/event_pictures/Gehenna/GFX_daily_news_event_1.dds"
 	}
 
 
@@ -140,6 +258,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_TRI_event_23"
 		texturefile = "gfx/event_pictures/Trinity/TRI_news_event_23.dds"			
+	}
+	SpriteType = {
+		name = "GFX_TRI_event_24"
+		texturefile = "gfx/event_pictures/Trinity/TRI_news_event_24.dds"
 	}
 	SpriteType = {
 		name = "GFX_TRI_event_25"

@@ -1,4 +1,4 @@
-ARI_historical_plan = {
+TRI_historical_plan = {
 	name = "Trinity Historical Plan"
 	desc = ""
 

@@ -389,7 +389,7 @@ ribbons = {
 			{ 255.0 255.0 255.0 1.0 } # white
 		}
 		happened = {
-			has_idea = closed_economy
+			has_idea = tralaws_closed_economy
 			has_resources_in_country = {
 				resource = "rubber"
 				amount > 999

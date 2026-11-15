@@ -13,5 +13,6 @@
  has_completed_focus_tt: "已完成国策$FOCUS|Y$"
  only_one_state_same_time: "该决议只能同时对一个地区使用"
  event_immediately_happened_tt: "已经发生："
+ EFFECT_POWER_BALANCE_VALUE_MOVED: "财政危机效果变动"
  advisor_available_tt: "$CHAR|Y$成为一名$JOB$"
  all_units_locked: "§R无法编辑，解散部队或训练新的部队§!"

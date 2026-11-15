@@ -214,7 +214,7 @@ country_event = {
     title = Eden_pact.100.t
     desc = Eden_pact.100.d
     is_triggered_only = yes
-    picture = TRI_news_event_1
+    picture = GFX_TRI_event_1
     #picture =
 
     immediate = {
@@ -264,21 +264,6 @@ country_event = {
 }
 
 
-country_event = {
-    id = Eden_pact.102
-    title = Eden_pact.102.t
-    desc = Eden_pact.102.d
-    is_triggered_only = yes
-
-    immediate = {
-    }
-
-    option = {
-		name = Eden_pact.102.a
-    }
-    
-}
-
 #圣三一优势
 country_event = {
     id = Eden_pact.101
@@ -286,7 +271,7 @@ country_event = {
     desc = Eden_pact.101.d
     timeout_days = 3
     is_triggered_only = yes
-    picture = TRI_news_event_1
+    picture = GFX_TRI_event_1
     option = {
 		name = Eden_pact.101.a
         trigger = {
@@ -309,7 +294,7 @@ country_event = {
     desc = Eden_pact.102.d
     timeout_days = 3
     is_triggered_only = yes
-    picture = TRI_news_event_1
+    picture = GFX_TRI_event_1
     option = {
 		name = Eden_pact.102.a
         trigger = {
@@ -323,6 +308,13 @@ country_event = {
         }
         mark_focus_tree_layout_dirty = yes
     }
+
+    option = {
+		name = OK
+		trigger = {
+			original_tag = ARI
+		}
+    }
 }
 #平局
 country_event = {
@@ -331,7 +323,7 @@ country_event = {
     desc = Eden_pact.103.d
     timeout_days = 3
     is_triggered_only = yes
-    picture = TRI_news_event_1
+    picture = GFX_TRI_event_1
     option = {
 		name = Eden_pact.103.a
         trigger = {
@@ -353,7 +345,7 @@ country_event = {
     desc = Eden_pact.200.d
     is_triggered_only = yes
     timeout_days = 2
-    picture = TRI_news_event_15
+    picture = GFX_TRI_event_15
     option = {
 		name = Eden_pact.200.a
         set_country_flag = ARI_lock_foreign_operation

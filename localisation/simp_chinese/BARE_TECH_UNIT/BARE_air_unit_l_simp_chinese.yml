@@ -187,13 +187,7 @@ EQ_MOD_CAT_uav_cas_weapon_TITLE:"无人机对地武器"
 EQ_MOD_CAT_uav_air_weapon_TITLE:"无人机对空武器"
 EQ_MOD_CAT_uav_engine_type_TITLE:"无人机引擎"
 EQ_MOD_CAT_uav_recon_camera_TITLE:"无人机侦察设备"
-EQ_MOD_CAT_uav_recon_camera_TITLE:"无人机侦察设备"
 
-EQ_MOD_CAT_uav_cas_weapon_TITLE:"无人机对地武器"
-EQ_MOD_CAT_uav_air_weapon_TITLE:"无人机对空武器"
-EQ_MOD_CAT_uav_engine_type_TITLE:"无人机引擎"
-EQ_MOD_CAT_uav_recon_camera_TITLE:"无人机侦察设备"
-EQ_MOD_CAT_uav_recon_camera_TITLE:"无人机侦察设备"
 
 EQ_MOD_CAT_helicopter_weapon_type_TITLE:"直升机武备挂载"
 EQ_MOD_CAT_helicopter_crew_carrying_TITLE:"直升机载员舱"
@@ -210,11 +204,6 @@ air_ship_gunship_gun_1:"40mm 对地攻击机炮"
 air_hmg_defense_turret:"12.7mm 自动炮台"
 
 
-air_ship_engine_1:"标准型飞艇引擎"
-air_ship_bomb_bay_1:"重磅炸弹吊舱 500KG高爆炸弹"
-air_ship_heavy_aam_1:"R40R 半自动远程空空导弹"
-air_ship_gunship_gun_1:"40mm 对地攻击机炮"
-air_hmg_defense_turret:"12.7mm 自动炮台"
 
 uav_engine_1:"标准型无人机引擎"
 uav_gun_1:"标准型无人机机炮"

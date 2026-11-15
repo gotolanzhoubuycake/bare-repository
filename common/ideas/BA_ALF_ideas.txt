@@ -201,7 +201,7 @@ ideas = {
         }
         ##秤亚津子##
         ALF_atsuko_idea = {
-            picture = GFX_idea_ALF_atsuko_idea
+            picture = ALF_atsuko_idea
             traits = {
                 princess_of_arius
             }

@@ -2,7 +2,8 @@ scripted_gui = {
 	BAREXP_state_lore_button = {
 		window_name = "BAREXP_state_lore_button"
 		context_type = selected_state_context
-		parent_window_token = selected_state_view
+		# 2026-07-10: 50建筑槽省份界面改高后，selected_state_view 旧锚点会把按钮甩到面板外；改挂 state_info_window 使用面板内坐标。
+		parent_window_name = state_info_window
 		visible = {
 			is_in_array = { array = global.state_with_lore value = THIS.id }
 		}

@@ -375,7 +375,16 @@ TRI_add_main_faction_modifier = {
 	TRI_pass_the_bill = {
 		hidden_effect = {
 			add_to_array = { TRI_passed_bills = var:TRI_debated_bill }
-			remove_from_array = { TRI_bills_to_be_passed = var:TRI_debated_bill }
+			#守卫：直接提交路径（TRI_can_submit_a_bill = yes）不经过 TRI_bills_to_be_passed，值可能不存在
+			if = {
+				limit = {
+					is_in_array = {
+						array = TRI_bills_to_be_passed
+						value = var:TRI_debated_bill
+					}
+				}
+				remove_from_array = { TRI_bills_to_be_passed = var:TRI_debated_bill }
+			}
 			set_variable = { pass_date@var:TRI_debated_bill = global.date }
 			set_temp_variable = { TRI_bill_come_into_effect = 1 }
 			remove_ideas = var:TRI_debated_bill

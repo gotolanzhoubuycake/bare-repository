@@ -12,7 +12,7 @@ dismissal_rule_world_tension = {
 		base = 0
 		modifier = {  
 			add = 1
-			has_government = democratic
+			has_government = Liberalism_ideology
 			is_faction_leader = yes 
 		}
 	}

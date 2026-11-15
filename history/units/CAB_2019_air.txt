@@ -1,0 +1,6 @@
+# 2026-07-20: 凯撒借贷直属空中护卫队。
+air_wings = {
+    214 = {
+        small_uav_equipment_1 = { owner = "CAB" amount = 100 }
+    }
+}

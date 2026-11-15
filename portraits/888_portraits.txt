@@ -415,3 +415,112 @@ DCA = {
 		}
 	}
 }
+
+# 2026-07-24 修改：为千年旧校区废墟袭击的三个敌对势力配置身份公开后的随机角色头像池。
+# 入口：A56、A57、A58 生成政治人物、将领、特工或科学家时调用对应国家头像池。
+# 关键资源：钢盔团使用 gkt，暴走机械和十字神明使用 szsm 的专用头像资源。
+# 预期结果：一般随机角色使用对应势力素材；国家领袖在情报分析前另行使用专用不明头像和问号姓名。
+A56 = { # 废墟钢盔团
+	army = {
+		male = {
+			"GFX_Portrait_gkt_1"
+			"GFX_Portrait_gkt_2"
+			"GFX_Portrait_gkt_3"
+		}
+	}
+	political = {
+		no_ideology = {
+			male = {
+				"GFX_Portrait_gkt_1"
+				"GFX_Portrait_gkt_2"
+				"GFX_Portrait_gkt_3"
+			}
+		}
+	}
+	operative = {
+		male = {
+			"GFX_Portrait_gkt_1"
+			"GFX_Portrait_gkt_2"
+			"GFX_Portrait_gkt_3"
+		}
+		female = {
+			"GFX_Portrait_gkt_1"
+			"GFX_Portrait_gkt_2"
+			"GFX_Portrait_gkt_3"
+		}
+	}
+	scientist = {
+		male = {
+			"GFX_Portrait_gkt_1"
+			"GFX_Portrait_gkt_2"
+			"GFX_Portrait_gkt_3"
+		}
+		female = {
+			"GFX_Portrait_gkt_1"
+			"GFX_Portrait_gkt_2"
+			"GFX_Portrait_gkt_3"
+		}
+	}
+}
+
+A57 = { # 暴走机械
+	army = {
+		male = {
+			"GFX_Portrait_szsm_1"
+		}
+	}
+	political = {
+		no_ideology = {
+			male = {
+				"GFX_Portrait_szsm_1"
+			}
+		}
+	}
+	operative = {
+		male = {
+			"GFX_Portrait_szsm_1"
+		}
+		female = {
+			"GFX_Portrait_szsm_1"
+		}
+	}
+	scientist = {
+		male = {
+			"GFX_Portrait_szsm_1"
+		}
+		female = {
+			"GFX_Portrait_szsm_1"
+		}
+	}
+}
+
+A58 = { # 十字神明
+	army = {
+		male = {
+			"GFX_Portrait_szsm_1"
+		}
+	}
+	political = {
+		no_ideology = {
+			male = {
+				"GFX_Portrait_szsm_1"
+			}
+		}
+	}
+	operative = {
+		male = {
+			"GFX_Portrait_szsm_1"
+		}
+		female = {
+			"GFX_Portrait_szsm_1"
+		}
+	}
+	scientist = {
+		male = {
+			"GFX_Portrait_szsm_1"
+		}
+		female = {
+			"GFX_Portrait_szsm_1"
+		}
+	}
+}

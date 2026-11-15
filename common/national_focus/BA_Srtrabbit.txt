@@ -183,7 +183,7 @@ focus_tree = {
 			focus = SRT_grass_operation
 		}
 		completion_reward = {
-			unlock_decision_tooltip = SRT_training_decisions
+			unlock_decision_category_tooltip = SRT_training_decisions
 		}
 	}
 	focus = {
@@ -531,7 +531,7 @@ focus_tree = {
 			focus = SRT_clover_action
 		}
 		completion_reward = {
-			unlock_decision_tooltip = SRT_shiratori_decisions
+			unlock_decision_category_tooltip = SRT_shiratori_decisions
 		}
 	}
 	focus = {
@@ -579,7 +579,7 @@ focus_tree = {
 			focus = SRT_clover_action
 		}
 		completion_reward = {
-			unlock_decision_tooltip = SRT_aoba_decisions
+			unlock_decision_category_tooltip = SRT_aoba_decisions
 		}
 	}
 	focus = {
@@ -627,7 +627,7 @@ focus_tree = {
 			focus = SRT_clover_action
 		}
 		completion_reward = {
-			unlock_decision_tooltip = SRT_business_decisions
+			unlock_decision_category_tooltip = SRT_business_decisions
 		}
 	}
 	focus = {

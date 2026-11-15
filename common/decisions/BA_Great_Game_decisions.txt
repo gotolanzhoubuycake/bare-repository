@@ -722,7 +722,7 @@ BA_Great_Game_decisions = {
 			random_list = {
 				1 = {
 					add_equipment_to_stockpile = {
-						type = small_uav_recon_equipment
+						type = small_uav_recon_equipment_1
 						amount = 82
 					}
 				}

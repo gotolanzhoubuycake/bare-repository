@@ -76,8 +76,6 @@
  TRI_party_house_view_title_name: "社团意见"
  TRI_party_house_view_total: "根据立场的赞成率：[?TRI_parliament_other_approval_rating|G0%]\n赞成与对立席位之差为[?TRI_parliament_other_agree_difference|=+0]"
  TRI_add_main_faction_modifier_tt: "若某派系的势力和两院的支持度均达到一定数值，将获得修正"
- TRI_main_faction_hawk_1: "$BOP_hardliner$主导议会—中支持度"
- TRI_main_faction_hawk_1: "$BOP_hardliner$主导议会—高支持度"
  TRI_main_faction_hawk_1: "$BOP_hardliner$主导议会—极高支持度"
  TRI_main_faction_neutral_1: "$BOP_conservative$主导议会—中支持度"
  TRI_main_faction_neutral_2: "$BOP_conservative$主导议会—高支持度"
@@ -218,7 +216,6 @@
  TRI_air_exercise: "组织空军演习"
  TRI_study_trip: "开展研学旅行"
  TRI_production_budget: "提高生产预算"
- TRI_infra_money: "调拨基建资金"
  TRI_traditional_culture: "宣讲传统文化"
 
  TRI_parliament_bill.1.t: "法案通过"
@@ -252,7 +249,7 @@
  TRI_political_focus.4.a: "我会将这个问题纳入清单之中。"
  TRI_political_focus.4.b: "我们还有更多事情要做，再议吧。"
  TRI_political_focus.10.t: "激进的抗议活动"
- TRI_political_focus.10.desc: "[?country_leader.GetName]大人，"许多学生聚集在中央广场，要求茶话会兑现承诺。她们甚至准备搭建帐篷营地，正与正义实现委员会的成员紧张对峙。""
+ TRI_political_focus.10.desc: "[?country_leader.GetName]大人，“许多学生聚集在中央广场，要求茶话会兑现承诺。她们甚至准备搭建帐篷营地，正与正义实现委员会的成员紧张对峙。”"
  TRI_political_focus.10.a: "唉，让我们听听看她们究竟想要什么。"
  TRI_political_focus.10.b: "立即驱散她们！这是暴乱！"
 

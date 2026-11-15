@@ -1,21 +1,8 @@
-air_wings = {   
-
-    266 = {
-        medium_uav_equipment_1 = {
-            owner = "RWT" 
-            amount = 100
-            
-        }
-       medium_uav_equipment_1 = {
-            owner = "RWT" 
-            amount = 100
-            
-        }
-      medium_uav_equipment_1 = {
-            owner = "RWT" 
-            amount = 100
-            
-        }
-
-    }
+# 2026-07-20: 红冬开局空军，保留装甲支援主力并追加小型机分遣队。
+air_wings = {
+    # 2026-07-20: 追加低成本小型制空与对地无人机，作为主力机队的数量补充。
+    265 = { medium_uav_equipment_1 = { owner = "RWT" amount = 100 } medium_uav_equipment_1 = { owner = "RWT" amount = 100 } medium_uav_cas_equipment_1 = { owner = "RWT" amount = 100 } small_uav_equipment_1 = { owner = "RWT" amount = 100 } small_uav_equipment_1 = { owner = "RWT" amount = 100 } small_uav_cas_equipment_1 = { owner = "RWT" amount = 100 } }
+    266 = { medium_uav_equipment_1 = { owner = "RWT" amount = 100 } medium_uav_cas_equipment_1 = { owner = "RWT" amount = 100 } small_uav_cas_equipment_1 = { owner = "RWT" amount = 100 } }
+    264 = { small_uav_recon_equipment_1 = { owner = "RWT" amount = 100 } }
+    268 = { medium_uav_cas_equipment_1 = { owner = "RWT" amount = 100 } }
 }

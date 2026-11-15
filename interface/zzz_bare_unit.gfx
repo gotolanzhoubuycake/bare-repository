@@ -970,7 +970,7 @@ spriteTypes = {
 
 		spriteType = {
 		name = "GFX_unit_recon_icon_small"
-		textureFile = "gfx/texticons/unit_recon_small.dds"
+		textureFile = "gfx/texticons/unit_recon_icon_small.dds"
 		noOfFrames = 2
         legacy_lazy_load = no
 	}
@@ -1027,7 +1027,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_unit_cavalry_icon_medium_white"
-		textureFile = "gfx/texticons/unit_cavalry_icon_medium_white.dds"
+		textureFile = "gfx/texticons/unit_cavalry_icon_small.dds"
 		noOfFrames = 2
         legacy_lazy_load = no
 	}
@@ -1085,7 +1085,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_unit_fire_support_team_su_sa_icon_medium_white"
-		textureFile = "gfx/texticons/unit_fire_support_team_su_sa_small.dds"
+		textureFile = "gfx/texticons/unit_fire_support_team_su_aa_small.dds"
 		noOfFrames = 2
         legacy_lazy_load = no
 	}
@@ -1337,7 +1337,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_unit_militia_icon_medium_white"
-		textureFile = "gfx/texticons/unit_militia_icon_medium_white.dds"
+		textureFile = "gfx/texticons/unit_militia_icon_small.dds"
 		noOfFrames = 2
         legacy_lazy_load = no
 	}
@@ -1376,7 +1376,7 @@ spriteTypes = {
 
 		spriteType = {
 		name = "GFX_unit_recon_icon_medium_white"
-		textureFile = "gfx/texticons/unit_recon_small.dds"
+		textureFile = "gfx/texticons/unit_recon_icon_small.dds"
 		noOfFrames = 2
         legacy_lazy_load = no
 	}

@@ -1,5 +1,4 @@
 ﻿l_simp_chinese:
- ARI_JSL: "结束了"
  ARI_JSL: "一切终归虚无"
  JSL_NOT_ARMY: "无法训练,编辑,解散部队"
  ARI_nihilism: "虚无主义"
@@ -116,7 +115,6 @@
 
 ###动态修正语句###
  ARI_power_chaser: "力量渴望者"
- ARI_power_chaser: "力量，智慧，权力，这一切美妙的东西都存放在那至高的§R乐园§!中，等着我们伸手去拿取。而在通往§R乐园§!的道路上，我们必须积累足够多的知识，才能为我们铸就打开大门的钥匙...\n\n§R我们终将到达§!"
  ARI_power_chaser_effect_change_1: "获得名为§Y$ARI_power_chaser$§!的民族精神，其初始效果为：\n研究速度：§G+3%§!\n部队攻击：§G+3%§!。且该民族精神会随着我们对§R乐园§!的不断追求而不断增强。"
  ARI_power_chaser_effect_change_2: "$ARI_power_chaser$\n追加效果：\n部队攻击：§G+3%§!"
  ARI_power_chaser_effect_change_3: "$ARI_power_chaser$\n追加效果：\n神秘步兵防御：§G+7%§!"

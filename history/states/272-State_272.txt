@@ -11,6 +11,7 @@ resources={
 		buildings = {
 			infrastructure = 3
 			arms_factory = 1
+			air_base = 3
 		}
 		owner = ABY
 		add_core_of=ABY

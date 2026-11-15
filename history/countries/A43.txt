@@ -98,4 +98,10 @@ set_politics = {
 set_popularities = {
 	no_ideology = 100
 }
-
+# 2026-07-20 修改：依据开局部队与现有军工配置装备生产线。
+add_equipment_production = {
+	equipment = { type = infantry_equipment_0 }
+	requested_factories = 3
+	progress = 0
+	efficiency = 100
+}

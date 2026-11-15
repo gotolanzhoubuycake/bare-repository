@@ -88,7 +88,6 @@
  GEH_supress_the_choas_idea_desc: "领导人的突然失联让我们本就脆弱的学校纪律再次濒临崩溃。为了恢复秩序，风纪委员会和万魔殿卫队都已出动，对那些不安分的学生从重从快处分"
  GEH_control_the_transport_idea: "管制交通"
  GEH_control_the_transport_idea_desc: "阿里乌斯的突然袭击在格黑娜内部造成了混乱，学园已经宣布了交通管制，以确保战时人员和物资能够优先流动"
- GEH_no_step_back_idea: "不许后退"
  GEH_no_step_back_idea_desc: "敌人的强悍远超我们想象，但我们的身后便是格黑娜，我们早已无路可退。为了保卫我们的学园和我们的生活，我们将奋战到最后一滴血"
 
  GEH_joint_operations_command_ideas: "统一战线联合作战指挥部"
@@ -126,9 +125,6 @@ GEH_fished_tooltip: "当摸完的时候，当前将领的各项属性+1"
 GEH_Guardian_of_Peace_Idea: "安宁的守护者"
 GEH_Reaching_consensus_ideas: "万魔殿和风纪委的共识"
 
-GEH_emergency_methods_for_arius: "非常措施"
-GEH_supress_the_choas_idea: "铁腕镇压"
-GEH_control_the_transport_idea: "管制交通"
 GEH_no_step_back_idea: "绝不后退"
 
 #社团线

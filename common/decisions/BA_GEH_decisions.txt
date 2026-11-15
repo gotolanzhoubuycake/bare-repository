@@ -536,48 +536,7 @@ GEH_dualHeaded = {
 	}
 
 
-	GEH_dualHeaded_makoto_send_away_hina = {
-		visible = {
-			
-			has_completed_focus = GEH_Steady_progress
-		}
-		available = {
-			
-		}
 
-		days_remove = 21
-
-		fire_only_once = yes
-
-		modifier = {
-			political_power_factor = 0.5
-			GEH_dualHeaded_Makoto_Weekly_factor = 0.05
-			power_balance_weekly = 0.03
-		}
-
-		
-		complete_effect = {
-			set_country_flag = GEH_dualHeaded_changing
-		}
-		remove_effect = {
-			clr_country_flag = GEH_dualHeaded_changing
-			
-		}
-		ai_will_do = {
-			base = 0
-			modifier = {
-				add = 2
-				check_variable = {
-					var = GEH_dualHeaded_Influence_Factor
-					value = 0.4
-					compare = less_than
-				}
-				not = {
-					has_country_flag = GEH_dualHeaded_changing
-				}
-			}
-		}
-	}
 
 
 	GEH_dualHeaded_makoto_alliance_with_sensei = {
@@ -755,49 +714,6 @@ GEH_dualHeaded = {
 			
 		}
 
-		cost = 75
-
-		days_remove = 28
-		days_re_enable = 120
-
-		modifier = {
-			power_balance_weekly = 0.02
-			GEH_dualHeaded_Hina_Weekly_factor = 0.03
-		}
-
-		complete_effect = {
-			set_country_flag = GEH_dualHeaded_changing
-		}
-
-		remove_effect = {
-			clr_country_flag = GEH_dualHeaded_changing
-		}
-		ai_will_do = {
-			base = 0
-			modifier = {
-				add = 2
-				check_variable = {
-					var = GEH_dualHeaded_Influence_Factor
-					value = 0.6
-					compare = greater_than
-				}
-				not = {
-					has_country_flag = GEH_dualHeaded_changing
-				}
-			}
-		}
-	}
-
-		GEH_dualHeaded_hina_let_makoto = {
-		visible = {
-			
-			has_completed_focus = GEH_Steady_progress
-		}
-		available = {
-		
-			
-		}
-
 		cost = 100
 
 		days_re_enable = 210
@@ -840,6 +756,8 @@ GEH_dualHeaded = {
 			}
 		}
 	}
+
+	
 
 	
 }

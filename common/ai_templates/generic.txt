@@ -1,9 +1,11 @@
 armor_generic = {
+	# 2026-08-19：MIL 使用独立机甲模板，避免通用 armor 与专属中重型机甲路线叠加。
 
 	blocked_for = {
 		ARI
 		TRI
 		GEH
+		MIL
 	}
 
 	role = armor
@@ -158,11 +160,13 @@ armor_generic = {
 	}
 }
 mobile_generic = {
+	# 2026-08-19：MIL 使用 APC/轻型机甲专属机动模板。
 
 	blocked_for = {
 		ARI
 		TRI
 		GEH
+		MIL
 	}
 	
 	role = mobile
@@ -273,11 +277,13 @@ mobile_generic = {
 
 }
 infantry_generic = {
+	# 2026-08-19：MIL 使用动员步兵到自动机的专属升级链。
 
 	blocked_for = {
 		ARI
 		TRI
 		GEH
+		MIL
 	}
 
 	role = infantry
@@ -413,11 +419,13 @@ infantry_generic = {
 	}
 }
 garrison_generic = {
+	# 2026-08-19：MIL 使用后期自动机守备模板。
 
 	blocked_for = {
 		ARI
 		TRI
 		GEH
+		MIL
 	}
 	
 	role = garrison

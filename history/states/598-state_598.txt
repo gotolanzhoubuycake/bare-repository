@@ -11,7 +11,7 @@ state={
 		owner = A26
 		add_core_of=A26
 		victory_points = {1002 1}
-		victory_points = {2716 1}
+		victory_points = {2176 1}
 	}
 	manpower= 974
 	state_category=wasteland

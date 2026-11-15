@@ -1,5 +1,7 @@
 capital = 72
 oob = "SRT_2019"
+# 2026-07-20: SRT精锐空军由独立OOB维护，避免与陆军编制混杂。
+set_air_oob = "SRT_2019_air"
 
 set_stability = 0.50
 set_war_support = 0.50
@@ -59,7 +61,8 @@ set_technology = {
 	Infrastructure_construction_T1 = 1
 	#Infrastructure_construction_T2 = 1
 	Train_T1 = 1
-	#transport_drone = 1
+	# 2026-07-20: 特战投送链使用的运输无人机具体装备科技。
+	transport_drone = 1
 
 	#空军（无人机）
 	recon_drone = 1
@@ -67,6 +70,9 @@ set_technology = {
 	light_attack_drone = 1
 	fighting_drone = 1
 	attack_drone = 1
+	# 2026-07-20: 精锐重型空军的具体装备科技，不以无人机突破等级替代。
+	heavy_fighting_drone = 1
+	heavy_attack_drone = 1
 
 	#装甲车辆（坦克）
 	light_tank_MK1 = 1

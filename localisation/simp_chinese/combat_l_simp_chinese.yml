@@ -398,3 +398,7 @@
  POSITIONING_CARRIER_RATIO_PENALTY: "敌军有更多舰载机：$NUM|+%$"
  COMBAT_LOG_FRIENDLY: "友方部队"
  COMBAT_LOG_ENEMY: "敌方部队"
+ ARMY_HQ_BADGE_TOOLTIP: "§Y$NAME$§!的§Y集团军总部§!正在战斗。"
+ COMMAND_GROUP_CANT_REASSIGN: "§R选中的师都不能从现有集团军中重新分配§!"
+ SELECT_GROUP_HQ_REASSIGN_BLOCKED_TOOLTIP: "§Y集团军总部§!§R无法§!重新分配至新集团军"
+ SELECT_GROUP_TOOLTIP_WITH_HQ: "§G点击§!选择所有师\n§GCtrl+点击§!选择所有非总部师"

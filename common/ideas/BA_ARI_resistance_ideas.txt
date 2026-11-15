@@ -82,7 +82,7 @@
 # 			}
 # 		}
 # 		ALR_focus_seek_supply = { #搜集补给
-# 			picture = unkown
+# 			picture = unknown
 # 			modifier = {
 # 				ALR_supply_weekly_modifier = 5
 # 				supply_consumption_factor = -0.1
@@ -95,7 +95,7 @@
 # 			}
 # 		}
 # 		ALR_focus_repair_weapon = { #修复枪支
-# 			picture = unkown
+# 			picture = unknown
 # 			modifier = {
 # 				ALR_weapon_weekly_modifier = 5
 # 				equipment_capture = 0.1
@@ -108,7 +108,7 @@
 # 			}
 # 		}
 # 		ALR_focus_large_scale_manufacturing = { #大规模制造
-# 			picture = unkown
+# 			picture = unknown
 # 			modifier = {
 # 				ALR_weapon_weekly_modifier = 20
 # 				production_factory_max_efficiency_factor = 0.1
@@ -122,14 +122,14 @@
 # 			}
 # 		}
 # 		ALR_focus_political_consultation = { #政治协商
-# 			picture = unkown
+# 			picture = unknown
 # 			modifier = {
 # 				political_power_factor = 0.2
 # 				political_power_gain = 0.2
 # 			}
 # 		}
 # 		ALR_focus_stability = { #安定人心
-# 			picture = unkown
+# 			picture = unknown
 # 			modifier = {
 # 				political_power_factor = 0.2
 # 				political_power_gain = 0.2
@@ -137,7 +137,7 @@
 # 		}
 		
 # 		ALR_focus_guerrilla_warfare = { #袭扰作战
-# 			picture = unkown
+# 			picture = unknown
 # 			modifier = {
 # 				ALR_weapon_weekly_modifier = -10
 # 				experience_gain_army_factor = 0.5
@@ -152,7 +152,7 @@
 # 			}
 # 		}
 # 		ALR_focus_farmlands = { #隐蔽农田
-# 			picture = unkown
+# 			picture = unknown
 # 			modifier = {
 # 				custom_modifier_tooltip = ALR_focus_farmlands_tt
 # 				political_power_factor = 0.1

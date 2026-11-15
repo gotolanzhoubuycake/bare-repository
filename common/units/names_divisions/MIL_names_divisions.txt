@@ -1,0 +1,4 @@
+MIL_SPE_01 = {
+	name = "千年特战生"
+	for_countries = { MIL }
+}

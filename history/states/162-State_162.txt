@@ -12,6 +12,7 @@ state={
 			infrastructure = 4
 			industrial_complex = 2
 			synthetic_refinery = 3
+			air_base = 5
 		}
 		owner = SHA
 		add_core_of=SHA

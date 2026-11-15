@@ -1,0 +1,380 @@
+# 2026-08-19：千年专属 AI 编制。前期动员步兵/APC，后期自动机与中重型机甲分线。
+
+infantry_MIL = {
+	available_for = {
+		MIL
+	}
+	role = infantry
+	upgrade_prio = {
+		base = 5
+	}
+
+	militia_1_MIL = {
+		upgrade_prio = { factor = 1.5 }
+		target_template = {
+			support = {
+				engineer = 1
+			}
+			regiments = {
+				infantry_militia = 6
+			}
+		}
+		replace_at_match = 0.6
+		replace_with = automaton_1_MIL
+		target_min_match = 0.6
+	}
+
+	automaton_1_MIL = {
+		upgrade_prio = {
+			factor = 1
+			modifier = { factor = 3 has_completed_focus = MIL_Automaton_Operation_Training }
+		}
+		target_template = {
+			support = {
+				engineer = 1
+				recon = 1
+			}
+			regiments = {
+				infantry_am = 6
+			}
+		}
+		replace_at_match = 0.75
+		replace_with = automaton_2_MIL
+		target_min_match = 0.7
+	}
+
+	automaton_2_MIL = {
+		upgrade_prio = {
+			factor = 1
+			modifier = { factor = 4 BARE_MIL_AI_Mid_Phase_Enabled = yes }
+			modifier = { factor = 0.1 NOT = { BARE_MIL_AI_Mid_Phase_Enabled = yes } }
+		}
+		target_template = {
+			support = {
+				engineer = 1
+				recon = 1
+				maintenance_company = 1
+				logistics_company = 1
+				fire_support_team_su_ha = 1
+			}
+			regiments = {
+				infantry_am = 9
+				fire_support_team_la = 2
+				fire_support_team_aa = 1
+			}
+		}
+		replace_at_match = 0.8
+		target_min_match = 0.75
+	}
+}
+
+mobile_MIL = {
+	available_for = {
+		MIL
+	}
+	role = mobile
+	upgrade_prio = {
+		factor = 2
+	}
+
+	mobile_apc_1_MIL = {
+		upgrade_prio = { factor = 1.5 }
+		target_template = {
+			support = {
+				engineer = 1
+				maintenance_company = 1
+				fire_support_team_su_la = 1
+			}
+			regiments = {
+				apc_unit = 8
+				apc_artillery_unit = 2
+			}
+		}
+		reinforce_prio = 2
+		replace_at_match = 0.6
+		replace_with = mobile_apc_2_MIL
+		target_min_match = 0.6
+	}
+
+	mobile_apc_2_MIL = {
+		upgrade_prio = {
+			factor = 1.5
+			modifier = { factor = 3 BARE_MIL_AI_Mid_Phase_Enabled = yes }
+		}
+		target_template = {
+			support = {
+				engineer = 1
+				apc_recon = 1
+				maintenance_company = 1
+				fire_support_team_su_sa = 1
+			}
+			regiments = {
+				light_bm_unit = 3
+				apc_unit = 8
+				apc_artillery_unit = 2
+			}
+		}
+		reinforce_prio = 2
+		replace_at_match = 0.75
+		replace_with = mobile_apc_3_MIL
+		target_min_match = 0.7
+	}
+
+	mobile_apc_3_MIL = {
+		upgrade_prio = {
+			factor = 1.5
+			modifier = { factor = 4 BARE_MIL_AI_Late_Phase_Enabled = yes }
+			modifier = { factor = 0.1 NOT = { BARE_MIL_AI_Late_Phase_Enabled = yes } }
+		}
+		target_template = {
+			support = {
+				engineer = 1
+				mbt_recon = 1
+				maintenance_company = 1
+				logistics_company = 1
+				helicopter_recon = 1
+			}
+			regiments = {
+				light_bm_unit = 4
+				apc_unit = 8
+				apc_artillery_unit = 2
+				apc_at_unit = 1
+				apc_aa_unit = 1
+				air_assest_unit = 1
+				air_attack_unit = 1
+			}
+		}
+		reinforce_prio = 2
+		replace_at_match = 0.8
+		target_min_match = 0.75
+	}
+}
+
+medium_bm_MIL = {
+	available_for = {
+		MIL
+	}
+	role = armor
+	upgrade_prio = {
+		factor = 2.1
+	}
+
+	medium_bm_1_MIL = {
+		upgrade_prio = {
+			factor = 0.5
+			modifier = { factor = 0 has_tech = medium_bm_mk1 }
+		}
+		target_template = {
+			support = {
+				engineer = 1
+				maintenance_company = 1
+			}
+			regiments = {
+				medium_bm_unit = 3
+				ifv_unit = 3
+			}
+		}
+		reinforce_prio = 2
+		replace_at_match = 0.6
+		replace_with = medium_bm_2_MIL
+		target_min_match = 0.6
+	}
+
+	medium_bm_2_MIL = {
+		upgrade_prio = {
+			factor = 1
+			modifier = { factor = 4 BARE_MIL_AI_Mid_Phase_Enabled = yes }
+			modifier = { factor = 0.1 NOT = { BARE_MIL_AI_Mid_Phase_Enabled = yes } }
+		}
+		target_template = {
+			support = {
+				engineer = 1
+				mbt_recon = 1
+				maintenance_company = 1
+				logistics_company = 1
+			}
+			regiments = {
+				medium_bm_unit = 6
+				ifv_unit = 4
+				medium_bm_sp_artillery_unit = 1
+			}
+		}
+		reinforce_prio = 2
+		replace_at_match = 0.75
+		replace_with = medium_bm_3_MIL
+		target_min_match = 0.7
+	}
+
+	medium_bm_3_MIL = {
+		upgrade_prio = {
+			factor = 1
+			modifier = { factor = 5 BARE_MIL_AI_Late_Phase_Enabled = yes }
+			modifier = { factor = 0.1 NOT = { BARE_MIL_AI_Late_Phase_Enabled = yes } }
+		}
+		target_template = {
+			support = {
+				engineer = 1
+				mbt_recon = 1
+				maintenance_company = 1
+				logistics_company = 1
+				helicopter_recon = 1
+				helicopter_logistics_company = 1
+			}
+			regiments = {
+				medium_bm_unit = 8
+				ifv_unit = 4
+				medium_bm_sp_artillery_unit = 1
+				medium_bm_sp_anti_air_unit = 1
+				air_assest_unit = 1
+			}
+		}
+		reinforce_prio = 2
+		target_min_match = 0.75
+	}
+}
+
+heavy_bm_MIL = {
+	available_for = {
+		MIL
+	}
+	role = armor
+	upgrade_prio = {
+		factor = 2.0
+	}
+
+	heavy_bm_1_MIL = {
+		upgrade_prio = {
+			factor = 0.25
+			modifier = { factor = 0 has_tech = heavy_bm_mk1 }
+		}
+		target_template = {
+			support = {
+				engineer = 1
+				maintenance_company = 1
+			}
+			regiments = {
+				heavy_bm_unit = 2
+				ifv_unit = 4
+			}
+		}
+		reinforce_prio = 2
+		replace_at_match = 0.6
+		replace_with = heavy_bm_2_MIL
+		target_min_match = 0.6
+	}
+
+	heavy_bm_2_MIL = {
+		upgrade_prio = {
+			factor = 1
+			modifier = { factor = 4 BARE_MIL_AI_Mid_Phase_Enabled = yes }
+			modifier = { factor = 0.1 NOT = { BARE_MIL_AI_Mid_Phase_Enabled = yes } }
+		}
+		target_template = {
+			support = {
+				engineer = 1
+				mbt_recon = 1
+				maintenance_company = 1
+				logistics_company = 1
+			}
+			regiments = {
+				heavy_bm_unit = 4
+				ifv_unit = 4
+				heavy_bm_sp_artillery_unit = 1
+			}
+		}
+		reinforce_prio = 2
+		replace_at_match = 0.75
+		replace_with = heavy_bm_3_MIL
+		target_min_match = 0.7
+	}
+
+	heavy_bm_3_MIL = {
+		upgrade_prio = {
+			factor = 1
+			modifier = { factor = 5 BARE_MIL_AI_Late_Phase_Enabled = yes }
+			modifier = { factor = 0.1 NOT = { BARE_MIL_AI_Late_Phase_Enabled = yes } }
+		}
+		target_template = {
+			support = {
+				engineer = 1
+				mbt_recon = 1
+				maintenance_company = 1
+				logistics_company = 1
+				helicopter_recon = 1
+				helicopter_logistics_company = 1
+			}
+			regiments = {
+				heavy_bm_unit = 6
+				ifv_unit = 4
+				heavy_bm_sp_artillery_unit = 2
+				heavy_bm_sp_anti_air_unit = 1
+				air_attack_unit = 1
+			}
+		}
+		reinforce_prio = 2
+		target_min_match = 0.75
+	}
+}
+
+garrison_MIL = {
+	available_for = {
+		MIL
+	}
+	role = garrison
+	upgrade_prio = {
+		base = 0.5
+		modifier = { factor = 20 NOT = { ai_has_role_template = garrison } }
+	}
+
+	garrison_1_MIL = {
+		reinforce_prio = 0
+		upgrade_prio = { factor = 2 }
+		target_template = {
+			regiments = {
+				infantry_militia = 4
+			}
+		}
+		replace_at_match = 0.7
+		replace_with = garrison_2_MIL
+		target_min_match = 0.7
+	}
+
+	garrison_2_MIL = {
+		reinforce_prio = 0
+		upgrade_prio = {
+			factor = 1
+			modifier = { factor = 3 BARE_MIL_AI_Mid_Phase_Enabled = yes }
+		}
+		target_template = {
+			support = {
+				engineer = 1
+			}
+			regiments = {
+				infantry_militia = 6
+			}
+		}
+		replace_at_match = 0.75
+		replace_with = garrison_3_MIL
+		target_min_match = 0.7
+	}
+
+	garrison_3_MIL = {
+		reinforce_prio = 0
+		upgrade_prio = {
+			factor = 1
+			modifier = { factor = 5 BARE_MIL_AI_Late_Phase_Enabled = yes }
+			modifier = { factor = 0.1 NOT = { BARE_MIL_AI_Late_Phase_Enabled = yes } }
+		}
+		target_template = {
+			support = {
+				engineer = 1
+				military_police = 1
+				logistics_company = 1
+			}
+			regiments = {
+				infantry_am = 6
+			}
+		}
+		target_min_match = 0.75
+	}
+}

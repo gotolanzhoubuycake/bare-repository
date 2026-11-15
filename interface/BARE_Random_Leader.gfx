@@ -455,6 +455,15 @@ spriteTypes = {
 		name = "GFX_Portrait_sm_9_small"
 		texturefile = "gfx/random_leader/sm/sm_9_small.dds"
 	}
+	# 2026-07-24 修改：废墟敌人在完成情报分析前统一使用的专用不明身份头像。
+	SpriteType = {
+		name = "GFX_Portrait_MIL_ruins_unknown"
+		texturefile = "gfx/random_leader/mil_ruins_unknown/mil_ruins_unknown.dds"
+	}
+	SpriteType = {
+		name = "GFX_Portrait_MIL_ruins_unknown_small"
+		texturefile = "gfx/random_leader/mil_ruins_unknown/mil_ruins_unknown_small.dds"
+	}
 	SpriteType = { #十字神明
 		name = "GFX_Portrait_szsm_1"
 		texturefile = "gfx/random_leader/szsm/szsm_1.dds"

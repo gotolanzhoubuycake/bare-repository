@@ -15,7 +15,6 @@ state={
 		owner = RWT
 		add_core_of=RWT
 		victory_points ={3798 1}
-		victory_points ={2847 10}
 	}
 	manpower= 4800
 	state_category=rural

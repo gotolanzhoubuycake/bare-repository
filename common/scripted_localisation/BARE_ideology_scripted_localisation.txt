@@ -17,6 +17,13 @@ defined_text = {
 		localization_key = PGM_TRI_Nagisa_type
 	}
 
+	text = {
+		trigger = {				
+            has_country_leader_ideology = PGM_MIL_SEM_type
+		}
+		localization_key = PGM_MIL_SEM_type
+	}
+
 	##平等哲学组
 	text = {
 		trigger = {				

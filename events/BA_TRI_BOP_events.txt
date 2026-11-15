@@ -111,7 +111,7 @@ country_event = { #正义委-巡逻任务
     picture = GFX_TRI_event_7
 	desc = TRI_region.1.desc
 	is_triggered_only = yes
-	picture = TRI_news_event_7
+	picture = GFX_TRI_event_7
 
 	option = {
 		name = TRI_region.1.a
@@ -161,7 +161,7 @@ country_event = { #正义委-清除混混组织
 		text = TRI_region.2.desc.b
 	}
 	is_triggered_only = yes
-	picture = TRI_news_event_7
+	picture = GFX_TRI_event_7
 
 	option = {
 		name = TRI_region.2.a
@@ -242,7 +242,7 @@ country_event = { #修女会-宣讲教义
 	title = TRI_region.11.t
 	desc = TRI_region.11.desc
 	is_triggered_only = yes
-	picture = TRI_news_event_7
+	picture = GFX_TRI_event_7
 
 	option = {
 		name = TRI_region.11.a
@@ -276,7 +276,7 @@ country_event = { #修女会-组织祷告
 	title = TRI_region.12.t
 	desc = TRI_region.12.desc
 	is_triggered_only = yes
-	picture = TRI_news_event_8
+	picture = GFX_TRI_event_8
 	
 	option = {
 		name = TRI_region.12.a
@@ -312,7 +312,7 @@ country_event = { #骑士团-社区活动
 	title = TRI_region.21.t
 	desc = TRI_region.21.desc
 	is_triggered_only = yes
-	picture = TRI_news_event_29
+	picture = GFX_TRI_event_29
 
 	option = {
 		name = TRI_region.21.a
@@ -348,7 +348,7 @@ country_event = { #骑士团-公益救治
 	title = TRI_region.22.t
 	desc = TRI_region.22.desc
 	is_triggered_only = yes
-	picture = TRI_news_event_29
+	picture = GFX_TRI_event_29
 
 	option = {
 		name = TRI_region.22.a
@@ -388,7 +388,7 @@ country_event = { #骑士团-团长烂活
 	title = TRI_region.23.t
 	desc = TRI_region.23.desc
 	is_triggered_only = yes
-	picture = TRI_news_event_29
+	picture = GFX_TRI_event_29
 
 	option = {
 		name = TRI_region.23.a
@@ -424,7 +424,7 @@ country_event = { #社团要求建设
 	desc = TRI_region.101.desc
 	picture = GFX_TRI_event_3
 	is_triggered_only = yes
-	picture = TRI_news_event_6
+	picture = GFX_TRI_event_6
 
 	trigger = {
 		any_controlled_state = {
@@ -671,7 +671,7 @@ country_event = { #委派更多权利
 	desc = TRI_BOP_decision.1.desc
     picture = GFX_TRI_event_3
 	is_triggered_only = yes
-	picture = TRI_news_event_6
+	picture = GFX_TRI_event_6
 
 	option = {
 		name = TRI_BOP_decision.1.a
@@ -744,7 +744,7 @@ country_event = { #确保可控状态
 	desc = TRI_BOP_decision.2.desc
     picture = GFX_TRI_event_3
 	is_triggered_only = yes
-	picture = TRI_news_event_6
+	picture = GFX_TRI_event_6
 	#主要鹰派转中立
 	option = {
 		name = TRI_BOP_decision.2.a
@@ -1323,7 +1323,7 @@ country_event = { #施行紧急状态管制
 	desc = TRI_BOP_decision.6.desc
     picture = GFX_TRI_event_3
 	is_triggered_only = yes
-	picture = TRI_news_event_6
+	picture = GFX_TRI_event_6
 
 	#安定非对立派系
 	option = {
@@ -1348,7 +1348,7 @@ country_event = { #稳定社团关系
 	desc = TRI_BOP_decision.7.desc
     picture = GFX_TRI_event_3
 	is_triggered_only = yes
-	picture = TRI_news_event_6
+	picture = GFX_TRI_event_6
 	#不投入消费品/忠诚度大于80
 	option = {
 		name = TRI_BOP_decision.7.a
@@ -1449,7 +1449,7 @@ country_event = { #维持学院内稳定——稳定
 	desc = TRI_BOP_decision.8.desc
     picture = GFX_TRI_event_3
 	is_triggered_only = yes
-	picture = TRI_news_event_6
+	picture = GFX_TRI_event_6
 	#1级
 	option = {
 		name = TRI_BOP_decision.8.a
@@ -1475,7 +1475,7 @@ country_event = { #维持学院内稳定——战争
 	desc = TRI_BOP_decision.9.desc
     picture = GFX_TRI_event_3
 	is_triggered_only = yes
-	picture = TRI_news_event_6
+	picture = GFX_TRI_event_6
 
 	#1级
 	option = {
@@ -1502,7 +1502,7 @@ country_event = { #我们的抉择
 	desc = TRI_BOP_decision.1000.desc
     picture = GFX_TRI_event_3
 	is_triggered_only = yes
-	picture = TRI_news_event_6
+	picture = GFX_TRI_event_6
 
 	#加强即行政策
 	option = {
@@ -1571,7 +1571,7 @@ country_event = { #众说纷纭
 	desc = TRI_BOP_decision.101.desc
     picture = GFX_TRI_event_3
 	is_triggered_only = yes
-	picture = TRI_news_event_6
+	picture = GFX_TRI_event_6
 
 	option = {
 		name = TRI_BOP_decision.101.a
@@ -1592,7 +1592,7 @@ country_event = { #混乱的一天#修女会
 	desc = TRI_BOP_decision.102.desc
     picture = GFX_TRI_event_3
 	is_triggered_only = yes
-	picture = TRI_news_event_8
+	picture = GFX_TRI_event_8
 
 	option = {
 		name = TRI_BOP_decision.102.a
@@ -1625,7 +1625,7 @@ country_event = { #算无遗策 #修女会
 	desc = TRI_BOP_decision.103.desc
     picture = GFX_TRI_event_3
 	is_triggered_only = yes
-	picture = TRI_news_event_8
+	picture = GFX_TRI_event_8
 
 	option = {
 		name = TRI_BOP_decision.103.a
@@ -1654,7 +1654,7 @@ country_event = { #稍有差池#修女会
 	id = TRI_BOP_decision.104
 	title = TRI_BOP_decision.104.t
 	desc = TRI_BOP_decision.104.desc
-	picture = TRI_news_event_8
+	picture = GFX_TRI_event_8
 	is_triggered_only = yes
 	option = {
 		name = TRI_BOP_decision.104.a

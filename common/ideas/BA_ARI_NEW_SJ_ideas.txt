@@ -2,7 +2,7 @@ ideas = {
 	country = {
 
 		ARI_XingDongHunLuan = {
-			picture = unkown
+			picture = unknown
 
 			modifier = {
 				land_reinforce_rate = -0.01
@@ -14,7 +14,7 @@ ideas = {
 		}
 
 		ARI_PanTuDeYouYiJi = {
-			picture = unkown
+			picture = unknown
 
 			modifier = {
 				modifier_army_sub_unit_category_special_infantry_attack_factor = -0.2 #神秘步兵攻击修正

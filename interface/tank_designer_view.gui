@@ -289,6 +289,8 @@ guiTypes = {
 			buttonText = "HISTORICAL_PRESET"
 			buttonFont = "hoi_18mbs"
 			#clicksound = "ui_tank_designer_save"
+			# 2026-11-08  保留 BARE 预设文字按钮，补回原生打开预设的提示。
+			pdx_tooltip = "OPEN_PRESETS_TOOLTIP"
 		}
 
 		iconType = {
@@ -513,6 +515,33 @@ guiTypes = {
 				quadTextureSprite = "GFX_button_123x34"
 				clicksound = click_close
 			}		
+
+			# 2026-11-08  在预览区底部恢复默认型号选项，保留 BARE 单列型号列表和返回按钮。
+			containerWindowType = {
+				name = "best_match_window"
+				position = { x=382 y=204 }
+				size = { width = 123 height = 34 }
+				clipping = no
+
+				buttonType = {
+					name = "best_match_button"
+					position = { x=-11 y=-3 }
+					font = "hoi_16mbs"
+					quadTextureSprite = "GFX_generic_checkbox"
+					clicksound = click_default
+					pdx_tooltip = "USE_DEFAULT_MODEL_IN_EQUIPMENT_DESIGNER_TOOLTIP"
+				}
+
+				instantTextboxType = {
+					name = "best_match_text"
+					position = { x = 28 y = 6 }
+					font = "hoi_16mbs"
+					text = "USE_DEFAULT_MODEL_IN_EQUIPMENT_DESIGNER"
+					fixedsize = yes
+					format = left
+					alwaystransparent = yes
+				}
+			}
 
 			containerWindowType = {
 				name = "grid_container"

@@ -1,0 +1,12 @@
+# 莉音失踪期间的研讨会危机。三条应急国策通过变量继续修改同一项动态民族精神。
+MIL_missing_student_council_president = {
+	icon = GFX_idea_MIL_shadow_of_financial_crisis
+	enable = { always = yes }
+
+	stability_factor = MIL_missing_president_stability_factor
+	industrial_capacity_factory = MIL_missing_president_industrial_capacity_factory
+	production_speed_buildings_factor = MIL_missing_president_production_speed_buildings_factor
+	research_speed_factor = MIL_missing_president_research_speed_factor
+	production_factory_max_efficiency_factor = MIL_missing_president_production_factory_max_efficiency_factor
+	production_factory_efficiency_gain_factor = MIL_missing_president_production_factory_efficiency_gain_factor
+}

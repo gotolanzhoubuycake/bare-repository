@@ -1,0 +1,705 @@
+[08:22:33][no_game_date][dlc.cpp:142]: incorrect checksum for DLC
+[08:22:33][no_game_date][dlc.cpp:218]: Invalid supported_version in  file: mod/ugc_1633055329.mod line: 11
+[08:22:33][no_game_date][dlc.cpp:218]: Invalid supported_version in  file: mod/ugc_1862018480.mod line: 8
+[08:22:33][no_game_date][dlc.cpp:218]: Invalid supported_version in  file: mod/ugc_2243912940.mod line: 10
+[08:22:33][no_game_date][dlc.cpp:218]: Invalid supported_version in  file: mod/ugc_2259896874.mod line: 13
+[08:22:33][no_game_date][dlc.cpp:218]: Invalid supported_version in  file: mod/ugc_2349247855.mod line: 11
+[08:22:33][no_game_date][dlc.cpp:218]: Invalid supported_version in  file: mod/ugc_2404689961.mod line: 7
+[08:22:33][no_game_date][dlc.cpp:218]: Invalid supported_version in  file: mod/ugc_2445956833.mod line: 8
+[08:22:33][no_game_date][dlc.cpp:218]: Invalid supported_version in  file: mod/ugc_2610774092.mod line: 22
+[08:22:33][no_game_date][persistent.cpp:67]: Error: "Unexpected token: thumbnail, near line: 7" in file: "mod/ugc_2671396187.mod" near line: 7
+[08:22:33][no_game_date][dlc.cpp:218]: Invalid supported_version in  file: mod/ugc_2781363716.mod line: 10
+[08:22:33][no_game_date][dlc.cpp:218]: Invalid supported_version in  file: mod/ugc_2795212119.mod line: 15
+[08:22:33][no_game_date][dlc.cpp:218]: Invalid supported_version in  file: mod/ugc_2813718431.mod line: 15
+[08:22:33][no_game_date][dlc.cpp:218]: Invalid supported_version in  file: mod/ugc_2923180765.mod line: 6
+[08:22:33][no_game_date][dlc.cpp:218]: Invalid supported_version in  file: mod/ugc_2953753075.mod line: 8
+[08:22:33][no_game_date][dlc.cpp:218]: Invalid supported_version in  file: mod/ugc_2977114459.mod line: 8
+[08:22:33][no_game_date][dlc.cpp:218]: Invalid supported_version in  file: mod/ugc_3012479903.mod line: 7
+[08:22:33][no_game_date][dlc.cpp:218]: Invalid supported_version in  file: mod/ugc_3057730113.mod line: 11
+[08:22:33][no_game_date][persistent.cpp:67]: Error: "Unexpected token: thumbnail, near line: 9" in file: "mod/ugc_3243611664.mod" near line: 9
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_001' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_001.wav' in  file: sound/ww_vo.asset line: 506
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_002' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_002.wav' in  file: sound/ww_vo.asset line: 507
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_003' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_003.wav' in  file: sound/ww_vo.asset line: 508
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_004' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_004.wav' in  file: sound/ww_vo.asset line: 509
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_005' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_005.wav' in  file: sound/ww_vo.asset line: 510
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_006' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_006.wav' in  file: sound/ww_vo.asset line: 511
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_007' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_007.wav' in  file: sound/ww_vo.asset line: 512
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_008' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_008.wav' in  file: sound/ww_vo.asset line: 513
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_009' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_009.wav' in  file: sound/ww_vo.asset line: 514
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_010' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_010.wav' in  file: sound/ww_vo.asset line: 515
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_011' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_011.wav' in  file: sound/ww_vo.asset line: 516
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_012' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_012.wav' in  file: sound/ww_vo.asset line: 517
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_013' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_013.wav' in  file: sound/ww_vo.asset line: 518
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_014' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_014.wav' in  file: sound/ww_vo.asset line: 519
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_015' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_015.wav' in  file: sound/ww_vo.asset line: 520
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_016' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_016.wav' in  file: sound/ww_vo.asset line: 521
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_017' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_017.wav' in  file: sound/ww_vo.asset line: 522
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_018' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_018.wav' in  file: sound/ww_vo.asset line: 523
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_019' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_019.wav' in  file: sound/ww_vo.asset line: 524
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_020' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_020.wav' in  file: sound/ww_vo.asset line: 525
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_021' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_021.wav' in  file: sound/ww_vo.asset line: 526
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_022' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_022.wav' in  file: sound/ww_vo.asset line: 527
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_023' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_023.wav' in  file: sound/ww_vo.asset line: 528
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_024' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_024.wav' in  file: sound/ww_vo.asset line: 529
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_025' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_025.wav' in  file: sound/ww_vo.asset line: 530
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_026' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_026.wav' in  file: sound/ww_vo.asset line: 531
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_idle_027' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_idle_027.wav' in  file: sound/ww_vo.asset line: 532
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_retreat_001' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_retreat_001.wav' in  file: sound/ww_vo.asset line: 533
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_retreat_002' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_retreat_002.wav' in  file: sound/ww_vo.asset line: 534
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_retreat_003' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_retreat_003.wav' in  file: sound/ww_vo.asset line: 535
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_retreat_004' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_retreat_004.wav' in  file: sound/ww_vo.asset line: 536
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_retreat_005' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_retreat_005.wav' in  file: sound/ww_vo.asset line: 537
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_retreat_006' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_retreat_006.wav' in  file: sound/ww_vo.asset line: 538
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_retreat_007' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_retreat_007.wav' in  file: sound/ww_vo.asset line: 539
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_retreat_008' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_retreat_008.wav' in  file: sound/ww_vo.asset line: 540
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_retreat_009' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_retreat_009.wav' in  file: sound/ww_vo.asset line: 541
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_retreat_010' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_retreat_010.wav' in  file: sound/ww_vo.asset line: 542
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_retreat_011' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_retreat_011.wav' in  file: sound/ww_vo.asset line: 543
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_retreat_012' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_retreat_012.wav' in  file: sound/ww_vo.asset line: 544
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_retreat_013' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_retreat_013.wav' in  file: sound/ww_vo.asset line: 545
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_retreat_014' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_retreat_014.wav' in  file: sound/ww_vo.asset line: 546
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_retreat_015' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_retreat_015.wav' in  file: sound/ww_vo.asset line: 547
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_retreat_016' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_retreat_016.wav' in  file: sound/ww_vo.asset line: 548
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_retreat_017' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_retreat_017.wav' in  file: sound/ww_vo.asset line: 549
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_retreat_018' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_retreat_018.wav' in  file: sound/ww_vo.asset line: 550
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_retreat_016_alt' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_retreat_016_alt.wav' in  file: sound/ww_vo.asset line: 551
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_retreat_017_alt' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_retreat_017_alt.wav' in  file: sound/ww_vo.asset line: 552
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_retreat_018_alt' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_retreat_018_alt.wav' in  file: sound/ww_vo.asset line: 553
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_001' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_001.wav' in  file: sound/ww_vo.asset line: 554
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_002' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_002.wav' in  file: sound/ww_vo.asset line: 555
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_003' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_003.wav' in  file: sound/ww_vo.asset line: 556
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_004' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_004.wav' in  file: sound/ww_vo.asset line: 557
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_005' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_005.wav' in  file: sound/ww_vo.asset line: 558
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_006' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_006.wav' in  file: sound/ww_vo.asset line: 559
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_007' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_007.wav' in  file: sound/ww_vo.asset line: 560
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_008' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_008.wav' in  file: sound/ww_vo.asset line: 561
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_009' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_009.wav' in  file: sound/ww_vo.asset line: 562
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_010' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_010.wav' in  file: sound/ww_vo.asset line: 563
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_011' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_011.wav' in  file: sound/ww_vo.asset line: 564
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_012' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_012.wav' in  file: sound/ww_vo.asset line: 565
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_013' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_013.wav' in  file: sound/ww_vo.asset line: 566
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_014' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_014.wav' in  file: sound/ww_vo.asset line: 567
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_015' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_015.wav' in  file: sound/ww_vo.asset line: 568
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_016' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_016.wav' in  file: sound/ww_vo.asset line: 569
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_017' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_017.wav' in  file: sound/ww_vo.asset line: 570
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_018' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_018.wav' in  file: sound/ww_vo.asset line: 571
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_019' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_019.wav' in  file: sound/ww_vo.asset line: 572
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_020' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_020.wav' in  file: sound/ww_vo.asset line: 573
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_021' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_021.wav' in  file: sound/ww_vo.asset line: 574
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_019_alt' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_019_alt.wav' in  file: sound/ww_vo.asset line: 575
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_020_alt' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_020_alt.wav' in  file: sound/ww_vo.asset line: 576
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_neutral_021_alt' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_neutral_021_alt.wav' in  file: sound/ww_vo.asset line: 577
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_001' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_001.wav' in  file: sound/ww_vo.asset line: 578
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_002' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_002.wav' in  file: sound/ww_vo.asset line: 579
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_003' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_003.wav' in  file: sound/ww_vo.asset line: 580
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_004' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_004.wav' in  file: sound/ww_vo.asset line: 581
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_005' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_005.wav' in  file: sound/ww_vo.asset line: 582
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_006' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_006.wav' in  file: sound/ww_vo.asset line: 583
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_007' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_007.wav' in  file: sound/ww_vo.asset line: 584
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_008' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_008.wav' in  file: sound/ww_vo.asset line: 585
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_009' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_009.wav' in  file: sound/ww_vo.asset line: 586
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_010' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_010.wav' in  file: sound/ww_vo.asset line: 587
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_011' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_011.wav' in  file: sound/ww_vo.asset line: 588
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_012' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_012.wav' in  file: sound/ww_vo.asset line: 589
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_013' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_013.wav' in  file: sound/ww_vo.asset line: 590
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_014' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_014.wav' in  file: sound/ww_vo.asset line: 591
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_015' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_015.wav' in  file: sound/ww_vo.asset line: 592
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_016' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_016.wav' in  file: sound/ww_vo.asset line: 593
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_017' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_017.wav' in  file: sound/ww_vo.asset line: 594
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_018' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_018.wav' in  file: sound/ww_vo.asset line: 595
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_019' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_019.wav' in  file: sound/ww_vo.asset line: 596
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_020' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_020.wav' in  file: sound/ww_vo.asset line: 597
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_021' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_021.wav' in  file: sound/ww_vo.asset line: 598
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_022' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_022.wav' in  file: sound/ww_vo.asset line: 599
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_023' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_023.wav' in  file: sound/ww_vo.asset line: 600
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'bel_fr_positive_024' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/bel/bel_fr_positive_024.wav' in  file: sound/ww_vo.asset line: 601
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_001' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_001.wav' in  file: sound/ww_vo.asset line: 605
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_002' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_002.wav' in  file: sound/ww_vo.asset line: 606
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_003' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_003.wav' in  file: sound/ww_vo.asset line: 607
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_004' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_004.wav' in  file: sound/ww_vo.asset line: 608
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_005' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_005.wav' in  file: sound/ww_vo.asset line: 609
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_006' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_006.wav' in  file: sound/ww_vo.asset line: 610
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_007' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_007.wav' in  file: sound/ww_vo.asset line: 611
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_008' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_008.wav' in  file: sound/ww_vo.asset line: 612
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_009' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_009.wav' in  file: sound/ww_vo.asset line: 613
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_010' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_010.wav' in  file: sound/ww_vo.asset line: 614
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_011' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_011.wav' in  file: sound/ww_vo.asset line: 615
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_012' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_012.wav' in  file: sound/ww_vo.asset line: 616
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_013' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_013.wav' in  file: sound/ww_vo.asset line: 617
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_014' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_014.wav' in  file: sound/ww_vo.asset line: 618
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_015' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_015.wav' in  file: sound/ww_vo.asset line: 619
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_016' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_016.wav' in  file: sound/ww_vo.asset line: 620
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_017' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_017.wav' in  file: sound/ww_vo.asset line: 621
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_018' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_018.wav' in  file: sound/ww_vo.asset line: 622
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_019' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_019.wav' in  file: sound/ww_vo.asset line: 623
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_020' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_020.wav' in  file: sound/ww_vo.asset line: 624
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_021' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_021.wav' in  file: sound/ww_vo.asset line: 625
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_022' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_022.wav' in  file: sound/ww_vo.asset line: 626
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_023' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_023.wav' in  file: sound/ww_vo.asset line: 627
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_024' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_024.wav' in  file: sound/ww_vo.asset line: 628
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_025' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_025.wav' in  file: sound/ww_vo.asset line: 629
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_026' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_026.wav' in  file: sound/ww_vo.asset line: 630
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_idle_027' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_idle_027.wav' in  file: sound/ww_vo.asset line: 631
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_retreat_001' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_retreat_001.wav' in  file: sound/ww_vo.asset line: 632
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_retreat_002' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_retreat_002.wav' in  file: sound/ww_vo.asset line: 633
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_retreat_003' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_retreat_003.wav' in  file: sound/ww_vo.asset line: 634
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_retreat_004' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_retreat_004.wav' in  file: sound/ww_vo.asset line: 635
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_retreat_005' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_retreat_005.wav' in  file: sound/ww_vo.asset line: 636
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_retreat_006' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_retreat_006.wav' in  file: sound/ww_vo.asset line: 637
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_retreat_007' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_retreat_007.wav' in  file: sound/ww_vo.asset line: 638
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_retreat_008' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_retreat_008.wav' in  file: sound/ww_vo.asset line: 639
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_retreat_009' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_retreat_009.wav' in  file: sound/ww_vo.asset line: 640
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_retreat_010' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_retreat_010.wav' in  file: sound/ww_vo.asset line: 641
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_retreat_011' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_retreat_011.wav' in  file: sound/ww_vo.asset line: 642
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_retreat_012' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_retreat_012.wav' in  file: sound/ww_vo.asset line: 643
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_retreat_013' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_retreat_013.wav' in  file: sound/ww_vo.asset line: 644
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_retreat_014' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_retreat_014.wav' in  file: sound/ww_vo.asset line: 645
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_retreat_015' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_retreat_015.wav' in  file: sound/ww_vo.asset line: 646
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_retreat_016' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_retreat_016.wav' in  file: sound/ww_vo.asset line: 647
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_retreat_017' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_retreat_017.wav' in  file: sound/ww_vo.asset line: 648
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_retreat_018' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_retreat_018.wav' in  file: sound/ww_vo.asset line: 649
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_retreat_016_alt' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_retreat_016_alt.wav' in  file: sound/ww_vo.asset line: 650
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_retreat_017_alt' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_retreat_017_alt.wav' in  file: sound/ww_vo.asset line: 651
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_retreat_018_alt' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_retreat_018_alt.wav' in  file: sound/ww_vo.asset line: 652
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_001' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_001.wav' in  file: sound/ww_vo.asset line: 653
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_002' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_002.wav' in  file: sound/ww_vo.asset line: 654
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_003' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_003.wav' in  file: sound/ww_vo.asset line: 655
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_004' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_004.wav' in  file: sound/ww_vo.asset line: 656
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_005' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_005.wav' in  file: sound/ww_vo.asset line: 657
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_006' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_006.wav' in  file: sound/ww_vo.asset line: 658
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_007' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_007.wav' in  file: sound/ww_vo.asset line: 659
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_008' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_008.wav' in  file: sound/ww_vo.asset line: 660
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_009' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_009.wav' in  file: sound/ww_vo.asset line: 661
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_010' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_010.wav' in  file: sound/ww_vo.asset line: 662
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_011' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_011.wav' in  file: sound/ww_vo.asset line: 663
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_012' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_012.wav' in  file: sound/ww_vo.asset line: 664
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_013' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_013.wav' in  file: sound/ww_vo.asset line: 665
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_014' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_014.wav' in  file: sound/ww_vo.asset line: 666
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_015' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_015.wav' in  file: sound/ww_vo.asset line: 667
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_016' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_016.wav' in  file: sound/ww_vo.asset line: 668
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_017' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_017.wav' in  file: sound/ww_vo.asset line: 669
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_018' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_018.wav' in  file: sound/ww_vo.asset line: 670
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_019' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_019.wav' in  file: sound/ww_vo.asset line: 671
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_020' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_020.wav' in  file: sound/ww_vo.asset line: 672
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_021' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_021.wav' in  file: sound/ww_vo.asset line: 673
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_019_alt' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_019_alt.wav' in  file: sound/ww_vo.asset line: 674
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_020_alt' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_020_alt.wav' in  file: sound/ww_vo.asset line: 675
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_neutral_021_alt' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_neutral_021_alt.wav' in  file: sound/ww_vo.asset line: 676
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_001' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_001.wav' in  file: sound/ww_vo.asset line: 677
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_002' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_002.wav' in  file: sound/ww_vo.asset line: 678
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_003' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_003.wav' in  file: sound/ww_vo.asset line: 679
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_004' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_004.wav' in  file: sound/ww_vo.asset line: 680
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_005' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_005.wav' in  file: sound/ww_vo.asset line: 681
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_006' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_006.wav' in  file: sound/ww_vo.asset line: 682
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_007' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_007.wav' in  file: sound/ww_vo.asset line: 683
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_008' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_008.wav' in  file: sound/ww_vo.asset line: 684
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_009' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_009.wav' in  file: sound/ww_vo.asset line: 685
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_010' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_010.wav' in  file: sound/ww_vo.asset line: 686
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_011' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_011.wav' in  file: sound/ww_vo.asset line: 687
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_012' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_012.wav' in  file: sound/ww_vo.asset line: 688
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_013' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_013.wav' in  file: sound/ww_vo.asset line: 689
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_014' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_014.wav' in  file: sound/ww_vo.asset line: 690
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_015' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_015.wav' in  file: sound/ww_vo.asset line: 691
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_016' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_016.wav' in  file: sound/ww_vo.asset line: 692
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_017' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_017.wav' in  file: sound/ww_vo.asset line: 693
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_018' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_018.wav' in  file: sound/ww_vo.asset line: 694
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_019' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_019.wav' in  file: sound/ww_vo.asset line: 695
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_020' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_020.wav' in  file: sound/ww_vo.asset line: 696
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_021' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_021.wav' in  file: sound/ww_vo.asset line: 697
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_022' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_022.wav' in  file: sound/ww_vo.asset line: 698
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_023' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_023.wav' in  file: sound/ww_vo.asset line: 699
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'aus_de_positive_024' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/aus/aus_de_positive_024.wav' in  file: sound/ww_vo.asset line: 700
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'ui_raid_mapmode_01' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/ui_raid_mapmode_01.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 43
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'ui_special_project_started_sound_01' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/ui_special_project_started_sound_01.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 48
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'ui_special_project_finished_sound_01' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/ui_special_project_finished_sound_01.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 53
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'ui_special_project_start_dismantling_facility_sound_01' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/ui_special_project_start_dismantling_facility_sound_01.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 58
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'ui_special_project_abort_dismantling_facility_sound_01' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/ui_special_project_abort_dismantling_facility_sound_01.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 63
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'ui_finished_dismantling_sound_01' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/ui_finished_dismantling_sound_01.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 68
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'ui_alert_special_project_available_sound_01' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/ui_alert_special_project_available_sound_01.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 73
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_create_01' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_create_01.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 78
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_launch_air_01' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_launch_air_01.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 82
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_launch_air_02' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_launch_air_02.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 86
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_launch_air_03' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_launch_air_03.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 90
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_launch_paratrooper_01' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_launch_paratrooper_01.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 94
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_launch_paratrooper_02' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_launch_paratrooper_02.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 98
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_launch_paratrooper_03' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_launch_paratrooper_03.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 102
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_launch_marine_01' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_launch_marine_01.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 106
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_launch_marine_02' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_launch_marine_02.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 110
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_launch_marine_03' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_launch_marine_03.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 114
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_launch_nuclear_strike_01' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_launch_nuclear_strike_01.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 118
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_launch_nuclear_strike_02' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_launch_nuclear_strike_02.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 122
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_launch_nuclear_missile_01' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_launch_nuclear_missile_01.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 126
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_launch_nuclear_missile_02' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_launch_nuclear_missile_02.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 130
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_launch_nuclear_missile_03' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_launch_nuclear_missile_03.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 134
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_result_failure_01' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_result_failure_01.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 138
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_result_failure_02' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_result_failure_02.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 142
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_result_limited_success_01' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_result_limited_success_01.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 146
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_result_limited_success_02' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_result_limited_success_02.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 150
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_result_success_01' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_result_success_01.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 154
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_result_success_02' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_result_success_02.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 158
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_result_success_03' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_result_success_03.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 162
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_result_success_04' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_result_success_04.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 166
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_result_critical_success_01' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_result_critical_success_01.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 170
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_result_critical_success_02' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_result_critical_success_02.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 174
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_result_critical_success_03' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_result_critical_success_03.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 178
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'raid_result_critical_success_04' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/raid_result_critical_success_04.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 182
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'alert_raid_available_sound_01' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/alert_raid_available_sound_01.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 218
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'alert_raid_available_sound_02' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/alert_raid_available_sound_02.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 222
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'alert_raid_launchable_sound_01' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/alert_raid_launchable_sound_01.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 226
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'alert_raid_launchable_sound_02' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/alert_raid_launchable_sound_02.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 230
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'alert_raid_launchable_sound_03' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/alert_raid_launchable_sound_03.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 234
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'alert_raid_detected_sound_01' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/alert_raid_detected_sound_01.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 238
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'alert_raid_detected_sound_02' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/alert_raid_detected_sound_02.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 242
+[08:22:34][no_game_date][pdx_audio_sdl.cpp:963]: Sound with name 'alert_raid_detected_sound_03' already added
+[08:22:34][no_game_date][assetfactory_audio.cpp:467]: Could not load sound file 'sound/gui/gtd/audiofiles/alert_raid_detected_sound_03.wav' in  file: sound/gui/gtd/gtd_gui.asset line: 246
+[08:22:34][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'BEL_infantry_idle' already added
+[08:22:34][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'BEL_infantry_retreat' already added
+[08:22:34][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'BEL_infantry_neutral_combat' already added
+[08:22:34][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'BEL_infantry_positive_combat' already added
+[08:22:34][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'BEL_infantry_move_out' already added
+[08:22:34][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'COG_infantry_idle' already added
+[08:22:34][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'COG_infantry_retreat' already added
+[08:22:34][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'COG_infantry_neutral_combat' already added
+[08:22:34][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'COG_infantry_positive_combat' already added
+[08:22:34][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'COG_infantry_move_out' already added
+[08:22:34][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'AUS_infantry_idle' already added
+[08:22:34][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'AUS_infantry_retreat' already added
+[08:22:34][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'AUS_infantry_neutral_combat' already added
+[08:22:34][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'AUS_infantry_positive_combat' already added
+[08:22:34][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'AUS_infantry_move_out' already added
+[08:22:34][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'ui_raid_mapmode' already added
+[08:22:34][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'ui_special_project_start_dismantling_facility_sound' already added
+[08:22:34][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'ui_special_project_abort_dismantling_facility_sound' already added
+[08:22:34][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'ui_special_project_finished_sound' already added
+[08:22:34][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'ui_special_project_started_sound' already added
+[08:22:34][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'ui_finished_dismantling_sound' already added
+[08:22:34][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'ui_alert_program_unassigned_scientist_sound' already added
+[08:22:34][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'ui_alert_special_project_available_sound' already added
+[08:22:34][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'raid_create' already added
+[08:22:34][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'raid_launch_air' already added
+[08:22:34][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'raid_launch_paratrooper' already added
+[08:22:34][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'raid_launch_marine' already added
+[08:22:34][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'raid_launch_nuclear_strike' already added
+[08:22:34][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'raid_launch_nuclear_missile' already added
+[08:22:34][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'raid_result_failure' already added
+[08:22:34][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'raid_result_limited_success' already added
+[08:22:34][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'raid_result_success' already added
+[08:22:34][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'raid_result_critical_success' already added
+[08:22:34][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'raid_result_success_nuclear' already added
+[08:22:34][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'raid_result_critical_success_nuclear' already added
+[08:22:34][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'alert_raid_available_sound' already added
+[08:22:34][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'alert_raid_launchable_sound' already added
+[08:22:34][no_game_date][pdx_audio.cpp:960]: Sound effect with name 'alert_raid_detected_sound' already added
+[08:22:34][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'BEL_infantry_idle' already has category 'Voices', old category will be overwritten
+[08:22:34][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'BEL_infantry_retreat' already has category 'Voices', old category will be overwritten
+[08:22:34][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'BEL_infantry_neutral_combat' already has category 'Voices', old category will be overwritten
+[08:22:34][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'BEL_infantry_positive_combat' already has category 'Voices', old category will be overwritten
+[08:22:34][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'BEL_infantry_move_out' already has category 'Voices', old category will be overwritten
+[08:22:34][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'COG_infantry_idle' already has category 'Voices', old category will be overwritten
+[08:22:34][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'COG_infantry_retreat' already has category 'Voices', old category will be overwritten
+[08:22:34][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'COG_infantry_neutral_combat' already has category 'Voices', old category will be overwritten
+[08:22:34][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'COG_infantry_positive_combat' already has category 'Voices', old category will be overwritten
+[08:22:34][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'COG_infantry_move_out' already has category 'Voices', old category will be overwritten
+[08:22:34][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'AUS_infantry_idle' already has category 'Voices', old category will be overwritten
+[08:22:34][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'AUS_infantry_retreat' already has category 'Voices', old category will be overwritten
+[08:22:34][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'AUS_infantry_neutral_combat' already has category 'Voices', old category will be overwritten
+[08:22:34][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'AUS_infantry_positive_combat' already has category 'Voices', old category will be overwritten
+[08:22:34][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'AUS_infantry_move_out' already has category 'Voices', old category will be overwritten
+[08:22:34][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'ui_raid_mapmode' already has category 'UI', old category will be overwritten
+[08:22:34][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'ui_special_project_finished_sound' already has category 'UI', old category will be overwritten
+[08:22:34][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'ui_special_project_started_sound' already has category 'UI', old category will be overwritten
+[08:22:34][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'ui_special_project_start_dismantling_facility_sound' already has category 'UI', old category will be overwritten
+[08:22:34][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'ui_special_project_abort_dismantling_facility_sound' already has category 'UI', old category will be overwritten
+[08:22:34][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'ui_finished_dismantling_sound' already has category 'UI', old category will be overwritten
+[08:22:34][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'ui_alert_program_unassigned_scientist_sound' already has category 'UI', old category will be overwritten
+[08:22:34][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'ui_alert_special_project_available_sound' already has category 'UI', old category will be overwritten
+[08:22:34][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'raid_create' already has category 'UI', old category will be overwritten
+[08:22:34][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'raid_launch_marine' already has category 'UI', old category will be overwritten
+[08:22:34][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'raid_launch_air' already has category 'UI', old category will be overwritten
+[08:22:34][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'raid_launch_paratrooper' already has category 'UI', old category will be overwritten
+[08:22:34][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'raid_launch_nuclear_strike' already has category 'UI', old category will be overwritten
+[08:22:34][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'raid_launch_nuclear_missile' already has category 'UI', old category will be overwritten
+[08:22:34][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'raid_result_failure' already has category 'UI', old category will be overwritten
+[08:22:34][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'raid_result_limited_success' already has category 'UI', old category will be overwritten
+[08:22:34][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'raid_result_success' already has category 'UI', old category will be overwritten
+[08:22:34][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'raid_result_critical_success' already has category 'UI', old category will be overwritten
+[08:22:34][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'raid_result_success_nuclear' already has category 'UI', old category will be overwritten
+[08:22:34][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'raid_result_critical_success_nuclear' already has category 'UI', old category will be overwritten
+[08:22:34][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'alert_raid_available_sound' already has category 'UI', old category will be overwritten
+[08:22:34][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'alert_raid_launchable_sound' already has category 'UI', old category will be overwritten
+[08:22:34][no_game_date][pdx_audio.cpp:1118]: SoundEffect 'alert_raid_detected_sound' already has category 'UI', old category will be overwritten
+[08:22:42][no_game_date][pdxassetutil.cpp:1098]: Duplicate texture 'GER_paratrooper_diffuse.dds' found (current path 'gfx/models/units/special_forces/GER_paratrooper_diffuse.dds', previous path 'gfx/models/units/GER_paratrooper_diffuse.dds')
+[08:22:42][no_game_date][pdxassetutil.cpp:1098]: Duplicate texture 'GER_paratrooper_normal.dds' found (current path 'gfx/models/units/special_forces/GER_paratrooper_normal.dds', previous path 'gfx/models/units/GER_paratrooper_normal.dds')
+[08:22:42][no_game_date][pdxassetutil.cpp:1098]: Duplicate texture 'GER_paratrooper_snow_diffuse.dds' found (current path 'gfx/models/units/special_forces/GER_paratrooper_snow_diffuse.dds', previous path 'gfx/models/units/GER_paratrooper_snow_diffuse.dds')
+[08:22:42][no_game_date][pdxassetutil.cpp:1098]: Duplicate texture 'GER_paratrooper_snow_normal.dds' found (current path 'gfx/models/units/special_forces/GER_paratrooper_snow_normal.dds', previous path 'gfx/models/units/GER_paratrooper_snow_normal.dds')
+[08:22:42][no_game_date][pdxassetutil.cpp:1098]: Duplicate texture 'GER_paratrooper_snow_specular.dds' found (current path 'gfx/models/units/special_forces/GER_paratrooper_snow_specular.dds', previous path 'gfx/models/units/GER_paratrooper_snow_specular.dds')
+[08:22:42][no_game_date][pdxassetutil.cpp:1098]: Duplicate texture 'GER_paratrooper_specular.dds' found (current path 'gfx/models/units/special_forces/GER_paratrooper_specular.dds', previous path 'gfx/models/units/GER_paratrooper_specular.dds')
+[08:22:42][no_game_date][pdxassetutil.cpp:1098]: Duplicate texture 'face.dds' found (current path 'gfx/models/units/infantry/PSC_culture/Shiranui_Kaya/face.dds', previous path 'gfx/models/units/infantry/Arius_culture/eleano_franzel_infantry/face.dds')
+[08:22:43][no_game_date][strategic_region_database.cpp:208]: map/weatherpositions.txt error at line 1: invalid arguments count.
+[08:22:43][no_game_date][pdxassetutil.cpp:340]: Failed to create material with shader 
+[08:22:44][no_game_date][pdx_entity.cpp:228]: Could not find animation "elephantry_move" for state "retreat" in entity "RAJ_infantry_elephant_rider_entity"
+[08:22:44][no_game_date][pdx_entity.cpp:228]: Could not find animation "elephantry_idle" for state "idle" in entity "RAJ_infantry_elephant_rider_entity"
+[08:22:44][no_game_date][pdx_entity.cpp:228]: Could not find animation "elephantry_move" for state "move" in entity "RAJ_infantry_elephant_rider_entity"
+[08:22:44][no_game_date][pdx_entity.cpp:228]: Could not find animation "elephantry_move" for state "retreat" in entity "RAJ_infantry_mg_elephant_rider_entity"
+[08:22:44][no_game_date][pdx_entity.cpp:228]: Could not find animation "elephantry_idle" for state "idle" in entity "RAJ_infantry_mg_elephant_rider_entity"
+[08:22:44][no_game_date][pdx_entity.cpp:228]: Could not find animation "elephantry_move" for state "move" in entity "RAJ_infantry_mg_elephant_rider_entity"
+[08:22:44][no_game_date][pdx_entity.cpp:2172]: Duplicate of AST_fighter_equipment_1_entity added to entity system
+[08:22:44][no_game_date][pdx_entity.cpp:2071]: Couldn't find mesh "ENG_artillery_mesh" (or ENG_artillery_mesh is not of 'pdxmesh' type) [ENG_artillery_gun_entity]
+[08:22:44][no_game_date][pdx_entity.cpp:2071]: Couldn't find mesh "ENG_anti_tank_mesh" (or ENG_anti_tank_mesh is not of 'pdxmesh' type) [ENG_anti_tank_gun_entity]
+[08:22:44][no_game_date][pdx_entity.cpp:2071]: Couldn't find mesh "JAP_anti_tank_type_97_mesh" (or JAP_anti_tank_type_97_mesh is not of 'pdxmesh' type) [JAP_anti_tank_gun_entity]
+[08:22:44][no_game_date][pdx_entity.cpp:324]: Failed to find entity "CZE_bicycle_vehicle_entity" for attachment in bicycle
+[08:22:44][no_game_date][pdx_entity.cpp:324]: Failed to find entity "CZE_bicycle_vehicle_entity" for attachment in bicycle
+[08:22:44][no_game_date][pdx_entity.cpp:324]: Failed to find entity "CZE_bicycle_vehicle_entity" for attachment in bicycle
+[08:22:44][no_game_date][pdx_entity.cpp:324]: Failed to find entity "CZE_bicycle_vehicle_entity" for attachment in bicycle
+[08:22:44][no_game_date][rule.cpp:172]: unknown rule 'send_volunteer_factor' in file common/ideologies/00_ideologies.txt
+[08:22:44][no_game_date][rule.cpp:172]: unknown rule 'air_volunteer_cap' in file common/ideologies/00_ideologies.txt
+[08:22:44][no_game_date][scopedvariable.cpp:597]: sp:sp_naval_anechoic_tiles does not match any Special Project in database
+[08:22:44][no_game_date][scopedvariable.cpp:597]: sp:sp_naval_aip_engine does not match any Special Project in database
+[08:22:45][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/collections/collections.txt line: 26 democratic. use var:var_name to explicitly use variables in effects/triggers
+[08:22:45][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/collections/collections.txt line: 37 democratic. use var:var_name to explicitly use variables in effects/triggers
+[08:22:45][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/collections/collections.txt line: 49 democratic. use var:var_name to explicitly use variables in effects/triggers
+[08:22:45][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/collections/collections.txt line: 60 democratic. use var:var_name to explicitly use variables in effects/triggers
+[08:22:45][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/collections/collections.txt line: 85 communism. use var:var_name to explicitly use variables in effects/triggers
+[08:22:45][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/collections/collections.txt line: 95 communism. use var:var_name to explicitly use variables in effects/triggers
+[08:22:45][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/collections/collections.txt line: 105 communism. use var:var_name to explicitly use variables in effects/triggers
+[08:22:45][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/collections/collections.txt line: 116 neutrality. use var:var_name to explicitly use variables in effects/triggers
+[08:22:45][no_game_date][trigger.cpp:700]: Invalid trigger 'WTT_is_chinese_country' in common/collections/collections.txt line : 127
+[08:22:45][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: WTT_is_chinese_country, near line: 127" in file: "common/collections/collections.txt" near line: 128
+[08:22:45][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/collections/collections.txt line: 152 communism. use var:var_name to explicitly use variables in effects/triggers
+[08:22:45][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/collections/collections.txt line: 164 communism. use var:var_name to explicitly use variables in effects/triggers
+[08:22:45][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/collections/collections.txt line: 167 communism. use var:var_name to explicitly use variables in effects/triggers
+[08:22:45][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/collections/collections.txt line: 201 fascism. use var:var_name to explicitly use variables in effects/triggers
+[08:22:45][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/collections/collections.txt line: 546 fascism. use var:var_name to explicitly use variables in effects/triggers
+[08:22:45][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/collections/collections.txt line: 555 communism. use var:var_name to explicitly use variables in effects/triggers
+[08:22:45][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/collections/collections.txt line: 564 democratic. use var:var_name to explicitly use variables in effects/triggers
+[08:22:45][no_game_date][trigger.cpp:700]: Invalid trigger 'CHI_northern_mandate_states' in common/collections/collections.txt line : 586
+[08:22:45][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: CHI_northern_mandate_states, near line: 586" in file: "common/collections/collections.txt" near line: 587
+[08:22:45][no_game_date][trigger.cpp:700]: Invalid trigger 'CHI_southern_mandate_states' in common/collections/collections.txt line : 596
+[08:22:45][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: CHI_southern_mandate_states, near line: 596" in file: "common/collections/collections.txt" near line: 597
+[08:22:45][no_game_date][trigger.cpp:700]: Invalid trigger 'CHI_greater_game_states' in common/collections/collections.txt line : 606
+[08:22:45][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: CHI_greater_game_states, near line: 606" in file: "common/collections/collections.txt" near line: 607
+[08:22:45][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/collections/collections.txt line: 620 communism. use var:var_name to explicitly use variables in effects/triggers
+[08:22:45][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/collections/collections.txt line: 643 communism. use var:var_name to explicitly use variables in effects/triggers
+[08:22:45][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/collections/collections.txt line: 658 fascism. use var:var_name to explicitly use variables in effects/triggers
+[08:22:45][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/collections/collections.txt line: 673 fascism. use var:var_name to explicitly use variables in effects/triggers
+[08:22:45][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/collections/collections.txt line: 674 democratic. use var:var_name to explicitly use variables in effects/triggers
+[08:22:45][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/collections/collections.txt line: 689 communism. use var:var_name to explicitly use variables in effects/triggers
+[08:22:45][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: common/collections/collections.txt line: 690 democratic. use var:var_name to explicitly use variables in effects/triggers
+[08:22:45][no_game_date][script_collection_input_impl.h:358]: Could not find constant category state_groups
+[08:22:45][no_game_date][gameitemdatabase.h:882]: Error: "Collection input type is empty: }, near line: 705" in file: "common/collections/collections.txt" near line: 705
+[08:22:45][no_game_date][script_collection_input_impl.h:358]: Could not find constant category state_groups
+[08:22:45][no_game_date][gameitemdatabase.h:882]: Error: "Collection input type is empty: }, near line: 715" in file: "common/collections/collections.txt" near line: 715
+[08:22:45][no_game_date][script_collection_input_impl.h:358]: Could not find constant category state_groups
+[08:22:45][no_game_date][gameitemdatabase.h:882]: Error: "Collection input type is empty: }, near line: 721" in file: "common/collections/collections.txt" near line: 721
+[08:22:45][no_game_date][script_collection_input_impl.h:358]: Could not find constant category state_groups
+[08:22:45][no_game_date][gameitemdatabase.h:882]: Error: "Collection input type is empty: }, near line: 740" in file: "common/collections/collections.txt" near line: 740
+[08:22:45][no_game_date][script_collection_input_impl.h:358]: Could not find constant category country_groups
+[08:22:45][no_game_date][gameitemdatabase.h:882]: Error: "Collection input type is empty: }, near line: 886" in file: "common/collections/collections.txt" near line: 886
+[08:22:45][no_game_date][script_collection_input_impl.h:358]: Could not find constant category country_groups
+[08:22:45][no_game_date][gameitemdatabase.h:882]: Error: "Collection input type is empty: }, near line: 900" in file: "common/collections/collections.txt" near line: 900
+[08:22:45][no_game_date][script_collection_input_impl.h:358]: Could not find constant category state_groups
+[08:22:45][no_game_date][gameitemdatabase.h:882]: Error: "Collection input type is empty: }, near line: 907" in file: "common/collections/collections.txt" near line: 907
+[08:22:45][no_game_date][script_collection_input_impl.h:358]: Could not find constant category state_groups
+[08:22:45][no_game_date][gameitemdatabase.h:882]: Error: "Collection input type is empty: }, near line: 917" in file: "common/collections/collections.txt" near line: 917
+[08:22:45][no_game_date][script_collection_input_impl.h:358]: Could not find constant category state_groups
+[08:22:45][no_game_date][gameitemdatabase.h:882]: Error: "Collection input type is empty: }, near line: 922" in file: "common/collections/collections.txt" near line: 922
+[08:22:45][no_game_date][script_collection_input_impl.h:358]: Could not find constant category state_groups
+[08:22:45][no_game_date][gameitemdatabase.h:882]: Error: "Collection input type is empty: }, near line: 932" in file: "common/collections/collections.txt" near line: 932
+[08:22:45][no_game_date][script_collection_input_impl.h:358]: Could not find constant category state_groups
+[08:22:45][no_game_date][gameitemdatabase.h:882]: Error: "Collection input type is empty: }, near line: 940" in file: "common/collections/collections.txt" near line: 940
+[08:22:46][no_game_date][operationresources.cpp:89]: Invalid equipment type ( has to be an archetype ) in operation resources: small_plane_airframe
+[08:22:46][no_game_date][operationphase.cpp:68]: Operation phases references a phase that does not exist: resistance_contacts_radio_circuits
+[08:22:46][no_game_date][faction_template.cpp:77]: Default rule 'joining_rule_has_no_offensive_war' did not match any of the rule groups in 'faction_template_generic'
+[08:22:46][no_game_date][faction_template.cpp:77]: Default rule 'dismissal_rule_offensive_war' did not match any of the rule groups in 'faction_template_generic'
+[08:22:46][no_game_date][faction_template.cpp:77]: Default rule 'joining_rule_same_ideology' did not match any of the rule groups in 'faction_template_industrial_focus'
+[08:22:46][no_game_date][faction_template.cpp:77]: Default rule 'joining_rule_has_no_war' did not match any of the rule groups in 'faction_template_industrial_focus'
+[08:22:46][no_game_date][faction_template.cpp:77]: Default rule 'faction_peace_rule_ideology_focus' did not match any of the rule groups in 'faction_template_industrial_focus'
+[08:22:46][no_game_date][faction_template.cpp:77]: Default rule 'joining_rule_has_no_offensive_war' did not match any of the rule groups in 'faction_template_gsc'
+[08:22:46][no_game_date][faction_template.cpp:77]: Default rule 'dismissal_rule_offensive_war' did not match any of the rule groups in 'faction_template_gsc'
+[08:22:46][no_game_date][decision.cpp:4529]: Duplicate decision. GEH_dualHeaded_makoto_send_away_hina is a duplicate.
+[08:22:46][no_game_date][decision.cpp:4529]: Duplicate decision. GEH_dualHeaded_hina_let_makoto is a duplicate.
+[08:22:46][no_game_date][decision.cpp:4529]: Duplicate decision. GST_TRI_they_shall_not_pass is a duplicate.
+[08:22:46][no_game_date][database_scoped_variables.cpp:63]: invalid database object for effect/trigger:  file: common/decisions/BA_Great_Game_decisions.txt line: 725 small_uav_recon_equipment. use var:var_name to explicitly use variables in effects/triggers
+[08:22:46][no_game_date][nationalfocus.cpp:620]: Error in focus: GEH_Fighting_crime (common/national_focus/BA_Gehenna.txt:826 )
+relative_focus_id: GEH_Suppressing_riots does not exist. Relative focus must be scripted before this.
+[08:22:46][no_game_date][nationalfocus.cpp:620]: Error in focus: GEH_Material_preparation (common/national_focus/BA_Gehenna.txt:857 )
+relative_focus_id: GEH_Internal_publicity does not exist. Relative focus must be scripted before this.
+[08:22:46][no_game_date][database_scoped_variables.cpp:63]: invalid database object for effect/trigger:  file: common/national_focus/BA_Gehenna.txt line: 1449 infantry_weapons. use var:var_name to explicitly use variables in effects/triggers
+[08:22:47][no_game_date][effect.cpp:358]: Error: "Malformed token: var:ally, near line: 206" in file: "common/scripted_effects/BA_Great_Game_scripted_effects.txt" near line: 209
+[08:22:47][no_game_date][effect.cpp:358]: Error: "Malformed token: var:ally, near line: 211" in file: "common/scripted_effects/BA_Great_Game_scripted_effects.txt" near line: 214
+[08:22:47][no_game_date][effect.cpp:358]: Error: "Malformed token: var:ally, near line: 218" in file: "common/scripted_effects/BA_Great_Game_scripted_effects.txt" near line: 221
+[08:22:47][no_game_date][effect.cpp:358]: Error: "Malformed token: var:ally, near line: 223" in file: "common/scripted_effects/BA_Great_Game_scripted_effects.txt" near line: 226
+[08:22:47][no_game_date][effect.cpp:358]: Error: "Unexpected token: enemy, near line: 295" in file: "common/scripted_effects/BA_Great_Game_scripted_effects.txt" near line: 296
+[08:22:47][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: gfx/army_icons/army_icons.txt line: 405 democratic. use var:var_name to explicitly use variables in effects/triggers
+[08:22:47][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: gfx/army_icons/army_icons.txt line: 414 fascism. use var:var_name to explicitly use variables in effects/triggers
+[08:22:47][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: gfx/army_icons/army_icons.txt line: 423 neutrality. use var:var_name to explicitly use variables in effects/triggers
+[08:22:47][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: gfx/army_icons/army_icons.txt line: 481 fascism. use var:var_name to explicitly use variables in effects/triggers
+[08:22:47][no_game_date][database_scoped_variables.h:60]: invalid database object for effect/trigger:  file: gfx/army_icons/army_icons.txt line: 490 communism. use var:var_name to explicitly use variables in effects/triggers
+[08:22:47][no_game_date][occupationlawdatabase.cpp:286]: no missing garrison law is defined. Using default law
+[08:22:47][no_game_date][countrytag.cpp:135]: ENG - is not in the tag list
+[08:22:47][no_game_date][countrytag.cpp:135]: GER - is not in the tag list
+[08:22:47][no_game_date][countrytag.cpp:135]: JAP - is not in the tag list
+[08:22:47][no_game_date][countrytag.cpp:135]: SOV - is not in the tag list
+[08:22:47][no_game_date][countrytag.cpp:135]: USA - is not in the tag list
+[08:22:47][no_game_date][unit_stats.cpp:312]: carrier_sub_detection is an equipment stat (cf. EQUIPMENT_STATS_META in code) but is not listed in script enum script_enum_equipment_stat
+[08:22:47][no_game_date][unit_stats.cpp:312]: carrier_surface_detection is an equipment stat (cf. EQUIPMENT_STATS_META in code) but is not listed in script enum script_enum_equipment_stat
+[08:22:47][no_game_date][unit_stats.cpp:312]: submarine_carrier_size is an equipment stat (cf. EQUIPMENT_STATS_META in code) but is not listed in script enum script_enum_equipment_stat
+[08:22:47][no_game_date][equipment_category.cpp:364]: support_ship is an equipment stat (cf. EQUIPMENT_CATEGORY_META in code) but is not listed in script enum script_enum_equipment_category
+[08:22:47][no_game_date][equipment_database.cpp:656]: support_ship is an equipment type or equipment category but is not in script enum script_enum_equipment_bonus_type. This script enum is used as documentation and should be updated at the same time as either game/common/units/equipment or the equipment categories (hardcoded in code).
+[08:22:47][no_game_date][equipment_database.cpp:649]: air_defense_weapons is in script enum script_enum_equipment_bonus_type but is not an equipment type (cf. game/common/units/equipment) nor an equipment category (cf. script_enum_equipment_category)
+[08:22:47][no_game_date][event.cpp:362]: CAE_forced_labor.1 non-hidden event with no options defined
+[08:22:47][no_game_date][eventmanager.cpp:559]: events/BA_CAE_events.txt:8: CAE_forced_labor.1: Event has no options.
+[08:22:47][no_game_date][event.cpp:362]: CAE_hunt_guerrilla.1 non-hidden event with no options defined
+[08:22:47][no_game_date][eventmanager.cpp:559]: events/BA_CAE_events.txt:26: CAE_hunt_guerrilla.1: Event has no options.
+[08:22:47][no_game_date][database_scoped_variables.cpp:267]: invalid database object for effect/trigger: rocket_artillery. use var:var_name to explicitly use variables in effects/triggers
+[08:22:47][no_game_date][database_scoped_variables.cpp:267]: invalid database object for effect/trigger: fighting_drone_MK1. use var:var_name to explicitly use variables in effects/triggers
+[08:22:47][no_game_date][triggerimplementation.cpp:10339]: Failed to find autonomy_state: autonomy_dominion for has_autonomy_state trigger.
+[08:22:47][no_game_date][trigger.cpp:117]: Trigger failed to validate: common/collections/collections.txt:64: has_autonomy_state
+[08:22:47][no_game_date][effectimplementation.cpp:14171]: Invalid Decision ID for unlock_decision_tooltip SRT_training_decisions
+[08:22:47][no_game_date][effectimplementation.cpp:14171]: Invalid Decision ID for unlock_decision_tooltip SRT_shiratori_decisions
+[08:22:47][no_game_date][effectimplementation.cpp:14171]: Invalid Decision ID for unlock_decision_tooltip SRT_aoba_decisions
+[08:22:47][no_game_date][effectimplementation.cpp:14171]: Invalid Decision ID for unlock_decision_tooltip SRT_business_decisions
+[08:22:48][no_game_date][effect.cpp:358]: Error: "Malformed token: var:ally, near line: 206" in file: "common/scripted_effects/BA_Great_Game_scripted_effects.txt" near line: 209
+[08:22:48][no_game_date][effect.cpp:358]: Error: "Malformed token: var:ally, near line: 211" in file: "common/scripted_effects/BA_Great_Game_scripted_effects.txt" near line: 214
+[08:22:48][no_game_date][effect.cpp:358]: Error: "Malformed token: var:ally, near line: 218" in file: "common/scripted_effects/BA_Great_Game_scripted_effects.txt" near line: 221
+[08:22:48][no_game_date][effect.cpp:358]: Error: "Malformed token: var:ally, near line: 223" in file: "common/scripted_effects/BA_Great_Game_scripted_effects.txt" near line: 226
+[08:22:48][no_game_date][effect.cpp:358]: Error: "Unexpected token: enemy, near line: 295" in file: "common/scripted_effects/BA_Great_Game_scripted_effects.txt" near line: 296
+[08:22:48][no_game_date][gameitemdatabase.h:324]: 5 errors.
+[08:22:48][no_game_date][gameitemdatabase.h:336]: =============================
+[08:22:52][no_game_date][gameapplication.cpp:866]: The game has loc key collisions. Check logs/text.log for more details
+[08:22:52][2019.01.01.12][equipmentvariant.cpp:1112]: Country "CAP" does not have any equipment variant for type "light_tank_equipment_1" (selecting latest version) created by "CAP".
+[08:22:52][2019.01.01.12][equipmentvariant.cpp:1112]: Country "A45" does not have any equipment variant for type "apc_equipment_1" (selecting latest version) created by "A45".
+[08:22:52][2019.01.01.12][equipmentvariant.cpp:1112]: Country "A46" does not have any equipment variant for type "medium_uav_equipment_1" (selecting latest version) created by "A46".

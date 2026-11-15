@@ -15,6 +15,7 @@ state={
 			infrastructure = 4
 			industrial_complex = 4
 			arms_factory = 3
+			air_base = 6
 		}
 		owner = WLH
 		add_core_of=WLH

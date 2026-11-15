@@ -47,4 +47,28 @@ sub_unit_categories = {
 	category_tank_destroyers
 	category_self_propelled_artillery
 	category_assist_vehicles
+
+	# 2026-10-02 补齐 1.19.3 原版 sub_unit_categories：本文件与原版同名会被整体覆盖，
+	# 缺失类别导致 common/units/hq_support.txt、common/units/MIL_special.txt
+	# 报 "Invalid subunit category"。类别清单对照原版
+	# P:\SteamLibrary\...\common\unit_tags\00_categories.txt
+	category_vehicle_infantry #装甲载具步兵（原版 mechanized/hq_support 使用）
+	category_mobile_and_mobile_combat_sup #机动与机动战斗支援（原版 mechanized/MIL_special 使用）
+	category_divisional_support_battalions #师属支援营（原版 hq_support 全营使用）
+	category_special_forces_leg_infantry
+	category_infantry_and_bicycle
+	category_helicopter_support_companies
+	category_rangers
+	category_anti_tank
+	category_mobile_anti_tank
+	category_rocket_artillery
+	category_marines_and_amphibious
+	category_regimental_support_battalions
+	category_tank_destroyer_regimental_support
+	category_self_propelled_anti_air_regimental_support
+	category_regimental_support_artillery
+	category_carrier_fighter
+	category_carrier_cas
+	category_carrier_nav_bomber
+	category_maritime_patrol_bomber
 }

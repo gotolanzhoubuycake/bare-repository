@@ -75,3 +75,4 @@
  AUTONOMY_NOT_ENOUGH_TIME: "§R自治等级只能每§Y$DURATION$天§!调整一次（§Y$REMAINDER$天剩余§!）§!"
  autonomy_sea_warlord_subject: "军阀附庸"
  autonomy_sea_integrated_warlord_subject: "半吞并军阀附庸"
+ autonomy_BlackMarket_subject: "黑市附庸"

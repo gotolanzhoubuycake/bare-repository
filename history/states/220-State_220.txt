@@ -15,7 +15,7 @@ state={
 		buildings = {
 			infrastructure = 4
 			arms_factory = 3
-			air_base = 1
+			air_base = 6
 		}
 		owner = CAH
 		add_core_of=CAH

@@ -1,0 +1,37 @@
+# 2026-08-19：千年 AI 阶段触发器。入口供 MIL.txt 与 templates_MIL.txt 共用。
+
+BARE_MIL_AI_Mid_Phase_Enabled = {
+	# 入口：千年中期生产策略和中期编制升级优先级。
+	# 关键变量：国策、军工数量、基础机甲科技。
+	# 预期结果：完成防卫改革且具备至少55座军工后进入中期；日期路线作为 AI 卡国策时的备用条件。
+	OR = {
+		AND = {
+			has_completed_focus = MIL_Mechanical_Built_High_Wall
+			num_of_military_factories > 54
+		}
+		AND = {
+			date > 2021.1.1
+			num_of_military_factories > 69
+			has_tech = light_bm_mk1
+			has_tech = medium_bm_mk1
+		}
+	}
+}
+
+BARE_MIL_AI_Late_Phase_Enabled = {
+	# 入口：千年后期生产策略和后期编制升级优先级。
+	# 关键变量：钢铁长城国策、军工数量、二代中重型机甲科技。
+	# 预期结果：只有完成终点国策或同时满足后期工业/科技备用门槛时才切换后期模板。
+	OR = {
+		AND = {
+			has_completed_focus = MIL_Millennium_Steel_Wall
+			num_of_military_factories > 89
+		}
+		AND = {
+			date > 2023.1.1
+			num_of_military_factories > 119
+			has_tech = medium_bm_mk2
+			has_tech = heavy_bm_mk2
+		}
+	}
+}

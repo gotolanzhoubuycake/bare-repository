@@ -1,6 +1,7 @@
 state_categories={
 	large_town = {
-		local_building_slots = 5
+		# 2026-07-08: 整合50建筑槽MOD，提升大型城镇基础共享建筑槽。
+		local_building_slots = 10
 	
 		color = { 240 240 0 }
 

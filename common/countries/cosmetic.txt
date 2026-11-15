@@ -14,6 +14,12 @@ TRT_GOV_COSMETIC = {
 	color = rgb { 255 250 205 }
 	color_ui = rgb { 255 250 205 }
 }
+
+# 2026-07-18 修改：废墟敌人在完成情报分析前统一使用的未知外观。
+MIL_RUINS_UNKNOWN_COSMETIC = {
+	color = rgb { 8 8 8 }
+	color_ui = rgb { 8 8 8 }
+}
 #TRT_BAD_COSMETIC = {
 #	color = rgb { 82 105 93 }
 #	color_ui = rgb { 82 105 93 }

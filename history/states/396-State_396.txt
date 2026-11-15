@@ -15,7 +15,6 @@ state={
 		owner = A08
 		add_core_of=A08
 		add_core_of=GEH
-		victory_points = {4204 15}
     }
 	impassable = yes
 	manpower= 6900

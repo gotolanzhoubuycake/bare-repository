@@ -1,0 +1,15 @@
+ideas = {
+	hidden_ideas = {
+		MIL_ruins_enemy_intelligence_blackout = {
+			# 2026-07-18 修改：废墟敌人在身份被查明前使用的情报封锁民族精神。
+			# 入口：每轮袭击初始化时添加；分析敌情或袭击结束时移除。
+			# 预期结果：其他国家无法从常规渠道获得该敌人的四类情报。
+			modifier = {
+				civilian_intel_to_others = -100
+				army_intel_to_others = -100
+				navy_intel_to_others = -100
+				airforce_intel_to_others = -100
+			}
+		}
+	}
+}
