@@ -1,0 +1,16 @@
+ideas = {
+	country = {
+		MIL_vol2_lightning_victory = {
+			picture = MIL_vol2_placeholder
+			allowed = { original_tag = MIL }
+			removal_cost = -1
+			modifier = { political_power_factor = 0.15 stability_factor = 0.15 war_support_factor = 0.15 }
+		}
+		MIL_vol2_narrow_success = {
+			picture = MIL_vol2_placeholder
+			allowed = { original_tag = MIL }
+			removal_cost = -1
+			modifier = { stability_factor = 0.10 }
+		}
+	}
+}

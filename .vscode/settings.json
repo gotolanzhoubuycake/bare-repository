@@ -1,6 +1,7 @@
 {
-    "hoi4ModUtilities.installPath": "D:\\Backup\\Documents\\Paradox Interactive\\Hearts of Iron IV\\mod\\bare-repository.mod",
-    "hoi4ModUtilities.modFile": "c:\\Users\\zlinWzx\\Documents\\Paradox Interactive\\Hearts of Iron IV\\mod\\bare-repository-main\\descriptor.mod",
+    "hoi4ModUtilities.installPath": "E:\\SteamLibrary\\steamapps\\common\\Hearts of Iron IV",
+    "hoi4ModUtilities.modFile": "E:\\modding\\bare\\descriptor.mod",
     "cwtools.trace.server": "messages",
-    "VModer.GameRootPath": "D:\\SteamLibrary\\steamapps\\common\\Hearts of Iron IV"
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
+    "VModer.GameRootPath": "E:\\SteamLibrary\\steamapps\\common\\Hearts of Iron IV"
 }

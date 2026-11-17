@@ -1,0 +1,272 @@
+# 正式入口只排程一次；与抓人后的207天调查期限相互独立。
+BARE_MIL_vol2_schedule_entry_effect = {
+	if = {
+		limit = {
+			original_tag = MIL
+			has_completed_focus = MIL_new_development_plan
+			NOT = { has_country_flag = MIL_vol2_entry_scheduled }
+			NOT = { has_country_flag = MIL_vol2_unlocked }
+		}
+		set_country_flag = MIL_vol2_entry_scheduled
+		country_event = { id = MIL_vol2.3 days = 365 }
+	}
+}
+# Vol.2状态只初始化一次；解锁不自动完成国策，也不启动抓人或调查期限。
+BARE_MIL_vol2_unlock_effect = {
+	if = {
+		limit = { original_tag = MIL NOT = { has_country_flag = MIL_vol2_unlocked } }
+		set_country_flag = MIL_vol2_unlocked
+		mark_focus_tree_layout_dirty = yes
+		set_variable = { MIL_vol2_phase = 0 }
+		set_variable = { MIL_vol2_progress = 0 }
+		set_variable = { MIL_vol2_signal_round = 0 }
+		set_variable = { MIL_vol2_order_round = 0 }
+		set_variable = { MIL_vol2_action_time = 0 }
+		set_variable = { MIL_vol2_injured_count = 0 }
+		set_variable = { MIL_vol2_aid_level = 0 }
+		BARE_MIL_vol2_update_order_quote_effect = yes
+	}
+}
+# 只在“会长抓走了爱丽丝”实际发生时启动207天，不等待事件选项或重置旧计时。
+BARE_MIL_vol2_begin_investigation_effect = {
+	if = {
+		limit = {
+			original_tag = MIL
+			has_country_flag = MIL_vol2_unlocked
+			NOT = { has_country_flag = MIL_vol2_investigation_started }
+			NOT = { has_country_flag = MIL_vol2_departed }
+		}
+		set_country_flag = MIL_vol2_investigation_started
+		set_variable = { MIL_vol2_phase = 1 }
+		activate_mission = MIL_vol2_departure_deadline
+	}
+}
+BARE_MIL_vol2_cap_progress_effect = {
+	clamp_variable = { var = MIL_vol2_progress min = 0 max = 100 }
+}
+# 每轮费用与成功率报价；启动时另存快照，避免执行中报价改变已付金额。
+BARE_MIL_vol2_update_order_quote_effect = {
+	set_variable = { MIL_vol2_order_cost = MIL_vol2_order_round }
+	multiply_variable = { MIL_vol2_order_cost = 5 }
+	add_to_variable = { MIL_vol2_order_cost = 50 }
+	set_variable = { MIL_vol2_order_chance = MIL_vol2_order_round }
+	multiply_variable = { MIL_vol2_order_chance = 10 }
+	add_to_variable = { MIL_vol2_order_chance = 25 }
+	if = {
+		limit = {
+			check_variable = { MIL_vol2_order_round > 0 }
+			has_country_flag = MIL_vol2_mobilized
+		}
+		add_to_variable = { MIL_vol2_order_chance = 15 }
+	}
+	clamp_variable = { var = MIL_vol2_order_chance min = 0 max = 100 }
+}
+BARE_MIL_vol2_start_order_effect = {
+	if = {
+		limit = {
+			BARE_MIL_vol2_order_available = yes
+			check_variable = { political_power >= MIL_vol2_order_cost }
+		}
+		clr_country_flag = MIL_vol2_order_offer_pending
+		set_country_flag = MIL_vol2_order_active
+		set_variable = { MIL_vol2_order_paid = MIL_vol2_order_cost }
+		set_variable = { MIL_vol2_order_current_chance = MIL_vol2_order_chance }
+		set_temp_variable = { MIL_vol2_order_charge = MIL_vol2_order_paid }
+		multiply_temp_variable = { MIL_vol2_order_charge = -1 }
+		add_political_power = MIL_vol2_order_charge
+		activate_mission = MIL_vol2_order_timer
+	}
+}
+BARE_MIL_vol2_finish_order_effect = {
+	if = {
+		limit = { BARE_MIL_vol2_investigation_open = yes has_country_flag = MIL_vol2_order_active }
+		clr_country_flag = MIL_vol2_order_active
+		set_variable = { MIL_vol2_order_paid = 0 }
+		set_temp_variable = { MIL_vol2_order_failure_weight = 100 }
+		subtract_from_temp_variable = { MIL_vol2_order_failure_weight = MIL_vol2_order_current_chance }
+		# random_list支持变量权重；100%时失败权重为0。
+		random_list = {
+			MIL_vol2_order_current_chance = {
+				set_country_flag = MIL_vol2_vanguard_intel
+				country_event = { id = MIL_vol2.21 }
+			}
+			MIL_vol2_order_failure_weight = {
+				add_to_variable = { MIL_vol2_order_round = 1 }
+				BARE_MIL_vol2_update_order_quote_effect = yes
+				set_country_flag = { flag = MIL_vol2_order_cooldown days = 3 }
+				set_country_flag = MIL_vol2_order_offer_pending
+				country_event = { id = MIL_vol2.20 days = 3 }
+			}
+		}
+	}
+}
+BARE_MIL_vol2_finish_inquiry_effect = {
+	if = {
+		limit = { BARE_MIL_vol2_investigation_open = yes has_country_flag = MIL_vol2_inquiry_active }
+		clr_country_flag = MIL_vol2_inquiry_active
+		set_variable = { MIL_vol2_inquiry_paid = 0 }
+		add_to_variable = { MIL_vol2_progress = 10 }
+		if = {
+			limit = { has_country_flag = MIL_vol2_mobilized }
+			add_to_variable = { MIL_vol2_progress = 10 }
+		}
+		BARE_MIL_vol2_cap_progress_effect = yes
+		set_country_flag = { flag = MIL_vol2_inquiry_cooldown days = 5 }
+	}
+}
+BARE_MIL_vol2_finish_mobilization_effect = {
+	if = {
+		limit = { BARE_MIL_vol2_investigation_open = yes has_country_flag = MIL_vol2_mobilize_active }
+		clr_country_flag = MIL_vol2_mobilize_active
+		set_variable = { MIL_vol2_mobilize_paid = 0 }
+		set_country_flag = MIL_vol2_mobilized
+		BARE_MIL_vol2_update_order_quote_effect = yes
+	}
+}
+# 每种定位结果有独立记录，后续接入无需依赖事件曾经弹出。
+BARE_MIL_vol2_signal_vague_effect = {
+	set_country_flag = MIL_vol2_vague_location
+	country_event = { id = MIL_vol2.10 }
+}
+BARE_MIL_vol2_signal_important_effect = {
+	set_country_flag = MIL_vol2_important_location
+	set_country_flag = MIL_vol2_signal_choice_pending
+	country_event = { id = MIL_vol2.11 }
+}
+BARE_MIL_vol2_signal_eridu_effect = {
+	set_country_flag = MIL_vol2_eridu_intel
+	country_event = { id = MIL_vol2.12 }
+}
+# 次数在本轮完成后增加；重要定位等待玩家决定前禁止下一轮。
+BARE_MIL_vol2_finish_signal_effect = {
+	if = {
+		limit = { BARE_MIL_vol2_investigation_open = yes has_country_flag = MIL_vol2_signal_active }
+		clr_country_flag = MIL_vol2_signal_active
+		set_variable = { MIL_vol2_signal_paid = 0 }
+		add_to_variable = { MIL_vol2_signal_round = 1 }
+		if = {
+			limit = { check_variable = { MIL_vol2_signal_round = 1 } }
+			if = {
+				limit = { has_country_flag = MIL_vol2_mobilized }
+				random_list = {
+					9 = { BARE_MIL_vol2_signal_vague_effect = yes }
+					3 = { BARE_MIL_vol2_signal_important_effect = yes }
+					4 = { BARE_MIL_vol2_signal_eridu_effect = yes }
+				}
+			}
+			else = {
+				random_list = {
+					60 = { BARE_MIL_vol2_signal_vague_effect = yes }
+					20 = { BARE_MIL_vol2_signal_important_effect = yes }
+					20 = { BARE_MIL_vol2_signal_eridu_effect = yes }
+				}
+			}
+		}
+		else_if = {
+			limit = { check_variable = { MIL_vol2_signal_round = 2 } }
+			if = {
+				limit = { has_country_flag = MIL_vol2_mobilized }
+				random_list = {
+					1 = { BARE_MIL_vol2_signal_vague_effect = yes }
+					2 = { BARE_MIL_vol2_signal_important_effect = yes }
+					3 = { BARE_MIL_vol2_signal_eridu_effect = yes }
+				}
+			}
+			else = {
+				random_list = {
+					20 = { BARE_MIL_vol2_signal_vague_effect = yes }
+					40 = { BARE_MIL_vol2_signal_important_effect = yes }
+					40 = { BARE_MIL_vol2_signal_eridu_effect = yes }
+				}
+			}
+		}
+		else_if = {
+			limit = { check_variable = { MIL_vol2_signal_round = 3 } }
+			if = {
+				limit = { has_country_flag = MIL_vol2_mobilized }
+				random_list = {
+					1 = { BARE_MIL_vol2_signal_important_effect = yes }
+					3 = { BARE_MIL_vol2_signal_eridu_effect = yes }
+				}
+			}
+			else = {
+				random_list = {
+					40 = { BARE_MIL_vol2_signal_important_effect = yes }
+					60 = { BARE_MIL_vol2_signal_eridu_effect = yes }
+				}
+			}
+		}
+	}
+}
+# 账本先清零再移除任务，重复收尾不重复退款。
+BARE_MIL_vol2_cancel_inquiry_effect = {
+	if = {
+		limit = { has_country_flag = MIL_vol2_inquiry_active }
+		clr_country_flag = MIL_vol2_inquiry_active
+		add_political_power = MIL_vol2_inquiry_paid
+		set_variable = { MIL_vol2_inquiry_paid = 0 }
+	}
+	remove_decision = MIL_vol2_inquire
+}
+# 账本先清零再移除任务，重复收尾不重复退款。
+BARE_MIL_vol2_cancel_signal_effect = {
+	if = {
+		limit = { has_country_flag = MIL_vol2_signal_active }
+		clr_country_flag = MIL_vol2_signal_active
+		add_political_power = MIL_vol2_signal_paid
+		set_variable = { MIL_vol2_signal_paid = 0 }
+	}
+	remove_decision = MIL_vol2_locate_signal
+}
+# 账本先清零再移除任务，重复收尾不重复退款。
+BARE_MIL_vol2_cancel_mobilize_effect = {
+	if = {
+		limit = { has_country_flag = MIL_vol2_mobilize_active }
+		clr_country_flag = MIL_vol2_mobilize_active
+		add_political_power = MIL_vol2_mobilize_paid
+		set_variable = { MIL_vol2_mobilize_paid = 0 }
+	}
+	remove_decision = MIL_vol2_mobilize
+}
+# 账本先清零再移除任务，重复收尾不重复退款。
+BARE_MIL_vol2_cancel_order_effect = {
+	if = {
+		limit = { has_country_flag = MIL_vol2_order_active }
+		clr_country_flag = MIL_vol2_order_active
+		add_political_power = MIL_vol2_order_paid
+		set_variable = { MIL_vol2_order_paid = 0 }
+	}
+	remove_mission = MIL_vol2_order_timer
+}
+BARE_MIL_vol2_lock_investigation_effect = {
+	set_country_flag = MIL_vol2_investigation_locked
+	clr_country_flag = MIL_vol2_signal_choice_pending
+	clr_country_flag = MIL_vol2_order_offer_pending
+	BARE_MIL_vol2_cancel_inquiry_effect = yes
+	BARE_MIL_vol2_cancel_signal_effect = yes
+	BARE_MIL_vol2_cancel_mobilize_effect = yes
+	BARE_MIL_vol2_cancel_order_effect = yes
+}
+# 正常出发和207天硬截止共用一次性入口；不伪造任何手动国策完成。
+BARE_MIL_vol2_depart_effect = {
+	if = {
+		limit = {
+			has_country_flag = MIL_vol2_investigation_started
+			NOT = { has_country_flag = MIL_vol2_departed }
+		}
+		BARE_MIL_vol2_lock_investigation_effect = yes
+		set_country_flag = MIL_vol2_departed
+		mark_focus_tree_layout_dirty = yes
+		set_variable = { MIL_vol2_phase = 2 }
+		remove_mission = MIL_vol2_departure_deadline
+		activate_mission = MIL_vol2_auto_find_road
+	}
+}
+BARE_MIL_vol2_force_depart_effect = {
+	if = {
+		limit = { NOT = { has_country_flag = MIL_vol2_departed } }
+		set_country_flag = MIL_vol2_forced_departure
+		BARE_MIL_vol2_depart_effect = yes
+		country_event = { id = MIL_vol2.2 }
+	}
+}

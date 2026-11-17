@@ -1,0 +1,48 @@
+# Vol.2公用条件；正式入口由新蓝图完成365天后的事件开放，不随开局开放。
+BARE_MIL_vol2_investigation_open = {
+	original_tag = MIL
+	has_country_flag = MIL_vol2_investigation_started
+	NOT = { has_country_flag = MIL_vol2_investigation_locked }
+	NOT = { has_country_flag = MIL_vol2_departed }
+}
+BARE_MIL_vol2_order_available = {
+	BARE_MIL_vol2_investigation_open = yes
+	has_completed_focus = MIL_vol2_engineering_help
+	NOT = { has_country_flag = MIL_vol2_order_active }
+	NOT = { has_country_flag = MIL_vol2_order_cooldown }
+	NOT = { has_country_flag = MIL_vol2_vanguard_intel }
+	NOT = { has_country_flag = MIL_vol2_order_stopped }
+}
+BARE_MIL_vol2_action_open = {
+	has_country_flag = MIL_vol2_departed
+	NOT = { has_country_flag = MIL_vol2_result_settled }
+}
+BARE_MIL_vol2_auto_visible = {
+	OR = {
+		has_completed_focus = MIL_vol2_rescue_start
+		has_country_flag = MIL_vol2_departed
+	}
+}
+BARE_MIL_vol2_normal_success = {
+	OR = {
+		check_variable = { MIL_vol2_action_time <= 5 }
+		check_variable = { MIL_vol2_aid_level >= 2 }
+		NOT = { has_country_flag = MIL_vol2_rescue_injury }
+		check_variable = { MIL_vol2_progress >= 40 }
+	}
+}
+# 在将领作用域使用；与游戏开发部、C&C、工程师部共十名既有角色对应。
+BARE_MIL_vol2_rescue_member = {
+	OR = {
+		is_character = MIL_yuzu
+		is_character = MIL_momoi
+		is_character = MIL_midori
+		is_character = MIL_neru
+		is_character = MIL_asuna
+		is_character = MIL_karin
+		is_character = MIL_akane
+		is_character = MIL_utaha
+		is_character = MIL_hibiki
+		is_character = MIL_kotori
+	}
+}

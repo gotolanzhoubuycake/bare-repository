@@ -1,0 +1,13 @@
+leader_traits = {
+	MIL_vol2_inspiring_success = {
+		type = all
+		trait_type = personality_trait
+		new_commander_weight = { factor = 0 }
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+		maneuvering_skill = 1
+		coordination_skill = 1
+	}
+}

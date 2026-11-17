@@ -1,0 +1,348 @@
+# Vol.2行动：日历天数与累计行动耗时分别管理。
+BARE_MIL_vol2_choose_road_effect = {
+	if = {
+		limit = { BARE_MIL_vol2_action_open = yes NOT = { has_country_flag = MIL_vol2_route_chosen } }
+		set_country_flag = MIL_vol2_route_chosen
+		if = {
+			limit = {
+				check_variable = { MIL_vol2_progress >= 100 }
+				NOT = { has_country_flag = MIL_vol2_trust_location }
+			}
+			set_country_flag = MIL_vol2_route_hidden
+			activate_mission = MIL_vol2_auto_surprise
+		}
+		else_if = {
+			limit = {
+				check_variable = { MIL_vol2_progress >= 60 }
+				NOT = { has_country_flag = MIL_vol2_trust_location }
+			}
+			set_country_flag = MIL_vol2_route_station
+			activate_mission = MIL_vol2_auto_station
+		}
+		else = {
+			set_country_flag = MIL_vol2_route_lost
+			activate_mission = MIL_vol2_auto_ruins_road
+		}
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+BARE_MIL_vol2_settle_road_effect = {
+	if = {
+		limit = { BARE_MIL_vol2_action_open = yes NOT = { has_country_flag = MIL_vol2_road_settled } }
+		set_country_flag = MIL_vol2_road_settled
+		if = {
+			limit = { has_country_flag = MIL_vol2_route_hidden }
+			add_to_variable = { MIL_vol2_action_time = 1 }
+		}
+		else_if = {
+			limit = { has_country_flag = MIL_vol2_route_station }
+			set_country_flag = MIL_vol2_exposed
+			add_to_variable = { MIL_vol2_action_time = 2 }
+		}
+		else = {
+			set_country_flag = MIL_vol2_exposed
+			add_to_variable = { MIL_vol2_action_time = 3 }
+		}
+	}
+}
+BARE_MIL_vol2_leave_road_effect = {
+	if = {
+		limit = {
+			BARE_MIL_vol2_action_open = yes
+			has_country_flag = MIL_vol2_road_settled
+			NOT = { has_country_flag = MIL_vol2_road_left }
+		}
+		set_country_flag = MIL_vol2_road_left
+		if = {
+			limit = { has_country_flag = MIL_vol2_route_hidden }
+			activate_mission = MIL_vol2_auto_rio_surprised
+		}
+		else = { activate_mission = MIL_vol2_auto_vanguard }
+	}
+}
+# 从固定十人中不重复抽取；计数在每轮下降，即使角色被外部系统移除也不会死循环。
+BARE_MIL_vol2_apply_injuries_effect = {
+	while = {
+		limit = { check_variable = { MIL_vol2_injuries_to_apply > 0 } }
+		subtract_from_variable = { MIL_vol2_injuries_to_apply = 1 }
+		random_army_leader = {
+			limit = {
+				BARE_MIL_vol2_rescue_member = yes
+				NOT = { has_unit_leader_flag = MIL_vol2_injured_in_rescue }
+			}
+			set_unit_leader_flag = MIL_vol2_injured_in_rescue
+			add_timed_unit_leader_trait = { trait = wounded days = 90 }
+			PREV = {
+				set_country_flag = MIL_vol2_rescue_injury
+				add_to_variable = { MIL_vol2_injured_count = 1 }
+			}
+		}
+	}
+}
+# 事件只记录应对方式并启动互斥国策；战斗耗时与伤员统一在国策完成时结算。
+BARE_MIL_vol2_choose_breakthrough_effect = {
+	if = {
+		limit = {
+			BARE_MIL_vol2_action_open = yes
+			has_country_flag = MIL_vol2_vanguard_choice_pending
+			NOT = { has_country_flag = MIL_vol2_battle_started }
+			NOT = { has_country_flag = MIL_vol2_vanguard_settled }
+		}
+		clr_country_flag = MIL_vol2_vanguard_choice_pending
+		set_country_flag = MIL_vol2_breakthrough
+		set_country_flag = MIL_vol2_battle_started
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = MIL_vol2_vanguard_intel
+					has_country_flag = MIL_vol2_route_hidden
+				}
+			}
+			set_country_flag = MIL_vol2_battle_exploit
+			activate_mission = MIL_vol2_auto_exploit_weakness
+		}
+		else = {
+			set_country_flag = MIL_vol2_battle_hard
+			activate_mission = MIL_vol2_auto_hard_battle
+		}
+	}
+}
+BARE_MIL_vol2_settle_hard_battle_effect = {
+	if = {
+		limit = {
+			BARE_MIL_vol2_action_open = yes
+			has_completed_focus = MIL_vol2_hard_battle
+			has_country_flag = MIL_vol2_battle_hard
+			has_country_flag = MIL_vol2_breakthrough
+			NOT = { has_country_flag = MIL_vol2_vanguard_intel }
+			NOT = { has_country_flag = MIL_vol2_route_hidden }
+			NOT = { has_country_flag = MIL_vol2_vanguard_settled }
+		}
+		set_country_flag = MIL_vol2_vanguard_settled
+		if = {
+			limit = { check_variable = { MIL_vol2_progress < 40 } }
+			add_to_variable = { MIL_vol2_action_time = 4 }
+			set_variable = { MIL_vol2_injuries_to_apply = 4 }
+		}
+		else_if = {
+			limit = { check_variable = { MIL_vol2_progress < 60 } }
+			add_to_variable = { MIL_vol2_action_time = 3 }
+			set_variable = { MIL_vol2_injuries_to_apply = 10 }
+		}
+		else = {
+			add_to_variable = { MIL_vol2_action_time = 2 }
+			set_variable = { MIL_vol2_injuries_to_apply = 10 }
+		}
+		BARE_MIL_vol2_apply_injuries_effect = yes
+	}
+}
+BARE_MIL_vol2_choose_weakness_effect = {
+	if = {
+		limit = {
+			BARE_MIL_vol2_action_open = yes
+			has_country_flag = MIL_vol2_vanguard_choice_pending
+			check_variable = { MIL_vol2_progress >= 60 }
+			NOT = { has_country_flag = MIL_vol2_battle_started }
+			NOT = { has_country_flag = MIL_vol2_vanguard_settled }
+		}
+		clr_country_flag = MIL_vol2_vanguard_choice_pending
+		set_country_flag = MIL_vol2_seek_weakness
+		set_country_flag = MIL_vol2_battle_started
+		set_country_flag = MIL_vol2_battle_exploit
+		activate_mission = MIL_vol2_auto_exploit_weakness
+	}
+}
+# 奇袭有情报时无需战术二选一；无情报时仍由事件选择强攻或寻找弱点。
+BARE_MIL_vol2_choose_quick_strike_effect = {
+	if = {
+		limit = {
+			BARE_MIL_vol2_action_open = yes
+			has_completed_focus = MIL_vol2_rio_surprised
+			has_country_flag = MIL_vol2_route_hidden
+			has_country_flag = MIL_vol2_vanguard_intel
+			NOT = { has_country_flag = MIL_vol2_battle_started }
+			NOT = { has_country_flag = MIL_vol2_vanguard_settled }
+		}
+		set_country_flag = MIL_vol2_quick_strike
+		set_country_flag = MIL_vol2_battle_started
+		set_country_flag = MIL_vol2_battle_exploit
+		activate_mission = MIL_vol2_auto_exploit_weakness
+	}
+}
+BARE_MIL_vol2_settle_exploit_battle_effect = {
+	if = {
+		limit = {
+			BARE_MIL_vol2_action_open = yes
+			has_completed_focus = MIL_vol2_exploit_weakness
+			has_country_flag = MIL_vol2_battle_exploit
+			NOT = { has_country_flag = MIL_vol2_vanguard_settled }
+			OR = {
+				has_country_flag = MIL_vol2_quick_strike
+				has_country_flag = MIL_vol2_seek_weakness
+				has_country_flag = MIL_vol2_breakthrough
+			}
+		}
+		set_country_flag = MIL_vol2_vanguard_settled
+		set_variable = { MIL_vol2_injuries_to_apply = 0 }
+		if = {
+			limit = { has_country_flag = MIL_vol2_quick_strike }
+			add_to_variable = { MIL_vol2_action_time = 1 }
+		}
+		else_if = {
+			limit = { has_country_flag = MIL_vol2_seek_weakness }
+			if = {
+				limit = { has_country_flag = MIL_vol2_vanguard_intel }
+				add_to_variable = { MIL_vol2_action_time = 2 }
+			}
+			else = { add_to_variable = { MIL_vol2_action_time = 3 } }
+		}
+		else_if = {
+			limit = { has_country_flag = MIL_vol2_vanguard_intel }
+			add_to_variable = { MIL_vol2_action_time = 1 }
+			set_variable = { MIL_vol2_injuries_to_apply = 5 }
+		}
+		else = {
+			# 无情报奇袭选择强攻：仍走突袭弱点国策，但不享受有情报的结算。
+			add_to_variable = { MIL_vol2_action_time = 2 }
+			set_variable = { MIL_vol2_injuries_to_apply = 10 }
+		}
+		BARE_MIL_vol2_apply_injuries_effect = yes
+	}
+}
+BARE_MIL_vol2_start_eridu_effect = {
+	if = {
+		limit = {
+			BARE_MIL_vol2_action_open = yes
+			has_country_flag = MIL_vol2_vanguard_settled
+			NOT = { has_country_flag = MIL_vol2_eridu_started }
+			OR = {
+				has_completed_focus = MIL_vol2_hard_battle
+				has_completed_focus = MIL_vol2_exploit_weakness
+			}
+		}
+		set_country_flag = MIL_vol2_eridu_started
+		activate_mission = MIL_vol2_auto_enter_eridu
+	}
+}
+# 援助属于抵达时的条件效果：免费、无额外三天，无独立援助事件。
+BARE_MIL_vol2_arrive_eridu_effect = {
+	if = {
+		limit = {
+			BARE_MIL_vol2_action_open = yes
+			has_completed_focus = MIL_vol2_enter_eridu
+			has_country_flag = MIL_vol2_vanguard_settled
+			NOT = { has_country_flag = MIL_vol2_eridu_arrived }
+			NOT = { has_country_flag = MIL_vol2_result_decided }
+		}
+		set_country_flag = MIL_vol2_eridu_arrived
+		set_variable = { MIL_vol2_aid_level = 1 }
+		if = {
+			limit = {
+				check_variable = { MIL_vol2_progress >= 80 }
+				OR = {
+					has_country_flag = MIL_vol2_vanguard_intel
+					has_country_flag = MIL_vol2_eridu_intel
+				}
+			}
+			set_variable = { MIL_vol2_aid_level = 2 }
+		}
+		if = {
+			limit = {
+				has_completed_focus = MIL_vol2_rio_surprised
+				check_variable = { MIL_vol2_action_time <= 2 }
+			}
+			set_country_flag = MIL_vol2_path_precise
+			activate_mission = MIL_vol2_auto_precise_strike
+		}
+		else = {
+			set_country_flag = MIL_vol2_path_toki
+			activate_mission = MIL_vol2_auto_toki_battle
+		}
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+# 精准一击已在抵达时分流；时的交战只决定普通成功或失败，不在这里提前发奖励。
+BARE_MIL_vol2_decide_result_effect = {
+	if = {
+		limit = {
+			BARE_MIL_vol2_action_open = yes
+			has_country_flag = MIL_vol2_eridu_battle_pending
+			has_completed_focus = MIL_vol2_toki_battle
+			has_country_flag = MIL_vol2_path_toki
+			NOT = { has_country_flag = MIL_vol2_result_decided }
+		}
+		clr_country_flag = MIL_vol2_eridu_battle_pending
+		set_country_flag = MIL_vol2_result_decided
+		if = {
+			limit = { BARE_MIL_vol2_normal_success = yes }
+			set_variable = { MIL_vol2_result = 2 }
+			activate_mission = MIL_vol2_auto_best_partners
+		}
+		else = {
+			set_variable = { MIL_vol2_result = 1 }
+			activate_mission = MIL_vol2_auto_rio_last_stand
+		}
+	}
+}
+# 中间事件只负责开启最终国策；一次性标记防止重复事件重置七天计时。
+BARE_MIL_vol2_start_final_focus_effect = {
+	if = {
+		limit = {
+			BARE_MIL_vol2_action_open = yes
+			has_country_flag = MIL_vol2_result_decided
+			NOT = { has_country_flag = MIL_vol2_final_focus_started }
+			OR = {
+				AND = { check_variable = { MIL_vol2_result = 3 } has_completed_focus = MIL_vol2_precise_strike }
+				AND = { check_variable = { MIL_vol2_result = 2 } has_completed_focus = MIL_vol2_best_partners }
+				AND = { check_variable = { MIL_vol2_result = 1 } has_completed_focus = MIL_vol2_rio_last_stand }
+			}
+		}
+		set_country_flag = MIL_vol2_final_focus_started
+		if = {
+			limit = { check_variable = { MIL_vol2_result = 3 } }
+			activate_mission = MIL_vol2_auto_friendship_and_courage
+		}
+		else_if = {
+			limit = { check_variable = { MIL_vol2_result = 2 } }
+			activate_mission = MIL_vol2_auto_dust_settles
+		}
+		else = { activate_mission = MIL_vol2_auto_irreversible_ending }
+	}
+}
+# 只恢复角色文件中实际存在的身份；Key没有定义，莉音没有内阁/将领角色，不虚构属性。
+BARE_MIL_vol2_restore_alice_effect = {
+	if = { limit = { NOT = { has_character = MIL_alice } } recruit_character = MIL_alice }
+}
+BARE_MIL_vol2_settle_result_effect = {
+	if = {
+		limit = {
+			has_country_flag = MIL_vol2_result_decided
+			NOT = { has_country_flag = MIL_vol2_result_settled }
+			OR = {
+				AND = { check_variable = { MIL_vol2_result = 3 } has_completed_focus = MIL_vol2_friendship_and_courage }
+				AND = { check_variable = { MIL_vol2_result = 2 } has_completed_focus = MIL_vol2_dust_settles }
+				AND = { check_variable = { MIL_vol2_result = 1 } has_completed_focus = MIL_vol2_irreversible_ending }
+			}
+		}
+		set_country_flag = MIL_vol2_result_settled
+		set_variable = { MIL_vol2_phase = 3 }
+		if = {
+			limit = { check_variable = { MIL_vol2_result = 3 } }
+			BARE_MIL_vol2_restore_alice_effect = yes
+			if = { limit = { NOT = { has_character = MIL_rio } } recruit_character = MIL_rio }
+			add_timed_idea = { idea = MIL_vol2_lightning_victory days = 365 }
+			every_army_leader = { add_unit_leader_trait = MIL_vol2_inspiring_success }
+			every_navy_leader = { add_unit_leader_trait = MIL_vol2_inspiring_success }
+			641 = { add_dynamic_modifier = { modifier = MIL_vol2_preserved_city_great } }
+			643 = { add_dynamic_modifier = { modifier = MIL_vol2_preserved_city_great } }
+		}
+		else_if = {
+			limit = { check_variable = { MIL_vol2_result = 2 } }
+			BARE_MIL_vol2_restore_alice_effect = yes
+			add_timed_idea = { idea = MIL_vol2_narrow_success days = 365 }
+			641 = { add_dynamic_modifier = { modifier = MIL_vol2_preserved_city_normal } }
+			643 = { add_dynamic_modifier = { modifier = MIL_vol2_preserved_city_normal } }
+		}
+		# 失败不添加城市破坏修正，不清除旧废墟减益；国家/将领后果仍随搁置的内战与战后阶段处理。
+	}
+}
