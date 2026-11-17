@@ -1,0 +1,15 @@
+# 只使用原版STATE作用域支持的修正，不将国家industrial_capacity_factory误用为地区产出。
+# TODO：地区工厂产出+15%/+30%无对应原生STATE词条，待确定适配方式；不以local_factories替代。
+# TODO：原废墟减益与开发迁移尚未定稿，此处不清除旧工业线修正，不改变所有权或开发阶段。
+MIL_vol2_preserved_city_normal = {
+	icon = GFX_idea_MIL_ruins_city
+	enable = { always = yes }
+	state_production_speed_buildings_factor = 0.25
+	local_building_slots_factor = 0.20
+}
+MIL_vol2_preserved_city_great = {
+	icon = GFX_idea_MIL_ruins_city
+	enable = { always = yes }
+	state_production_speed_buildings_factor = 0.50
+	local_building_slots_factor = 0.40
+}

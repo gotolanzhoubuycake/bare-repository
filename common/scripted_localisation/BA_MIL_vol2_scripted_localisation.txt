@@ -1,0 +1,81 @@
+defined_text = {
+	name = GetMILVol2Aid
+	text = {
+		trigger = { check_variable = { MIL_vol2_aid_level = 2 } }
+		localization_key = MIL_vol2_aid_full
+	}
+	text = {
+		trigger = { check_variable = { MIL_vol2_aid_level = 1 } }
+		localization_key = MIL_vol2_aid_normal
+	}
+	text = { localization_key = MIL_vol2_aid_none }
+}
+
+defined_text = {
+	name = GetMILVol2EriduRoute
+	text = {
+		trigger = { has_country_flag = MIL_vol2_path_precise }
+		localization_key = MIL_vol2_route_precise_text
+	}
+	text = { localization_key = MIL_vol2_route_toki_text }
+}
+
+defined_text = {
+	name = GetMILVol2Phase
+	text = {
+		trigger = { has_country_flag = MIL_vol2_result_settled }
+		localization_key = MIL_vol2_phase_finished
+	}
+	text = {
+		trigger = { has_country_flag = MIL_vol2_departed }
+		localization_key = MIL_vol2_phase_action
+	}
+	text = {
+		trigger = { has_country_flag = MIL_vol2_investigation_started }
+		localization_key = MIL_vol2_phase_investigation
+	}
+	text = {
+		localization_key = MIL_vol2_phase_preparation
+	}
+}
+
+defined_text = {
+	name = GetMILVol2Location
+	text = {
+		trigger = { has_country_flag = MIL_vol2_trust_location }
+		localization_key = MIL_vol2_location_trusted
+	}
+	text = {
+		trigger = { has_country_flag = MIL_vol2_eridu_intel }
+		localization_key = MIL_vol2_location_eridu
+	}
+	text = {
+		trigger = { has_country_flag = MIL_vol2_signal_choice_pending }
+		localization_key = MIL_vol2_location_pending
+	}
+	text = {
+		localization_key = MIL_vol2_location_other
+	}
+}
+
+defined_text = {
+	name = GetMILVol2VanguardIntel
+	text = {
+		trigger = { has_country_flag = MIL_vol2_vanguard_intel }
+		localization_key = MIL_vol2_yes
+	}
+	text = {
+		localization_key = MIL_vol2_no
+	}
+}
+
+defined_text = {
+	name = GetMILVol2Mobilization
+	text = {
+		trigger = { has_country_flag = MIL_vol2_mobilized }
+		localization_key = MIL_vol2_yes
+	}
+	text = {
+		localization_key = MIL_vol2_no
+	}
+}

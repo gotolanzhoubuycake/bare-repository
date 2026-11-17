@@ -1,0 +1,433 @@
+add_namespace = MIL_vol2
+
+# 事件正文统一留空。所有有状态影响的入口与选项均检查阶段和一次性标记。
+
+# 会长抓走了爱丽丝
+country_event = {
+	id = MIL_vol2.1
+	title = MIL_vol2.1.t
+	desc = MIL_vol2.1.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = { has_completed_focus = MIL_vol2_dark_day NOT = { has_country_flag = MIL_vol2_investigation_started } }
+	immediate = { BARE_MIL_vol2_begin_investigation_effect = yes }
+	option = {
+		name = MIL_vol2.1.a
+		custom_effect_tooltip = MIL_vol2_deadline_tt
+		ai_chance = { base = 10 }
+	}
+}
+
+# 立即出发
+country_event = {
+	id = MIL_vol2.2
+	title = MIL_vol2.2.t
+	desc = MIL_vol2.2.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = { has_country_flag = MIL_vol2_forced_departure }
+	option = {
+		name = MIL_vol2.2.a
+		custom_effect_tooltip = MIL_vol2_forced_departure_tt
+		ai_chance = { base = 10 }
+	}
+}
+
+# 新蓝图完成一年后只开放入口国策。
+country_event = {
+	id = MIL_vol2.3
+	title = MIL_vol2.3.t
+	desc = MIL_vol2.3.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		has_completed_focus = MIL_new_development_plan
+		has_country_flag = MIL_vol2_entry_scheduled
+		NOT = { has_country_flag = MIL_vol2_unlocked }
+	}
+	immediate = { BARE_MIL_vol2_unlock_effect = yes }
+	option = {
+		name = MIL_vol2.3.a
+		custom_effect_tooltip = MIL_vol2_entry_unlocked_tt
+		ai_chance = { base = 10 }
+	}
+}
+
+# 模糊定位
+country_event = {
+	id = MIL_vol2.10
+	title = MIL_vol2.10.t
+	desc = MIL_vol2.10.d
+	is_triggered_only = yes
+	trigger = { BARE_MIL_vol2_investigation_open = yes }
+	option = {
+		name = MIL_vol2.10.a
+		ai_chance = { base = 10 }
+	}
+}
+
+# 重要定位
+country_event = {
+	id = MIL_vol2.11
+	title = MIL_vol2.11.t
+	desc = MIL_vol2.11.d
+	is_triggered_only = yes
+	trigger = { BARE_MIL_vol2_investigation_open = yes has_country_flag = MIL_vol2_signal_choice_pending }
+	option = {
+		name = MIL_vol2.11.a
+		custom_effect_tooltip = MIL_vol2_trust_tt
+		if = {
+			limit = { BARE_MIL_vol2_investigation_open = yes has_country_flag = MIL_vol2_signal_choice_pending }
+			clr_country_flag = MIL_vol2_signal_choice_pending
+			set_country_flag = MIL_vol2_trust_location
+		}
+		ai_chance = { base = 1 }
+	}
+	option = {
+		name = MIL_vol2.11.b
+		if = {
+			limit = { BARE_MIL_vol2_investigation_open = yes has_country_flag = MIL_vol2_signal_choice_pending }
+			clr_country_flag = MIL_vol2_signal_choice_pending
+		}
+		ai_chance = { base = 20 }
+	}
+}
+
+# 埃里都的定位信息
+country_event = {
+	id = MIL_vol2.12
+	title = MIL_vol2.12.t
+	desc = MIL_vol2.12.d
+	is_triggered_only = yes
+	trigger = { has_country_flag = MIL_vol2_eridu_intel }
+	option = {
+		name = MIL_vol2.12.a
+		custom_effect_tooltip = MIL_vol2_eridu_intel_tt
+		ai_chance = { base = 10 }
+	}
+}
+
+# 继续追查零件订单
+country_event = {
+	id = MIL_vol2.20
+	title = MIL_vol2.20.t
+	desc = MIL_vol2.20.d
+	is_triggered_only = yes
+	trigger = { BARE_MIL_vol2_order_available = yes has_country_flag = MIL_vol2_order_offer_pending }
+	option = {
+		name = MIL_vol2.20.a
+		trigger = { check_variable = { political_power >= MIL_vol2_order_cost } }
+		custom_effect_tooltip = MIL_vol2_order_start_tt
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = MIL_vol2_order_offer_pending }
+				BARE_MIL_vol2_start_order_effect = yes
+			}
+		}
+		ai_chance = { base = 100 }
+	}
+	option = {
+		name = MIL_vol2.20.b
+		if = {
+			limit = { BARE_MIL_vol2_investigation_open = yes has_country_flag = MIL_vol2_order_offer_pending }
+			clr_country_flag = MIL_vol2_order_offer_pending
+			set_country_flag = MIL_vol2_order_stopped
+		}
+		ai_chance = { base = 1 }
+	}
+}
+
+# 前卫君的重要情报
+country_event = {
+	id = MIL_vol2.21
+	title = MIL_vol2.21.t
+	desc = MIL_vol2.21.d
+	is_triggered_only = yes
+	trigger = { has_country_flag = MIL_vol2_vanguard_intel }
+	option = {
+		name = MIL_vol2.21.a
+		custom_effect_tooltip = MIL_vol2_vanguard_intel_tt
+		ai_chance = { base = 10 }
+	}
+}
+
+# 乘坐电车
+country_event = {
+	id = MIL_vol2.30
+	title = MIL_vol2.30.t
+	desc = MIL_vol2.30.d
+	is_triggered_only = yes
+	trigger = { BARE_MIL_vol2_action_open = yes has_completed_focus = MIL_vol2_station NOT = { has_country_flag = MIL_vol2_road_settled } }
+	immediate = { BARE_MIL_vol2_settle_road_effect = yes }
+	option = {
+		name = MIL_vol2.30.a
+		custom_effect_tooltip = MIL_vol2_station_result_tt
+		hidden_effect = { BARE_MIL_vol2_leave_road_effect = yes }
+		ai_chance = { base = 10 }
+	}
+}
+
+# 迷路
+country_event = {
+	id = MIL_vol2.31
+	title = MIL_vol2.31.t
+	desc = MIL_vol2.31.d
+	is_triggered_only = yes
+	trigger = { BARE_MIL_vol2_action_open = yes has_completed_focus = MIL_vol2_ruins_road NOT = { has_country_flag = MIL_vol2_road_settled } }
+	immediate = { BARE_MIL_vol2_settle_road_effect = yes }
+	option = {
+		name = MIL_vol2.31.a
+		custom_effect_tooltip = MIL_vol2_ruins_road_result_tt
+		hidden_effect = { BARE_MIL_vol2_leave_road_effect = yes }
+		ai_chance = { base = 10 }
+	}
+}
+
+# 通路
+country_event = {
+	id = MIL_vol2.32
+	title = MIL_vol2.32.t
+	desc = MIL_vol2.32.d
+	is_triggered_only = yes
+	trigger = { BARE_MIL_vol2_action_open = yes has_completed_focus = MIL_vol2_surprise NOT = { has_country_flag = MIL_vol2_road_settled } }
+	immediate = { BARE_MIL_vol2_settle_road_effect = yes }
+	option = {
+		name = MIL_vol2.32.a
+		custom_effect_tooltip = MIL_vol2_surprise_result_tt
+		hidden_effect = { BARE_MIL_vol2_leave_road_effect = yes }
+		ai_chance = { base = 10 }
+	}
+}
+
+# 措手不及的莉音
+country_event = {
+	id = MIL_vol2.33
+	title = MIL_vol2.33.t
+	desc = MIL_vol2.33.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = { BARE_MIL_vol2_action_open = yes has_country_flag = MIL_vol2_route_hidden has_completed_focus = MIL_vol2_rio_surprised NOT = { has_country_flag = MIL_vol2_battle_started } }
+	immediate = {
+		if = {
+			limit = { NOT = { has_country_flag = MIL_vol2_vanguard_intel } }
+			set_country_flag = MIL_vol2_vanguard_choice_pending
+		}
+	}
+	option = {
+		name = MIL_vol2.33.a
+		trigger = { has_country_flag = MIL_vol2_vanguard_intel }
+		custom_effect_tooltip = MIL_vol2_quick_strike_tt
+		hidden_effect = { BARE_MIL_vol2_choose_quick_strike_effect = yes }
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = MIL_vol2.34.a
+		trigger = { NOT = { has_country_flag = MIL_vol2_vanguard_intel } }
+		custom_effect_tooltip = MIL_vol2_hidden_breakthrough_tt
+		hidden_effect = { BARE_MIL_vol2_choose_breakthrough_effect = yes }
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = MIL_vol2.34.b
+		trigger = { NOT = { has_country_flag = MIL_vol2_vanguard_intel } check_variable = { MIL_vol2_progress >= 60 } }
+		custom_effect_tooltip = MIL_vol2_weakness_tt
+		hidden_effect = { BARE_MIL_vol2_choose_weakness_effect = yes }
+		ai_chance = { base = 20 }
+	}
+}
+
+# 遭遇前卫君
+country_event = {
+	id = MIL_vol2.34
+	title = MIL_vol2.34.t
+	desc = MIL_vol2.34.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = { BARE_MIL_vol2_action_open = yes has_completed_focus = MIL_vol2_vanguard NOT = { has_country_flag = MIL_vol2_route_hidden } NOT = { has_country_flag = MIL_vol2_vanguard_settled } NOT = { has_country_flag = MIL_vol2_battle_started } }
+	immediate = { set_country_flag = MIL_vol2_vanguard_choice_pending }
+	option = {
+		name = MIL_vol2.34.a
+		custom_effect_tooltip = MIL_vol2_breakthrough_tt
+		hidden_effect = { BARE_MIL_vol2_choose_breakthrough_effect = yes }
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = MIL_vol2.34.b
+		trigger = { check_variable = { MIL_vol2_progress >= 60 } }
+		custom_effect_tooltip = MIL_vol2_weakness_tt
+		hidden_effect = { BARE_MIL_vol2_choose_weakness_effect = yes }
+		ai_chance = { base = 20 }
+	}
+}
+
+# 苦战得脱
+country_event = {
+	id = MIL_vol2.35
+	title = MIL_vol2.35.t
+	desc = MIL_vol2.35.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = { BARE_MIL_vol2_action_open = yes has_completed_focus = MIL_vol2_hard_battle has_country_flag = MIL_vol2_vanguard_settled }
+	option = {
+		name = MIL_vol2.35.a
+		custom_effect_tooltip = MIL_vol2_hard_battle_result_tt
+		hidden_effect = { BARE_MIL_vol2_start_eridu_effect = yes }
+		ai_chance = { base = 10 }
+	}
+}
+
+# 击破前卫君
+country_event = {
+	id = MIL_vol2.36
+	title = MIL_vol2.36.t
+	desc = MIL_vol2.36.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = { BARE_MIL_vol2_action_open = yes has_completed_focus = MIL_vol2_exploit_weakness has_country_flag = MIL_vol2_vanguard_settled }
+	option = {
+		name = MIL_vol2.36.a
+		custom_effect_tooltip = MIL_vol2_start_eridu_tt
+		hidden_effect = { BARE_MIL_vol2_start_eridu_effect = yes }
+		ai_chance = { base = 10 }
+	}
+}
+
+# 抵达埃里都：援助已在国策完成时按实际条件生效，不另收费或计时。
+country_event = {
+	id = MIL_vol2.37
+	title = MIL_vol2.37.t
+	desc = MIL_vol2.37.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = { BARE_MIL_vol2_action_open = yes has_completed_focus = MIL_vol2_enter_eridu has_country_flag = MIL_vol2_eridu_arrived }
+	option = {
+		name = MIL_vol2.37.a
+		custom_effect_tooltip = MIL_vol2_arrival_result_tt
+		ai_chance = { base = 10 }
+	}
+}
+
+# 意料之外的防御
+country_event = {
+	id = MIL_vol2.38
+	title = MIL_vol2.38.t
+	desc = MIL_vol2.38.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = { BARE_MIL_vol2_action_open = yes has_completed_focus = MIL_vol2_rio_last_stand check_variable = { MIL_vol2_result = 1 } }
+	option = {
+		name = MIL_vol2.38.a
+		custom_effect_tooltip = MIL_vol2_start_failure_final_tt
+		hidden_effect = { BARE_MIL_vol2_start_final_focus_effect = yes }
+		ai_chance = { base = 10 }
+	}
+}
+
+# 激烈的交手
+country_event = {
+	id = MIL_vol2.50
+	title = MIL_vol2.50.t
+	desc = MIL_vol2.50.d
+	is_triggered_only = yes
+	trigger = { BARE_MIL_vol2_action_open = yes has_completed_focus = MIL_vol2_toki_battle has_country_flag = MIL_vol2_path_toki has_country_flag = MIL_vol2_eridu_battle_pending }
+	option = {
+		name = MIL_vol2.50.a
+		custom_effect_tooltip = MIL_vol2_final_assault_tt
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = MIL_vol2_eridu_battle_pending }
+				set_variable = { MIL_vol2_final_choice = 1 }
+				BARE_MIL_vol2_decide_result_effect = yes
+			}
+		}
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = MIL_vol2.50.b
+		custom_effect_tooltip = MIL_vol2_final_split_tt
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = MIL_vol2_eridu_battle_pending }
+				set_variable = { MIL_vol2_final_choice = 2 }
+				BARE_MIL_vol2_decide_result_effect = yes
+			}
+		}
+		ai_chance = { base = 10 }
+	}
+}
+
+# 闪电般的胜利
+country_event = {
+	id = MIL_vol2.60
+	title = MIL_vol2.60.t
+	desc = MIL_vol2.60.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = { has_completed_focus = MIL_vol2_precise_strike has_country_flag = MIL_vol2_result_decided check_variable = { MIL_vol2_result = 3 } NOT = { has_country_flag = MIL_vol2_result_settled } }
+	option = {
+		name = MIL_vol2.60.a
+		custom_effect_tooltip = MIL_vol2_start_great_final_tt
+		hidden_effect = { BARE_MIL_vol2_start_final_focus_effect = yes }
+		ai_chance = { base = 10 }
+	}
+}
+
+# 离深渊只差一步
+country_event = {
+	id = MIL_vol2.61
+	title = MIL_vol2.61.t
+	desc = MIL_vol2.61.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = { has_completed_focus = MIL_vol2_best_partners has_country_flag = MIL_vol2_result_decided check_variable = { MIL_vol2_result = 2 } NOT = { has_country_flag = MIL_vol2_result_settled } }
+	option = {
+		name = MIL_vol2.61.a
+		custom_effect_tooltip = MIL_vol2_start_normal_final_tt
+		hidden_effect = { BARE_MIL_vol2_start_final_focus_effect = yes }
+		ai_chance = { base = 10 }
+	}
+}
+
+# 不愿看见的结局
+country_event = {
+	id = MIL_vol2.62
+	title = MIL_vol2.62.t
+	desc = MIL_vol2.62.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = { has_completed_focus = MIL_vol2_irreversible_ending has_country_flag = MIL_vol2_result_settled check_variable = { MIL_vol2_result = 1 } }
+	option = {
+		name = MIL_vol2.62.a
+		custom_effect_tooltip = MIL_vol2_failure_result_tt
+		ai_chance = { base = 10 }
+	}
+}
+
+# 令人意外的新成员
+country_event = {
+	id = MIL_vol2.63
+	title = MIL_vol2.63.t
+	desc = MIL_vol2.63.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = { has_country_flag = MIL_vol2_result_settled check_variable = { MIL_vol2_result = 3 } }
+	option = {
+		name = MIL_vol2.63.a
+		custom_effect_tooltip = MIL_vol2_missing_roles_tt
+		ai_chance = { base = 10 }
+	}
+}
+
+# 备受打击的莉音
+country_event = {
+	id = MIL_vol2.64
+	title = MIL_vol2.64.t
+	desc = MIL_vol2.64.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = { has_country_flag = MIL_vol2_result_settled check_variable = { MIL_vol2_result = 2 } }
+	option = {
+		name = MIL_vol2.64.a
+		ai_chance = { base = 10 }
+	}
+}

@@ -1,0 +1,692 @@
+# Vol.2共享国策：只由正式MIL树引用；开局树保持原样。
+# cost单位为周。自动节点的实际7天由对应mission推进，不能手动研究。
+
+# 重新现身的莉音会长
+shared_focus = {
+	id = MIL_vol2_returned_president
+	icon = GFX_goal_MIL_placeholder
+	search_filters = { FOCUS_MIL }
+	cost = 1
+	# 独立放在原有军事线右侧，后续节点统一相对此入口定位。
+	x = 100
+	y = 0
+	allow_branch = { has_country_flag = MIL_vol2_unlocked }
+	available = {
+		has_country_flag = MIL_vol2_unlocked
+		NOT = { has_country_flag = MIL_vol2_departed }
+	}
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	completion_reward = {
+	}
+	ai_will_do = { factor = 30 }
+}
+
+# 黑暗的一天
+shared_focus = {
+	id = MIL_vol2_dark_day
+	icon = GFX_goal_MIL_placeholder
+	search_filters = { FOCUS_MIL }
+	cost = 1
+	x = 0
+	y = 1
+	relative_position_id = MIL_vol2_returned_president
+	allow_branch = { has_country_flag = MIL_vol2_unlocked }
+	prerequisite = { focus = MIL_vol2_returned_president }
+	available = {
+		has_country_flag = MIL_vol2_unlocked
+		NOT = { has_country_flag = MIL_vol2_departed }
+	}
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	completion_reward = {
+		if = {
+			limit = { NOT = { has_country_flag = MIL_vol2_departed } }
+			unlock_decision_category_tooltip = MIL_vol2_category
+			country_event = { id = MIL_vol2.1 }
+		}
+	}
+	ai_will_do = { factor = 30 }
+}
+
+# 研讨会的决定
+shared_focus = {
+	id = MIL_vol2_seminar_decision
+	icon = GFX_goal_MIL_placeholder
+	search_filters = { FOCUS_MIL }
+	cost = 1
+	x = -2
+	y = 2
+	relative_position_id = MIL_vol2_returned_president
+	allow_branch = { has_country_flag = MIL_vol2_unlocked }
+	prerequisite = { focus = MIL_vol2_dark_day }
+	available = {
+		has_country_flag = MIL_vol2_unlocked
+		NOT = { has_country_flag = MIL_vol2_departed }
+	}
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	completion_reward = {
+		if = {
+			limit = { NOT = { has_country_flag = MIL_vol2_departed } }
+			add_political_power = 100
+			if = { limit = { has_completed_focus = MIL_vol2_game_dev_resolve } unlock_decision_tooltip = MIL_vol2_inquire }
+		}
+	}
+	ai_will_do = { factor = 30 }
+}
+
+# 游戏开发部的决心
+shared_focus = {
+	id = MIL_vol2_game_dev_resolve
+	icon = GFX_goal_MIL_placeholder
+	search_filters = { FOCUS_MIL }
+	cost = 1
+	x = 2
+	y = 2
+	relative_position_id = MIL_vol2_returned_president
+	allow_branch = { has_country_flag = MIL_vol2_unlocked }
+	prerequisite = { focus = MIL_vol2_dark_day }
+	available = {
+		has_country_flag = MIL_vol2_unlocked
+		NOT = { has_country_flag = MIL_vol2_departed }
+	}
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	completion_reward = {
+		if = {
+			limit = { NOT = { has_country_flag = MIL_vol2_departed } }
+			add_political_power = 100
+			if = { limit = { has_completed_focus = MIL_vol2_seminar_decision } unlock_decision_tooltip = MIL_vol2_inquire }
+		}
+	}
+	ai_will_do = { factor = 30 }
+}
+
+# 授权真理部
+shared_focus = {
+	id = MIL_vol2_authorize_veritas
+	icon = GFX_goal_MIL_placeholder
+	search_filters = { FOCUS_MIL }
+	cost = 3
+	x = -3
+	y = 3
+	relative_position_id = MIL_vol2_returned_president
+	allow_branch = { has_country_flag = MIL_vol2_unlocked }
+	prerequisite = { focus = MIL_vol2_seminar_decision }
+	prerequisite = { focus = MIL_vol2_game_dev_resolve }
+	available = {
+		has_country_flag = MIL_vol2_unlocked
+		NOT = { has_country_flag = MIL_vol2_departed }
+	}
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	completion_reward = {
+		if = {
+			limit = { NOT = { has_country_flag = MIL_vol2_departed } }
+			unlock_decision_tooltip = MIL_vol2_locate_signal
+		}
+	}
+	ai_will_do = { factor = 30 }
+}
+
+# 爱丽丝的朋友们
+shared_focus = {
+	id = MIL_vol2_alice_friends
+	icon = GFX_goal_MIL_placeholder
+	search_filters = { FOCUS_MIL }
+	cost = 3
+	x = 0
+	y = 3
+	relative_position_id = MIL_vol2_returned_president
+	allow_branch = { has_country_flag = MIL_vol2_unlocked }
+	prerequisite = { focus = MIL_vol2_seminar_decision }
+	prerequisite = { focus = MIL_vol2_game_dev_resolve }
+	available = {
+		has_country_flag = MIL_vol2_unlocked
+		NOT = { has_country_flag = MIL_vol2_departed }
+	}
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	completion_reward = {
+		if = {
+			limit = { NOT = { has_country_flag = MIL_vol2_departed } }
+			unlock_decision_tooltip = MIL_vol2_mobilize
+		}
+	}
+	ai_will_do = { factor = 30 }
+}
+
+# 工程师部的协助
+shared_focus = {
+	id = MIL_vol2_engineering_help
+	icon = GFX_goal_MIL_placeholder
+	search_filters = { FOCUS_MIL }
+	cost = 3
+	x = 3
+	y = 3
+	relative_position_id = MIL_vol2_returned_president
+	allow_branch = { has_country_flag = MIL_vol2_unlocked }
+	prerequisite = { focus = MIL_vol2_seminar_decision }
+	prerequisite = { focus = MIL_vol2_game_dev_resolve }
+	available = {
+		has_country_flag = MIL_vol2_unlocked
+		NOT = { has_country_flag = MIL_vol2_departed }
+	}
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	completion_reward = {
+		if = {
+			limit = { NOT = { has_country_flag = MIL_vol2_departed } }
+			unlock_decision_tooltip = MIL_vol2_order
+		}
+	}
+	ai_will_do = { factor = 30 }
+}
+
+# 拯救爱丽丝的起点
+shared_focus = {
+	id = MIL_vol2_rescue_start
+	icon = GFX_goal_MIL_placeholder
+	search_filters = { FOCUS_MIL }
+	cost = 10
+	x = 0
+	y = 4
+	relative_position_id = MIL_vol2_returned_president
+	allow_branch = { has_country_flag = MIL_vol2_unlocked }
+	prerequisite = { focus = MIL_vol2_authorize_veritas }
+	prerequisite = { focus = MIL_vol2_alice_friends }
+	prerequisite = { focus = MIL_vol2_engineering_help }
+	available = {
+		has_country_flag = MIL_vol2_unlocked
+		NOT = { has_country_flag = MIL_vol2_departed }
+	}
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	completion_reward = {
+		if = {
+			limit = { NOT = { has_country_flag = MIL_vol2_departed } }
+			custom_effect_tooltip = MIL_vol2_lock_refund_tt
+			hidden_effect = { BARE_MIL_vol2_lock_investigation_effect = yes mark_focus_tree_layout_dirty = yes }
+			unlock_decision_tooltip = MIL_vol2_depart
+		}
+	}
+	ai_will_do = { factor = 30 }
+}
+
+# 寻找道路
+shared_focus = {
+	id = MIL_vol2_find_road
+	icon = GFX_goal_MIL_placeholder
+	search_filters = { FOCUS_MIL }
+	cost = 1
+	x = 0
+	y = 5
+	relative_position_id = MIL_vol2_returned_president
+	allow_branch = { BARE_MIL_vol2_auto_visible = yes }
+	available = { custom_trigger_tooltip = { tooltip = MIL_vol2_automatic_only_tt always = no } }
+	completion_reward = {
+		custom_effect_tooltip = MIL_vol2_find_road_effect_tt
+		hidden_effect = {
+			if = {
+				limit = { BARE_MIL_vol2_action_open = yes NOT = { has_country_flag = MIL_vol2_find_road_rewarded } }
+				set_country_flag = MIL_vol2_find_road_rewarded
+				BARE_MIL_vol2_choose_road_effect = yes
+			}
+		}
+	}
+	ai_will_do = { factor = 0 }
+}
+
+# 废弃的车站
+shared_focus = {
+	id = MIL_vol2_station
+	icon = GFX_goal_MIL_placeholder
+	search_filters = { FOCUS_MIL }
+	cost = 1
+	x = -2
+	y = 6
+	relative_position_id = MIL_vol2_returned_president
+	allow_branch = { BARE_MIL_vol2_auto_visible = yes }
+	prerequisite = { focus = MIL_vol2_find_road }
+	available = { custom_trigger_tooltip = { tooltip = MIL_vol2_automatic_only_tt always = no } }
+	completion_reward = {
+		custom_effect_tooltip = MIL_vol2_station_effect_tt
+		hidden_effect = {
+			if = {
+				limit = { BARE_MIL_vol2_action_open = yes NOT = { has_country_flag = MIL_vol2_station_rewarded } }
+				set_country_flag = MIL_vol2_station_rewarded
+				country_event = { id = MIL_vol2.30 }
+			}
+		}
+	}
+	ai_will_do = { factor = 0 }
+}
+
+# 废墟中的道路
+shared_focus = {
+	id = MIL_vol2_ruins_road
+	icon = GFX_goal_MIL_placeholder
+	search_filters = { FOCUS_MIL }
+	cost = 1
+	x = 0
+	y = 6
+	relative_position_id = MIL_vol2_returned_president
+	allow_branch = { BARE_MIL_vol2_auto_visible = yes }
+	prerequisite = { focus = MIL_vol2_find_road }
+	available = { custom_trigger_tooltip = { tooltip = MIL_vol2_automatic_only_tt always = no } }
+	completion_reward = {
+		custom_effect_tooltip = MIL_vol2_ruins_road_effect_tt
+		hidden_effect = {
+			if = {
+				limit = { BARE_MIL_vol2_action_open = yes NOT = { has_country_flag = MIL_vol2_ruins_road_rewarded } }
+				set_country_flag = MIL_vol2_ruins_road_rewarded
+				country_event = { id = MIL_vol2.31 }
+			}
+		}
+	}
+	ai_will_do = { factor = 0 }
+}
+
+# 奇袭制胜
+shared_focus = {
+	id = MIL_vol2_surprise
+	icon = GFX_goal_MIL_placeholder
+	search_filters = { FOCUS_MIL }
+	cost = 1
+	x = 3
+	y = 6
+	relative_position_id = MIL_vol2_returned_president
+	allow_branch = { BARE_MIL_vol2_auto_visible = yes has_country_flag = MIL_vol2_route_hidden }
+	prerequisite = { focus = MIL_vol2_find_road }
+	available = { custom_trigger_tooltip = { tooltip = MIL_vol2_automatic_only_tt always = no } }
+	completion_reward = {
+		custom_effect_tooltip = MIL_vol2_surprise_effect_tt
+		hidden_effect = {
+			if = {
+				limit = { BARE_MIL_vol2_action_open = yes NOT = { has_country_flag = MIL_vol2_surprise_rewarded } }
+				set_country_flag = MIL_vol2_surprise_rewarded
+				country_event = { id = MIL_vol2.32 }
+			}
+		}
+	}
+	ai_will_do = { factor = 0 }
+}
+
+# 实力强劲的“前卫君”
+shared_focus = {
+	id = MIL_vol2_vanguard
+	icon = GFX_goal_MIL_placeholder
+	search_filters = { FOCUS_MIL }
+	cost = 1
+	x = -1
+	y = 7
+	relative_position_id = MIL_vol2_returned_president
+	allow_branch = { BARE_MIL_vol2_auto_visible = yes }
+	prerequisite = { focus = MIL_vol2_station focus = MIL_vol2_ruins_road }
+	available = { custom_trigger_tooltip = { tooltip = MIL_vol2_automatic_only_tt always = no } }
+	completion_reward = {
+		custom_effect_tooltip = MIL_vol2_vanguard_effect_tt
+		hidden_effect = {
+			if = {
+				limit = { BARE_MIL_vol2_action_open = yes NOT = { has_country_flag = MIL_vol2_vanguard_rewarded } }
+				set_country_flag = MIL_vol2_vanguard_rewarded
+				country_event = { id = MIL_vol2.34 }
+			}
+		}
+	}
+	ai_will_do = { factor = 0 }
+}
+
+# 措手不及的莉音
+shared_focus = {
+	id = MIL_vol2_rio_surprised
+	icon = GFX_goal_MIL_placeholder
+	search_filters = { FOCUS_MIL }
+	cost = 1
+	x = 3
+	y = 7
+	relative_position_id = MIL_vol2_returned_president
+	allow_branch = { BARE_MIL_vol2_auto_visible = yes has_country_flag = MIL_vol2_route_hidden }
+	prerequisite = { focus = MIL_vol2_surprise }
+	available = { custom_trigger_tooltip = { tooltip = MIL_vol2_automatic_only_tt always = no } }
+	completion_reward = {
+		custom_effect_tooltip = MIL_vol2_rio_surprised_effect_tt
+		hidden_effect = {
+			if = {
+				limit = { BARE_MIL_vol2_action_open = yes NOT = { has_country_flag = MIL_vol2_rio_surprised_rewarded } }
+				set_country_flag = MIL_vol2_rio_surprised_rewarded
+				country_event = { id = MIL_vol2.33 }
+			}
+		}
+	}
+	ai_will_do = { factor = 0 }
+}
+
+# 与“前卫君”的苦战
+shared_focus = {
+	id = MIL_vol2_hard_battle
+	icon = GFX_goal_MIL_placeholder
+	search_filters = { FOCUS_MIL }
+	cost = 1
+	x = -1
+	y = 8
+	relative_position_id = MIL_vol2_returned_president
+	allow_branch = { BARE_MIL_vol2_auto_visible = yes }
+	prerequisite = { focus = MIL_vol2_vanguard }
+	mutually_exclusive = { focus = MIL_vol2_exploit_weakness }
+	available = { custom_trigger_tooltip = { tooltip = MIL_vol2_automatic_only_tt always = no } }
+	completion_reward = {
+		custom_effect_tooltip = MIL_vol2_hard_battle_effect_tt
+		hidden_effect = {
+			if = {
+				limit = { BARE_MIL_vol2_action_open = yes has_country_flag = MIL_vol2_battle_hard NOT = { has_country_flag = MIL_vol2_hard_battle_rewarded } }
+				set_country_flag = MIL_vol2_hard_battle_rewarded
+				BARE_MIL_vol2_settle_hard_battle_effect = yes
+				if = {
+					limit = { has_country_flag = MIL_vol2_vanguard_settled }
+					country_event = { id = MIL_vol2.35 }
+				}
+			}
+		}
+	}
+	ai_will_do = { factor = 0 }
+}
+
+# 突袭弱点，情报制胜
+shared_focus = {
+	id = MIL_vol2_exploit_weakness
+	icon = GFX_goal_MIL_placeholder
+	search_filters = { FOCUS_MIL }
+	cost = 1
+	x = 2
+	y = 8
+	relative_position_id = MIL_vol2_returned_president
+	allow_branch = {
+		BARE_MIL_vol2_auto_visible = yes
+	}
+	prerequisite = { focus = MIL_vol2_vanguard focus = MIL_vol2_rio_surprised }
+	mutually_exclusive = { focus = MIL_vol2_hard_battle }
+	available = { custom_trigger_tooltip = { tooltip = MIL_vol2_automatic_only_tt always = no } }
+	completion_reward = {
+		custom_effect_tooltip = MIL_vol2_exploit_weakness_effect_tt
+		hidden_effect = {
+			if = {
+				limit = {
+					BARE_MIL_vol2_action_open = yes
+					has_country_flag = MIL_vol2_battle_exploit
+					NOT = { has_country_flag = MIL_vol2_exploit_weakness_rewarded }
+				}
+				set_country_flag = MIL_vol2_exploit_weakness_rewarded
+				BARE_MIL_vol2_settle_exploit_battle_effect = yes
+				if = {
+					limit = { has_country_flag = MIL_vol2_vanguard_settled }
+					country_event = { id = MIL_vol2.36 }
+				}
+			}
+		}
+	}
+	ai_will_do = { factor = 0 }
+}
+
+# 突入埃里都
+shared_focus = {
+	id = MIL_vol2_enter_eridu
+	icon = GFX_goal_MIL_placeholder
+	search_filters = { FOCUS_MIL }
+	cost = 1
+	x = 0
+	y = 9
+	relative_position_id = MIL_vol2_returned_president
+	allow_branch = {
+		BARE_MIL_vol2_auto_visible = yes
+	}
+	prerequisite = { focus = MIL_vol2_hard_battle focus = MIL_vol2_exploit_weakness }
+	available = { custom_trigger_tooltip = { tooltip = MIL_vol2_automatic_only_tt always = no } }
+	completion_reward = {
+		custom_effect_tooltip = MIL_vol2_enter_eridu_effect_tt
+		hidden_effect = {
+			if = {
+				limit = {
+					BARE_MIL_vol2_action_open = yes
+					has_country_flag = MIL_vol2_vanguard_settled
+					NOT = { has_country_flag = MIL_vol2_enter_eridu_rewarded }
+				}
+				set_country_flag = MIL_vol2_enter_eridu_rewarded
+				BARE_MIL_vol2_arrive_eridu_effect = yes
+				country_event = { id = MIL_vol2.37 }
+			}
+		}
+	}
+	ai_will_do = { factor = 0 }
+}
+
+# 与飞鸟马时的交战
+shared_focus = {
+	id = MIL_vol2_toki_battle
+	icon = GFX_goal_MIL_placeholder
+	search_filters = { FOCUS_MIL }
+	cost = 1
+	x = -2
+	y = 10
+	relative_position_id = MIL_vol2_returned_president
+	allow_branch = {
+		BARE_MIL_vol2_auto_visible = yes
+	}
+	prerequisite = { focus = MIL_vol2_enter_eridu }
+	mutually_exclusive = { focus = MIL_vol2_precise_strike }
+	available = { custom_trigger_tooltip = { tooltip = MIL_vol2_automatic_only_tt always = no } }
+	completion_reward = {
+		custom_effect_tooltip = MIL_vol2_toki_battle_effect_tt
+		hidden_effect = {
+			if = {
+				limit = {
+					BARE_MIL_vol2_action_open = yes
+					has_country_flag = MIL_vol2_path_toki
+					NOT = { has_country_flag = MIL_vol2_toki_battle_rewarded }
+				}
+				set_country_flag = MIL_vol2_toki_battle_rewarded
+				set_country_flag = MIL_vol2_eridu_battle_pending
+				country_event = { id = MIL_vol2.50 }
+			}
+		}
+	}
+	ai_will_do = { factor = 0 }
+}
+
+# 精准一击
+shared_focus = {
+	id = MIL_vol2_precise_strike
+	icon = GFX_goal_MIL_placeholder
+	search_filters = { FOCUS_MIL }
+	cost = 1
+	x = 3
+	y = 10
+	relative_position_id = MIL_vol2_returned_president
+	allow_branch = {
+		BARE_MIL_vol2_auto_visible = yes
+		has_country_flag = MIL_vol2_route_hidden
+	}
+	prerequisite = { focus = MIL_vol2_enter_eridu }
+	prerequisite = { focus = MIL_vol2_rio_surprised }
+	mutually_exclusive = { focus = MIL_vol2_toki_battle }
+	available = { custom_trigger_tooltip = { tooltip = MIL_vol2_automatic_only_tt always = no } }
+	completion_reward = {
+		custom_effect_tooltip = MIL_vol2_precise_strike_effect_tt
+		hidden_effect = {
+			if = {
+				limit = {
+					BARE_MIL_vol2_action_open = yes
+					has_country_flag = MIL_vol2_path_precise
+					NOT = { has_country_flag = MIL_vol2_precise_strike_rewarded }
+				}
+				set_country_flag = MIL_vol2_precise_strike_rewarded
+				set_country_flag = MIL_vol2_result_decided
+				set_variable = { MIL_vol2_result = 3 }
+				country_event = { id = MIL_vol2.60 }
+			}
+		}
+	}
+	ai_will_do = { factor = 0 }
+}
+
+# 勇者最好的伙伴们
+shared_focus = {
+	id = MIL_vol2_best_partners
+	icon = GFX_goal_MIL_placeholder
+	search_filters = { FOCUS_MIL }
+	cost = 1
+	x = -3
+	y = 11
+	relative_position_id = MIL_vol2_returned_president
+	allow_branch = {
+		BARE_MIL_vol2_auto_visible = yes
+	}
+	prerequisite = { focus = MIL_vol2_toki_battle }
+	mutually_exclusive = { focus = MIL_vol2_rio_last_stand }
+	available = { custom_trigger_tooltip = { tooltip = MIL_vol2_automatic_only_tt always = no } }
+	completion_reward = {
+		custom_effect_tooltip = MIL_vol2_best_partners_effect_tt
+		hidden_effect = {
+			if = {
+				limit = {
+					BARE_MIL_vol2_action_open = yes
+					has_country_flag = MIL_vol2_result_decided check_variable = { MIL_vol2_result = 2 }
+					NOT = { has_country_flag = MIL_vol2_best_partners_rewarded }
+				}
+				set_country_flag = MIL_vol2_best_partners_rewarded
+				country_event = { id = MIL_vol2.61 }
+			}
+		}
+	}
+	ai_will_do = { factor = 0 }
+}
+
+# 莉音的最后挣扎
+shared_focus = {
+	id = MIL_vol2_rio_last_stand
+	icon = GFX_goal_MIL_placeholder
+	search_filters = { FOCUS_MIL }
+	cost = 1
+	x = 0
+	y = 11
+	relative_position_id = MIL_vol2_returned_president
+	allow_branch = {
+		BARE_MIL_vol2_auto_visible = yes
+	}
+	prerequisite = { focus = MIL_vol2_toki_battle }
+	mutually_exclusive = { focus = MIL_vol2_best_partners }
+	available = { custom_trigger_tooltip = { tooltip = MIL_vol2_automatic_only_tt always = no } }
+	completion_reward = {
+		custom_effect_tooltip = MIL_vol2_rio_last_stand_effect_tt
+		hidden_effect = {
+			if = {
+				limit = {
+					BARE_MIL_vol2_action_open = yes
+					has_country_flag = MIL_vol2_result_decided check_variable = { MIL_vol2_result = 1 }
+					NOT = { has_country_flag = MIL_vol2_rio_last_stand_rewarded }
+				}
+				set_country_flag = MIL_vol2_rio_last_stand_rewarded
+				country_event = { id = MIL_vol2.38 }
+			}
+		}
+	}
+	ai_will_do = { factor = 0 }
+}
+
+# 尘埃落定
+shared_focus = {
+	id = MIL_vol2_dust_settles
+	icon = GFX_goal_MIL_placeholder
+	search_filters = { FOCUS_MIL }
+	cost = 1
+	x = -3
+	y = 12
+	relative_position_id = MIL_vol2_returned_president
+	allow_branch = {
+		BARE_MIL_vol2_auto_visible = yes
+	}
+	prerequisite = { focus = MIL_vol2_best_partners }
+	available = { custom_trigger_tooltip = { tooltip = MIL_vol2_automatic_only_tt always = no } }
+	completion_reward = {
+		custom_effect_tooltip = MIL_vol2_dust_settles_effect_tt
+		hidden_effect = {
+			if = {
+				limit = {
+					BARE_MIL_vol2_action_open = yes
+					has_country_flag = MIL_vol2_result_decided check_variable = { MIL_vol2_result = 2 }
+					NOT = { has_country_flag = MIL_vol2_dust_settles_rewarded }
+				}
+				set_country_flag = MIL_vol2_dust_settles_rewarded
+				BARE_MIL_vol2_settle_result_effect = yes
+				country_event = { id = MIL_vol2.64 }
+			}
+		}
+	}
+	ai_will_do = { factor = 0 }
+}
+
+# 无法挽回的结局
+shared_focus = {
+	id = MIL_vol2_irreversible_ending
+	icon = GFX_goal_MIL_placeholder
+	search_filters = { FOCUS_MIL }
+	cost = 1
+	x = 0
+	y = 12
+	relative_position_id = MIL_vol2_returned_president
+	allow_branch = {
+		BARE_MIL_vol2_auto_visible = yes
+	}
+	prerequisite = { focus = MIL_vol2_rio_last_stand }
+	available = { custom_trigger_tooltip = { tooltip = MIL_vol2_automatic_only_tt always = no } }
+	completion_reward = {
+		custom_effect_tooltip = MIL_vol2_irreversible_ending_effect_tt
+		hidden_effect = {
+			if = {
+				limit = {
+					BARE_MIL_vol2_action_open = yes
+					has_country_flag = MIL_vol2_result_decided check_variable = { MIL_vol2_result = 1 }
+					NOT = { has_country_flag = MIL_vol2_irreversible_ending_rewarded }
+				}
+				set_country_flag = MIL_vol2_irreversible_ending_rewarded
+				BARE_MIL_vol2_settle_result_effect = yes
+				country_event = { id = MIL_vol2.62 }
+			}
+		}
+	}
+	ai_will_do = { factor = 0 }
+}
+
+# 友谊与勇气的赞歌
+shared_focus = {
+	id = MIL_vol2_friendship_and_courage
+	icon = GFX_goal_MIL_placeholder
+	search_filters = { FOCUS_MIL }
+	cost = 1
+	x = 3
+	y = 11
+	relative_position_id = MIL_vol2_returned_president
+	allow_branch = {
+		BARE_MIL_vol2_auto_visible = yes
+		has_country_flag = MIL_vol2_route_hidden
+	}
+	prerequisite = { focus = MIL_vol2_precise_strike }
+	available = { custom_trigger_tooltip = { tooltip = MIL_vol2_automatic_only_tt always = no } }
+	completion_reward = {
+		custom_effect_tooltip = MIL_vol2_friendship_and_courage_effect_tt
+		hidden_effect = {
+			if = {
+				limit = {
+					BARE_MIL_vol2_action_open = yes
+					has_country_flag = MIL_vol2_result_decided check_variable = { MIL_vol2_result = 3 }
+					NOT = { has_country_flag = MIL_vol2_friendship_and_courage_rewarded }
+				}
+				set_country_flag = MIL_vol2_friendship_and_courage_rewarded
+				BARE_MIL_vol2_settle_result_effect = yes
+				country_event = { id = MIL_vol2.63 }
+			}
+		}
+	}
+	ai_will_do = { factor = 0 }
+}

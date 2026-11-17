@@ -1,0 +1,521 @@
+MIL_vol2_category = {
+	# 持续显示当前阶段、调查值、定位次数和独立行动耗时。
+	MIL_vol2_overview = {
+		icon = generic_research
+		priority = 1000
+		cost = 0
+		available = { always = no }
+	}
+	# 从抓人起算；M09完成不停止期限，只有实际出发才移除。
+	MIL_vol2_departure_deadline = {
+		icon = generic_prepare_civil_war
+		activation = { always = no }
+		available = { always = no }
+		visible = { has_active_mission = MIL_vol2_departure_deadline }
+		days_mission_timeout = 207
+		is_good = no
+		timeout_effect = { BARE_MIL_vol2_force_depart_effect = yes }
+	}
+
+	# 执行15天；结算与取消分别走有账本保护的效果。
+	MIL_vol2_inquire = {
+		icon = generic_research
+		visible = {
+			has_completed_focus = MIL_vol2_seminar_decision
+			has_completed_focus = MIL_vol2_game_dev_resolve
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = MIL_vol2_investigation_open_tt
+				BARE_MIL_vol2_investigation_open = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = MIL_vol2_inquiry_ready_tt
+				NOT = { has_country_flag = MIL_vol2_inquiry_active }
+				NOT = { has_country_flag = MIL_vol2_inquiry_cooldown }
+			}
+		}
+		cost = 10
+		days_remove = 15
+		complete_effect = {
+			set_country_flag = MIL_vol2_inquiry_active
+			set_variable = { MIL_vol2_inquiry_paid = 10 }
+			custom_effect_tooltip = MIL_vol2_inquire_start_tt
+		}
+		remove_effect = { BARE_MIL_vol2_finish_inquiry_effect = yes }
+		ai_will_do = { base = 20 }
+	}
+
+	# 执行15天；结算与取消分别走有账本保护的效果。
+	MIL_vol2_locate_signal = {
+		icon = generic_research
+		visible = { has_completed_focus = MIL_vol2_authorize_veritas }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = MIL_vol2_investigation_open_tt
+				BARE_MIL_vol2_investigation_open = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = MIL_vol2_signal_ready_tt
+				NOT = { has_country_flag = MIL_vol2_signal_active }
+				check_variable = { MIL_vol2_signal_round < 3 }
+				NOT = { has_country_flag = MIL_vol2_eridu_intel }
+				NOT = { has_country_flag = MIL_vol2_trust_location }
+				NOT = { has_country_flag = MIL_vol2_signal_choice_pending }
+			}
+		}
+		cost = 15
+		days_remove = 15
+		complete_effect = {
+			set_country_flag = MIL_vol2_signal_active
+			set_variable = { MIL_vol2_signal_paid = 15 }
+			custom_effect_tooltip = MIL_vol2_locate_signal_start_tt
+		}
+		remove_effect = { BARE_MIL_vol2_finish_signal_effect = yes }
+		ai_will_do = { base = 20 }
+	}
+
+	# 执行3天；结算与取消分别走有账本保护的效果。
+	MIL_vol2_mobilize = {
+		icon = generic_research
+		visible = { has_completed_focus = MIL_vol2_alice_friends }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = MIL_vol2_investigation_open_tt
+				BARE_MIL_vol2_investigation_open = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = MIL_vol2_mobilize_ready_tt
+				NOT = { has_country_flag = MIL_vol2_mobilize_active }
+				NOT = { has_country_flag = MIL_vol2_mobilized }
+			}
+		}
+		cost = 50
+		days_remove = 3
+		complete_effect = {
+			set_country_flag = MIL_vol2_mobilize_active
+			set_variable = { MIL_vol2_mobilize_paid = 50 }
+			custom_effect_tooltip = MIL_vol2_mobilize_start_tt
+		}
+		remove_effect = { BARE_MIL_vol2_finish_mobilization_effect = yes }
+		ai_will_do = { base = 100 }
+	}
+
+	# 首次与事件追加共用7天mission、实付账本及完成后3天冷却。
+	MIL_vol2_order = {
+		icon = generic_research
+		visible = { has_completed_focus = MIL_vol2_engineering_help }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = MIL_vol2_order_ready_tt
+				BARE_MIL_vol2_order_available = yes
+				check_variable = { MIL_vol2_order_round = 0 }
+			}
+		}
+		cost = 0
+		custom_cost_trigger = { check_variable = { political_power >= MIL_vol2_order_cost } }
+		custom_cost_text = MIL_vol2_order_cost_text
+		complete_effect = {
+			custom_effect_tooltip = MIL_vol2_order_start_tt
+			hidden_effect = { BARE_MIL_vol2_start_order_effect = yes }
+		}
+		ai_will_do = { base = 25 }
+	}
+
+	MIL_vol2_order_timer = {
+		icon = generic_research
+		activation = { always = no }
+		available = { always = no }
+		visible = { has_active_mission = MIL_vol2_order_timer }
+		days_mission_timeout = 7
+		is_good = yes
+		timeout_effect = { BARE_MIL_vol2_finish_order_effect = yes }
+	}
+
+	# M09完成只开放此决议；真正点击后才开始A01的7天。
+	MIL_vol2_depart = {
+		icon = generic_prepare_civil_war
+		visible = { has_completed_focus = MIL_vol2_rescue_start }
+		available = {
+			has_country_flag = MIL_vol2_investigation_started
+			NOT = { has_country_flag = MIL_vol2_departed }
+		}
+		cost = 0
+		fire_only_once = yes
+		complete_effect = { BARE_MIL_vol2_depart_effect = yes }
+		ai_will_do = { base = 100 }
+	}
+
+	# 自动国策以独立任务计时，不占用玩家正在研究的其他分支。
+	MIL_vol2_auto_find_road = {
+		icon = generic_research
+		activation = { always = no }
+		available = { always = no }
+		visible = { has_active_mission = MIL_vol2_auto_find_road }
+		days_mission_timeout = 7
+		is_good = yes
+		timeout_effect = {
+			if = {
+				limit = {
+					BARE_MIL_vol2_action_open = yes
+					NOT = { has_completed_focus = MIL_vol2_find_road }
+				}
+				complete_national_focus = MIL_vol2_find_road
+			}
+		}
+	}
+
+	# 自动国策以独立任务计时，不占用玩家正在研究的其他分支。
+	MIL_vol2_auto_station = {
+		icon = generic_research
+		activation = { always = no }
+		available = { always = no }
+		visible = { has_active_mission = MIL_vol2_auto_station }
+		days_mission_timeout = 7
+		is_good = yes
+		timeout_effect = {
+			if = {
+				limit = {
+					BARE_MIL_vol2_action_open = yes
+					NOT = { has_completed_focus = MIL_vol2_station }
+					has_completed_focus = MIL_vol2_find_road
+					has_country_flag = MIL_vol2_route_station
+				}
+				complete_national_focus = MIL_vol2_station
+			}
+		}
+	}
+
+	# 自动国策以独立任务计时，不占用玩家正在研究的其他分支。
+	MIL_vol2_auto_ruins_road = {
+		icon = generic_research
+		activation = { always = no }
+		available = { always = no }
+		visible = { has_active_mission = MIL_vol2_auto_ruins_road }
+		days_mission_timeout = 7
+		is_good = yes
+		timeout_effect = {
+			if = {
+				limit = {
+					BARE_MIL_vol2_action_open = yes
+					NOT = { has_completed_focus = MIL_vol2_ruins_road }
+					has_completed_focus = MIL_vol2_find_road
+					has_country_flag = MIL_vol2_route_lost
+				}
+				complete_national_focus = MIL_vol2_ruins_road
+			}
+		}
+	}
+
+	# 自动国策以独立任务计时，不占用玩家正在研究的其他分支。
+	MIL_vol2_auto_surprise = {
+		icon = generic_research
+		activation = { always = no }
+		available = { always = no }
+		visible = { has_active_mission = MIL_vol2_auto_surprise }
+		days_mission_timeout = 7
+		is_good = yes
+		timeout_effect = {
+			if = {
+				limit = {
+					BARE_MIL_vol2_action_open = yes
+					NOT = { has_completed_focus = MIL_vol2_surprise }
+					has_completed_focus = MIL_vol2_find_road
+					has_country_flag = MIL_vol2_route_hidden
+				}
+				complete_national_focus = MIL_vol2_surprise
+			}
+		}
+	}
+
+	# 自动国策以独立任务计时，不占用玩家正在研究的其他分支。
+	MIL_vol2_auto_vanguard = {
+		icon = generic_research
+		activation = { always = no }
+		available = { always = no }
+		visible = { has_active_mission = MIL_vol2_auto_vanguard }
+		days_mission_timeout = 7
+		is_good = yes
+		timeout_effect = {
+			if = {
+				limit = {
+					BARE_MIL_vol2_action_open = yes
+					NOT = { has_completed_focus = MIL_vol2_vanguard }
+					has_country_flag = MIL_vol2_road_left
+					OR = { has_completed_focus = MIL_vol2_station has_completed_focus = MIL_vol2_ruins_road }
+					NOT = { has_country_flag = MIL_vol2_route_hidden }
+				}
+				complete_national_focus = MIL_vol2_vanguard
+			}
+		}
+	}
+
+	# 自动国策以独立任务计时，不占用玩家正在研究的其他分支。
+	MIL_vol2_auto_rio_surprised = {
+		icon = generic_research
+		activation = { always = no }
+		available = { always = no }
+		visible = { has_active_mission = MIL_vol2_auto_rio_surprised }
+		days_mission_timeout = 7
+		is_good = yes
+		timeout_effect = {
+			if = {
+				limit = {
+					BARE_MIL_vol2_action_open = yes
+					NOT = { has_completed_focus = MIL_vol2_rio_surprised }
+					has_country_flag = MIL_vol2_road_left
+					has_completed_focus = MIL_vol2_surprise
+					has_country_flag = MIL_vol2_route_hidden
+				}
+				complete_national_focus = MIL_vol2_rio_surprised
+			}
+		}
+	}
+
+	# 自动国策以独立任务计时，不占用玩家正在研究的其他分支。
+	MIL_vol2_auto_hard_battle = {
+		icon = generic_research
+		activation = { always = no }
+		available = { always = no }
+		visible = { has_active_mission = MIL_vol2_auto_hard_battle }
+		days_mission_timeout = 7
+		is_good = yes
+		timeout_effect = {
+			if = {
+				limit = {
+					BARE_MIL_vol2_action_open = yes
+					NOT = { has_completed_focus = MIL_vol2_hard_battle }
+					has_completed_focus = MIL_vol2_vanguard
+					has_country_flag = MIL_vol2_battle_hard
+					has_country_flag = MIL_vol2_breakthrough
+					NOT = { has_completed_focus = MIL_vol2_exploit_weakness }
+				}
+				complete_national_focus = MIL_vol2_hard_battle
+			}
+		}
+	}
+
+	# 后段自动国策：仅允许当前分支及真实前置到期完成。
+	MIL_vol2_auto_exploit_weakness = {
+		icon = generic_research
+		activation = { always = no }
+		available = { always = no }
+		visible = { has_active_mission = MIL_vol2_auto_exploit_weakness }
+		days_mission_timeout = 7
+		is_good = yes
+		timeout_effect = {
+			if = {
+				limit = {
+					BARE_MIL_vol2_action_open = yes
+					NOT = { has_completed_focus = MIL_vol2_exploit_weakness }
+					has_country_flag = MIL_vol2_battle_exploit
+					OR = { has_completed_focus = MIL_vol2_vanguard has_completed_focus = MIL_vol2_rio_surprised }
+					NOT = { has_completed_focus = MIL_vol2_hard_battle }
+				}
+				complete_national_focus = MIL_vol2_exploit_weakness
+			}
+		}
+	}
+
+	# 后段自动国策：仅允许当前分支及真实前置到期完成。
+	MIL_vol2_auto_enter_eridu = {
+		icon = generic_research
+		activation = { always = no }
+		available = { always = no }
+		visible = { has_active_mission = MIL_vol2_auto_enter_eridu }
+		days_mission_timeout = 7
+		is_good = yes
+		timeout_effect = {
+			if = {
+				limit = {
+					BARE_MIL_vol2_action_open = yes
+					NOT = { has_completed_focus = MIL_vol2_enter_eridu }
+					has_country_flag = MIL_vol2_eridu_started
+					has_country_flag = MIL_vol2_vanguard_settled
+					OR = { has_completed_focus = MIL_vol2_hard_battle has_completed_focus = MIL_vol2_exploit_weakness }
+				}
+				complete_national_focus = MIL_vol2_enter_eridu
+			}
+		}
+	}
+
+	# 后段自动国策：仅允许当前分支及真实前置到期完成。
+	MIL_vol2_auto_toki_battle = {
+		icon = generic_research
+		activation = { always = no }
+		available = { always = no }
+		visible = { has_active_mission = MIL_vol2_auto_toki_battle }
+		days_mission_timeout = 7
+		is_good = yes
+		timeout_effect = {
+			if = {
+				limit = {
+					BARE_MIL_vol2_action_open = yes
+					NOT = { has_completed_focus = MIL_vol2_toki_battle }
+					has_completed_focus = MIL_vol2_enter_eridu
+					has_country_flag = MIL_vol2_path_toki
+					NOT = { has_completed_focus = MIL_vol2_precise_strike }
+				}
+				complete_national_focus = MIL_vol2_toki_battle
+			}
+		}
+	}
+
+	# 后段自动国策：仅允许当前分支及真实前置到期完成。
+	MIL_vol2_auto_precise_strike = {
+		icon = generic_research
+		activation = { always = no }
+		available = { always = no }
+		visible = { has_active_mission = MIL_vol2_auto_precise_strike }
+		days_mission_timeout = 7
+		is_good = yes
+		timeout_effect = {
+			if = {
+				limit = {
+					BARE_MIL_vol2_action_open = yes
+					NOT = { has_completed_focus = MIL_vol2_precise_strike }
+					has_completed_focus = MIL_vol2_enter_eridu
+					has_completed_focus = MIL_vol2_rio_surprised
+					has_country_flag = MIL_vol2_path_precise
+					check_variable = { MIL_vol2_action_time <= 2 }
+					NOT = { has_completed_focus = MIL_vol2_toki_battle }
+				}
+				complete_national_focus = MIL_vol2_precise_strike
+			}
+		}
+	}
+
+	# 后段自动国策：仅允许当前分支及真实前置到期完成。
+	MIL_vol2_auto_best_partners = {
+		icon = generic_research
+		activation = { always = no }
+		available = { always = no }
+		visible = { has_active_mission = MIL_vol2_auto_best_partners }
+		days_mission_timeout = 7
+		is_good = yes
+		timeout_effect = {
+			if = {
+				limit = {
+					BARE_MIL_vol2_action_open = yes
+					NOT = { has_completed_focus = MIL_vol2_best_partners }
+					has_completed_focus = MIL_vol2_toki_battle
+					has_country_flag = MIL_vol2_result_decided
+					check_variable = { MIL_vol2_result = 2 }
+					NOT = { has_completed_focus = MIL_vol2_rio_last_stand }
+				}
+				complete_national_focus = MIL_vol2_best_partners
+			}
+		}
+	}
+
+	# 后段自动国策：仅允许当前分支及真实前置到期完成。
+	MIL_vol2_auto_rio_last_stand = {
+		icon = generic_research
+		activation = { always = no }
+		available = { always = no }
+		visible = { has_active_mission = MIL_vol2_auto_rio_last_stand }
+		days_mission_timeout = 7
+		is_good = yes
+		timeout_effect = {
+			if = {
+				limit = {
+					BARE_MIL_vol2_action_open = yes
+					NOT = { has_completed_focus = MIL_vol2_rio_last_stand }
+					has_completed_focus = MIL_vol2_toki_battle
+					has_country_flag = MIL_vol2_result_decided
+					check_variable = { MIL_vol2_result = 1 }
+					NOT = { has_completed_focus = MIL_vol2_best_partners }
+				}
+				complete_national_focus = MIL_vol2_rio_last_stand
+			}
+		}
+	}
+
+	# 后段自动国策：仅允许当前分支及真实前置到期完成。
+	MIL_vol2_auto_dust_settles = {
+		icon = generic_research
+		activation = { always = no }
+		available = { always = no }
+		visible = { has_active_mission = MIL_vol2_auto_dust_settles }
+		days_mission_timeout = 7
+		is_good = yes
+		timeout_effect = {
+			if = {
+				limit = {
+					BARE_MIL_vol2_action_open = yes
+					NOT = { has_completed_focus = MIL_vol2_dust_settles }
+					has_completed_focus = MIL_vol2_best_partners
+					has_country_flag = MIL_vol2_final_focus_started
+					check_variable = { MIL_vol2_result = 2 }
+				}
+				complete_national_focus = MIL_vol2_dust_settles
+			}
+		}
+	}
+
+	# 后段自动国策：仅允许当前分支及真实前置到期完成。
+	MIL_vol2_auto_irreversible_ending = {
+		icon = generic_research
+		activation = { always = no }
+		available = { always = no }
+		visible = { has_active_mission = MIL_vol2_auto_irreversible_ending }
+		days_mission_timeout = 7
+		is_good = yes
+		timeout_effect = {
+			if = {
+				limit = {
+					BARE_MIL_vol2_action_open = yes
+					NOT = { has_completed_focus = MIL_vol2_irreversible_ending }
+					has_completed_focus = MIL_vol2_rio_last_stand
+					has_country_flag = MIL_vol2_final_focus_started
+					check_variable = { MIL_vol2_result = 1 }
+				}
+				complete_national_focus = MIL_vol2_irreversible_ending
+			}
+		}
+	}
+
+	# 后段自动国策：仅允许当前分支及真实前置到期完成。
+	MIL_vol2_auto_friendship_and_courage = {
+		icon = generic_research
+		activation = { always = no }
+		available = { always = no }
+		visible = { has_active_mission = MIL_vol2_auto_friendship_and_courage }
+		days_mission_timeout = 7
+		is_good = yes
+		timeout_effect = {
+			if = {
+				limit = {
+					BARE_MIL_vol2_action_open = yes
+					NOT = { has_completed_focus = MIL_vol2_friendship_and_courage }
+					has_completed_focus = MIL_vol2_precise_strike
+					has_country_flag = MIL_vol2_final_focus_started
+					check_variable = { MIL_vol2_result = 3 }
+				}
+				complete_national_focus = MIL_vol2_friendship_and_courage
+			}
+		}
+	}
+}
+
+MIL_vol2_debug_category = {
+	MIL_vol2_debug_unlock = {
+		icon = generic_research
+		visible = { NOT = { has_country_flag = MIL_vol2_unlocked } }
+		cost = 0
+		complete_effect = { BARE_MIL_vol2_unlock_effect = yes }
+		ai_will_do = { base = 0 }
+	}
+	MIL_vol2_debug_full_aid = {
+		icon = generic_research
+		available = {
+			has_country_flag = MIL_vol2_unlocked
+			has_country_flag = MIL_vol2_eridu_arrived
+			NOT = { has_country_flag = MIL_vol2_result_settled }
+			check_variable = { MIL_vol2_aid_level < 2 }
+		}
+		cost = 0
+		complete_effect = { set_variable = { MIL_vol2_aid_level = 2 } }
+		ai_will_do = { base = 0 }
+	}
+}

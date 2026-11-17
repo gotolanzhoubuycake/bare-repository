@@ -1,0 +1,14 @@
+MIL_vol2_category = {
+	icon = generic_research
+	allowed = { original_tag = MIL }
+	visible = { has_country_flag = MIL_vol2_investigation_started }
+	visible_when_empty = yes
+	priority = 1100
+}
+# 仅-debug模式显示，不绑定开局、日期或现有国策。
+MIL_vol2_debug_category = {
+	icon = generic_research
+	allowed = { original_tag = MIL }
+	visible = { is_debug = yes has_focus_tree = MIL }
+	priority = 1
+}

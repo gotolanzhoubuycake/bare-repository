@@ -339,6 +339,10 @@ focus_tree = {
 	}
 	default = no
 
+	# Vol.2独立主线；完成新蓝图365天后开放，自动节点由任务推进。
+	shared_focus = MIL_vol2_returned_president
+	shared_focus = MIL_vol2_find_road
+
 	focus = { #研讨会会计的意外发现
 		id = MIL_unexpected_discovery
 		icon = GFX_goal_MIL_unexpected_discovery
@@ -1836,7 +1840,9 @@ focus_tree = {
 			custom_effect_tooltip = MIL_new_development_plan_award_bonus_tooltip
 			custom_effect_tooltip = MIL_new_development_plan_award_mission_tooltip
 			custom_effect_tooltip = MIL_new_development_plan_sport_event_tooltip
+			custom_effect_tooltip = MIL_vol2_entry_schedule_tt
 			hidden_effect = {
+				BARE_MIL_vol2_schedule_entry_effect = yes
 				BARE_MIL_Start_Development_Resource_Allocation_effect = yes
 				BARE_MIL_award_apply_new_blueprint_effect = yes
 				BARE_MIL_award_complete_all_projects_effect = yes

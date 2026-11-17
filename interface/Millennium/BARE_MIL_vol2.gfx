@@ -1,0 +1,10 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_MIL_vol2_placeholder"
+		texturefile = "gfx/interface/goals/goal_unknown.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_MIL_vol2_inspiring_success"
+		texturefile = "gfx/interface/goals/goal_unknown.dds"
+	}
+}
